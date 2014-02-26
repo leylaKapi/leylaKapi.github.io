@@ -3,7 +3,7 @@ layout: post
 title: "After new_post"
 date: 2014-02-26 11:30:57 +0200
 comments: true
-categories: 
+categories: Octopress
 ---
 
 

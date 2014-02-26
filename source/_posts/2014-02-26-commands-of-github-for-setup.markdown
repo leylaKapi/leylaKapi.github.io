@@ -90,4 +90,4 @@ Note: 'master' are name of branch on github, if you use another branch or  don't
     git checkout another_branch
  
  
- Github command basicly like this.
+ Git command basicly like this.
