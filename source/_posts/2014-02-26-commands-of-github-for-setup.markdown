@@ -3,7 +3,7 @@ layout: post
 title: "Commands of github for setup"
 date: 2014-02-26 12:31:12 +0200
 comments: true
-categories: 
+categories: git and github
 ---
 
 
