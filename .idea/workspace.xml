@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ee40748-c6a4-4317-80f6-590fd24fc195" name="Default" comment="" />
+    <list default="true" id="4ee40748-c6a4-4317-80f6-590fd24fc195" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/_posts/2014-02-26-after-new-post.markdown" afterPath="$PROJECT_DIR$/source/_posts/2014-02-26-after-new-post.markdown" />
+    </list>
     <ignored path="leylaKapi.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,7 +30,7 @@
       <file leaf-file-name="2014-02-26-after-new-post.markdown" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/source/_posts/2014-02-26-after-new-post.markdown">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="0" selection-start="1164" selection-end="1164" vertical-scroll-proportion="0.5358911" vertical-offset="512" max-vertical-offset="1320">
+            <state line="52" column="16" selection-start="892" selection-end="892" vertical-scroll-proportion="0.29455444" vertical-offset="542" max-vertical-offset="1350">
               <folding />
             </state>
           </provider>
@@ -212,7 +216,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/source/_posts/2014-02-26-after-new-post.markdown">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="0" selection-start="1164" selection-end="1164" vertical-scroll-proportion="0.5358911" vertical-offset="512" max-vertical-offset="1320">
+        <state line="52" column="16" selection-start="892" selection-end="892" vertical-scroll-proportion="0.29455444" vertical-offset="542" max-vertical-offset="1350">
           <folding />
         </state>
       </provider>
