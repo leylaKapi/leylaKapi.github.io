@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Octopress | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/octopress/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2014-02-26T14:36:40+02:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[Leyla Kapi]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[How to Add 'About' Page in Octopress]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/02/26/how-to-add-aboout-page-in-octopress/"/>
+    <updated>2014-02-26T14:25:12+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/02/26/how-to-add-aboout-page-in-octopress</id>
+    <content type="html"><![CDATA[<h3>How to add &lsquo;About&rsquo; page in Octopress?</h3>
+
+<p>I needs 2 step for create &lsquo;About&rsquo; page on navigation bar.</p>
+
+<ul>
+<li><p>Firstly create &lsquo;about page&rsquo;</p>
+
+<p>  <code>
+      rake new_page\["About"\]
+ </code></p></li>
+</ul>
+
+
+<p>Created new page for about and we linked to &lsquo;About&rsquo;, How?</p>
+
+<ul>
+<li><p>We open</p>
+
+<p>  <code>
+      /source/_includes/custom/navigation.html
+ </code></p></li>
+</ul>
+
+
+<p> write the 3rd line below:</p>
+
+<pre><code>```
+   &lt;ul class="main-navigation"&gt;
+     &lt;li&gt;&lt;a href="/"&gt;Blog&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href="/blog/archives"&gt;Archives&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href="/about"&gt;About&lt;/a&gt;&lt;/li&gt;
+   &lt;/ul&gt;
+
+```
+</code></pre>
+
+<p>then we use git command for sent on github</p>
+
+<pre><code>```
+    git add .
+    git commit -m "Your Commit"
+    git push origin source
+```
+</code></pre>
+
+<p>And, for see on personal blog we need to deploy your code</p>
+
+<pre><code>```
+    rake generate
+    rake preview   #see on localhost:4000
+    rake deploy
+```
+</code></pre>
+
+<p>That&rsquo;s it!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[After New_post]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/02/26/after-new-post/"/>
+    <updated>2014-02-26T11:30:57+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/02/26/after-new-post</id>
+    <content type="html"><![CDATA[<h3>When I setup Octopress Repository, error of</h3>
+
+<pre><code>rake deploy
+</code></pre>
+
+<p>I setup the Octopress, and I create,</p>
+
+<pre><code>rake new_post\["Hello World"\]
+</code></pre>
+
+<p>then push github on</p>
+
+<pre><code>source
+</code></pre>
+
+<p>branch, and when I</p>
+
+<pre><code>rake deploy
+</code></pre>
+
+<p> Terminal show this code :</p>
+
+<pre><code>To https://github.com/username/username.github.io.git
+! [rejected]        master -&gt; master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/username/username.github.io.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Merge the remote changes (e.g. 'git pull')
+hint: before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+ Github Pages deploy complete
+</code></pre>
+
+<h3>What I can fix it ?</h3>
+
+<p> Firstly</p>
+
+<pre><code>git clone https://github.com/username/username.github.io.git
+git checkout source
+</code></pre>
+
+<p> I cloning to username.github.io into master, and checkout source</p>
+
+<p> Secondly we need to setup &lsquo;deploy&rsquo; directories</p>
+
+<pre><code>mkdir _deploy
+cd _deploy
+git init
+git remote add -t master -f origin https://github.com/username/username.github.io.git
+</code></pre>
+
+<p>Now, we can use</p>
+
+<pre><code>rake deploy
+</code></pre>
+
+<p>or</p>
+
+<pre><code>rake gen_deploy
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>

@@ -9,9 +9,7 @@
   <meta name="author" content="Leyla Kapi">
 
   
-  <meta name="description" content="What I can setup github and create repo? Firstly we create github account from github
-We create a new repo from &lsquo;+&rsquo; symbol.
-We named this &hellip;">
+  <meta name="description" content="How to add &lsquo;About&rsquo; page in Octopress? I needs 2 step for create &lsquo;About&rsquo; page on navigation bar. Firstly create &lsquo;about &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -75,6 +73,96 @@ We named this &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/02/26/how-to-add-aboout-page-in-octopress/">How to Add &#8216;About&#8217; Page in Octopress</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-26T14:25:12+02:00" pubdate data-updated="true">Feb 26<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3>How to add &lsquo;About&rsquo; page in Octopress?</h3>
+
+<p>I needs 2 step for create &lsquo;About&rsquo; page on navigation bar.</p>
+
+<ul>
+<li><p>Firstly create &lsquo;about page&rsquo;</p>
+
+<p>  <code>
+      rake new_page\["About"\]
+ </code></p></li>
+</ul>
+
+
+<p>Created new page for about and we linked to &lsquo;About&rsquo;, How?</p>
+
+<ul>
+<li><p>We open</p>
+
+<p>  <code>
+      /source/_includes/custom/navigation.html
+ </code></p></li>
+</ul>
+
+
+<p> write the 3rd line below:</p>
+
+<pre><code>```
+   &lt;ul class="main-navigation"&gt;
+     &lt;li&gt;&lt;a href="/"&gt;Blog&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href="/blog/archives"&gt;Archives&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href="/about"&gt;About&lt;/a&gt;&lt;/li&gt;
+   &lt;/ul&gt;
+
+```
+</code></pre>
+
+<p>then we use git command for sent on github</p>
+
+<pre><code>```
+    git add .
+    git commit -m "Your Commit"
+    git push origin source
+```
+</code></pre>
+
+<p>And, for see on personal blog we need to deploy your code</p>
+
+<pre><code>```
+    rake generate
+    rake preview   #see on localhost:4000
+    rake deploy
+```
+</code></pre>
+
+<p>That&rsquo;s it!</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -342,6 +430,10 @@ git remote add -t master -f origin https://github.com/username/username.github.i
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/02/26/how-to-add-aboout-page-in-octopress/">How to Add &#8216;About&#8217; Page in Octopress</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/02/26/commands-of-github-for-setup/">Commands of Github for Setup</a>

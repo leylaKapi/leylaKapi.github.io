@@ -5,13 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Commands of Github for Setup - Leyla's Blog</title>
+  <title>How to Add 'About' Page in Octopress - Leyla's Blog</title>
   <meta name="author" content="Leyla Kapi">
 
   
-  <meta name="description" content="What I can setup github and create repo? Firstly we create github account from github
-We create a new repo from &lsquo;+&rsquo; symbol.
-We named this &hellip;">
+  <meta name="description" content="How to add &lsquo;About&rsquo; page in Octopress? I needs 2 step for create &lsquo;About&rsquo; page on navigation bar. Firstly create &lsquo;about &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +18,7 @@ We named this &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://leylaKapi.github.io/blog/2014/02/26/commands-of-github-for-setup">
+  <link rel="canonical" href="http://leylaKapi.github.io/blog/2014/02/26/how-to-add-aboout-page-in-octopress">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Leyla's Blog" type="application/atom+xml">
@@ -78,7 +76,7 @@ We named this &hellip;">
   
   <header>
     
-      <h1 class="entry-title">Commands of Github for Setup</h1>
+      <h1 class="entry-title">How to Add 'About' Page in Octopress</h1>
     
     
       <p class="meta">
@@ -94,94 +92,68 @@ We named this &hellip;">
   
 
 
-<time datetime="2014-02-26T12:31:12+02:00" pubdate data-updated="true">Feb 26<span>th</span>, 2014</time>
+<time datetime="2014-02-26T14:25:12+02:00" pubdate data-updated="true">Feb 26<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><h3>What I can setup github and create repo?</h3>
+<div class="entry-content"><h3>How to add &lsquo;About&rsquo; page in Octopress?</h3>
+
+<p>I needs 2 step for create &lsquo;About&rsquo; page on navigation bar.</p>
 
 <ul>
-<li>Firstly we create github account from <a href="https://github.com/">github</a></li>
-<li>We create a new repo from &lsquo;+&rsquo; symbol.</li>
-<li>We named this repo and creating.</li>
-<li><p>After, We seems to this url</p>
+<li><p>Firstly create &lsquo;about page&rsquo;</p>
 
-<pre><code>  HTTP: https://github.com/username/repo_name.git
-  SSH: git@github.com:username/repo_name.git
-</code></pre></li>
+<p>  <code>
+      rake new_page\["About"\]
+ </code></p></li>
 </ul>
 
 
-<p>We use any link. Now, we clone this repo on pc.</p>
-
-<p>Use this command</p>
-
-<pre><code>    git clone https://github.com/username/repo_name.git
-</code></pre>
-
-<p>Now you are cloning to pc but where this file?</p>
-
-<p>For this question, Where you want to setup, install there. For example, if you want to clone in desktop, you should go desktop path
-like this(For Mac);</p>
-
-<pre><code>    cd Desktop/
-</code></pre>
-
-<p>And then cloning this path.</p>
+<p>Created new page for about and we linked to &lsquo;About&rsquo;, How?</p>
 
 <ul>
-<li>After clone, We open this file on ide or anywhere, writing our code in file.</li>
+<li><p>We open</p>
+
+<p>  <code>
+      /source/_includes/custom/navigation.html
+ </code></p></li>
 </ul>
 
 
-<p>Now, changed this file, We should push this file to github.
-Hence, we use this code ;</p>
+<p> write the 3rd line below:</p>
 
-<pre><code>    git add .
+<pre><code>```
+   &lt;ul class="main-navigation"&gt;
+     &lt;li&gt;&lt;a href="/"&gt;Blog&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href="/blog/archives"&gt;Archives&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href="/about"&gt;About&lt;/a&gt;&lt;/li&gt;
+   &lt;/ul&gt;
+
+```
 </code></pre>
 
-<p>With this command, we added all changed file on network, we wait for push.</p>
+<p>then we use git command for sent on github</p>
 
-<ul>
-<li><p>Which file added on network? Answer this question, We write this command and see to adding file.</p>
-
-<pre><code>  git status
-</code></pre></li>
-<li><p>We are saw to adding file , Now We need to commit for then to remember the files which adding.</p>
-
-<pre><code>  git commit -m "your_comment"
-</code></pre></li>
-<li><p>We prepared commit, Now all preparations are prepared, and we should push file n github</p>
-
-<pre><code>  git push origin master
-</code></pre></li>
-</ul>
-
-
-<p>Note: &lsquo;master&rsquo; are name of branch on github, if you use another branch or  don&rsquo;t use &lsquo;master&rsquo; branch we created new branch and push</p>
-
-<pre><code>    git push origin branch_name
+<pre><code>```
+    git add .
+    git commit -m "Your Commit"
+    git push origin source
+```
 </code></pre>
 
-<ul>
-<li><p>If you want to see branches in your repo,</p>
+<p>And, for see on personal blog we need to deploy your code</p>
 
-<pre><code>  git branch -a
-</code></pre></li>
-<li><p>If you created new branch</p>
+<pre><code>```
+    rake generate
+    rake preview   #see on localhost:4000
+    rake deploy
+```
+</code></pre>
 
-<pre><code>  git branch name_of_newbranch
-</code></pre></li>
-<li><p>Now, you are in name_of_newbranch , but you want to return or switch another branch therefore</p>
-
-<p>  git checkout another_branch</p></li>
-</ul>
-
-
-<p> Git command basicly like this.</p>
+<p>That&rsquo;s it!</p>
 </div>
 
 
@@ -204,15 +176,21 @@ Hence, we use this code ;</p>
   
 
 
-<time datetime="2014-02-26T12:31:12+02:00" pubdate data-updated="true">Feb 26<span>th</span>, 2014</time>
+<time datetime="2014-02-26T14:25:12+02:00" pubdate data-updated="true">Feb 26<span>th</span>, 2014</time>
       
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/octopress/'>Octopress</a>
+  
+</span>
 
 
     </p>
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://leylaKapi.github.io/blog/2014/02/26/commands-of-github-for-setup/" data-via="leylakapi" data-counturl="http://leylaKapi.github.io/blog/2014/02/26/commands-of-github-for-setup/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://leylaKapi.github.io/blog/2014/02/26/how-to-add-aboout-page-in-octopress/" data-via="leylakapi" data-counturl="http://leylaKapi.github.io/blog/2014/02/26/how-to-add-aboout-page-in-octopress/" >Tweet</a>
   
   
   
@@ -223,10 +201,8 @@ Hence, we use this code ;</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/02/26/after-new-post/" title="Previous Post: After new_post">&laquo; After new_post</a>
+        <a class="basic-alignment left" href="/blog/2014/02/26/commands-of-github-for-setup/" title="Previous Post: Commands of github for setup">&laquo; Commands of github for setup</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2014/02/26/how-to-add-aboout-page-in-octopress/" title="Next Post: How to add 'About' page in octopress">How to add 'About' page in octopress &raquo;</a>
       
     </p>
   </footer>
