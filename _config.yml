@@ -101,15 +101,3 @@ facebook_like: true
 
 #Gravatar
 gravatar_email: leylakapi@gmail.com
-
-
-page-view:
-  service_account_email:
-  key_file: privatekey.p12  # service account private key file
-  key_secret: notasecret    # service account private key's password
-  profileID:                #ga:XXXXXXXX
-  start: 1 weeks ago        # Beginning of report
-  end: now                  # End of report
-  metric: ga:pageviews      # Metric code
-  segment: gaid::-1         # all visits
-  filters:                  # optional
