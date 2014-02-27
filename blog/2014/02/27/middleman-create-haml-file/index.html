@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: Github - Leyla's Blog</title>
+  <title>Middleman Create Haml File - Leyla's Blog</title>
   <meta name="author" content="Leyla Kapi">
 
   
-  <meta name="description" content="Category: github">
+  <meta name="description" content="How to create .haml file in middleman? Firstly, you should go middleman and you need to install middleman gem install middleman Fine, you are &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://leylaKapi.github.ioblog/categories/github">
+  <link rel="canonical" href="http://leylaKapi.github.io/blog/2014/02/27/middleman-create-haml-file">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Leyla's Blog" type="application/atom+xml">
@@ -72,35 +72,216 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: Github</h1>
+    
+      <h1 class="entry-title">Middleman Create Haml File</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-27T13:49:10+02:00" pubdate data-updated="true">Feb 27<span>th</span>, 2014</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
+<div class="entry-content"><h3>How to create .haml file in middleman?</h3>
 
-  
-  <h2>2014</h2>
+<p>Firstly, you should go <a href="" title="http://middlemanapp.com/">middleman</a> and you need to <strong>install middleman</strong></p>
 
-<article>
-  
-<h1><a href="/blog/2014/02/26/commands-of-github-for-setup/">Commands of Github for Setup</a></h1>
-<time datetime="2014-02-26T12:31:12+02:00" pubdate><span class='month'>Feb</span> <span class='day'>26</span> <span class='year'>2014</span></time>
+<pre><code>gem install middleman
+</code></pre>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/github/'>github</a></span>
-</footer>
+<p>Fine, you are installed middleman, now we start to create project in middleman</p>
+
+<pre><code>middleman init project_name
+</code></pre>
+
+<p>Then this command give you directory as shown below :</p>
+
+<pre><code> project_name/
+    Gemfile
+    Gemfile.lock
+    config.rb
+    source
+        .gitignore
+        images
+            background.png
+            middleman.png
+        javascript
+            all.js
+        stylesheets
+            all.css
+            normalize.css
+        layouts
+            layout.erb
+        index.html.erb
+</code></pre>
+
+<p>If you can see this directories, you should open project with your IDE.</p>
+
+<p><strong>Now, We create .haml file but how ?</strong></p>
+
+<p>Go ahead and remove below files because these files don&rsquo;t use in project.</p>
+
+<pre><code>- /source/images/background.png
+- /source/images/middleman.png
+- /source/javascript/all.js
+- /source/stylesheets/all.css
+- /source/stylesheets/normalize.css
+- /source/layouts/layout.erb
+- /source/index.html.erb
+</code></pre>
+
+<p>Now, Projects was removed from unused files.</p>
+
+<h5>Add HAML</h5>
+
+<p>Middleman appear to read HTML by default . Therefore, you should go to</p>
+
+<pre><code>   /config.rb
+</code></pre>
+
+<p>in file write:</p>
+
+<pre><code>    set :haml, :format =&gt; :html5
+</code></pre>
+
+<p>Now program convert to html5 from haml.</p>
+
+<ul>
+<li><p>Add a</p>
+
+<pre><code>  layout.haml
+</code></pre></li>
+</ul>
 
 
-</article>
+<p>file to the</p>
 
+<pre><code>      /source/layouts
+</code></pre>
+
+<p>directory. In this file we write</p>
+
+<pre><code>    !!!
+    %html{ :lang =&gt; "en"}
+        %head
+            %meta{:charset =&gt; "utf-8"}
+            %title= data.page.title
+            = stylesheet_link_tag "your_css_file.css"
+            = javascript_include_tag "your_javascript_file.js"
+        %body
+            = yield
+</code></pre>
+
+<p>Now we must create</p>
+
+<pre><code>        index.html.haml
+</code></pre>
+
+<p>in</p>
+
+<pre><code>            source/
+</code></pre>
+
+<p>directory.</p>
+
+<pre><code>        %h1 Welcome Middleman project
+</code></pre>
+
+<p>write in</p>
+
+<pre><code>            source/index.html.haml
+</code></pre>
+
+<p>files.</p>
+
+<p>We are create middleman project and write codes, How we run this program?</p>
+
+<p>Wait! Dont worry, When writing to below command in terminal in order of this.</p>
+
+<pre><code># Go to project path
+
+     cd project_name
+     bundle install
+     bundle exec middleman server
+</code></pre>
+
+<p>then we are seen</p>
+
+<pre><code>         http://localhost:3000
+</code></pre>
+
+<p>like url. We should copy this url and paste on browser search bar.</p>
+
+<p>That&rsquo;s it! Try and see.</p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Leyla Kapi</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-27T13:49:10+02:00" pubdate data-updated="true">Feb 27<span>th</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/haml/'>Haml</a>, <a class='category' href='/blog/categories/middleman/'>Middleman,</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://leylaKapi.github.io/blog/2014/02/27/middleman-create-haml-file/" data-via="leylakapi" data-counturl="http://leylaKapi.github.io/blog/2014/02/27/middleman-create-haml-file/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/02/26/markdown-article-some-style/" title="Previous Post: Markdown article some style">&laquo; Markdown article some style</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
 </div>
