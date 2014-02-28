@@ -65,7 +65,7 @@ In terminal, you should see this url 'http://0.0.0.0:3000' and copy this, paste 
 
 You can see Ruby default information page
 
-![Alt text](../images/rails_welcome.png)
+![Default page](../images/rails_welcome.png)
 
 Yeah, Installed Ruby On Rails and started to code your rails applications.
 
