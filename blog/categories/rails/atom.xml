@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: rails | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/rails/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2014-02-28T19:16:30+02:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[Leyla Kapi]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[What is the Ruby On Rails?]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/02/28/what-is-the-ruby-on-rails/"/>
+    <updated>2014-02-28T18:25:39+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/02/28/what-is-the-ruby-on-rails</id>
+    <content type="html"><![CDATA[<h2>What is the Ruby On Rails and How install?</h2>
+
+<p><strong>Ruby</strong></p>
+
+<ul>
+<li>Object oriented programming language</li>
+<li>Created in 1995 by Matz</li>
+<li>Used for many purpose, not only web app.</li>
+</ul>
+
+
+<p><strong>Ruby on Rails</strong></p>
+
+<ul>
+<li>Open source, web applications framework.</li>
+<li>Written in Ruby</li>
+<li>Release as open source in 2004</li>
+</ul>
+
+
+<h4>How install Ruby On Rails?</h4>
+
+<p>Firstly, you have to install ruby, and then start install rails.
+Is there ruby in your pc? Look at!</p>
+
+<pre><code>   ruby -v
+   # ruby 2.0.0p353 (2013-11-22 revision 43784) [x86_64-darwin13.0.0]
+</code></pre>
+
+<p>I hear , &lsquo;my pc don&rsquo;t has ruby.&rsquo; Dont worry, when you are going to <a href="https://www.ruby-lang.org/en/">download ruby</a>.
+Now, we install the ruby after then</p>
+
+<pre><code>  gem update system
+</code></pre>
+
+<p>start install rails framework.</p>
+
+<pre><code>gem install rails
+</code></pre>
+
+<p>rails was install and which version?</p>
+
+<pre><code>    rails --version  or rails -v
+    # Rails 4.0.2
+</code></pre>
+
+<p>Yeah!, now pc has ruby and rails.</p>
+
+<p>Then we can start to create Ruby on Rails project.</p>
+
+<pre><code>rails new start_rails_project
+</code></pre>
+
+<p>Created rails project. That&rsquo;s very easy!</p>
+
+<p>Go to rails project path and install bundler</p>
+
+<pre><code>  gem install bundle
+  bundle install
+</code></pre>
+
+<p>Now, you can write your ruby code on rails framework . How run your rails applications ?</p>
+
+<p>We should write</p>
+
+<pre><code>    rails server or rails s
+</code></pre>
+
+<p>In terminal, you should see this url &lsquo;<a href="http://0.0.0.0:3000">http://0.0.0.0:3000</a>&rsquo; and copy this, paste on your search bar.</p>
+
+<p>You can see Ruby default information page</p>
+
+<p><img src="../images/rails_welcome.png" alt="Alt text" /></p>
+
+<p>Yeah, Installed Ruby On Rails and started to code your rails applications.</p>
+
+<p>If you want to learn more, you should visit <a href="http://guides.rubyonrails.org/">rubyonrails</a>.</p>
+]]></content>
+  </entry>
+  
+</feed>
