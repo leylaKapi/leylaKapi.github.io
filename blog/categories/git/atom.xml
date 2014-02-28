@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Git | Leyla's Blog]]></title>
+  <title><![CDATA[Category: git | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/git/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-02-28T16:59:25+02:00</updated>
+  <updated>2014-02-28T17:23:30+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Commands of Github for Setup]]></title>
+    <title type="html"><![CDATA[Commands of github for setup]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/02/26/commands-of-github-for-setup/"/>
     <updated>2014-02-26T12:31:12+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/02/26/commands-of-github-for-setup</id>
