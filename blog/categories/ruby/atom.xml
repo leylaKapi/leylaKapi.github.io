@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ruby, | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-02-28T19:16:30+02:00</updated>
+  <updated>2014-02-28T19:22:32+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -90,7 +90,7 @@ Now, we install the ruby after then</p>
 
 <p>You can see Ruby default information page</p>
 
-<p><img src="../images/rails_welcome.png" alt="Alt text" /></p>
+<p><img src="../images/rails_welcome.png" alt="Default page" /></p>
 
 <p>Yeah, Installed Ruby On Rails and started to code your rails applications.</p>
 
