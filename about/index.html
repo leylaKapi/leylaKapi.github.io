@@ -98,7 +98,7 @@
 <p>Get in touch:</p>
 
 <ul>
-<li>Email: [<a href="&#109;&#x61;&#105;&#108;&#x74;&#111;&#x3a;&#x6c;&#x65;&#x79;&#x6c;&#97;&#x6b;&#97;&#112;&#x69;&#x40;&#x67;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#109;">&#x6c;&#101;&#121;&#x6c;&#x61;&#x6b;&#97;&#x70;&#x69;&#x40;&#x67;&#109;&#x61;&#105;&#x6c;&#46;&#99;&#x6f;&#109;</a>]</li>
+<li>Email: [<a href="&#109;&#97;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#x6c;&#101;&#121;&#x6c;&#97;&#x6b;&#97;&#112;&#x69;&#x40;&#103;&#x6d;&#97;&#x69;&#108;&#46;&#x63;&#111;&#109;">&#x6c;&#101;&#121;&#108;&#97;&#107;&#97;&#112;&#x69;&#x40;&#x67;&#x6d;&#97;&#x69;&#x6c;&#46;&#x63;&#111;&#109;</a>]</li>
 <li>Twitter: <a href="http://twitter.com/leylakapi">@leylakapi</a></li>
 <li>Github: <a href="http://github.com/leylakapi">github.com/leylakapi</a></li>
 </ul>
@@ -216,6 +216,43 @@
   <script src="/javascripts/github.js" type="text/javascript"> </script>
 </section>
 
+
+<section>
+    <h1>Follow me</h1>
+    <div id="twitter-profile" style="margin-top:0.5em;">
+        <p>
+            <strong>Leyla Kapi</strong>
+            (<a href="http://twitter.com/leylakapi">@leylakapi</a>)
+        </p>
+        <p></p>
+    </div>
+    <script type="text/javascript">
+        $(function(){
+            var container = $('#twitter-profile'),
+                    user = "leylakapi";
+
+            function parseTwLinks(s) {
+                var twUrl = "http://www.twitter.com/"
+                s = s.replace(/ (@([\w]+))/g, function(match, p1, p2) {
+                    return " <a href='"+twUrl+p2+"'>"+p1+"</a>"
+                }).replace(/ (#([\w]+))/g, function(match, p1, p2) {
+                            return " <a href='"+twUrl+"#!/search?q=%23"+p2+"'>"+p1+"</a>"
+                        })
+                return s
+            }
+
+            $.ajax({
+                url: "http://api.twitter.com/1/users/show.json?include_entities=false&screen_name="+user+"&callback=?"
+                , type: 'GET'
+                , dataType: 'jsonp'
+                , error: function (err) { $('#twitter-profile').addClass('error');  }
+                , success: function(data) {
+                    container.html('<img class="left" src="http://api.twitter.com/1/users/profile_image/'+user+'.json?size=bigger" alt="@'+user+'"><p><strong>'+data.name+'</strong> (<a href="http://twitter.com/'+user+'">@'+user+'</a>)<br/>'+data.location+'</p><p>'+parseTwLinks(data.description)+'</p>');
+                }
+            })
+        });
+    </script>
+</section>
 
   
 </aside>
