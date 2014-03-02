@@ -1,3 +1,0 @@
-leylaKapi.github.io
-===================
-
