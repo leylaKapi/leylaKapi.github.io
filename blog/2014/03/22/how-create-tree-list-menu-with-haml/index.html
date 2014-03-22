@@ -3,11 +3,12 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>about - Leyla's Blog</title>
+	<title>How create tree - list menu with haml - Leyla's Blog</title>
 	<meta name="author" content="Leyla Kapi">
 
 	
-	<meta name="description" content="Hi , I&rsquo;m leyla . I&rsquo;m computer engineering student at PAU . Also I&rsquo;m web developer at lab2023. In addition, I like to search about &hellip;">
+	<meta name="description" content="How to created tree &ndash; list menu with haml, sass, coffeescript ? Firstly, we create middleman project and create index.html.haml
+style.css.sass &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -81,22 +82,107 @@
 	
 		
 	
-	<div id="content" class="inner"><article class="page">
-    
-    <h1 class="title">About</h1>
-    
-    <div class="entry-content"><p>Hi ,</p>
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">How Create Tree - List Menu With Haml</h2>
+	<div class="entry-content"><h3>How to created tree &ndash; list menu with haml, sass, coffeescript ?</h3>
 
-<p>I&rsquo;m leyla . I&rsquo;m computer engineering student at PAU . Also I&rsquo;m web developer at <a href="http://www.lab2023.com/">lab2023</a>. In addition, I like to search about mythology, computers and futuristic technology.</p>
+<p>Firstly, we create middleman project and create</p>
 
-<p>Get in touch:</p>
+<pre><code>index.html.haml
+style.css.sass
+application.coffee
+</code></pre>
 
-<ul>
-<li>Email: [<a href="&#x6d;&#97;&#105;&#108;&#x74;&#x6f;&#x3a;&#x6c;&#101;&#121;&#x6c;&#97;&#x6b;&#x61;&#x70;&#105;&#64;&#x67;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#109;">&#108;&#x65;&#x79;&#108;&#97;&#107;&#97;&#112;&#105;&#x40;&#103;&#109;&#x61;&#105;&#108;&#46;&#x63;&#x6f;&#x6d;</a>]</li>
-<li>Twitter: <a href="http://twitter.com/leylakapi">@leylakapi</a></li>
-<li>Github: <a href="http://github.com/leylakapi">github.com/leylakapi</a></li>
-</ul>
+<p>then we open <em>index.html.haml</em> file and we write your code like this,</p>
 
+<pre><code>--- my code like this ---
+%ul.archive_tool
+  %li#tools Car
+  %ul.archive_requires
+    %li#requires BMW
+    %li#requires Mercedes
+    %li#requires Toyota
+    %li#requires Fiat
+  %li#tools Book
+  %ul.archive_requires
+    %li#requires Ruby
+    %li#requires ROR
+    %li#requires Thought
+  %li#tools Computer
+  %ul.archive_requires
+    %li#requires iMac
+    %li#requires Windows
+    %li#requires Linux
+    %li#requires Seu
+  %li#tools Chair
+  %ul.archive_requires
+    %li#requires comfortable
+    %li#requires uncomfortable
+</code></pre>
+
+<p>then open <em>style.css.sass</em> file and write style code</p>
+
+<pre><code>  #tools, #requires
+    cursor: pointer
+  .archive_tool
+    margin-left: 1em
+    font-size: large
+    font-weight: bold
+    cursor: pointer
+  .archive_requires
+    @extend .archive_tool
+    margin:
+      top: 0
+      bottom: 1em
+    font-size: medium
+    list-style-type: circle
+</code></pre>
+
+<p>then open <em>application.coffee</em> file, and</p>
+
+<pre><code>$(document).ready -&gt;
+  $(".archive_tool ul").hide()
+  $(".archive_tool &gt; li").click -&gt;
+    $(this).parent().find("ul").slideToggle()
+
+    return
+
+  $(".archive_requires &gt; li").click -&gt;
+    $(this).parent().find("ul").slideToggle()
+</code></pre>
+
+<p>we write this code inside haml, sass, and coffeescript file and then saved all, run this middleman project.</p>
+
+<p>According to edit your own project try to run codes.</p>
+
+<p>I hope, helped you.</p>
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-22T18:57:27+02:00" pubdate data-updated="true">Mar 22<span>nd</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/coffeescript/'>coffeescript</a>, <a class='category' href='/blog/categories/haml/'>haml</a>, <a class='category' href='/blog/categories/middleman/'>middleman</a>, <a class='category' href='/blog/categories/sass/'>sass</a>, <a class='category' href='/blog/categories/tree-list/'>tree-list</a>
+
+
+</div>
+	
+	<div class="comments"><a href="#disqus_thread">Comments</a></div>
+	
 </div>
 </article>
 
@@ -117,11 +203,10 @@
 
 
 <section id="comment">
-    <h1 class="title">Comments</h1>
+    <h2 class="title">Comments</h2>
     <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
 </section>
-
 </div>
 	<footer id="footer" class="inner">Copyright &copy; 2014
 
@@ -142,8 +227,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://leylaKapi.github.io/about/index.html';
-        var disqus_url = 'http://leylaKapi.github.io/about/index.html';
+        var disqus_identifier = 'http://leylaKapi.github.io/blog/2014/03/22/how-create-tree-list-menu-with-haml/';
+        var disqus_url = 'http://leylaKapi.github.io/blog/2014/03/22/how-create-tree-list-menu-with-haml/';
         var disqus_script = 'embed.js';
       
     (function () {

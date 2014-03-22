@@ -7,7 +7,9 @@
 	<meta name="author" content="Leyla Kapi">
 
 	
-	<meta name="description" content="When I setup Octopress Repository, error of rake deploy I setup the Octopress, and I create, rake new_post\["Hello World"\] then push github on &hellip;">
+	<meta name="description" content="What I can setup github and create repo? Firstly we create github account from github
+We create a new repo from &lsquo;+&rsquo; symbol.
+We named &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -82,6 +84,129 @@
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/02/26/commands-of-github-for-setup/">
+		
+			Commands of Github for Setup</a>
+	</h2>
+	<div class="entry-content">
+		<h3>What I can setup github and create repo?</h3>
+
+<ul>
+<li>Firstly we create github account from <a href="https://github.com/">github</a></li>
+<li>We create a new repo from &lsquo;+&rsquo; symbol.</li>
+<li>We named this repo and creating.</li>
+<li><p>After, We seems to this url</p>
+
+<pre><code>  HTTP: https://github.com/username/repo_name.git
+  SSH: git@github.com:username/repo_name.git
+</code></pre></li>
+</ul>
+
+
+<p>We use any link. Now, we clone this repo on pc.</p>
+
+<p>Use this command</p>
+
+<pre><code>    git clone https://github.com/username/repo_name.git
+</code></pre>
+
+<p>Now you are cloning to pc but where this file?</p>
+
+<p>For this question, Where you want to setup, install there. For example, if you want to clone in desktop, you should go desktop path
+like this(For Mac);</p>
+
+<pre><code>    cd Desktop/
+</code></pre>
+
+<p>And then cloning this path.</p>
+
+<ul>
+<li>After clone, We open this file on ide or anywhere, writing our code in file.</li>
+</ul>
+
+
+<p>Now, changed this file, We should push this file to github.
+Hence, we use this code ;</p>
+
+<pre><code>    git add .
+</code></pre>
+
+<p>With this command, we added all changed file on network, we wait for push.</p>
+
+<ul>
+<li><p>Which file added on network? Answer this question, We write this command and see to adding file.</p>
+
+<pre><code>  git status
+</code></pre></li>
+<li><p>We are saw to adding file , Now We need to commit for then to remember the files which adding.</p>
+
+<pre><code>  git commit -m "your_comment"
+</code></pre></li>
+<li><p>We prepared commit, Now all preparations are prepared, and we should push file n github</p>
+
+<pre><code>  git push origin master
+</code></pre></li>
+</ul>
+
+
+<p>Note: &lsquo;master&rsquo; are name of branch on github, if you use another branch or  don&rsquo;t use &lsquo;master&rsquo; branch we created new branch and push</p>
+
+<pre><code>    git push origin branch_name
+</code></pre>
+
+<ul>
+<li><p>If you want to see branches in your repo,</p>
+
+<pre><code>  git branch -a
+</code></pre></li>
+<li><p>If you created new branch</p>
+
+<pre><code>  git branch name_of_newbranch
+</code></pre></li>
+<li><p>Now, you are in name_of_newbranch , but you want to return or switch another branch therefore</p>
+
+<p>  git checkout another_branch</p></li>
+</ul>
+
+
+<p> Git command basicly like this.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-26T12:31:12+02:00" pubdate data-updated="true">Feb 26<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/github/'>github</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/02/26/commands-of-github-for-setup/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
 
 
     <article class="post">
