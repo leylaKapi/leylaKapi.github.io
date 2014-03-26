@@ -7,8 +7,7 @@
 	<meta name="author" content="Leyla Kapi">
 
 	
-	<meta name="description" content="How to created tree &ndash; list menu with haml, sass, coffeescript ? Firstly, we create middleman project and create index.html.haml
-style.css.sass &hellip;">
+	<meta name="description" content="Google &ndash; analytics for Octopress Firstly, if you don&rsquo;t have a google-analytics account, you should create it. Then when you create &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -83,6 +82,64 @@ style.css.sass &hellip;">
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/03/26/how-do-google-analytics-add-to-octopress/">
+		
+			How Do Google-analytics Add to Octopress?</a>
+	</h2>
+	<div class="entry-content">
+		<h3>Google &ndash; analytics for Octopress</h3>
+
+<p>Firstly, if you don&rsquo;t have a google-analytics account, you should create it. Then when you create account, google-analytics provide to <strong>tracking ID</strong> for your octopress blog. This tracking ID like</p>
+
+<pre><code>AB-12345678-9
+</code></pre>
+
+<p>and then you should get this id, opened <em>_config.yml</em> in your octopress blog project,</p>
+
+<pre><code>#_config.yml
+
+#Google Analytics
+google_analytics_tracking_id: AB-12345678-9
+</code></pre>
+
+<p>That&rsquo;s all.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-26T03:31:32+02:00" pubdate data-updated="true">Mar 26<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/google/'>google</a>, <a class='category' href='/blog/categories/google-analytics/'>google-analytics</a>, <a class='category' href='/blog/categories/octopress/'>octopress</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/03/26/how-do-google-analytics-add-to-octopress/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -1176,103 +1233,6 @@ Now, we install the ruby after then</p>
 </div>
 </article>
 
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/02/26/how-to-add-aboout-page-in-octopress/">
-		
-			How to Add &#8216;About&#8217; Page in Octopress</a>
-	</h2>
-	<div class="entry-content">
-		<h3>How to add &lsquo;About&rsquo; page in Octopress?</h3>
-
-<p>I needs 2 step for create &lsquo;About&rsquo; page on navigation bar.</p>
-
-<ul>
-<li><p>Firstly create &lsquo;about page&rsquo;</p>
-
-<p>  <code>
-      rake new_page\["About"\]
- </code></p></li>
-</ul>
-
-
-<p>Created new page for about and we linked to &lsquo;About&rsquo;, How?</p>
-
-<ul>
-<li><p>We open</p>
-
-<p>  <code>
-      /source/_includes/custom/navigation.html
- </code></p></li>
-</ul>
-
-
-<p> write the 3rd line below:</p>
-
-<pre><code>```
-   &lt;ul class="main-navigation"&gt;
-     &lt;li&gt;&lt;a href="/"&gt;Blog&lt;/a&gt;&lt;/li&gt;
-     &lt;li&gt;&lt;a href="/blog/archives"&gt;Archives&lt;/a&gt;&lt;/li&gt;
-     &lt;li&gt;&lt;a href="/about"&gt;About&lt;/a&gt;&lt;/li&gt;
-   &lt;/ul&gt;
-
-```
-</code></pre>
-
-<p>then we use git command for sent on github</p>
-
-<pre><code>```
-    git add .
-    git commit -m "Your Commit"
-    git push origin source
-```
-</code></pre>
-
-<p>And, for see on personal blog we need to deploy your code</p>
-
-<pre><code>```
-    rake generate
-    rake preview   #see on localhost:4000
-    rake deploy
-```
-</code></pre>
-
-<p>That&rsquo;s it!</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-02-26T14:25:12+02:00" pubdate data-updated="true">Feb 26<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/octopress/'>Octopress</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/02/26/how-to-add-aboout-page-in-octopress/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
 <nav id="pagenavi">
     
     
@@ -1308,6 +1268,18 @@ Now, we install the ruby after then</p>
 </script>
 
 
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-49378525-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
 
 
 
