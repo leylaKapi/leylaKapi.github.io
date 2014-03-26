@@ -56,7 +56,7 @@ then open *style.css.sass* file and write style code
           bottom: 1em
         font-size: medium
         list-style-type: circle
-      
+
 
 then open *application.coffee* file, and
 
