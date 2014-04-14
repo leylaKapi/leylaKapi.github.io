@@ -4,7 +4,7 @@
   <title><![CDATA[Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-03-26T08:59:09+02:00</updated>
+  <updated>2014-04-14T19:28:22+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[try-fix-bug]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/04/14/try-fix-bug/"/>
+    <updated>2014-04-14T18:51:04+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/04/14/try-fix-bug</id>
+    <content type="html"><![CDATA[<p>Hi,</p>
+
+<p>Octopress can be failed because of bug, I try to fix it so that this article trying to work to octopress.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How do google-analytics add to octopress?]]></title>
