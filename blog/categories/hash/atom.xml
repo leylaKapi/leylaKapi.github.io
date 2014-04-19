@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Hash | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/hash/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2014-04-19T21:57:37+03:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[Leyla Kapi]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Brief Info about hash]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/03/01/brief-info-about-hash/"/>
+    <updated>2014-03-01T18:52:57+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/03/01/brief-info-about-hash</id>
+    <content type="html"><![CDATA[<h3>What is the hash in ruby ?</h3>
+
+<p>Hash, hash, hash ?</p>
+
+<ul>
+<li>Hashes are one of the biggest property which separated another language in ruby.</li>
+<li>Hash was known <strong>associative array</strong> in another programming language.</li>
+<li><p>In hash, elements keep <strong>&lsquo;key => value&rsquo;</strong> format in ruby . Like</p>
+
+<pre><code>  hash_example = { 'name' =&gt; 'John', 'surname' =&gt; 'doe' }
+</code></pre></li>
+<li><p>Values of keys can be any type, but when you use <strong>&lsquo;eql?&rsquo;</strong> method, it can be only a key according to each other.</p>
+
+<pre><code>  a = { 3 =&gt; 'three', 3.0 =&gt; 'threedotzero' }
+  a[3]        #three
+  a[3.0]      #threedotzero
+
+  3 == 3.0        #true
+  3.eql? 3.0      #false
+</code></pre></li>
+<li><p>Hashes usually write with symbols, like :</p>
+
+<pre><code>  hash_with_symbol{ name: 'John', surname: 'Doe'}
+</code></pre></li>
+<li><p>Hashes are similar to Array class, but Array uses integer as its index, hash allow to us any object type.</p>
+
+<pre><code>  hash_differences_array{ 'age' =&gt; 15, 'year' =&gt; 2014 }
+
+  array_differences_hash = [1, 2, 3]
+</code></pre></li>
+</ul>
+
+
+<p>In my opinion, You have an information about hashes. Do you agree with me?!</p>
+
+<ul>
+<li>Continue to learn!, I have an information about hash, but if I want to access only keys or values , How does it access or separate these in hash ?</li>
+</ul>
+
+
+<p>For this question, solution: if you want to access to keys use</p>
+
+<pre><code>        keys
+</code></pre>
+
+<p>method, if you want to access to values use</p>
+
+<pre><code>        values
+</code></pre>
+
+<p>methods. Like:</p>
+
+<pre><code>        access_values_keys{ name: 'john', surname: 'Doe'}
+
+        access_values_keys.keys         # [:name, :surname]
+        access_values_keys.values       #['John', 'Doe']
+</code></pre>
+
+<ul>
+<li><p>Generally, hashes are using in parameters of name,</p>
+
+<pre><code>      def parameters_name(name, age)
+
+          '#{name} : #{age}'
+      end
+
+      puts name 'John' , 18       # Ali : 18
+</code></pre></li>
+<li><p>Hashes uses to <strong>ENUMERABLE</strong> module like arrays.</p>
+
+<pre><code>      {}.class.ancestors          #show the hash ancestors.
+                                  #[Hash, Enumerable, Object, PP::ObjectMixin, Kernel, BasicObject]
+</code></pre></li>
+<li><p>If you want to change from array to hash, you should use</p>
+
+<pre><code>      .to_h
+</code></pre></li>
+</ul>
+
+
+<p><strong>Lastly</strong> If you want to learn more, you can visit <a href="http://www.ruby-doc.org/core-2.0/Hash.html">ruby-doc</a> .</p>
+]]></content>
+  </entry>
+  
+</feed>

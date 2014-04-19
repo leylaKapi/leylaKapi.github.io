@@ -1,0 +1,316 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Middleman create haml file - Leyla's Blog</title>
+	<meta name="author" content="Leyla Kapi">
+
+	
+	<meta name="description" content="How to create .haml file in middleman? Firstly, you should go middleman and you need to install middleman gem install middleman Fine, you are &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Leyla's Blog" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script async="true" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">Leyla's Blog</a></h1>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+    <li><a href="/about">About</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+    <li><a href="/about">About</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="http://google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:leylaKapi.github.io">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+		
+		
+		<a class="google" href="https://plus.google.com/leylakapi?rel=author" title="Google+">Google+</a>
+		
+		
+		<a class="twitter" href="http://twitter.com/leylakapi" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/leylakapi" title="GitHub">GitHub</a>
+		
+    
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+    
+	</div>
+	<form class="search" action="http://google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:leylaKapi.github.io">
+	</form>
+</nav>
+
+</header>
+	
+		
+	
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Middleman Create Haml File</h2>
+	<div class="entry-content"><h3>How to create .haml file in middleman?</h3>
+
+<p>Firstly, you should go <a href="" title="http://middlemanapp.com/">middleman</a> and you need to <strong>install middleman</strong></p>
+
+<pre><code>gem install middleman
+</code></pre>
+
+<p>Fine, you are installed middleman, now we start to create project in middleman</p>
+
+<pre><code>middleman init project_name
+</code></pre>
+
+<p>Then this command give you directory as shown below :</p>
+
+<pre><code> project_name/
+    Gemfile
+    Gemfile.lock
+    config.rb
+    source
+        .gitignore
+        images
+            background.png
+            middleman.png
+        javascript
+            all.js
+        stylesheets
+            all.css
+            normalize.css
+        layouts
+            layout.erb
+        index.html.erb
+</code></pre>
+
+<p>If you can see this directories, you should open project with your IDE.</p>
+
+<p><strong>Now, We create .haml file but how ?</strong></p>
+
+<p>Go ahead and remove below files because these files don&rsquo;t use in project.</p>
+
+<pre><code>- /source/images/background.png
+- /source/images/middleman.png
+- /source/javascript/all.js
+- /source/stylesheets/all.css
+- /source/stylesheets/normalize.css
+- /source/layouts/layout.erb
+- /source/index.html.erb
+</code></pre>
+
+<p>Now, Projects was removed from unused files.</p>
+
+<h5>Add HAML</h5>
+
+<p>Middleman appear to read HTML by default . Therefore, you should go to</p>
+
+<pre><code>   /config.rb
+</code></pre>
+
+<p>in file write:</p>
+
+<pre><code>    set :haml, :format =&gt; :html5
+</code></pre>
+
+<p>Now program convert to html5 from haml.</p>
+
+<ul>
+<li><p>Add a</p>
+
+<pre><code>  layout.haml
+</code></pre></li>
+</ul>
+
+
+<p>file to the</p>
+
+<pre><code>      /source/layouts
+</code></pre>
+
+<p>directory. In this file we write</p>
+
+<pre><code>    !!!
+    %html{ :lang =&gt; "en"}
+        %head
+            %meta{:charset =&gt; "utf-8"}
+            %title= data.page.title
+            = stylesheet_link_tag "your_css_file.css"
+            = javascript_include_tag "your_javascript_file.js"
+        %body
+            = yield
+</code></pre>
+
+<p>Now we must create</p>
+
+<pre><code>        index.html.haml
+</code></pre>
+
+<p>in</p>
+
+<pre><code>            source/
+</code></pre>
+
+<p>directory.</p>
+
+<pre><code>        %h1 Welcome Middleman project
+</code></pre>
+
+<p>write in</p>
+
+<pre><code>            source/index.html.haml
+</code></pre>
+
+<p>files.</p>
+
+<p>We are create middleman project and write codes, How we run this program?</p>
+
+<p>Wait! Dont worry, When writing to below command in terminal in order of this.</p>
+
+<pre><code># Go to project path
+
+     cd project_name
+     bundle install
+     bundle exec middleman server
+</code></pre>
+
+<p>then we are seen</p>
+
+<pre><code>         http://localhost:3000
+</code></pre>
+
+<p>like url. We should copy this url and paste on browser search bar.</p>
+
+<p>That&rsquo;s it! Try and see.</p>
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-27T13:49:10+02:00" pubdate data-updated="true">Feb 27<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/haml/'>Haml</a>, <a class='category' href='/blog/categories/middleman/'>Middleman,</a>
+
+
+</div>
+	
+	<div class="comments"><a href="#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+		
+		<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+		
+		
+		<a class="addthis_button_tweet"></a>
+		
+		
+		
+	</div>
+	
+</div>
+
+
+
+<section id="comment">
+    <h2 class="title">Comments</h2>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2014
+
+    Leyla Kapi
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'leylasblog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://leylaKapi.github.io/blog/2014/02/27/middleman-create-haml-file/';
+        var disqus_url = 'http://leylaKapi.github.io/blog/2014/02/27/middleman-create-haml-file/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//go.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-49378525-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+</body>
+</html>
