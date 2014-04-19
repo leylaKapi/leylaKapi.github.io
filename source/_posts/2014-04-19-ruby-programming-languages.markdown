@@ -362,9 +362,9 @@ For detail viewing [Bundler](http://bundler.io/)
 Opened file, after we make to do, push to package to [RubyGems](http://rubygems.org) then we see in this site.
 
 **Note :**
-- Also *Thor* is a package(gem) for ruby.
-- *ARGV* is constant which hidden to arguments.
-- In documentation section writing *ri*  command, generally we use to search for method.
+-Also *Thor* is a package(gem) for ruby.
+-*ARGV* is constant which hidden to arguments.
+-In documentation section writing *ri*  command, generally we use to search for method.
 
 ```
 ri Class#method
@@ -422,14 +422,12 @@ If you generally showing the class, you can show like above.
 - In Ruby monetary system should use **BigDecimal** library in project. 
 
 
-    ```
-    1.0e7  		#10.000.000
-    3.methods   	#for 3 number, bring all methods
-    __________________
-    require 'yaml'			# added yaml .
-    puts 2.methods.to_yaml
-    
-    ```
+```
+1.0e7  		#10.000.000
+3.methods   	#for 3 number, bring all methods
+require 'yaml'			# added yaml .
+puts 2.methods.to_yaml
+```
 
 - **<=>(space ship)** comparative operator.
 
@@ -442,16 +440,12 @@ a =b ; 0
 ```
 
 
-
-
 ***
 
 ```
 a = 5 && b = 10
 a <=> b 			#-1
 ```
-
-
 
 -times and upto methods
 
@@ -468,7 +462,6 @@ or
 ```
 
 thanks to this we write loop with *times*.
-
 
 ```
 irb(main):001:0> 10.times do |i|
@@ -531,11 +524,11 @@ Ruby10
 - When we combine the text, we can embed in string expressions.
 
 
-```
-puts "#{'academic'.capitalize} #{'information'.upcase}"
+    ```
+    puts "#{'academic'.capitalize} #{'information'.upcase}"
 
-=>	Academic INFORMATION
-```
+    =>	Academic INFORMATION
+    ```
 
 
 -Also to support Turkish characters, you should use *Unicode-Utils* library.
