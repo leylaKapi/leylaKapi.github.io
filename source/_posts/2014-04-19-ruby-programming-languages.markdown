@@ -3,9 +3,9 @@ layout: post
 title: "Ruby Programming languages"
 date: 2014-04-19 10:52:45 +0300
 comments: true
-categories: ruby programming-languages
+categories: ruby programming-languages beginner
 ---
-#AB2014 - Ruby101
+#AB2014 - Ruby101 for beginners.
 - [Ruby-lang](https://ruby-lang.org)
 - [Nitrous](https://nitrous.io)
 
