@@ -14,7 +14,7 @@ In this post I try to explain, if you have a new computer (after format, buy new
 how to entegrated each other?
 
 Before starting explain it in this article, I try to explain set up octopress, if you forget this, you can find it easily in another
-blog post or you can look at (Octopress Setup guide)[http://octopress.org/docs/setup/] .
+blog post or you can look at [Octopress Setup guide](http://octopress.org/docs/setup/) .
 
 Now recreate a local repo for octopress
 
