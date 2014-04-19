@@ -4,7 +4,7 @@
   <title><![CDATA[Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-04-19T21:57:37+03:00</updated>
+  <updated>2014-04-19T22:38:13+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -12,6 +12,104 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Recreate Octopress blog for another computer]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/04/19/recreate-octopress-blog-for-another-computer/"/>
+    <updated>2014-04-19T22:13:18+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/04/19/recreate-octopress-blog-for-another-computer</id>
+    <content type="html"><![CDATA[<h3>How I recreate octopress blog another computer ?</h3>
+
+<p>I formatted my computer and then for my octopress blog <em>What can I do ?</em> <strong>reinstall</strong> or <strong>WHAT?</strong></p>
+
+<p>In this post I try to explain, if you have a new computer (after format, buy new computer&hellip;etc)but you have octopress blog
+how to entegrated each other?</p>
+
+<p>Before starting explain it in this article, I try to explain set up octopress, if you forget this, you can find it easily in another
+blog post or you can look at <a href="http://octopress.org/docs/setup/">Octopress Setup guide</a> .</p>
+
+<p>Now recreate a local repo for octopress</p>
+
+<p>-Clone your blog to the new machine</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git clone -b source git@github.com:username/username.github.io.git octopress</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then clone the master branch to the _deploy</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd octopress
+</span><span class='line'>git clone git@github.com:username/username.github.io.git _deploy</span></code></pre></td></tr></table></div></figure>
+
+
+<p>then run <em>rake</em></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem install bundler
+</span><span class='line'>rbenv rehash
+</span><span class='line'>bundle install
+</span><span class='line'>rake set_up_pages</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then we ask to you repo url like</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Enter the read/write url for your repository
+</span><span class='line'>(For example, 'git@github.com:your_username/your_username.github.io.git)
+</span><span class='line'>           or 'https://github.com/your_username/your_username.github.io')
+</span><span class='line'>Repository url:</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Write your like this <em>Repository url: git@github.com:username/username.github.io.git</em></p>
+
+<p>Then you should write these command :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake generate
+</span><span class='line'>git add .
+</span><span class='line'>git commit -m "Write comment here"
+</span><span class='line'>git push origin source
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>rake deploy</span></code></pre></td></tr></table></div></figure>
+
+
+<p>then you can write</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd octopress
+</span><span class='line'>git pull origin source #get another computer changing
+</span><span class='line'>cd ./_deploy
+</span><span class='line'>git pull origin master</span></code></pre></td></tr></table></div></figure>
+
+
+<p>then you can write</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake deploy</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&rsquo;s all :)
+I hope this article help you.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ruby Programming languages]]></title>

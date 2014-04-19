@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: octopress | Leyla's Blog]]></title>
-  <link href="http://leylaKapi.github.io/blog/categories/octopress/atom.xml" rel="self"/>
+  <title><![CDATA[Category: computer | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/computer/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
   <updated>2014-04-19T22:38:13+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
@@ -92,30 +92,6 @@ rake deploy
 
 <p>That&rsquo;s all :)
 I hope this article help you.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How do google-analytics add to octopress?]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/03/26/how-do-google-analytics-add-to-octopress/"/>
-    <updated>2014-03-26T03:31:32+02:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/03/26/how-do-google-analytics-add-to-octopress</id>
-    <content type="html"><![CDATA[<h3>Google &ndash; analytics for Octopress</h3>
-
-<p>Firstly, if you don&rsquo;t have a google-analytics account, you should create it. Then when you create account, google-analytics provide to <strong>tracking ID</strong> for your octopress blog. This tracking ID like</p>
-
-<pre><code>AB-12345678-9
-</code></pre>
-
-<p>and then you should get this id, opened <em>_config.yml</em> in your octopress blog project,</p>
-
-<pre><code>#_config.yml
-
-#Google Analytics
-google_analytics_tracking_id: AB-12345678-9
-</code></pre>
-
-<p>That&rsquo;s all.</p>
 ]]></content>
   </entry>
   
