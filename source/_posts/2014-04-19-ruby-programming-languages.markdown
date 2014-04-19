@@ -157,7 +157,7 @@ def method_name param1, param2, ...
 end
 ```
 
-
+***
 ```
 def collection number1, number2
     number1 + number2
