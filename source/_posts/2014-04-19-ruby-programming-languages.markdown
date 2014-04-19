@@ -143,13 +143,11 @@ def method_name(param1)
 end
 ```
 
-
 ```
 def method_name(param1, param2)
 ...
 end
 ```
-
 
 **Also** Not required to using parenthesis like :
 
@@ -191,7 +189,7 @@ changed_value = ...   #changed value of anything value, assignment operator.
 danger!    #changed original text.
 ```
 
-
+***
 ```
 irb(main):001:0> a="Ruby"
 => "Ruby"
