@@ -26,18 +26,18 @@ git clone -b source git@github.com:username/username.github.io.git octopress
 
 Then clone the master branch to the _deploy
 
-```
+```bash
 cd octopress
 git clone git@github.com:username/username.github.io.git _deploy
 ```
 
 then run *rake*
 
-```
+```bash
 gem install bundler
 rbenv rehash
 bundle install
-rake set_up_pages
+rake setup_github_pages
 ```
 
 Then we ask to you repo url like
@@ -54,7 +54,7 @@ Write your like this *Repository url: git@github.com:username/username.github.io
 
 Then you should write these command :
 
-```
+```bash
 rake generate
 git add .
 git commit -m "Write comment here"
@@ -65,7 +65,7 @@ rake deploy
 ```
 then you can write
 
-```
+```bash
 cd octopress
 git pull origin source #get another computer changing
 cd ./_deploy
@@ -73,7 +73,7 @@ git pull origin master
 ```
 then you can write
 
-```
+```bash
 rake deploy
 ```
 

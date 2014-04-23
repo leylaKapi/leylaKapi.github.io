@@ -103,7 +103,7 @@ Seeming to above code *.reverse* method which entered code, provide to writing r
 - Like another languages, when we make comparisons <,>, ==,! using this expressions.
 
 
-```
+```bash
 irb(main):001:0 3 > 5
 => false
 irb(main):002:0 3 < 5
@@ -129,16 +129,16 @@ In ruby, Not exist relevant to logical expression like *Boolean* or *Bool* class
 - Defining to method start **def**, and ending with **end**.
 
 
-```
-def method_name
+```ruby
+    def method_name
 ...
 end
 ```
 
 If method get a parameter like :
 
-```
-def method_name(param1)
+```ruby
+    def method_name(param1)
 ...
 end
 ```
@@ -158,7 +158,7 @@ end
 ```
 
 ***
-```
+```ruby
 def collection number1, number2
     number1 + number2
 end
@@ -182,7 +182,7 @@ In Above code, defining *collect method* for collection two number and make coll
 questioning?    #return true or false
 ```
 
-```
+```ruby
 changed_value = ...   #changed value of anything value, assignment operator.
 
 ```
@@ -190,7 +190,7 @@ danger!    #changed original text.
 ```
 
 ***
-```
+```bash
 irb(main):001:0> a="Ruby"
 => "Ruby"
 irb(main):002:0> a.reverse
@@ -210,7 +210,7 @@ In above example entering a value and using **!** character changed original val
 
 - class, module and constant name starts with capital letter.
 
-```
+```ruby
 class ClassName
 ...
 end
@@ -221,7 +221,7 @@ PI_CONSTANT = 3,14156
 ```
 must be defined like above. Also you know constants doesn't change, if you want to change can be bug.
 
-```
+```bash
 irb(main):001:0> PI_CONSTANT = 3,14156
 => [3,14156]
 irb(main):002:0> PI_CONSTANT  = 2
@@ -233,7 +233,7 @@ irb(main):002:0> PI_CONSTANT  = 2
 - **local variables** starting with lover letter or '_' , like :
 
 
-```
+```ruby
 local_variable = "like this."
 plate = 20
 ```
@@ -270,7 +270,7 @@ But the above method is not a preferred method commonly.
 
 ***
 
-```
+```ruby
 def changed(value)
     variables = value
 end
@@ -311,7 +311,7 @@ You can see to use all path and method with **ENV**
 
 Writing command about **Gem** :
 
-```
+```bash
 gem -v   	#seeing the version of gem
 gem update --system  #provide to update your system
 gem list  	#you can see all gem list
@@ -420,7 +420,7 @@ If you generally showing the class, you can show like above.
 - In Ruby monetary system should use **BigDecimal** library in project. 
 
 
-```
+```ruby
 1.0e7  		#10.000.000
 3.methods   	#for 3 number, bring all methods
 require 'yaml'			# added yaml .
@@ -429,7 +429,7 @@ puts 2.methods.to_yaml
 
 - **<=>(space ship)** comparative operator.
 
-```
+```ruby
 a <=> b
 a < b ; -1
 a > b ; 1
@@ -440,14 +440,14 @@ a =b ; 0
 
 ***
 
-```
+```ruby
 a = 5 && b = 10
 a <=> b 			#-1
 ```
 
 -times and upto methods
 
-```
+```ruby
 10.times do |i|
 ...
 end
@@ -455,13 +455,13 @@ end
 
 or
 
-```
+```ruby
 10.times {|i| ...}
 ```
 
 thanks to this we write loop with *times*.
 
-```
+```bash
 irb(main):001:0> 10.times do |i|
 irb(main):002:1* puts "ruby"+i.to_s
 irb(main):013:1> end
@@ -482,7 +482,7 @@ ruby9
 
 - With *1.upto(10){...}* same use with *times*
 
-```
+```bash
 irb(main):001:0> 10.upto(10) {puts "ruby"}
 ruby
 ruby
@@ -499,7 +499,7 @@ ruby
 
 or
 
-```
+```bash
 irb(main):001:0> 1.upt0(10) do |i|
 irb(main):002:1* puts "Ruby"+i.to_s
 irb(main):013:1> end
@@ -532,18 +532,18 @@ Ruby10
 -Also to support Turkish characters, you should use *Unicode-Utils* library.
 
 
-```
+```bash
 gem install unicode_utils
 ```
 
 install than, write in file,
 
-```
+```ruby
 require 'unicode_utils'
 ```
 
 
-```
+```ruby
 UnicodeUtils.upcase("ruby")
 => RUBY
 ```
@@ -551,7 +551,7 @@ UnicodeUtils.upcase("ruby")
 
 -%q => use for single quotation
 
-```
+```ruby
 text = %q<Hello>
 => 'Hello'
 ```
@@ -577,7 +577,7 @@ end} puts "My name #{name}""
 ```
 
 ***
-```
+```ruby
 name="Ruby"
 surname="Rails"
 text = << ANYTHING
@@ -601,7 +601,7 @@ Try above method.
 
 
 
-```
+```ruby
 text.sub 'm', 'a'  	#translate "m=>a"
 text.gsub  'm',  'a' 		#translate all  from "m" to "a" .
 ```

@@ -11,24 +11,24 @@ categories: internet working protocols HTTP HTTPS TCP UDP SSL TLS URL
 Internet like in real life, There are two sides for internet communication. While one of this is making request, another of this
 have to respond to this request. This loop is named
 
-```
-request - respond
-```
+
+    request - respond
+
 or
 
-```
-client-server
-```
+
+    client-server
+
 Web relation client - server
 
-```
+
 **client** => **server**
          request
-```
-```
+
+
 **client** <= **server**
          respond
-```
+
 Now, I try to explain when it occur this relation, Which process do occur?
 
 - This process can be with protocols, protocols What?
