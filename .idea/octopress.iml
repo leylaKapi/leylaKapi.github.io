@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="RUBY_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.6.2, rbenv: 2.0.0-p451) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="chunky_png (v1.3.0, rbenv: 2.0.0-p451) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="fssm (v0.2.10, rbenv: 2.0.0-p451) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="jekyll (v0.12.1, rbenv: 2.0.0-p451) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="posix-spawn (v0.3.8, rbenv: 2.0.0-p451) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="pygments.rb (v0.3.7, rbenv: 2.0.0-p451) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rack (v1.5.2, rbenv: 2.0.0-p451) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rack-protection (v1.5.3, rbenv: 2.0.0-p451) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rake (v10.3.1, rbenv: 2.0.0-p451) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rdiscount (v2.0.7.3, rbenv: 2.0.0-p451) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="sass (v3.2.19, rbenv: 2.0.0-p451) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="sass-globbing (v1.0.0, rbenv: 2.0.0-p451) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="stringex (v1.4.0, rbenv: 2.0.0-p451) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="tilt (v1.4.1, rbenv: 2.0.0-p451) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="yajl-ruby (v1.1.0, rbenv: 2.0.0-p451) [gem]" level="application" />
+  </component>
+</module>
+
