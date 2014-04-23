@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: ruby, | Leyla's Blog]]></title>
+  <title><![CDATA[Category: Ruby, | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-04-23T23:44:52+03:00</updated>
+  <updated>2014-04-24T00:19:11+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -14,87 +14,91 @@
 
   
   <entry>
-    <title type="html"><![CDATA[What is the Ruby On Rails?]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/02/28/what-is-the-ruby-on-rails/"/>
-    <updated>2014-02-28T18:25:39+02:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/02/28/what-is-the-ruby-on-rails</id>
-    <content type="html"><![CDATA[<h2>What is the Ruby On Rails and How install?</h2>
+    <title type="html"><![CDATA[Brief Info about hash]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/03/01/brief-info-about-hash/"/>
+    <updated>2014-03-01T18:52:57+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/03/01/brief-info-about-hash</id>
+    <content type="html"><![CDATA[<h3>What is the hash in ruby ?</h3>
 
-<p><strong>Ruby</strong></p>
+<p>Hash, hash, hash ?</p>
 
 <ul>
-<li>Object oriented programming language</li>
-<li>Created in 1995 by Matz</li>
-<li>Used for many purpose, not only web app.</li>
+<li>Hashes are one of the biggest property which separated another language in ruby.</li>
+<li>Hash was known <strong>associative array</strong> in another programming language.</li>
+<li><p>In hash, elements keep <strong>&lsquo;key => value&rsquo;</strong> format in ruby . Like</p>
+
+<pre><code>  hash_example = { 'name' =&gt; 'John', 'surname' =&gt; 'doe' }
+</code></pre></li>
+<li><p>Values of keys can be any type, but when you use <strong>&lsquo;eql?&rsquo;</strong> method, it can be only a key according to each other.</p>
+
+<pre><code>  a = { 3 =&gt; 'three', 3.0 =&gt; 'threedotzero' }
+  a[3]        #three
+  a[3.0]      #threedotzero
+
+  3 == 3.0        #true
+  3.eql? 3.0      #false
+</code></pre></li>
+<li><p>Hashes usually write with symbols, like :</p>
+
+<pre><code>  hash_with_symbol{ name: 'John', surname: 'Doe'}
+</code></pre></li>
+<li><p>Hashes are similar to Array class, but Array uses integer as its index, hash allow to us any object type.</p>
+
+<pre><code>  hash_differences_array{ 'age' =&gt; 15, 'year' =&gt; 2014 }
+
+  array_differences_hash = [1, 2, 3]
+</code></pre></li>
 </ul>
 
 
-<p><strong>Ruby on Rails</strong></p>
+<p>In my opinion, You have an information about hashes. Do you agree with me?!</p>
 
 <ul>
-<li>Open source, web applications framework.</li>
-<li>Written in Ruby</li>
-<li>Release as open source in 2004</li>
+<li>Continue to learn!, I have an information about hash, but if I want to access only keys or values , How does it access or separate these in hash ?</li>
 </ul>
 
 
-<h4>How install Ruby On Rails?</h4>
+<p>For this question, solution: if you want to access to keys use</p>
 
-<p>Firstly, you have to install ruby, and then start install rails.
-Is there ruby in your pc? Look at!</p>
-
-<pre><code>   ruby -v
-   # ruby 2.0.0p353 (2013-11-22 revision 43784) [x86_64-darwin13.0.0]
+<pre><code>        keys
 </code></pre>
 
-<p>I hear , &lsquo;my pc don&rsquo;t has ruby.&rsquo; Dont worry, when you are going to <a href="https://www.ruby-lang.org/en/">download ruby</a>.
-Now, we install the ruby after then</p>
+<p>method, if you want to access to values use</p>
 
-<pre><code>  gem update system
+<pre><code>        values
 </code></pre>
 
-<p>start install rails framework.</p>
+<p>methods. Like:</p>
 
-<pre><code>gem install rails
+<pre><code>        access_values_keys{ name: 'john', surname: 'Doe'}
+
+        access_values_keys.keys         # [:name, :surname]
+        access_values_keys.values       #['John', 'Doe']
 </code></pre>
 
-<p>rails was install and which version?</p>
+<ul>
+<li><p>Generally, hashes are using in parameters of name,</p>
 
-<pre><code>    rails --version  or rails -v
-    # Rails 4.0.2
-</code></pre>
+<pre><code>      def parameters_name(name, age)
 
-<p>Yeah!, now pc has ruby and rails.</p>
+          '#{name} : #{age}'
+      end
 
-<p>Then we can start to create Ruby on Rails project.</p>
+      puts name 'John' , 18       # Ali : 18
+</code></pre></li>
+<li><p>Hashes uses to <strong>ENUMERABLE</strong> module like arrays.</p>
 
-<pre><code>rails new start_rails_project
-</code></pre>
+<pre><code>      {}.class.ancestors          #show the hash ancestors.
+                                  #[Hash, Enumerable, Object, PP::ObjectMixin, Kernel, BasicObject]
+</code></pre></li>
+<li><p>If you want to change from array to hash, you should use</p>
 
-<p>Created rails project. That&rsquo;s very easy!</p>
+<pre><code>      .to_h
+</code></pre></li>
+</ul>
 
-<p>Go to rails project path and install bundler</p>
 
-<pre><code>  gem install bundle
-  bundle install
-</code></pre>
-
-<p>Now, you can write your ruby code on rails framework . How run your rails applications ?</p>
-
-<p>We should write</p>
-
-<pre><code>    rails server or rails s
-</code></pre>
-
-<p>In terminal, you should see this url &lsquo;<a href="http://0.0.0.0:3000">http://0.0.0.0:3000</a>&rsquo; and copy this, paste on your search bar.</p>
-
-<p>You can see Ruby default information page</p>
-
-<p><img src="../images/rails_welcome.png" alt="Default page" /></p>
-
-<p>Yeah, Installed Ruby On Rails and started to code your rails applications.</p>
-
-<p>If you want to learn more, you should visit <a href="http://guides.rubyonrails.org/">rubyonrails</a>.</p>
+<p><strong>Lastly</strong> If you want to learn more, you can visit <a href="http://www.ruby-doc.org/core-2.0/Hash.html">ruby-doc</a> .</p>
 ]]></content>
   </entry>
   

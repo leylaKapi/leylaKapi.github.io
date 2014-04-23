@@ -4,7 +4,7 @@
   <title><![CDATA[Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-04-23T23:44:52+03:00</updated>
+  <updated>2014-04-24T00:19:11+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -12,6 +12,38 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Setup Rubymine]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/04/23/setup-rubymine/"/>
+    <updated>2014-04-23T23:59:28+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/04/23/setup-rubymine</id>
+    <content type="html"><![CDATA[<h3>How I can set up RubyMine for my Ubuntu Desktop ?</h3>
+
+<ul>
+<li>Firstly, You can install rubymine on <a href="http://www.jetbrains.com/ruby/download/">RubyMine</a></li>
+</ul>
+
+
+<p>Then, open your terminal</p>
+
+<pre><code>CTRL + ALT + T
+</code></pre>
+
+<p>Then, go to Download file then extract from <em>.tar.gz</em> file to normal directory. Then write in terminal</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">cd </span>Downloads/RubyMine-6.3/bin/
+</span><span class='line'>./rubymine.sh
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then, Rubymine opens automatically.</p>
+
+<p>That&rsquo;s all.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How is the internet working and what is the protocols]]></title>

@@ -7,7 +7,7 @@
 	<meta name="author" content="Leyla Kapi">
 
 	
-	<meta name="description" content="How is the internet working ? Internet like in real life, There are two sides for internet communication. While one of this is making request, &hellip;">
+	<meta name="description" content="How I can set up RubyMine for my Ubuntu Desktop ? Firstly, You can install rubymine on RubyMine Then, open your terminal CTRL + ALT + T Then, go to &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -82,6 +82,72 @@
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/04/23/setup-rubymine/">
+		
+			Setup Rubymine</a>
+	</h2>
+	<div class="entry-content">
+		<h3>How I can set up RubyMine for my Ubuntu Desktop ?</h3>
+
+<ul>
+<li>Firstly, You can install rubymine on <a href="http://www.jetbrains.com/ruby/download/">RubyMine</a></li>
+</ul>
+
+
+<p>Then, open your terminal</p>
+
+<pre><code>CTRL + ALT + T
+</code></pre>
+
+<p>Then, go to Download file then extract from <em>.tar.gz</em> file to normal directory. Then write in terminal</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">cd </span>Downloads/RubyMine-6.3/bin/
+</span><span class='line'>./rubymine.sh
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then, Rubymine opens automatically.</p>
+
+<p>That&rsquo;s all.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-23T23:59:28+03:00" pubdate data-updated="true">Apr 23<span>rd</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/ruby/'>ruby,</a>, <a class='category' href='/blog/categories/rubymine/'>rubymine,</a>, <a class='category' href='/blog/categories/set-up/'>set_up,</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/04/23/setup-rubymine/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -1954,129 +2020,6 @@ and use in</p>
 </div>
 	
 	<div class="comments"><a href="/blog/2014/03/02/css-sprite-use-in-sass/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/03/01/brief-info-about-hash/">
-		
-			Brief Info About Hash</a>
-	</h2>
-	<div class="entry-content">
-		<h3>What is the hash in ruby ?</h3>
-
-<p>Hash, hash, hash ?</p>
-
-<ul>
-<li>Hashes are one of the biggest property which separated another language in ruby.</li>
-<li>Hash was known <strong>associative array</strong> in another programming language.</li>
-<li><p>In hash, elements keep <strong>&lsquo;key => value&rsquo;</strong> format in ruby . Like</p>
-
-<pre><code>  hash_example = { 'name' =&gt; 'John', 'surname' =&gt; 'doe' }
-</code></pre></li>
-<li><p>Values of keys can be any type, but when you use <strong>&lsquo;eql?&rsquo;</strong> method, it can be only a key according to each other.</p>
-
-<pre><code>  a = { 3 =&gt; 'three', 3.0 =&gt; 'threedotzero' }
-  a[3]        #three
-  a[3.0]      #threedotzero
-
-  3 == 3.0        #true
-  3.eql? 3.0      #false
-</code></pre></li>
-<li><p>Hashes usually write with symbols, like :</p>
-
-<pre><code>  hash_with_symbol{ name: 'John', surname: 'Doe'}
-</code></pre></li>
-<li><p>Hashes are similar to Array class, but Array uses integer as its index, hash allow to us any object type.</p>
-
-<pre><code>  hash_differences_array{ 'age' =&gt; 15, 'year' =&gt; 2014 }
-
-  array_differences_hash = [1, 2, 3]
-</code></pre></li>
-</ul>
-
-
-<p>In my opinion, You have an information about hashes. Do you agree with me?!</p>
-
-<ul>
-<li>Continue to learn!, I have an information about hash, but if I want to access only keys or values , How does it access or separate these in hash ?</li>
-</ul>
-
-
-<p>For this question, solution: if you want to access to keys use</p>
-
-<pre><code>        keys
-</code></pre>
-
-<p>method, if you want to access to values use</p>
-
-<pre><code>        values
-</code></pre>
-
-<p>methods. Like:</p>
-
-<pre><code>        access_values_keys{ name: 'john', surname: 'Doe'}
-
-        access_values_keys.keys         # [:name, :surname]
-        access_values_keys.values       #['John', 'Doe']
-</code></pre>
-
-<ul>
-<li><p>Generally, hashes are using in parameters of name,</p>
-
-<pre><code>      def parameters_name(name, age)
-
-          '#{name} : #{age}'
-      end
-
-      puts name 'John' , 18       # Ali : 18
-</code></pre></li>
-<li><p>Hashes uses to <strong>ENUMERABLE</strong> module like arrays.</p>
-
-<pre><code>      {}.class.ancestors          #show the hash ancestors.
-                                  #[Hash, Enumerable, Object, PP::ObjectMixin, Kernel, BasicObject]
-</code></pre></li>
-<li><p>If you want to change from array to hash, you should use</p>
-
-<pre><code>      .to_h
-</code></pre></li>
-</ul>
-
-
-<p><strong>Lastly</strong> If you want to learn more, you can visit <a href="http://www.ruby-doc.org/core-2.0/Hash.html">ruby-doc</a> .</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-01T18:52:57+02:00" pubdate data-updated="true">Mar 1<span>st</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/hash/'>Hash</a>, <a class='category' href='/blog/categories/ruby/'>Ruby,</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/03/01/brief-info-about-hash/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>
