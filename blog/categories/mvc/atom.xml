@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: rails, | Leyla's Blog]]></title>
-  <link href="http://leylaKapi.github.io/blog/categories/rails/atom.xml" rel="self"/>
+  <title><![CDATA[Category: mvc | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/mvc/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
   <updated>2014-04-24T00:50:05+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
