@@ -3,11 +3,15 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>about - Leyla's Blog</title>
+	<title>Scaffolding in Rails - Leyla's Blog</title>
 	<meta name="author" content="Leyla Kapi">
 
 	
-	<meta name="description" content="Hi , I&rsquo;m leyla . I&rsquo;m computer engineering student at PAU . Also I&rsquo;m web developer at lab2023. In addition, I like to search about &hellip;">
+	<meta name="description" content="In this post, I try to explain scaffolding in rails shortly.
+Firstly, Let&rsquo;s create rails project 1
+2
+rails new blogging
+cd blogging Now, we &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -81,22 +85,88 @@
 	
 		
 	
-	<div id="content" class="inner"><article class="page">
-    
-    <h1 class="title">About</h1>
-    
-    <div class="entry-content"><p>Hi ,</p>
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Scaffolding in Rails</h2>
+	<div class="entry-content"><p>In this post, I try to explain scaffolding in rails shortly.
+Firstly, Let&rsquo;s create rails project</p>
 
-<p>I&rsquo;m leyla . I&rsquo;m computer engineering student at PAU . Also I&rsquo;m web developer at <a href="http://www.lab2023.com/">lab2023</a>. In addition, I like to search about mythology, computers and futuristic technology.</p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rails new blogging
+</span><span class='line'><span class="nb">cd </span>blogging
+</span></code></pre></td></tr></table></div></figure>
 
-<p>Get in touch:</p>
+
+<p>Now, we created rails project and enter inside of project.
+We need to create scaffold,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rails generate scaffold Information first_name second_name date_time:date city:boolean
+</span></code></pre></td></tr></table></div></figure>
+
 
 <ul>
-<li>Email: [<a href="&#109;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#108;&#101;&#x79;&#108;&#x61;&#x6b;&#x61;&#112;&#x69;&#x40;&#x67;&#x6d;&#97;&#105;&#x6c;&#46;&#99;&#x6f;&#x6d;">&#108;&#101;&#121;&#108;&#97;&#x6b;&#x61;&#x70;&#x69;&#x40;&#103;&#x6d;&#x61;&#105;&#108;&#x2e;&#x63;&#x6f;&#x6d;</a>]</li>
-<li>Twitter: <a href="http://twitter.com/leylakapi">@leylakapi</a></li>
-<li>Github: <a href="http://github.com/leylakapi">github.com/leylakapi</a></li>
+<li>We create Information model, in this model</li>
+<li>Type of first_name and second_name is string.</li>
+<li>Type of date_time is date, this provide to create date.</li>
+<li>Type of city is boolean, this provide to create checkbox.</li>
 </ul>
 
+
+<p>then we need to migrate for this reason,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake db:migrate
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then, If you want change your home page(index.html), you should open in your app,</p>
+
+<pre><code>config/routes.rb
+</code></pre>
+
+<p>this path and write</p>
+
+<pre><code>root :to =&gt; 'information#index'
+</code></pre>
+
+<p>save and run</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rails s
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>opened <a href="http://0.0.0.0:3000/">http://localhost:3000/</a></p>
+
+<p>That&rsquo;s all.</p>
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-25T00:21:58+03:00" pubdate data-updated="true">Apr 25<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/rake/'>rake</a>, <a class='category' href='/blog/categories/scaffold/'>scaffold</a>
+
+
+</div>
+	
+	<div class="comments"><a href="#disqus_thread">Comments</a></div>
+	
 </div>
 </article>
 
@@ -117,11 +187,10 @@
 
 
 <section id="comment">
-    <h1 class="title">Comments</h1>
+    <h2 class="title">Comments</h2>
     <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
 </section>
-
 </div>
 	<footer id="footer" class="inner">Copyright &copy; 2014
 
@@ -142,8 +211,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://leylaKapi.github.io/about/index.html';
-        var disqus_url = 'http://leylaKapi.github.io/about/index.html';
+        var disqus_identifier = 'http://leylaKapi.github.io/blog/2014/04/25/scaffolding-in-rails/';
+        var disqus_url = 'http://leylaKapi.github.io/blog/2014/04/25/scaffolding-in-rails/';
         var disqus_script = 'embed.js';
       
     (function () {

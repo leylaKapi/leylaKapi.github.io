@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: scaffold | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/scaffold/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2014-04-25T00:39:53+03:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[Leyla Kapi]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Scaffolding in Rails]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/04/25/scaffolding-in-rails/"/>
+    <updated>2014-04-25T00:21:58+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/04/25/scaffolding-in-rails</id>
+    <content type="html"><![CDATA[<p>In this post, I try to explain scaffolding in rails shortly.
+Firstly, Let&rsquo;s create rails project</p>
+
+<p><code>bash
+rails new blogging
+cd blogging
+</code></p>
+
+<p>Now, we created rails project and enter inside of project.
+We need to create scaffold,</p>
+
+<p><code>bash
+rails generate scaffold Information first_name second_name date_time:date city:boolean
+</code>
+&ndash; We create Information model, in this model
+ &ndash; Type of first_name and second_name is string.
+ &ndash; Type of date_time is date, this provide to create date.
+ &ndash; Type of city is boolean, this provide to create checkbox.</p>
+
+<p>then we need to migrate for this reason,</p>
+
+<p><code>bash
+rake db:migrate
+</code></p>
+
+<p>Then, If you want change your home page(index.html), you should open in your app,</p>
+
+<pre><code>config/routes.rb
+</code></pre>
+
+<p>this path and write</p>
+
+<pre><code>root :to =&gt; 'information#index'
+</code></pre>
+
+<p>save and run</p>
+
+<p><code>bash
+rails s
+</code>
+opened <a href="http://0.0.0.0:3000/">http://localhost:3000/</a></p>
+
+<p>That&rsquo;s all.</p>
+]]></content>
+  </entry>
+  
+</feed>
