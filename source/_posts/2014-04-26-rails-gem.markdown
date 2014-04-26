@@ -24,4 +24,4 @@ Save and open terminal run,
 
 that's fix your bug.
 
-If you want more information , you can visit [ProtectedAttributesGem](https://github.com/rails/protected_attributes)
+If you want more information , you can visit [ProtectedAttributesGem](https://github.com/rails/protected_attributes) .
