@@ -1,0 +1,27 @@
+---
+layout: post
+title: "Rails attr_accessible"
+date: 2014-04-26 14:44:39 +0300
+comments: true
+categories: rails gem attr_accessible bundle
+---
+
+If you get *attr_accesible*'s bug, like
+
+```rails
+Undefined method 'attr_accessible'
+```
+
+You can forget write gem about this attributes, open your *Gemfile* in project
+
+```ruby
+gem 'protected-attributes'
+```
+
+Save and open terminal run,
+
+    bundle
+
+that's fix your bug.
+
+If you want more information , you can visit [ProtectedAttributesGem](https://github.com/rails/protected_attributes)
