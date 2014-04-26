@@ -3,11 +3,12 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>about - Leyla's Blog</title>
+	<title>Rails attributes: 'attr_accessible' - Leyla's Blog</title>
 	<meta name="author" content="Leyla Kapi">
 
 	
-	<meta name="description" content="Hi , I&rsquo;m leyla . I&rsquo;m computer engineering student at PAU . Also I&rsquo;m web developer at lab2023. In addition, I like to search about &hellip;">
+	<meta name="description" content="If you get attr_accesible&rsquo;s bug, like 1
+Undefined method 'attr_accessible' You can forget write gem about this attributes, open your Gemfile in &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -81,22 +82,59 @@
 	
 		
 	
-	<div id="content" class="inner"><article class="page">
-    
-    <h1 class="title">About</h1>
-    
-    <div class="entry-content"><p>Hi ,</p>
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Rails Attributes: 'Attr_accessible'</h2>
+	<div class="entry-content"><p>If you get <em>attr_accesible</em>&rsquo;s bug, like</p>
 
-<p>I&rsquo;m leyla . I&rsquo;m computer engineering student at PAU . Also I&rsquo;m web developer at <a href="http://www.lab2023.com/">lab2023</a>. In addition, I like to search about mythology, computers and futuristic technology.</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Undefined method 'attr_accessible'</span></code></pre></td></tr></table></div></figure>
 
-<p>Get in touch:</p>
+
+<p>You can forget write gem about this attributes, open your <em>Gemfile</em> in project</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;protected-attributes&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Save and open terminal run,</p>
+
+<pre><code>bundle
+</code></pre>
+
+<p>that&rsquo;s fix your bug.</p>
 
 <ul>
-<li>Email: [<a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#111;&#x3a;&#108;&#101;&#x79;&#x6c;&#97;&#x6b;&#x61;&#112;&#x69;&#x40;&#103;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#111;&#109;">&#x6c;&#101;&#x79;&#x6c;&#97;&#x6b;&#97;&#112;&#x69;&#64;&#103;&#x6d;&#97;&#105;&#108;&#x2e;&#99;&#x6f;&#109;</a>]</li>
-<li>Twitter: <a href="http://twitter.com/leylakapi">@leylakapi</a></li>
-<li>Github: <a href="http://github.com/leylakapi">github.com/leylakapi</a></li>
+<li>If you want more information , you can visit <a href="https://github.com/rails/protected_attributes">ProtectedAttributesGem</a> .</li>
 </ul>
 
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-26T14:44:39+03:00" pubdate data-updated="true">Apr 26<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/attr-accessible/'>attr_accessible</a>, <a class='category' href='/blog/categories/bundle/'>bundle</a>, <a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
+
+
+</div>
+	
+	<div class="comments"><a href="#disqus_thread">Comments</a></div>
+	
 </div>
 </article>
 
@@ -117,11 +155,10 @@
 
 
 <section id="comment">
-    <h1 class="title">Comments</h1>
+    <h2 class="title">Comments</h2>
     <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
 </section>
-
 </div>
 	<footer id="footer" class="inner">Copyright &copy; 2014
 
@@ -142,8 +179,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://leylaKapi.github.io/about/index.html';
-        var disqus_url = 'http://leylaKapi.github.io/about/index.html';
+        var disqus_identifier = 'http://leylaKapi.github.io/blog/2014/04/26/rails-gem/';
+        var disqus_url = 'http://leylaKapi.github.io/blog/2014/04/26/rails-gem/';
         var disqus_script = 'embed.js';
       
     (function () {
