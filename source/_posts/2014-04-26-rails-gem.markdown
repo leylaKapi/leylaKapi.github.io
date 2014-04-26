@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Rails attr_accessible"
+title: "Rails attributes: 'attr_accessible'"
 date: 2014-04-26 14:44:39 +0300
 comments: true
 categories: rails gem attr_accessible bundle
