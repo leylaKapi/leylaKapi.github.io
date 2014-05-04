@@ -8,14 +8,15 @@ categories: validates ruby rails RoR
 
 ### Ruby on Rails Validation methods
 
-- validates_presence_of
+- **validates_presence_of**
 
      Attribute mustn't be blank(nil,false,[],{})
+
      ```
         validates_presence_of :field_name
-        ```
+     ```
 
-- validates_length_of
+- **validates_length_of**
 
     Attribute must meet length requirements
     :is, :minimum, :maximum, :within, :in, :too_short, :too_long
@@ -23,7 +24,7 @@ categories: validates ruby rails RoR
         validates_length_of :field_name, :minimum => 100
         ```
 
-- validates_numericality_of
+- **validates_numericality_of**
 
     Attribute must be integer or floating number
     :less_than, :greater_than, :equal_to, :odd, :even, :greater_than_or_equal_to
@@ -32,17 +33,17 @@ categories: validates ruby rails RoR
     validates_numericality_of :field_name, :greater_than_or_equal_to => 5
     ```
 
-- validates_inclusion_of
+- **validates_inclusion_of**
 
     Attribute must be in a list of choises. (array or range)
     :in
 
-- validates_exclusion_of
+- **validates_exclusion_of**
 
     Attribute mustn't be in a list of choises. (array or range)
     :in
 
-- validates_format_of
+- **validates_format_of**
 
     Attribute must match a regular expression.
      :with
@@ -53,16 +54,16 @@ categories: validates ruby rails RoR
     :case_sensitive
     :scope
 
-- validates_acceptance_of
+- **validates_acceptance_of**
 
     Attribute must be accepted
     :accept(expected value, 1)
 
-- validates_confirmation_of
+- **validates_confirmation_of**
 
     Attribute must be confirmed by entering it twice creates a virtual blank attribute for confirmation.
 
-- validates_associated
+- **validates_associated**
 
     Associated object or objects must all be valid.
 
