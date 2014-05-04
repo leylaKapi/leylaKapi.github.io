@@ -77,18 +77,18 @@ categories: validates ruby rails RoR
 
 Example of Validations
 
-    ```
+    
     validates_presence_of :user_name
     validates_length_of :user_name, :maximum => 50
     validates_uniqueness_of :user_name
-    ```
+
 When we use like above, We diverge to DRY, instead of above
 
-    ```
+
     validates :user_name, :presence => true
                           :length => {:maximum => 50}
                           :uniqueness => true
-    ```
+
 
 That's all.
 
