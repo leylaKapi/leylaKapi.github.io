@@ -9,35 +9,35 @@ categories: Octopress
 
 ### When I setup Octopress Repository, error of
  
-
+```bash
     rake deploy
-
+```
 
 
 I setup the Octopress, and I create,
 
-
+```bash
     rake new_post\["Hello World"\]
-
+```
 
 
 then push github on
 
-
+```bash
     source
-
+```
 
 
 branch, and when I
 
-
+```bash
     rake deploy
-
+```
 
 
  Terminal show this code :
 
-
+```bash
     To https://github.com/username/username.github.io.git
     ! [rejected]        master -> master (non-fast-forward)
     error: failed to push some refs to 'https://github.com/username/username.github.io.git'
@@ -45,7 +45,7 @@ branch, and when I
     hint: its remote counterpart. Merge the remote changes (e.g. 'git pull')
     hint: before pushing again.
     hint: See the 'Note about fast-forwards' in 'git push --help' for details.
-
+```
      Github Pages deploy complete
 
 
@@ -54,31 +54,32 @@ branch, and when I
 
  Firstly
 
-
+```bash
     git clone https://github.com/username/username.github.io.git
     git checkout source
-
+```
 
 
  I cloning to username.github.io into master, and checkout source
 
  Secondly we need to setup 'deploy' directories
 
-
+```bash
     mkdir _deploy
     cd _deploy
     git init
     git remote add -t master -f origin https://github.com/username/username.github.io.git
-
+```
 
 
 Now, we can use
 
-
+```bash
     rake deploy
-
+```
 
 or
 
-
+```bash
     rake gen_deploy
+```
