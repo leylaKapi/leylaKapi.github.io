@@ -7,7 +7,9 @@
 	<meta name="author" content="Leyla Kapi">
 
 	
-	<meta name="description" content="When I setup Octopress Repository, error of rake deploy I setup the Octopress, and I create, rake new_post\["Hello World"\] then push github on &hellip;">
+	<meta name="description" content="When I setup Octopress Repository, error of 1
+rake deploy I setup the Octopress, and I create, 1
+rake new_post\[&quot;Hello World&quot;\] then push &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -85,64 +87,93 @@
 	<h2 class="title">After New_post</h2>
 	<div class="entry-content"><h3>When I setup Octopress Repository, error of</h3>
 
-<pre><code>rake deploy
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake deploy
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>I setup the Octopress, and I create,</p>
 
-<pre><code>rake new_post\["Hello World"\]
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake new_post<span class="se">\[</span><span class="s2">&quot;Hello World&quot;</span><span class="se">\]</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>then push github on</p>
 
-<pre><code>source
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">source</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>branch, and when I</p>
 
-<pre><code>rake deploy
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake deploy
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p> Terminal show this code :</p>
 
-<pre><code>To https://github.com/username/username.github.io.git
-! [rejected]        master -&gt; master (non-fast-forward)
-error: failed to push some refs to 'https://github.com/username/username.github.io.git'
-hint: Updates were rejected because the tip of your current branch is behind
-hint: its remote counterpart. Merge the remote changes (e.g. 'git pull')
-hint: before pushing again.
-hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>To https://github.com/username/username.github.io.git
+</span><span class='line'>! <span class="o">[</span>rejected<span class="o">]</span>        master -&gt; master <span class="o">(</span>non-fast-forward<span class="o">)</span>
+</span><span class='line'>error: failed to push some refs to <span class="s1">&#39;https://github.com/username/username.github.io.git&#39;</span>
+</span><span class='line'>hint: Updates were rejected because the tip of your current branch is behind
+</span><span class='line'>hint: its remote counterpart. Merge the remote changes <span class="o">(</span>e.g. <span class="s1">&#39;git pull&#39;</span><span class="o">)</span>
+</span><span class='line'>hint: before pushing again.
+</span><span class='line'>hint: See the <span class="s1">&#39;Note about fast-forwards&#39;</span> in <span class="s1">&#39;git push --help&#39;</span> <span class="k">for </span>details.
+</span></code></pre></td></tr></table></div></figure>
 
- Github Pages deploy complete
+
+<pre><code> Github Pages deploy complete
 </code></pre>
 
 <h3>What I can fix it ?</h3>
 
 <p> Firstly</p>
 
-<pre><code>git clone https://github.com/username/username.github.io.git
-git checkout source
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git clone https://github.com/username/username.github.io.git
+</span><span class='line'>git checkout <span class="nb">source</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p> I cloning to username.github.io into master, and checkout source</p>
 
 <p> Secondly we need to setup &lsquo;deploy&rsquo; directories</p>
 
-<pre><code>mkdir _deploy
-cd _deploy
-git init
-git remote add -t master -f origin https://github.com/username/username.github.io.git
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>mkdir _deploy
+</span><span class='line'><span class="nb">cd </span>_deploy
+</span><span class='line'>git init
+</span><span class='line'>git remote add -t master -f origin https://github.com/username/username.github.io.git
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Now, we can use</p>
 
-<pre><code>rake deploy
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake deploy
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>or</p>
 
-<pre><code>rake gen_deploy
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake gen_deploy
+</span></code></pre></td></tr></table></div></figure>
+
 </div>
 
 

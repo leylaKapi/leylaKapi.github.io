@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Octopress | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-05-20T00:32:03+03:00</updated>
+  <updated>2014-05-20T00:51:39+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -83,25 +83,43 @@
     <id>http://leylaKapi.github.io/blog/2014/02/26/after-new-post</id>
     <content type="html"><![CDATA[<h3>When I setup Octopress Repository, error of</h3>
 
+<p>```bash</p>
+
 <pre><code>rake deploy
 </code></pre>
 
+<p>```</p>
+
 <p>I setup the Octopress, and I create,</p>
+
+<p>```bash</p>
 
 <pre><code>rake new_post\["Hello World"\]
 </code></pre>
 
+<p>```</p>
+
 <p>then push github on</p>
+
+<p>```bash</p>
 
 <pre><code>source
 </code></pre>
 
+<p>```</p>
+
 <p>branch, and when I</p>
+
+<p>```bash</p>
 
 <pre><code>rake deploy
 </code></pre>
 
+<p>```</p>
+
 <p> Terminal show this code :</p>
+
+<p>```bash</p>
 
 <pre><code>To https://github.com/username/username.github.io.git
 ! [rejected]        master -&gt; master (non-fast-forward)
@@ -110,21 +128,30 @@ hint: Updates were rejected because the tip of your current branch is behind
 hint: its remote counterpart. Merge the remote changes (e.g. 'git pull')
 hint: before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+</code></pre>
 
- Github Pages deploy complete
+<p>```</p>
+
+<pre><code> Github Pages deploy complete
 </code></pre>
 
 <h3>What I can fix it ?</h3>
 
 <p> Firstly</p>
 
+<p>```bash</p>
+
 <pre><code>git clone https://github.com/username/username.github.io.git
 git checkout source
 </code></pre>
 
+<p>```</p>
+
 <p> I cloning to username.github.io into master, and checkout source</p>
 
 <p> Secondly we need to setup &lsquo;deploy&rsquo; directories</p>
+
+<p>```bash</p>
 
 <pre><code>mkdir _deploy
 cd _deploy
@@ -132,15 +159,25 @@ git init
 git remote add -t master -f origin https://github.com/username/username.github.io.git
 </code></pre>
 
+<p>```</p>
+
 <p>Now, we can use</p>
+
+<p>```bash</p>
 
 <pre><code>rake deploy
 </code></pre>
 
+<p>```</p>
+
 <p>or</p>
+
+<p>```bash</p>
 
 <pre><code>rake gen_deploy
 </code></pre>
+
+<p>```</p>
 ]]></content>
   </entry>
   

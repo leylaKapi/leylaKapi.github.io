@@ -4,7 +4,7 @@
   <title><![CDATA[Category: github | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/github/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-05-20T00:32:03+03:00</updated>
+  <updated>2014-05-20T00:51:39+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -24,28 +24,40 @@
 <li>Firstly we create github account from <a href="https://github.com/">github</a></li>
 <li>We create a new repo from &lsquo;+&rsquo; symbol.</li>
 <li>We named this repo and creating.</li>
-<li><p>After, We seems to this url</p>
-
-<pre><code>  HTTP: https://github.com/username/repo_name.git
-  SSH: git@github.com:username/repo_name.git
-</code></pre></li>
+<li>After, We seems to this url</li>
 </ul>
 
+
+<p>```bash</p>
+
+<pre><code>HTTP: https://github.com/username/repo_name.git
+SSH: git@github.com:username/repo_name.git
+</code></pre>
+
+<p>```</p>
 
 <p>We use any link. Now, we clone this repo on pc.</p>
 
 <p>Use this command</p>
 
-<pre><code>    git clone https://github.com/username/repo_name.git
+<p>```bash</p>
+
+<pre><code>git clone https://github.com/username/repo_name.git
 </code></pre>
+
+<p>```</p>
 
 <p>Now you are cloning to pc but where this file?</p>
 
 <p>For this question, Where you want to setup, install there. For example, if you want to clone in desktop, you should go desktop path
 like this(For Mac);</p>
 
-<pre><code>    cd Desktop/
+<p>```bash</p>
+
+<pre><code>cd Desktop/
 </code></pre>
+
+<p>```</p>
 
 <p>And then cloning this path.</p>
 
@@ -57,46 +69,86 @@ like this(For Mac);</p>
 <p>Now, changed this file, We should push this file to github.
 Hence, we use this code ;</p>
 
-<pre><code>    git add .
+<p>```bash</p>
+
+<pre><code>git add .
 </code></pre>
+
+<p>```</p>
 
 <p>With this command, we added all changed file on network, we wait for push.</p>
 
 <ul>
-<li><p>Which file added on network? Answer this question, We write this command and see to adding file.</p>
-
-<pre><code>  git status
-</code></pre></li>
-<li><p>We are saw to adding file , Now We need to commit for then to remember the files which adding.</p>
-
-<pre><code>  git commit -m "your_comment"
-</code></pre></li>
-<li><p>We prepared commit, Now all preparations are prepared, and we should push file n github</p>
-
-<pre><code>  git push origin master
-</code></pre></li>
+<li>Which file added on network? Answer this question, We write this command and see to adding file.</li>
 </ul>
 
 
-<p>Note: &lsquo;master&rsquo; are name of branch on github, if you use another branch or  don&rsquo;t use &lsquo;master&rsquo; branch we created new branch and push</p>
-
-<pre><code>    git push origin branch_name
-</code></pre>
+<p><code>bash
+  git status
+</code></p>
 
 <ul>
-<li><p>If you want to see branches in your repo,</p>
-
-<pre><code>  git branch -a
-</code></pre></li>
-<li><p>If you created new branch</p>
-
-<pre><code>  git branch name_of_newbranch
-</code></pre></li>
-<li><p>Now, you are in name_of_newbranch , but you want to return or switch another branch therefore</p>
-
-<p>  git checkout another_branch</p></li>
+<li>We are saw to adding file , Now We need to commit for then to remember the files which adding.</li>
 </ul>
 
+
+<p><code>bash
+   git commit -m "your_comment"
+</code></p>
+
+<ul>
+<li>We prepared commit, Now all preparations are prepared, and we should push file n github</li>
+</ul>
+
+
+<p>```bash</p>
+
+<pre><code>git push origin master
+</code></pre>
+
+<p>```</p>
+
+<p>Note: <code>master</code> are name of branch on github, if you use another branch or  don&rsquo;t use &lsquo;master&rsquo; branch we created new branch and push</p>
+
+<p>```bash</p>
+
+<pre><code>git push origin branch_name
+</code></pre>
+
+<p>```</p>
+
+<ul>
+<li>If you want to see branches in your repo,</li>
+</ul>
+
+
+<p>```bash</p>
+
+<pre><code>git branch -a
+</code></pre>
+
+<p>```</p>
+
+<ul>
+<li>If you created new branch</li>
+</ul>
+
+
+<p>```bash</p>
+
+<pre><code>git branch name_of_newbranch
+</code></pre>
+
+<p>```</p>
+
+<ul>
+<li>Now, you are in name_of_newbranch , but you want to return or switch another branch therefore</li>
+</ul>
+
+
+<p><code>bash
+git checkout another_branch
+</code></p>
 
 <p> Git command basicly like this.</p>
 ]]></content>
