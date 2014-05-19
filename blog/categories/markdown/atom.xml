@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Markdown | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/markdown/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2014-05-20T00:32:03+03:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[Leyla Kapi]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Markdown article some style]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/02/26/markdown-article-some-style/"/>
+    <updated>2014-02-26T17:59:49+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/02/26/markdown-article-some-style</id>
+    <content type="html"><![CDATA[<h2>Write article with markdown</h2>
+
+<ul>
+<li>When you start to write article with markdown, we can recognize to writing regularly and reading easily.</li>
+</ul>
+
+
+<p>Firstly</p>
+
+<h4>How to write header in markdown?</h4>
+
+<p>While you&rsquo;re writing header, you should write in &lsquo;#&rsquo;(pound sign)</p>
+
+<pre><code>    # Header 1
+    ## Header 2
+    ### Header 3
+    #### Header 4
+    ##### Header 5
+    ###### Header 6
+</code></pre>
+
+<p>Bold are header more and more smaller, from above example, the boldest header is Header 1 and the lightest header is Header 2</p>
+
+<h4>How to write lists in markdown?</h4>
+
+<p>If you want to write list, How?</p>
+
+<p><strong>ordered or unordered</strong></p>
+
+<p>Firstly Ordered :</p>
+
+<p>We use number when we want to write ordered.</p>
+
+<p>Secondly unordered :</p>
+
+<p>We use &lsquo;&ndash;&rsquo; and &lsquo;*&rsquo; the symbol provide to write unordered.</p>
+
+<pre><code>  - apple
+  - banana
+  - strawberries
+</code></pre>
+
+<h4>How to write code in markdown?</h4>
+
+<p>When you write code block in markdown, you use &lsquo;```&rsquo; symbol. How to write this symbol on keyboard?
+ Don&rsquo;t worry! when we press on &lsquo; alt + , &rsquo; we create this symbol.</p>
+
+<p>like this :</p>
+
+<pre><code>````
+    ...
+
+```
+</code></pre>
+
+<p>Also we specify the how write this code ? or with what write ?</p>
+
+<p>We say to terminal, konsol or ide you saying like :</p>
+
+<pre><code>```ruby
+    ...
+
+```
+</code></pre>
+
+<p>Now we say to terminal write ruby code block, and write according to ruby language.</p>
+
+<h4>How to write to link in markdown ?</h4>
+
+<p>When we use link about anything and if you want to be regularly you should use markdown and use like this :</p>
+
+<pre><code>```
+    [github](http://github.com)
+    [leylakapi](http://leylakapi.github.io)
+```
+</code></pre>
+
+<p>When the click github, redirected to on &lsquo;<a href="http://github.com">http://github.com</a>&rsquo;  this link.</p>
+
+<p>I tried to explain markdown, when we write code, link, header or list. I think these are the most commonly use .</p>
+]]></content>
+  </entry>
+  
+</feed>
