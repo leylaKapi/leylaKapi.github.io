@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Octopress | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-05-20T00:51:39+03:00</updated>
+  <updated>2014-05-20T01:18:24+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -20,57 +20,66 @@
     <id>http://leylaKapi.github.io/blog/2014/02/26/how-to-add-aboout-page-in-octopress</id>
     <content type="html"><![CDATA[<h3>How to add &lsquo;About&rsquo; page in Octopress?</h3>
 
-<p>I needs 2 step for create &lsquo;About&rsquo; page on navigation bar.</p>
+<p>I needs 2 step for create <code>About</code> page on navigation bar.</p>
 
 <ul>
-<li><p>Firstly create &lsquo;about page&rsquo;</p>
-
-<p>  <code>
-      rake new_page\["About"\]
- </code></p></li>
+<li>Firstly create &lsquo;about page&rsquo;</li>
 </ul>
 
 
-<p>Created new page for about and we linked to &lsquo;About&rsquo;, How?</p>
+<p>```bash</p>
+
+<pre><code>rake new_page\["About"\]
+</code></pre>
+
+<p>```</p>
+
+<p>Created new page for about and we linked to <code>About</code>, How?</p>
 
 <ul>
-<li><p>We open</p>
-
-<p>  <code>
-      /source/_includes/custom/navigation.html
- </code></p></li>
+<li>We open</li>
 </ul>
 
+
+<p>```directory</p>
+
+<pre><code>/source/_includes/custom/navigation.html
+</code></pre>
+
+<p>```</p>
 
 <p> write the 3rd line below:</p>
 
-<pre><code>```
-   &lt;ul class="main-navigation"&gt;
-     &lt;li&gt;&lt;a href="/"&gt;Blog&lt;/a&gt;&lt;/li&gt;
-     &lt;li&gt;&lt;a href="/blog/archives"&gt;Archives&lt;/a&gt;&lt;/li&gt;
-     &lt;li&gt;&lt;a href="/about"&gt;About&lt;/a&gt;&lt;/li&gt;
-   &lt;/ul&gt;
+<p>```html
+   <ul class="main-navigation"></p>
 
-```
+<pre><code> &lt;li&gt;&lt;a href="{{ root_url }}/"&gt;Blog&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="{{ root_url }}/blog/archives"&gt;Archives&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="{{ root_url}}/about"&gt;About&lt;/a&gt;&lt;/li&gt;
 </code></pre>
 
-<p>then we use git command for sent on github</p>
-
-<pre><code>```
-    git add .
-    git commit -m "Your Commit"
-    git push origin source
+<p>   </ul>
 ```
+then we use git command for sent on github</p>
+
+<p>```bash</p>
+
+<pre><code>git add .
+git commit -m "Your Commit"
+git push origin source
 </code></pre>
 
-<p>And, for see on personal blog we need to deploy your code</p>
+<p>```
+And, for see on personal blog we need to deploy your code</p>
 
-<pre><code>```
-    rake generate
-    rake preview   #see on localhost:4000
-    rake deploy
-```
+<p>```bash</p>
+
+<pre><code>rake generate
+rake preview   #see on localhost:4000
+rake deploy
 </code></pre>
+
+<p>```</p>
 
 <p>That&rsquo;s it!</p>
 ]]></content>

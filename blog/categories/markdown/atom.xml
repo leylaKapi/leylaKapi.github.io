@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Markdown | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/markdown/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-05-20T00:51:39+03:00</updated>
+  <updated>2014-05-20T01:18:24+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -31,13 +31,17 @@
 
 <p>While you&rsquo;re writing header, you should write in &lsquo;#&rsquo;(pound sign)</p>
 
-<pre><code>    # Header 1
-    ## Header 2
-    ### Header 3
-    #### Header 4
-    ##### Header 5
-    ###### Header 6
+<p>```markdown</p>
+
+<pre><code># Header 1
+## Header 2
+### Header 3
+#### Header 4
+##### Header 5
+###### Header 6
 </code></pre>
+
+<p>```</p>
 
 <p>Bold are header more and more smaller, from above example, the boldest header is Header 1 and the lightest header is Header 2</p>
 
@@ -55,10 +59,11 @@
 
 <p>We use &lsquo;&ndash;&rsquo; and &lsquo;*&rsquo; the symbol provide to write unordered.</p>
 
-<pre><code>  - apple
+<p><code>markdown
+  - apple
   - banana
   - strawberries
-</code></pre>
+</code></p>
 
 <h4>How to write code in markdown?</h4>
 
@@ -67,21 +72,22 @@
 
 <p>like this :</p>
 
-<pre><code>````
-    ...
+<p>```</p>
 
-```
+<pre><code>...
 </code></pre>
 
-<p>Also we specify the how write this code ? or with what write ?</p>
+<p>```
+Also we specify the how write this code ? or with what write ?</p>
 
 <p>We say to terminal, konsol or ide you saying like :</p>
 
-<pre><code>```ruby
-    ...
+<p>```</p>
 
-```
+<pre><code>...
 </code></pre>
+
+<p>```</p>
 
 <p>Now we say to terminal write ruby code block, and write according to ruby language.</p>
 
@@ -89,10 +95,8 @@
 
 <p>When we use link about anything and if you want to be regularly you should use markdown and use like this :</p>
 
-<pre><code>```
-    [github](http://github.com)
-    [leylakapi](http://leylakapi.github.io)
-```
+<pre><code>[github](http://github.com)
+[leylakapi](http://leylakapi.github.io)
 </code></pre>
 
 <p>When the click github, redirected to on &lsquo;<a href="http://github.com">http://github.com</a>&rsquo;  this link.</p>

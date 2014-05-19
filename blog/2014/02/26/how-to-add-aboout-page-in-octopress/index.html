@@ -7,7 +7,7 @@
 	<meta name="author" content="Leyla Kapi">
 
 	
-	<meta name="description" content="How to add &lsquo;About&rsquo; page in Octopress? I needs 2 step for create &lsquo;About&rsquo; page on navigation bar. Firstly create &lsquo;about &hellip;">
+	<meta name="description" content="How to add &lsquo;About&rsquo; page in Octopress? I needs 2 step for create About page on navigation bar. Firstly create &lsquo;about page&rsquo; 1 &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -85,57 +85,66 @@
 	<h2 class="title">How to Add 'About' Page in Octopress</h2>
 	<div class="entry-content"><h3>How to add &lsquo;About&rsquo; page in Octopress?</h3>
 
-<p>I needs 2 step for create &lsquo;About&rsquo; page on navigation bar.</p>
+<p>I needs 2 step for create <code>About</code> page on navigation bar.</p>
 
 <ul>
-<li><p>Firstly create &lsquo;about page&rsquo;</p>
-
-<p>  <code>
-      rake new_page\["About"\]
- </code></p></li>
+<li>Firstly create &lsquo;about page&rsquo;</li>
 </ul>
 
 
-<p>Created new page for about and we linked to &lsquo;About&rsquo;, How?</p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake new_page<span class="se">\[</span><span class="s2">&quot;About&quot;</span><span class="se">\]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Created new page for about and we linked to <code>About</code>, How?</p>
 
 <ul>
-<li><p>We open</p>
-
-<p>  <code>
-      /source/_includes/custom/navigation.html
- </code></p></li>
+<li>We open</li>
 </ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>/source/_includes/custom/navigation.html
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p> write the 3rd line below:</p>
 
-<pre><code>```
-   &lt;ul class="main-navigation"&gt;
-     &lt;li&gt;&lt;a href="/"&gt;Blog&lt;/a&gt;&lt;/li&gt;
-     &lt;li&gt;&lt;a href="/blog/archives"&gt;Archives&lt;/a&gt;&lt;/li&gt;
-     &lt;li&gt;&lt;a href="/about"&gt;About&lt;/a&gt;&lt;/li&gt;
-   &lt;/ul&gt;
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;main-navigation&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>     <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/&quot;</span><span class="nt">&gt;</span>Blog<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+</span><span class='line'>     <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/blog/archives&quot;</span><span class="nt">&gt;</span>Archives<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+</span><span class='line'>     <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/about&quot;</span><span class="nt">&gt;</span>About<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+</span><span class='line'>   <span class="nt">&lt;/ul&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
 
-```
-</code></pre>
 
 <p>then we use git command for sent on github</p>
 
-<pre><code>```
-    git add .
-    git commit -m "Your Commit"
-    git push origin source
-```
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git add .
+</span><span class='line'>git commit -m <span class="s2">&quot;Your Commit&quot;</span>
+</span><span class='line'>git push origin <span class="nb">source</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>And, for see on personal blog we need to deploy your code</p>
 
-<pre><code>```
-    rake generate
-    rake preview   #see on localhost:4000
-    rake deploy
-```
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake generate
+</span><span class='line'>rake preview   <span class="c">#see on localhost:4000</span>
+</span><span class='line'>rake deploy
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>That&rsquo;s it!</p>
 </div>
