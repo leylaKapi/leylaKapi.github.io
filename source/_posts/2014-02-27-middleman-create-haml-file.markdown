@@ -10,31 +10,38 @@ categories: Middleman, Haml
 
 Firstly, you should go [middleman]('http://middlemanapp.com/') and you need to **install middleman**
 
-    gem install middleman
+```bash
+   gem install middleman
+```
+
 
 Fine, you are installed middleman, now we start to create project in middleman
 
-    middleman init project_name
+```bash
+   middleman init project_name
+```
 
 Then this command give you directory as shown below :
 
-     project_name/
-        Gemfile
-        Gemfile.lock
-        config.rb
-        source
-            .gitignore
-            images
-                background.png
-                middleman.png
-            javascript
-                all.js
-            stylesheets
-                all.css
-                normalize.css
-            layouts
-                layout.erb
-            index.html.erb
+```bash
+ project_name/
+    Gemfile
+    Gemfile.lock
+    config.rb
+    source
+        .gitignore
+        images
+            background.png
+            middleman.png
+        javascript
+            all.js
+        stylesheets
+            all.css
+            normalize.css
+        layouts
+            layout.erb
+        index.html.erb
+```
 
 
 
@@ -59,17 +66,25 @@ Now, Projects was removed from unused files.
 
 Middleman appear to read HTML by default . Therefore, you should go to
 
-       /config.rb
+```directory
+ /config.rb
+```
 
 in file write:
 
-        set :haml, :format => :html5
+```haml
+set :haml, :format => :html5
+```
+
 
 Now program convert to html5 from haml.
 
 - Add a
 
-        layout.haml
+```haml
+ layout.haml
+```
+
 
 file to the
 
@@ -77,30 +92,36 @@ file to the
 
 directory. In this file we write
 
-        !!!
-        %html{ :lang => "en"}
-            %head
-                %meta{:charset => "utf-8"}
-                %title= data.page.title
-                = stylesheet_link_tag "your_css_file.css"
-                = javascript_include_tag "your_javascript_file.js"
-            %body
-                = yield
+```haml
+    !!!
+    %html{ :lang => "en"}
+        %head
+            %meta{:charset => "utf-8"}
+            %title= data.page.title
+            = stylesheet_link_tag "your_css_file.css"
+            = javascript_include_tag "your_javascript_file.js"
+        %body
+            = yield
+```
 
 Now we must create
 
-            index.html.haml
+```haml
+index.html.haml
+```
 
 in
 
-                source/
+                `source/`
 directory.
 
-            %h1 Welcome Middleman project
+```haml
+ %h1 Welcome Middleman project
+```
 
 write in
 
-                source/index.html.haml
+               `source/index.html.haml`
 files.
 
 We are create middleman project and write codes, How we run this program?
