@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Middleman Blog"
+title: "Middleman blog"
 date: 2014-03-15 17:05:21 +0200
 comments: true
 categories: middleman, blogging

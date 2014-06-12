@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How create tree - list menu with haml"
+title: "How create tree - list menu with HAML"
 date: 2014-03-22 18:57:27 +0200
 comments: true
 categories: haml sass coffeescript middleman tree-list

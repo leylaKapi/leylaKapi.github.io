@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "After new_post"
+title: "After create octopress blog fixed error"
 date: 2014-02-26 11:30:57 +0200
 comments: true
 categories: Octopress

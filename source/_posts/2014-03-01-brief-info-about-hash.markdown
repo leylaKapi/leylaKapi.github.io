@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Brief Info about hash"
+title: "Brief info about Hash"
 date: 2014-03-01 18:52:57 +0200
 comments: true
 categories: Ruby, Hash

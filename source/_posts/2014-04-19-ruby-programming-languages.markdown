@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Ruby Programming languages"
+title: "Ruby programming languages"
 date: 2014-04-19 10:52:45 +0300
 comments: true
 categories: ruby programming-languages beginner

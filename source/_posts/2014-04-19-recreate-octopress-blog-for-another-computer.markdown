@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Recreate Octopress blog for another computer"
+title: "Recreate octopress blog for another computer"
 date: 2014-04-19 22:13:18 +0300
 comments: true
 categories: octopress recreate computer
