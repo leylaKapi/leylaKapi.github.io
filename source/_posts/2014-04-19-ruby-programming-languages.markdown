@@ -68,7 +68,8 @@ Acoording to above *irb*, opened ruby terminal; *exit* exit to ruby terminal. In
 *_*
 
 this sign provide to take pre-functions and then make process with this functions.
-```
+
+```ruby
 system('clear')
 ```
 
@@ -158,6 +159,7 @@ end
 ```
 
 ***
+
 ```ruby
 def collection number1, number2
     number1 + number2
@@ -178,18 +180,20 @@ In Above code, defining *collect method* for collection two number and make coll
 
 - Method name, ending with **?, ! or =** ,this characters have special meaning.
 
-```
+```ruby
 questioning?    #return true or false
 ```
 
 ```ruby
 changed_value = ...   #changed value of anything value, assignment operator.
-
 ```
+
+```ruby
 danger!    #changed original text.
 ```
 
 ***
+
 ```bash
 irb(main):001:0> a="Ruby"
 => "Ruby"
@@ -249,11 +253,11 @@ $global_variables
 
 - **instance variables** starting with '@' and class variables starting with '@@'. like :
 
-```
+```ruby
 @instance_variables
 ```
 
-```
+```ruby
 @@class_variables
 ```
 
@@ -261,7 +265,7 @@ $global_variables
 **Also** you can writing ruby, without opening *irb* in terminal. like:
 
 
-```
+```ruby
 ruby -e "puts 'Hello'"
 => Hello
 ```
@@ -287,9 +291,8 @@ puts "Value of variables: #{changed(20)}"
 
 If we want to embeded in  **external_file.rb** files on **currently_working_file.rb** files, we should use *load* comand. like :
 
-```
+```ruby
 external_file.rb
-
 ```
 
 ```
@@ -303,7 +306,7 @@ Instead of *load* command, you can use *require* command but,when you use *load*
 In addition, If we use ruby library, we should use, like
 
 
-```
+```ruby
 require 'library_name'
 ```
 
@@ -324,13 +327,13 @@ gem uninstall package_name 	#use for uninstall gem
 
 If you use package ,before need to install the package, using this command
 
-```
+```ruby
 gem install package_name
 ```
 
 when we install this gem, then we embeded in *currently_working_file.rb* like
 
-```
+```ruby
 require 'package_name'
 ```
 
@@ -339,7 +342,7 @@ require 'package_name'
 
 Of course No!, instead of this we use  *Gemfile*, we write in file
 
-```
+```ruby
 source ('http://ruby-gems.org')
 gem 'package_name'
 ```
@@ -348,7 +351,7 @@ we write above command in Gemfile, we install automatically all gems.
 
 **Also** If I create a ruby file, go to wanted directory and write below code, These code provided create ruby file in Desktop.
 
-```
+```ruby
 gem install bundler
 cd Desktop   		#for desktop path
 bundle gem package_name
@@ -364,7 +367,7 @@ Opened file, after we make to do, push to package to [RubyGems](http://rubygems.
 -*ARGV* is constant which hidden to arguments.
 -In documentation section writing *ri*  command, generally we use to search for method.
 
-```
+```ruby
 ri Class#method
 ```
 
@@ -391,7 +394,6 @@ above instead of  *p* using  *.inspect*
 ```ruby
 puts "ruby".inspect
 puts 3.inspect
-
 ```
 
 *.inspect* method provide to take hid state of method. This means that if I using *.inspect* instead of this using *p*.
@@ -401,7 +403,7 @@ puts 3.inspect
 
 
 ```
-      		       Basic Object
+     		       Basic Object
       			        ||
       			      Object
       			        ||
@@ -434,7 +436,6 @@ a <=> b
 a < b ; -1
 a > b ; 1
 a =b ; 0
-
 ```
 
 
@@ -514,7 +515,6 @@ Ruby8
 Ruby9
 Ruby10
 => 1
-
 ```
 
 ##Text
@@ -563,6 +563,7 @@ text=%Q{Hello}
 ```
 
 ***
+
 ```
 irb(main):002:0> ?a
 => "a"
@@ -577,6 +578,7 @@ end} puts "My name #{name}""
 ```
 
 ***
+
 ```ruby
 name="Ruby"
 surname="Rails"
@@ -609,45 +611,46 @@ text.gsub  'm',  'a' 		#translate all  from "m" to "a" .
 
 - For Convert to Integer
 
-```
+```ruby
 .to_i
 ```
 
 - For Convert to String
 
-```
+```ruby
 .to_s
 ```
 
 - For Convert to Array
 
-```
+```ruby
 .to_a
 ```
 
 - For Convert to Hash
 
-```
+```ruby
 .to_h
 ```
 
 ## Symbols
 
 - When we create symbol like,
-```
+
+```ruby
 :symbol_name
 ```
 
 - If content of text is changing generally, using symbol can be difficult, but using for constant process can be easy.
 
-```
+```ruby
 object_id
 ```
 Try command
 
 -For Convert to Symbol
 
-```
+```ruby
 .to_sym
 ```
 
@@ -656,27 +659,28 @@ Try command
 
 - Regular expression
 
-```
+```regex
 / ... /
 ```
 writing in this tag.
-```
+
+```regex
 {2, 5} 		#this means min 2, max 5.
 /.{2,5}/ =~  # when we write "john", "john" between 2 and 5.
 ```
 
-```
+```regex
 ^a$b => starting with a, ending with b.
 (+) => how many
 [^0-9] if not number write it '^' this means that 'not'.
 ```
 
-```
+```regex
 [A-Za-z0-9_] = \w   	#word character
 [Â-Za-z0-9_] = \W 		#not a word character
 ```
 
-```
+```regex
 exp1 = /.*\.$/  		#this means ending with '.'
 exp2 = Regexp.new('^[a-z]+$')      #this means that starting with a ending with z.
 exp3 = %r{^[a-z]+$} 		#starting with a but not ending with z.

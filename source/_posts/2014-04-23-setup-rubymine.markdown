@@ -18,10 +18,8 @@ Then, go to Download file then extract from *.tar.gz* file to normal directory. 
 
 
 ```bash
-
 cd Downloads/RubyMine-6.3/bin/
 ./rubymine.sh
-
 ```
 
 Then, Rubymine opens automatically.

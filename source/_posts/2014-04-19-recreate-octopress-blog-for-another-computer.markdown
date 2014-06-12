@@ -20,7 +20,7 @@ Now recreate a local repo for octopress
 
 -Clone your blog to the new machine
 
-```
+```bash
 git clone -b source git@github.com:username/username.github.io.git octopress
 ```
 
@@ -59,8 +59,6 @@ rake generate
 git add .
 git commit -m "Write comment here"
 git push origin source
-
-
 rake deploy
 ```
 then you can write
