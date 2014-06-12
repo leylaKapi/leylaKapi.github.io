@@ -14,8 +14,9 @@ Firstly, we create middleman project and create
     style.css.sass
     application.coffee
 
-then we open *index.html.haml* file and we write your code like this,
+then we open `index.html.haml` file and we write your code like this,
 
+```haml
     --- my code like this ---
     %ul.archive_tool
       %li#tools Car
@@ -39,9 +40,10 @@ then we open *index.html.haml* file and we write your code like this,
       %ul.archive_requires
         %li#requires comfortable
         %li#requires uncomfortable
+```
+then open `style.css.sass` file and write style code
 
-then open *style.css.sass* file and write style code
-
+```sass
       #tools, #requires
         cursor: pointer
       .archive_tool
@@ -56,20 +58,19 @@ then open *style.css.sass* file and write style code
           bottom: 1em
         font-size: medium
         list-style-type: circle
+```
 
+then open `application.coffee` file, and
 
-then open *application.coffee* file, and
-
+```coffee
     $(document).ready ->
       $(".archive_tool ul").hide()
       $(".archive_tool > li").click ->
         $(this).parent().find("ul").slideToggle()
-
         return
-
       $(".archive_requires > li").click ->
         $(this).parent().find("ul").slideToggle()
-
+```
 we write this code inside haml, sass, and coffeescript file and then saved all, run this middleman project.
 
 
