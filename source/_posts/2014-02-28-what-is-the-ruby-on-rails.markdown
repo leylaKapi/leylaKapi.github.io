@@ -25,7 +25,7 @@ categories: ruby, rails
 Firstly, you have to install ruby, and then start install rails.
 Is there ruby in your pc? Look at!
 
-```ruby
+``` ruby
  ruby -v
    # ruby 2.0.0p353 (2013-11-22 revision 43784) [x86_64-darwin13.0.0]
 ```
@@ -34,19 +34,19 @@ Is there ruby in your pc? Look at!
 I hear , 'my pc don't has ruby.' Dont worry, when you are going to [download ruby](https://www.ruby-lang.org/en/).
 Now, we install the ruby after then
 
-```ruby
+``` ruby
 gem update system
 ```
 
 start install rails framework.
 
-```ruby
+``` ruby
 gem install rails
 ```
 
 rails was install and which version?
 
-```ruby
+``` ruby
  rails --version  or rails -v
         # Rails 4.0.2
 ```
@@ -55,7 +55,7 @@ Yeah!, now pc has ruby and rails.
 
 Then we can start to create Ruby on Rails project.
 
-```rails
+``` rails
 rails new start_rails_project
 ```
 
@@ -63,7 +63,7 @@ Created rails project. That's very easy!
 
 Go to rails project path and install bundler
 
-```bash
+``` bash
 gem install bundle
 bundle install
 ```

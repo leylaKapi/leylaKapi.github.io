@@ -16,7 +16,7 @@ Firstly, we create middleman project and create
 
 then we open `index.html.haml` file and we write your code like this,
 
-```haml
+``` haml
     --- my code like this ---
     %ul.archive_tool
       %li#tools Car
@@ -43,7 +43,7 @@ then we open `index.html.haml` file and we write your code like this,
 ```
 then open `style.css.sass` file and write style code
 
-```sass
+``` sass
       #tools, #requires
         cursor: pointer
       .archive_tool
@@ -62,7 +62,7 @@ then open `style.css.sass` file and write style code
 
 then open `application.coffee` file, and
 
-```coffee
+``` coffee
     $(document).ready ->
       $(".archive_tool ul").hide()
       $(".archive_tool > li").click ->

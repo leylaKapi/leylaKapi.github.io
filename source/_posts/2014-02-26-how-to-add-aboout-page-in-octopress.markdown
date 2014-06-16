@@ -12,7 +12,7 @@ I needs 2 step for create `About` page on navigation bar.
 
 - Firstly create 'about page'
 
-```bash
+``` bash
     rake new_page\["About"\]
 ```
 
@@ -20,14 +20,14 @@ Created new page for about and we linked to `About`, How?
 
 - We open
 
-```directory
+``` directory
     /source/_includes/custom/navigation.html
 ```
 
  write the 3rd line below:
 
 
-```html
+``` html
    <ul class="main-navigation">
      <li><a href="{{ root_url }}/">Blog</a></li>
      <li><a href="{{ root_url }}/blog/archives">Archives</a></li>
@@ -37,14 +37,14 @@ Created new page for about and we linked to `About`, How?
 then we use git command for sent on github
 
 
-```bash
+``` bash
     git add .
     git commit -m "Your Commit"
     git push origin source
 ```
 And, for see on personal blog we need to deploy your code
 
-```bash
+``` bash
     rake generate
     rake preview   #see on localhost:4000
     rake deploy

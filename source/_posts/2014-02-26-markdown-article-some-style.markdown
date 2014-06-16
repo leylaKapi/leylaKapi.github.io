@@ -16,7 +16,7 @@ Firstly
 
 While you're writing header, you should write in '#'(pound sign)
 
-```markdown
+``` markdown
     # Header 1
     ## Header 2
     ### Header 3
@@ -42,7 +42,7 @@ Secondly unordered :
 
 We use '-' and '*' the symbol provide to write unordered.
 
-```markdown
+``` markdown
   - apple
   - banana
   - strawberries

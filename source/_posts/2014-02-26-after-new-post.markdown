@@ -9,35 +9,35 @@ categories: Octopress
 
 ### When I setup Octopress Repository, error of
  
-```bash
+``` bash
     rake deploy
 ```
 
 
 I setup the Octopress, and I create,
 
-```bash
+``` bash
     rake new_post\["Hello World"\]
 ```
 
 
 then push github on
 
-```bash
+``` bash
     source
 ```
 
 
 branch, and when I
 
-```bash
+``` bash
     rake deploy
 ```
 
 
  Terminal show this code :
 
-```bash
+``` bash
     To https://github.com/username/username.github.io.git
     ! [rejected]        master -> master (non-fast-forward)
     error: failed to push some refs to 'https://github.com/username/username.github.io.git'
@@ -54,7 +54,7 @@ branch, and when I
 
  Firstly
 
-```bash
+``` bash
     git clone https://github.com/username/username.github.io.git
     git checkout source
 ```
@@ -64,7 +64,7 @@ branch, and when I
 
  Secondly we need to setup 'deploy' directories
 
-```bash
+``` bash
     mkdir _deploy
     cd _deploy
     git init
@@ -74,12 +74,12 @@ branch, and when I
 
 Now, we can use
 
-```bash
+``` bash
     rake deploy
 ```
 
 or
 
-```bash
+``` bash
     rake gen_deploy
 ```

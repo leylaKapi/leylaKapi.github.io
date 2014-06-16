@@ -17,7 +17,7 @@ Then, open your terminal
 Then, go to Download file then extract from *.tar.gz* file to normal directory. Then write in terminal
 
 
-```bash
+``` bash
 cd Downloads/RubyMine-6.3/bin/
 ./rubymine.sh
 ```

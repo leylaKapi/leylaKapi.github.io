@@ -33,7 +33,7 @@ I think your understand CSS Sprite, How use it ?
 For example, you have a icons' pictures page and we pull each icon on icons' picture page, we
 should use CSS or SASS sprite
 
-```sass
+``` sass
     .icon
         background: url("../images/icon-sprite.png") no repeat
         display: inline-block

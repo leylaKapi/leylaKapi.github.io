@@ -48,7 +48,7 @@ The aim is, When we coding a programming, coding should provide to express simpl
 
 ## Irb ve Repl Functions
 
-```bash
+``` bash
 irb
 irb(main):001:0> 2+2
 => 4
@@ -69,13 +69,13 @@ Acoording to above *irb*, opened ruby terminal; *exit* exit to ruby terminal. In
 
 this sign provide to take pre-functions and then make process with this functions.
 
-```ruby
+``` ruby
 system('clear')
 ```
 
 with this command provide to clear your terminal.
 
-```bash
+``` bash
 irb(main):008:0> self
 => main
 ```
@@ -84,7 +84,7 @@ this command show the writing on main class .
 
 **Also**
 
-```bash
+``` bash
 irb(main):010:0> a="Ruby"
 => "Ruby"
 irb(main):011:0> a.reverse
@@ -104,7 +104,7 @@ Seeming to above code *.reverse* method which entered code, provide to writing r
 - Like another languages, when we make comparisons <,>, ==,! using this expressions.
 
 
-```bash
+``` bash
 irb(main):001:0 3 > 5
 => false
 irb(main):002:0 3 < 5
@@ -130,7 +130,7 @@ In ruby, Not exist relevant to logical expression like *Boolean* or *Bool* class
 - Defining to method start **def**, and ending with **end**.
 
 
-```ruby
+``` ruby
     def method_name
 ...
 end
@@ -138,7 +138,7 @@ end
 
 If method get a parameter like :
 
-```ruby
+``` ruby
     def method_name(param1)
 ...
 end
@@ -160,7 +160,7 @@ end
 
 ***
 
-```ruby
+``` ruby
 def collection number1, number2
     number1 + number2
 end
@@ -180,21 +180,21 @@ In Above code, defining *collect method* for collection two number and make coll
 
 - Method name, ending with **?, ! or =** ,this characters have special meaning.
 
-```ruby
+``` ruby
 questioning?    #return true or false
 ```
 
-```ruby
+``` ruby
 changed_value = ...   #changed value of anything value, assignment operator.
 ```
 
-```ruby
+``` ruby
 danger!    #changed original text.
 ```
 
 ***
 
-```bash
+``` bash
 irb(main):001:0> a="Ruby"
 => "Ruby"
 irb(main):002:0> a.reverse
@@ -214,7 +214,7 @@ In above example entering a value and using **!** character changed original val
 
 - class, module and constant name starts with capital letter.
 
-```ruby
+``` ruby
 class ClassName
 ...
 end
@@ -225,7 +225,7 @@ PI_CONSTANT = 3,14156
 ```
 must be defined like above. Also you know constants doesn't change, if you want to change can be bug.
 
-```bash
+``` bash
 irb(main):001:0> PI_CONSTANT = 3,14156
 => [3,14156]
 irb(main):002:0> PI_CONSTANT  = 2
@@ -237,7 +237,7 @@ irb(main):002:0> PI_CONSTANT  = 2
 - **local variables** starting with lover letter or '_' , like :
 
 
-```ruby
+``` ruby
 local_variable = "like this."
 plate = 20
 ```
@@ -253,11 +253,11 @@ $global_variables
 
 - **instance variables** starting with '@' and class variables starting with '@@'. like :
 
-```ruby
+``` ruby
 @instance_variables
 ```
 
-```ruby
+``` ruby
 @@class_variables
 ```
 
@@ -265,7 +265,7 @@ $global_variables
 **Also** you can writing ruby, without opening *irb* in terminal. like:
 
 
-```ruby
+``` ruby
 ruby -e "puts 'Hello'"
 => Hello
 ```
@@ -274,7 +274,7 @@ But the above method is not a preferred method commonly.
 
 ***
 
-```ruby
+``` ruby
 def changed(value)
     variables = value
 end
@@ -291,7 +291,7 @@ puts "Value of variables: #{changed(20)}"
 
 If we want to embeded in  **external_file.rb** files on **currently_working_file.rb** files, we should use *load* comand. like :
 
-```ruby
+``` ruby
 external_file.rb
 ```
 
@@ -306,7 +306,7 @@ Instead of *load* command, you can use *require* command but,when you use *load*
 In addition, If we use ruby library, we should use, like
 
 
-```ruby
+``` ruby
 require 'library_name'
 ```
 
@@ -314,7 +314,7 @@ You can see to use all path and method with **ENV**
 
 Writing command about **Gem** :
 
-```bash
+``` bash
 gem -v   	#seeing the version of gem
 gem update --system  #provide to update your system
 gem list  	#you can see all gem list
@@ -327,13 +327,13 @@ gem uninstall package_name 	#use for uninstall gem
 
 If you use package ,before need to install the package, using this command
 
-```ruby
+``` ruby
 gem install package_name
 ```
 
 when we install this gem, then we embeded in *currently_working_file.rb* like
 
-```ruby
+``` ruby
 require 'package_name'
 ```
 
@@ -342,7 +342,7 @@ require 'package_name'
 
 Of course No!, instead of this we use  *Gemfile*, we write in file
 
-```ruby
+``` ruby
 source ('http://ruby-gems.org')
 gem 'package_name'
 ```
@@ -351,7 +351,7 @@ we write above command in Gemfile, we install automatically all gems.
 
 **Also** If I create a ruby file, go to wanted directory and write below code, These code provided create ruby file in Desktop.
 
-```ruby
+``` ruby
 gem install bundler
 cd Desktop   		#for desktop path
 bundle gem package_name
@@ -367,7 +367,7 @@ Opened file, after we make to do, push to package to [RubyGems](http://rubygems.
 -*ARGV* is constant which hidden to arguments.
 -In documentation section writing *ri*  command, generally we use to search for method.
 
-```ruby
+``` ruby
 ri Class#method
 ```
 
@@ -376,7 +376,7 @@ ri Class#method
 
 For output command write like
 
-```ruby
+``` ruby
 puts  	# output with \n.
 print
 p 		#when we use '.inspect', instead of *.inspect* we use *p*.
@@ -385,13 +385,13 @@ printf
 
 For input command write like
 
-```ruby
+``` ruby
 gets  	#get input from user.
 ```
 
 above instead of  *p* using  *.inspect*
 
-```ruby
+``` ruby
 puts "ruby".inspect
 puts 3.inspect
 ```
@@ -422,7 +422,7 @@ If you generally showing the class, you can show like above.
 - In Ruby monetary system should use **BigDecimal** library in project. 
 
 
-```ruby
+``` ruby
 1.0e7  		#10.000.000
 3.methods   	#for 3 number, bring all methods
 require 'yaml'			# added yaml .
@@ -431,7 +431,7 @@ puts 2.methods.to_yaml
 
 - **<=>(space ship)** comparative operator.
 
-```ruby
+``` ruby
 a <=> b
 a < b ; -1
 a > b ; 1
@@ -441,14 +441,14 @@ a =b ; 0
 
 ***
 
-```ruby
+``` ruby
 a = 5 && b = 10
 a <=> b 			#-1
 ```
 
 -times and upto methods
 
-```ruby
+``` ruby
 10.times do |i|
 ...
 end
@@ -456,13 +456,13 @@ end
 
 or
 
-```ruby
+``` ruby
 10.times {|i| ...}
 ```
 
 thanks to this we write loop with *times*.
 
-```bash
+``` bash
 irb(main):001:0> 10.times do |i|
 irb(main):002:1* puts "ruby"+i.to_s
 irb(main):013:1> end
@@ -483,7 +483,7 @@ ruby9
 
 - With *1.upto(10){...}* same use with *times*
 
-```bash
+``` bash
 irb(main):001:0> 10.upto(10) {puts "ruby"}
 ruby
 ruby
@@ -500,7 +500,7 @@ ruby
 
 or
 
-```bash
+``` bash
 irb(main):001:0> 1.upt0(10) do |i|
 irb(main):002:1* puts "Ruby"+i.to_s
 irb(main):013:1> end
@@ -532,18 +532,18 @@ Ruby10
 -Also to support Turkish characters, you should use *Unicode-Utils* library.
 
 
-```bash
+``` bash
 gem install unicode_utils
 ```
 
 install than, write in file,
 
-```ruby
+``` ruby
 require 'unicode_utils'
 ```
 
 
-```ruby
+``` ruby
 UnicodeUtils.upcase("ruby")
 => RUBY
 ```
@@ -551,7 +551,7 @@ UnicodeUtils.upcase("ruby")
 
 -%q => use for single quotation
 
-```ruby
+``` ruby
 text = %q<Hello>
 => 'Hello'
 ```
@@ -579,7 +579,7 @@ end} puts "My name #{name}""
 
 ***
 
-```ruby
+``` ruby
 name="Ruby"
 surname="Rails"
 text = << ANYTHING
@@ -603,7 +603,7 @@ Try above method.
 
 
 
-```ruby
+``` ruby
 text.sub 'm', 'a'  	#translate "m=>a"
 text.gsub  'm',  'a' 		#translate all  from "m" to "a" .
 ```
@@ -611,25 +611,25 @@ text.gsub  'm',  'a' 		#translate all  from "m" to "a" .
 
 - For Convert to Integer
 
-```ruby
+``` ruby
 .to_i
 ```
 
 - For Convert to String
 
-```ruby
+``` ruby
 .to_s
 ```
 
 - For Convert to Array
 
-```ruby
+``` ruby
 .to_a
 ```
 
 - For Convert to Hash
 
-```ruby
+``` ruby
 .to_h
 ```
 
@@ -637,20 +637,20 @@ text.gsub  'm',  'a' 		#translate all  from "m" to "a" .
 
 - When we create symbol like,
 
-```ruby
+``` ruby
 :symbol_name
 ```
 
 - If content of text is changing generally, using symbol can be difficult, but using for constant process can be easy.
 
-```ruby
+``` ruby
 object_id
 ```
 Try command
 
 -For Convert to Symbol
 
-```ruby
+``` ruby
 .to_sym
 ```
 
@@ -659,28 +659,28 @@ Try command
 
 - Regular expression
 
-```regex
+``` regex
 / ... /
 ```
 writing in this tag.
 
-```regex
+``` regex
 {2, 5} 		#this means min 2, max 5.
 /.{2,5}/ =~  # when we write "john", "john" between 2 and 5.
 ```
 
-```regex
+``` regex
 ^a$b => starting with a, ending with b.
 (+) => how many
 [^0-9] if not number write it '^' this means that 'not'.
 ```
 
-```regex
+``` regex
 [A-Za-z0-9_] = \w   	#word character
 [Â-Za-z0-9_] = \W 		#not a word character
 ```
 
-```regex
+``` regex
 exp1 = /.*\.$/  		#this means ending with '.'
 exp2 = Regexp.new('^[a-z]+$')      #this means that starting with a ending with z.
 exp3 = %r{^[a-z]+$} 		#starting with a but not ending with z.

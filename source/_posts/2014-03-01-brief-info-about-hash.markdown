@@ -14,7 +14,7 @@ Hash, hash, hash ?
 - Hash was known **associative array** in another programming language.
 - In hash, elements keep **'key => value'** format in ruby . Like
 
-```ruby
+``` ruby
     hash_example = { 'name' => 'John', 'surname' => 'doe' }
 ```
 
@@ -22,7 +22,7 @@ Hash, hash, hash ?
 
 - Values of keys can be any type, but when you use **'eql?'** method, it can be only a key according to each other.
 
-```ruby
+``` ruby
         a = { 3 => 'three', 3.0 => 'threedotzero' }
         a[3]        #three
         a[3.0]      #threedotzero
@@ -31,13 +31,13 @@ Hash, hash, hash ?
 ```
 - Hashes usually write with symbols, like :
 
-```ruby
+``` ruby
  hash_with_symbol{ name: 'John', surname: 'Doe'}
 ```
 
 - Hashes are similar to Array class, but Array uses integer as its index, hash allow to us any object type.
 
-```ruby
+``` ruby
     hash_differences_array{ 'age' => 15, 'year' => 2014 }
     array_differences_hash = [1, 2, 3]
 ```
@@ -56,7 +56,7 @@ method, if you want to access to values use
 
 methods. Like:
 
-```ruby
+``` ruby
     access_values_keys{ name: 'john', surname: 'Doe'}
     access_values_keys.keys         # [:name, :surname]
     access_values_keys.values       #['John', 'Doe']
@@ -64,7 +64,7 @@ methods. Like:
 
 - Generally, hashes are using in parameters of name,
 
-```ruby
+``` ruby
     def parameters_name(name, age)
         '#{name} : #{age}'
     end
@@ -73,14 +73,14 @@ methods. Like:
 
 - Hashes uses to **ENUMERABLE** module like arrays.
 
-```ruby
+``` ruby
   {}.class.ancestors          #show the hash ancestors.
                                         #[Hash, Enumerable, Object, PP::ObjectMixin, Kernel, BasicObject]
 ```
 
 - If you want to change from array to hash, you should use
 
-```ruby
+``` ruby
 .to_h
 ```
 

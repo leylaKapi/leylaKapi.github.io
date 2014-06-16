@@ -9,7 +9,7 @@ categories: scaffold rails rake
 In this post, I try to explain scaffolding in rails shortly.
 Firstly, Let's create rails project
 
-```bash
+``` bash
 rails new blogging
 cd blogging
 ```
@@ -17,7 +17,7 @@ cd blogging
 Now, we created rails project and enter inside of project.
 We need to create scaffold,
 
-```bash
+``` bash
 rails generate scaffold Information first_name second_name date_time:date city:boolean
 ```
 - We create Information model, in this model
@@ -27,7 +27,7 @@ rails generate scaffold Information first_name second_name date_time:date city:b
 
 then we need to migrate for this reason,
 
-```bash
+``` bash
 rake db:migrate
 ```
 
@@ -41,7 +41,7 @@ this path and write
 
 save and run
 
-```bash
+``` bash
 rails s
 ```
 opened [http://localhost:3000/](http://0.0.0.0:3000/)

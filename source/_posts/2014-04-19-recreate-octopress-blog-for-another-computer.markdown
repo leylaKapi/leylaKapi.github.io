@@ -20,20 +20,20 @@ Now recreate a local repo for octopress
 
 -Clone your blog to the new machine
 
-```bash
+``` bash
 git clone -b source git@github.com:username/username.github.io.git octopress
 ```
 
 Then clone the master branch to the _deploy
 
-```bash
+``` bash
 cd octopress
 git clone git@github.com:username/username.github.io.git _deploy
 ```
 
 then run *rake*
 
-```bash
+``` bash
 gem install bundler
 rbenv rehash
 bundle install
@@ -54,7 +54,7 @@ Write your like this *Repository url: git@github.com:username/username.github.io
 
 Then you should write these command :
 
-```bash
+``` bash
 rake generate
 git add .
 git commit -m "Write comment here"
@@ -63,7 +63,7 @@ rake deploy
 ```
 then you can write
 
-```bash
+``` bash
 cd octopress
 git pull origin source #get another computer changing
 cd ./_deploy
@@ -71,7 +71,7 @@ git pull origin master
 ```
 then you can write
 
-```bash
+``` bash
 rake deploy
 ```
 

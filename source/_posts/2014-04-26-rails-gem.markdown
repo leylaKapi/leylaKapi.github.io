@@ -14,7 +14,7 @@ Undefined method 'attr_accessible'
 
 You can forget write gem about this attributes, open your *Gemfile* in project
 
-```ruby
+``` ruby
 gem 'protected-attributes'
 ```
 

@@ -10,20 +10,20 @@ categories: Middleman, Haml
 
 Firstly, you should go [middleman]('http://middlemanapp.com/') and you need to **install middleman**
 
-```bash
+``` bash
    gem install middleman
 ```
 
 
 Fine, you are installed middleman, now we start to create project in middleman
 
-```bash
+``` bash
    middleman init project_name
 ```
 
 Then this command give you directory as shown below :
 
-```bash
+``` bash
  project_name/
     Gemfile
     Gemfile.lock
@@ -66,13 +66,13 @@ Now, Projects was removed from unused files.
 
 Middleman appear to read HTML by default . Therefore, you should go to
 
-```directory
+``` directory
  /config.rb
 ```
 
 in file write:
 
-```haml
+``` haml
 set :haml, :format => :html5
 ```
 
@@ -81,7 +81,7 @@ Now program convert to html5 from haml.
 
 - Add a
 
-```haml
+``` haml
  layout.haml
 ```
 
@@ -92,7 +92,7 @@ file to the
 
 directory. In this file we write
 
-```haml
+``` haml
     !!!
     %html{ :lang => "en"}
         %head
@@ -106,7 +106,7 @@ directory. In this file we write
 
 Now we must create
 
-```haml
+``` haml
 index.html.haml
 ```
 
@@ -115,7 +115,7 @@ in
                 `source/`
 directory.
 
-```haml
+``` haml
  %h1 Welcome Middleman project
 ```
 

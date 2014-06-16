@@ -12,7 +12,7 @@ categories: validates ruby rails RoR
 
 Attribute mustn't be blank(nil,false,[],{})
 
-```ruby
+``` ruby
 validates_presence_of :field_name
 ```
 
@@ -20,7 +20,7 @@ validates_presence_of :field_name
 
 Attribute must meet length requirements :is, :minimum, :maximum, :within, :in, :too_short, :too_long
 
-```ruby
+``` ruby
 validates_length_of :field_name, :minimum => 100
 ```
 
@@ -28,7 +28,7 @@ validates_length_of :field_name, :minimum => 100
 
 Attribute must be integer or floating number :less_than, :greater_than, :equal_to, :odd, :even, :greater_than_or_equal_to
 
-```ruby
+``` ruby
 validates_numericality_of :field_name, :greater_than_or_equal_to => 5
 ```
 
@@ -60,7 +60,7 @@ Attribute must be confirmed by entering it twice creates a virtual blank attribu
 
 Associated object or objects must all be valid.
 
-```ruby
+``` ruby
 :allow_nil => true
 #Skip valid if attribute is nil
 :allow_blank => true
@@ -69,7 +69,7 @@ Associated object or objects must all be valid.
 
 Example of Validations
 
-```ruby    
+``` ruby
 validates_presence_of :user_name
 validates_length_of :user_name, :maximum => 50
 validates_uniqueness_of :user_name
@@ -77,7 +77,7 @@ validates_uniqueness_of :user_name
 
 When we use like above, We diverge to DRY, instead of above
 
-```ruby
+``` ruby
 validates :user_name, :presence => true
                      :length => {:maximum => 50}
                      :uniqueness => true
