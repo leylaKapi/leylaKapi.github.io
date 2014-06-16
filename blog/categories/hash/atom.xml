@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Hash | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/hash/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-05-20T01:18:24+03:00</updated>
+  <updated>2014-06-16T13:11:37+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Brief Info about hash]]></title>
+    <title type="html"><![CDATA[Brief info about Hash]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/03/01/brief-info-about-hash/"/>
     <updated>2014-03-01T18:52:57+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/03/01/brief-info-about-hash</id>
@@ -29,7 +29,7 @@
 </ul>
 
 
-<p>```ruby</p>
+<p>``` ruby</p>
 
 <pre><code>hash_example = { 'name' =&gt; 'John', 'surname' =&gt; 'doe' }
 </code></pre>
@@ -41,7 +41,7 @@
 </ul>
 
 
-<p>```ruby</p>
+<p>``` ruby</p>
 
 <pre><code>    a = { 3 =&gt; 'three', 3.0 =&gt; 'threedotzero' }
     a[3]        #three
@@ -62,7 +62,7 @@
 </ul>
 
 
-<p>```ruby</p>
+<p>``` ruby</p>
 
 <pre><code>hash_differences_array{ 'age' =&gt; 15, 'year' =&gt; 2014 }
 array_differences_hash = [1, 2, 3]
@@ -89,7 +89,7 @@ array_differences_hash = [1, 2, 3]
 
 <p>methods. Like:</p>
 
-<p>```ruby</p>
+<p>``` ruby</p>
 
 <pre><code>access_values_keys{ name: 'john', surname: 'Doe'}
 access_values_keys.keys         # [:name, :surname]
@@ -103,7 +103,7 @@ access_values_keys.values       #['John', 'Doe']
 </ul>
 
 
-<p>```ruby</p>
+<p>``` ruby</p>
 
 <pre><code>def parameters_name(name, age)
     '#{name} : #{age}'
@@ -118,7 +118,7 @@ puts name 'John' , 18       # Ali : 18
 </ul>
 
 
-<p>```ruby
+<p>``` ruby
   {}.class.ancestors          #show the hash ancestors.</p>
 
 <pre><code>                                    #[Hash, Enumerable, Object, PP::ObjectMixin, Kernel, BasicObject]
@@ -131,9 +131,12 @@ puts name 'John' , 18       # Ali : 18
 </ul>
 
 
-<p><code>ruby
-.to_h
-</code></p>
+<p>``` ruby</p>
+
+<pre><code>.to_h
+</code></pre>
+
+<p>```</p>
 
 <p><strong>Lastly</strong> If you want to learn more, you can visit <a href="http://www.ruby-doc.org/core-2.0/Hash.html">ruby-doc</a> .</p>
 ]]></content>

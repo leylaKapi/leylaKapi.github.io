@@ -434,7 +434,7 @@ $(document).scroll(function() {
 		
 		<a href="/blog/2014/03/02/css-sprite-use-in-sass/">
 		
-			CSS Sprite Use in SASS</a>
+			CSS - Sprite Use in SASS</a>
 	</h2>
 	<div class="entry-content">
 		<h3>What is the CSS sprite? Why do we need to this ?</h3>
@@ -466,18 +466,28 @@ and pull in this page. Thus, CSS Sprite provide to fast loading  when opened qui
 <p>For example, you have a icons&#8217; pictures page and we pull each icon on icons&#8217; picture page, we
 should use CSS or SASS sprite</p>
 
-<pre><code>.icon
-    background: url("../images/icon-sprite.png") no repeat
-    display: inline-block
-.icon1
-    @extend .icon
-    background-position: 0px 0px
-.icon2
-    @extend .icon
-    background-position: 20px 34px
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='sass'><span class='line'><span class="nc">.icon</span>
+</span><span class='line'>    <span class="na">background</span><span class="o">:</span> <span class="sx">url(&quot;../images/icon-sprite.png&quot;)</span> <span class="n">no</span> <span class="no">repeat</span>
+</span><span class='line'>    <span class="na">display</span><span class="o">:</span> <span class="no">inline</span><span class="o">-</span><span class="no">block</span>
+</span><span class='line'><span class="nc">.icon1</span>
+</span><span class='line'>    <span class="k">@extend</span> <span class="nc">.icon</span>
+</span><span class='line'>    <span class="na">background-position</span><span class="o">:</span> <span class="mi">0</span><span class="kt">px</span> <span class="mi">0</span><span class="kt">px</span>
+</span><span class='line'><span class="nc">.icon2</span>
+</span><span class='line'>    <span class="k">@extend</span> <span class="nc">.icon</span>
+</span><span class='line'>    <span class="na">background-position</span><span class="o">:</span> <span class="mi">20</span><span class="kt">px</span> <span class="mi">34</span><span class="kt">px</span>
+</span><span class='line'>    <span class="nc">...</span>
+</span></code></pre></td></tr></table></div></figure>
 
-    ...
-</code></pre>
 
 <p>means that above code :</p>
 
@@ -540,30 +550,53 @@ and use in</p>
 <ul>
 <li>Hashes are one of the biggest property which separated another language in ruby.</li>
 <li>Hash was known <strong>associative array</strong> in another programming language.</li>
-<li><p>In hash, elements keep <strong>&lsquo;key => value&rsquo;</strong> format in ruby . Like</p>
-
-<pre><code>  hash_example = { 'name' =&gt; 'John', 'surname' =&gt; 'doe' }
-</code></pre></li>
-<li><p>Values of keys can be any type, but when you use <strong>&lsquo;eql?&rsquo;</strong> method, it can be only a key according to each other.</p>
-
-<pre><code>  a = { 3 =&gt; 'three', 3.0 =&gt; 'threedotzero' }
-  a[3]        #three
-  a[3.0]      #threedotzero
-
-  3 == 3.0        #true
-  3.eql? 3.0      #false
-</code></pre></li>
-<li><p>Hashes usually write with symbols, like :</p>
-
-<pre><code>  hash_with_symbol{ name: 'John', surname: 'Doe'}
-</code></pre></li>
-<li><p>Hashes are similar to Array class, but Array uses integer as its index, hash allow to us any object type.</p>
-
-<pre><code>  hash_differences_array{ 'age' =&gt; 15, 'year' =&gt; 2014 }
-
-  array_differences_hash = [1, 2, 3]
-</code></pre></li>
+<li>In hash, elements keep <strong>&lsquo;key => value&rsquo;</strong> format in ruby . Like</li>
 </ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">hash_example</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;surname&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;doe&#39;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Values of keys can be any type, but when you use <strong>&lsquo;eql?&rsquo;</strong> method, it can be only a key according to each other.</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'>    <span class="n">a</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">3</span> <span class="o">=&gt;</span> <span class="s1">&#39;three&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="o">.</span><span class="mi">0</span> <span class="o">=&gt;</span> <span class="s1">&#39;threedotzero&#39;</span> <span class="p">}</span>
+</span><span class='line'>    <span class="n">a</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span>        <span class="c1">#three</span>
+</span><span class='line'>    <span class="n">a</span><span class="o">[</span><span class="mi">3</span><span class="o">.</span><span class="mi">0</span><span class="o">]</span>      <span class="c1">#threedotzero</span>
+</span><span class='line'>    <span class="mi">3</span> <span class="o">==</span> <span class="mi">3</span><span class="o">.</span><span class="mi">0</span>        <span class="c1">#true</span>
+</span><span class='line'>    <span class="mi">3</span><span class="o">.</span><span class="n">eql?</span> <span class="mi">3</span><span class="o">.</span><span class="mi">0</span>      <span class="c1">#false</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Hashes usually write with symbols, like :</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'> <span class="n">hash_with_symbol</span><span class="p">{</span> <span class="nb">name</span><span class="p">:</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="ss">surname</span><span class="p">:</span> <span class="s1">&#39;Doe&#39;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Hashes are similar to Array class, but Array uses integer as its index, hash allow to us any object type.</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">hash_differences_array</span><span class="p">{</span> <span class="s1">&#39;age&#39;</span> <span class="o">=&gt;</span> <span class="mi">15</span><span class="p">,</span> <span class="s1">&#39;year&#39;</span> <span class="o">=&gt;</span> <span class="mi">2014</span> <span class="p">}</span>
+</span><span class='line'><span class="n">array_differences_hash</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>In my opinion, You have an information about hashes. Do you agree with me?!</p>
@@ -585,32 +618,51 @@ and use in</p>
 
 <p>methods. Like:</p>
 
-<pre><code>        access_values_keys{ name: 'john', surname: 'Doe'}
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">access_values_keys</span><span class="p">{</span> <span class="nb">name</span><span class="p">:</span> <span class="s1">&#39;john&#39;</span><span class="p">,</span> <span class="ss">surname</span><span class="p">:</span> <span class="s1">&#39;Doe&#39;</span><span class="p">}</span>
+</span><span class='line'><span class="n">access_values_keys</span><span class="o">.</span><span class="n">keys</span>         <span class="c1"># [:name, :surname]</span>
+</span><span class='line'><span class="n">access_values_keys</span><span class="o">.</span><span class="n">values</span>       <span class="c1">#[&#39;John&#39;, &#39;Doe&#39;]</span>
+</span></code></pre></td></tr></table></div></figure>
 
-        access_values_keys.keys         # [:name, :surname]
-        access_values_keys.values       #['John', 'Doe']
-</code></pre>
 
 <ul>
-<li><p>Generally, hashes are using in parameters of name,</p>
-
-<pre><code>      def parameters_name(name, age)
-
-          '#{name} : #{age}'
-      end
-
-      puts name 'John' , 18       # Ali : 18
-</code></pre></li>
-<li><p>Hashes uses to <strong>ENUMERABLE</strong> module like arrays.</p>
-
-<pre><code>      {}.class.ancestors          #show the hash ancestors.
-                                  #[Hash, Enumerable, Object, PP::ObjectMixin, Kernel, BasicObject]
-</code></pre></li>
-<li><p>If you want to change from array to hash, you should use</p>
-
-<pre><code>      .to_h
-</code></pre></li>
+<li>Generally, hashes are using in parameters of name,</li>
 </ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">parameters_name</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
+</span><span class='line'>    <span class="s1">&#39;#{name} : #{age}&#39;</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'><span class="nb">puts</span> <span class="nb">name</span> <span class="s1">&#39;John&#39;</span> <span class="p">,</span> <span class="mi">18</span>       <span class="c1"># Ali : 18</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Hashes uses to <strong>ENUMERABLE</strong> module like arrays.</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'>  <span class="p">{}</span><span class="o">.</span><span class="n">class</span><span class="o">.</span><span class="n">ancestors</span>          <span class="c1">#show the hash ancestors.</span>
+</span><span class='line'>                                        <span class="c1">#[Hash, Enumerable, Object, PP::ObjectMixin, Kernel, BasicObject]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>If you want to change from array to hash, you should use</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">.</span><span class="n">to_h</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p><strong>Lastly</strong> If you want to learn more, you can visit <a href="http://www.ruby-doc.org/core-2.0/Hash.html">ruby-doc</a> .</p>
@@ -681,41 +733,56 @@ and use in</p>
 <p>Firstly, you have to install ruby, and then start install rails.
 Is there ruby in your pc? Look at!</p>
 
-<pre><code>   ruby -v
-   # ruby 2.0.0p353 (2013-11-22 revision 43784) [x86_64-darwin13.0.0]
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>ruby -v
+</span><span class='line'><span class="c"># ruby 2.0.0p353 (2013-11-22 revision 43784) [x86_64-darwin13.0.0]</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>I hear , &lsquo;my pc don&rsquo;t has ruby.&rsquo; Dont worry, when you are going to <a href="https://www.ruby-lang.org/en/">download ruby</a>.
 Now, we install the ruby after then</p>
 
-<pre><code>  gem update system
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>gem update system
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>start install rails framework.</p>
 
-<pre><code>gem install rails
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>gem install rails
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>rails was install and which version?</p>
 
-<pre><code>    rails --version  or rails -v
-    # Rails 4.0.2
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rails --version  or rails -v
+</span><span class='line'><span class="c"># Rails 4.0.2</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Yeah!, now pc has ruby and rails.</p>
 
 <p>Then we can start to create Ruby on Rails project.</p>
 
-<pre><code>rails new start_rails_project
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rails new start_rails_project
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Created rails project. That&rsquo;s very easy!</p>
 
 <p>Go to rails project path and install bundler</p>
 
-<pre><code>  gem install bundle
-  bundle install
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>gem install bundle
+</span><span class='line'>bundle install
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Now, you can write your ruby code on rails framework . How run your rails applications ?</p>
 
@@ -779,34 +846,56 @@ Now, we install the ruby after then</p>
 
 <p>Firstly, you should go <a href="" title="http://middlemanapp.com/">middleman</a> and you need to <strong>install middleman</strong></p>
 
-<pre><code>gem install middleman
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>   gem install middleman
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Fine, you are installed middleman, now we start to create project in middleman</p>
 
-<pre><code>middleman init project_name
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>   middleman init project_name
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Then this command give you directory as shown below :</p>
 
-<pre><code> project_name/
-    Gemfile
-    Gemfile.lock
-    config.rb
-    source
-        .gitignore
-        images
-            background.png
-            middleman.png
-        javascript
-            all.js
-        stylesheets
-            all.css
-            normalize.css
-        layouts
-            layout.erb
-        index.html.erb
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'> project_name/
+</span><span class='line'>    Gemfile
+</span><span class='line'>    Gemfile.lock
+</span><span class='line'>    config.rb
+</span><span class='line'>    <span class="nb">source</span>
+</span><span class='line'>        .gitignore
+</span><span class='line'>        images
+</span><span class='line'>            background.png
+</span><span class='line'>            middleman.png
+</span><span class='line'>        javascript
+</span><span class='line'>            all.js
+</span><span class='line'>        stylesheets
+</span><span class='line'>            all.css
+</span><span class='line'>            normalize.css
+</span><span class='line'>        layouts
+</span><span class='line'>            layout.erb
+</span><span class='line'>        index.html.erb
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>If you can see this directories, you should open project with your IDE.</p>
 
@@ -829,22 +918,28 @@ Now, we install the ruby after then</p>
 
 <p>Middleman appear to read HTML by default . Therefore, you should go to</p>
 
-<pre><code>   /config.rb
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'> /config.rb
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>in file write:</p>
 
-<pre><code>    set :haml, :format =&gt; :html5
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'>set :haml, :format =&gt; :html5
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Now program convert to html5 from haml.</p>
 
 <ul>
-<li><p>Add a</p>
-
-<pre><code>  layout.haml
-</code></pre></li>
+<li>Add a</li>
 </ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'> layout.haml
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>file to the</p>
@@ -854,35 +949,49 @@ Now, we install the ruby after then</p>
 
 <p>directory. In this file we write</p>
 
-<pre><code>    !!!
-    %html{ :lang =&gt; "en"}
-        %head
-            %meta{:charset =&gt; "utf-8"}
-            %title= data.page.title
-            = stylesheet_link_tag "your_css_file.css"
-            = javascript_include_tag "your_javascript_file.js"
-        %body
-            = yield
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nn">!!!</span>
+</span><span class='line'><span class="nt">%html</span><span class="p">{</span> <span class="ss">:lang</span> <span class="o">=&gt;</span> <span class="s2">&quot;en&quot;</span><span class="p">}</span>
+</span><span class='line'>    <span class="nt">%head</span>
+</span><span class='line'>        <span class="nt">%meta</span><span class="p">{</span><span class="ss">:charset</span> <span class="o">=&gt;</span> <span class="s2">&quot;utf-8&quot;</span><span class="p">}</span>
+</span><span class='line'>        <span class="nt">%title</span><span class="p">=</span> <span class="n">data</span><span class="o">.</span><span class="n">page</span><span class="o">.</span><span class="n">title</span>
+</span><span class='line'>        <span class="p">=</span> <span class="n">stylesheet_link_tag</span> <span class="s2">&quot;your_css_file.css&quot;</span>
+</span><span class='line'>        <span class="p">=</span> <span class="n">javascript_include_tag</span> <span class="s2">&quot;your_javascript_file.js&quot;</span>
+</span><span class='line'>    <span class="nt">%body</span>
+</span><span class='line'>        <span class="p">=</span> <span class="k">yield</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Now we must create</p>
 
-<pre><code>        index.html.haml
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'>index.html.haml
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>in</p>
 
-<pre><code>            source/
+<pre><code>            `source/`
 </code></pre>
 
 <p>directory.</p>
 
-<pre><code>        %h1 Welcome Middleman project
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nt">%h1</span> Welcome Middleman project
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>write in</p>
 
-<pre><code>            source/index.html.haml
+<pre><code>           `source/index.html.haml`
 </code></pre>
 
 <p>files.</p>
@@ -961,13 +1070,19 @@ Now, we install the ruby after then</p>
 
 <p>While you&rsquo;re writing header, you should write in &lsquo;#&rsquo;(pound sign)</p>
 
-<pre><code>    # Header 1
-    ## Header 2
-    ### Header 3
-    #### Header 4
-    ##### Header 5
-    ###### Header 6
-</code></pre>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># Header 1
+</span><span class='line'>## Header 2
+</span><span class='line'>### Header 3
+</span><span class='line'>#### Header 4
+</span><span class='line'>##### Header 5
+</span><span class='line'>###### Header 6</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Bold are header more and more smaller, from above example, the boldest header is Header 1 and the lightest header is Header 2</p>
 
@@ -985,10 +1100,14 @@ Now, we install the ruby after then</p>
 
 <p>We use &lsquo;&ndash;&rsquo; and &lsquo;*&rsquo; the symbol provide to write unordered.</p>
 
-<pre><code>  - apple
-  - banana
-  - strawberries
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'>  <span class="o">-</span> <span class="n">apple</span>
+</span><span class='line'>  <span class="o">-</span> <span class="n">banana</span>
+</span><span class='line'>  <span class="o">-</span> <span class="n">strawberries</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <h4>How to write code in markdown?</h4>
 
@@ -997,21 +1116,19 @@ Now, we install the ruby after then</p>
 
 <p>like this :</p>
 
-<pre><code>````
-    ...
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">.</span><span class="n">.</span><span class="o">.</span>
+</span></code></pre></td></tr></table></div></figure>
 
-```
-</code></pre>
 
 <p>Also we specify the how write this code ? or with what write ?</p>
 
 <p>We say to terminal, konsol or ide you saying like :</p>
 
-<pre><code>```ruby
-    ...
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">.</span><span class="n">.</span><span class="o">.</span>
+</span></code></pre></td></tr></table></div></figure>
 
-```
-</code></pre>
 
 <p>Now we say to terminal write ruby code block, and write according to ruby language.</p>
 
@@ -1019,10 +1136,8 @@ Now, we install the ruby after then</p>
 
 <p>When we use link about anything and if you want to be regularly you should use markdown and use like this :</p>
 
-<pre><code>```
-    [github](http://github.com)
-    [leylakapi](http://leylakapi.github.io)
-```
+<pre><code>[github](http://github.com)
+[leylakapi](http://leylakapi.github.io)
 </code></pre>
 
 <p>When the click github, redirected to on &lsquo;<a href="http://github.com">http://github.com</a>&rsquo;  this link.</p>

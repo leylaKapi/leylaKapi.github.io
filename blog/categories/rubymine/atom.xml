@@ -4,7 +4,7 @@
   <title><![CDATA[Category: rubymine, | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/rubymine/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-05-20T01:18:24+03:00</updated>
+  <updated>2014-06-16T13:11:37+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -32,12 +32,10 @@
 
 <p>Then, go to Download file then extract from <em>.tar.gz</em> file to normal directory. Then write in terminal</p>
 
-<p>```bash</p>
-
-<p>cd Downloads/RubyMine-6.3/bin/
-./rubymine.sh</p>
-
-<p>```</p>
+<p><code>bash
+cd Downloads/RubyMine-6.3/bin/
+./rubymine.sh
+</code></p>
 
 <p>Then, Rubymine opens automatically.</p>
 

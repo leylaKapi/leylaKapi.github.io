@@ -4,7 +4,7 @@
   <title><![CDATA[Category: computer | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/computer/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-05-20T01:18:24+03:00</updated>
+  <updated>2014-06-16T13:11:37+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Recreate Octopress blog for another computer]]></title>
+    <title type="html"><![CDATA[Recreate octopress blog for another computer]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/04/19/recreate-octopress-blog-for-another-computer/"/>
     <updated>2014-04-19T22:13:18+03:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/04/19/recreate-octopress-blog-for-another-computer</id>
@@ -32,63 +32,80 @@ blog post or you can look at <a href="http://octopress.org/docs/setup/">Octopres
 
 <p>-Clone your blog to the new machine</p>
 
-<p><code>
-git clone -b source git@github.com:username/username.github.io.git octopress
-</code></p>
+<p>``` bash</p>
+
+<pre><code>git clone -b source git@github.com:username/username.github.io.git octopress
+</code></pre>
+
+<p>```</p>
 
 <p>Then clone the master branch to the _deploy</p>
 
-<p><code>bash
-cd octopress
+<p>``` bash</p>
+
+<pre><code>cd octopress
 git clone git@github.com:username/username.github.io.git _deploy
-</code></p>
+</code></pre>
+
+<p>```</p>
 
 <p>then run <em>rake</em></p>
 
-<p><code>bash
-gem install bundler
+<p>``` bash</p>
+
+<pre><code>gem install bundler
 rbenv rehash
 bundle install
 rake setup_github_pages
-</code></p>
+</code></pre>
+
+<p>```</p>
 
 <p>Then we ask to you repo url like</p>
 
-<p>```
-Enter the read/write url for your repository
-(For example, &lsquo;git@github.com:your_username/your_username.github.io.git)</p>
+<p>``` bash</p>
 
-<pre><code>       or 'https://github.com/your_username/your_username.github.io')
+<pre><code>Enter the read/write url for your repository
+(For example, 'git@github.com:your_username/your_username.github.io.git)
+           or 'https://github.com/your_username/your_username.github.io')
+Repository url:
 </code></pre>
 
-<p>Repository url:
-```</p>
+<p>```</p>
 
 <p>Write your like this <em>Repository url: git@github.com:username/username.github.io.git</em></p>
 
 <p>Then you should write these command :</p>
 
-<p>```bash
-rake generate
-git add .
-git commit -m &ldquo;Write comment here&rdquo;
-git push origin source</p>
+<p>``` bash</p>
 
-<p>rake deploy
-```
+<pre><code>rake generate
+git add .
+git commit -m "Write comment here"
+git push origin source
+rake deploy
+</code></pre>
+
+<p>```
 then you can write</p>
 
-<p><code>bash
-cd octopress
+<p>``` bash</p>
+
+<pre><code>cd octopress
 git pull origin source #get another computer changing
 cd ./_deploy
 git pull origin master
-</code>
+</code></pre>
+
+<p>```
 then you can write</p>
 
-<p><code>bash
-rake deploy
-</code></p>
+<p>``` bash</p>
+
+<pre><code>rake deploy
+</code></pre>
+
+<p>```</p>
 
 <p>That&rsquo;s all :)
 I hope this article help you.</p>

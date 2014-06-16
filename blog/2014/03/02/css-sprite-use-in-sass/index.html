@@ -3,7 +3,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>CSS Sprite use in SASS - Leyla's Blog</title>
+	<title>CSS - Sprite use in SASS - Leyla's Blog</title>
 	<meta name="author" content="Leyla Kapi">
 
 	
@@ -83,7 +83,7 @@ when we upload &hellip;">
 		
 	
 	<div id="content" class="inner"><article class="post">
-	<h2 class="title">CSS Sprite Use in SASS</h2>
+	<h2 class="title">CSS - Sprite Use in SASS</h2>
 	<div class="entry-content"><h3>What is the CSS sprite? Why do we need to this ?</h3>
 
 <p>CSS Sprite means that combine all images in a single image file. The aim is that,
@@ -113,18 +113,28 @@ and pull in this page. Thus, CSS Sprite provide to fast loading  when opened qui
 <p>For example, you have a icons&#8217; pictures page and we pull each icon on icons&#8217; picture page, we
 should use CSS or SASS sprite</p>
 
-<pre><code>.icon
-    background: url("../images/icon-sprite.png") no repeat
-    display: inline-block
-.icon1
-    @extend .icon
-    background-position: 0px 0px
-.icon2
-    @extend .icon
-    background-position: 20px 34px
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='sass'><span class='line'><span class="nc">.icon</span>
+</span><span class='line'>    <span class="na">background</span><span class="o">:</span> <span class="sx">url(&quot;../images/icon-sprite.png&quot;)</span> <span class="n">no</span> <span class="no">repeat</span>
+</span><span class='line'>    <span class="na">display</span><span class="o">:</span> <span class="no">inline</span><span class="o">-</span><span class="no">block</span>
+</span><span class='line'><span class="nc">.icon1</span>
+</span><span class='line'>    <span class="k">@extend</span> <span class="nc">.icon</span>
+</span><span class='line'>    <span class="na">background-position</span><span class="o">:</span> <span class="mi">0</span><span class="kt">px</span> <span class="mi">0</span><span class="kt">px</span>
+</span><span class='line'><span class="nc">.icon2</span>
+</span><span class='line'>    <span class="k">@extend</span> <span class="nc">.icon</span>
+</span><span class='line'>    <span class="na">background-position</span><span class="o">:</span> <span class="mi">20</span><span class="kt">px</span> <span class="mi">34</span><span class="kt">px</span>
+</span><span class='line'>    <span class="nc">...</span>
+</span></code></pre></td></tr></table></div></figure>
 
-    ...
-</code></pre>
 
 <p>means that above code :</p>
 

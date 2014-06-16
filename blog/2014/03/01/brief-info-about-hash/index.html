@@ -3,7 +3,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Brief Info about hash - Leyla's Blog</title>
+	<title>Brief info about Hash - Leyla's Blog</title>
 	<meta name="author" content="Leyla Kapi">
 
 	
@@ -91,30 +91,53 @@ Hash was known &hellip;">
 <ul>
 <li>Hashes are one of the biggest property which separated another language in ruby.</li>
 <li>Hash was known <strong>associative array</strong> in another programming language.</li>
-<li><p>In hash, elements keep <strong>&lsquo;key => value&rsquo;</strong> format in ruby . Like</p>
-
-<pre><code>  hash_example = { 'name' =&gt; 'John', 'surname' =&gt; 'doe' }
-</code></pre></li>
-<li><p>Values of keys can be any type, but when you use <strong>&lsquo;eql?&rsquo;</strong> method, it can be only a key according to each other.</p>
-
-<pre><code>  a = { 3 =&gt; 'three', 3.0 =&gt; 'threedotzero' }
-  a[3]        #three
-  a[3.0]      #threedotzero
-
-  3 == 3.0        #true
-  3.eql? 3.0      #false
-</code></pre></li>
-<li><p>Hashes usually write with symbols, like :</p>
-
-<pre><code>  hash_with_symbol{ name: 'John', surname: 'Doe'}
-</code></pre></li>
-<li><p>Hashes are similar to Array class, but Array uses integer as its index, hash allow to us any object type.</p>
-
-<pre><code>  hash_differences_array{ 'age' =&gt; 15, 'year' =&gt; 2014 }
-
-  array_differences_hash = [1, 2, 3]
-</code></pre></li>
+<li>In hash, elements keep <strong>&lsquo;key => value&rsquo;</strong> format in ruby . Like</li>
 </ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">hash_example</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;surname&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;doe&#39;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Values of keys can be any type, but when you use <strong>&lsquo;eql?&rsquo;</strong> method, it can be only a key according to each other.</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'>    <span class="n">a</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">3</span> <span class="o">=&gt;</span> <span class="s1">&#39;three&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="o">.</span><span class="mi">0</span> <span class="o">=&gt;</span> <span class="s1">&#39;threedotzero&#39;</span> <span class="p">}</span>
+</span><span class='line'>    <span class="n">a</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span>        <span class="c1">#three</span>
+</span><span class='line'>    <span class="n">a</span><span class="o">[</span><span class="mi">3</span><span class="o">.</span><span class="mi">0</span><span class="o">]</span>      <span class="c1">#threedotzero</span>
+</span><span class='line'>    <span class="mi">3</span> <span class="o">==</span> <span class="mi">3</span><span class="o">.</span><span class="mi">0</span>        <span class="c1">#true</span>
+</span><span class='line'>    <span class="mi">3</span><span class="o">.</span><span class="n">eql?</span> <span class="mi">3</span><span class="o">.</span><span class="mi">0</span>      <span class="c1">#false</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Hashes usually write with symbols, like :</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'> <span class="n">hash_with_symbol</span><span class="p">{</span> <span class="nb">name</span><span class="p">:</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="ss">surname</span><span class="p">:</span> <span class="s1">&#39;Doe&#39;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Hashes are similar to Array class, but Array uses integer as its index, hash allow to us any object type.</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">hash_differences_array</span><span class="p">{</span> <span class="s1">&#39;age&#39;</span> <span class="o">=&gt;</span> <span class="mi">15</span><span class="p">,</span> <span class="s1">&#39;year&#39;</span> <span class="o">=&gt;</span> <span class="mi">2014</span> <span class="p">}</span>
+</span><span class='line'><span class="n">array_differences_hash</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>In my opinion, You have an information about hashes. Do you agree with me?!</p>
@@ -136,32 +159,51 @@ Hash was known &hellip;">
 
 <p>methods. Like:</p>
 
-<pre><code>        access_values_keys{ name: 'john', surname: 'Doe'}
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">access_values_keys</span><span class="p">{</span> <span class="nb">name</span><span class="p">:</span> <span class="s1">&#39;john&#39;</span><span class="p">,</span> <span class="ss">surname</span><span class="p">:</span> <span class="s1">&#39;Doe&#39;</span><span class="p">}</span>
+</span><span class='line'><span class="n">access_values_keys</span><span class="o">.</span><span class="n">keys</span>         <span class="c1"># [:name, :surname]</span>
+</span><span class='line'><span class="n">access_values_keys</span><span class="o">.</span><span class="n">values</span>       <span class="c1">#[&#39;John&#39;, &#39;Doe&#39;]</span>
+</span></code></pre></td></tr></table></div></figure>
 
-        access_values_keys.keys         # [:name, :surname]
-        access_values_keys.values       #['John', 'Doe']
-</code></pre>
 
 <ul>
-<li><p>Generally, hashes are using in parameters of name,</p>
-
-<pre><code>      def parameters_name(name, age)
-
-          '#{name} : #{age}'
-      end
-
-      puts name 'John' , 18       # Ali : 18
-</code></pre></li>
-<li><p>Hashes uses to <strong>ENUMERABLE</strong> module like arrays.</p>
-
-<pre><code>      {}.class.ancestors          #show the hash ancestors.
-                                  #[Hash, Enumerable, Object, PP::ObjectMixin, Kernel, BasicObject]
-</code></pre></li>
-<li><p>If you want to change from array to hash, you should use</p>
-
-<pre><code>      .to_h
-</code></pre></li>
+<li>Generally, hashes are using in parameters of name,</li>
 </ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">parameters_name</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
+</span><span class='line'>    <span class="s1">&#39;#{name} : #{age}&#39;</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'><span class="nb">puts</span> <span class="nb">name</span> <span class="s1">&#39;John&#39;</span> <span class="p">,</span> <span class="mi">18</span>       <span class="c1"># Ali : 18</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Hashes uses to <strong>ENUMERABLE</strong> module like arrays.</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'>  <span class="p">{}</span><span class="o">.</span><span class="n">class</span><span class="o">.</span><span class="n">ancestors</span>          <span class="c1">#show the hash ancestors.</span>
+</span><span class='line'>                                        <span class="c1">#[Hash, Enumerable, Object, PP::ObjectMixin, Kernel, BasicObject]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>If you want to change from array to hash, you should use</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">.</span><span class="n">to_h</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p><strong>Lastly</strong> If you want to learn more, you can visit <a href="http://www.ruby-doc.org/core-2.0/Hash.html">ruby-doc</a> .</p>

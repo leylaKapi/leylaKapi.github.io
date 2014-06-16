@@ -3,7 +3,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>How create tree - list menu with haml - Leyla's Blog</title>
+	<title>How create tree - list menu with HAML - Leyla's Blog</title>
 	<meta name="author" content="Leyla Kapi">
 
 	
@@ -83,7 +83,7 @@ style.css.sass &hellip;">
 		
 	
 	<div id="content" class="inner"><article class="post">
-	<h2 class="title">How Create Tree - List Menu With Haml</h2>
+	<h2 class="title">How Create Tree - List Menu With HAML</h2>
 	<div class="entry-content"><h3>How to created tree &ndash; list menu with haml, sass, coffeescript ?</h3>
 
 <p>Firstly, we create middleman project and create</p>
@@ -93,63 +93,108 @@ style.css.sass
 application.coffee
 </code></pre>
 
-<p>then we open <em>index.html.haml</em> file and we write your code like this,</p>
+<p>then we open <code>index.html.haml</code> file and we write your code like this,</p>
 
-<pre><code>--- my code like this ---
-%ul.archive_tool
-  %li#tools Car
-  %ul.archive_requires
-    %li#requires BMW
-    %li#requires Mercedes
-    %li#requires Toyota
-    %li#requires Fiat
-  %li#tools Book
-  %ul.archive_requires
-    %li#requires Ruby
-    %li#requires ROR
-    %li#requires Thought
-  %li#tools Computer
-  %ul.archive_requires
-    %li#requires iMac
-    %li#requires Windows
-    %li#requires Linux
-    %li#requires Seu
-  %li#tools Chair
-  %ul.archive_requires
-    %li#requires comfortable
-    %li#requires uncomfortable
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="p">-</span><span class="o">--</span> <span class="n">my</span> <span class="n">code</span> <span class="n">like</span> <span class="n">this</span> <span class="o">---</span>
+</span><span class='line'><span class="nt">%ul</span><span class="nc">.archive_tool</span>
+</span><span class='line'>  <span class="nt">%li</span><span class="nf">#tools</span> Car
+</span><span class='line'>  <span class="nt">%ul</span><span class="nc">.archive_requires</span>
+</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> BMW
+</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> Mercedes
+</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> Toyota
+</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> Fiat
+</span><span class='line'>  <span class="nt">%li</span><span class="nf">#tools</span> Book
+</span><span class='line'>  <span class="nt">%ul</span><span class="nc">.archive_requires</span>
+</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> Ruby
+</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> ROR
+</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> Thought
+</span><span class='line'>  <span class="nt">%li</span><span class="nf">#tools</span> Computer
+</span><span class='line'>  <span class="nt">%ul</span><span class="nc">.archive_requires</span>
+</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> iMac
+</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> Windows
+</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> Linux
+</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> Seu
+</span><span class='line'>  <span class="nt">%li</span><span class="nf">#tools</span> Chair
+</span><span class='line'>  <span class="nt">%ul</span><span class="nc">.archive_requires</span>
+</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> comfortable
+</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> uncomfortable
+</span></code></pre></td></tr></table></div></figure>
 
-<p>then open <em>style.css.sass</em> file and write style code</p>
 
-<pre><code>  #tools, #requires
-    cursor: pointer
-  .archive_tool
-    margin-left: 1em
-    font-size: large
-    font-weight: bold
-    cursor: pointer
-  .archive_requires
-    @extend .archive_tool
-    margin:
-      top: 0
-      bottom: 1em
-    font-size: medium
-    list-style-type: circle
-</code></pre>
+<p>then open <code>style.css.sass</code> file and write style code</p>
 
-<p>then open <em>application.coffee</em> file, and</p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='sass'><span class='line'>  <span class="nn">#tools</span><span class="o">,</span> <span class="nn">#requires</span>
+</span><span class='line'>    <span class="na">cursor</span><span class="o">:</span> <span class="no">pointer</span>
+</span><span class='line'>  <span class="nc">.archive_tool</span>
+</span><span class='line'>    <span class="na">margin-left</span><span class="o">:</span> <span class="mi">1</span><span class="kt">em</span>
+</span><span class='line'>    <span class="na">font-size</span><span class="o">:</span> <span class="no">large</span>
+</span><span class='line'>    <span class="na">font-weight</span><span class="o">:</span> <span class="no">bold</span>
+</span><span class='line'>    <span class="na">cursor</span><span class="o">:</span> <span class="no">pointer</span>
+</span><span class='line'>  <span class="nc">.archive_requires</span>
+</span><span class='line'>    <span class="k">@extend</span> <span class="nc">.archive_tool</span>
+</span><span class='line'>    <span class="na">margin</span><span class="o">:</span>
+</span><span class='line'>      <span class="na">top</span><span class="o">:</span> <span class="mi">0</span>
+</span><span class='line'>      <span class="na">bottom</span><span class="o">:</span> <span class="mi">1</span><span class="kt">em</span>
+</span><span class='line'>    <span class="na">font-size</span><span class="o">:</span> <span class="no">medium</span>
+</span><span class='line'>    <span class="na">list-style-type</span><span class="o">:</span> <span class="no">circle</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<pre><code>$(document).ready -&gt;
-  $(".archive_tool ul").hide()
-  $(".archive_tool &gt; li").click -&gt;
-    $(this).parent().find("ul").slideToggle()
 
-    return
+<p>then open <code>application.coffee</code> file, and</p>
 
-  $(".archive_requires &gt; li").click -&gt;
-    $(this).parent().find("ul").slideToggle()
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='coffeescript'><span class='line'><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span> <span class="nf">-&gt;</span>
+</span><span class='line'>  <span class="nx">$</span><span class="p">(</span><span class="s">&quot;.archive_tool ul&quot;</span><span class="p">).</span><span class="nx">hide</span><span class="p">()</span>
+</span><span class='line'>  <span class="nx">$</span><span class="p">(</span><span class="s">&quot;.archive_tool &gt; li&quot;</span><span class="p">).</span><span class="nx">click</span> <span class="nf">-&gt;</span>
+</span><span class='line'>    <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">parent</span><span class="p">().</span><span class="nx">find</span><span class="p">(</span><span class="s">&quot;ul&quot;</span><span class="p">).</span><span class="nx">slideToggle</span><span class="p">()</span>
+</span><span class='line'>    <span class="k">return</span>
+</span><span class='line'>  <span class="nx">$</span><span class="p">(</span><span class="s">&quot;.archive_requires &gt; li&quot;</span><span class="p">).</span><span class="nx">click</span> <span class="nf">-&gt;</span>
+</span><span class='line'>    <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">parent</span><span class="p">().</span><span class="nx">find</span><span class="p">(</span><span class="s">&quot;ul&quot;</span><span class="p">).</span><span class="nx">slideToggle</span><span class="p">()</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>we write this code inside haml, sass, and coffeescript file and then saved all, run this middleman project.</p>
 

@@ -3,7 +3,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Recreate Octopress blog for another computer - Leyla's Blog</title>
+	<title>Recreate octopress blog for another computer - Leyla's Blog</title>
 	<meta name="author" content="Leyla Kapi">
 
 	
@@ -97,8 +97,9 @@ blog post or you can look at <a href="http://octopress.org/docs/setup/">Octopres
 
 <p>-Clone your blog to the new machine</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git clone -b source git@github.com:username/username.github.io.git octopress</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git clone -b <span class="nb">source </span>git@github.com:username/username.github.io.git octopress
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>Then clone the master branch to the _deploy</p>
@@ -145,14 +146,10 @@ blog post or you can look at <a href="http://octopress.org/docs/setup/">Octopres
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
 </pre></td><td class='code'><pre><code class='bash'><span class='line'>rake generate
 </span><span class='line'>git add .
 </span><span class='line'>git commit -m <span class="s2">&quot;Write comment here&quot;</span>
 </span><span class='line'>git push origin <span class="nb">source</span>
-</span><span class='line'>
-</span><span class='line'>
 </span><span class='line'>rake deploy
 </span></code></pre></td></tr></table></div></figure>
 

@@ -3,7 +3,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Ruby Programming languages - Leyla's Blog</title>
+	<title>Ruby programming languages - Leyla's Blog</title>
 	<meta name="author" content="Leyla Kapi">
 
 	
@@ -181,7 +181,7 @@ Nitrous These notes restored in Academic Information Education Mersin from Notes
 <p>this sign provide to take pre-functions and then make process with this functions.</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>system<span class="o">(</span><span class="s1">&#39;clear&#39;</span><span class="o">)</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">system</span><span class="p">(</span><span class="s1">&#39;clear&#39;</span><span class="p">)</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
@@ -326,7 +326,7 @@ In ruby, Not exist relevant to logical expression like <em>Boolean</em> or <em>B
 <p>The above codes writing in <em>.rb</em> file and then save it, then open your terminal , writing path of files in terminal</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">ruby</span> <span class="n">project_name</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>ruby project_name
 </span></code></pre></td></tr></table></div></figure>
 
 
@@ -351,89 +351,119 @@ In ruby, Not exist relevant to logical expression like <em>Boolean</em> or <em>B
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>danger!    #changed original text.</p>
+
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">***</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">danger!</span>    <span class="c1">#changed original text.</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>bash
-irb(main):001:0> a=&ldquo;Ruby&rdquo;
-=> &ldquo;Ruby&rdquo;
-irb(main):002:0> a.reverse
-=> &ldquo;ybuR&rdquo;
-irb(main):003:0> a
-=> &ldquo;Ruby&rdquo;</p>
-
-<blockquote><blockquote><p>exit
-irb(main):004:0> a.reverse!
-=>  &ldquo;ybuR&rdquo;
-irb(main):005:0> a
-=>  &ldquo;ybuR&rdquo;</p></blockquote></blockquote>
+<hr />
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">In</span> <span class="n">above</span> <span class="n">example</span> <span class="n">entering</span> <span class="n">a</span> <span class="n">value</span> <span class="ow">and</span> <span class="n">using</span> <span class="o">**!**</span> <span class="n">character</span> <span class="n">changed</span> <span class="n">original</span> <span class="n">value</span><span class="o">.</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">##Rules for named</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">-</span> <span class="n">class</span><span class="p">,</span> <span class="k">module</span> <span class="nn">and</span> <span class="n">constant</span> <span class="nb">name</span> <span class="n">starts</span> <span class="n">with</span> <span class="n">capital</span> <span class="n">letter</span><span class="o">.</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>irb<span class="o">(</span>main<span class="o">)</span>:001:0&gt; <span class="nv">a</span><span class="o">=</span><span class="s2">&quot;Ruby&quot;</span>
+</span><span class='line'><span class="o">=</span>&gt; <span class="s2">&quot;Ruby&quot;</span>
+</span><span class='line'>irb<span class="o">(</span>main<span class="o">)</span>:002:0&gt; a.reverse
+</span><span class='line'><span class="o">=</span>&gt; <span class="s2">&quot;ybuR&quot;</span>
+</span><span class='line'>irb<span class="o">(</span>main<span class="o">)</span>:003:0&gt; <span class="nv">a</span>
+</span><span class='line'><span class="o">=</span>&gt; <span class="s2">&quot;Ruby&quot;</span>
+</span><span class='line'>&gt;&gt; <span class="nb">exit</span>
+</span><span class='line'>irb<span class="o">(</span>main<span class="o">)</span>:004:0&gt; a.reverse!
+</span><span class='line'><span class="o">=</span>&gt;  <span class="s2">&quot;ybuR&quot;</span>
+</span><span class='line'>irb<span class="o">(</span>main<span class="o">)</span>:005:0&gt; <span class="nv">a</span>
+</span><span class='line'><span class="o">=</span>&gt;  <span class="s2">&quot;ybuR&quot;</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>ruby
-class ClassName
-&hellip;
-end
-module ModuleName
-&hellip;
-end
-PI_CONSTANT = 3,14156</p>
+<p>In above example entering a value and using <strong>!</strong> character changed original value.</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">must</span> <span class="n">be</span> <span class="n">defined</span> <span class="n">like</span> <span class="n">above</span><span class="o">.</span> <span class="no">Also</span> <span class="n">you</span> <span class="n">know</span> <span class="nb">constants</span> <span class="n">doesn</span><span class="err">&#39;</span><span class="n">t</span> <span class="n">change</span><span class="p">,</span> <span class="k">if</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">change</span> <span class="n">can</span> <span class="n">be</span> <span class="n">bug</span><span class="o">.</span>
-</span></code></pre></td></tr></table></div></figure>
+<h2>Rules for named</h2>
 
+<ul>
+<li>class, module and constant name starts with capital letter.</li>
+</ul>
 
-<p>bash
-irb(main):001:0> PI_CONSTANT = 3,14156
-=> [3,14156]
-irb(main):002:0> PI_CONSTANT  = 2
-(irb):47: warning: already initialized constant PI_CONSTANT
-(irb):46: warning: previous definition of PI_CONSTANT  was here
-=> 2</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">-</span> <span class="o">**</span><span class="n">local</span> <span class="n">variables</span><span class="o">**</span> <span class="n">starting</span> <span class="n">with</span> <span class="n">lover</span> <span class="n">letter</span> <span class="ow">or</span> <span class="s1">&#39;_&#39;</span> <span class="p">,</span> <span class="n">like</span> <span class="p">:</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>ruby
-local_variable = &ldquo;like this.&rdquo;
-plate = 20</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">-</span> <span class="o">**</span><span class="no">Global</span> <span class="n">variables</span><span class="o">**</span>  <span class="n">starting</span> <span class="n">with</span> <span class="s1">&#39;$&#39;</span><span class="p">,</span> <span class="n">like</span> <span class="p">:</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>$global_variables</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">-</span> <span class="o">**</span><span class="n">instance</span> <span class="n">variables</span><span class="o">**</span> <span class="n">starting</span> <span class="n">with</span> <span class="s1">&#39;@&#39;</span> <span class="ow">and</span> <span class="k">class</span> <span class="n">variables</span> <span class="n">starting</span> <span class="n">with</span> <span class="s1">&#39;@@&#39;</span><span class="o">.</span> <span class="n">like</span> <span class="p">:</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>@instance_variables</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="sb">```</span>
-</span><span class='line'><span class="sb">@@class_variables</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">ClassName</span>
+</span><span class='line'><span class="o">.</span><span class="n">.</span><span class="o">.</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'><span class="k">module</span> <span class="nn">ModuleName</span>
+</span><span class='line'><span class="o">.</span><span class="n">.</span><span class="o">.</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'><span class="no">PI_CONSTANT</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span><span class="mi">14156</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>must be defined like above. Also you know constants doesn&rsquo;t change, if you want to change can be bug.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>irb<span class="o">(</span>main<span class="o">)</span>:001:0&gt; <span class="nv">PI_CONSTANT</span> <span class="o">=</span> 3,14156
+</span><span class='line'><span class="o">=</span>&gt; <span class="o">[</span>3,14156<span class="o">]</span>
+</span><span class='line'>irb<span class="o">(</span>main<span class="o">)</span>:002:0&gt; <span class="nv">PI_CONSTANT</span>  <span class="o">=</span> 2
+</span><span class='line'><span class="o">(</span>irb<span class="o">)</span>:47: warning: already initialized constant PI_CONSTANT
+</span><span class='line'><span class="o">(</span>irb<span class="o">)</span>:46: warning: previous definition of PI_CONSTANT  was <span class="nv">here</span>
+</span><span class='line'><span class="o">=</span>&gt; 2
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li><strong>local variables</strong> starting with lover letter or &lsquo;_&rsquo; , like :</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">local_variable</span> <span class="o">=</span> <span class="s2">&quot;like this.&quot;</span>
+</span><span class='line'><span class="n">plate</span> <span class="o">=</span> <span class="mi">20</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li><strong>Global variables</strong>  starting with &lsquo;$&rsquo;, like :</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="vg">$global_variables</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li><strong>instance variables</strong> starting with &lsquo;@&rsquo; and class variables starting with &lsquo;@@&rsquo;. like :</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="vi">@instance_variables</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="vc">@@class_variables</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
@@ -478,8 +508,8 @@ plate = 20</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">currently_working_file</span><span class="o">.</span><span class="n">rb</span>
-</span><span class='line'><span class="nb">load</span> <span class="s1">&#39;external_file.rb&#39;</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>currently_working_file.rb
+</span><span class='line'>load <span class="s1">&#39;external_file.rb&#39;</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
@@ -517,14 +547,14 @@ In addition, If we use ruby library, we should use, like</p>
 <p>If you use package ,before need to install the package, using this command</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>gem install package_name
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="n">install</span> <span class="n">package_name</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
 <p>when we install this gem, then we embeded in <em>currently_working_file.rb</em> like</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>require <span class="s1">&#39;package_name&#39;</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;package_name&#39;</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
@@ -534,8 +564,8 @@ In addition, If we use ruby library, we should use, like</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">source</span> <span class="o">(</span><span class="s1">&#39;http://ruby-gems.org&#39;</span><span class="o">)</span>
-</span><span class='line'>gem <span class="s1">&#39;package_name&#39;</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">source</span> <span class="p">(</span><span class="s1">&#39;http://ruby-gems.org&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;package_name&#39;</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
@@ -562,7 +592,7 @@ In addition, If we use ruby library, we should use, like</p>
 -In documentation section writing <em>ri</em>  command, generally we use to search for method.</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>ri Class#method
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">ri</span> <span class="no">Class</span><span class="c1">#method</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
@@ -601,29 +631,19 @@ In addition, If we use ruby library, we should use, like</p>
 
 <ul>
 <li><em>chomp</em> provide if the last character can exist &ldquo;\n&rdquo; symbol, cleaning the last characters.</li>
-<li><em>chom</em> provide to clean all last characters</li>
+<li><p><em>chom</em> provide to clean all last characters</p>
+
+<pre><code>             Basic Object
+                  ||
+                Object
+                  ||
+                Numeric
+                  ||
+  Integer     float   Rational    Complex
+</code></pre>
+
+<p>  Fixnum  Bignum</p></li>
 </ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'>                <span class="no">Basic</span> <span class="no">Object</span>
-</span><span class='line'>                      <span class="o">||</span>
-</span><span class='line'>                    <span class="no">Object</span>
-</span><span class='line'>                      <span class="o">||</span>
-</span><span class='line'>                    <span class="no">Numeric</span>
-</span><span class='line'>                      <span class="o">||</span>
-</span><span class='line'>      <span class="nb">Integer</span>     <span class="n">float</span>    <span class="no">Rational</span>    <span class="no">Complex</span>
-</span><span class='line'>
-</span><span class='line'><span class="no">Fixnum</span>  <span class="no">Bignum</span>
-</span></code></pre></td></tr></table></div></figure>
 
 
 <p>If you generally showing the class, you can show like above.</p>
@@ -791,11 +811,13 @@ In addition, If we use ruby library, we should use, like</p>
 <ul>
 <li><p>When we combine the text, we can embed in string expressions.</p>
 
-<p>  &#8220;`
-  puts &ldquo;#{&lsquo;academic&rsquo;.capitalize} #{&lsquo;information&rsquo;.upcase}&rdquo;</p>
+<p>  &#8220;` ruby
+      puts &ldquo;#{&lsquo;academic&rsquo;.capitalize} #{&lsquo;information&rsquo;.upcase}&rdquo;</p>
 
-<p>  =>  Academic INFORMATION
-  &#8220;`</p></li>
+<pre><code>  =&gt;  Academic INFORMATION
+</code></pre>
+
+<p>  &#8220;`</p></li>
 </ul>
 
 
@@ -836,7 +858,7 @@ In addition, If we use ruby library, we should use, like</p>
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">text</span><span class="o">=</span><span class="sx">%Q{Hello}</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="s2">&quot;Hello&quot;</span>
+</span><span class='line'>    <span class="o">=&gt;</span> <span class="s2">&quot;Hello&quot;</span>
 </span></code></pre></td></tr></table></div></figure>
 
 

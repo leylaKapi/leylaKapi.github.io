@@ -4,7 +4,7 @@
   <title><![CDATA[Category: beginner | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/beginner/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-05-20T01:18:24+03:00</updated>
+  <updated>2014-06-16T13:11:37+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Ruby Programming languages]]></title>
+    <title type="html"><![CDATA[Ruby programming languages]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/04/19/ruby-programming-languages/"/>
     <updated>2014-04-19T10:52:45+03:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/04/19/ruby-programming-languages</id>
@@ -81,51 +81,63 @@
 
 <h2>Irb ve Repl Functions</h2>
 
-<p>```bash
-irb
-irb(main):001:0> 2+2
-=> 4
-exit
-irb &mdash;simple -prompt</p>
+<p>``` bash</p>
 
-<blockquote><blockquote><p>12.class
-=> Fixnum
+<pre><code>irb
+irb(main):001:0&gt; 2+2
+=&gt; 4
 exit
-irb(main):003:0> 2*9/3+7
-=> 13
-irb(main):004:0> _ * 3
-=>39
-```</p></blockquote></blockquote>
+irb --simple -prompt
+&gt;&gt; 12.class
+=&gt; Fixnum
+&gt;&gt; exit
+irb(main):003:0&gt; 2*9/3+7
+=&gt; 13
+irb(main):004:0&gt; _ * 3
+=&gt;39
+</code></pre>
+
+<p>```</p>
 
 <p>Acoording to above <em>irb</em>, opened ruby terminal; <em>exit</em> exit to ruby terminal. In addition <em>irb &mdash;simple -prompt</em> this command is provide to seeming regular to terminal.Strikes the eye another notifications is that</p>
 
 <p><em>_</em></p>
 
-<p>this sign provide to take pre-functions and then make process with this functions.
-<code>
-system('clear')
-</code></p>
+<p>this sign provide to take pre-functions and then make process with this functions.</p>
+
+<p>``` ruby</p>
+
+<pre><code>system('clear')
+</code></pre>
+
+<p>```</p>
 
 <p>with this command provide to clear your terminal.</p>
 
-<p><code>bash
-irb(main):008:0&gt; self
+<p>``` bash</p>
+
+<pre><code>irb(main):008:0&gt; self
 =&gt; main
-</code></p>
+</code></pre>
+
+<p>```</p>
 
 <p>this command show the writing on main class .</p>
 
 <p><strong>Also</strong></p>
 
-<p><code>bash
-irb(main):010:0&gt; a="Ruby"
+<p>``` bash</p>
+
+<pre><code>irb(main):010:0&gt; a="Ruby"
 =&gt; "Ruby"
 irb(main):011:0&gt; a.reverse
 =&gt; "ybuR"
 irb(main):012:0&gt; "I love
 irb(main):013:0" ruby"
 =&gt;  "I love\nruby
-</code></p>
+</code></pre>
+
+<p>```</p>
 
 <p>Seeming to above code <em>.reverse</em> method which entered code, provide to writing reverse.Also if when opened quotes then not closed, <strong>></strong> instead <strong>&ldquo;</strong> can be this expression.</p>
 
@@ -138,8 +150,9 @@ irb(main):013:0" ruby"
 </ul>
 
 
-<p><code>bash
-irb(main):001:0 3 &gt; 5
+<p>``` bash</p>
+
+<pre><code>irb(main):001:0 3 &gt; 5
 =&gt; false
 irb(main):002:0 3 &lt; 5
 =&gt; true
@@ -153,7 +166,9 @@ irb(main):006:0 false.class
 =&gt; FalseClass
 irb(main):007:0 nil.class
 =&gt; NilClass
-</code></p>
+</code></pre>
+
+<p>```</p>
 
 <p>We mention to everthing an object and derivation from a class in Ruby, strike to eye above, <em>True</em>, <em>false</em> , <em>nil</em> derivation a class.
 Also we mention about <em>nil</em>, nil means that <em>nothing</em> like another languages null, undefined&hellip;etc.
@@ -166,57 +181,66 @@ In ruby, Not exist relevant to logical expression like <em>Boolean</em> or <em>B
 </ul>
 
 
-<p>```ruby</p>
+<p>``` ruby</p>
 
 <pre><code>def method_name
+...
+end
 </code></pre>
 
-<p>&hellip;
-end
-```</p>
+<p>```</p>
 
 <p>If method get a parameter like :</p>
 
-<p>```ruby</p>
+<p>``` ruby</p>
 
 <pre><code>def method_name(param1)
-</code></pre>
-
-<p>&hellip;
-end
-```</p>
-
-<p><code>
-def method_name(param1, param2)
 ...
 end
-</code></p>
+</code></pre>
+
+<p>```</p>
+
+<p>``` ruby</p>
+
+<pre><code>def method_name(param1, param2)
+...
+end
+</code></pre>
+
+<p>```</p>
 
 <p><strong>Also</strong> Not required to using parenthesis like :</p>
 
-<p><code>
-def method_name param1, param2, ...
+<p>``` ruby</p>
+
+<pre><code>def method_name param1, param2, ...
 ...
 end
-</code></p>
+</code></pre>
+
+<p>```</p>
 
 <hr />
 
-<p>```ruby
-def collection number1, number2</p>
+<p>``` ruby</p>
 
-<pre><code>number1 + number2
+<pre><code>def collection number1, number2
+    number1 + number2
+end
+puts "Result of collection: ", collection(3,5)
 </code></pre>
 
-<p>end
-puts &ldquo;Result of collection: &rdquo;, collection(3,5)
-```</p>
+<p>```</p>
 
 <p>The above codes writing in <em>.rb</em> file and then save it, then open your terminal , writing path of files in terminal</p>
 
-<p><code>
-ruby project_name
-</code></p>
+<p>``` bash</p>
+
+<pre><code>ruby project_name
+</code></pre>
+
+<p>```</p>
 
 <p>write above command in terminal.</p>
 
@@ -227,33 +251,45 @@ ruby project_name
 </ul>
 
 
-<p><code>
-questioning?    #return true or false
-</code></p>
+<p>``` ruby</p>
 
-<p>```ruby
-changed_value = &hellip;   #changed value of anything value, assignment operator.</p>
+<pre><code>questioning?    #return true or false
+</code></pre>
 
-<p><code>
-danger!    #changed original text.
-</code></p>
+<p>```</p>
+
+<p>``` ruby</p>
+
+<pre><code>changed_value = ...   #changed value of anything value, assignment operator.
+</code></pre>
+
+<p>```</p>
+
+<p>``` ruby</p>
+
+<pre><code>danger!    #changed original text.
+</code></pre>
+
+<p>```</p>
 
 <hr />
 
-<p>```bash
-irb(main):001:0> a=&ldquo;Ruby&rdquo;
-=> &ldquo;Ruby&rdquo;
-irb(main):002:0> a.reverse
-=> &ldquo;ybuR&rdquo;
-irb(main):003:0> a
-=> &ldquo;Ruby&rdquo;</p>
+<p>``` bash</p>
 
-<blockquote><blockquote><p>exit
-irb(main):004:0> a.reverse!
-=>  &ldquo;ybuR&rdquo;
-irb(main):005:0> a
-=>  &ldquo;ybuR&rdquo;
-```</p></blockquote></blockquote>
+<pre><code>irb(main):001:0&gt; a="Ruby"
+=&gt; "Ruby"
+irb(main):002:0&gt; a.reverse
+=&gt; "ybuR"
+irb(main):003:0&gt; a
+=&gt; "Ruby"
+&gt;&gt; exit
+irb(main):004:0&gt; a.reverse!
+=&gt;  "ybuR"
+irb(main):005:0&gt; a
+=&gt;  "ybuR"
+</code></pre>
+
+<p>```</p>
 
 <p>In above example entering a value and using <strong>!</strong> character changed original value.</p>
 
@@ -264,79 +300,100 @@ irb(main):005:0> a
 </ul>
 
 
-<p><code>ruby
-class ClassName
+<p>``` ruby</p>
+
+<pre><code>class ClassName
 ...
 end
 module ModuleName
 ...
 end
 PI_CONSTANT = 3,14156
-</code>
+</code></pre>
+
+<p>```
 must be defined like above. Also you know constants doesn&rsquo;t change, if you want to change can be bug.</p>
 
-<p><code>bash
-irb(main):001:0&gt; PI_CONSTANT = 3,14156
+<p>``` bash</p>
+
+<pre><code>irb(main):001:0&gt; PI_CONSTANT = 3,14156
 =&gt; [3,14156]
 irb(main):002:0&gt; PI_CONSTANT  = 2
 (irb):47: warning: already initialized constant PI_CONSTANT
 (irb):46: warning: previous definition of PI_CONSTANT  was here
 =&gt; 2
-</code></p>
+</code></pre>
+
+<p>```</p>
 
 <ul>
 <li><strong>local variables</strong> starting with lover letter or &lsquo;_&rsquo; , like :</li>
 </ul>
 
 
-<p><code>ruby
-local_variable = "like this."
+<p>``` ruby</p>
+
+<pre><code>local_variable = "like this."
 plate = 20
-</code></p>
+</code></pre>
+
+<p>```</p>
 
 <ul>
 <li><strong>Global variables</strong>  starting with &lsquo;$&rsquo;, like :</li>
 </ul>
 
 
-<p><code>
-$global_variables
-</code></p>
+<p>``` ruby</p>
+
+<pre><code>$global_variables
+</code></pre>
+
+<p>```</p>
 
 <ul>
 <li><strong>instance variables</strong> starting with &lsquo;@&rsquo; and class variables starting with &lsquo;@@&rsquo;. like :</li>
 </ul>
 
 
-<p><code>
-@instance_variables
-</code></p>
+<p>``` ruby</p>
 
-<p><code>
-@@class_variables
-</code></p>
+<pre><code>@instance_variables
+</code></pre>
+
+<p>```</p>
+
+<p>``` ruby</p>
+
+<pre><code>@@class_variables
+</code></pre>
+
+<p>```</p>
 
 <p><strong>Also</strong> you can writing ruby, without opening <em>irb</em> in terminal. like:</p>
 
-<p><code>
-ruby -e "puts 'Hello'"
+<p>``` ruby</p>
+
+<pre><code>ruby -e "puts 'Hello'"
 =&gt; Hello
-</code></p>
+</code></pre>
+
+<p>```</p>
 
 <p>But the above method is not a preferred method commonly.</p>
 
 <hr />
 
-<p>```ruby
-def changed(value)</p>
+<p>``` ruby</p>
 
-<pre><code>variables = value
+<pre><code>def changed(value)
+    variables = value
+end
+puts "Value of variables: #{changed(20)}"
+=&gt; Value of variables: 20
 </code></pre>
 
-<p>end
-puts &ldquo;Value of variables: #{changed(20)}&rdquo;
-=> Value of variables: 20
-```</p>
+<p>```</p>
 
 <h2>included another file in your file.</h2>
 
@@ -344,22 +401,27 @@ puts &ldquo;Value of variables: #{changed(20)}&rdquo;
 
 <p>If we want to embeded in  <strong>external_file.rb</strong> files on <strong>currently_working_file.rb</strong> files, we should use <em>load</em> comand. like :</p>
 
-<p>```
-external_file.rb</p>
+<p>``` ruby</p>
+
+<pre><code>external_file.rb
+</code></pre>
 
 <p>```</p>
 
-<p><code>
-currently_working_file.rb
+<p>``` bash</p>
+
+<pre><code>currently_working_file.rb
 load 'external_file.rb'
-</code></p>
+</code></pre>
+
+<p>```</p>
 
 <p>In Rails, we can generally use <em>autoload</em> command. <em>autoload</em> is loading automatically file.</p>
 
 <p>Instead of <em>load</em> command, you can use <em>require</em> command but,when you use <em>load</em>, you can use many times in file, when you use <em>require</em>, <em>require</em> load file only once and generally <em>require</em> more preferred than it.
 In addition, If we use ruby library, we should use, like</p>
 
-<p><code>
+<p><code>ruby
 require 'library_name'
 </code></p>
 
@@ -367,46 +429,61 @@ require 'library_name'
 
 <p>Writing command about <strong>Gem</strong> :</p>
 
-<p><code>bash
-gem -v      #seeing the version of gem
+<p>``` bash</p>
+
+<pre><code>gem -v      #seeing the version of gem
 gem update --system  #provide to update your system
 gem list    #you can see all gem list
 gem list -r     #will see load to gem
 gem install pry     #provide to writing colorful in terminal.
 gem install pry --no-ri   # thanks to this we can install without documentation.
 gem uninstall package_name  #use for uninstall gem
-</code></p>
+</code></pre>
+
+<p>```</p>
 
 <p>If you use package ,before need to install the package, using this command</p>
 
-<p><code>
-gem install package_name
-</code></p>
+<p>``` ruby</p>
+
+<pre><code>gem install package_name
+</code></pre>
+
+<p>```</p>
 
 <p>when we install this gem, then we embeded in <em>currently_working_file.rb</em> like</p>
 
-<p><code>
-require 'package_name'
-</code></p>
+<p>``` ruby</p>
+
+<pre><code>require 'package_name'
+</code></pre>
+
+<p>```</p>
 
 <p><strong>If I use many gem, Do I install gem one by one? </strong></p>
 
 <p>Of course No!, instead of this we use  <em>Gemfile</em>, we write in file</p>
 
-<p><code>
-source ('http://ruby-gems.org')
+<p>``` ruby</p>
+
+<pre><code>source ('http://ruby-gems.org')
 gem 'package_name'
-</code></p>
+</code></pre>
+
+<p>```</p>
 
 <p>we write above command in Gemfile, we install automatically all gems.</p>
 
 <p><strong>Also</strong> If I create a ruby file, go to wanted directory and write below code, These code provided create ruby file in Desktop.</p>
 
-<p><code>
-gem install bundler
+<p>``` bash</p>
+
+<pre><code>gem install bundler
 cd Desktop          #for desktop path
 bundle gem package_name
-</code></p>
+</code></pre>
+
+<p>```</p>
 
 <p>For detail viewing <a href="http://bundler.io/">Bundler</a></p>
 
@@ -417,32 +494,43 @@ bundle gem package_name
 &ndash;<em>ARGV</em> is constant which hidden to arguments.
 -In documentation section writing <em>ri</em>  command, generally we use to search for method.</p>
 
-<p><code>
-ri Class#method
-</code></p>
+<p>``` ruby</p>
+
+<pre><code>ri Class#method
+</code></pre>
+
+<p>```</p>
 
 <h1>Input &ndash; Output processing</h1>
 
 <p>For output command write like</p>
 
-<p><code>ruby
-puts    # output with \n.
+<p>``` ruby</p>
+
+<pre><code>puts    # output with \n.
 print
 p       #when we use '.inspect', instead of *.inspect* we use *p*.
 printf
-</code></p>
+</code></pre>
+
+<p>```</p>
 
 <p>For input command write like</p>
 
-<p><code>ruby
-gets    #get input from user.
-</code></p>
+<p>``` ruby</p>
+
+<pre><code>gets    #get input from user.
+</code></pre>
+
+<p>```</p>
 
 <p>above instead of  <em>p</em> using  <em>.inspect</em></p>
 
-<p>```ruby
-puts &ldquo;ruby&rdquo;.inspect
-puts 3.inspect</p>
+<p>``` ruby</p>
+
+<pre><code>puts "ruby".inspect
+puts 3.inspect
+</code></pre>
 
 <p>```</p>
 
@@ -450,24 +538,20 @@ puts 3.inspect</p>
 
 <ul>
 <li><em>chomp</em> provide if the last character can exist &ldquo;\n&rdquo; symbol, cleaning the last characters.</li>
-<li><em>chom</em> provide to clean all last characters</li>
-</ul>
+<li><p><em>chom</em> provide to clean all last characters</p>
 
-
-<p>```</p>
-
-<pre><code>               Basic Object
-                    ||
-                  Object
-                    ||
-                  Numeric
-                    ||
-    Integer     float   Rational    Complex
-
-Fixnum  Bignum
+<pre><code>             Basic Object
+                  ||
+                Object
+                  ||
+                Numeric
+                  ||
+  Integer     float   Rational    Complex
 </code></pre>
 
-<p>```</p>
+<p>  Fixnum  Bignum</p></li>
+</ul>
+
 
 <p>If you generally showing the class, you can show like above.</p>
 
@@ -477,51 +561,66 @@ Fixnum  Bignum
 </ul>
 
 
-<p><code>ruby
-1.0e7       #10.000.000
+<p>``` ruby</p>
+
+<pre><code>1.0e7       #10.000.000
 3.methods       #for 3 number, bring all methods
 require 'yaml'          # added yaml .
 puts 2.methods.to_yaml
-</code></p>
+</code></pre>
+
+<p>```</p>
 
 <ul>
 <li><strong>&lt;=>(space ship)</strong> comparative operator.</li>
 </ul>
 
 
-<p>```ruby
-a &lt;=> b
+<p>``` ruby</p>
+
+<pre><code>a &lt;=&gt; b
 a &lt; b ; -1
-a > b ; 1
-a =b ; 0</p>
+a &gt; b ; 1
+a =b ; 0
+</code></pre>
 
 <p>```</p>
 
 <hr />
 
-<p><code>ruby
-a = 5 &amp;&amp; b = 10
+<p>``` ruby</p>
+
+<pre><code>a = 5 &amp;&amp; b = 10
 a &lt;=&gt; b             #-1
-</code></p>
+</code></pre>
+
+<p>```</p>
 
 <p>-times and upto methods</p>
 
-<p><code>ruby
-10.times do |i|
+<p>``` ruby</p>
+
+<pre><code>10.times do |i|
 ...
 end
-</code></p>
+</code></pre>
+
+<p>```</p>
 
 <p>or</p>
 
-<p><code>ruby
-10.times {|i| ...}
-</code></p>
+<p>``` ruby</p>
+
+<pre><code>10.times {|i| ...}
+</code></pre>
+
+<p>```</p>
 
 <p>thanks to this we write loop with <em>times</em>.</p>
 
-<p><code>bash
-irb(main):001:0&gt; 10.times do |i|
+<p>``` bash</p>
+
+<pre><code>irb(main):001:0&gt; 10.times do |i|
 irb(main):002:1* puts "ruby"+i.to_s
 irb(main):013:1&gt; end
 ruby0
@@ -535,15 +634,18 @@ ruby7
 ruby8
 ruby9
 =&gt;10
-</code></p>
+</code></pre>
+
+<p>```</p>
 
 <ul>
 <li>With <em>1.upto(10){&hellip;}</em> same use with <em>times</em></li>
 </ul>
 
 
-<p><code>bash
-irb(main):001:0&gt; 10.upto(10) {puts "ruby"}
+<p>``` bash</p>
+
+<pre><code>irb(main):001:0&gt; 10.upto(10) {puts "ruby"}
 ruby
 ruby
 ruby
@@ -555,14 +657,17 @@ ruby
 ruby
 ruby
 =&gt;1
-</code></p>
+</code></pre>
+
+<p>```</p>
 
 <p>or</p>
 
-<p>```bash
-irb(main):001:0> 1.upt0(10) do |i|
-irb(main):002:1* puts &ldquo;Ruby&rdquo;+i.to_s
-irb(main):013:1> end
+<p>``` bash</p>
+
+<pre><code>irb(main):001:0&gt; 1.upt0(10) do |i|
+irb(main):002:1* puts "Ruby"+i.to_s
+irb(main):013:1&gt; end
 Ruby1
 Ruby2
 Ruby3
@@ -573,7 +678,8 @@ Ruby7
 Ruby8
 Ruby9
 Ruby10
-=> 1</p>
+=&gt; 1
+</code></pre>
 
 <p>```</p>
 
@@ -582,43 +688,60 @@ Ruby10
 <ul>
 <li><p>When we combine the text, we can embed in string expressions.</p>
 
-<p>  ```
-  puts &ldquo;#{&lsquo;academic&rsquo;.capitalize} #{&lsquo;information&rsquo;.upcase}&rdquo;</p>
+<p>  ``` ruby
+      puts &ldquo;#{&lsquo;academic&rsquo;.capitalize} #{&lsquo;information&rsquo;.upcase}&rdquo;</p>
 
-<p>  =>  Academic INFORMATION
-  ```</p></li>
+<pre><code>  =&gt;  Academic INFORMATION
+</code></pre>
+
+<p>  ```</p></li>
 </ul>
 
 
 <p>-Also to support Turkish characters, you should use <em>Unicode-Utils</em> library.</p>
 
-<p><code>bash
-gem install unicode_utils
-</code></p>
+<p>``` bash</p>
+
+<pre><code>gem install unicode_utils
+</code></pre>
+
+<p>```</p>
 
 <p>install than, write in file,</p>
 
-<p><code>ruby
-require 'unicode_utils'
-</code></p>
+<p>``` ruby</p>
 
-<p><code>ruby
-UnicodeUtils.upcase("ruby")
+<pre><code>require 'unicode_utils'
+</code></pre>
+
+<p>```</p>
+
+<p>``` ruby</p>
+
+<pre><code>UnicodeUtils.upcase("ruby")
 =&gt; RUBY
-</code></p>
+</code></pre>
+
+<p>```</p>
 
 <p>&ndash;%q => use for single quotation</p>
 
-<p><code>ruby
-text = %q&lt;Hello&gt;
+<p>``` ruby</p>
+
+<pre><code>text = %q&lt;Hello&gt;
 =&gt; 'Hello'
-</code>
+</code></pre>
+
+<p>```
 &ndash;%Q => use for double quotation</p>
 
-<p><code>
-text=%Q{Hello}
-=&gt; "Hello"
-</code></p>
+<p>```
+text=%Q{Hello}</p>
+
+<pre><code>=&gt; "Hello"
+</code></pre>
+
+<p>```</p>
 
 <hr />
 
@@ -640,7 +763,7 @@ end} puts "My name #{name}""
 
 <hr />
 
-<p>```ruby
+<p>``` ruby
 name=&ldquo;Ruby&rdquo;
 surname=&ldquo;Rails&rdquo;
 text = &lt;&lt; ANYTHING
@@ -653,13 +776,13 @@ p text
 ```</p>
 
 <p>*
-<code>
+<code>ruby
 swapcase
 </code>
 this command translate from lower case to uppercase.</p>
 
 <p>*
-<code>
+<code>ruby
 puts text.split.inspect
 </code>
 Try above method.</p>
@@ -674,7 +797,7 @@ text.gsub  'm',  'a'        #translate all  from "m" to "a" .
 </ul>
 
 
-<p><code>
+<p><code>ruby
 .to_i
 </code></p>
 
@@ -683,7 +806,7 @@ text.gsub  'm',  'a'        #translate all  from "m" to "a" .
 </ul>
 
 
-<p><code>
+<p><code>ruby
 .to_s
 </code></p>
 
@@ -692,7 +815,7 @@ text.gsub  'm',  'a'        #translate all  from "m" to "a" .
 </ul>
 
 
-<p><code>
+<p><code>ruby
 .to_a
 </code></p>
 
@@ -701,29 +824,34 @@ text.gsub  'm',  'a'        #translate all  from "m" to "a" .
 </ul>
 
 
-<p><code>
+<p><code>ruby
 .to_h
 </code></p>
 
 <h2>Symbols</h2>
 
 <ul>
-<li><p>When we create symbol like,
-<code>
-:symbol_name
-</code></p></li>
-<li><p>If content of text is changing generally, using symbol can be difficult, but using for constant process can be easy.</p></li>
+<li>When we create symbol like,</li>
 </ul>
 
 
-<p><code>
+<p><code>ruby
+:symbol_name
+</code></p>
+
+<ul>
+<li>If content of text is changing generally, using symbol can be difficult, but using for constant process can be easy.</li>
+</ul>
+
+
+<p><code>ruby
 object_id
 </code>
 Try command</p>
 
 <p>-For Convert to Symbol</p>
 
-<p><code>
+<p><code>ruby
 .to_sym
 </code></p>
 
@@ -737,8 +865,9 @@ Try command</p>
 <p><code>
 / ... /
 </code>
-writing in this tag.
-<code>
+writing in this tag.</p>
+
+<p><code>
 {2, 5}      #this means min 2, max 5.
 /.{2,5}/ =~  # when we write "john", "john" between 2 and 5.
 </code></p>

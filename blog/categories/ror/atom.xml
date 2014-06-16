@@ -4,7 +4,7 @@
   <title><![CDATA[Category: RoR | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/ror/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-05-20T01:18:24+03:00</updated>
+  <updated>2014-06-16T13:11:37+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -102,7 +102,7 @@ validates_numericality_of :field_name, :greater_than_or_equal_to =&gt; 5
 
 <p>Associated object or objects must all be valid.</p>
 
-<p>```ruby
+<p>``` ruby
 :allow_nil => true</p>
 
 <h1>Skip valid if attribute is nil</h1>
@@ -115,7 +115,7 @@ validates_numericality_of :field_name, :greater_than_or_equal_to =&gt; 5
 
 <p>Example of Validations</p>
 
-<p><code>ruby    
+<p><code>ruby
 validates_presence_of :user_name
 validates_length_of :user_name, :maximum =&gt; 50
 validates_uniqueness_of :user_name
@@ -123,7 +123,7 @@ validates_uniqueness_of :user_name
 
 <p>When we use like above, We diverge to DRY, instead of above</p>
 
-<p>```ruby
+<p>``` ruby
 validates :user_name, :presence => true</p>
 
 <pre><code>                 :length =&gt; {:maximum =&gt; 50}

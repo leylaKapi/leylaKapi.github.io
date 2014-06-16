@@ -7,7 +7,7 @@
 	<meta name="author" content="Leyla Kapi">
 
 	
-	<meta name="description" content="How to create .haml file in middleman? Firstly, you should go middleman and you need to install middleman gem install middleman Fine, you are &hellip;">
+	<meta name="description" content="How to create .haml file in middleman? Firstly, you should go middleman and you need to install middleman 1 gem install middleman Fine, you are &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -87,34 +87,56 @@
 
 <p>Firstly, you should go <a href="" title="http://middlemanapp.com/">middleman</a> and you need to <strong>install middleman</strong></p>
 
-<pre><code>gem install middleman
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>   gem install middleman
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Fine, you are installed middleman, now we start to create project in middleman</p>
 
-<pre><code>middleman init project_name
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>   middleman init project_name
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Then this command give you directory as shown below :</p>
 
-<pre><code> project_name/
-    Gemfile
-    Gemfile.lock
-    config.rb
-    source
-        .gitignore
-        images
-            background.png
-            middleman.png
-        javascript
-            all.js
-        stylesheets
-            all.css
-            normalize.css
-        layouts
-            layout.erb
-        index.html.erb
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'> project_name/
+</span><span class='line'>    Gemfile
+</span><span class='line'>    Gemfile.lock
+</span><span class='line'>    config.rb
+</span><span class='line'>    <span class="nb">source</span>
+</span><span class='line'>        .gitignore
+</span><span class='line'>        images
+</span><span class='line'>            background.png
+</span><span class='line'>            middleman.png
+</span><span class='line'>        javascript
+</span><span class='line'>            all.js
+</span><span class='line'>        stylesheets
+</span><span class='line'>            all.css
+</span><span class='line'>            normalize.css
+</span><span class='line'>        layouts
+</span><span class='line'>            layout.erb
+</span><span class='line'>        index.html.erb
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>If you can see this directories, you should open project with your IDE.</p>
 
@@ -137,22 +159,28 @@
 
 <p>Middleman appear to read HTML by default . Therefore, you should go to</p>
 
-<pre><code>   /config.rb
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'> /config.rb
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>in file write:</p>
 
-<pre><code>    set :haml, :format =&gt; :html5
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'>set :haml, :format =&gt; :html5
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Now program convert to html5 from haml.</p>
 
 <ul>
-<li><p>Add a</p>
-
-<pre><code>  layout.haml
-</code></pre></li>
+<li>Add a</li>
 </ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'> layout.haml
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>file to the</p>
@@ -162,35 +190,49 @@
 
 <p>directory. In this file we write</p>
 
-<pre><code>    !!!
-    %html{ :lang =&gt; "en"}
-        %head
-            %meta{:charset =&gt; "utf-8"}
-            %title= data.page.title
-            = stylesheet_link_tag "your_css_file.css"
-            = javascript_include_tag "your_javascript_file.js"
-        %body
-            = yield
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nn">!!!</span>
+</span><span class='line'><span class="nt">%html</span><span class="p">{</span> <span class="ss">:lang</span> <span class="o">=&gt;</span> <span class="s2">&quot;en&quot;</span><span class="p">}</span>
+</span><span class='line'>    <span class="nt">%head</span>
+</span><span class='line'>        <span class="nt">%meta</span><span class="p">{</span><span class="ss">:charset</span> <span class="o">=&gt;</span> <span class="s2">&quot;utf-8&quot;</span><span class="p">}</span>
+</span><span class='line'>        <span class="nt">%title</span><span class="p">=</span> <span class="n">data</span><span class="o">.</span><span class="n">page</span><span class="o">.</span><span class="n">title</span>
+</span><span class='line'>        <span class="p">=</span> <span class="n">stylesheet_link_tag</span> <span class="s2">&quot;your_css_file.css&quot;</span>
+</span><span class='line'>        <span class="p">=</span> <span class="n">javascript_include_tag</span> <span class="s2">&quot;your_javascript_file.js&quot;</span>
+</span><span class='line'>    <span class="nt">%body</span>
+</span><span class='line'>        <span class="p">=</span> <span class="k">yield</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Now we must create</p>
 
-<pre><code>        index.html.haml
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'>index.html.haml
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>in</p>
 
-<pre><code>            source/
+<pre><code>            `source/`
 </code></pre>
 
 <p>directory.</p>
 
-<pre><code>        %h1 Welcome Middleman project
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nt">%h1</span> Welcome Middleman project
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>write in</p>
 
-<pre><code>            source/index.html.haml
+<pre><code>           `source/index.html.haml`
 </code></pre>
 
 <p>files.</p>
