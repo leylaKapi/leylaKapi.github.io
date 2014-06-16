@@ -81,7 +81,7 @@ methods. Like:
 - If you want to change from array to hash, you should use
 
 ``` ruby
-.to_h
+    .to_h
 ```
 
 

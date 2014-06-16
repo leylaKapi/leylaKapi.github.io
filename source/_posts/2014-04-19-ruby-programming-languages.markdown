@@ -49,18 +49,18 @@ The aim is, When we coding a programming, coding should provide to express simpl
 ## Irb ve Repl Functions
 
 ``` bash
-irb
-irb(main):001:0> 2+2
-=> 4
-exit
-irb --simple -prompt
->> 12.class
-=> Fixnum
->> exit
-irb(main):003:0> 2*9/3+7
-=> 13
-irb(main):004:0> _ * 3
-=>39
+    irb
+    irb(main):001:0> 2+2
+    => 4
+    exit
+    irb --simple -prompt
+    >> 12.class
+    => Fixnum
+    >> exit
+    irb(main):003:0> 2*9/3+7
+    => 13
+    irb(main):004:0> _ * 3
+    =>39
 ```
 
 Acoording to above *irb*, opened ruby terminal; *exit* exit to ruby terminal. In addition *irb --simple -prompt* this command is provide to seeming regular to terminal.Strikes the eye another notifications is that
@@ -70,14 +70,14 @@ Acoording to above *irb*, opened ruby terminal; *exit* exit to ruby terminal. In
 this sign provide to take pre-functions and then make process with this functions.
 
 ``` ruby
-system('clear')
+    system('clear')
 ```
 
 with this command provide to clear your terminal.
 
 ``` bash
-irb(main):008:0> self
-=> main
+    irb(main):008:0> self
+    => main
 ```
 
 this command show the writing on main class .
@@ -85,13 +85,13 @@ this command show the writing on main class .
 **Also**
 
 ``` bash
-irb(main):010:0> a="Ruby"
-=> "Ruby"
-irb(main):011:0> a.reverse
-=> "ybuR"
-irb(main):012:0> "I love
-irb(main):013:0" ruby"
-=>  "I love\nruby
+    irb(main):010:0> a="Ruby"
+    => "Ruby"
+    irb(main):011:0> a.reverse
+    => "ybuR"
+    irb(main):012:0> "I love
+    irb(main):013:0" ruby"
+    =>  "I love\nruby
 ```
 
 
@@ -105,20 +105,20 @@ Seeming to above code *.reverse* method which entered code, provide to writing r
 
 
 ``` bash
-irb(main):001:0 3 > 5
-=> false
-irb(main):002:0 3 < 5
-=> true
-irb(main):003:0 3 == 5
-=> false
-irb(main):004:0 !13
-=> false
-irb(main):005:0 true.class
-=> TrueClass
-irb(main):006:0 false.class
-=> FalseClass
-irb(main):007:0 nil.class
-=> NilClass
+    irb(main):001:0 3 > 5
+    => false
+    irb(main):002:0 3 < 5
+    => true
+    irb(main):003:0 3 == 5
+    => false
+    irb(main):004:0 !13
+    => false
+    irb(main):005:0 true.class
+    => TrueClass
+    irb(main):006:0 false.class
+    => FalseClass
+    irb(main):007:0 nil.class
+    => NilClass
 ```
 
 We mention to everthing an object and derivation from a class in Ruby, strike to eye above, *True*, *false* , *nil* derivation a class.
@@ -132,45 +132,45 @@ In ruby, Not exist relevant to logical expression like *Boolean* or *Bool* class
 
 ``` ruby
     def method_name
-...
-end
+    ...
+    end
 ```
 
 If method get a parameter like :
 
 ``` ruby
     def method_name(param1)
-...
-end
+    ...
+    end
 ```
 
-```
-def method_name(param1, param2)
-...
-end
+``` ruby
+    def method_name(param1, param2)
+    ...
+    end
 ```
 
 **Also** Not required to using parenthesis like :
 
-```
-def method_name param1, param2, ...
-...
-end
+``` ruby
+    def method_name param1, param2, ...
+    ...
+    end
 ```
 
 ***
 
 ``` ruby
-def collection number1, number2
-    number1 + number2
-end
-puts "Result of collection: ", collection(3,5)
+    def collection number1, number2
+        number1 + number2
+    end
+    puts "Result of collection: ", collection(3,5)
 ```
 
 The above codes writing in *.rb* file and then save it, then open your terminal , writing path of files in terminal
 
-```
-ruby project_name
+``` bash
+    ruby project_name
 ```
 
 write above command in terminal.
@@ -181,31 +181,31 @@ In Above code, defining *collect method* for collection two number and make coll
 - Method name, ending with **?, ! or =** ,this characters have special meaning.
 
 ``` ruby
-questioning?    #return true or false
+    questioning?    #return true or false
 ```
 
 ``` ruby
-changed_value = ...   #changed value of anything value, assignment operator.
+    changed_value = ...   #changed value of anything value, assignment operator.
 ```
 
 ``` ruby
-danger!    #changed original text.
+    danger!    #changed original text.
 ```
 
 ***
 
 ``` bash
-irb(main):001:0> a="Ruby"
-=> "Ruby"
-irb(main):002:0> a.reverse
-=> "ybuR"
-irb(main):003:0> a
-=> "Ruby"
->> exit
-irb(main):004:0> a.reverse!
-=>  "ybuR"
-irb(main):005:0> a
-=>  "ybuR"
+    irb(main):001:0> a="Ruby"
+    => "Ruby"
+    irb(main):002:0> a.reverse
+    => "ybuR"
+    irb(main):003:0> a
+    => "Ruby"
+    >> exit
+    irb(main):004:0> a.reverse!
+    =>  "ybuR"
+    irb(main):005:0> a
+    =>  "ybuR"
 ```
 
 In above example entering a value and using **!** character changed original value.
@@ -215,50 +215,50 @@ In above example entering a value and using **!** character changed original val
 - class, module and constant name starts with capital letter.
 
 ``` ruby
-class ClassName
-...
-end
-module ModuleName
-...
-end
-PI_CONSTANT = 3,14156
+    class ClassName
+    ...
+    end
+    module ModuleName
+    ...
+    end
+    PI_CONSTANT = 3,14156
 ```
 must be defined like above. Also you know constants doesn't change, if you want to change can be bug.
 
 ``` bash
-irb(main):001:0> PI_CONSTANT = 3,14156
-=> [3,14156]
-irb(main):002:0> PI_CONSTANT  = 2
-(irb):47: warning: already initialized constant PI_CONSTANT
-(irb):46: warning: previous definition of PI_CONSTANT  was here
-=> 2
+    irb(main):001:0> PI_CONSTANT = 3,14156
+    => [3,14156]
+    irb(main):002:0> PI_CONSTANT  = 2
+    (irb):47: warning: already initialized constant PI_CONSTANT
+    (irb):46: warning: previous definition of PI_CONSTANT  was here
+    => 2
 ```
 
 - **local variables** starting with lover letter or '_' , like :
 
 
 ``` ruby
-local_variable = "like this."
-plate = 20
+    local_variable = "like this."
+    plate = 20
 ```
 
 
 - **Global variables**  starting with '$', like :
 
 
-```
-$global_variables
+``` ruby
+    $global_variables
 ```
 
 
 - **instance variables** starting with '@' and class variables starting with '@@'. like :
 
 ``` ruby
-@instance_variables
+    @instance_variables
 ```
 
 ``` ruby
-@@class_variables
+    @@class_variables
 ```
 
 
@@ -266,8 +266,8 @@ $global_variables
 
 
 ``` ruby
-ruby -e "puts 'Hello'"
-=> Hello
+    ruby -e "puts 'Hello'"
+    => Hello
 ```
 
 But the above method is not a preferred method commonly.
@@ -275,11 +275,11 @@ But the above method is not a preferred method commonly.
 ***
 
 ``` ruby
-def changed(value)
-    variables = value
-end
-puts "Value of variables: #{changed(20)}"
-=> Value of variables: 20
+    def changed(value)
+        variables = value
+    end
+    puts "Value of variables: #{changed(20)}"
+    => Value of variables: 20
 ```
 
 
@@ -292,12 +292,12 @@ puts "Value of variables: #{changed(20)}"
 If we want to embeded in  **external_file.rb** files on **currently_working_file.rb** files, we should use *load* comand. like :
 
 ``` ruby
-external_file.rb
+    external_file.rb
 ```
 
-```
-currently_working_file.rb
-load 'external_file.rb'
+``` bash
+    currently_working_file.rb
+    load 'external_file.rb'
 ```
 
 In Rails, we can generally use *autoload* command. *autoload* is loading automatically file.
@@ -315,26 +315,26 @@ You can see to use all path and method with **ENV**
 Writing command about **Gem** :
 
 ``` bash
-gem -v   	#seeing the version of gem
-gem update --system  #provide to update your system
-gem list  	#you can see all gem list
-gem list -r  	#will see load to gem
-gem install pry  	#provide to writing colorful in terminal.
-gem install pry --no-ri   # thanks to this we can install without documentation.
-gem uninstall package_name 	#use for uninstall gem
+    gem -v   	#seeing the version of gem
+    gem update --system  #provide to update your system
+    gem list  	#you can see all gem list
+    gem list -r  	#will see load to gem
+    gem install pry  	#provide to writing colorful in terminal.
+    gem install pry --no-ri   # thanks to this we can install without documentation.
+    gem uninstall package_name 	#use for uninstall gem
 ```
 
 
 If you use package ,before need to install the package, using this command
 
 ``` ruby
-gem install package_name
+    gem install package_name
 ```
 
 when we install this gem, then we embeded in *currently_working_file.rb* like
 
 ``` ruby
-require 'package_name'
+    require 'package_name'
 ```
 
 
@@ -343,18 +343,18 @@ require 'package_name'
 Of course No!, instead of this we use  *Gemfile*, we write in file
 
 ``` ruby
-source ('http://ruby-gems.org')
-gem 'package_name'
+    source ('http://ruby-gems.org')
+    gem 'package_name'
 ```
 
 we write above command in Gemfile, we install automatically all gems.
 
 **Also** If I create a ruby file, go to wanted directory and write below code, These code provided create ruby file in Desktop.
 
-``` ruby
-gem install bundler
-cd Desktop   		#for desktop path
-bundle gem package_name
+``` bash
+    gem install bundler
+    cd Desktop   		#for desktop path
+    bundle gem package_name
 ```
 
 
@@ -368,7 +368,7 @@ Opened file, after we make to do, push to package to [RubyGems](http://rubygems.
 -In documentation section writing *ri*  command, generally we use to search for method.
 
 ``` ruby
-ri Class#method
+    ri Class#method
 ```
 
 
@@ -377,23 +377,23 @@ ri Class#method
 For output command write like
 
 ``` ruby
-puts  	# output with \n.
-print
-p 		#when we use '.inspect', instead of *.inspect* we use *p*.
-printf
+    puts  	# output with \n.
+    print
+    p 		#when we use '.inspect', instead of *.inspect* we use *p*.
+    printf
 ```
 
 For input command write like
 
 ``` ruby
-gets  	#get input from user.
+    gets  	#get input from user.
 ```
 
 above instead of  *p* using  *.inspect*
 
 ``` ruby
-puts "ruby".inspect
-puts 3.inspect
+    puts "ruby".inspect
+    puts 3.inspect
 ```
 
 *.inspect* method provide to take hid state of method. This means that if I using *.inspect* instead of this using *p*.
@@ -402,7 +402,7 @@ puts 3.inspect
 - *chom* provide to clean all last characters
 
 
-```
+
      		       Basic Object
       			        ||
       			      Object
@@ -413,7 +413,6 @@ puts 3.inspect
 
 	Fixnum  Bignum
 
-```
 
 
 If you generally showing the class, you can show like above.
@@ -423,60 +422,60 @@ If you generally showing the class, you can show like above.
 
 
 ``` ruby
-1.0e7  		#10.000.000
-3.methods   	#for 3 number, bring all methods
-require 'yaml'			# added yaml .
-puts 2.methods.to_yaml
+    1.0e7  		#10.000.000
+    3.methods   	#for 3 number, bring all methods
+    require 'yaml'			# added yaml .
+    puts 2.methods.to_yaml
 ```
 
 - **<=>(space ship)** comparative operator.
 
 ``` ruby
-a <=> b
-a < b ; -1
-a > b ; 1
-a =b ; 0
+    a <=> b
+    a < b ; -1
+    a > b ; 1
+    a =b ; 0
 ```
 
 
 ***
 
 ``` ruby
-a = 5 && b = 10
-a <=> b 			#-1
+    a = 5 && b = 10
+    a <=> b 			#-1
 ```
 
 -times and upto methods
 
 ``` ruby
-10.times do |i|
-...
-end
+    10.times do |i|
+    ...
+    end
 ```
 
 or
 
 ``` ruby
-10.times {|i| ...}
+    10.times {|i| ...}
 ```
 
 thanks to this we write loop with *times*.
 
 ``` bash
-irb(main):001:0> 10.times do |i|
-irb(main):002:1* puts "ruby"+i.to_s
-irb(main):013:1> end
-ruby0
-ruby1
-ruby2
-ruby3
-ruby4
-ruby5
-ruby6
-ruby7
-ruby8
-ruby9
-=>10
+    irb(main):001:0> 10.times do |i|
+    irb(main):002:1* puts "ruby"+i.to_s
+    irb(main):013:1> end
+    ruby0
+    ruby1
+    ruby2
+    ruby3
+    ruby4
+    ruby5
+    ruby6
+    ruby7
+    ruby8
+    ruby9
+    =>10
 ```
 
 
@@ -484,37 +483,37 @@ ruby9
 - With *1.upto(10){...}* same use with *times*
 
 ``` bash
-irb(main):001:0> 10.upto(10) {puts "ruby"}
-ruby
-ruby
-ruby
-ruby
-ruby
-ruby
-ruby
-ruby
-ruby
-ruby
-=>1
+    irb(main):001:0> 10.upto(10) {puts "ruby"}
+    ruby
+    ruby
+    ruby
+    ruby
+    ruby
+    ruby
+    ruby
+    ruby
+    ruby
+    ruby
+    =>1
 ```
 
 or
 
 ``` bash
-irb(main):001:0> 1.upt0(10) do |i|
-irb(main):002:1* puts "Ruby"+i.to_s
-irb(main):013:1> end
-Ruby1
-Ruby2
-Ruby3
-Ruby4
-Ruby5
-Ruby6
-Ruby7
-Ruby8
-Ruby9
-Ruby10
-=> 1
+    irb(main):001:0> 1.upt0(10) do |i|
+    irb(main):002:1* puts "Ruby"+i.to_s
+    irb(main):013:1> end
+    Ruby1
+    Ruby2
+    Ruby3
+    Ruby4
+    Ruby5
+    Ruby6
+    Ruby7
+    Ruby8
+    Ruby9
+    Ruby10
+    => 1
 ```
 
 ##Text
@@ -522,10 +521,10 @@ Ruby10
 - When we combine the text, we can embed in string expressions.
 
 
-    ```
-    puts "#{'academic'.capitalize} #{'information'.upcase}"
+    ``` ruby
+        puts "#{'academic'.capitalize} #{'information'.upcase}"
 
-    =>	Academic INFORMATION
+        =>	Academic INFORMATION
     ```
 
 
@@ -533,33 +532,33 @@ Ruby10
 
 
 ``` bash
-gem install unicode_utils
+    gem install unicode_utils
 ```
 
 install than, write in file,
 
 ``` ruby
-require 'unicode_utils'
+    require 'unicode_utils'
 ```
 
 
 ``` ruby
-UnicodeUtils.upcase("ruby")
-=> RUBY
+    UnicodeUtils.upcase("ruby")
+    => RUBY
 ```
 
 
 -%q => use for single quotation
 
 ``` ruby
-text = %q<Hello>
-=> 'Hello'
+    text = %q<Hello>
+    => 'Hello'
 ```
 -%Q => use for double quotation
 
 ```
 text=%Q{Hello}
-=> "Hello"
+    => "Hello"
 ```
 
 ***
@@ -590,13 +589,13 @@ p text
 ```
 
 *
-```
+``` ruby
 swapcase
 ```
 this command translate from lower case to uppercase.
 
 *
-```
+``` ruby
 puts text.split.inspect
 ```
 Try above method.
@@ -659,28 +658,28 @@ Try command
 
 - Regular expression
 
-``` regex
+```
 / ... /
 ```
 writing in this tag.
 
-``` regex
+```
 {2, 5} 		#this means min 2, max 5.
 /.{2,5}/ =~  # when we write "john", "john" between 2 and 5.
 ```
 
-``` regex
+```
 ^a$b => starting with a, ending with b.
 (+) => how many
 [^0-9] if not number write it '^' this means that 'not'.
 ```
 
-``` regex
+```
 [A-Za-z0-9_] = \w   	#word character
 [Â-Za-z0-9_] = \W 		#not a word character
 ```
 
-``` regex
+```
 exp1 = /.*\.$/  		#this means ending with '.'
 exp2 = Regexp.new('^[a-z]+$')      #this means that starting with a ending with z.
 exp3 = %r{^[a-z]+$} 		#starting with a but not ending with z.

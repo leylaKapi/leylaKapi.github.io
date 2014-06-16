@@ -62,7 +62,7 @@ then open `style.css.sass` file and write style code
 
 then open `application.coffee` file, and
 
-``` coffee
+``` coffeescript
     $(document).ready ->
       $(".archive_tool ul").hide()
       $(".archive_tool > li").click ->

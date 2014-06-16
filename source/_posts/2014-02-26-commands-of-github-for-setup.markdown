@@ -92,7 +92,7 @@ Note: `master` are name of branch on github, if you use another branch or  don't
 - Now, you are in name_of_newbranch , but you want to return or switch another branch therefore
  
 ``` bash
-git checkout another_branch
+    git checkout another_branch
 ```
  
  

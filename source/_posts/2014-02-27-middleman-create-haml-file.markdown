@@ -66,7 +66,7 @@ Now, Projects was removed from unused files.
 
 Middleman appear to read HTML by default . Therefore, you should go to
 
-``` directory
+``` bash
  /config.rb
 ```
 
@@ -107,7 +107,7 @@ directory. In this file we write
 Now we must create
 
 ``` haml
-index.html.haml
+    index.html.haml
 ```
 
 in
@@ -116,7 +116,7 @@ in
 directory.
 
 ``` haml
- %h1 Welcome Middleman project
+    %h1 Welcome Middleman project
 ```
 
 write in

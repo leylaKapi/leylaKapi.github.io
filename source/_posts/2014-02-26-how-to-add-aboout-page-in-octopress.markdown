@@ -20,7 +20,7 @@ Created new page for about and we linked to `About`, How?
 
 - We open
 
-``` directory
+``` bash
     /source/_includes/custom/navigation.html
 ```
 

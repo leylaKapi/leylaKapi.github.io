@@ -21,32 +21,32 @@ Now recreate a local repo for octopress
 -Clone your blog to the new machine
 
 ``` bash
-git clone -b source git@github.com:username/username.github.io.git octopress
+    git clone -b source git@github.com:username/username.github.io.git octopress
 ```
 
 Then clone the master branch to the _deploy
 
 ``` bash
-cd octopress
-git clone git@github.com:username/username.github.io.git _deploy
+    cd octopress
+    git clone git@github.com:username/username.github.io.git _deploy
 ```
 
 then run *rake*
 
 ``` bash
-gem install bundler
-rbenv rehash
-bundle install
-rake setup_github_pages
+    gem install bundler
+    rbenv rehash
+    bundle install
+    rake setup_github_pages
 ```
 
 Then we ask to you repo url like
 
-```
-Enter the read/write url for your repository
-(For example, 'git@github.com:your_username/your_username.github.io.git)
-           or 'https://github.com/your_username/your_username.github.io')
-Repository url:
+``` bash
+    Enter the read/write url for your repository
+    (For example, 'git@github.com:your_username/your_username.github.io.git)
+               or 'https://github.com/your_username/your_username.github.io')
+    Repository url:
 ```
 
 
@@ -55,24 +55,24 @@ Write your like this *Repository url: git@github.com:username/username.github.io
 Then you should write these command :
 
 ``` bash
-rake generate
-git add .
-git commit -m "Write comment here"
-git push origin source
-rake deploy
+    rake generate
+    git add .
+    git commit -m "Write comment here"
+    git push origin source
+    rake deploy
 ```
 then you can write
 
 ``` bash
-cd octopress
-git pull origin source #get another computer changing
-cd ./_deploy
-git pull origin master
+    cd octopress
+    git pull origin source #get another computer changing
+    cd ./_deploy
+    git pull origin master
 ```
 then you can write
 
 ``` bash
-rake deploy
+    rake deploy
 ```
 
 That's all :)
