@@ -570,66 +570,66 @@ irb(main):002:0> ?a
 
 - Everything can embed in texts.
 
-```
-puts "Everything can embed in text #{def name
-$name.capitalize + " "+$surname.upcase
-end} puts "My name #{name}""
+``` ruby
+    puts "Everything can embed in text #{def name
+    $name.capitalize + " "+$surname.upcase
+    end} puts "My name #{name}""
 ```
 
 ***
 
 ``` ruby
-name="Ruby"
-surname="Rails"
-text = << ANYTHING
-I'm long text
-#{$name} #{$surname}
-ANYTHING
-p text
+    name="Ruby"
+    surname="Rails"
+    text = << ANYTHING
+    I'm long text
+    #{$name} #{$surname}
+    ANYTHING
+    p text
 ```
 
 *
 ``` ruby
-swapcase
+    swapcase
 ```
 this command translate from lower case to uppercase.
 
 *
 ``` ruby
-puts text.split.inspect
+    puts text.split.inspect
 ```
 Try above method.
 
 
 
 ``` ruby
-text.sub 'm', 'a'  	#translate "m=>a"
-text.gsub  'm',  'a' 		#translate all  from "m" to "a" .
+    text.sub 'm', 'a'  	#translate "m=>a"
+    text.gsub  'm',  'a' 		#translate all  from "m" to "a" .
 ```
 
 
 - For Convert to Integer
 
 ``` ruby
-.to_i
+    .to_i
 ```
 
 - For Convert to String
 
 ``` ruby
-.to_s
+    .to_s
 ```
 
 - For Convert to Array
 
 ``` ruby
-.to_a
+    .to_a
 ```
 
 - For Convert to Hash
 
 ``` ruby
-.to_h
+    .to_h
 ```
 
 ## Symbols
@@ -637,20 +637,20 @@ text.gsub  'm',  'a' 		#translate all  from "m" to "a" .
 - When we create symbol like,
 
 ``` ruby
-:symbol_name
+    :symbol_name
 ```
 
 - If content of text is changing generally, using symbol can be difficult, but using for constant process can be easy.
 
 ``` ruby
-object_id
+    object_id
 ```
 Try command
 
 -For Convert to Symbol
 
 ``` ruby
-.to_sym
+    .to_sym
 ```
 
 
@@ -659,28 +659,28 @@ Try command
 - Regular expression
 
 ```
-/ ... /
+    / ... /
 ```
 writing in this tag.
 
 ```
-{2, 5} 		#this means min 2, max 5.
-/.{2,5}/ =~  # when we write "john", "john" between 2 and 5.
+    {2, 5} 		#this means min 2, max 5.
+    /.{2,5}/ =~  # when we write "john", "john" between 2 and 5.
 ```
 
 ```
-^a$b => starting with a, ending with b.
-(+) => how many
-[^0-9] if not number write it '^' this means that 'not'.
+    ^a$b => starting with a, ending with b.
+    (+) => how many
+    [^0-9] if not number write it '^' this means that 'not'.
 ```
 
 ```
-[A-Za-z0-9_] = \w   	#word character
-[Â-Za-z0-9_] = \W 		#not a word character
+    [A-Za-z0-9_] = \w   	#word character
+    [Â-Za-z0-9_] = \W 		#not a word character
 ```
 
 ```
-exp1 = /.*\.$/  		#this means ending with '.'
-exp2 = Regexp.new('^[a-z]+$')      #this means that starting with a ending with z.
-exp3 = %r{^[a-z]+$} 		#starting with a but not ending with z.
+    exp1 = /.*\.$/  		#this means ending with '.'
+    exp2 = Regexp.new('^[a-z]+$')      #this means that starting with a ending with z.
+    exp3 = %r{^[a-z]+$} 		#starting with a but not ending with z.
 ```
