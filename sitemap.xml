@@ -100,6 +100,12 @@
     </url>
     <url>
         <loc>
+            http://leylaKapi.github.io/blog/2014/05/20/how-can-i-solve-yaml-exception-reading-bug-in-octopress/
+        </loc>
+        <lastmod>2014-06-17T17:30:12+03:00</lastmod>
+    </url>
+    <url>
+        <loc>
             http://leylaKapi.github.io/blog/2014/06/17/how-to-deploy-your-project-to-heroku/
         </loc>
         <lastmod>2014-06-17T17:10:31+03:00</lastmod>
@@ -110,11 +116,11 @@
     </url>
     <url>
         <loc>http://leylaKapi.github.io/blog/archives/</loc>
-        <lastmod>2014-06-17T17:10:31+03:00</lastmod>
+        <lastmod>2014-06-17T17:30:12+03:00</lastmod>
     </url>
     <url>
         <loc>http://leylaKapi.github.io/</loc>
-        <lastmod>2014-06-17T17:10:31+03:00</lastmod>
+        <lastmod>2014-06-17T17:30:12+03:00</lastmod>
     </url>
     <url>
         <loc>http://leylaKapi.github.io/robots.txt</loc>
