@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ruby | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-06-16T13:11:37+03:00</updated>
+  <updated>2014-06-17T17:11:36+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -878,78 +878,103 @@ irb(main):002:0&gt; ?a
 </ul>
 
 
-<p><code>
-puts "Everything can embed in text #{def name
+<p>``` ruby</p>
+
+<pre><code>puts "Everything can embed in text #{def name
 $name.capitalize + " "+$surname.upcase
 end} puts "My name #{name}""
-</code></p>
+</code></pre>
+
+<p>```</p>
 
 <hr />
 
-<p>``` ruby
-name=&ldquo;Ruby&rdquo;
-surname=&ldquo;Rails&rdquo;
+<p>``` ruby</p>
+
+<pre><code>name="Ruby"
+surname="Rails"
 text = &lt;&lt; ANYTHING
-I&rsquo;m long text</p>
-
-<h1>{$name} #{$surname}</h1>
-
-<p>ANYTHING
+I'm long text
+#{$name} #{$surname}
+ANYTHING
 p text
-```</p>
+</code></pre>
+
+<p>```</p>
 
 <p>*
-<code>ruby
-swapcase
-</code>
+``` ruby</p>
+
+<pre><code>swapcase
+</code></pre>
+
+<p>```
 this command translate from lower case to uppercase.</p>
 
 <p>*
-<code>ruby
-puts text.split.inspect
-</code>
+``` ruby</p>
+
+<pre><code>puts text.split.inspect
+</code></pre>
+
+<p>```
 Try above method.</p>
 
-<p><code>ruby
-text.sub 'm', 'a'   #translate "m=&gt;a"
+<p>``` ruby</p>
+
+<pre><code>text.sub 'm', 'a'   #translate "m=&gt;a"
 text.gsub  'm',  'a'        #translate all  from "m" to "a" .
-</code></p>
+</code></pre>
+
+<p>```</p>
 
 <ul>
 <li>For Convert to Integer</li>
 </ul>
 
 
-<p><code>ruby
-.to_i
-</code></p>
+<p>``` ruby</p>
+
+<pre><code>.to_i
+</code></pre>
+
+<p>```</p>
 
 <ul>
 <li>For Convert to String</li>
 </ul>
 
 
-<p><code>ruby
-.to_s
-</code></p>
+<p>``` ruby</p>
+
+<pre><code>.to_s
+</code></pre>
+
+<p>```</p>
 
 <ul>
 <li>For Convert to Array</li>
 </ul>
 
 
-<p><code>ruby
-.to_a
-</code></p>
+<p>``` ruby</p>
+
+<pre><code>.to_a
+</code></pre>
+
+<p>```</p>
 
 <ul>
 <li>For Convert to Hash</li>
 </ul>
 
 
-<p><code>ruby
-.to_h
-</code></p>
+<p>``` ruby</p>
+
+<pre><code>.to_h
+</code></pre>
+
+<p>```</p>
 
 <h2>Symbols</h2>
 
@@ -958,25 +983,34 @@ text.gsub  'm',  'a'        #translate all  from "m" to "a" .
 </ul>
 
 
-<p><code>ruby
-:symbol_name
-</code></p>
+<p>``` ruby</p>
+
+<pre><code>:symbol_name
+</code></pre>
+
+<p>```</p>
 
 <ul>
 <li>If content of text is changing generally, using symbol can be difficult, but using for constant process can be easy.</li>
 </ul>
 
 
-<p><code>ruby
-object_id
-</code>
+<p>``` ruby</p>
+
+<pre><code>object_id
+</code></pre>
+
+<p>```
 Try command</p>
 
 <p>-For Convert to Symbol</p>
 
-<p><code>ruby
-.to_sym
-</code></p>
+<p>``` ruby</p>
+
+<pre><code>.to_sym
+</code></pre>
+
+<p>```</p>
 
 <h2>Regular expression</h2>
 
@@ -985,32 +1019,47 @@ Try command</p>
 </ul>
 
 
-<p><code>
-/ ... /
-</code>
+<p>```</p>
+
+<pre><code>/ ... /
+</code></pre>
+
+<p>```
 writing in this tag.</p>
 
-<p><code>
-{2, 5}      #this means min 2, max 5.
-/.{2,5}/ =~  # when we write "john", "john" between 2 and 5.
-</code></p>
+<p>```</p>
 
-<p><code>
-^a$b =&gt; starting with a, ending with b.
+<pre><code>{2, 5}      #this means min 2, max 5.
+/.{2,5}/ =~  # when we write "john", "john" between 2 and 5.
+</code></pre>
+
+<p>```</p>
+
+<p>```</p>
+
+<pre><code>^a$b =&gt; starting with a, ending with b.
 (+) =&gt; how many
 [^0-9] if not number write it '^' this means that 'not'.
-</code></p>
+</code></pre>
 
-<p><code>
-[A-Za-z0-9_] = \w       #word character
+<p>```</p>
+
+<p>```</p>
+
+<pre><code>[A-Za-z0-9_] = \w       #word character
 [Â-Za-z0-9_] = \W      #not a word character
-</code></p>
+</code></pre>
 
-<p><code>
-exp1 = /.*\.$/          #this means ending with '.'
+<p>```</p>
+
+<p>```</p>
+
+<pre><code>exp1 = /.*\.$/          #this means ending with '.'
 exp2 = Regexp.new('^[a-z]+$')      #this means that starting with a ending with z.
 exp3 = %r{^[a-z]+$}         #starting with a but not ending with z.
-</code></p>
+</code></pre>
+
+<p>```</p>
 ]]></content>
   </entry>
   

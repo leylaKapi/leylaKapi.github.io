@@ -4,7 +4,7 @@
   <title><![CDATA[Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-06-16T13:11:37+03:00</updated>
+  <updated>2014-06-17T17:11:36+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -12,6 +12,129 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[How to deploy your project to Heroku ?]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/06/17/how-to-deploy-your-project-to-heroku/"/>
+    <updated>2014-06-17T16:10:38+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/06/17/how-to-deploy-your-project-to-heroku</id>
+    <content type="html"><![CDATA[<h3>Deploy to Heroku</h3>
+
+<p><strong>You have a rails application, and finished your application want to deploy with <code>Heroku</code>,  HOW ?</strong></p>
+
+<p>You should open your rails application, and in your application find <code>Gemfile</code>. Open Gemfile write this command</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;heroku&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>in your terminal</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>bundle install
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Come again to <code>Gemfile</code>, instead of</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;sqlite3&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>write</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">group</span> <span class="ss">:development</span><span class="p">,</span> <span class="ss">:test</span> <span class="k">do</span>
+</span><span class='line'>    <span class="n">gem</span> <span class="s1">&#39;sqlite3&#39;</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'><span class="n">group</span> <span class="ss">:production</span> <span class="k">do</span>
+</span><span class='line'>    <span class="n">gem</span> <span class="s1">&#39;pg&#39;</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>in terminal</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>bundle install
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then go to <a href="https://www.heroku.com">Heroku</a>, you should create a free account on heroku. When you create account you can see <code>download toolbet</code> button,
+you can run this in your computer. Open your terminal and write</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>heroku login
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>When you write this command, heroku want to your heroku account information, entered this</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>~  heroku login
+</span><span class='line'>Enter your Heroku credentials.
+</span><span class='line'>Email: leylakapi@gmail.com
+</span><span class='line'>Password <span class="o">(</span>typing will be hidden<span class="o">)</span>:
+</span><span class='line'>Found existing public key: /Users/leylakapi/.ssh/id_rsa.pub
+</span><span class='line'>Uploading SSH public key /Users/leylakapi/.ssh/id_rsa.pub... <span class="k">done</span>
+</span><span class='line'>Authentication successful.
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>After login, you should run with order</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git add .
+</span><span class='line'>git commit -m <span class="s2">&quot;Your commit write here&quot;</span>
+</span><span class='line'>heroku create
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>When you <code>heroku create</code> you should see like</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>Creating pacific-beyond-5670... <span class="k">done</span>, stack is cedar
+</span><span class='line'>http://pacific-beyond-5670.herokuapp.com/ | git@heroku.com:pacific-beyond-5670.git
+</span><span class='line'>Git remote heroku added
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>then</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push heroku master
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you want to see in our browser you should use</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>heroku open
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&rsquo;s all.</p>
+
+<p>I hope helped to you.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Validation methods]]></title>
@@ -2514,135 +2637,6 @@ Now, we install the ruby after then</p>
 
 
 <p>That&rsquo;s it!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Commands of github for setup]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/02/26/commands-of-github-for-setup/"/>
-    <updated>2014-02-26T12:31:12+02:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/02/26/commands-of-github-for-setup</id>
-    <content type="html"><![CDATA[<h3>What I can setup github and create repo?</h3>
-
-<ul>
-<li>Firstly we create github account from <a href="https://github.com/">github</a></li>
-<li>We create a new repo from &lsquo;+&rsquo; symbol.</li>
-<li>We named this repo and creating.</li>
-<li>After, We seems to this url</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>HTTP: https://github.com/username/repo_name.git
-</span><span class='line'>SSH: git@github.com:username/repo_name.git
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>We use any link. Now, we clone this repo on pc.</p>
-
-<p>Use this command</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git clone https://github.com/username/repo_name.git
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Now you are cloning to pc but where this file?</p>
-
-<p>For this question, Where you want to setup, install there. For example, if you want to clone in desktop, you should go desktop path
-like this(For Mac);</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">cd </span>Desktop/
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>And then cloning this path.</p>
-
-<ul>
-<li>After clone, We open this file on ide or anywhere, writing our code in file.</li>
-</ul>
-
-
-<p>Now, changed this file, We should push this file to github.
-Hence, we use this code ;</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git add .
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>With this command, we added all changed file on network, we wait for push.</p>
-
-<ul>
-<li>Which file added on network? Answer this question, We write this command and see to adding file.</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>  git status
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>We are saw to adding file , Now We need to commit for then to remember the files which adding.</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>   git commit -m <span class="s2">&quot;your_comment&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>We prepared commit, Now all preparations are prepared, and we should push file n github</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push origin master
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Note: <code>master</code> are name of branch on github, if you use another branch or  don&rsquo;t use &lsquo;master&rsquo; branch we created new branch and push</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push origin branch_name
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>If you want to see branches in your repo,</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git branch -a
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>If you created new branch</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git branch name_of_newbranch
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>Now, you are in name_of_newbranch , but you want to return or switch another branch therefore</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git checkout another_branch
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p> Git command basicly like this.</p>
 ]]></content>
   </entry>
   

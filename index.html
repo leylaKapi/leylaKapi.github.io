@@ -7,8 +7,7 @@
 	<meta name="author" content="Leyla Kapi">
 
 	
-	<meta name="description" content="Ruby on Rails Validation methods validates_presence_of Attribute mustn&rsquo;t be blank(nil,false,[],{}) 1
-validates_presence_of :field_name &hellip;">
+	<meta name="description" content="Deploy to Heroku You have a rails application, and finished your application want to deploy with Heroku, HOW ? You should open your rails &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -83,6 +82,163 @@ validates_presence_of :field_name &hellip;">
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/06/17/how-to-deploy-your-project-to-heroku/">
+		
+			How to Deploy Your Project to Heroku ?</a>
+	</h2>
+	<div class="entry-content">
+		<h3>Deploy to Heroku</h3>
+
+<p><strong>You have a rails application, and finished your application want to deploy with <code>Heroku</code>,  HOW ?</strong></p>
+
+<p>You should open your rails application, and in your application find <code>Gemfile</code>. Open Gemfile write this command</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;heroku&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>in your terminal</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>bundle install
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Come again to <code>Gemfile</code>, instead of</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;sqlite3&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>write</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">group</span> <span class="ss">:development</span><span class="p">,</span> <span class="ss">:test</span> <span class="k">do</span>
+</span><span class='line'>    <span class="n">gem</span> <span class="s1">&#39;sqlite3&#39;</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'><span class="n">group</span> <span class="ss">:production</span> <span class="k">do</span>
+</span><span class='line'>    <span class="n">gem</span> <span class="s1">&#39;pg&#39;</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>in terminal</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>bundle install
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then go to <a href="https://www.heroku.com">Heroku</a>, you should create a free account on heroku. When you create account you can see <code>download toolbet</code> button,
+you can run this in your computer. Open your terminal and write</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>heroku login
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>When you write this command, heroku want to your heroku account information, entered this</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>~  heroku login
+</span><span class='line'>Enter your Heroku credentials.
+</span><span class='line'>Email: leylakapi@gmail.com
+</span><span class='line'>Password <span class="o">(</span>typing will be hidden<span class="o">)</span>:
+</span><span class='line'>Found existing public key: /Users/leylakapi/.ssh/id_rsa.pub
+</span><span class='line'>Uploading SSH public key /Users/leylakapi/.ssh/id_rsa.pub... <span class="k">done</span>
+</span><span class='line'>Authentication successful.
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>After login, you should run with order</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git add .
+</span><span class='line'>git commit -m <span class="s2">&quot;Your commit write here&quot;</span>
+</span><span class='line'>heroku create
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>When you <code>heroku create</code> you should see like</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>Creating pacific-beyond-5670... <span class="k">done</span>, stack is cedar
+</span><span class='line'>http://pacific-beyond-5670.herokuapp.com/ | git@heroku.com:pacific-beyond-5670.git
+</span><span class='line'>Git remote heroku added
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>then</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push heroku master
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you want to see in our browser you should use</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>heroku open
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&rsquo;s all.</p>
+
+<p>I hope helped to you.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-17T16:10:38+03:00" pubdate data-updated="true">Jun 17<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/deploy/'>deploy</a>, <a class='category' href='/blog/categories/heroku/'>heroku</a>, <a class='category' href='/blog/categories/project/'>project</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/06/17/how-to-deploy-your-project-to-heroku/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -1872,165 +2028,6 @@ google_analytics_tracking_id: AB-12345678-9
 </div>
 	
 	<div class="comments"><a href="/blog/2014/03/26/how-do-google-analytics-add-to-octopress/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/03/22/how-create-tree-list-menu-with-haml/">
-		
-			How Create Tree - List Menu With HAML</a>
-	</h2>
-	<div class="entry-content">
-		<h3>How to created tree &ndash; list menu with haml, sass, coffeescript ?</h3>
-
-<p>Firstly, we create middleman project and create</p>
-
-<pre><code>index.html.haml
-style.css.sass
-application.coffee
-</code></pre>
-
-<p>then we open <code>index.html.haml</code> file and we write your code like this,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="p">-</span><span class="o">--</span> <span class="n">my</span> <span class="n">code</span> <span class="n">like</span> <span class="n">this</span> <span class="o">---</span>
-</span><span class='line'><span class="nt">%ul</span><span class="nc">.archive_tool</span>
-</span><span class='line'>  <span class="nt">%li</span><span class="nf">#tools</span> Car
-</span><span class='line'>  <span class="nt">%ul</span><span class="nc">.archive_requires</span>
-</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> BMW
-</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> Mercedes
-</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> Toyota
-</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> Fiat
-</span><span class='line'>  <span class="nt">%li</span><span class="nf">#tools</span> Book
-</span><span class='line'>  <span class="nt">%ul</span><span class="nc">.archive_requires</span>
-</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> Ruby
-</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> ROR
-</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> Thought
-</span><span class='line'>  <span class="nt">%li</span><span class="nf">#tools</span> Computer
-</span><span class='line'>  <span class="nt">%ul</span><span class="nc">.archive_requires</span>
-</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> iMac
-</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> Windows
-</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> Linux
-</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> Seu
-</span><span class='line'>  <span class="nt">%li</span><span class="nf">#tools</span> Chair
-</span><span class='line'>  <span class="nt">%ul</span><span class="nc">.archive_requires</span>
-</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> comfortable
-</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> uncomfortable
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>then open <code>style.css.sass</code> file and write style code</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class='sass'><span class='line'>  <span class="nn">#tools</span><span class="o">,</span> <span class="nn">#requires</span>
-</span><span class='line'>    <span class="na">cursor</span><span class="o">:</span> <span class="no">pointer</span>
-</span><span class='line'>  <span class="nc">.archive_tool</span>
-</span><span class='line'>    <span class="na">margin-left</span><span class="o">:</span> <span class="mi">1</span><span class="kt">em</span>
-</span><span class='line'>    <span class="na">font-size</span><span class="o">:</span> <span class="no">large</span>
-</span><span class='line'>    <span class="na">font-weight</span><span class="o">:</span> <span class="no">bold</span>
-</span><span class='line'>    <span class="na">cursor</span><span class="o">:</span> <span class="no">pointer</span>
-</span><span class='line'>  <span class="nc">.archive_requires</span>
-</span><span class='line'>    <span class="k">@extend</span> <span class="nc">.archive_tool</span>
-</span><span class='line'>    <span class="na">margin</span><span class="o">:</span>
-</span><span class='line'>      <span class="na">top</span><span class="o">:</span> <span class="mi">0</span>
-</span><span class='line'>      <span class="na">bottom</span><span class="o">:</span> <span class="mi">1</span><span class="kt">em</span>
-</span><span class='line'>    <span class="na">font-size</span><span class="o">:</span> <span class="no">medium</span>
-</span><span class='line'>    <span class="na">list-style-type</span><span class="o">:</span> <span class="no">circle</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>then open <code>application.coffee</code> file, and</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='coffeescript'><span class='line'><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span> <span class="nf">-&gt;</span>
-</span><span class='line'>  <span class="nx">$</span><span class="p">(</span><span class="s">&quot;.archive_tool ul&quot;</span><span class="p">).</span><span class="nx">hide</span><span class="p">()</span>
-</span><span class='line'>  <span class="nx">$</span><span class="p">(</span><span class="s">&quot;.archive_tool &gt; li&quot;</span><span class="p">).</span><span class="nx">click</span> <span class="nf">-&gt;</span>
-</span><span class='line'>    <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">parent</span><span class="p">().</span><span class="nx">find</span><span class="p">(</span><span class="s">&quot;ul&quot;</span><span class="p">).</span><span class="nx">slideToggle</span><span class="p">()</span>
-</span><span class='line'>    <span class="k">return</span>
-</span><span class='line'>  <span class="nx">$</span><span class="p">(</span><span class="s">&quot;.archive_requires &gt; li&quot;</span><span class="p">).</span><span class="nx">click</span> <span class="nf">-&gt;</span>
-</span><span class='line'>    <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">parent</span><span class="p">().</span><span class="nx">find</span><span class="p">(</span><span class="s">&quot;ul&quot;</span><span class="p">).</span><span class="nx">slideToggle</span><span class="p">()</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>we write this code inside haml, sass, and coffeescript file and then saved all, run this middleman project.</p>
-
-<p>According to edit your own project try to run codes.</p>
-
-<p>I hope, helped you.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-22T18:57:27+02:00" pubdate data-updated="true">Mar 22<span>nd</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/coffeescript/'>coffeescript</a>, <a class='category' href='/blog/categories/haml/'>haml</a>, <a class='category' href='/blog/categories/middleman/'>middleman</a>, <a class='category' href='/blog/categories/sass/'>sass</a>, <a class='category' href='/blog/categories/tree-list/'>tree-list</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/03/22/how-create-tree-list-menu-with-haml/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>
