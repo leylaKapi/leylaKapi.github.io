@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to deploy your project to Heroku?"
+title: "How to deploy your project to Heroku ?"
 date: 2014-06-17 16:10:38 +0300
 comments: true
 categories: project rails heroku deploy
@@ -61,11 +61,11 @@ Authentication successful.
 
 After login, you should run with order
 
- ``` bash
+``` bash
 git add .
 git commit -m "Your commit write here"
 heroku create
- ```
+```
 
 When you `heroku create` you should see like
 
