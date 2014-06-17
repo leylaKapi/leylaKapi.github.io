@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How can I solve YAML exception reading bug in octopress"
+title: "How can I solve YAML exception reading bug in octopress ?"
 date: 2014-05-20 17:19:18 +0300
 comments: true
 categories: rake generate exception yaml US-ASCII invalid
@@ -13,6 +13,7 @@ When you write
 ```bash
 bundle exec rake generate
 ```
+
 you get
 
 ``` bash
@@ -34,6 +35,7 @@ YAML Exception reading 2014-04-28-your_file.markdown: invalid byte sequence in U
 ```
 If you want to solve this `rake generate` bug, you can use instead of `bundle exec rake generate`,
 you should use
+
 
 ``` bash
 LANG=en_US.utf-8 bundle exec rake generate
