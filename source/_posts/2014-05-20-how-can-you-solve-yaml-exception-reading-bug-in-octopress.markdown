@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How can I solve YAML exception reading bug in octopress ?"
+title: "How can you solve YAML exception reading bug in octopress ?"
 date: 2014-05-20 17:19:18 +0300
 comments: true
 categories: rake generate exception yaml US-ASCII invalid
