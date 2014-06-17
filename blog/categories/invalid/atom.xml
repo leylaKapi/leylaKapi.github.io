@@ -4,7 +4,7 @@
   <title><![CDATA[Category: invalid | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/invalid/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-06-17T17:31:02+03:00</updated>
+  <updated>2014-06-17T17:35:19+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -14,10 +14,10 @@
 
   
   <entry>
-    <title type="html"><![CDATA[How can I solve YAML exception reading bug in octopress ?]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/05/20/how-can-i-solve-yaml-exception-reading-bug-in-octopress/"/>
+    <title type="html"><![CDATA[How can you solve YAML exception reading bug in octopress ?]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/05/20/how-can-you-solve-yaml-exception-reading-bug-in-octopress/"/>
     <updated>2014-05-20T17:19:18+03:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/05/20/how-can-i-solve-yaml-exception-reading-bug-in-octopress</id>
+    <id>http://leylaKapi.github.io/blog/2014/05/20/how-can-you-solve-yaml-exception-reading-bug-in-octopress</id>
     <content type="html"><![CDATA[<h3>Solve the YAML exception reading invalid byte sequence in US-ASCII</h3>
 
 <p>When you write</p>
