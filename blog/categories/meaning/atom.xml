@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Meaning | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/meaning/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2014-06-24T19:22:40+03:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[Leyla Kapi]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Meaning of abbreviations]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/02/26/meaning-of-abbreviations/"/>
+    <updated>2014-02-26T10:04:36+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/02/26/meaning-of-abbreviations</id>
+    <content type="html"><![CDATA[<h2>What is the meaning of abbreviation for HTML, CSS, &hellip;?</h2>
+
+<ul>
+<li>HTML : Hyper text markup language</li>
+<li>CSS : Cascading Stylesheet</li>
+<li>Haml : HTML Abstraction markup language</li>
+<li>SASS: Syntactically Awesome Stylesheets</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

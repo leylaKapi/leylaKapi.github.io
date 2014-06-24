@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: haml | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/haml/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2014-06-24T19:22:40+03:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[Leyla Kapi]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[How create tree - list menu with HAML]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/03/22/how-create-tree-list-menu-with-haml/"/>
+    <updated>2014-03-22T18:57:27+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/03/22/how-create-tree-list-menu-with-haml</id>
+    <content type="html"><![CDATA[<h3>How to created tree &ndash; list menu with haml, sass, coffeescript ?</h3>
+
+<p>Firstly, we create middleman project and create</p>
+
+<pre><code>index.html.haml
+style.css.sass
+application.coffee
+</code></pre>
+
+<p>then we open <code>index.html.haml</code> file and we write your code like this,</p>
+
+<p>``` haml</p>
+
+<pre><code>--- my code like this ---
+%ul.archive_tool
+  %li#tools Car
+  %ul.archive_requires
+    %li#requires BMW
+    %li#requires Mercedes
+    %li#requires Toyota
+    %li#requires Fiat
+  %li#tools Book
+  %ul.archive_requires
+    %li#requires Ruby
+    %li#requires ROR
+    %li#requires Thought
+  %li#tools Computer
+  %ul.archive_requires
+    %li#requires iMac
+    %li#requires Windows
+    %li#requires Linux
+    %li#requires Seu
+  %li#tools Chair
+  %ul.archive_requires
+    %li#requires comfortable
+    %li#requires uncomfortable
+</code></pre>
+
+<p><code>``
+then open</code>style.css.sass` file and write style code</p>
+
+<p>``` sass</p>
+
+<pre><code>  #tools, #requires
+    cursor: pointer
+  .archive_tool
+    margin-left: 1em
+    font-size: large
+    font-weight: bold
+    cursor: pointer
+  .archive_requires
+    @extend .archive_tool
+    margin:
+      top: 0
+      bottom: 1em
+    font-size: medium
+    list-style-type: circle
+</code></pre>
+
+<p>```</p>
+
+<p>then open <code>application.coffee</code> file, and</p>
+
+<p>``` coffeescript</p>
+
+<pre><code>$(document).ready -&gt;
+  $(".archive_tool ul").hide()
+  $(".archive_tool &gt; li").click -&gt;
+    $(this).parent().find("ul").slideToggle()
+    return
+  $(".archive_requires &gt; li").click -&gt;
+    $(this).parent().find("ul").slideToggle()
+</code></pre>
+
+<p>```
+we write this code inside haml, sass, and coffeescript file and then saved all, run this middleman project.</p>
+
+<p>According to edit your own project try to run codes.</p>
+
+<p>I hope, helped you.</p>
+]]></content>
+  </entry>
+  
+</feed>

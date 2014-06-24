@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: validates | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/validates/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2014-06-24T19:22:40+03:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[Leyla Kapi]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Validation methods]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/05/04/validation-methods/"/>
+    <updated>2014-05-04T20:39:52+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/05/04/validation-methods</id>
+    <content type="html"><![CDATA[<h3>Ruby on Rails Validation methods</h3>
+
+<ul>
+<li><strong>validates_presence_of</strong></li>
+</ul>
+
+
+<p>Attribute mustn&rsquo;t be blank(nil,false,[],{})</p>
+
+<p><code>ruby
+validates_presence_of :field_name
+</code></p>
+
+<ul>
+<li><strong>validates_length_of</strong></li>
+</ul>
+
+
+<p>Attribute must meet length requirements :is, :minimum, :maximum, :within, :in, :too_short, :too_long</p>
+
+<p><code>ruby
+validates_length_of :field_name, :minimum =&gt; 100
+</code></p>
+
+<ul>
+<li><strong>validates_numericality_of</strong></li>
+</ul>
+
+
+<p>Attribute must be integer or floating number :less_than, :greater_than, :equal_to, :odd, :even, :greater_than_or_equal_to</p>
+
+<p><code>ruby
+validates_numericality_of :field_name, :greater_than_or_equal_to =&gt; 5
+</code></p>
+
+<ul>
+<li><strong>validates_inclusion_of</strong></li>
+</ul>
+
+
+<p>Attribute must be in a list of choises. (array or range) :in</p>
+
+<ul>
+<li><strong>validates_exclusion_of</strong></li>
+</ul>
+
+
+<p>Attribute mustn&rsquo;t be in a list of choises. (array or range) :in</p>
+
+<ul>
+<li><strong>validates_format_of</strong></li>
+</ul>
+
+
+<p>Attribute must match a regular expression. :with</p>
+
+<ul>
+<li>validates_uniqueness_of</li>
+</ul>
+
+
+<p>Attribute mustn&rsquo;t exist in the database :case_sensitive, :scope</p>
+
+<ul>
+<li><strong>validates_acceptance_of</strong></li>
+</ul>
+
+
+<p>Attribute must be accepted :accept(expected value, 1)</p>
+
+<ul>
+<li><strong>validates_confirmation_of</strong></li>
+</ul>
+
+
+<p>Attribute must be confirmed by entering it twice creates a virtual blank attribute for confirmation.</p>
+
+<ul>
+<li><strong>validates_associated</strong></li>
+</ul>
+
+
+<p>Associated object or objects must all be valid.</p>
+
+<p>``` ruby
+:allow_nil => true</p>
+
+<h1>Skip valid if attribute is nil</h1>
+
+<p>:allow_blank => true</p>
+
+<h1>Skip valid if attribute is blank</h1>
+
+<p>```</p>
+
+<p>Example of Validations</p>
+
+<p><code>ruby
+validates_presence_of :user_name
+validates_length_of :user_name, :maximum =&gt; 50
+validates_uniqueness_of :user_name
+</code></p>
+
+<p>When we use like above, We diverge to DRY, instead of above</p>
+
+<p>``` ruby
+validates :user_name, :presence => true</p>
+
+<pre><code>                 :length =&gt; {:maximum =&gt; 50}
+                 :uniqueness =&gt; true
+</code></pre>
+
+<p>```</p>
+
+<p>That&rsquo;s all.</p>
+]]></content>
+  </entry>
+  
+</feed>
