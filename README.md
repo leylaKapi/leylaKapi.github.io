@@ -1,4 +1,4 @@
-leylaKapi.github.io
+leylaKapi.com
 ===================
 
 My personal Website
