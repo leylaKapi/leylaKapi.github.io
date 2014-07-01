@@ -4,7 +4,7 @@
   <title><![CDATA[Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-06-28T03:21:11+03:00</updated>
+  <updated>2014-07-02T01:27:51+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -12,6 +12,84 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Bounce effect with CSS3]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/07/02/bounce-effect-with-css3/"/>
+    <updated>2014-07-02T00:56:56+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/07/02/bounce-effect-with-css3</id>
+    <content type="html"><![CDATA[<h3>How to give effect to arrow like bounce with CSS3 ?</h3>
+
+<p>You want to use arrow in your web-page with animation like bounce ball. <code>HOW ?</code></p>
+
+<p>Firstly, you should use this <code>haml</code> in your code, where you want to use <code>section</code>
+in your page,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nt">%p</span><span class="nc">.scroll-down</span>
+</span><span class='line'>   <span class="nc">.bounce</span>
+</span><span class='line'>     <span class="nt">%a</span><span class="p">{</span><span class="ss">href</span><span class="p">:</span> <span class="s1">&#39;#section2&#39;</span><span class="p">}</span>
+</span><span class='line'>        <span class="nt">%i</span><span class="nc">.fa.fa-angle-double-down.fa-5x</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>In your <code>sass</code> file, you should use</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+</pre></td><td class='code'><pre><code class='sass'><span class='line'><span class="nc">.scroll-down</span>
+</span><span class='line'>    <span class="na">text-align</span><span class="o">:</span> <span class="no">center</span>
+</span><span class='line'>    <span class="na">position</span><span class="o">:</span> <span class="no">absolute</span>
+</span><span class='line'>    <span class="na">z-index</span><span class="o">:</span> <span class="mi">2</span>
+</span><span class='line'>    <span class="na">margin</span><span class="o">:</span> <span class="mi">0</span> <span class="no">auto</span>
+</span><span class='line'><span class="nc">.bounce</span>
+</span><span class='line'>  <span class="na">position</span><span class="o">:</span> <span class="no">fixed</span>
+</span><span class='line'>  <span class="na">left</span><span class="o">:</span> <span class="mi">50</span><span class="kt">%</span>
+</span><span class='line'>  <span class="na">margin-top</span><span class="o">:</span> <span class="mi">-25</span><span class="kt">px</span>
+</span><span class='line'>  <span class="na">margin-left</span><span class="o">:</span> <span class="mi">-25</span><span class="kt">px</span>
+</span><span class='line'>  <span class="na">height</span><span class="o">:</span> <span class="mi">50</span><span class="kt">px</span>
+</span><span class='line'>  <span class="na">width</span><span class="o">:</span> <span class="mi">50</span><span class="kt">px</span>
+</span><span class='line'>  <span class="na">-webkit-animation</span><span class="o">:</span> <span class="n">bounce</span> <span class="mi">1</span><span class="kt">s</span> <span class="n">infinite</span>
+</span><span class='line'><span class="k">@-webkit-keyframes</span> <span class="nt">bounce</span>
+</span><span class='line'>  <span class="nt">0</span><span class="err">%</span>
+</span><span class='line'>    <span class="na">bottom</span><span class="o">:</span> <span class="mi">5</span><span class="kt">px</span>
+</span><span class='line'>  <span class="nt">25</span><span class="err">%</span><span class="o">,</span> <span class="nt">75</span><span class="err">%</span>
+</span><span class='line'>    <span class="na">bottom</span><span class="o">:</span> <span class="mi">15</span><span class="kt">px</span>
+</span><span class='line'>  <span class="nt">50</span><span class="err">%</span>
+</span><span class='line'>    <span class="na">bottom</span><span class="o">:</span> <span class="mi">20</span><span class="kt">px</span>
+</span><span class='line'>  <span class="nt">100</span><span class="err">%</span>
+</span><span class='line'>    <span class="na">bottom</span><span class="o">:</span> <span class="mi">0</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&rsquo;s all!</p>
+
+<p>I hope helped to you.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How to deploy your project to Heroku ?]]></title>
@@ -2536,100 +2614,6 @@ Now, we install the ruby after then</p>
 <p>like url. We should copy this url and paste on browser search bar.</p>
 
 <p>That&rsquo;s it! Try and see.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Markdown article some style]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/02/26/markdown-article-some-style/"/>
-    <updated>2014-02-26T17:59:49+02:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/02/26/markdown-article-some-style</id>
-    <content type="html"><![CDATA[<h2>Write article with markdown</h2>
-
-<ul>
-<li>When you start to write article with markdown, we can recognize to writing regularly and reading easily.</li>
-</ul>
-
-
-<p>Firstly</p>
-
-<h4>How to write header in markdown?</h4>
-
-<p>While you&rsquo;re writing header, you should write in &lsquo;#&rsquo;(pound sign)</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'># Header 1
-</span><span class='line'>## Header 2
-</span><span class='line'>### Header 3
-</span><span class='line'>#### Header 4
-</span><span class='line'>##### Header 5
-</span><span class='line'>###### Header 6</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Bold are header more and more smaller, from above example, the boldest header is Header 1 and the lightest header is Header 2</p>
-
-<h4>How to write lists in markdown?</h4>
-
-<p>If you want to write list, How?</p>
-
-<p><strong>ordered or unordered</strong></p>
-
-<p>Firstly Ordered :</p>
-
-<p>We use number when we want to write ordered.</p>
-
-<p>Secondly unordered :</p>
-
-<p>We use &lsquo;&ndash;&rsquo; and &lsquo;*&rsquo; the symbol provide to write unordered.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'>  <span class="o">-</span> <span class="n">apple</span>
-</span><span class='line'>  <span class="o">-</span> <span class="n">banana</span>
-</span><span class='line'>  <span class="o">-</span> <span class="n">strawberries</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h4>How to write code in markdown?</h4>
-
-<p>When you write code block in markdown, you use &lsquo;&#8220;`&rsquo; symbol. How to write this symbol on keyboard?
- Don&rsquo;t worry! when we press on &lsquo; alt + , &rsquo; we create this symbol.</p>
-
-<p>like this :</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">.</span><span class="n">.</span><span class="o">.</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Also we specify the how write this code ? or with what write ?</p>
-
-<p>We say to terminal, konsol or ide you saying like :</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">.</span><span class="n">.</span><span class="o">.</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Now we say to terminal write ruby code block, and write according to ruby language.</p>
-
-<h4>How to write to link in markdown ?</h4>
-
-<p>When we use link about anything and if you want to be regularly you should use markdown and use like this :</p>
-
-<pre><code>[github](http://github.com)
-[leylakapi](http://leylakapi.github.io)
-</code></pre>
-
-<p>When the click github, redirected to on &lsquo;<a href="http://github.com">http://github.com</a>&rsquo;  this link.</p>
-
-<p>I tried to explain markdown, when we write code, link, header or list. I think these are the most commonly use .</p>
 ]]></content>
   </entry>
   
