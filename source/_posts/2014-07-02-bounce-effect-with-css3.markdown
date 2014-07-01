@@ -10,7 +10,7 @@ categories: bounce effect animation font-awesome css3 haml
 
 You want to use arrow in your web-page with animation like bounce ball. `HOW ?`
 
-Firstly, you should use this haml in your code, where you want to use `section`
+Firstly, you should use this `haml` in your code, where you want to use `section`
 in your page,
 
 ```haml
@@ -20,7 +20,7 @@ in your page,
         %i.fa.fa-angle-double-down.fa-5x
 ```
 
-In your sass you should use
+In your `sass` file, you should use
 
 ```sass
 .scroll-down
@@ -47,5 +47,6 @@ In your sass you should use
     bottom: 0
 ```
 
-That's all !
+That's all!
+
 I hope helped to you.
