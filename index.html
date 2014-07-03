@@ -7,7 +7,7 @@
 	<meta name="author" content="Leyla Kapi">
 
 	
-	<meta name="description" content="How to give effect to arrow like bounce with CSS3 ? You want to use arrow in your web-page with animation like bounce ball. HOW ? Firstly, you &hellip;">
+	<meta name="description" content="Which libraries should I use in javascript for game development ? When I looking for javascript library, I found some library is used HTML5 Canvas &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -82,6 +82,75 @@
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/07/03/html-canvas-javascript/">
+		
+			HTML Canvas Javascript</a>
+	</h2>
+	<div class="entry-content">
+		<h3>Which libraries should I use in javascript for game development ?</h3>
+
+<p>When I looking for javascript library, I found some library is used <code>HTML5 Canvas Javascript</code> library
+for game development.</p>
+
+<p>This library provide to <code>build and animate</code> to game project. I found 15 Html5 canvas javascript libraries :</p>
+
+<ul>
+<li><a href="http://hyperandroid.github.io/CAAT/">Canvas Advanced Animation Toolkit</a></li>
+<li><a href="http://kineticjs.com/">Kinetic.js</a></li>
+<li><a href="http://fabricjs.com/">Fabric.js</a></li>
+<li><a href="http://craftyjs.com/">Crafty.js</a></li>
+<li><a href="http://www.createjs.com/">Create.js</a></li>
+<li><a href="http://www.createjs.com/#!/EaselJS">Easel.js</a></li>
+<li><a href="http://ocanvas.org/">oCanvas</a></li>
+<li><a href="http://paperjs.org/">Paper.js</a></li>
+<li><a href="http://processingjs.org/">Processing.js</a></li>
+<li><a href="http://threejs.org/">Three.js</a></li>
+<li><a href="http://jawsjs.com/">Jaws.js</a></li>
+<li><a href="http://impactjs.com/">Impact.js</a></li>
+<li><a href="http://www.limejs.com/">Lime.js</a></li>
+<li><a href="http://melonjs.org/">Melon.js</a></li>
+</ul>
+
+
+<p>That&rsquo;s all .
+I hope helped to you .</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-03T16:10:34+03:00" pubdate data-updated="true">Jul 3<span>rd</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/canvas/'>canvas</a>, <a class='category' href='/blog/categories/development/'>development</a>, <a class='category' href='/blog/categories/frameworks/'>frameworks</a>, <a class='category' href='/blog/categories/game/'>game</a>, <a class='category' href='/blog/categories/html5/'>html5</a>, <a class='category' href='/blog/categories/javascript/'>javascript</a>, <a class='category' href='/blog/categories/libraries/'>libraries</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/07/03/html-canvas-javascript/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -1037,141 +1106,6 @@ security certificate engaged and then can be security.</p>
 </div>
 	
 	<div class="comments"><a href="/blog/2014/04/20/how-is-the-internet-working-and-what-is-the-protocols/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/04/19/recreate-octopress-blog-for-another-computer/">
-		
-			Recreate Octopress Blog for Another Computer</a>
-	</h2>
-	<div class="entry-content">
-		<h3>How I recreate octopress blog another computer ?</h3>
-
-<p>I formatted my computer and then for my octopress blog <em>What can I do ?</em> <strong>reinstall</strong> or <strong>WHAT?</strong></p>
-
-<p>In this post I try to explain, if you have a new computer (after format, buy new computer&hellip;etc)but you have octopress blog
-how to entegrated each other?</p>
-
-<p>Before starting explain it in this article, I try to explain set up octopress, if you forget this, you can find it easily in another
-blog post or you can look at <a href="http://octopress.org/docs/setup/">Octopress Setup guide</a> .</p>
-
-<p>Now recreate a local repo for octopress</p>
-
-<p>-Clone your blog to the new machine</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git clone -b <span class="nb">source </span>git@github.com:username/username.github.io.git octopress
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Then clone the master branch to the _deploy</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">cd </span>octopress
-</span><span class='line'>git clone git@github.com:username/username.github.io.git _deploy
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>then run <em>rake</em></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>gem install bundler
-</span><span class='line'>rbenv rehash
-</span><span class='line'>bundle install
-</span><span class='line'>rake setup_github_pages
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Then we ask to you repo url like</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>Enter the <span class="nb">read</span>/write url <span class="k">for </span>your repository
-</span><span class='line'><span class="o">(</span>For example, <span class="s1">&#39;git@github.com:your_username/your_username.github.io.git)</span>
-</span><span class='line'><span class="s1">           or &#39;</span>https://github.com/your_username/your_username.github.io<span class="err">&#39;</span><span class="o">)</span>
-</span><span class='line'>Repository url:
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Write your like this <em>Repository url: git@github.com:username/username.github.io.git</em></p>
-
-<p>Then you should write these command :</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake generate
-</span><span class='line'>git add .
-</span><span class='line'>git commit -m <span class="s2">&quot;Write comment here&quot;</span>
-</span><span class='line'>git push origin <span class="nb">source</span>
-</span><span class='line'>rake deploy
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>then you can write</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">cd </span>octopress
-</span><span class='line'>git pull origin <span class="nb">source</span> <span class="c">#get another computer changing</span>
-</span><span class='line'><span class="nb">cd</span> ./_deploy
-</span><span class='line'>git pull origin master
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>then you can write</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake deploy
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>That&rsquo;s all :)
-I hope this article help you.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-04-19T22:13:18+03:00" pubdate data-updated="true">Apr 19<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/computer/'>computer</a>, <a class='category' href='/blog/categories/octopress/'>octopress</a>, <a class='category' href='/blog/categories/recreate/'>recreate</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/04/19/recreate-octopress-blog-for-another-computer/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>

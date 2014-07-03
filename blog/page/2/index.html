@@ -7,8 +7,7 @@
 	<meta name="author" content="Leyla Kapi">
 
 	
-	<meta name="description" content="AB2014 &ndash; Ruby101 for beginners Ruby-lang
-Nitrous These notes restored in Academic Information Education Mersin from Notes of Mr. Sıtkı Bagdat &hellip;">
+	<meta name="description" content="How I recreate octopress blog another computer ? I formatted my computer and then for my octopress blog What can I do ? reinstall or WHAT? In this &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -83,6 +82,141 @@ Nitrous These notes restored in Academic Information Education Mersin from Notes
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/04/19/recreate-octopress-blog-for-another-computer/">
+		
+			Recreate Octopress Blog for Another Computer</a>
+	</h2>
+	<div class="entry-content">
+		<h3>How I recreate octopress blog another computer ?</h3>
+
+<p>I formatted my computer and then for my octopress blog <em>What can I do ?</em> <strong>reinstall</strong> or <strong>WHAT?</strong></p>
+
+<p>In this post I try to explain, if you have a new computer (after format, buy new computer&hellip;etc)but you have octopress blog
+how to entegrated each other?</p>
+
+<p>Before starting explain it in this article, I try to explain set up octopress, if you forget this, you can find it easily in another
+blog post or you can look at <a href="http://octopress.org/docs/setup/">Octopress Setup guide</a> .</p>
+
+<p>Now recreate a local repo for octopress</p>
+
+<p>-Clone your blog to the new machine</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git clone -b <span class="nb">source </span>git@github.com:username/username.github.io.git octopress
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then clone the master branch to the _deploy</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">cd </span>octopress
+</span><span class='line'>git clone git@github.com:username/username.github.io.git _deploy
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>then run <em>rake</em></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>gem install bundler
+</span><span class='line'>rbenv rehash
+</span><span class='line'>bundle install
+</span><span class='line'>rake setup_github_pages
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then we ask to you repo url like</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>Enter the <span class="nb">read</span>/write url <span class="k">for </span>your repository
+</span><span class='line'><span class="o">(</span>For example, <span class="s1">&#39;git@github.com:your_username/your_username.github.io.git)</span>
+</span><span class='line'><span class="s1">           or &#39;</span>https://github.com/your_username/your_username.github.io<span class="err">&#39;</span><span class="o">)</span>
+</span><span class='line'>Repository url:
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Write your like this <em>Repository url: git@github.com:username/username.github.io.git</em></p>
+
+<p>Then you should write these command :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake generate
+</span><span class='line'>git add .
+</span><span class='line'>git commit -m <span class="s2">&quot;Write comment here&quot;</span>
+</span><span class='line'>git push origin <span class="nb">source</span>
+</span><span class='line'>rake deploy
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>then you can write</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">cd </span>octopress
+</span><span class='line'>git pull origin <span class="nb">source</span> <span class="c">#get another computer changing</span>
+</span><span class='line'><span class="nb">cd</span> ./_deploy
+</span><span class='line'>git pull origin master
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>then you can write</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake deploy
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&rsquo;s all :)
+I hope this article help you.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-19T22:13:18+03:00" pubdate data-updated="true">Apr 19<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/computer/'>computer</a>, <a class='category' href='/blog/categories/octopress/'>octopress</a>, <a class='category' href='/blog/categories/recreate/'>recreate</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/04/19/recreate-octopress-blog-for-another-computer/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -2056,221 +2190,6 @@ Now, we install the ruby after then</p>
 </div>
 	
 	<div class="comments"><a href="/blog/2014/02/28/what-is-the-ruby-on-rails/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/02/27/middleman-create-haml-file/">
-		
-			Middleman Create Haml File</a>
-	</h2>
-	<div class="entry-content">
-		<h3>How to create .haml file in middleman?</h3>
-
-<p>Firstly, you should go <a href="" title="http://middlemanapp.com/">middleman</a> and you need to <strong>install middleman</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>   gem install middleman
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Fine, you are installed middleman, now we start to create project in middleman</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>   middleman init project_name
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Then this command give you directory as shown below :</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'> project_name/
-</span><span class='line'>    Gemfile
-</span><span class='line'>    Gemfile.lock
-</span><span class='line'>    config.rb
-</span><span class='line'>    <span class="nb">source</span>
-</span><span class='line'>        .gitignore
-</span><span class='line'>        images
-</span><span class='line'>            background.png
-</span><span class='line'>            middleman.png
-</span><span class='line'>        javascript
-</span><span class='line'>            all.js
-</span><span class='line'>        stylesheets
-</span><span class='line'>            all.css
-</span><span class='line'>            normalize.css
-</span><span class='line'>        layouts
-</span><span class='line'>            layout.erb
-</span><span class='line'>        index.html.erb
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>If you can see this directories, you should open project with your IDE.</p>
-
-<p><strong>Now, We create .haml file but how ?</strong></p>
-
-<p>Go ahead and remove below files because these files don&rsquo;t use in project.</p>
-
-<pre><code>- /source/images/background.png
-- /source/images/middleman.png
-- /source/javascript/all.js
-- /source/stylesheets/all.css
-- /source/stylesheets/normalize.css
-- /source/layouts/layout.erb
-- /source/index.html.erb
-</code></pre>
-
-<p>Now, Projects was removed from unused files.</p>
-
-<h5>Add HAML</h5>
-
-<p>Middleman appear to read HTML by default . Therefore, you should go to</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'> /config.rb
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>in file write:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'>set :haml, :format =&gt; :html5
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Now program convert to html5 from haml.</p>
-
-<ul>
-<li>Add a</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'> layout.haml
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>file to the</p>
-
-<pre><code>      /source/layouts
-</code></pre>
-
-<p>directory. In this file we write</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nn">!!!</span>
-</span><span class='line'><span class="nt">%html</span><span class="p">{</span> <span class="ss">:lang</span> <span class="o">=&gt;</span> <span class="s2">&quot;en&quot;</span><span class="p">}</span>
-</span><span class='line'>    <span class="nt">%head</span>
-</span><span class='line'>        <span class="nt">%meta</span><span class="p">{</span><span class="ss">:charset</span> <span class="o">=&gt;</span> <span class="s2">&quot;utf-8&quot;</span><span class="p">}</span>
-</span><span class='line'>        <span class="nt">%title</span><span class="p">=</span> <span class="n">data</span><span class="o">.</span><span class="n">page</span><span class="o">.</span><span class="n">title</span>
-</span><span class='line'>        <span class="p">=</span> <span class="n">stylesheet_link_tag</span> <span class="s2">&quot;your_css_file.css&quot;</span>
-</span><span class='line'>        <span class="p">=</span> <span class="n">javascript_include_tag</span> <span class="s2">&quot;your_javascript_file.js&quot;</span>
-</span><span class='line'>    <span class="nt">%body</span>
-</span><span class='line'>        <span class="p">=</span> <span class="k">yield</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Now we must create</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'>index.html.haml
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>in</p>
-
-<pre><code>            `source/`
-</code></pre>
-
-<p>directory.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nt">%h1</span> Welcome Middleman project
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>write in</p>
-
-<pre><code>           `source/index.html.haml`
-</code></pre>
-
-<p>files.</p>
-
-<p>We are create middleman project and write codes, How we run this program?</p>
-
-<p>Wait! Dont worry, When writing to below command in terminal in order of this.</p>
-
-<pre><code># Go to project path
-
-     cd project_name
-     bundle install
-     bundle exec middleman server
-</code></pre>
-
-<p>then we are seen</p>
-
-<pre><code>         http://localhost:3000
-</code></pre>
-
-<p>like url. We should copy this url and paste on browser search bar.</p>
-
-<p>That&rsquo;s it! Try and see.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-02-27T13:49:10+02:00" pubdate data-updated="true">Feb 27<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/haml/'>Haml</a>, <a class='category' href='/blog/categories/middleman/'>Middleman,</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/02/27/middleman-create-haml-file/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>
