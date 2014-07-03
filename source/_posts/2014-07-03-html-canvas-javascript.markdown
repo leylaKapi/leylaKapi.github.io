@@ -22,7 +22,6 @@ This library provide to `build and animate` to game project. I found 15 Html5 ca
 * [oCanvas](http://ocanvas.org/)
 * [Paper.js](http://paperjs.org/)
 * [Processing.js](http://processingjs.org/)
-* [Processing.js](http://processingjs.org/)
 * [Three.js](http://threejs.org/)
 * [Jaws.js](http://jawsjs.com/)
 * [Impact.js](http://impactjs.com/)
