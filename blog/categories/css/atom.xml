@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: CSS | Leyla's Blog]]></title>
+  <title><![CDATA[Category: CSS, | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/css/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-07-03T16:47:55+03:00</updated>
+  <updated>2014-07-04T15:07:33+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -14,67 +14,58 @@
 
   
   <entry>
-    <title type="html"><![CDATA[CSS - Sprite use in SASS]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/03/02/css-sprite-use-in-sass/"/>
-    <updated>2014-03-02T16:12:43+02:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/03/02/css-sprite-use-in-sass</id>
-    <content type="html"><![CDATA[<h3>What is the CSS sprite? Why do we need to this ?</h3>
+    <title type="html"><![CDATA[How to show nav-bar according to scroll]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/03/06/how-to-show-nav-bar-according-to-scroll/"/>
+    <updated>2014-03-06T19:30:31+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/03/06/how-to-show-nav-bar-according-to-scroll</id>
+    <content type="html"><![CDATA[<h3>Change CSS class after scrolling &hellip;px down</h3>
 
-<p>CSS Sprite means that combine all images in a single image file. The aim is that,
-when we upload several image file for use in css or sass file, you should upload to each.</p>
+<p>I want to change menu or nav-bar according to scroll, How I can do this ?</p>
 
-<p><strong>If I give an example, you understand easily: </strong></p>
+<p>In this article, I can try to explain with an example.</p>
 
-<p>We have <strong>10 or more images</strong> and we should use in CSS folder, but this is difficult
- and mixed not only for 10 picture but also 100, 10000 pictures.
-you will each image upload 10 times or more for use.
-Can you imagine it ?</p>
+<p>Please, write these code block on your project or created a new project and try to these .
+Yep!, Let&rsquo;s learn step by step :)</p>
 
-<p>It&rsquo;s very difficult and mixed !</p>
+<p>Firstly, Created HTML file in your project and write below code block,</p>
 
-<p>Instead of this we use CSS Sprite method and fixed this mixed. If you have 10 images,
-you should combine  these images in a single page
-and pull in this page. Thus, CSS Sprite provide to fast loading  when opened quickly your images of website.</p>
+<pre><code>index.html
 
-<p>I think your understand CSS Sprite, How use it ?</p>
-
-<ul>
-<li><p>Firstly, you create a single page for using images and combine all pictures in single page.</p></li>
-<li><p>And now we use CSS or SASS code for pull each picture in single page.</p></li>
-</ul>
-
-
-<p>For example, you have a icons' pictures page and we pull each icon on icons' picture page, we
-should use CSS or SASS sprite</p>
-
-<p>``` sass</p>
-
-<pre><code>.icon
-    background: url("../images/icon-sprite.png") no repeat
-    display: inline-block
-.icon1
-    @extend .icon
-    background-position: 0px 0px
-.icon2
-    @extend .icon
-    background-position: 20px 34px
-    ...
+&lt;div id = 'navigation'&gt; Home &lt;/div&gt;
+    &lt;h1&gt; Welcome to Change scroll according to ...px &lt;/h1&gt;
+    &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+     irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+     id est laborum &lt;/p&gt;
 </code></pre>
 
-<p>```</p>
+<p>then wrote this code block in your HTML file. Let&rsquo;s create CSS file in your project for style of your project.</p>
 
-<p>means that above code :</p>
+<pre><code>style.css
 
-<p>We upload single page on <em>icon</em> class and we want to use anything icon in single page which position has these.
-but before use <em>extend</em> for use <em>icon</em> class in <em>icon1</em> class. And I want to use another icon, I prepare position of it.
-and use in</p>
-
-<pre><code>    background-position
+#navigation {
+        width : 100px;
+        height : 100px;
+        background-color:blue;
+        position: fixed;
+        display: none;
+}
 </code></pre>
 
-<p>Thanks to CSS Sprite, when opened images in your site, it opened quickly.</p>
+<p>this last step but the most important step for scrolling to navigation. Create javascript file for your animation of your project</p>
 
-<p>That&rsquo;s it !</p>
+<pre><code>application.js
+
+$(document).scroll(function() {
+        $('#navigation').toggle($(this).scrollTop() &gt; 1000);
+});
+</code></pre>
+
+<p>Wrote in your project these block and try to run project and What are you seeing in your project ?</p>
+
+<p>That&rsquo;s easy!</p>
 ]]></content>
   </entry>
   
