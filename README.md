@@ -1,4 +1,4 @@
-[leylakapi.com](leylakapi.com)
+[leylakapi.com](http://leylakapi.com/)
 ===================
 
 My personal Website
