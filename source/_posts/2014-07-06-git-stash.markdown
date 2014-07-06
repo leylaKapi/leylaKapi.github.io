@@ -36,3 +36,4 @@ git stash branch
 
 
 That's all.
+I hope helped to you.
