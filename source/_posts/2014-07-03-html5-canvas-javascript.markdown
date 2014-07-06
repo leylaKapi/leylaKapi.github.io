@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "HTML Canvas Javascript"
+title: "HTML5 Canvas Javascript"
 date: 2014-07-03 16:10:34 +0300
 comments: true
 categories: html5 canvas javascript game development libraries frameworks
