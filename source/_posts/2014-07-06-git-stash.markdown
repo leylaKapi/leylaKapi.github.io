@@ -1,0 +1,38 @@
+---
+layout: post
+title: "Git Stash"
+date: 2014-07-06 19:12:29 +0300
+comments: true
+categories: git gitHub stash VCS git-flow
+---
+
+### Command of Git Stash
+
+Thanks to `git stash`, provide to stash the changes in a dirty working directory away.
+
+```bash
+git stash
+```
+
+```bash
+git flow feature start your_feature_name
+```
+
+```bash
+git stash pop  // move to your_feature_name
+```
+
+```bash
+git stash list
+```
+
+```bash
+git stash drop
+```
+
+```bash
+git stash branch
+```
+
+
+That's all.
