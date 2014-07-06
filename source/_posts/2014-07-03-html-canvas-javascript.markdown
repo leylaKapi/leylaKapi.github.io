@@ -28,5 +28,7 @@ This library provide to `build and animate` to game project. I found some Html5 
 * [Lime.js](http://www.limejs.com/)
 * [Melon.js](http://melonjs.org/)
 
+If you want to researches with details, you can visit [this page](http://lab2023.com/html5_canvas_javascript_libraries.html) .
+
 That's all .
 I hope helped to you .
