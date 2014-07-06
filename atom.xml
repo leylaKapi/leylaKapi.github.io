@@ -4,7 +4,7 @@
   <title><![CDATA[Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-07-06T19:01:25+03:00</updated>
+  <updated>2014-07-06T19:22:46+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -12,6 +12,59 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Git Stash]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/07/06/git-stash/"/>
+    <updated>2014-07-06T19:12:29+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/07/06/git-stash</id>
+    <content type="html"><![CDATA[<h3>Command of Git Stash</h3>
+
+<p>Thanks to <code>git stash</code>, provide to stash the changes in a dirty working directory away.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git stash
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git flow feature start your_feature_name
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git stash pop  // move to your_feature_name
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git stash list
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git stash drop
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git stash branch
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&rsquo;s all.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[HTML5 Canvas Javascript]]></title>
@@ -2370,106 +2423,6 @@ and use in</p>
 
 
 <p><strong>Lastly</strong> If you want to learn more, you can visit <a href="http://www.ruby-doc.org/core-2.0/Hash.html">ruby-doc</a> .</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[What is the Ruby On Rails?]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/02/28/what-is-the-ruby-on-rails/"/>
-    <updated>2014-02-28T18:25:39+02:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/02/28/what-is-the-ruby-on-rails</id>
-    <content type="html"><![CDATA[<h2>What is the Ruby On Rails and How install?</h2>
-
-<p><strong>Ruby</strong></p>
-
-<ul>
-<li>Object oriented programming language</li>
-<li>Created in 1995 by Matz</li>
-<li>Used for many purpose, not only web app.</li>
-</ul>
-
-
-<p><strong>Ruby on Rails</strong></p>
-
-<ul>
-<li>Open source, web applications framework.</li>
-<li>Written in Ruby</li>
-<li>Release as open source in 2004</li>
-</ul>
-
-
-<h4>How install Ruby On Rails?</h4>
-
-<p>Firstly, you have to install ruby, and then start install rails.
-Is there ruby in your pc? Look at!</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>ruby -v
-</span><span class='line'><span class="c"># ruby 2.0.0p353 (2013-11-22 revision 43784) [x86_64-darwin13.0.0]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>I hear , &lsquo;my pc don&rsquo;t has ruby.&rsquo; Dont worry, when you are going to <a href="https://www.ruby-lang.org/en/">download ruby</a>.
-Now, we install the ruby after then</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>gem update system
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>start install rails framework.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>gem install rails
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>rails was install and which version?</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rails --version  or rails -v
-</span><span class='line'><span class="c"># Rails 4.0.2</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Yeah!, now pc has ruby and rails.</p>
-
-<p>Then we can start to create Ruby on Rails project.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rails new start_rails_project
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Created rails project. That&rsquo;s very easy!</p>
-
-<p>Go to rails project path and install bundler</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>gem install bundle
-</span><span class='line'>bundle install
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Now, you can write your ruby code on rails framework . How run your rails applications ?</p>
-
-<p>We should write</p>
-
-<pre><code>    rails server or rails s
-</code></pre>
-
-<p>In terminal, you should see this url &lsquo;<a href="http://0.0.0.0:3000">http://0.0.0.0:3000</a>&rsquo; and copy this, paste on your search bar.</p>
-
-<p>You can see Ruby default information page</p>
-
-<p><img src="../images/rails_welcome.png" alt="Default page" /></p>
-
-<p>Yeah, Installed Ruby On Rails and started to code your rails applications.</p>
-
-<p>If you want to learn more, you should visit <a href="http://guides.rubyonrails.org/">rubyonrails</a>.</p>
 ]]></content>
   </entry>
   
