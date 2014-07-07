@@ -4,7 +4,7 @@
   <title><![CDATA[Category: git | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/git/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-07-06T19:26:40+03:00</updated>
+  <updated>2014-07-08T01:59:55+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -12,6 +12,39 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Remove log and idea files on your Rails Project]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/07/08/remove-log-and-idea-files-on-your-rails-project/"/>
+    <updated>2014-07-08T01:53:53+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/07/08/remove-log-and-idea-files-on-your-rails-project</id>
+    <content type="html"><![CDATA[<h3>How to remove log and idea files on your project ?</h3>
+
+<p>Remove idea files</p>
+
+<p><code>bash
+git rm -r --cached .idea
+</code>
+While you were remove, terminal gives error about it, you can try to below command :</p>
+
+<p><code>bash
+git rm -rf --cached .idea
+</code>
+Remove log files</p>
+
+<p><code>bash
+git rm -r log/development.log
+</code></p>
+
+<p>After that, you should include on your <code>.gitignore</code> file like;</p>
+
+<p><code>bash
+echo '*log' &gt; .gitignore
+</code></p>
+
+<p>That&rsquo;s all.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Git Stash]]></title>

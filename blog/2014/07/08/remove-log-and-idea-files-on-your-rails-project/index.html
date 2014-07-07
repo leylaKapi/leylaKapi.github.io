@@ -3,11 +3,12 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>About - Leyla's Blog</title>
+	<title>Remove log and idea files on your Rails Project - Leyla's Blog</title>
 	<meta name="author" content="Leyla Kapi">
 
 	
-	<meta name="description" content="Hi , I&rsquo;m leyla . I&rsquo;m computer engineering student at PAU . Also I&rsquo;m web developer at lab2023. In addition, I like to search about &hellip;">
+	<meta name="description" content="How to remove log and idea files on your project ? Remove idea files 1
+git rm -r --cached .idea While you were remove, terminal gives error about it &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -81,22 +82,66 @@
 	
 		
 	
-	<div id="content" class="inner"><article class="page">
-    
-    <h1 class="title">About</h1>
-    
-    <div class="entry-content"><p>Hi ,</p>
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Remove Log and Idea Files on Your Rails Project</h2>
+	<div class="entry-content"><h3>How to remove log and idea files on your project ?</h3>
 
-<p>I&rsquo;m leyla . I&rsquo;m computer engineering student at PAU . Also I&rsquo;m web developer at <a href="http://www.lab2023.com/">lab2023</a>. In addition, I like to search about mythology, computers and futuristic technology.</p>
+<p>Remove idea files</p>
 
-<p>Get in touch:</p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git rm -r --cached .idea
+</span></code></pre></td></tr></table></div></figure>
 
-<ul>
-<li>Email: [<a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#x6c;&#x65;&#x79;&#x6c;&#97;&#x6b;&#x61;&#x70;&#105;&#64;&#x67;&#109;&#97;&#x69;&#108;&#x2e;&#x63;&#x6f;&#x6d;">&#x6c;&#101;&#121;&#108;&#97;&#x6b;&#97;&#112;&#105;&#x40;&#x67;&#109;&#97;&#105;&#x6c;&#x2e;&#99;&#111;&#x6d;</a>]</li>
-<li>Twitter: <a href="http://twitter.com/leylakapi">@leylakapi</a></li>
-<li>Github: <a href="http://github.com/leylakapi">github.com/leylakapi</a></li>
-</ul>
 
+<p>While you were remove, terminal gives error about it, you can try to below command :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git rm -rf --cached .idea
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Remove log files</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git rm -r log/development.log
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>After that, you should include on your <code>.gitignore</code> file like;</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">echo</span> <span class="s1">&#39;*log&#39;</span> &gt; .gitignore
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&rsquo;s all.</p>
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-08T01:53:53+03:00" pubdate data-updated="true">Jul 8<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/dot-gitignore/'>.gitignore</a>, <a class='category' href='/blog/categories/dot-idea/'>.idea</a>, <a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/github/'>gitHub</a>, <a class='category' href='/blog/categories/log/'>log</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
+
+
+</div>
+	
+	<div class="comments"><a href="#disqus_thread">Comments</a></div>
+	
 </div>
 </article>
 
@@ -117,11 +162,10 @@
 
 
 <section id="comment">
-    <h1 class="title">Comments</h1>
+    <h2 class="title">Comments</h2>
     <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
 </section>
-
 </div>
 	<footer id="footer" class="inner">Copyright &copy; 2014
 
@@ -142,8 +186,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://leylaKapi.github.io/about/index.html';
-        var disqus_url = 'http://leylaKapi.github.io/about/index.html';
+        var disqus_identifier = 'http://leylaKapi.github.io/blog/2014/07/08/remove-log-and-idea-files-on-your-rails-project/';
+        var disqus_url = 'http://leylaKapi.github.io/blog/2014/07/08/remove-log-and-idea-files-on-your-rails-project/';
         var disqus_script = 'embed.js';
       
     (function () {
