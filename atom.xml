@@ -4,7 +4,7 @@
   <title><![CDATA[Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-07-10T19:36:25+03:00</updated>
+  <updated>2014-07-13T14:24:29+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -12,6 +12,65 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Useful gems]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/07/13/when-you-start-to-project/"/>
+    <updated>2014-07-13T13:58:15+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/07/13/when-you-start-to-project</id>
+    <content type="html"><![CDATA[<h3>When you start to project, which gems are useful ?</h3>
+
+<p>When you start a rails project, you can use these gems which useful for project.</p>
+
+<p>Gems are like these ,</p>
+
+<ul>
+<li><a href="https://rubygems.org/gems/blankable">blankable</a></li>
+<li><a href="https://rubygems.org/gems/simple_form">simple_form</a></li>
+<li><a href="https://rubygems.org/gems/model_to_locale">model_to_locale</a></li>
+<li><a href="https://rubygems.org/gems/responders">responders</a></li>
+<li><a href="https://rubygems.org/gems/will_paginate">will_paginate</a></li>
+<li><a href="https://rubygems.org/gems/will_paginate-bootstrap">will_paginate_bootstrap</a></li>
+<li><a href="https://rubygems.org/gems/better_errors">better_errors</a></li>
+</ul>
+
+
+<p>1- <strong>blankable gem</strong></p>
+
+<p><code>blankable</code> provide to add blank slates to index view &hellip;
+You can look on <a href="https://github.com/lab2023/blankable">gitHub</a></p>
+
+<p>2- <strong>simple_form</strong></p>
+
+<p><code>simple_form</code> provide to make easy rails forms, aims is that to be as flexible as possible
+while helping you with powerful components to create your form &hellip; You can look on <a href="https://github.com/plataformatec/simple_form">gitHub</a></p>
+
+<p>3- <strong>model_to_locale</strong></p>
+
+<p><code>model_to_locale</code> provide to create locale file for model attributes &hellip;
+You can look on <a href="https://github.com/lab2023/model_to_locale">gitHub</a></p>
+
+<p>4- <strong>responders</strong></p>
+
+<p><code>responders</code> provide to dry up your Rails 3.2+ app &hellip;
+You can look on <a href="https://github.com/plataformatec/responders">gitHub</a></p>
+
+<p>5- <strong>will_paginate</strong></p>
+
+<p><code>will_paginate</code> provide to pagination library that integrate with RoR, Sinatra &hellip;
+You can look on <a href="https://github.com/mislav/will_paginate">gitHub</a></p>
+
+<p>6- <strong>will_paginate_bootstrap</strong></p>
+
+<p><code>will_paginate_bootstrap</code> provide to integrate in <code>will_paginate</code> to <code>bootstrap</code> &hellip;
+You can look on <a href="https://github.com/bootstrap-ruby/will_paginate-bootstrap">gitHub</a></p>
+
+<p>7- <strong>better_errors</strong></p>
+
+<p><code>better_errors</code> provide to replace standard error page to much better and useful error page
+You can look on <a href="https://github.com/charliesome/better_errorss">gitHub</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How to make a release ?]]></title>
@@ -2304,62 +2363,6 @@ and we write code in this.</li>
 <p>run and see what you can do ?</p>
 
 <p>That&rsquo;s it.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How to show nav-bar according to scroll]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/03/06/how-to-show-nav-bar-according-to-scroll/"/>
-    <updated>2014-03-06T19:30:31+02:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/03/06/how-to-show-nav-bar-according-to-scroll</id>
-    <content type="html"><![CDATA[<h3>Change CSS class after scrolling &hellip;px down</h3>
-
-<p>I want to change menu or nav-bar according to scroll, How I can do this ?</p>
-
-<p>In this article, I can try to explain with an example.</p>
-
-<p>Please, write these code block on your project or created a new project and try to these .
-Yep!, Let&rsquo;s learn step by step :)</p>
-
-<p>Firstly, Created HTML file in your project and write below code block,</p>
-
-<pre><code>index.html
-
-&lt;div id = 'navigation'&gt; Home &lt;/div&gt;
-    &lt;h1&gt; Welcome to Change scroll according to ...px &lt;/h1&gt;
-    &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-     irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-     id est laborum &lt;/p&gt;
-</code></pre>
-
-<p>then wrote this code block in your HTML file. Let&rsquo;s create CSS file in your project for style of your project.</p>
-
-<pre><code>style.css
-
-#navigation {
-        width : 100px;
-        height : 100px;
-        background-color:blue;
-        position: fixed;
-        display: none;
-}
-</code></pre>
-
-<p>this last step but the most important step for scrolling to navigation. Create javascript file for your animation of your project</p>
-
-<pre><code>application.js
-
-$(document).scroll(function() {
-        $('#navigation').toggle($(this).scrollTop() &gt; 1000);
-});
-</code></pre>
-
-<p>Wrote in your project these block and try to run project and What are you seeing in your project ?</p>
-
-<p>That&rsquo;s easy!</p>
 ]]></content>
   </entry>
   
