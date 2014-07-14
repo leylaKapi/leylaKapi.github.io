@@ -44,7 +44,7 @@ Attribute mustn't be in a list of choises. (array or range) :in
 
 Attribute must match a regular expression. :with
 
-- validates_uniqueness_of
+- **validates_uniqueness_of**
 
 Attribute mustn't exist in the database :case_sensitive, :scope
 
