@@ -11,7 +11,7 @@ categories: gem rails ror rubygems gitHub
 
 When you start a rails project, you can use these gems which useful for project.
 
-Gems are like these ,
+Gems are like,
 
 * [blankable](https://rubygems.org/gems/blankable)
 * [simple_form](https://rubygems.org/gems/simple_form)
