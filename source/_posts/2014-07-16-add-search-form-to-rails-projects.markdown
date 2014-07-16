@@ -22,6 +22,7 @@ def index
     @search = Project.search(params[:q])
     @project = @search.result(distinct: true).paginate(:page => params[:page])
     respond_with @project
+end
 ```
 
 When you added controller, you should add below code which relation to index file ;
@@ -36,3 +37,5 @@ When you added controller, you should add below code which relation to index fil
 ```
 
 That's all .
+
+I hope helped to you .
