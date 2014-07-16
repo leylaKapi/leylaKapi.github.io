@@ -7,7 +7,7 @@
 	<meta name="author" content="Leyla Kapi">
 
 	
-	<meta name="description" content="How can you add simple search form to rails project ? You want ot add search form, but you don&rsquo;t no HOW? Let&rsquo;s start, firstly you should &hellip;">
+	<meta name="description" content="How can you add simple search form to rails project ? You want to add search form, but you don&rsquo;t no. HOW? Let&rsquo;s start, firstly you &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -89,15 +89,16 @@
 		
 		<a href="/blog/2014/07/16/add-search-form-to-rails-projects/">
 		
-			Add Search Form to Rails Projects</a>
+			Add Simple Search Form to Rails Projects</a>
 	</h2>
 	<div class="entry-content">
 		<h3>How can you add simple search form to rails project ?</h3>
 
-<p>You want ot add search form, but you don&rsquo;t no <em>HOW?</em></p>
+<p>You want to add search form, but you don&rsquo;t no.  <em>HOW?</em></p>
 
 <p>Let&rsquo;s start, firstly you should use <a href="https://github.com/activerecord-hackery/ransack">ransack</a> and
-<a href="https://github.com/mislav/will_paginate">will_paginate</a> gems in your <code>Gemfile</code></p>
+<a href="https://github.com/mislav/will_paginate">will_paginate</a> gems in your <code>Gemfile</code> then you should write in
+terminal <code>bundle</code> .</p>
 
 <p>Then open controller which you want to add search bar, like ;</p>
 
@@ -107,10 +108,12 @@
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
+<span class='line-number'>5</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">index</span>
 </span><span class='line'>    <span class="vi">@search</span> <span class="o">=</span> <span class="no">Project</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">params</span><span class="o">[</span><span class="ss">:q</span><span class="o">]</span><span class="p">)</span>
 </span><span class='line'>    <span class="vi">@project</span> <span class="o">=</span> <span class="vi">@search</span><span class="o">.</span><span class="n">result</span><span class="p">(</span><span class="ss">distinct</span><span class="p">:</span> <span class="kp">true</span><span class="p">)</span><span class="o">.</span><span class="n">paginate</span><span class="p">(</span><span class="ss">:page</span> <span class="o">=&gt;</span> <span class="n">params</span><span class="o">[</span><span class="ss">:page</span><span class="o">]</span><span class="p">)</span>
 </span><span class='line'>    <span class="n">respond_with</span> <span class="vi">@project</span>
+</span><span class='line'><span class="k">end</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
@@ -130,6 +133,8 @@
 
 
 <p>That&rsquo;s all .</p>
+
+<p>I hope helped to you .</p>
 
 		
 		

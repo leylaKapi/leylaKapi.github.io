@@ -4,7 +4,7 @@
   <title><![CDATA[Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-07-16T20:33:56+03:00</updated>
+  <updated>2014-07-16T20:39:25+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -14,16 +14,17 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Add search form to rails projects]]></title>
+    <title type="html"><![CDATA[Add simple search form to rails projects]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/07/16/add-search-form-to-rails-projects/"/>
     <updated>2014-07-16T19:47:15+03:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/07/16/add-search-form-to-rails-projects</id>
     <content type="html"><![CDATA[<h3>How can you add simple search form to rails project ?</h3>
 
-<p>You want ot add search form, but you don&rsquo;t no <em>HOW?</em></p>
+<p>You want to add search form, but you don&rsquo;t no.  <em>HOW?</em></p>
 
 <p>Let&rsquo;s start, firstly you should use <a href="https://github.com/activerecord-hackery/ransack">ransack</a> and
-<a href="https://github.com/mislav/will_paginate">will_paginate</a> gems in your <code>Gemfile</code></p>
+<a href="https://github.com/mislav/will_paginate">will_paginate</a> gems in your <code>Gemfile</code> then you should write in
+terminal <code>bundle</code> .</p>
 
 <p>Then open controller which you want to add search bar, like ;</p>
 
@@ -33,10 +34,12 @@
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
+<span class='line-number'>5</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">index</span>
 </span><span class='line'>    <span class="vi">@search</span> <span class="o">=</span> <span class="no">Project</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">params</span><span class="o">[</span><span class="ss">:q</span><span class="o">]</span><span class="p">)</span>
 </span><span class='line'>    <span class="vi">@project</span> <span class="o">=</span> <span class="vi">@search</span><span class="o">.</span><span class="n">result</span><span class="p">(</span><span class="ss">distinct</span><span class="p">:</span> <span class="kp">true</span><span class="p">)</span><span class="o">.</span><span class="n">paginate</span><span class="p">(</span><span class="ss">:page</span> <span class="o">=&gt;</span> <span class="n">params</span><span class="o">[</span><span class="ss">:page</span><span class="o">]</span><span class="p">)</span>
 </span><span class='line'>    <span class="n">respond_with</span> <span class="vi">@project</span>
+</span><span class='line'><span class="k">end</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
@@ -56,6 +59,8 @@
 
 
 <p>That&rsquo;s all .</p>
+
+<p>I hope helped to you .</p>
 ]]></content>
   </entry>
   
