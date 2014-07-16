@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ruby | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-07-15T14:23:46+03:00</updated>
+  <updated>2014-07-16T20:34:28+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -12,6 +12,50 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Add search form to rails projects]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/07/16/add-search-form-to-rails-projects/"/>
+    <updated>2014-07-16T19:47:15+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/07/16/add-search-form-to-rails-projects</id>
+    <content type="html"><![CDATA[<h3>How can you add simple search form to rails project ?</h3>
+
+<p>You want ot add search form, but you don&rsquo;t no <em>HOW?</em></p>
+
+<p>Let&rsquo;s start, firstly you should use <a href="https://github.com/activerecord-hackery/ransack">ransack</a> and
+<a href="https://github.com/mislav/will_paginate">will_paginate</a> gems in your <code>Gemfile</code></p>
+
+<p>Then open controller which you want to add search bar, like ;</p>
+
+<p><code>projects_controller</code></p>
+
+<p>```ruby
+def index</p>
+
+<pre><code>@search = Project.search(params[:q])
+@project = @search.result(distinct: true).paginate(:page =&gt; params[:page])
+respond_with @project
+</code></pre>
+
+<p>```</p>
+
+<p>When you added controller, you should add below code which relation to index file ;</p>
+
+<p><code>projects/index.html.haml</code></p>
+
+<p>```haml
+= search_form_for @search do |f|</p>
+
+<pre><code>= f.label :name_cont
+= f.search_field :name_cont
+= f.submit
+</code></pre>
+
+<p>```</p>
+
+<p>That&rsquo;s all .</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Validation methods]]></title>

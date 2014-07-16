@@ -4,7 +4,7 @@
   <title><![CDATA[Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-07-15T14:23:30+03:00</updated>
+  <updated>2014-07-16T20:33:56+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -12,6 +12,52 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Add search form to rails projects]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/07/16/add-search-form-to-rails-projects/"/>
+    <updated>2014-07-16T19:47:15+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/07/16/add-search-form-to-rails-projects</id>
+    <content type="html"><![CDATA[<h3>How can you add simple search form to rails project ?</h3>
+
+<p>You want ot add search form, but you don&rsquo;t no <em>HOW?</em></p>
+
+<p>Let&rsquo;s start, firstly you should use <a href="https://github.com/activerecord-hackery/ransack">ransack</a> and
+<a href="https://github.com/mislav/will_paginate">will_paginate</a> gems in your <code>Gemfile</code></p>
+
+<p>Then open controller which you want to add search bar, like ;</p>
+
+<p><code>projects_controller</code></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">index</span>
+</span><span class='line'>    <span class="vi">@search</span> <span class="o">=</span> <span class="no">Project</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">params</span><span class="o">[</span><span class="ss">:q</span><span class="o">]</span><span class="p">)</span>
+</span><span class='line'>    <span class="vi">@project</span> <span class="o">=</span> <span class="vi">@search</span><span class="o">.</span><span class="n">result</span><span class="p">(</span><span class="ss">distinct</span><span class="p">:</span> <span class="kp">true</span><span class="p">)</span><span class="o">.</span><span class="n">paginate</span><span class="p">(</span><span class="ss">:page</span> <span class="o">=&gt;</span> <span class="n">params</span><span class="o">[</span><span class="ss">:page</span><span class="o">]</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">respond_with</span> <span class="vi">@project</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>When you added controller, you should add below code which relation to index file ;</p>
+
+<p><code>projects/index.html.haml</code></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="p">=</span> <span class="n">search_form_for</span> <span class="vi">@search</span> <span class="k">do</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span>
+</span><span class='line'>    <span class="p">=</span> <span class="n">f</span><span class="o">.</span><span class="n">label</span> <span class="ss">:name_cont</span>
+</span><span class='line'>    <span class="p">=</span> <span class="n">f</span><span class="o">.</span><span class="n">search_field</span> <span class="ss">:name_cont</span>
+</span><span class='line'>    <span class="p">=</span> <span class="n">f</span><span class="o">.</span><span class="n">submit</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&rsquo;s all .</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Useful gems]]></title>
@@ -2251,118 +2297,6 @@ Without DNS, it wil be difficult to know IP address of websites which visit dail
 <p>That&rsquo;s it.</p>
 
 <p>I try to explain shortly DNS, I hope, this article helped to you .</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Middleman blog]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/03/15/blog-middleman/"/>
-    <updated>2014-03-15T17:05:21+02:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/03/15/blog-middleman</id>
-    <content type="html"><![CDATA[<h3>How to create middleman blog for middleman project?</h3>
-
-<ul>
-<li>Middleman supported blogging in your project or your blog.</li>
-</ul>
-
-
-<p>If you create a blog, I think you should with middleman blogging. I hear, you say &lsquo; WHY ? &rsquo;</p>
-
-<p>WHY?</p>
-
-<ul>
-<li>Easy to use,</li>
-<li>Embed in your project easily</li>
-</ul>
-
-
-<p>&hellip;</p>
-
-<p><strong>Let&rsquo;s learn blogging with middleman blog</strong></p>
-
-<p>Firstly, if you use middleman blog in your project, this means if you use blogging in your website or application,
-you  should go to path of your project, open and write above command.</p>
-
-<p>you write in <em>Gemfile</em> :</p>
-
-<pre><code>    gem ' middleman-blog '
-</code></pre>
-
-<p>and then, in <em>config.rb</em></p>
-
-<pre><code>    activate :blog do |blog|
-    ---
-    set
-</code></pre>
-
-<p>and when you write these command in your project, open terminal or console  write</p>
-
-<pre><code>    bundle install                  #install gems
-    bundle exec middleman server    #run your blog in your project
-</code></pre>
-
-<p>If you want to set up from the rough, what you want to open to path, and write in terminal</p>
-
-<pre><code>    middleman init blog_name --template=blog
-</code></pre>
-
-<p>When you write this command you can see, many file created for your blo.</p>
-
-<p>Now open created blog, you should see directories,</p>
-
-<pre><code>    images
-    javascripts
-    stylesheets
-</code></pre>
-
-<p>files,</p>
-
-<pre><code>    index.html.erb
-    layout.erb
-    calendar.html.erb
-    tags.html.erb
-    feed.xml.builder
-    2012-01-01-example-article
-</code></pre>
-
-<ul>
-<li>Middleman provide  many tags and properties for your blog, if you want to organize, you can open <em>config.rb</em> and organize these, and see.</li>
-<li>If you want to organize style for blog, you should write in stylesheets and javascript directories, with CSS3 and Jquery ;)</li>
-<li>If you don&rsquo;t want to use <strong>.html.erb</strong> files, you can translate to <strong>.html.haml</strong> in <a href="http://html2haml.heroku.com/">html2haml</a>.</li>
-</ul>
-
-
-<p>And use this.</p>
-
-<ul>
-<li>If you want to use blog in your middleman project, you should create new layouts, and <em>index.html.haml</em> in your blog directory,
-different from your middleman project.
-and we write code in this.</li>
-</ul>
-
-
-<p>Yep ! you create new blog and prepared write new article your blog,</p>
-
-<p>Let&rsquo;s start :)</p>
-
-<pre><code>middleman article article_name
-</code></pre>
-
-<p>When write this command, middleman created new article file, blogging in this file, but we write with markdown inside created article file.</p>
-
-<p>When you write your article you run project with</p>
-
-<pre><code>bundle exec middleman server
-</code></pre>
-
-<p>after the</p>
-
-<pre><code>bundle install
-</code></pre>
-
-<p>run and see what you can do ?</p>
-
-<p>That&rsquo;s it.</p>
 ]]></content>
   </entry>
   
