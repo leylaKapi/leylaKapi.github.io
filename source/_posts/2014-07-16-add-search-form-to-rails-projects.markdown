@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Add search form to rails projects"
+title: "Add simple search form to rails projects"
 date: 2014-07-16 19:47:15 +0300
 comments: true
 categories: rails search form ruby model controller
@@ -8,10 +8,11 @@ categories: rails search form ruby model controller
 
 ### How can you add simple search form to rails project ?
 
-You want ot add search form, but you don't no *HOW?*
+You want to add search form, but you don't no.  *HOW?*
 
 Let's start, firstly you should use [ransack](https://github.com/activerecord-hackery/ransack) and
-[will_paginate](https://github.com/mislav/will_paginate) gems in your `Gemfile`
+[will_paginate](https://github.com/mislav/will_paginate) gems in your `Gemfile` then you should write in
+terminal `bundle` .
 
 Then open controller which you want to add search bar, like ;
 
