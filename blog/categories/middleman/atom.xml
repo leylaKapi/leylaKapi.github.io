@@ -4,7 +4,7 @@
   <title><![CDATA[Category: middleman | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/middleman/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-07-16T20:39:43+03:00</updated>
+  <updated>2014-07-18T16:40:35+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -12,6 +12,40 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Error compiling sass assets]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/07/17/error-compiling-sass-assets/"/>
+    <updated>2014-07-17T16:27:24+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/07/17/error-compiling-sass-assets</id>
+    <content type="html"><![CDATA[<h3>Middleman sass compiling error</h3>
+
+<p>If you use middleman for web template and your project give you like,</p>
+
+<p><code>sass
+Error compiling CSS asset
+NoMethodError: undefined method `font_path` for nil:NilClass
+</code>
+error.</p>
+
+<p>You can fix like with edit your <code>Gemfile</code></p>
+
+<p><code>ruby
+gem 'bootstrap-sass', '~&gt; 3.1.1'
+gem 'middleman-sprockets', '3.2.2'
+gem 'middleman-bootstrap-navbar','~&gt;2.0'
+</code></p>
+
+<p>Then you can write in terminal <code>bundle install</code>
+Than if errors didn&rsquo;t fixed, you should write on terminal</p>
+
+<p><code>bash
+bundle update middleman-sprockets
+</code></p>
+
+<p>That&rsquo;s all.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How create tree - list menu with HAML]]></title>
