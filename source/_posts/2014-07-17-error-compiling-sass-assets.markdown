@@ -31,4 +31,8 @@ Than if errors didn't fixed, you should write on terminal
 bundle update middleman-sprockets
 ```
 
+If you want to researches with details, you should look [this page](https://github.com/middleman/middleman/issues/1265)
+
 That's all.
+
+I hope helped to you.
