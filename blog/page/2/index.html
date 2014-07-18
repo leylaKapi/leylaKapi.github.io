@@ -7,8 +7,20 @@
 	<meta name="author" content="Leyla Kapi">
 
 	
-	<meta name="description" content="Ruby on Rails Validation methods validates_presence_of Attribute mustn&rsquo;t be blank(nil,false,[],{}) 1
-validates_presence_of :field_name &hellip;">
+	<meta name="description" content="Solve the YAML exception reading invalid byte sequence in US-ASCII When you write 1
+bundle exec rake generate you get 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13 &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -83,6 +95,105 @@ validates_presence_of :field_name &hellip;">
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/05/20/how-can-you-solve-yaml-exception-reading-bug-in-octopress/">
+		
+			How Can You Solve YAML Exception Reading Bug in Octopress ?</a>
+	</h2>
+	<div class="entry-content">
+		<h3>Solve the YAML exception reading invalid byte sequence in US-ASCII</h3>
+
+<p>When you write</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>bundle <span class="nb">exec </span>rake generate
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>you get</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>YAML Exception reading 2014-04-28-your_file.markdown: invalid byte sequence in US-ASCII
+</span><span class='line'>&gt;&gt;&gt; Compass is watching <span class="k">for </span>changes. Press Ctrl-C to Stop.
+</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:35<span class="o">]</span> <span class="s2">&quot;GET / HTTP/1.1&quot;</span> 200 93907 0.0215
+</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:35<span class="o">]</span> <span class="s2">&quot;GET /stylesheets/screen.css HTTP/1.1&quot;</span> 200 28107 0.0019
+</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:35<span class="o">]</span> <span class="s2">&quot;GET /images/index.jpeg HTTP/1.1&quot;</span> 200 7466 0.0020
+</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:35<span class="o">]</span> <span class="s2">&quot;GET /javascripts/slash.js HTTP/1.1&quot;</span> 200 1786 0.0010
+</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:35<span class="o">]</span> <span class="s2">&quot;GET /javascripts/jquery.fancybox.pack.js HTTP/1.1&quot;</span> 200 17638 0.0014
+</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:35<span class="o">]</span> <span class="s2">&quot;GET /images/social/twitter.png?1398238298 HTTP/1.1&quot;</span> 200 554 0.0009
+</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:35<span class="o">]</span> <span class="s2">&quot;GET /images/social/github.png?1398238298 HTTP/1.1&quot;</span> 200 581 0.0029
+</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:35<span class="o">]</span> <span class="s2">&quot;GET /images/social/google.png?1398238298 HTTP/1.1&quot;</span> 200 602 0.0034
+</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:35<span class="o">]</span> <span class="s2">&quot;GET /font/fontawesome-webfont.woff HTTP/1.1&quot;</span> 200 23416 0.0034
+</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:35<span class="o">]</span> <span class="s2">&quot;GET /images/social/rss.png?1398238298 HTTP/1.1&quot;</span> 200 619 0.0069
+</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:36<span class="o">]</span> <span class="s2">&quot;GET /favicon.png HTTP/1.1&quot;</span> 200 400 0.0009
+</span><span class='line'><span class="o">[</span>2014-06-17 17:08:56<span class="o">]</span> regeneration: 1 files changed
+</span><span class='line'>YAML Exception reading 2014-04-28-your_file.markdown: invalid byte sequence in US-ASCII
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you want to solve this <code>rake generate</code> bug, you can use instead of <code>bundle exec rake generate</code>,
+you should use</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">LANG</span><span class="o">=</span>en_US.utf-8 bundle <span class="nb">exec </span>rake generate
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>this command, and you can write <code>rake preview</code> or <code>rake deploy</code></p>
+
+<p>Fixed the bug.</p>
+
+<p>I hope helped to you.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-20T17:19:18+03:00" pubdate data-updated="true">May 20<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/us-ascii/'>US-ASCII</a>, <a class='category' href='/blog/categories/exception/'>exception</a>, <a class='category' href='/blog/categories/generate/'>generate</a>, <a class='category' href='/blog/categories/invalid/'>invalid</a>, <a class='category' href='/blog/categories/rake/'>rake</a>, <a class='category' href='/blog/categories/yaml/'>yaml</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/05/20/how-can-you-solve-yaml-exception-reading-bug-in-octopress/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -1872,165 +1983,6 @@ google_analytics_tracking_id: AB-12345678-9
 </div>
 	
 	<div class="comments"><a href="/blog/2014/03/26/how-do-google-analytics-add-to-octopress/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/03/22/how-create-tree-list-menu-with-haml/">
-		
-			How Create Tree - List Menu With HAML</a>
-	</h2>
-	<div class="entry-content">
-		<h3>How to created tree &ndash; list menu with haml, sass, coffeescript ?</h3>
-
-<p>Firstly, we create middleman project and create</p>
-
-<pre><code>index.html.haml
-style.css.sass
-application.coffee
-</code></pre>
-
-<p>then we open <code>index.html.haml</code> file and we write your code like this,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="p">-</span><span class="o">--</span> <span class="n">my</span> <span class="n">code</span> <span class="n">like</span> <span class="n">this</span> <span class="o">---</span>
-</span><span class='line'><span class="nt">%ul</span><span class="nc">.archive_tool</span>
-</span><span class='line'>  <span class="nt">%li</span><span class="nf">#tools</span> Car
-</span><span class='line'>  <span class="nt">%ul</span><span class="nc">.archive_requires</span>
-</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> BMW
-</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> Mercedes
-</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> Toyota
-</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> Fiat
-</span><span class='line'>  <span class="nt">%li</span><span class="nf">#tools</span> Book
-</span><span class='line'>  <span class="nt">%ul</span><span class="nc">.archive_requires</span>
-</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> Ruby
-</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> ROR
-</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> Thought
-</span><span class='line'>  <span class="nt">%li</span><span class="nf">#tools</span> Computer
-</span><span class='line'>  <span class="nt">%ul</span><span class="nc">.archive_requires</span>
-</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> iMac
-</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> Windows
-</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> Linux
-</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> Seu
-</span><span class='line'>  <span class="nt">%li</span><span class="nf">#tools</span> Chair
-</span><span class='line'>  <span class="nt">%ul</span><span class="nc">.archive_requires</span>
-</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> comfortable
-</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> uncomfortable
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>then open <code>style.css.sass</code> file and write style code</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class='sass'><span class='line'>  <span class="nn">#tools</span><span class="o">,</span> <span class="nn">#requires</span>
-</span><span class='line'>    <span class="na">cursor</span><span class="o">:</span> <span class="no">pointer</span>
-</span><span class='line'>  <span class="nc">.archive_tool</span>
-</span><span class='line'>    <span class="na">margin-left</span><span class="o">:</span> <span class="mi">1</span><span class="kt">em</span>
-</span><span class='line'>    <span class="na">font-size</span><span class="o">:</span> <span class="no">large</span>
-</span><span class='line'>    <span class="na">font-weight</span><span class="o">:</span> <span class="no">bold</span>
-</span><span class='line'>    <span class="na">cursor</span><span class="o">:</span> <span class="no">pointer</span>
-</span><span class='line'>  <span class="nc">.archive_requires</span>
-</span><span class='line'>    <span class="k">@extend</span> <span class="nc">.archive_tool</span>
-</span><span class='line'>    <span class="na">margin</span><span class="o">:</span>
-</span><span class='line'>      <span class="na">top</span><span class="o">:</span> <span class="mi">0</span>
-</span><span class='line'>      <span class="na">bottom</span><span class="o">:</span> <span class="mi">1</span><span class="kt">em</span>
-</span><span class='line'>    <span class="na">font-size</span><span class="o">:</span> <span class="no">medium</span>
-</span><span class='line'>    <span class="na">list-style-type</span><span class="o">:</span> <span class="no">circle</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>then open <code>application.coffee</code> file, and</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='coffeescript'><span class='line'><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span> <span class="nf">-&gt;</span>
-</span><span class='line'>  <span class="nx">$</span><span class="p">(</span><span class="s">&quot;.archive_tool ul&quot;</span><span class="p">).</span><span class="nx">hide</span><span class="p">()</span>
-</span><span class='line'>  <span class="nx">$</span><span class="p">(</span><span class="s">&quot;.archive_tool &gt; li&quot;</span><span class="p">).</span><span class="nx">click</span> <span class="nf">-&gt;</span>
-</span><span class='line'>    <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">parent</span><span class="p">().</span><span class="nx">find</span><span class="p">(</span><span class="s">&quot;ul&quot;</span><span class="p">).</span><span class="nx">slideToggle</span><span class="p">()</span>
-</span><span class='line'>    <span class="k">return</span>
-</span><span class='line'>  <span class="nx">$</span><span class="p">(</span><span class="s">&quot;.archive_requires &gt; li&quot;</span><span class="p">).</span><span class="nx">click</span> <span class="nf">-&gt;</span>
-</span><span class='line'>    <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">parent</span><span class="p">().</span><span class="nx">find</span><span class="p">(</span><span class="s">&quot;ul&quot;</span><span class="p">).</span><span class="nx">slideToggle</span><span class="p">()</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>we write this code inside haml, sass, and coffeescript file and then saved all, run this middleman project.</p>
-
-<p>According to edit your own project try to run codes.</p>
-
-<p>I hope, helped you.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-22T18:57:27+02:00" pubdate data-updated="true">Mar 22<span>nd</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/coffeescript/'>coffeescript</a>, <a class='category' href='/blog/categories/haml/'>haml</a>, <a class='category' href='/blog/categories/middleman/'>middleman</a>, <a class='category' href='/blog/categories/sass/'>sass</a>, <a class='category' href='/blog/categories/tree-list/'>tree-list</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/03/22/how-create-tree-list-menu-with-haml/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>

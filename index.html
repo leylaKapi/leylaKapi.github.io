@@ -822,6 +822,83 @@ in your page,</p>
     <article class="post">
 	<h2 class="title">
 		
+		<a href="/blog/2014/06/21/note-about-write-data-on-haml/">
+		
+			Note About Write &#8216;Data&#8217; on Haml ?</a>
+	</h2>
+	<div class="entry-content">
+		<p>Write <code>data</code> attributes on HAML ?</p>
+
+<p>if you write on haml and use <code>data</code> attribute,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nt">%a</span><span class="p">{</span><span class="s2">&quot;data-slide&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;prev&quot;</span><span class="p">,</span> <span class="ss">href</span><span class="p">:</span> <span class="s2">&quot;#carousel-example-generic&quot;</span><span class="p">,</span> <span class="ss">role</span><span class="p">:</span> <span class="s2">&quot;button&quot;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>but you should style of write can be like below :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nt">%a</span><span class="p">{</span><span class="ss">:data</span> <span class="o">=&gt;</span> <span class="p">{</span><span class="ss">:slide</span> <span class="o">=&gt;</span> <span class="s1">&#39;prev&#39;</span><span class="p">}</span>, href: &#39;#carousel-generic&#39;}
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>OR</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nt">%li</span><span class="p">{</span><span class="s2">&quot;data-target&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;.nav-collapse&quot;</span><span class="p">,</span> <span class="s2">&quot;data-toggle&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;collapse&quot;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>like below</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nt">%li</span><span class="p">{</span><span class="ss">:data</span> <span class="o">=&gt;</span> <span class="p">{</span><span class="ss">:toggle</span> <span class="o">=&gt;</span> <span class="s1">&#39;collapse&#39;</span><span class="p">,</span> <span class="ss">:target</span> <span class="o">=&gt;</span> <span class="s1">&#39;.nav-collapse&#39;</span><span class="p">}</span>}
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you want, you can look at <a href="http://stackoverflow.com/questions/10321632/haml-how-do-i-create-this-line-of-html">this page</a> for details .</p>
+
+<p>That&rsquo;s all</p>
+
+<p>I hope helped to you.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-21T17:13:02+03:00" pubdate data-updated="true">Jun 21<span>st</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/attribute/'>attribute</a>, <a class='category' href='/blog/categories/data/'>data</a>, <a class='category' href='/blog/categories/haml/'>haml</a>, <a class='category' href='/blog/categories/target/'>target</a>, <a class='category' href='/blog/categories/toggle/'>toggle</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/06/21/note-about-write-data-on-haml/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
 		<a href="/blog/2014/06/17/how-to-deploy-your-project-to-heroku/">
 		
 			How to Deploy Your Project to Heroku ?</a>
@@ -971,105 +1048,6 @@ you can run this in your computer. Open your terminal and write</p>
 </div>
 	
 	<div class="comments"><a href="/blog/2014/06/17/how-to-deploy-your-project-to-heroku/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/05/20/how-can-you-solve-yaml-exception-reading-bug-in-octopress/">
-		
-			How Can You Solve YAML Exception Reading Bug in Octopress ?</a>
-	</h2>
-	<div class="entry-content">
-		<h3>Solve the YAML exception reading invalid byte sequence in US-ASCII</h3>
-
-<p>When you write</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>bundle <span class="nb">exec </span>rake generate
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>you get</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>YAML Exception reading 2014-04-28-your_file.markdown: invalid byte sequence in US-ASCII
-</span><span class='line'>&gt;&gt;&gt; Compass is watching <span class="k">for </span>changes. Press Ctrl-C to Stop.
-</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:35<span class="o">]</span> <span class="s2">&quot;GET / HTTP/1.1&quot;</span> 200 93907 0.0215
-</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:35<span class="o">]</span> <span class="s2">&quot;GET /stylesheets/screen.css HTTP/1.1&quot;</span> 200 28107 0.0019
-</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:35<span class="o">]</span> <span class="s2">&quot;GET /images/index.jpeg HTTP/1.1&quot;</span> 200 7466 0.0020
-</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:35<span class="o">]</span> <span class="s2">&quot;GET /javascripts/slash.js HTTP/1.1&quot;</span> 200 1786 0.0010
-</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:35<span class="o">]</span> <span class="s2">&quot;GET /javascripts/jquery.fancybox.pack.js HTTP/1.1&quot;</span> 200 17638 0.0014
-</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:35<span class="o">]</span> <span class="s2">&quot;GET /images/social/twitter.png?1398238298 HTTP/1.1&quot;</span> 200 554 0.0009
-</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:35<span class="o">]</span> <span class="s2">&quot;GET /images/social/github.png?1398238298 HTTP/1.1&quot;</span> 200 581 0.0029
-</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:35<span class="o">]</span> <span class="s2">&quot;GET /images/social/google.png?1398238298 HTTP/1.1&quot;</span> 200 602 0.0034
-</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:35<span class="o">]</span> <span class="s2">&quot;GET /font/fontawesome-webfont.woff HTTP/1.1&quot;</span> 200 23416 0.0034
-</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:35<span class="o">]</span> <span class="s2">&quot;GET /images/social/rss.png?1398238298 HTTP/1.1&quot;</span> 200 619 0.0069
-</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:36<span class="o">]</span> <span class="s2">&quot;GET /favicon.png HTTP/1.1&quot;</span> 200 400 0.0009
-</span><span class='line'><span class="o">[</span>2014-06-17 17:08:56<span class="o">]</span> regeneration: 1 files changed
-</span><span class='line'>YAML Exception reading 2014-04-28-your_file.markdown: invalid byte sequence in US-ASCII
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>If you want to solve this <code>rake generate</code> bug, you can use instead of <code>bundle exec rake generate</code>,
-you should use</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">LANG</span><span class="o">=</span>en_US.utf-8 bundle <span class="nb">exec </span>rake generate
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>this command, and you can write <code>rake preview</code> or <code>rake deploy</code></p>
-
-<p>Fixed the bug.</p>
-
-<p>I hope helped to you.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-05-20T17:19:18+03:00" pubdate data-updated="true">May 20<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/us-ascii/'>US-ASCII</a>, <a class='category' href='/blog/categories/exception/'>exception</a>, <a class='category' href='/blog/categories/generate/'>generate</a>, <a class='category' href='/blog/categories/invalid/'>invalid</a>, <a class='category' href='/blog/categories/rake/'>rake</a>, <a class='category' href='/blog/categories/yaml/'>yaml</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/05/20/how-can-you-solve-yaml-exception-reading-bug-in-octopress/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>
