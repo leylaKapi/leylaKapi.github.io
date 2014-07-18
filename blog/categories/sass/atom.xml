@@ -4,7 +4,7 @@
   <title><![CDATA[Category: sass | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/sass/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-07-18T16:44:01+03:00</updated>
+  <updated>2014-07-18T16:50:41+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -43,7 +43,11 @@ Than if errors didn&rsquo;t fixed, you should write on terminal</p>
 bundle update middleman-sprockets
 </code></p>
 
+<p>If you want to researches with details, you should look <a href="https://github.com/middleman/middleman/issues/1265">this page</a></p>
+
 <p>That&rsquo;s all.</p>
+
+<p>I hope helped to you.</p>
 ]]></content>
   </entry>
   
