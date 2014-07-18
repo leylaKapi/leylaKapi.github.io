@@ -8,7 +8,7 @@ categories: middleman sass bootstrap compiling assets
 
 ### Middleman sass compiling error
 
-If you use middleman for web template and your project give you like,
+While you were made web template with `haml` and `sass`, if you use middleman and bootstrap for your web template and your project give you like,
 
 ```sass
 Error compiling CSS asset
