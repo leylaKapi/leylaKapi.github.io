@@ -1,4 +1,4 @@
-[leyla's Blog](http://leylakapi.com/)  :tada: :cat:
+[leyla's Blog](http://leylakapi.com/)  :tada: 
 ===================
 
-My personal Website :octocat: page
+My personal Website with :octocat: page
