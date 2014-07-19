@@ -1,4 +1,4 @@
-[Leyla's Blog](http://leylakapi.com/)  :tada: :cat: 
+[Leyla's Blog](http://leylakapi.github.io/)  :tada: :cat: 
 ===================
 
 My personal Website   :octocat:
