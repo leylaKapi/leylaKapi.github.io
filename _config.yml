@@ -68,6 +68,9 @@ github_repo_count: 27
 github_show_profile_link: true
 github_skip_forks: true
 
+#linkedin
+linkedin_user: leylakapi
+
 # Twitter
 twitter_user: leylakapi
 twitter_tweet_button: true
