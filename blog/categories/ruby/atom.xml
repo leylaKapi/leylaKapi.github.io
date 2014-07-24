@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Ruby, | Leyla's Blog]]></title>
+  <title><![CDATA[Category: ruby | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-07-22T23:23:22+03:00</updated>
+  <updated>2014-07-24T15:34:27+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -14,131 +14,173 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Brief info about Hash]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/03/01/brief-info-about-hash/"/>
-    <updated>2014-03-01T18:52:57+02:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/03/01/brief-info-about-hash</id>
-    <content type="html"><![CDATA[<h3>What is the hash in ruby ?</h3>
+    <title type="html"><![CDATA[Add simple search form to rails projects]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/07/16/add-search-form-to-rails-projects/"/>
+    <updated>2014-07-16T19:47:15+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/07/16/add-search-form-to-rails-projects</id>
+    <content type="html"><![CDATA[<h3>How can you add simple search form to rails project ?</h3>
 
-<p>Hash, hash, hash ?</p>
+<p>You want to add search form, but you don&rsquo;t no.  <em>HOW?</em></p>
 
-<ul>
-<li>Hashes are one of the biggest property which separated another language in ruby.</li>
-<li>Hash was known <strong>associative array</strong> in another programming language.</li>
-<li>In hash, elements keep <strong>&lsquo;key => value&rsquo;</strong> format in ruby . Like</li>
-</ul>
+<p>Let&rsquo;s start, firstly you should use <a href="https://github.com/activerecord-hackery/ransack">ransack</a> and
+<a href="https://github.com/mislav/will_paginate">will_paginate</a> gems in your <code>Gemfile</code> then you should write in
+terminal <code>bundle</code> .</p>
 
+<p>Then open controller which you want to add search bar, like ;</p>
 
-<p>``` ruby</p>
+<p><code>projects_controller</code></p>
 
-<pre><code>hash_example = { 'name' =&gt; 'John', 'surname' =&gt; 'doe' }
+<p>```ruby
+def index</p>
+
+<pre><code>@search = Project.search(params[:q])
+@project = @search.result(distinct: true).paginate(:page =&gt; params[:page])
+respond_with @project
+</code></pre>
+
+<p>end
+```</p>
+
+<p>When you added controller, you should add below code which relation to index file ;</p>
+
+<p><code>projects/index.html.haml</code></p>
+
+<p>```haml
+= search_form_for @search do |f|</p>
+
+<pre><code>= f.label :name_cont
+= f.search_field :name_cont
+= f.submit
 </code></pre>
 
 <p>```</p>
 
+<p>That&rsquo;s all .</p>
+
+<p>I hope helped to you .</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Validation methods]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/05/04/validation-methods/"/>
+    <updated>2014-05-04T20:39:52+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/05/04/validation-methods</id>
+    <content type="html"><![CDATA[<h3>Ruby on Rails Validation methods</h3>
+
 <ul>
-<li>Values of keys can be any type, but when you use <strong>&lsquo;eql?&rsquo;</strong> method, it can be only a key according to each other.</li>
+<li><strong>validates_presence_of</strong></li>
 </ul>
 
 
-<p>``` ruby</p>
-
-<pre><code>    a = { 3 =&gt; 'three', 3.0 =&gt; 'threedotzero' }
-    a[3]        #three
-    a[3.0]      #threedotzero
-    3 == 3.0        #true
-    3.eql? 3.0      #false
-</code></pre>
-
-<p>```
-&ndash; Hashes usually write with symbols, like :</p>
+<p>Attribute mustn&rsquo;t be blank(nil,false,[],{})</p>
 
 <p><code>ruby
- hash_with_symbol{ name: 'John', surname: 'Doe'}
+validates_presence_of :field_name
 </code></p>
 
 <ul>
-<li>Hashes are similar to Array class, but Array uses integer as its index, hash allow to us any object type.</li>
+<li><strong>validates_length_of</strong></li>
 </ul>
 
 
-<p>``` ruby</p>
+<p>Attribute must meet length requirements :is, :minimum, :maximum, :within, :in, :too_short, :too_long</p>
 
-<pre><code>hash_differences_array{ 'age' =&gt; 15, 'year' =&gt; 2014 }
-array_differences_hash = [1, 2, 3]
-</code></pre>
-
-<p>```</p>
-
-<p>In my opinion, You have an information about hashes. Do you agree with me?!</p>
+<p><code>ruby
+validates_length_of :field_name, :minimum =&gt; 100
+</code></p>
 
 <ul>
-<li>Continue to learn!, I have an information about hash, but if I want to access only keys or values , How does it access or separate these in hash ?</li>
+<li><strong>validates_numericality_of</strong></li>
 </ul>
 
 
-<p>For this question, solution: if you want to access to keys use</p>
+<p>Attribute must be integer or floating number :less_than, :greater_than, :equal_to, :odd, :even, :greater_than_or_equal_to</p>
 
-<pre><code>        keys
-</code></pre>
-
-<p>method, if you want to access to values use</p>
-
-<pre><code>        values
-</code></pre>
-
-<p>methods. Like:</p>
-
-<p>``` ruby</p>
-
-<pre><code>access_values_keys{ name: 'john', surname: 'Doe'}
-access_values_keys.keys         # [:name, :surname]
-access_values_keys.values       #['John', 'Doe']
-</code></pre>
-
-<p>```</p>
+<p><code>ruby
+validates_numericality_of :field_name, :greater_than_or_equal_to =&gt; 5
+</code></p>
 
 <ul>
-<li>Generally, hashes are using in parameters of name,</li>
+<li><strong>validates_inclusion_of</strong></li>
 </ul>
 
 
-<p>``` ruby</p>
-
-<pre><code>def parameters_name(name, age)
-    '#{name} : #{age}'
-end
-puts name 'John' , 18       # Ali : 18
-</code></pre>
-
-<p>```</p>
+<p>Attribute must be in a list of choises. (array or range) :in</p>
 
 <ul>
-<li>Hashes uses to <strong>ENUMERABLE</strong> module like arrays.</li>
+<li><strong>validates_exclusion_of</strong></li>
 </ul>
 
+
+<p>Attribute mustn&rsquo;t be in a list of choises. (array or range) :in</p>
+
+<ul>
+<li><strong>validates_format_of</strong></li>
+</ul>
+
+
+<p>Attribute must match a regular expression. :with</p>
+
+<ul>
+<li><strong>validates_uniqueness_of</strong></li>
+</ul>
+
+
+<p>Attribute mustn&rsquo;t exist in the database :case_sensitive, :scope</p>
+
+<ul>
+<li><strong>validates_acceptance_of</strong></li>
+</ul>
+
+
+<p>Attribute must be accepted :accept(expected value, 1)</p>
+
+<ul>
+<li><strong>validates_confirmation_of</strong></li>
+</ul>
+
+
+<p>Attribute must be confirmed by entering it twice creates a virtual blank attribute for confirmation.</p>
+
+<ul>
+<li><strong>validates_associated</strong></li>
+</ul>
+
+
+<p>Associated object or objects must all be valid.</p>
 
 <p>``` ruby
-  {}.class.ancestors          #show the hash ancestors.</p>
+:allow_nil => true</p>
 
-<pre><code>                                    #[Hash, Enumerable, Object, PP::ObjectMixin, Kernel, BasicObject]
+<h1>Skip valid if attribute is nil</h1>
+
+<p>:allow_blank => true</p>
+
+<h1>Skip valid if attribute is blank</h1>
+
+<p>```</p>
+
+<p>Example of Validations</p>
+
+<p><code>ruby
+validates_presence_of :user_name
+validates_length_of :user_name, :maximum =&gt; 50
+validates_uniqueness_of :user_name
+</code></p>
+
+<p>When we use like above, We diverge to DRY, instead of above</p>
+
+<p>``` ruby
+validates :user_name, :presence => true</p>
+
+<pre><code>                 :length =&gt; {:maximum =&gt; 50}
+                 :uniqueness =&gt; true
 </code></pre>
 
 <p>```</p>
 
-<ul>
-<li>If you want to change from array to hash, you should use</li>
-</ul>
-
-
-<p>``` ruby</p>
-
-<pre><code>.to_h
-</code></pre>
-
-<p>```</p>
-
-<p><strong>Lastly</strong> If you want to learn more, you can visit <a href="http://www.ruby-doc.org/core-2.0/Hash.html">ruby-doc</a> .</p>
+<p>That&rsquo;s all.</p>
 ]]></content>
   </entry>
   
