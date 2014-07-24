@@ -7,20 +7,7 @@
 	<meta name="author" content="Leyla Kapi">
 
 	
-	<meta name="description" content="Solve the YAML exception reading invalid byte sequence in US-ASCII When you write 1
-bundle exec rake generate you get 1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13 &hellip;">
+	<meta name="description" content="Deploy to Heroku You have a rails application, and finished your application want to deploy with Heroku, HOW ? You should open your rails &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -100,6 +87,163 @@ bundle exec rake generate you get 1
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/06/17/how-to-deploy-your-project-to-heroku/">
+		
+			How to Deploy Your Project to Heroku ?</a>
+	</h2>
+	<div class="entry-content">
+		<h3>Deploy to Heroku</h3>
+
+<p><strong>You have a rails application, and finished your application want to deploy with <code>Heroku</code>,  HOW ?</strong></p>
+
+<p>You should open your rails application, and in your application find <code>Gemfile</code>. Open Gemfile write this command</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;heroku&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>in your terminal</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>bundle install
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Come again to <code>Gemfile</code>, instead of</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;sqlite3&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>write</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">group</span> <span class="ss">:development</span><span class="p">,</span> <span class="ss">:test</span> <span class="k">do</span>
+</span><span class='line'>    <span class="n">gem</span> <span class="s1">&#39;sqlite3&#39;</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'><span class="n">group</span> <span class="ss">:production</span> <span class="k">do</span>
+</span><span class='line'>    <span class="n">gem</span> <span class="s1">&#39;pg&#39;</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>in terminal</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>bundle install
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then go to <a href="https://www.heroku.com">Heroku</a>, you should create a free account on heroku. When you create account you can see <code>download toolbet</code> button,
+you can run this in your computer. Open your terminal and write</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>heroku login
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>When you write this command, heroku want to your heroku account information, entered this</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>~  heroku login
+</span><span class='line'>Enter your Heroku credentials.
+</span><span class='line'>Email: leylakapi@gmail.com
+</span><span class='line'>Password <span class="o">(</span>typing will be hidden<span class="o">)</span>:
+</span><span class='line'>Found existing public key: /Users/leylakapi/.ssh/id_rsa.pub
+</span><span class='line'>Uploading SSH public key /Users/leylakapi/.ssh/id_rsa.pub... <span class="k">done</span>
+</span><span class='line'>Authentication successful.
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>After login, you should run with order</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git add .
+</span><span class='line'>git commit -m <span class="s2">&quot;Your commit write here&quot;</span>
+</span><span class='line'>heroku create
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>When you <code>heroku create</code> you should see like</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>Creating pacific-beyond-5670... <span class="k">done</span>, stack is cedar
+</span><span class='line'>http://pacific-beyond-5670.herokuapp.com/ | git@heroku.com:pacific-beyond-5670.git
+</span><span class='line'>Git remote heroku added
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>then</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push heroku master
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you want to see in our browser you should use</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>heroku open
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&rsquo;s all.</p>
+
+<p>I hope helped to you.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-17T16:10:38+03:00" pubdate data-updated="true">Jun 17<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/deploy/'>deploy</a>, <a class='category' href='/blog/categories/heroku/'>heroku</a>, <a class='category' href='/blog/categories/project/'>project</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/06/17/how-to-deploy-your-project-to-heroku/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -1930,64 +2074,6 @@ In addition, If we use ruby library, we should use, like</p>
 </div>
 	
 	<div class="comments"><a href="/blog/2014/04/19/ruby-programming-languages/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/03/26/how-do-google-analytics-add-to-octopress/">
-		
-			How Do Google-analytics Add to Octopress?</a>
-	</h2>
-	<div class="entry-content">
-		<h3>Google &ndash; analytics for Octopress</h3>
-
-<p>Firstly, if you don&rsquo;t have a google-analytics account, you should create it. Then when you create account, google-analytics provide to <strong>tracking ID</strong> for your octopress blog. This tracking ID like</p>
-
-<pre><code>AB-12345678-9
-</code></pre>
-
-<p>and then you should get this id, opened <em>_config.yml</em> in your octopress blog project,</p>
-
-<pre><code>#_config.yml
-
-#Google Analytics
-google_analytics_tracking_id: AB-12345678-9
-</code></pre>
-
-<p>That&rsquo;s all.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-26T03:31:32+02:00" pubdate data-updated="true">Mar 26<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/google/'>google</a>, <a class='category' href='/blog/categories/google-analytics/'>google-analytics</a>, <a class='category' href='/blog/categories/octopress/'>octopress</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/03/26/how-do-google-analytics-add-to-octopress/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>

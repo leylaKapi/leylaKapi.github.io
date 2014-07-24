@@ -4,7 +4,7 @@
   <title><![CDATA[Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-07-24T15:34:11+03:00</updated>
+  <updated>2014-07-24T15:48:09+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -12,6 +12,41 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Rails devise gem generator error]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/07/24/rails-devise-gem-generator-error/"/>
+    <updated>2014-07-24T15:36:48+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/07/24/rails-devise-gem-generator-error</id>
+    <content type="html"><![CDATA[<h3>How to fix rails devise gem generate bug?</h3>
+
+<p>You use <code>devise</code> gem for add admin page or user page to your project. When you generate to your devise gem,
+you&#8217; re getting error to your project,  like ;</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>rails g devise:install
+</span><span class='line'>Could not find generator devise:install
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you get like ths error, you can fix for these order,</p>
+
+<ul>
+<li>Open your <code>Gemfile</code>, add <code>gem 'devise'</code> then,</li>
+<li>Open terminal, run  <code>bundle</code></li>
+<li>Open you computer search bar, Search on your computer to <code>Disk Utility</code></li>
+<li>Select you Disk For example: <code>Macintosh HD</code></li>
+<li>Then click on <code>Repair Disk Permissions</code></li>
+<li>Waiting approximately 15 minutes, then <strong>restart</strong> your computer.</li>
+</ul>
+
+
+<p>That&#8217; s all.</p>
+
+<p>I hope fixed your bug.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Error compiling sass assets]]></title>
@@ -2166,30 +2201,6 @@ In addition, If we use ruby library, we should use, like</p>
 </span><span class='line'><span class="n">exp3</span> <span class="o">=</span> <span class="sr">%r{^[a-z]+$}</span>         <span class="c1">#starting with a but not ending with z.</span>
 </span></code></pre></td></tr></table></div></figure>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How do google-analytics add to octopress?]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/03/26/how-do-google-analytics-add-to-octopress/"/>
-    <updated>2014-03-26T03:31:32+02:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/03/26/how-do-google-analytics-add-to-octopress</id>
-    <content type="html"><![CDATA[<h3>Google &ndash; analytics for Octopress</h3>
-
-<p>Firstly, if you don&rsquo;t have a google-analytics account, you should create it. Then when you create account, google-analytics provide to <strong>tracking ID</strong> for your octopress blog. This tracking ID like</p>
-
-<pre><code>AB-12345678-9
-</code></pre>
-
-<p>and then you should get this id, opened <em>_config.yml</em> in your octopress blog project,</p>
-
-<pre><code>#_config.yml
-
-#Google Analytics
-google_analytics_tracking_id: AB-12345678-9
-</code></pre>
-
-<p>That&rsquo;s all.</p>
 ]]></content>
   </entry>
   
