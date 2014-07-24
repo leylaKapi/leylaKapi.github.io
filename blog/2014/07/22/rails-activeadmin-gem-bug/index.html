@@ -3,12 +3,11 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>About - Leyla's Blog</title>
+	<title>Rails active_admin gem bug - Leyla's Blog</title>
 	<meta name="author" content="Leyla Kapi">
 
 	
-	<meta name="description" content="Hi , I&#8217; m leyla . I&#8217; m computer engineering student at Pamukkale University. Also I&rsquo;m web developer at lab2023.
-I works on Ruby, &hellip;">
+	<meta name="description" content="Fix to admin_active gem bug You add adminactive gem to your Gemfile, then when you&rsquo;re running to bundle on your terminal, you&#8217; re getting &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -87,24 +86,79 @@ I works on Ruby, &hellip;">
 	
 		
 	
-	<div id="content" class="inner"><article class="page">
-    
-    <h1 class="title">About</h1>
-    
-    <div class="entry-content"><p>Hi ,</p>
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Rails Active_admin Gem Bug</h2>
+	<div class="entry-content"><h3>Fix to admin_active gem bug</h3>
 
-<p>I&#8217; m leyla . I&#8217; m computer engineering student at <a href="http://www.pau.edu.tr">Pamukkale University</a>. Also I&rsquo;m web developer at <a href="http://www.lab2023.com/">lab2023</a>.
-I works on <a href="https://www.ruby-lang.org/en/">Ruby</a>, <a href="http://rubyonrails.org/">Ruby on Rails</a>, <a href="http://haml.info/">Haml</a>, <a href="http://sass-lang.com/">Sass</a>, <a href="http://www.javascriptsource.com/">javascript</a>.
-In addition, I like to search about computers, robotic and futuristic technology.</p>
+<p>You add <code>adminactive</code> gem to your Gemfile, then when you&rsquo;re running to <code>bundle</code> on your terminal,  you&#8217; re getting like,</p>
 
-<p>Get in touch:</p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>bundle
+</span><span class='line'>Fetching gem metadata from https://rubygems.org/..........
+</span><span class='line'>Fetching additional metadata from https://rubygems.org/..
+</span><span class='line'>Resolving dependencies...
+</span><span class='line'>Bundler could not find compatible versions <span class="k">for </span>gem <span class="s2">&quot;rails&quot;</span>:
+</span><span class='line'>  In Gemfile:
+</span><span class='line'>    activeadmin <span class="o">(</span>~&gt; 0.6.3<span class="o">)</span> ruby depends on
+</span><span class='line'>      rails <span class="o">(</span>&lt; 4, &gt;<span class="o">=</span> 3.0.0<span class="o">)</span> ruby
+</span><span class='line'>    rails <span class="o">(</span>4.1.4
+</span></code></pre></td></tr></table></div></figure>
 
-<ul>
-<li>Email: [<a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#58;&#108;&#x65;&#121;&#x6c;&#97;&#x6b;&#x61;&#112;&#x69;&#x40;&#103;&#109;&#97;&#x69;&#x6c;&#46;&#x63;&#111;&#x6d;">&#108;&#x65;&#121;&#108;&#97;&#x6b;&#97;&#x70;&#x69;&#x40;&#103;&#x6d;&#x61;&#x69;&#108;&#46;&#99;&#x6f;&#109;</a>]</li>
-<li>Twitter: <a href="http://twitter.com/leylakapi">@leylakapi</a></li>
-<li>GitHub: <a href="http://github.com/leylakapi">github.com/leylakapi</a></li>
-</ul>
 
+<p>If you replace on <code>Gemfile</code> from</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;activeadmin&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>to</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;activeadmin&#39;</span><span class="p">,</span> <span class="ss">github</span><span class="p">:</span> <span class="s1">&#39;gregbell/active_admin&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>you can fix easily.</p>
+
+<p>That&rsquo;s all.</p>
+
+<p>I hope helped to you.</p>
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-22T15:55:03+03:00" pubdate data-updated="true">Jul 22<span>nd</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/gemfile/'>Gemfile</a>, <a class='category' href='/blog/categories/active-admin/'>active_admin</a>, <a class='category' href='/blog/categories/bug/'>bug</a>, <a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
+
+
+</div>
+	
+	<div class="comments"><a href="#disqus_thread">Comments</a></div>
+	
 </div>
 </article>
 
@@ -125,11 +179,10 @@ In addition, I like to search about computers, robotic and futuristic technology
 
 
 <section id="comment">
-    <h1 class="title">Comments</h1>
+    <h2 class="title">Comments</h2>
     <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
 </section>
-
 </div>
 	<footer id="footer" class="inner">Copyright &copy; 2014
 
@@ -150,8 +203,8 @@ In addition, I like to search about computers, robotic and futuristic technology
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://leylaKapi.github.io/about/index.html';
-        var disqus_url = 'http://leylaKapi.github.io/about/index.html';
+        var disqus_identifier = 'http://leylaKapi.github.io/blog/2014/07/22/rails-activeadmin-gem-bug/';
+        var disqus_url = 'http://leylaKapi.github.io/blog/2014/07/22/rails-activeadmin-gem-bug/';
         var disqus_script = 'embed.js';
       
     (function () {
