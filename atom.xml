@@ -4,7 +4,7 @@
   <title><![CDATA[Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-07-24T16:21:56+03:00</updated>
+  <updated>2014-07-25T16:20:16+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -12,6 +12,106 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Rails fix undefined local variable or method]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/07/25/rails-fix-undefined-method/"/>
+    <updated>2014-07-25T15:52:35+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/07/25/rails-fix-undefined-method</id>
+    <content type="html"><![CDATA[<h3>How to fix rails undefined local variable or method &lsquo;confirmed_at&rsquo; ?</h3>
+
+<p>If you getting like,</p>
+
+<p><img src="../images/rails_undefined_error.png" alt="rails undefined" /></p>
+
+<p> and you thinking <strong>how can I fix ?</strong></p>
+
+<ul>
+<li>Firstly, you need to create migration</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rails g migration add_confirmable
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>then,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake db:migrate
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>When you write above command, you get again error, like</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="o">==</span> 20140725114621 Addconfirmable: <span class="nv">migrating</span> <span class="o">===================================</span>
+</span><span class='line'>-- change_table<span class="o">(</span>:admins<span class="o">)</span>
+</span><span class='line'>rake aborted!
+</span><span class='line'>StandardError: An error has occurred, this and all later migrations canceled:
+</span><span class='line'>undefined method <span class="sb">`</span>confirmable<span class="s1">&#39; for #&lt;ActiveRecord::ConnectionAdapters::Table:0x007f8739d3e2e0&gt;..../db/migrate/20140725114621_addconfirmable.rb:4:in `block in up&#39;</span>
+</span><span class='line'>/Users/...../db/migrate/20140725114621_addconfirmable.rb:3:in <span class="sb">`</span>up<span class="err">&#39;</span>
+</span><span class='line'>Tasks: <span class="nv">TOP</span> <span class="o">=</span>&gt; db:migrate
+</span><span class='line'><span class="o">(</span>See full trace by running task with --trace<span class="o">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Let&rsquo;s fix this bug,</p>
+
+<ul>
+<li>You should open your migration which created and delete</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">t</span><span class="o">.</span><span class="n">confirmable</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>then go to another migration named which</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">.</span><span class="n">.</span><span class="o">.</span><span class="n">.</span><span class="o">/</span><span class="n">devise_create</span> <span class="o">.</span><span class="n">.</span><span class="o">.</span> <span class="o">.</span><span class="n">rb</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>in this file, you should see in comment</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'>  <span class="c1">## Confirmable</span>
+</span><span class='line'>  <span class="c1">## t.string   :confirmation_token</span>
+</span><span class='line'>  <span class="c1">## t.datetime :confirmed_at</span>
+</span><span class='line'>  <span class="c1">## t.datetime :confirmation_sent_at</span>
+</span><span class='line'>  <span class="c1">## t.string   :unconfirmed_email # Only if using reconfirmable</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>you should copy or cut above command without comment to your <code>addconfirmable.rb</code> migration file, instead of <code>t.confirmable</code></p>
+
+<p>Then you can write</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake db:migrate
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&rsquo;s all.</p>
+
+<p>I hope fix your bug.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Rails devise gem generator error]]></title>
@@ -1177,107 +1277,6 @@ security certificate engaged and then can be security.</p>
 
 
 <p>I hope this article help you for understanding internet works</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Recreate octopress blog for another computer]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/04/19/recreate-octopress-blog-for-another-computer/"/>
-    <updated>2014-04-19T22:13:18+03:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/04/19/recreate-octopress-blog-for-another-computer</id>
-    <content type="html"><![CDATA[<h3>How I recreate octopress blog another computer ?</h3>
-
-<p>I formatted my computer and then for my octopress blog <em>What can I do ?</em> <strong>reinstall</strong> or <strong>WHAT?</strong></p>
-
-<p>In this post I try to explain, if you have a new computer (after format, buy new computer&hellip;etc)but you have octopress blog
-how to entegrated each other?</p>
-
-<p>Before starting explain it in this article, I try to explain set up octopress, if you forget this, you can find it easily in another
-blog post or you can look at <a href="http://octopress.org/docs/setup/">Octopress Setup guide</a> .</p>
-
-<p>Now recreate a local repo for octopress</p>
-
-<p>-Clone your blog to the new machine</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git clone -b <span class="nb">source </span>git@github.com:username/username.github.io.git octopress
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Then clone the master branch to the _deploy</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">cd </span>octopress
-</span><span class='line'>git clone git@github.com:username/username.github.io.git _deploy
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>then run <em>rake</em></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>gem install bundler
-</span><span class='line'>rbenv rehash
-</span><span class='line'>bundle install
-</span><span class='line'>rake setup_github_pages
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Then we ask to you repo url like</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>Enter the <span class="nb">read</span>/write url <span class="k">for </span>your repository
-</span><span class='line'><span class="o">(</span>For example, <span class="s1">&#39;git@github.com:your_username/your_username.github.io.git)</span>
-</span><span class='line'><span class="s1">           or &#39;</span>https://github.com/your_username/your_username.github.io<span class="err">&#39;</span><span class="o">)</span>
-</span><span class='line'>Repository url:
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Write your like this <em>Repository url: git@github.com:username/username.github.io.git</em></p>
-
-<p>Then you should write these command :</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake generate
-</span><span class='line'>git add .
-</span><span class='line'>git commit -m <span class="s2">&quot;Write comment here&quot;</span>
-</span><span class='line'>git push origin <span class="nb">source</span>
-</span><span class='line'>rake deploy
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>then you can write</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">cd </span>octopress
-</span><span class='line'>git pull origin <span class="nb">source</span> <span class="c">#get another computer changing</span>
-</span><span class='line'><span class="nb">cd</span> ./_deploy
-</span><span class='line'>git pull origin master
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>then you can write</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake deploy
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>That&rsquo;s all :)
-I hope this article help you.</p>
 ]]></content>
   </entry>
   

@@ -7,8 +7,7 @@
 	<meta name="author" content="Leyla Kapi">
 
 	
-	<meta name="description" content="Write data attributes on HAML ? if you write on haml and use data attribute, 1
-%a{&quot;data-slide&quot; =&gt; &quot;prev&quot;, href: &quot;# &hellip;">
+	<meta name="description" content="How to give effect to arrow like bounce with CSS3 ? You want to use arrow in your web-page with animation like bounce ball. HOW ? Firstly, you &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -88,6 +87,118 @@
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/07/02/bounce-effect-with-css3/">
+		
+			Bounce Effect With CSS3</a>
+	</h2>
+	<div class="entry-content">
+		<h3>How to give effect to arrow like bounce with CSS3 ?</h3>
+
+<p>You want to use arrow in your web-page with animation like bounce ball. <code>HOW ?</code></p>
+
+<p>Firstly, you should use this <code>haml</code> in your code, where you want to use <code>section</code>
+in your page,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nt">%p</span><span class="nc">.scroll-down</span>
+</span><span class='line'>   <span class="nc">.bounce</span>
+</span><span class='line'>     <span class="nt">%a</span><span class="p">{</span><span class="ss">href</span><span class="p">:</span> <span class="s1">&#39;#section2&#39;</span><span class="p">}</span>
+</span><span class='line'>        <span class="nt">%i</span><span class="nc">.fa.fa-angle-double-down.fa-5x</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>In your <code>sass</code> file, you should use</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+</pre></td><td class='code'><pre><code class='sass'><span class='line'><span class="nc">.scroll-down</span>
+</span><span class='line'>    <span class="na">text-align</span><span class="o">:</span> <span class="no">center</span>
+</span><span class='line'>    <span class="na">position</span><span class="o">:</span> <span class="no">absolute</span>
+</span><span class='line'>    <span class="na">z-index</span><span class="o">:</span> <span class="mi">2</span>
+</span><span class='line'>    <span class="na">margin</span><span class="o">:</span> <span class="mi">0</span> <span class="no">auto</span>
+</span><span class='line'><span class="nc">.bounce</span>
+</span><span class='line'>  <span class="na">position</span><span class="o">:</span> <span class="no">fixed</span>
+</span><span class='line'>  <span class="na">left</span><span class="o">:</span> <span class="mi">50</span><span class="kt">%</span>
+</span><span class='line'>  <span class="na">margin-top</span><span class="o">:</span> <span class="mi">-25</span><span class="kt">px</span>
+</span><span class='line'>  <span class="na">margin-left</span><span class="o">:</span> <span class="mi">-25</span><span class="kt">px</span>
+</span><span class='line'>  <span class="na">height</span><span class="o">:</span> <span class="mi">50</span><span class="kt">px</span>
+</span><span class='line'>  <span class="na">width</span><span class="o">:</span> <span class="mi">50</span><span class="kt">px</span>
+</span><span class='line'>  <span class="na">-webkit-animation</span><span class="o">:</span> <span class="n">bounce</span> <span class="mi">1</span><span class="kt">s</span> <span class="n">infinite</span>
+</span><span class='line'><span class="k">@-webkit-keyframes</span> <span class="nt">bounce</span>
+</span><span class='line'>  <span class="nt">0</span><span class="err">%</span>
+</span><span class='line'>    <span class="na">bottom</span><span class="o">:</span> <span class="mi">5</span><span class="kt">px</span>
+</span><span class='line'>  <span class="nt">25</span><span class="err">%</span><span class="o">,</span> <span class="nt">75</span><span class="err">%</span>
+</span><span class='line'>    <span class="na">bottom</span><span class="o">:</span> <span class="mi">15</span><span class="kt">px</span>
+</span><span class='line'>  <span class="nt">50</span><span class="err">%</span>
+</span><span class='line'>    <span class="na">bottom</span><span class="o">:</span> <span class="mi">20</span><span class="kt">px</span>
+</span><span class='line'>  <span class="nt">100</span><span class="err">%</span>
+</span><span class='line'>    <span class="na">bottom</span><span class="o">:</span> <span class="mi">0</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&rsquo;s all!</p>
+
+<p>I hope helped to you.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-02T00:56:56+03:00" pubdate data-updated="true">Jul 2<span>nd</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/animation/'>animation</a>, <a class='category' href='/blog/categories/bounce/'>bounce</a>, <a class='category' href='/blog/categories/css3/'>css3</a>, <a class='category' href='/blog/categories/effect/'>effect</a>, <a class='category' href='/blog/categories/font-awesome/'>font-awesome</a>, <a class='category' href='/blog/categories/haml/'>haml</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/07/02/bounce-effect-with-css3/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -1008,141 +1119,6 @@ security certificate engaged and then can be security.</p>
 </div>
 	
 	<div class="comments"><a href="/blog/2014/04/20/how-is-the-internet-working-and-what-is-the-protocols/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/04/19/recreate-octopress-blog-for-another-computer/">
-		
-			Recreate Octopress Blog for Another Computer</a>
-	</h2>
-	<div class="entry-content">
-		<h3>How I recreate octopress blog another computer ?</h3>
-
-<p>I formatted my computer and then for my octopress blog <em>What can I do ?</em> <strong>reinstall</strong> or <strong>WHAT?</strong></p>
-
-<p>In this post I try to explain, if you have a new computer (after format, buy new computer&hellip;etc)but you have octopress blog
-how to entegrated each other?</p>
-
-<p>Before starting explain it in this article, I try to explain set up octopress, if you forget this, you can find it easily in another
-blog post or you can look at <a href="http://octopress.org/docs/setup/">Octopress Setup guide</a> .</p>
-
-<p>Now recreate a local repo for octopress</p>
-
-<p>-Clone your blog to the new machine</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git clone -b <span class="nb">source </span>git@github.com:username/username.github.io.git octopress
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Then clone the master branch to the _deploy</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">cd </span>octopress
-</span><span class='line'>git clone git@github.com:username/username.github.io.git _deploy
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>then run <em>rake</em></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>gem install bundler
-</span><span class='line'>rbenv rehash
-</span><span class='line'>bundle install
-</span><span class='line'>rake setup_github_pages
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Then we ask to you repo url like</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>Enter the <span class="nb">read</span>/write url <span class="k">for </span>your repository
-</span><span class='line'><span class="o">(</span>For example, <span class="s1">&#39;git@github.com:your_username/your_username.github.io.git)</span>
-</span><span class='line'><span class="s1">           or &#39;</span>https://github.com/your_username/your_username.github.io<span class="err">&#39;</span><span class="o">)</span>
-</span><span class='line'>Repository url:
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Write your like this <em>Repository url: git@github.com:username/username.github.io.git</em></p>
-
-<p>Then you should write these command :</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake generate
-</span><span class='line'>git add .
-</span><span class='line'>git commit -m <span class="s2">&quot;Write comment here&quot;</span>
-</span><span class='line'>git push origin <span class="nb">source</span>
-</span><span class='line'>rake deploy
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>then you can write</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">cd </span>octopress
-</span><span class='line'>git pull origin <span class="nb">source</span> <span class="c">#get another computer changing</span>
-</span><span class='line'><span class="nb">cd</span> ./_deploy
-</span><span class='line'>git pull origin master
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>then you can write</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake deploy
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>That&rsquo;s all :)
-I hope this article help you.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-04-19T22:13:18+03:00" pubdate data-updated="true">Apr 19<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/computer/'>computer</a>, <a class='category' href='/blog/categories/octopress/'>octopress</a>, <a class='category' href='/blog/categories/recreate/'>recreate</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/04/19/recreate-octopress-blog-for-another-computer/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>

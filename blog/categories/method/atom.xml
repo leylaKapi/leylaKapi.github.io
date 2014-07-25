@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: method | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/method/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2014-07-25T16:20:35+03:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[Leyla Kapi]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Rails fix undefined local variable or method]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/07/25/rails-fix-undefined-method/"/>
+    <updated>2014-07-25T15:52:35+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/07/25/rails-fix-undefined-method</id>
+    <content type="html"><![CDATA[<h3>How to fix rails undefined local variable or method &lsquo;confirmed_at&rsquo; ?</h3>
+
+<p>If you getting like,</p>
+
+<p><img src="../images/rails_undefined_error.png" alt="rails undefined" /></p>
+
+<p> and you thinking <strong>how can I fix ?</strong></p>
+
+<ul>
+<li>Firstly, you need to create migration</li>
+</ul>
+
+
+<p><code>bash
+rails g migration add_confirmable
+</code></p>
+
+<p>then,</p>
+
+<p><code>bash
+rake db:migrate
+</code></p>
+
+<p>When you write above command, you get again error, like</p>
+
+<p><code>bash
+== 20140725114621 Addconfirmable: migrating ===================================
+-- change_table(:admins)
+rake aborted!
+StandardError: An error has occurred, this and all later migrations canceled:
+undefined method `confirmable' for #&lt;ActiveRecord::ConnectionAdapters::Table:0x007f8739d3e2e0&gt;..../db/migrate/20140725114621_addconfirmable.rb:4:in `block in up'
+/Users/...../db/migrate/20140725114621_addconfirmable.rb:3:in `up'
+Tasks: TOP =&gt; db:migrate
+(See full trace by running task with --trace)
+</code>
+Let&rsquo;s fix this bug,</p>
+
+<ul>
+<li>You should open your migration which created and delete</li>
+</ul>
+
+
+<p><code>ruby
+t.confirmable
+</code></p>
+
+<p>then go to another migration named which</p>
+
+<p><code>ruby
+..../devise_create ... .rb
+</code></p>
+
+<p>in this file, you should see in comment</p>
+
+<p>```ruby</p>
+
+<pre><code>  ## Confirmable
+  ## t.string   :confirmation_token
+  ## t.datetime :confirmed_at
+  ## t.datetime :confirmation_sent_at
+  ## t.string   :unconfirmed_email # Only if using reconfirmable
+</code></pre>
+
+<p>```</p>
+
+<p>you should copy or cut above command without comment to your <code>addconfirmable.rb</code> migration file, instead of <code>t.confirmable</code></p>
+
+<p>Then you can write</p>
+
+<p><code>bash
+rake db:migrate
+</code></p>
+
+<p>That&rsquo;s all.</p>
+
+<p>I hope fix your bug.</p>
+]]></content>
+  </entry>
+  
+</feed>
