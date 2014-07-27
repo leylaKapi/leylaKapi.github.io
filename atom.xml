@@ -4,7 +4,7 @@
   <title><![CDATA[Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-07-25T16:44:06+03:00</updated>
+  <updated>2014-07-27T14:48:41+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -12,6 +12,147 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Fix generation bug in Rails]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/07/27/fix-generation-bug-rails/"/>
+    <updated>2014-07-27T14:34:26+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/07/27/fix-generation-bug-rails</id>
+    <content type="html"><![CDATA[<p>After you made <code>rails destroy Users</code> and you want to create again <code>User</code> model, When you create, if you&#8217; re getting like this error,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>leylakapicmd@leylakapicmd:~/workspace/project-library<span class="nv">$ </span>rails g model User provider uid name oauth_token
+</span><span class='line'>/home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/inflector/methods.rb:238:in const_get: uninitialized constant User <span class="o">(</span>NameError<span class="o">)</span>
+</span><span class='line'>   <span class="nv">$ </span>leylakapicmd@leylakapicmd:~/workspace/project-library<span class="nv">$ </span>rails g model User
+</span><span class='line'>/home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/inflector/methods.rb:238:inconst_get<span class="s1">&#39;: uninitialized constant User (NameError)</span>
+</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/inflector/methods.rb:238:inblock in constantize&#39;</span>
+</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/inflector/methods.rb:236:ineach<span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/inflector/methods.rb:236:ininject&#39;</span>
+</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/inflector/methods.rb:236:inconstantize<span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise.rb:297:inget&#39;</span>
+</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise/mapping.rb:77:into<span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise/mapping.rb:72:inmodules&#39;</span>
+</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise/mapping.rb:89:inroutes<span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise/mapping.rb:156:indefault_used_route&#39;</span>
+</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise/mapping.rb:66:ininitialize<span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise.rb:331:innew&#39;</span>
+</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise.rb:331:inadd_mapping<span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise/rails/routes.rb:221:inblock in devise_for&#39;</span>
+</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise/rails/routes.rb:220:ineach<span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise/rails/routes.rb:220:indevise_for&#39;</span>
+</span><span class='line'>from /home/leylakapicmd/workspace/project-library/config/routes.rb:3:inblock in &lt;top <span class="o">(</span>required<span class="o">)</span>&gt;<span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/routing/route_set.rb:335:ininstance_exec&#39;</span>
+</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/routing/route_set.rb:335:ineval_block<span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/routing/route_set.rb:313:indraw&#39;</span>
+</span><span class='line'>from /home/leylakapicmd/workspace/project-library/config/routes.rb:1:in&lt;top <span class="o">(</span>required<span class="o">)</span>&gt;<span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/application/routes_reloader.rb:40:inblock in load_paths&#39;</span>
+</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/application/routes_reloader.rb:40:ineach<span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/application/routes_reloader.rb:40:inload_paths&#39;</span>
+</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/application/routes_reloader.rb:16:inreload!<span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/application/routes_reloader.rb:26:inblock in updater&#39;</span>
+</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/file_update_checker.rb:75:incall<span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/file_update_checker.rb:75:inexecute&#39;</span>
+</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/application/routes_reloader.rb:27:inupdater<span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/application/routes_reloader.rb:7:inexecute_if_updated&#39;</span>
+</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/application/finisher.rb:71:inblock in &lt;module:Finisher&gt;<span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/initializable.rb:30:ininstance_exec&#39;</span>
+</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/initializable.rb:30:inrun<span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/initializable.rb:55:inblock in run_initializers&#39;</span>
+</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/2.0.0/tsort.rb:150:inblock in tsort_each<span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/2.0.0/tsort.rb:183:inblock (2 levels) in each_strongly_connected_component&#39;</span>
+</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/2.0.0/tsort.rb:219:ineach_strongly_connected_component_from<span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/2.0.0/tsort.rb:182:inblock in each_strongly_connected_component&#39;</span>
+</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/2.0.0/tsort.rb:180:ineach<span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/2.0.0/tsort.rb:180:ineach_strongly_connected_component&#39;</span>
+</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/2.0.0/tsort.rb:148:intsort_each<span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/initializable.rb:54:inrun_initializers&#39;</span>
+</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/application.rb:288:ininitialize!<span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">from /home/leylakapicmd/workspace/project-library/config/environment.rb:5:in&lt;top (required)&gt;&#39;</span>
+</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/application.rb:264:inrequire_environment!<span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/commands/commands_tasks.rb:147:inrequire_application_and_environment!&#39;</span>
+</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/commands/commands_tasks.rb:133:ingenerate_or_destroy<span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/commands/commands_tasks.rb:51:ingenerate&#39;</span>
+</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/commands/commands_tasks.rb:40:inrun_command!<span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/commands.rb:17:in&lt;top (required)&gt;&#39;</span>
+</span><span class='line'>from bin/rails:4:inrequire<span class="s1">&#39;</span>
+</span><span class='line'><span class="s1">from bin/rails:4:in&lt;main&gt;&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You need to remove  <code>devise_for :users</code> from <code>routes.rb</code>, then try generate and you don&rsquo;t forget made  <code>rake:db migrate</code>.</p>
+
+<p>After <code>migrate</code>, if you have new error from <code>db</code>, you can make this command with orderly.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake db:drop
+</span><span class='line'>rake db:create
+</span><span class='line'>rake db:reset
+</span><span class='line'>rake db:migrate
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&rsquo;s all.</p>
+
+<p>I hope solve your problem.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Rails fix undefined local variable or method]]></title>
@@ -1174,109 +1315,6 @@ We need to create scaffold,</p>
 <p>Then, Rubymine opens automatically.</p>
 
 <p>That&rsquo;s all.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How is the internet working and what is the protocols]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/04/20/how-is-the-internet-working-and-what-is-the-protocols/"/>
-    <updated>2014-04-20T02:00:37+03:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/04/20/how-is-the-internet-working-and-what-is-the-protocols</id>
-    <content type="html"><![CDATA[<h3>How is the internet working ?</h3>
-
-<p>Internet like in real life, There are two sides for internet communication. While one of this is making request, another of this
-have to respond to this request. This loop is named</p>
-
-<pre><code>request - respond
-</code></pre>
-
-<p>or</p>
-
-<pre><code>client-server
-</code></pre>
-
-<p>Web relation client &ndash; server</p>
-
-<p><strong>client</strong> => <strong>server</strong></p>
-
-<pre><code>     request
-</code></pre>
-
-<p><strong>client</strong> &lt;= <strong>server</strong></p>
-
-<pre><code>     respond
-</code></pre>
-
-<p>Now, I try to explain when it occur this relation, Which process do occur?</p>
-
-<ul>
-<li><p>This process can be with protocols, protocols What?</p>
-
-<ul>
-<li>Protocols, like rules, this means that ; there are rules for connection two computer(client-server) each other to
-internet.This rules are named protocols.</li>
-</ul>
-</li>
-<li><p>There are many type of Protocols like HTTP(Hyper Text Transfer Protocols), TCP(Transmission Control Protocols),
-UDP(User Dtagram Protocol), SSL(Secure Socket Layer), TLS(Transport Layer Security),FTP(File Transfer Protocols) &hellip;etc.</p>
-
-<p>I try to explain several of the above protocols.</p></li>
-<li><p>HTTP (Hyper Text Transfer Protocol)</p></li>
-</ul>
-
-
-<p>HTTP is which distribute in a source, which access to everyone for apply to hyper information system like text, graphics, video ..etc
-In brief HTTP is a set of rules.
-Also The means of name that, When we transferring text using this protocols.</p>
-
-<p>In World using the default port number, showing like this <em>:80</em> . When we write url, automatically added to ending of URL,but it
-is hidden.</p>
-
-<ul>
-<li>TCP (Transmission Control Protocol)</li>
-</ul>
-
-
-<p>TCP provide to security of data exchange. The clients create a contact with each other, in this contact provide to data exchange
-and data transmitted in the correct order. Then TCP controlled to data whether it has reached by sending a message.
- It is very slow, because controlled data step by step.</p>
-
-<ul>
-<li>UDP (User Datagram Protocol)</li>
-</ul>
-
-
-<p>UDP is fast transmission data according to TCP but unsafe data . The aim is fast. If we compare with TCP. TCP and UDP similar
-but TCP is very slow. If sending <em>.rar</em> or <em>.zip</em> files, should use TCP because data is important. if you send to video,
-should use UDP because fast is important.</p>
-
-<ul>
-<li>SSL (Secure Socket Layer)</li>
-</ul>
-
-
-<p>SSl development for provide secuirty and privacy of transmission data on network. In SSL, before sending to information
-encrypted, only decrypted by computer which receiver. This provide privacy data exchange.</p>
-
-<pre><code>https  # 's' means that security .
-</code></pre>
-
-<ul>
-<li>TLS (Transport Layer Security)</li>
-</ul>
-
-
-<p>TLS similar to SSL. Differences to SSL is that, process of connection occur simple and without encryption, when data transmission can be done,
-security certificate engaged and then can be security.</p>
-
-<ul>
-<li><p>URL (Uniform Resources Locator)</p>
-
-<p> access_method//:server_name[:port]/site</p></li>
-</ul>
-
-
-<p>I hope this article help you for understanding internet works</p>
 ]]></content>
   </entry>
   

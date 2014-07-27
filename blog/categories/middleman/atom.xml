@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: middleman | Leyla's Blog]]></title>
+  <title><![CDATA[Category: middleman, | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/middleman/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-07-25T16:46:03+03:00</updated>
+  <updated>2014-07-27T14:48:41+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -14,128 +14,114 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Error compiling sass assets]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/07/17/error-compiling-sass-assets/"/>
-    <updated>2014-07-17T16:27:24+03:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/07/17/error-compiling-sass-assets</id>
-    <content type="html"><![CDATA[<h3>Middleman sass compiling error</h3>
+    <title type="html"><![CDATA[Middleman blog]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/03/15/blog-middleman/"/>
+    <updated>2014-03-15T17:05:21+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/03/15/blog-middleman</id>
+    <content type="html"><![CDATA[<h3>How to create middleman blog for middleman project?</h3>
 
-<p>While you were made web template with <code>haml</code> and <code>sass</code>, if you use middleman and bootstrap for your web template and your project give you like,</p>
+<ul>
+<li>Middleman supported blogging in your project or your blog.</li>
+</ul>
 
-<p><code>sass
-Error compiling CSS asset
-NoMethodError: undefined method `font_path` for nil:NilClass
-</code>
-error.</p>
 
-<p>You can fix like with edit your <code>Gemfile</code></p>
+<p>If you create a blog, I think you should with middleman blogging. I hear, you say &lsquo; WHY ? &rsquo;</p>
 
-<p><code>ruby
-gem 'bootstrap-sass', '~&gt; 3.1.1'
-gem 'middleman-sprockets', '3.2.2'
-gem 'middleman-bootstrap-navbar','~&gt;2.0'
-</code></p>
+<p>WHY?</p>
 
-<p>Then you can write in terminal <code>bundle install</code>
-Than if errors didn&rsquo;t fixed, you should write on terminal</p>
+<ul>
+<li>Easy to use,</li>
+<li>Embed in your project easily</li>
+</ul>
 
-<p><code>bash
-bundle update middleman-sprockets
-</code></p>
 
-<p>If you want to researches with details, you should look <a href="https://github.com/middleman/middleman/issues/1265">this page</a></p>
+<p>&hellip;</p>
 
-<p>That&rsquo;s all.</p>
+<p><strong>Let&rsquo;s learn blogging with middleman blog</strong></p>
 
-<p>I hope helped to you.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How create tree - list menu with HAML]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/03/22/how-create-tree-list-menu-with-haml/"/>
-    <updated>2014-03-22T18:57:27+02:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/03/22/how-create-tree-list-menu-with-haml</id>
-    <content type="html"><![CDATA[<h3>How to created tree &ndash; list menu with haml, sass, coffeescript ?</h3>
+<p>Firstly, if you use middleman blog in your project, this means if you use blogging in your website or application,
+you  should go to path of your project, open and write above command.</p>
 
-<p>Firstly, we create middleman project and create</p>
+<p>you write in <em>Gemfile</em> :</p>
 
-<pre><code>index.html.haml
-style.css.sass
-application.coffee
+<pre><code>    gem ' middleman-blog '
 </code></pre>
 
-<p>then we open <code>index.html.haml</code> file and we write your code like this,</p>
+<p>and then, in <em>config.rb</em></p>
 
-<p>``` haml</p>
-
-<pre><code>--- my code like this ---
-%ul.archive_tool
-  %li#tools Car
-  %ul.archive_requires
-    %li#requires BMW
-    %li#requires Mercedes
-    %li#requires Toyota
-    %li#requires Fiat
-  %li#tools Book
-  %ul.archive_requires
-    %li#requires Ruby
-    %li#requires ROR
-    %li#requires Thought
-  %li#tools Computer
-  %ul.archive_requires
-    %li#requires iMac
-    %li#requires Windows
-    %li#requires Linux
-    %li#requires Seu
-  %li#tools Chair
-  %ul.archive_requires
-    %li#requires comfortable
-    %li#requires uncomfortable
+<pre><code>    activate :blog do |blog|
+    ---
+    set
 </code></pre>
 
-<p><code>``
-then open</code>style.css.sass` file and write style code</p>
+<p>and when you write these command in your project, open terminal or console  write</p>
 
-<p>``` sass</p>
-
-<pre><code>  #tools, #requires
-    cursor: pointer
-  .archive_tool
-    margin-left: 1em
-    font-size: large
-    font-weight: bold
-    cursor: pointer
-  .archive_requires
-    @extend .archive_tool
-    margin:
-      top: 0
-      bottom: 1em
-    font-size: medium
-    list-style-type: circle
+<pre><code>    bundle install                  #install gems
+    bundle exec middleman server    #run your blog in your project
 </code></pre>
 
-<p>```</p>
+<p>If you want to set up from the rough, what you want to open to path, and write in terminal</p>
 
-<p>then open <code>application.coffee</code> file, and</p>
-
-<p>``` coffeescript</p>
-
-<pre><code>$(document).ready -&gt;
-  $(".archive_tool ul").hide()
-  $(".archive_tool &gt; li").click -&gt;
-    $(this).parent().find("ul").slideToggle()
-    return
-  $(".archive_requires &gt; li").click -&gt;
-    $(this).parent().find("ul").slideToggle()
+<pre><code>    middleman init blog_name --template=blog
 </code></pre>
 
-<p>```
-we write this code inside haml, sass, and coffeescript file and then saved all, run this middleman project.</p>
+<p>When you write this command you can see, many file created for your blo.</p>
 
-<p>According to edit your own project try to run codes.</p>
+<p>Now open created blog, you should see directories,</p>
 
-<p>I hope, helped you.</p>
+<pre><code>    images
+    javascripts
+    stylesheets
+</code></pre>
+
+<p>files,</p>
+
+<pre><code>    index.html.erb
+    layout.erb
+    calendar.html.erb
+    tags.html.erb
+    feed.xml.builder
+    2012-01-01-example-article
+</code></pre>
+
+<ul>
+<li>Middleman provide  many tags and properties for your blog, if you want to organize, you can open <em>config.rb</em> and organize these, and see.</li>
+<li>If you want to organize style for blog, you should write in stylesheets and javascript directories, with CSS3 and Jquery ;)</li>
+<li>If you don&rsquo;t want to use <strong>.html.erb</strong> files, you can translate to <strong>.html.haml</strong> in <a href="http://html2haml.heroku.com/">html2haml</a>.</li>
+</ul>
+
+
+<p>And use this.</p>
+
+<ul>
+<li>If you want to use blog in your middleman project, you should create new layouts, and <em>index.html.haml</em> in your blog directory,
+different from your middleman project.
+and we write code in this.</li>
+</ul>
+
+
+<p>Yep ! you create new blog and prepared write new article your blog,</p>
+
+<p>Let&rsquo;s start :)</p>
+
+<pre><code>middleman article article_name
+</code></pre>
+
+<p>When write this command, middleman created new article file, blogging in this file, but we write with markdown inside created article file.</p>
+
+<p>When you write your article you run project with</p>
+
+<pre><code>bundle exec middleman server
+</code></pre>
+
+<p>after the</p>
+
+<pre><code>bundle install
+</code></pre>
+
+<p>run and see what you can do ?</p>
+
+<p>That&rsquo;s it.</p>
 ]]></content>
   </entry>
   
