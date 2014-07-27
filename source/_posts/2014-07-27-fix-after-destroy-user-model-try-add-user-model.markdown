@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Fix generation bug in Rails"
+title: "Fix after destroy user model try add user model"
 date: 2014-07-27 14:34:26 +0300
 comments: true
 categories: rails g destroy User devise
@@ -11,8 +11,8 @@ After you made `rails destroy Users` and you want to create again `User` model, 
 
 ```bash
     $ leylakapicmd@leylakapicmd:~/workspace/project-library$ rails g model User provider uid name oauth_token
-    /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/inflector/methods.rb:238:in const_get: uninitialized constant User (NameError)
-   $ leylakapicmd@leylakapicmd:~/workspace/project-library$ rails g model User 
+     /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/inflector/methods.rb:238:in const_get: uninitialized constant User (NameError)
+    $ leylakapicmd@leylakapicmd:~/workspace/project-library$ rails g model User
     /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/inflector/methods.rb:238:inconst_get': uninitialized constant User (NameError)
 	from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/inflector/methods.rb:238:inblock in constantize'
 	from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/inflector/methods.rb:236:ineach'
