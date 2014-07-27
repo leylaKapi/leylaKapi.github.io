@@ -4,7 +4,7 @@
   <title><![CDATA[Category: destroy | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/destroy/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-07-27T14:48:41+03:00</updated>
+  <updated>2014-07-27T14:53:43+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -14,21 +14,18 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Fix generation bug in Rails]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/07/27/fix-generation-bug-rails/"/>
+    <title type="html"><![CDATA[Fix after destroy user model try add user model]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/07/27/fix-after-destroy-user-model-try-add-user-model/"/>
     <updated>2014-07-27T14:34:26+03:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/07/27/fix-generation-bug-rails</id>
+    <id>http://leylaKapi.github.io/blog/2014/07/27/fix-after-destroy-user-model-try-add-user-model</id>
     <content type="html"><![CDATA[<p>After you made <code>rails destroy Users</code> and you want to create again <code>User</code> model, When you create, if you' re getting like this error,</p>
 
 <p>```bash</p>
 
 <pre><code>$ leylakapicmd@leylakapicmd:~/workspace/project-library$ rails g model User provider uid name oauth_token
-/home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/inflector/methods.rb:238:in const_get: uninitialized constant User (NameError)
-</code></pre>
-
-<p>   $ leylakapicmd@leylakapicmd:~/workspace/project-library$ rails g model User</p>
-
-<pre><code>/home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/inflector/methods.rb:238:inconst_get': uninitialized constant User (NameError)
+ /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/inflector/methods.rb:238:in const_get: uninitialized constant User (NameError)
+$ leylakapicmd@leylakapicmd:~/workspace/project-library$ rails g model User
+/home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/inflector/methods.rb:238:inconst_get': uninitialized constant User (NameError)
 from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/inflector/methods.rb:238:inblock in constantize'
 from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/inflector/methods.rb:236:ineach'
 from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/inflector/methods.rb:236:ininject'
