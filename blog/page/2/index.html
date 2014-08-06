@@ -7,8 +7,8 @@
 	<meta name="author" content="Leyla Kapi">
 
 	
-	<meta name="description" content="How to remove log and idea files on your project ? Remove idea files 1
-git rm -r --cached .idea While you were remove, terminal gives error about it &hellip;">
+	<meta name="description" content="Make a release When you start to make a release, I think if you look at your commit it can be better 1
+git log then if you make some wrong commit, &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -88,6 +88,140 @@ git rm -r --cached .idea While you were remove, terminal gives error about it &h
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/07/10/how-to-make-a-release/">
+		
+			How to Make a Release ?</a>
+	</h2>
+	<div class="entry-content">
+		<p>Make a release</p>
+
+<p>When you start to make a release, I think if you look at your commit it can be better</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git log
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>then if you make some wrong commit, you can delete wrong commit with</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git rebase -i HEAD~2
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>command.
+Then,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push origin +develop
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>After that, you can check you branch with</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git branch -a
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>then let&rsquo;s start to release ;</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git flow release start your_version_number
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><code>your_version_number</code> can be like <code>0.1.0</code> . Actually can be like</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git flow release start 0.1.0
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>When we write this command, you can create <code>VERSION.txt</code> file, and open &lsquo;txt&rsquo; file
+then write some number with <code>your_version_number</code></p>
+
+<p>Write with order below commands,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git flow release finish 0.1.0
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git checkout release/0.1.0
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push origin develop
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push origin +master
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Yep, Now you made a release you can check on your repo settings on <a href="https://github.com/">github</a>.</p>
+
+<p>Let&#8217; s add Tag,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git tag
+</span></code></pre></td></tr></table></div></figure>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push --tags
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&#8217; s all.
+I hope help to you.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-10T19:01:26+03:00" pubdate data-updated="true">Jul 10<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/github/'>gitHub</a>, <a class='category' href='/blog/categories/release/'>release</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/07/10/how-to-make-a-release/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -991,101 +1125,6 @@ you should use</p>
 </div>
 	
 	<div class="comments"><a href="/blog/2014/04/26/rails-gem/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/04/25/scaffolding-in-rails/">
-		
-			Scaffolding in Rails</a>
-	</h2>
-	<div class="entry-content">
-		<p>In this post, I try to explain scaffolding in rails shortly.
-Firstly, Let&rsquo;s create rails project</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rails new blogging
-</span><span class='line'><span class="nb">cd </span>blogging
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Now, we created rails project and enter inside of project.
-We need to create scaffold,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rails generate scaffold Information first_name second_name date_time:date city:boolean
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>We create Information model, in this model</li>
-<li>Type of first_name and second_name is string.</li>
-<li>Type of date_time is date, this provide to create date.</li>
-<li>Type of city is boolean, this provide to create checkbox.</li>
-</ul>
-
-
-<p>then we need to migrate for this reason,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake db:migrate
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Then, If you want change your home page(index.html), you should open in your app,</p>
-
-<pre><code>config/routes.rb
-</code></pre>
-
-<p>this path and write</p>
-
-<pre><code>root :to =&gt; 'information#index'
-</code></pre>
-
-<p>save and run</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rails s
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>opened <a href="http://0.0.0.0:3000/">http://localhost:3000/</a></p>
-
-<p>That&rsquo;s all.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-04-25T00:21:58+03:00" pubdate data-updated="true">Apr 25<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/rake/'>rake</a>, <a class='category' href='/blog/categories/scaffold/'>scaffold</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/04/25/scaffolding-in-rails/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>

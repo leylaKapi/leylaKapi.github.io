@@ -7,7 +7,11 @@
 	<meta name="author" content="Leyla Kapi">
 
 	
-	<meta name="description" content="MVC in Ruby on Rails MVC &ndash; model, view, controller MVC provide to separated of coding and design in app. This property provide to easiness for &hellip;">
+	<meta name="description" content="In this post, I try to explain scaffolding in rails shortly.
+Firstly, Let&rsquo;s create rails project 1
+2
+rails new blogging
+cd blogging Now, we &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -87,6 +91,101 @@
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/04/25/scaffolding-in-rails/">
+		
+			Scaffolding in Rails</a>
+	</h2>
+	<div class="entry-content">
+		<p>In this post, I try to explain scaffolding in rails shortly.
+Firstly, Let&rsquo;s create rails project</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rails new blogging
+</span><span class='line'><span class="nb">cd </span>blogging
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now, we created rails project and enter inside of project.
+We need to create scaffold,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rails generate scaffold Information first_name second_name date_time:date city:boolean
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>We create Information model, in this model</li>
+<li>Type of first_name and second_name is string.</li>
+<li>Type of date_time is date, this provide to create date.</li>
+<li>Type of city is boolean, this provide to create checkbox.</li>
+</ul>
+
+
+<p>then we need to migrate for this reason,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake db:migrate
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then, If you want change your home page(index.html), you should open in your app,</p>
+
+<pre><code>config/routes.rb
+</code></pre>
+
+<p>this path and write</p>
+
+<pre><code>root :to =&gt; 'information#index'
+</code></pre>
+
+<p>save and run</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rails s
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>opened <a href="http://0.0.0.0:3000/">http://localhost:3000/</a></p>
+
+<p>That&rsquo;s all.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-25T00:21:58+03:00" pubdate data-updated="true">Apr 25<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/rake/'>rake</a>, <a class='category' href='/blog/categories/scaffold/'>scaffold</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/04/25/scaffolding-in-rails/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -1966,96 +2065,6 @@ and we write code in this.</li>
 </div>
 	
 	<div class="comments"><a href="/blog/2014/03/15/blog-middleman/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/03/06/how-to-show-nav-bar-according-to-scroll/">
-		
-			How to Show Nav-bar According to Scroll</a>
-	</h2>
-	<div class="entry-content">
-		<h3>Change CSS class after scrolling &hellip;px down</h3>
-
-<p>I want to change menu or nav-bar according to scroll, How I can do this ?</p>
-
-<p>In this article, I can try to explain with an example.</p>
-
-<p>Please, write these code block on your project or created a new project and try to these .
-Yep!, Let&rsquo;s learn step by step :)</p>
-
-<p>Firstly, Created HTML file in your project and write below code block,</p>
-
-<pre><code>index.html
-
-&lt;div id = 'navigation'&gt; Home &lt;/div&gt;
-    &lt;h1&gt; Welcome to Change scroll according to ...px &lt;/h1&gt;
-    &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-     irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-     id est laborum &lt;/p&gt;
-</code></pre>
-
-<p>then wrote this code block in your HTML file. Let&rsquo;s create CSS file in your project for style of your project.</p>
-
-<pre><code>style.css
-
-#navigation {
-        width : 100px;
-        height : 100px;
-        background-color:blue;
-        position: fixed;
-        display: none;
-}
-</code></pre>
-
-<p>this last step but the most important step for scrolling to navigation. Create javascript file for your animation of your project</p>
-
-<pre><code>application.js
-
-$(document).scroll(function() {
-        $('#navigation').toggle($(this).scrollTop() &gt; 1000);
-});
-</code></pre>
-
-<p>Wrote in your project these block and try to run project and What are you seeing in your project ?</p>
-
-<p>That&rsquo;s easy!</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-06T19:30:31+02:00" pubdate data-updated="true">Mar 6<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/css/'>CSS,</a>, <a class='category' href='/blog/categories/html/'>HTML</a>, <a class='category' href='/blog/categories/javascript/'>javascript,</a>, <a class='category' href='/blog/categories/jquery/'>jquery,</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/03/06/how-to-show-nav-bar-according-to-scroll/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>

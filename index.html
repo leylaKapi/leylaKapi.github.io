@@ -7,13 +7,7 @@
 	<meta name="author" content="Leyla Kapi">
 
 	
-	<meta name="description" content="Note about installation of java on Ubuntu computer 1
-$ sudo apt-get install openjdk-7-jdk OR 1
-2
-3
-4
-5
-$ sudo add-apt-repository ppa:webupd8team/ &hellip;">
+	<meta name="description" content="How to fix ActionController: InvalidAuthentication Token error ? If you use devise gem and when you enter login page in your rails project, you get &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -93,6 +87,78 @@ $ sudo add-apt-repository ppa:webupd8team/ &hellip;">
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/08/06/fix-invalid-authentication-token-error-in-rails/">
+		
+			Fix Invalid Authentication Token Error in Rails</a>
+	</h2>
+	<div class="entry-content">
+		<h3>How to fix <code>ActionController: InvalidAuthentication Token error</code> ?</h3>
+
+<p>If you use <code>devise</code> gem and when you enter login page in your rails project, you get
+<code>Invalid Token</code> error, you thinking on <code>controller</code> .</p>
+
+<p>Try to fix this bug ;</p>
+
+<ul>
+<li>Open <code>application_controller.rb</code> then remove this line,</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">protect_form_forgery</span><span class="p">,</span> <span class="ss">with</span><span class="p">:</span> <span class="ss">:exception</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>on your controller,
+&ndash; Then add</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">skip_before_filter</span> <span class="ss">:verify_authenticity_token</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>But, this method not safe, so when you get like this bug, you can search and use <code>ajax</code> for the solve it.</p>
+
+<p>That&rsquo;s all.</p>
+
+<p>I hope helped to you .</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-08-06T23:49:35+03:00" pubdate data-updated="true">Aug 6<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/ajax/'>ajax</a>, <a class='category' href='/blog/categories/authentication/'>authentication</a>, <a class='category' href='/blog/categories/controller/'>controller</a>, <a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/08/06/fix-invalid-authentication-token-error-in-rails/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -929,140 +995,6 @@ You can look on <a href="https://github.com/charliesome/better_errorss">gitHub</
 </div>
 	
 	<div class="comments"><a href="/blog/2014/07/13/when-you-start-to-project/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/07/10/how-to-make-a-release/">
-		
-			How to Make a Release ?</a>
-	</h2>
-	<div class="entry-content">
-		<p>Make a release</p>
-
-<p>When you start to make a release, I think if you look at your commit it can be better</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git log
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>then if you make some wrong commit, you can delete wrong commit with</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git rebase -i HEAD~2
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>command.
-Then,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push origin +develop
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>After that, you can check you branch with</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git branch -a
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>then let&rsquo;s start to release ;</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git flow release start your_version_number
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><code>your_version_number</code> can be like <code>0.1.0</code> . Actually can be like</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git flow release start 0.1.0
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>When we write this command, you can create <code>VERSION.txt</code> file, and open &lsquo;txt&rsquo; file
-then write some number with <code>your_version_number</code></p>
-
-<p>Write with order below commands,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git flow release finish 0.1.0
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git checkout release/0.1.0
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push origin develop
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push origin +master
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Yep, Now you made a release you can check on your repo settings on <a href="https://github.com/">github</a>.</p>
-
-<p>Let&#8217; s add Tag,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git tag
-</span></code></pre></td></tr></table></div></figure>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push --tags
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>That&#8217; s all.
-I hope help to you.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-07-10T19:01:26+03:00" pubdate data-updated="true">Jul 10<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/github/'>gitHub</a>, <a class='category' href='/blog/categories/release/'>release</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/07/10/how-to-make-a-release/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>

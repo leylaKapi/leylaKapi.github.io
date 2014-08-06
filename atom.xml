@@ -4,7 +4,7 @@
   <title><![CDATA[Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-08-06T23:31:30+03:00</updated>
+  <updated>2014-08-07T00:00:07+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -12,6 +12,44 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Fix Invalid Authentication Token error in rails]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/08/06/fix-invalid-authentication-token-error-in-rails/"/>
+    <updated>2014-08-06T23:49:35+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/08/06/fix-invalid-authentication-token-error-in-rails</id>
+    <content type="html"><![CDATA[<h3>How to fix <code>ActionController: InvalidAuthentication Token error</code> ?</h3>
+
+<p>If you use <code>devise</code> gem and when you enter login page in your rails project, you get
+<code>Invalid Token</code> error, you thinking on <code>controller</code> .</p>
+
+<p>Try to fix this bug ;</p>
+
+<ul>
+<li>Open <code>application_controller.rb</code> then remove this line,</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">protect_form_forgery</span><span class="p">,</span> <span class="ss">with</span><span class="p">:</span> <span class="ss">:exception</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>on your controller,
+&ndash; Then add</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">skip_before_filter</span> <span class="ss">:verify_authenticity_token</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>But, this method not safe, so when you get like this bug, you can search and use <code>ajax</code> for the solve it.</p>
+
+<p>That&rsquo;s all.</p>
+
+<p>I hope helped to you .</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Install open-jdk or oracle on Ubuntu]]></title>
@@ -1243,67 +1281,6 @@ you should use</p>
 <li>If you want more information , you can visit <a href="https://github.com/rails/protected_attributes">ProtectedAttributesGem</a> .</li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Scaffolding in Rails]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/04/25/scaffolding-in-rails/"/>
-    <updated>2014-04-25T00:21:58+03:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/04/25/scaffolding-in-rails</id>
-    <content type="html"><![CDATA[<p>In this post, I try to explain scaffolding in rails shortly.
-Firstly, Let&rsquo;s create rails project</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rails new blogging
-</span><span class='line'><span class="nb">cd </span>blogging
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Now, we created rails project and enter inside of project.
-We need to create scaffold,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rails generate scaffold Information first_name second_name date_time:date city:boolean
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>We create Information model, in this model</li>
-<li>Type of first_name and second_name is string.</li>
-<li>Type of date_time is date, this provide to create date.</li>
-<li>Type of city is boolean, this provide to create checkbox.</li>
-</ul>
-
-
-<p>then we need to migrate for this reason,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake db:migrate
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Then, If you want change your home page(index.html), you should open in your app,</p>
-
-<pre><code>config/routes.rb
-</code></pre>
-
-<p>this path and write</p>
-
-<pre><code>root :to =&gt; 'information#index'
-</code></pre>
-
-<p>save and run</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rails s
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>opened <a href="http://0.0.0.0:3000/">http://localhost:3000/</a></p>
-
-<p>That&rsquo;s all.</p>
 ]]></content>
   </entry>
   
