@@ -19,7 +19,8 @@ Try to fix this bug ;
 protect_form_forgery, with: :exception
 ```
 
-on your controller,
+on your controller.
+
 - Then add
  
 ```ruby
