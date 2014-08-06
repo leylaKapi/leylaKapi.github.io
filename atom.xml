@@ -4,7 +4,7 @@
   <title><![CDATA[Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-08-07T00:08:13+03:00</updated>
+  <updated>2014-08-07T00:23:45+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -96,8 +96,9 @@
 <ul>
 <li>Firstly you should start to rubymine ide on your computer with <code>./rubymine.sh</code> then,</li>
 <li>You can open <code>Help</code> in  nav-bar of rubymine, <code>find-action</code> or <code>ctrl+shift+A</code> then you should search <code>plugins</code>.</li>
-<li>Open plugins of rubymine then search again <code>git-flow</code> , if you saw &lsquo;click on Browser&rsquo; ,click then search again in search bar
-to <code>git-flow</code>, Then you ca find easily integrate on <code>Rubymine</code> , then <em>restart rubymine</em></li>
+<li>Open plugins of rubymine then search again <code>git-flow</code> , if you saw &lsquo;click on Browser&rsquo;,
+click then search again in search bar to <code>git-flow</code>, Then you ca find easily integrate on <code>Rubymine</code> ,
+then <em>restart rubymine</em> .</li>
 </ul>
 
 

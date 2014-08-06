@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Middleman, | Leyla's Blog]]></title>
+  <title><![CDATA[Category: middleman, | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/middleman/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-08-07T00:08:13+03:00</updated>
+  <updated>2014-08-07T00:24:04+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -14,162 +14,114 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Middleman create haml file]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/02/27/middleman-create-haml-file/"/>
-    <updated>2014-02-27T13:49:10+02:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/02/27/middleman-create-haml-file</id>
-    <content type="html"><![CDATA[<h3>How to create .haml file in middleman?</h3>
-
-<p>Firstly, you should go <a href="" title="http://middlemanapp.com/">middleman</a> and you need to <strong>install middleman</strong></p>
-
-<p><code>bash
-   gem install middleman
-</code></p>
-
-<p>Fine, you are installed middleman, now we start to create project in middleman</p>
-
-<p><code>bash
-   middleman init project_name
-</code></p>
-
-<p>Then this command give you directory as shown below :</p>
-
-<p>``` bash
- project_name/</p>
-
-<pre><code>Gemfile
-Gemfile.lock
-config.rb
-source
-    .gitignore
-    images
-        background.png
-        middleman.png
-    javascript
-        all.js
-    stylesheets
-        all.css
-        normalize.css
-    layouts
-        layout.erb
-    index.html.erb
-</code></pre>
-
-<p>```</p>
-
-<p>If you can see this directories, you should open project with your IDE.</p>
-
-<p><strong>Now, We create .haml file but how ?</strong></p>
-
-<p>Go ahead and remove below files because these files don&rsquo;t use in project.</p>
-
-<pre><code>- /source/images/background.png
-- /source/images/middleman.png
-- /source/javascript/all.js
-- /source/stylesheets/all.css
-- /source/stylesheets/normalize.css
-- /source/layouts/layout.erb
-- /source/index.html.erb
-</code></pre>
-
-<p>Now, Projects was removed from unused files.</p>
-
-<h5>Add HAML</h5>
-
-<p>Middleman appear to read HTML by default . Therefore, you should go to</p>
-
-<p><code>bash
- /config.rb
-</code></p>
-
-<p>in file write:</p>
-
-<p><code>haml
-set :haml, :format =&gt; :html5
-</code></p>
-
-<p>Now program convert to html5 from haml.</p>
+    <title type="html"><![CDATA[Middleman blog]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/03/15/blog-middleman/"/>
+    <updated>2014-03-15T17:05:21+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/03/15/blog-middleman</id>
+    <content type="html"><![CDATA[<h3>How to create middleman blog for middleman project?</h3>
 
 <ul>
-<li>Add a</li>
+<li>Middleman supported blogging in your project or your blog.</li>
 </ul>
 
 
-<p><code>haml
- layout.haml
-</code></p>
+<p>If you create a blog, I think you should with middleman blogging. I hear, you say &lsquo; WHY ? &rsquo;</p>
 
-<p>file to the</p>
+<p>WHY?</p>
 
-<pre><code>      /source/layouts
+<ul>
+<li>Easy to use,</li>
+<li>Embed in your project easily</li>
+</ul>
+
+
+<p>&hellip;</p>
+
+<p><strong>Let&rsquo;s learn blogging with middleman blog</strong></p>
+
+<p>Firstly, if you use middleman blog in your project, this means if you use blogging in your website or application,
+you  should go to path of your project, open and write above command.</p>
+
+<p>you write in <em>Gemfile</em> :</p>
+
+<pre><code>    gem ' middleman-blog '
 </code></pre>
 
-<p>directory. In this file we write</p>
+<p>and then, in <em>config.rb</em></p>
 
-<p>``` haml</p>
-
-<pre><code>!!!
-%html{ :lang =&gt; "en"}
-    %head
-        %meta{:charset =&gt; "utf-8"}
-        %title= data.page.title
-        = stylesheet_link_tag "your_css_file.css"
-        = javascript_include_tag "your_javascript_file.js"
-    %body
-        = yield
+<pre><code>    activate :blog do |blog|
+    ---
+    set
 </code></pre>
 
-<p>```</p>
+<p>and when you write these command in your project, open terminal or console  write</p>
 
-<p>Now we must create</p>
-
-<p>``` haml</p>
-
-<pre><code>index.html.haml
+<pre><code>    bundle install                  #install gems
+    bundle exec middleman server    #run your blog in your project
 </code></pre>
 
-<p>```</p>
+<p>If you want to set up from the rough, what you want to open to path, and write in terminal</p>
 
-<p>in</p>
-
-<pre><code>            `source/`
+<pre><code>    middleman init blog_name --template=blog
 </code></pre>
 
-<p>directory.</p>
+<p>When you write this command you can see, many file created for your blo.</p>
 
-<p>``` haml</p>
+<p>Now open created blog, you should see directories,</p>
 
-<pre><code>%h1 Welcome Middleman project
+<pre><code>    images
+    javascripts
+    stylesheets
 </code></pre>
 
-<p>```</p>
+<p>files,</p>
 
-<p>write in</p>
-
-<pre><code>           `source/index.html.haml`
+<pre><code>    index.html.erb
+    layout.erb
+    calendar.html.erb
+    tags.html.erb
+    feed.xml.builder
+    2012-01-01-example-article
 </code></pre>
 
-<p>files.</p>
+<ul>
+<li>Middleman provide  many tags and properties for your blog, if you want to organize, you can open <em>config.rb</em> and organize these, and see.</li>
+<li>If you want to organize style for blog, you should write in stylesheets and javascript directories, with CSS3 and Jquery ;)</li>
+<li>If you don&rsquo;t want to use <strong>.html.erb</strong> files, you can translate to <strong>.html.haml</strong> in <a href="http://html2haml.heroku.com/">html2haml</a>.</li>
+</ul>
 
-<p>We are create middleman project and write codes, How we run this program?</p>
 
-<p>Wait! Dont worry, When writing to below command in terminal in order of this.</p>
+<p>And use this.</p>
 
-<pre><code># Go to project path
+<ul>
+<li>If you want to use blog in your middleman project, you should create new layouts, and <em>index.html.haml</em> in your blog directory,
+different from your middleman project.
+and we write code in this.</li>
+</ul>
 
-     cd project_name
-     bundle install
-     bundle exec middleman server
+
+<p>Yep ! you create new blog and prepared write new article your blog,</p>
+
+<p>Let&rsquo;s start :)</p>
+
+<pre><code>middleman article article_name
 </code></pre>
 
-<p>then we are seen</p>
+<p>When write this command, middleman created new article file, blogging in this file, but we write with markdown inside created article file.</p>
 
-<pre><code>         http://localhost:3000
+<p>When you write your article you run project with</p>
+
+<pre><code>bundle exec middleman server
 </code></pre>
 
-<p>like url. We should copy this url and paste on browser search bar.</p>
+<p>after the</p>
 
-<p>That&rsquo;s it! Try and see.</p>
+<pre><code>bundle install
+</code></pre>
+
+<p>run and see what you can do ?</p>
+
+<p>That&rsquo;s it.</p>
 ]]></content>
   </entry>
   
