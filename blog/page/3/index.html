@@ -7,7 +7,7 @@
 	<meta name="author" content="Leyla Kapi">
 
 	
-	<meta name="description" content="How is the internet working ? Internet like in real life, There are two sides for internet communication. While one of this is making request, &hellip;">
+	<meta name="description" content="How I can set up RubyMine for my Ubuntu Desktop ? Firstly, You can install rubymine on RubyMine Then, open your terminal CTRL + ALT + T Then, go to &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -87,6 +87,72 @@
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/04/23/setup-rubymine/">
+		
+			Setup Rubymine</a>
+	</h2>
+	<div class="entry-content">
+		<h3>How I can set up RubyMine for my Ubuntu Desktop ?</h3>
+
+<ul>
+<li>Firstly, You can install rubymine on <a href="http://www.jetbrains.com/ruby/download/">RubyMine</a></li>
+</ul>
+
+
+<p>Then, open your terminal</p>
+
+<pre><code>CTRL + ALT + T
+</code></pre>
+
+<p>Then, go to Download file then extract from <em>.tar.gz</em> file to normal directory. Then write in terminal</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">cd </span>Downloads/RubyMine-6.3/bin/
+</span><span class='line'>./rubymine.sh
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then, Rubymine opens automatically.</p>
+
+<p>That&rsquo;s all.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-23T23:59:28+03:00" pubdate data-updated="true">Apr 23<span>rd</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/ruby/'>ruby,</a>, <a class='category' href='/blog/categories/rubymine/'>rubymine,</a>, <a class='category' href='/blog/categories/set-up/'>set_up,</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/04/23/setup-rubymine/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -2033,171 +2099,6 @@ and use in</p>
 </div>
 	
 	<div class="comments"><a href="/blog/2014/03/02/css-sprite-use-in-sass/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/03/01/brief-info-about-hash/">
-		
-			Brief Info About Hash</a>
-	</h2>
-	<div class="entry-content">
-		<h3>What is the hash in ruby ?</h3>
-
-<p>Hash, hash, hash ?</p>
-
-<ul>
-<li>Hashes are one of the biggest property which separated another language in ruby.</li>
-<li>Hash was known <strong>associative array</strong> in another programming language.</li>
-<li>In hash, elements keep <strong>&lsquo;key => value&rsquo;</strong> format in ruby . Like</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">hash_example</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;surname&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;doe&#39;</span> <span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>Values of keys can be any type, but when you use <strong>&lsquo;eql?&rsquo;</strong> method, it can be only a key according to each other.</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'>    <span class="n">a</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">3</span> <span class="o">=&gt;</span> <span class="s1">&#39;three&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="o">.</span><span class="mi">0</span> <span class="o">=&gt;</span> <span class="s1">&#39;threedotzero&#39;</span> <span class="p">}</span>
-</span><span class='line'>    <span class="n">a</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span>        <span class="c1">#three</span>
-</span><span class='line'>    <span class="n">a</span><span class="o">[</span><span class="mi">3</span><span class="o">.</span><span class="mi">0</span><span class="o">]</span>      <span class="c1">#threedotzero</span>
-</span><span class='line'>    <span class="mi">3</span> <span class="o">==</span> <span class="mi">3</span><span class="o">.</span><span class="mi">0</span>        <span class="c1">#true</span>
-</span><span class='line'>    <span class="mi">3</span><span class="o">.</span><span class="n">eql?</span> <span class="mi">3</span><span class="o">.</span><span class="mi">0</span>      <span class="c1">#false</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>Hashes usually write with symbols, like :</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'> <span class="n">hash_with_symbol</span><span class="p">{</span> <span class="nb">name</span><span class="p">:</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="ss">surname</span><span class="p">:</span> <span class="s1">&#39;Doe&#39;</span><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>Hashes are similar to Array class, but Array uses integer as its index, hash allow to us any object type.</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">hash_differences_array</span><span class="p">{</span> <span class="s1">&#39;age&#39;</span> <span class="o">=&gt;</span> <span class="mi">15</span><span class="p">,</span> <span class="s1">&#39;year&#39;</span> <span class="o">=&gt;</span> <span class="mi">2014</span> <span class="p">}</span>
-</span><span class='line'><span class="n">array_differences_hash</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="o">]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>In my opinion, You have an information about hashes. Do you agree with me?!</p>
-
-<ul>
-<li>Continue to learn!, I have an information about hash, but if I want to access only keys or values , How does it access or separate these in hash ?</li>
-</ul>
-
-
-<p>For this question, solution: if you want to access to keys use</p>
-
-<pre><code>        keys
-</code></pre>
-
-<p>method, if you want to access to values use</p>
-
-<pre><code>        values
-</code></pre>
-
-<p>methods. Like:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">access_values_keys</span><span class="p">{</span> <span class="nb">name</span><span class="p">:</span> <span class="s1">&#39;john&#39;</span><span class="p">,</span> <span class="ss">surname</span><span class="p">:</span> <span class="s1">&#39;Doe&#39;</span><span class="p">}</span>
-</span><span class='line'><span class="n">access_values_keys</span><span class="o">.</span><span class="n">keys</span>         <span class="c1"># [:name, :surname]</span>
-</span><span class='line'><span class="n">access_values_keys</span><span class="o">.</span><span class="n">values</span>       <span class="c1">#[&#39;John&#39;, &#39;Doe&#39;]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>Generally, hashes are using in parameters of name,</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">parameters_name</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
-</span><span class='line'>    <span class="s1">&#39;#{name} : #{age}&#39;</span>
-</span><span class='line'><span class="k">end</span>
-</span><span class='line'><span class="nb">puts</span> <span class="nb">name</span> <span class="s1">&#39;John&#39;</span> <span class="p">,</span> <span class="mi">18</span>       <span class="c1"># Ali : 18</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>Hashes uses to <strong>ENUMERABLE</strong> module like arrays.</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'>  <span class="p">{}</span><span class="o">.</span><span class="n">class</span><span class="o">.</span><span class="n">ancestors</span>          <span class="c1">#show the hash ancestors.</span>
-</span><span class='line'>                                        <span class="c1">#[Hash, Enumerable, Object, PP::ObjectMixin, Kernel, BasicObject]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>If you want to change from array to hash, you should use</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">.</span><span class="n">to_h</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Lastly</strong> If you want to learn more, you can visit <a href="http://www.ruby-doc.org/core-2.0/Hash.html">ruby-doc</a> .</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-01T18:52:57+02:00" pubdate data-updated="true">Mar 1<span>st</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/hash/'>Hash</a>, <a class='category' href='/blog/categories/ruby/'>Ruby,</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/03/01/brief-info-about-hash/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>
