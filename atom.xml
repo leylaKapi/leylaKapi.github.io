@@ -4,7 +4,7 @@
   <title><![CDATA[Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-08-07T00:00:07+03:00</updated>
+  <updated>2014-08-07T00:01:50+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -35,8 +35,12 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>on your controller,
-&ndash; Then add</p>
+<p>on your controller.</p>
+
+<ul>
+<li>Then add</li>
+</ul>
+
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">skip_before_filter</span> <span class="ss">:verify_authenticity_token</span>
