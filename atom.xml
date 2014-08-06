@@ -4,7 +4,7 @@
   <title><![CDATA[Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-08-06T23:13:23+03:00</updated>
+  <updated>2014-08-06T23:31:30+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -12,6 +12,37 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Install open-jdk or oracle on Ubuntu]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/08/03/install-open-jdk-or-oracle-on-ubuntu/"/>
+    <updated>2014-08-03T23:25:29+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/08/03/install-open-jdk-or-oracle-on-ubuntu</id>
+    <content type="html"><![CDATA[<h3>Note about installation of java on Ubuntu computer</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo apt-get install openjdk-7-jdk
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>OR</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo add-apt-repository ppa:webupd8team/java
+</span><span class='line'><span class="nv">$ </span>sudo apt-get update
+</span><span class='line'><span class="nv">$ </span>sudo apt-get install oracle-java7-installer
+</span><span class='line'><span class="nv">$ </span>sudo apt-get update
+</span><span class='line'><span class="nv">$ </span>java -version
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&rsquo;s all</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Integration git-flow on Rubymine]]></title>
@@ -1273,35 +1304,6 @@ We need to create scaffold,</p>
 <p>opened <a href="http://0.0.0.0:3000/">http://localhost:3000/</a></p>
 
 <p>That&rsquo;s all.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Ruby on Rails MVC]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/04/24/ruby-on-rails-mvc/"/>
-    <updated>2014-04-24T00:25:52+03:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/04/24/ruby-on-rails-mvc</id>
-    <content type="html"><![CDATA[<h3>MVC in Ruby on Rails</h3>
-
-<p>MVC &ndash; model, view, controller</p>
-
-<p>MVC provide to separated of coding and design in app. This property provide to easiness for programmer.</p>
-
-<ul>
-<li><p>M &ndash; Model => Objects, Object-oriented, data, database</p></li>
-<li><p>V &ndash; View => Presentations layer user section, HTML, CSS, javascript &hellip;</p></li>
-<li><p>C &ndash; Controller => Process of respond user action, walk change model on the view make decision.</p></li>
-</ul>
-
-
-<p>Basic web architecture</p>
-
-<pre><code>Browser &lt;=&gt; Pages &lt;=&gt; Databases
-</code></pre>
-
-<p>Another web architecture</p>
-
-<p><img src="./images/index.jpeg" title="MVC architecture" alt="mvc architecture" /></p>
 ]]></content>
   </entry>
   
