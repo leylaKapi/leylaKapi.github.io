@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: github | Leyla's Blog]]></title>
+  <title><![CDATA[Category: gitHub | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/github/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-08-08T10:44:36+03:00</updated>
+  <updated>2014-08-08T10:45:56+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -14,146 +14,228 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Commands of github for setup]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/02/26/commands-of-github-for-setup/"/>
-    <updated>2014-02-26T12:31:12+02:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/02/26/commands-of-github-for-setup</id>
-    <content type="html"><![CDATA[<h3>What I can setup github and create repo?</h3>
+    <title type="html"><![CDATA[Integration git-flow on Rubymine]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/08/01/integration-git-flow-on-rubymine/"/>
+    <updated>2014-08-01T23:02:42+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/08/01/integration-git-flow-on-rubymine</id>
+    <content type="html"><![CDATA[<h3>How to integration git-flow on Rubymine ?</h3>
 
 <ul>
-<li>Firstly we create github account from <a href="https://github.com/">github</a></li>
-<li>We create a new repo from &lsquo;+&rsquo; symbol.</li>
-<li>We named this repo and creating.</li>
-<li>After, We seems to this url</li>
+<li>Firstly you should start to rubymine ide on your computer with <code>./rubymine.sh</code> then,</li>
+<li>You can open <code>Help</code> in  nav-bar of rubymine, <code>find-action</code> or <code>ctrl+shift+A</code> then you should search <code>plugins</code>.</li>
+<li>Open plugins of rubymine then search again <code>git-flow</code> , if you saw &lsquo;click on Browser&rsquo;,
+click then search again in search bar to <code>git-flow</code>, Then you ca find easily integrate on <code>Rubymine</code> ,
+then <em>restart rubymine</em> .</li>
 </ul>
 
 
-<p>``` bash</p>
+<p>That' s all.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Useful gems]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/07/13/when-you-start-to-project/"/>
+    <updated>2014-07-13T13:58:15+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/07/13/when-you-start-to-project</id>
+    <content type="html"><![CDATA[<h3>When you start to project, which gems are useful ?</h3>
 
-<pre><code>HTTP: https://github.com/username/repo_name.git
-SSH: git@github.com:username/repo_name.git
-</code></pre>
+<p>When you start a rails project, you can use these gems which useful for project.</p>
 
-<p>```</p>
-
-<p>We use any link. Now, we clone this repo on pc.</p>
-
-<p>Use this command</p>
-
-<p>``` bash</p>
-
-<pre><code>git clone https://github.com/username/repo_name.git
-</code></pre>
-
-<p>```</p>
-
-<p>Now you are cloning to pc but where this file?</p>
-
-<p>For this question, Where you want to setup, install there. For example, if you want to clone in desktop, you should go desktop path
-like this(For Mac);</p>
-
-<p>``` bash</p>
-
-<pre><code>cd Desktop/
-</code></pre>
-
-<p>```</p>
-
-<p>And then cloning this path.</p>
+<p>Gems are like,</p>
 
 <ul>
-<li>After clone, We open this file on ide or anywhere, writing our code in file.</li>
+<li><a href="https://rubygems.org/gems/blankable">blankable</a></li>
+<li><a href="https://rubygems.org/gems/simple_form">simple_form</a></li>
+<li><a href="https://rubygems.org/gems/model_to_locale">model_to_locale</a></li>
+<li><a href="https://rubygems.org/gems/responders">responders</a></li>
+<li><a href="https://rubygems.org/gems/will_paginate">will_paginate</a></li>
+<li><a href="https://rubygems.org/gems/will_paginate-bootstrap">will_paginate_bootstrap</a></li>
+<li><a href="https://rubygems.org/gems/better_errors">better_errors</a></li>
 </ul>
 
 
-<p>Now, changed this file, We should push this file to github.
-Hence, we use this code ;</p>
+<p>1- <strong>blankable gem</strong></p>
 
-<p>``` bash</p>
+<p><code>blankable</code> provide to add blank slates to index view &hellip;
+You can look on <a href="https://github.com/lab2023/blankable">gitHub</a></p>
 
-<pre><code>git add .
-</code></pre>
+<p>2- <strong>simple_form</strong></p>
 
-<p>```</p>
+<p><code>simple_form</code> provide to make easy rails forms, aims is that to be as flexible as possible
+while helping you with powerful components to create your form &hellip; You can look on <a href="https://github.com/plataformatec/simple_form">gitHub</a></p>
 
-<p>With this command, we added all changed file on network, we wait for push.</p>
+<p>3- <strong>model_to_locale</strong></p>
 
-<ul>
-<li>Which file added on network? Answer this question, We write this command and see to adding file.</li>
-</ul>
+<p><code>model_to_locale</code> provide to create locale file for model attributes &hellip;
+You can look on <a href="https://github.com/lab2023/model_to_locale">gitHub</a></p>
 
+<p>4- <strong>responders</strong></p>
+
+<p><code>responders</code> provide to dry up your Rails 3.2+ app &hellip;
+You can look on <a href="https://github.com/plataformatec/responders">gitHub</a></p>
+
+<p>5- <strong>will_paginate</strong></p>
+
+<p><code>will_paginate</code> provide to pagination library that integrate with RoR, Sinatra &hellip;
+You can look on <a href="https://github.com/mislav/will_paginate">gitHub</a></p>
+
+<p>6- <strong>will_paginate_bootstrap</strong></p>
+
+<p><code>will_paginate_bootstrap</code> provide to integrate in <code>will_paginate</code> to <code>bootstrap</code> &hellip;
+You can look on <a href="https://github.com/bootstrap-ruby/will_paginate-bootstrap">gitHub</a></p>
+
+<p>7- <strong>better_errors</strong></p>
+
+<p><code>better_errors</code> provide to replace standard error page to much better and useful error page
+You can look on <a href="https://github.com/charliesome/better_errorss">gitHub</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to make a release ?]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/07/10/how-to-make-a-release/"/>
+    <updated>2014-07-10T19:01:26+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/07/10/how-to-make-a-release</id>
+    <content type="html"><![CDATA[<p>Make a release</p>
+
+<p>When you start to make a release, I think if you look at your commit it can be better</p>
 
 <p><code>bash
-  git status
-</code></p>
-
-<ul>
-<li>We are saw to adding file , Now We need to commit for then to remember the files which adding.</li>
-</ul>
-
+git log
+</code>
+then if you make some wrong commit, you can delete wrong commit with</p>
 
 <p><code>bash
-   git commit -m "your_comment"
+git rebase -i HEAD~2
+</code>
+command.
+Then,</p>
+
+<p><code>bash
+git push origin +develop
 </code></p>
 
-<ul>
-<li>We prepared commit, Now all preparations are prepared, and we should push file n github</li>
-</ul>
+<p>After that, you can check you branch with</p>
 
+<p><code>bash
+git branch -a
+</code>
+then let&rsquo;s start to release ;</p>
 
-<p>``` bash</p>
+<p><code>bash
+git flow release start your_version_number
+</code>
+<code>your_version_number</code> can be like <code>0.1.0</code> . Actually can be like</p>
 
-<pre><code>git push origin master
-</code></pre>
+<p><code>bash
+git flow release start 0.1.0
+</code>
+When we write this command, you can create <code>VERSION.txt</code> file, and open &lsquo;txt&rsquo; file
+then write some number with <code>your_version_number</code></p>
 
-<p>```</p>
+<p>Write with order below commands,</p>
 
-<p>Note: <code>master</code> are name of branch on github, if you use another branch or  don&rsquo;t use &lsquo;master&rsquo; branch we created new branch and push</p>
+<p><code>bash
+git flow release finish 0.1.0
+</code></p>
 
-<p>``` bash</p>
+<p><code>bash
+git checkout release/0.1.0
+</code></p>
 
-<pre><code>git push origin branch_name
-</code></pre>
+<p><code>bash
+git push origin develop
+</code></p>
 
-<p>```</p>
+<p><code>bash
+git push origin +master
+</code></p>
 
-<ul>
-<li>If you want to see branches in your repo,</li>
-</ul>
+<p>Yep, Now you made a release you can check on your repo settings on <a href="https://github.com/">github</a>.</p>
 
+<p>Let' s add Tag,</p>
 
-<p>``` bash</p>
+<p><code>bash
+git tag
+</code>
+<code>bash
+git push --tags
+</code></p>
 
-<pre><code>git branch -a
-</code></pre>
+<p>That' s all.
+I hope help to you.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Remove log and idea files on your Rails Project]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/07/08/remove-log-and-idea-files-on-your-rails-project/"/>
+    <updated>2014-07-08T01:53:53+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/07/08/remove-log-and-idea-files-on-your-rails-project</id>
+    <content type="html"><![CDATA[<h3>How to remove log and idea files on your project ?</h3>
 
-<p>```</p>
+<p>Remove idea files</p>
 
-<ul>
-<li>If you created new branch</li>
-</ul>
+<p><code>bash
+git rm -r --cached .idea
+</code>
+While you were remove, terminal gives error about it, you can try to below command :</p>
 
+<p><code>bash
+git rm -rf --cached .idea
+</code>
+Remove log files</p>
 
-<p>``` bash</p>
+<p><code>bash
+git rm -r log/development.log
+</code></p>
 
-<pre><code>git branch name_of_newbranch
-</code></pre>
+<p>After that, you should include on your <code>.gitignore</code> file like;</p>
 
-<p>```</p>
+<p><code>bash
+echo '*log' &gt; .gitignore
+</code></p>
 
-<ul>
-<li>Now, you are in name_of_newbranch , but you want to return or switch another branch therefore</li>
-</ul>
+<p>That&rsquo;s all.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Git Stash]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/07/06/git-stash/"/>
+    <updated>2014-07-06T19:12:29+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/07/06/git-stash</id>
+    <content type="html"><![CDATA[<h3>Command of Git Stash</h3>
 
+<p>Thanks to <code>git stash</code>, provide to stash the changes in a dirty working directory away.</p>
 
-<p>``` bash</p>
+<p><code>bash
+git stash
+</code></p>
 
-<pre><code>git checkout another_branch
-</code></pre>
+<p><code>bash
+git flow feature start your_feature_name
+</code></p>
 
-<p>```</p>
+<p><code>bash
+git stash pop  // move to your_feature_name
+</code></p>
 
-<p> Git command basicly like this.</p>
+<p><code>bash
+git stash list
+</code></p>
+
+<p><code>bash
+git stash drop
+</code></p>
+
+<p><code>bash
+git stash branch
+</code></p>
+
+<p>That&rsquo;s all.
+I hope helped to you.</p>
 ]]></content>
   </entry>
   
