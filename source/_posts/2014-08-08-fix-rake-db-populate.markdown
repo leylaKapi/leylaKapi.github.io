@@ -34,7 +34,7 @@ sample_data.rake
 ```
 then try to run tour rails project.
 
-- if not exist, you should create new file in this directory `sample_data.rb`.
+- if not exist, you should create new file in `lib/tasks` directory, `sample_data.rake`.
 
 That' s all.
 
