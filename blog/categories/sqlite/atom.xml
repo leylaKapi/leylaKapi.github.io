@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: sqlite | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/sqlite/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2014-08-08T10:43:10+03:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[Leyla Kapi]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Fix rake db:populate]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/08/08/fix-rake-db-populate/"/>
+    <updated>2014-08-08T10:33:06+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/08/08/fix-rake-db-populate</id>
+    <content type="html"><![CDATA[<h3><code>Rake aborted! Don't know how to build task 'populate'</code></h3>
+
+<p><code>bash
+$ rake db:populate
+</code>
+or</p>
+
+<p><code>bash
+$ bundle exec rake db:populate
+</code></p>
+
+<p>While you were writing above command, you get errors like <code>Don't know how to build task 'populate'</code>.</p>
+
+<p>Let&rsquo;s fix,</p>
+
+<p>Firstly, you should check</p>
+
+<p><code>ruby
+lib/tasks/sample_data.rb
+</code>
+&ndash; if this file exist, you should rename this file</p>
+
+<p><code>ruby
+sample_data.rake
+</code>
+then try to run tour rails project.</p>
+
+<ul>
+<li>if not exist, you should create new file in this directory <code>sample_data.rb</code>.</li>
+</ul>
+
+
+<p>That' s all.</p>
+]]></content>
+  </entry>
+  
+</feed>

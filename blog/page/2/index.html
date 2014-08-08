@@ -7,8 +7,7 @@
 	<meta name="author" content="Leyla Kapi">
 
 	
-	<meta name="description" content="Make a release When you start to make a release, I think if you look at your commit it can be better 1
-git log then if you make some wrong commit, &hellip;">
+	<meta name="description" content="When you start to project, which gems are useful ? When you start a rails project, you can use these gems which useful for project. Gems are like, &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -88,6 +87,99 @@ git log then if you make some wrong commit, &hellip;">
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/07/13/when-you-start-to-project/">
+		
+			Useful Gems</a>
+	</h2>
+	<div class="entry-content">
+		<h3>When you start to project, which gems are useful ?</h3>
+
+<p>When you start a rails project, you can use these gems which useful for project.</p>
+
+<p>Gems are like,</p>
+
+<ul>
+<li><a href="https://rubygems.org/gems/blankable">blankable</a></li>
+<li><a href="https://rubygems.org/gems/simple_form">simple_form</a></li>
+<li><a href="https://rubygems.org/gems/model_to_locale">model_to_locale</a></li>
+<li><a href="https://rubygems.org/gems/responders">responders</a></li>
+<li><a href="https://rubygems.org/gems/will_paginate">will_paginate</a></li>
+<li><a href="https://rubygems.org/gems/will_paginate-bootstrap">will_paginate_bootstrap</a></li>
+<li><a href="https://rubygems.org/gems/better_errors">better_errors</a></li>
+</ul>
+
+
+<p>1- <strong>blankable gem</strong></p>
+
+<p><code>blankable</code> provide to add blank slates to index view &hellip;
+You can look on <a href="https://github.com/lab2023/blankable">gitHub</a></p>
+
+<p>2- <strong>simple_form</strong></p>
+
+<p><code>simple_form</code> provide to make easy rails forms, aims is that to be as flexible as possible
+while helping you with powerful components to create your form &hellip; You can look on <a href="https://github.com/plataformatec/simple_form">gitHub</a></p>
+
+<p>3- <strong>model_to_locale</strong></p>
+
+<p><code>model_to_locale</code> provide to create locale file for model attributes &hellip;
+You can look on <a href="https://github.com/lab2023/model_to_locale">gitHub</a></p>
+
+<p>4- <strong>responders</strong></p>
+
+<p><code>responders</code> provide to dry up your Rails 3.2+ app &hellip;
+You can look on <a href="https://github.com/plataformatec/responders">gitHub</a></p>
+
+<p>5- <strong>will_paginate</strong></p>
+
+<p><code>will_paginate</code> provide to pagination library that integrate with RoR, Sinatra &hellip;
+You can look on <a href="https://github.com/mislav/will_paginate">gitHub</a></p>
+
+<p>6- <strong>will_paginate_bootstrap</strong></p>
+
+<p><code>will_paginate_bootstrap</code> provide to integrate in <code>will_paginate</code> to <code>bootstrap</code> &hellip;
+You can look on <a href="https://github.com/bootstrap-ruby/will_paginate-bootstrap">gitHub</a></p>
+
+<p>7- <strong>better_errors</strong></p>
+
+<p><code>better_errors</code> provide to replace standard error page to much better and useful error page
+You can look on <a href="https://github.com/charliesome/better_errorss">gitHub</a></p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-13T13:58:15+03:00" pubdate data-updated="true">Jul 13<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/github/'>gitHub</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ror/'>ror</a>, <a class='category' href='/blog/categories/rubygems/'>rubygems</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/07/13/when-you-start-to-project/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -1059,72 +1151,6 @@ you should use</p>
 </div>
 	
 	<div class="comments"><a href="/blog/2014/05/04/validation-methods/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/04/26/rails-gem/">
-		
-			Rails Attributes: &#8216;Attr_accessible&#8217;</a>
-	</h2>
-	<div class="entry-content">
-		<p>If you get <em>attr_accesible</em>&rsquo;s bug, like</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Undefined method 'attr_accessible'</span></code></pre></td></tr></table></div></figure>
-
-
-<p>You can forget write gem about this attributes, open your <em>Gemfile</em> in project</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;protected-attributes&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Save and open terminal run,</p>
-
-<pre><code>bundle
-</code></pre>
-
-<p>that&rsquo;s fix your bug.</p>
-
-<ul>
-<li>If you want more information , you can visit <a href="https://github.com/rails/protected_attributes">ProtectedAttributesGem</a> .</li>
-</ul>
-
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-04-26T14:44:39+03:00" pubdate data-updated="true">Apr 26<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/attr-accessible/'>attr_accessible</a>, <a class='category' href='/blog/categories/bundle/'>bundle</a>, <a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/04/26/rails-gem/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>

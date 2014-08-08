@@ -7,11 +7,8 @@
 	<meta name="author" content="Leyla Kapi">
 
 	
-	<meta name="description" content="In this post, I try to explain scaffolding in rails shortly.
-Firstly, Let&rsquo;s create rails project 1
-2
-rails new blogging
-cd blogging Now, we &hellip;">
+	<meta name="description" content="If you get attr_accesible&rsquo;s bug, like 1
+Undefined method 'attr_accessible' You can forget write gem about this attributes, open your Gemfile &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -91,6 +88,72 @@ cd blogging Now, we &hellip;">
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/04/26/rails-gem/">
+		
+			Rails Attributes: &#8216;Attr_accessible&#8217;</a>
+	</h2>
+	<div class="entry-content">
+		<p>If you get <em>attr_accesible</em>&rsquo;s bug, like</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Undefined method 'attr_accessible'</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You can forget write gem about this attributes, open your <em>Gemfile</em> in project</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;protected-attributes&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Save and open terminal run,</p>
+
+<pre><code>bundle
+</code></pre>
+
+<p>that&rsquo;s fix your bug.</p>
+
+<ul>
+<li>If you want more information , you can visit <a href="https://github.com/rails/protected_attributes">ProtectedAttributesGem</a> .</li>
+</ul>
+
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-26T14:44:39+03:00" pubdate data-updated="true">Apr 26<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/attr-accessible/'>attr_accessible</a>, <a class='category' href='/blog/categories/bundle/'>bundle</a>, <a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/04/26/rails-gem/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -1919,152 +1982,6 @@ Without DNS, it wil be difficult to know IP address of websites which visit dail
 </div>
 	
 	<div class="comments"><a href="/blog/2014/03/22/how-to-change-dns-settings-on-ubuntu-desktop/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/03/15/blog-middleman/">
-		
-			Middleman Blog</a>
-	</h2>
-	<div class="entry-content">
-		<h3>How to create middleman blog for middleman project?</h3>
-
-<ul>
-<li>Middleman supported blogging in your project or your blog.</li>
-</ul>
-
-
-<p>If you create a blog, I think you should with middleman blogging. I hear, you say &lsquo; WHY ? &rsquo;</p>
-
-<p>WHY?</p>
-
-<ul>
-<li>Easy to use,</li>
-<li>Embed in your project easily</li>
-</ul>
-
-
-<p>&hellip;</p>
-
-<p><strong>Let&rsquo;s learn blogging with middleman blog</strong></p>
-
-<p>Firstly, if you use middleman blog in your project, this means if you use blogging in your website or application,
-you  should go to path of your project, open and write above command.</p>
-
-<p>you write in <em>Gemfile</em> :</p>
-
-<pre><code>    gem ' middleman-blog '
-</code></pre>
-
-<p>and then, in <em>config.rb</em></p>
-
-<pre><code>    activate :blog do |blog|
-    ---
-    set
-</code></pre>
-
-<p>and when you write these command in your project, open terminal or console  write</p>
-
-<pre><code>    bundle install                  #install gems
-    bundle exec middleman server    #run your blog in your project
-</code></pre>
-
-<p>If you want to set up from the rough, what you want to open to path, and write in terminal</p>
-
-<pre><code>    middleman init blog_name --template=blog
-</code></pre>
-
-<p>When you write this command you can see, many file created for your blo.</p>
-
-<p>Now open created blog, you should see directories,</p>
-
-<pre><code>    images
-    javascripts
-    stylesheets
-</code></pre>
-
-<p>files,</p>
-
-<pre><code>    index.html.erb
-    layout.erb
-    calendar.html.erb
-    tags.html.erb
-    feed.xml.builder
-    2012-01-01-example-article
-</code></pre>
-
-<ul>
-<li>Middleman provide  many tags and properties for your blog, if you want to organize, you can open <em>config.rb</em> and organize these, and see.</li>
-<li>If you want to organize style for blog, you should write in stylesheets and javascript directories, with CSS3 and Jquery ;)</li>
-<li>If you don&rsquo;t want to use <strong>.html.erb</strong> files, you can translate to <strong>.html.haml</strong> in <a href="http://html2haml.heroku.com/">html2haml</a>.</li>
-</ul>
-
-
-<p>And use this.</p>
-
-<ul>
-<li>If you want to use blog in your middleman project, you should create new layouts, and <em>index.html.haml</em> in your blog directory,
-different from your middleman project.
-and we write code in this.</li>
-</ul>
-
-
-<p>Yep ! you create new blog and prepared write new article your blog,</p>
-
-<p>Let&rsquo;s start :)</p>
-
-<pre><code>middleman article article_name
-</code></pre>
-
-<p>When write this command, middleman created new article file, blogging in this file, but we write with markdown inside created article file.</p>
-
-<p>When you write your article you run project with</p>
-
-<pre><code>bundle exec middleman server
-</code></pre>
-
-<p>after the</p>
-
-<pre><code>bundle install
-</code></pre>
-
-<p>run and see what you can do ?</p>
-
-<p>That&rsquo;s it.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-15T17:05:21+02:00" pubdate data-updated="true">Mar 15<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/blogging/'>blogging</a>, <a class='category' href='/blog/categories/middleman/'>middleman,</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/03/15/blog-middleman/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>
