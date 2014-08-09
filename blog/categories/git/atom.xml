@@ -4,7 +4,7 @@
   <title><![CDATA[Category: git | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/git/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-08-09T13:28:01+03:00</updated>
+  <updated>2014-08-09T13:45:03+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -76,6 +76,11 @@ When we write this command, you can create <code>VERSION.txt</code> file, and op
 then write some number with <code>your_version_number</code></p>
 
 <p>Write with order below commands,</p>
+
+<p><code>bash
+git add .
+git commit -m "Bump version 'your_version_number'"
+</code></p>
 
 <p><code>bash
 git flow release finish 0.1.0
