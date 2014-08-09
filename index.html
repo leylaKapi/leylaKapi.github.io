@@ -7,9 +7,8 @@
 	<meta name="author" content="Leyla Kapi">
 
 	
-	<meta name="description" content="Rake aborted! Don't know how to build task 'populate' 1
-$ rake db:populate or 1
-$ bundle exec rake db:populate While you were writing above command &hellip;">
+	<meta name="description" content="How to upload picture in rails app ? If you want to upload picture in your rails app, you should make Open your Gemfile in rails app then add 1
+gem &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -89,6 +88,165 @@ $ bundle exec rake db:populate While you were writing above command &hellip;">
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/08/09/upload-picture-to-rails-app/">
+		
+			Upload Picture to Rails App</a>
+	</h2>
+	<div class="entry-content">
+		<h3>How to upload picture in rails app ?</h3>
+
+<p>If you want to upload picture in your rails app, you should make</p>
+
+<ul>
+<li>Open your <code>Gemfile</code> in rails app then add</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;paperclip&#39;</span><span class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s2">&quot;git://github.com/thoughtbot/paperclip.git&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>in terminal write <code>bundle</code> for install gem.</p>
+
+<ul>
+<li><p>Which models do you want to upload picture ? For example, you have <code>books</code> model, because of this,  I write all command according to <code>book</code> model.</p></li>
+<li><p>After install <code>paperclip</code> gem, open your <code>terminal</code> again then write</p></li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'> <span class="nv">$ </span>rails g paperclip Book photo
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>then</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>bundle <span class="nb">exec </span>rake db:migrate
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Open <code>models/book.rb</code> add</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'>  <span class="kp">include</span> <span class="ss">Paperclip</span><span class="p">:</span><span class="ss">:Glue</span>
+</span><span class='line'>  <span class="n">has_attached_file</span> <span class="ss">:photo</span><span class="p">,</span> <span class="ss">:styles</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="ss">:small</span> <span class="o">=&gt;</span> <span class="s2">&quot;250x250&gt;&quot;</span> <span class="p">},</span>
+</span><span class='line'>                    <span class="ss">:url</span>  <span class="o">=&gt;</span> <span class="s2">&quot;/assets/books/:id/:style/:basename.:extension&quot;</span><span class="p">,</span>
+</span><span class='line'>                    <span class="ss">:path</span> <span class="o">=&gt;</span> <span class="s2">&quot;:rails_root/public/assets/books/:id/:style/:basename.:extension&quot;</span>
+</span><span class='line'>  <span class="n">validates_attachment_presence</span> <span class="ss">:photo</span>
+</span><span class='line'>  <span class="n">validates_attachment_size</span> <span class="ss">:photo</span><span class="p">,</span> <span class="ss">:less_than</span> <span class="o">=&gt;</span> <span class="mi">10</span><span class="o">.</span><span class="n">megabytes</span>
+</span><span class='line'>  <span class="n">validates_attachment_content_type</span> <span class="ss">:photo</span><span class="p">,</span> <span class="ss">:content_type</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="s1">&#39;image/jpeg&#39;</span><span class="p">,</span> <span class="s1">&#39;image/png&#39;</span><span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Open <code>books/show.html.haml</code> add</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="p">=</span> <span class="n">image_tag</span> <span class="vi">@book</span><span class="o">.</span><span class="n">photo</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="ss">:small</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Open <code>books/_form.html.haml</code> add</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="p">=</span> <span class="n">form_for</span> <span class="vi">@book</span><span class="p">,</span> <span class="ss">html</span><span class="p">:</span> <span class="p">{</span> <span class="ss">multipart</span><span class="p">:</span> <span class="kp">true</span> <span class="p">}</span>  <span class="k">do</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span>
+</span><span class='line'>  <span class="p">=</span> <span class="n">f</span><span class="o">.</span><span class="n">file_field</span> <span class="ss">:photo</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Open <code>controllers/books_controller.rb</code>, then check <code>create</code> method if you use</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'> <span class="k">def</span> <span class="nf">create</span>
+</span><span class='line'>    <span class="vi">@book</span> <span class="o">=</span> <span class="no">Book</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">book_params</span><span class="p">)</span>
+</span><span class='line'> <span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>instead of above, you should write</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'> <span class="k">def</span> <span class="nf">create</span>
+</span><span class='line'>    <span class="vi">@book</span> <span class="o">=</span> <span class="no">Book</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">book_params</span><span class="p">)</span>
+</span><span class='line'> <span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Lastly, you should control to add <code>:photo</code> in your <code>book_params</code> method.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="kp">private</span>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">book_params</span>
+</span><span class='line'>      <span class="n">params</span><span class="o">.</span><span class="n">require</span><span class="p">(</span><span class="ss">:book</span><span class="p">)</span><span class="o">.</span><span class="n">permit</span><span class="p">(</span><span class="ss">:category_id</span><span class="p">,</span> <span class="ss">:author_id</span><span class="p">,</span> <span class="ss">:isbn</span><span class="p">,</span> <span class="ss">:name</span><span class="p">,</span> <span class="ss">:photo</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&#8217; s all.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-08-09T13:03:08+03:00" pubdate data-updated="true">Aug 9<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/paperclip/'>paperclip</a>, <a class='category' href='/blog/categories/picture/'>picture</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/upload/'>upload</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/08/09/upload-picture-to-rails-app/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -909,91 +1067,6 @@ Than if errors didn&rsquo;t fixed, you should write on terminal</p>
 </div>
 	
 	<div class="comments"><a href="/blog/2014/07/17/error-compiling-sass-assets/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/07/16/add-search-form-to-rails-projects/">
-		
-			Add Simple Search Form to Rails Projects</a>
-	</h2>
-	<div class="entry-content">
-		<h3>How can you add simple search form to rails project ?</h3>
-
-<p>You want to add search form, but you don&rsquo;t no.  <em>HOW?</em></p>
-
-<p>Let&rsquo;s start, firstly you should use <a href="https://github.com/activerecord-hackery/ransack">ransack</a> and
-<a href="https://github.com/mislav/will_paginate">will_paginate</a> gems in your <code>Gemfile</code> then you should write in
-terminal <code>bundle</code> .</p>
-
-<p>Then open controller which you want to add search bar, like ;</p>
-
-<p><code>projects_controller</code></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">index</span>
-</span><span class='line'>    <span class="vi">@search</span> <span class="o">=</span> <span class="no">Project</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">params</span><span class="o">[</span><span class="ss">:q</span><span class="o">]</span><span class="p">)</span>
-</span><span class='line'>    <span class="vi">@project</span> <span class="o">=</span> <span class="vi">@search</span><span class="o">.</span><span class="n">result</span><span class="p">(</span><span class="ss">distinct</span><span class="p">:</span> <span class="kp">true</span><span class="p">)</span><span class="o">.</span><span class="n">paginate</span><span class="p">(</span><span class="ss">:page</span> <span class="o">=&gt;</span> <span class="n">params</span><span class="o">[</span><span class="ss">:page</span><span class="o">]</span><span class="p">)</span>
-</span><span class='line'>    <span class="n">respond_with</span> <span class="vi">@project</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>When you added controller, you should add below code which relation to index file ;</p>
-
-<p><code>projects/index.html.haml</code></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="p">=</span> <span class="n">search_form_for</span> <span class="vi">@search</span> <span class="k">do</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span>
-</span><span class='line'>    <span class="p">=</span> <span class="n">f</span><span class="o">.</span><span class="n">label</span> <span class="ss">:name_cont</span>
-</span><span class='line'>    <span class="p">=</span> <span class="n">f</span><span class="o">.</span><span class="n">search_field</span> <span class="ss">:name_cont</span>
-</span><span class='line'>    <span class="p">=</span> <span class="n">f</span><span class="o">.</span><span class="n">submit</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>That&rsquo;s all .</p>
-
-<p>I hope helped to you .</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-07-16T19:47:15+03:00" pubdate data-updated="true">Jul 16<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/controller/'>controller</a>, <a class='category' href='/blog/categories/form/'>form</a>, <a class='category' href='/blog/categories/model/'>model</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>, <a class='category' href='/blog/categories/search/'>search</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/07/16/add-search-form-to-rails-projects/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>

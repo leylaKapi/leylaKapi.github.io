@@ -7,7 +7,7 @@
 	<meta name="author" content="Leyla Kapi">
 
 	
-	<meta name="description" content="When you start to project, which gems are useful ? When you start a rails project, you can use these gems which useful for project. Gems are like, &hellip;">
+	<meta name="description" content="How can you add simple search form to rails project ? You want to add search form, but you don&rsquo;t no. HOW? Let&rsquo;s start, firstly you &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -87,6 +87,91 @@
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/07/16/add-search-form-to-rails-projects/">
+		
+			Add Simple Search Form to Rails Projects</a>
+	</h2>
+	<div class="entry-content">
+		<h3>How can you add simple search form to rails project ?</h3>
+
+<p>You want to add search form, but you don&rsquo;t no.  <em>HOW?</em></p>
+
+<p>Let&rsquo;s start, firstly you should use <a href="https://github.com/activerecord-hackery/ransack">ransack</a> and
+<a href="https://github.com/mislav/will_paginate">will_paginate</a> gems in your <code>Gemfile</code> then you should write in
+terminal <code>bundle</code> .</p>
+
+<p>Then open controller which you want to add search bar, like ;</p>
+
+<p><code>projects_controller</code></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">index</span>
+</span><span class='line'>    <span class="vi">@search</span> <span class="o">=</span> <span class="no">Project</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">params</span><span class="o">[</span><span class="ss">:q</span><span class="o">]</span><span class="p">)</span>
+</span><span class='line'>    <span class="vi">@project</span> <span class="o">=</span> <span class="vi">@search</span><span class="o">.</span><span class="n">result</span><span class="p">(</span><span class="ss">distinct</span><span class="p">:</span> <span class="kp">true</span><span class="p">)</span><span class="o">.</span><span class="n">paginate</span><span class="p">(</span><span class="ss">:page</span> <span class="o">=&gt;</span> <span class="n">params</span><span class="o">[</span><span class="ss">:page</span><span class="o">]</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">respond_with</span> <span class="vi">@project</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>When you added controller, you should add below code which relation to index file ;</p>
+
+<p><code>projects/index.html.haml</code></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="p">=</span> <span class="n">search_form_for</span> <span class="vi">@search</span> <span class="k">do</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span>
+</span><span class='line'>    <span class="p">=</span> <span class="n">f</span><span class="o">.</span><span class="n">label</span> <span class="ss">:name_cont</span>
+</span><span class='line'>    <span class="p">=</span> <span class="n">f</span><span class="o">.</span><span class="n">search_field</span> <span class="ss">:name_cont</span>
+</span><span class='line'>    <span class="p">=</span> <span class="n">f</span><span class="o">.</span><span class="n">submit</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&rsquo;s all .</p>
+
+<p>I hope helped to you .</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-16T19:47:15+03:00" pubdate data-updated="true">Jul 16<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/controller/'>controller</a>, <a class='category' href='/blog/categories/form/'>form</a>, <a class='category' href='/blog/categories/model/'>model</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>, <a class='category' href='/blog/categories/search/'>search</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/07/16/add-search-form-to-rails-projects/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -988,169 +1073,6 @@ you should use</p>
 </div>
 	
 	<div class="comments"><a href="/blog/2014/05/20/how-can-you-solve-yaml-exception-reading-bug-in-octopress/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/05/04/validation-methods/">
-		
-			Validation Methods</a>
-	</h2>
-	<div class="entry-content">
-		<h3>Ruby on Rails Validation methods</h3>
-
-<ul>
-<li><strong>validates_presence_of</strong></li>
-</ul>
-
-
-<p>Attribute mustn&rsquo;t be blank(nil,false,[],{})</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">validates_presence_of</span> <span class="ss">:field_name</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li><strong>validates_length_of</strong></li>
-</ul>
-
-
-<p>Attribute must meet length requirements :is, :minimum, :maximum, :within, :in, :too_short, :too_long</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">validates_length_of</span> <span class="ss">:field_name</span><span class="p">,</span> <span class="ss">:minimum</span> <span class="o">=&gt;</span> <span class="mi">100</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li><strong>validates_numericality_of</strong></li>
-</ul>
-
-
-<p>Attribute must be integer or floating number :less_than, :greater_than, :equal_to, :odd, :even, :greater_than_or_equal_to</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">validates_numericality_of</span> <span class="ss">:field_name</span><span class="p">,</span> <span class="ss">:greater_than_or_equal_to</span> <span class="o">=&gt;</span> <span class="mi">5</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li><strong>validates_inclusion_of</strong></li>
-</ul>
-
-
-<p>Attribute must be in a list of choises. (array or range) :in</p>
-
-<ul>
-<li><strong>validates_exclusion_of</strong></li>
-</ul>
-
-
-<p>Attribute mustn&rsquo;t be in a list of choises. (array or range) :in</p>
-
-<ul>
-<li><strong>validates_format_of</strong></li>
-</ul>
-
-
-<p>Attribute must match a regular expression. :with</p>
-
-<ul>
-<li><strong>validates_uniqueness_of</strong></li>
-</ul>
-
-
-<p>Attribute mustn&rsquo;t exist in the database :case_sensitive, :scope</p>
-
-<ul>
-<li><strong>validates_acceptance_of</strong></li>
-</ul>
-
-
-<p>Attribute must be accepted :accept(expected value, 1)</p>
-
-<ul>
-<li><strong>validates_confirmation_of</strong></li>
-</ul>
-
-
-<p>Attribute must be confirmed by entering it twice creates a virtual blank attribute for confirmation.</p>
-
-<ul>
-<li><strong>validates_associated</strong></li>
-</ul>
-
-
-<p>Associated object or objects must all be valid.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="ss">:allow_nil</span> <span class="o">=&gt;</span> <span class="kp">true</span>
-</span><span class='line'><span class="c1">#Skip valid if attribute is nil</span>
-</span><span class='line'><span class="ss">:allow_blank</span> <span class="o">=&gt;</span> <span class="kp">true</span>
-</span><span class='line'><span class="c1">#Skip valid if attribute is blank</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Example of Validations</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">validates_presence_of</span> <span class="ss">:user_name</span>
-</span><span class='line'><span class="n">validates_length_of</span> <span class="ss">:user_name</span><span class="p">,</span> <span class="ss">:maximum</span> <span class="o">=&gt;</span> <span class="mi">50</span>
-</span><span class='line'><span class="n">validates_uniqueness_of</span> <span class="ss">:user_name</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>When we use like above, We diverge to DRY, instead of above</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">validates</span> <span class="ss">:user_name</span><span class="p">,</span> <span class="ss">:presence</span> <span class="o">=&gt;</span> <span class="kp">true</span>
-</span><span class='line'>                     <span class="ss">:length</span> <span class="o">=&gt;</span> <span class="p">{</span><span class="ss">:maximum</span> <span class="o">=&gt;</span> <span class="mi">50</span><span class="p">}</span>
-</span><span class='line'>                     <span class="ss">:uniqueness</span> <span class="o">=&gt;</span> <span class="kp">true</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>That&rsquo;s all.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-05-04T20:39:52+03:00" pubdate data-updated="true">May 4<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/ror/'>RoR</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>, <a class='category' href='/blog/categories/validates/'>validates</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/05/04/validation-methods/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>

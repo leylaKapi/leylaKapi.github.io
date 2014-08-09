@@ -4,7 +4,7 @@
   <title><![CDATA[Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-08-08T10:45:32+03:00</updated>
+  <updated>2014-08-09T13:24:54+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -12,6 +12,131 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Upload picture to rails app]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/08/09/upload-picture-to-rails-app/"/>
+    <updated>2014-08-09T13:03:08+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/08/09/upload-picture-to-rails-app</id>
+    <content type="html"><![CDATA[<h3>How to upload picture in rails app ?</h3>
+
+<p>If you want to upload picture in your rails app, you should make</p>
+
+<ul>
+<li>Open your <code>Gemfile</code> in rails app then add</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;paperclip&#39;</span><span class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s2">&quot;git://github.com/thoughtbot/paperclip.git&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>in terminal write <code>bundle</code> for install gem.</p>
+
+<ul>
+<li><p>Which models do you want to upload picture ? For example, you have <code>books</code> model, because of this,  I write all command according to <code>book</code> model.</p></li>
+<li><p>After install <code>paperclip</code> gem, open your <code>terminal</code> again then write</p></li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'> <span class="nv">$ </span>rails g paperclip Book photo
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>then</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>bundle <span class="nb">exec </span>rake db:migrate
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Open <code>models/book.rb</code> add</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'>  <span class="kp">include</span> <span class="ss">Paperclip</span><span class="p">:</span><span class="ss">:Glue</span>
+</span><span class='line'>  <span class="n">has_attached_file</span> <span class="ss">:photo</span><span class="p">,</span> <span class="ss">:styles</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="ss">:small</span> <span class="o">=&gt;</span> <span class="s2">&quot;250x250&gt;&quot;</span> <span class="p">},</span>
+</span><span class='line'>                    <span class="ss">:url</span>  <span class="o">=&gt;</span> <span class="s2">&quot;/assets/books/:id/:style/:basename.:extension&quot;</span><span class="p">,</span>
+</span><span class='line'>                    <span class="ss">:path</span> <span class="o">=&gt;</span> <span class="s2">&quot;:rails_root/public/assets/books/:id/:style/:basename.:extension&quot;</span>
+</span><span class='line'>  <span class="n">validates_attachment_presence</span> <span class="ss">:photo</span>
+</span><span class='line'>  <span class="n">validates_attachment_size</span> <span class="ss">:photo</span><span class="p">,</span> <span class="ss">:less_than</span> <span class="o">=&gt;</span> <span class="mi">10</span><span class="o">.</span><span class="n">megabytes</span>
+</span><span class='line'>  <span class="n">validates_attachment_content_type</span> <span class="ss">:photo</span><span class="p">,</span> <span class="ss">:content_type</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="s1">&#39;image/jpeg&#39;</span><span class="p">,</span> <span class="s1">&#39;image/png&#39;</span><span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Open <code>books/show.html.haml</code> add</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="p">=</span> <span class="n">image_tag</span> <span class="vi">@book</span><span class="o">.</span><span class="n">photo</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="ss">:small</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Open <code>books/_form.html.haml</code> add</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="p">=</span> <span class="n">form_for</span> <span class="vi">@book</span><span class="p">,</span> <span class="ss">html</span><span class="p">:</span> <span class="p">{</span> <span class="ss">multipart</span><span class="p">:</span> <span class="kp">true</span> <span class="p">}</span>  <span class="k">do</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span>
+</span><span class='line'>  <span class="p">=</span> <span class="n">f</span><span class="o">.</span><span class="n">file_field</span> <span class="ss">:photo</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Open <code>controllers/books_controller.rb</code>, then check <code>create</code> method if you use</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'> <span class="k">def</span> <span class="nf">create</span>
+</span><span class='line'>    <span class="vi">@book</span> <span class="o">=</span> <span class="no">Book</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">book_params</span><span class="p">)</span>
+</span><span class='line'> <span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>instead of above, you should write</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'> <span class="k">def</span> <span class="nf">create</span>
+</span><span class='line'>    <span class="vi">@book</span> <span class="o">=</span> <span class="no">Book</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">book_params</span><span class="p">)</span>
+</span><span class='line'> <span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Lastly, you should control to add <code>:photo</code> in your <code>book_params</code> method.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="kp">private</span>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">book_params</span>
+</span><span class='line'>      <span class="n">params</span><span class="o">.</span><span class="n">require</span><span class="p">(</span><span class="ss">:book</span><span class="p">)</span><span class="o">.</span><span class="n">permit</span><span class="p">(</span><span class="ss">:category_id</span><span class="p">,</span> <span class="ss">:author_id</span><span class="p">,</span> <span class="ss">:isbn</span><span class="p">,</span> <span class="ss">:name</span><span class="p">,</span> <span class="ss">:photo</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&#8217; s all.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Fix rake db:populate]]></title>
@@ -1176,135 +1301,6 @@ you should use</p>
 <p>Fixed the bug.</p>
 
 <p>I hope helped to you.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Validation methods]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/05/04/validation-methods/"/>
-    <updated>2014-05-04T20:39:52+03:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/05/04/validation-methods</id>
-    <content type="html"><![CDATA[<h3>Ruby on Rails Validation methods</h3>
-
-<ul>
-<li><strong>validates_presence_of</strong></li>
-</ul>
-
-
-<p>Attribute mustn&rsquo;t be blank(nil,false,[],{})</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">validates_presence_of</span> <span class="ss">:field_name</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li><strong>validates_length_of</strong></li>
-</ul>
-
-
-<p>Attribute must meet length requirements :is, :minimum, :maximum, :within, :in, :too_short, :too_long</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">validates_length_of</span> <span class="ss">:field_name</span><span class="p">,</span> <span class="ss">:minimum</span> <span class="o">=&gt;</span> <span class="mi">100</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li><strong>validates_numericality_of</strong></li>
-</ul>
-
-
-<p>Attribute must be integer or floating number :less_than, :greater_than, :equal_to, :odd, :even, :greater_than_or_equal_to</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">validates_numericality_of</span> <span class="ss">:field_name</span><span class="p">,</span> <span class="ss">:greater_than_or_equal_to</span> <span class="o">=&gt;</span> <span class="mi">5</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li><strong>validates_inclusion_of</strong></li>
-</ul>
-
-
-<p>Attribute must be in a list of choises. (array or range) :in</p>
-
-<ul>
-<li><strong>validates_exclusion_of</strong></li>
-</ul>
-
-
-<p>Attribute mustn&rsquo;t be in a list of choises. (array or range) :in</p>
-
-<ul>
-<li><strong>validates_format_of</strong></li>
-</ul>
-
-
-<p>Attribute must match a regular expression. :with</p>
-
-<ul>
-<li><strong>validates_uniqueness_of</strong></li>
-</ul>
-
-
-<p>Attribute mustn&rsquo;t exist in the database :case_sensitive, :scope</p>
-
-<ul>
-<li><strong>validates_acceptance_of</strong></li>
-</ul>
-
-
-<p>Attribute must be accepted :accept(expected value, 1)</p>
-
-<ul>
-<li><strong>validates_confirmation_of</strong></li>
-</ul>
-
-
-<p>Attribute must be confirmed by entering it twice creates a virtual blank attribute for confirmation.</p>
-
-<ul>
-<li><strong>validates_associated</strong></li>
-</ul>
-
-
-<p>Associated object or objects must all be valid.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="ss">:allow_nil</span> <span class="o">=&gt;</span> <span class="kp">true</span>
-</span><span class='line'><span class="c1">#Skip valid if attribute is nil</span>
-</span><span class='line'><span class="ss">:allow_blank</span> <span class="o">=&gt;</span> <span class="kp">true</span>
-</span><span class='line'><span class="c1">#Skip valid if attribute is blank</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Example of Validations</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">validates_presence_of</span> <span class="ss">:user_name</span>
-</span><span class='line'><span class="n">validates_length_of</span> <span class="ss">:user_name</span><span class="p">,</span> <span class="ss">:maximum</span> <span class="o">=&gt;</span> <span class="mi">50</span>
-</span><span class='line'><span class="n">validates_uniqueness_of</span> <span class="ss">:user_name</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>When we use like above, We diverge to DRY, instead of above</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">validates</span> <span class="ss">:user_name</span><span class="p">,</span> <span class="ss">:presence</span> <span class="o">=&gt;</span> <span class="kp">true</span>
-</span><span class='line'>                     <span class="ss">:length</span> <span class="o">=&gt;</span> <span class="p">{</span><span class="ss">:maximum</span> <span class="o">=&gt;</span> <span class="mi">50</span><span class="p">}</span>
-</span><span class='line'>                     <span class="ss">:uniqueness</span> <span class="o">=&gt;</span> <span class="kp">true</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>That&rsquo;s all.</p>
 ]]></content>
   </entry>
   
