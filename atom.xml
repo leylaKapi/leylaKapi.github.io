@@ -4,7 +4,7 @@
   <title><![CDATA[Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-08-09T13:24:54+03:00</updated>
+  <updated>2014-08-09T13:27:44+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -133,6 +133,8 @@
 </span><span class='line'>    <span class="k">end</span>
 </span></code></pre></td></tr></table></div></figure>
 
+
+<p>If you want to learn with details, you can visit <a href="http://railscasts.com/episodes/134-paperclip?autoplay=true">this site</a></p>
 
 <p>That&#8217; s all.</p>
 ]]></content>
