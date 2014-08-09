@@ -46,6 +46,11 @@ then write some number with `your_version_number`
 Write with order below commands,
 
 ```bash
+git add .
+git commit -m "Bump version 'your_version_number'"
+```
+
+```bash
 git flow release finish 0.1.0
 ```
 
