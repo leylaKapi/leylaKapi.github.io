@@ -80,4 +80,6 @@ private
     end
 ```
 
+If you want to learn with details, you can visit [this site](http://railscasts.com/episodes/134-paperclip?autoplay=true)
+
 That' s all.
