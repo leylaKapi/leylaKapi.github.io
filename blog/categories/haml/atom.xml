@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: haml | Leyla's Blog]]></title>
+  <title><![CDATA[Category: Haml | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/haml/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-08-09T13:45:03+03:00</updated>
+  <updated>2014-08-16T22:36:45+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -14,199 +14,162 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Bounce effect with CSS3]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/07/02/bounce-effect-with-css3/"/>
-    <updated>2014-07-02T00:56:56+03:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/07/02/bounce-effect-with-css3</id>
-    <content type="html"><![CDATA[<h3>How to give effect to arrow like bounce with CSS3 ?</h3>
+    <title type="html"><![CDATA[Middleman create haml file]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/02/27/middleman-create-haml-file/"/>
+    <updated>2014-02-27T13:49:10+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/02/27/middleman-create-haml-file</id>
+    <content type="html"><![CDATA[<h3>How to create .haml file in middleman?</h3>
 
-<p>You want to use arrow in your web-page with animation like bounce ball. <code>HOW ?</code></p>
+<p>Firstly, you should go <a href="" title="http://middlemanapp.com/">middleman</a> and you need to <strong>install middleman</strong></p>
 
-<p>Firstly, you should use this <code>haml</code> in your code, where you want to use <code>section</code>
-in your page,</p>
+<p><code>bash
+   gem install middleman
+</code></p>
 
-<p>```haml
-%p.scroll-down
-   .bounce</p>
+<p>Fine, you are installed middleman, now we start to create project in middleman</p>
 
-<pre><code> %a{href: '#section2'}
-    %i.fa.fa-angle-double-down.fa-5x
+<p><code>bash
+   middleman init project_name
+</code></p>
+
+<p>Then this command give you directory as shown below :</p>
+
+<p>``` bash
+ project_name/</p>
+
+<pre><code>Gemfile
+Gemfile.lock
+config.rb
+source
+    .gitignore
+    images
+        background.png
+        middleman.png
+    javascript
+        all.js
+    stylesheets
+        all.css
+        normalize.css
+    layouts
+        layout.erb
+    index.html.erb
 </code></pre>
 
 <p>```</p>
 
-<p>In your <code>sass</code> file, you should use</p>
+<p>If you can see this directories, you should open project with your IDE.</p>
 
-<p>```sass
-.scroll-down</p>
+<p><strong>Now, We create .haml file but how ?</strong></p>
 
-<pre><code>text-align: center
-position: absolute
-z-index: 2
-margin: 0 auto
+<p>Go ahead and remove below files because these files don&rsquo;t use in project.</p>
+
+<pre><code>- /source/images/background.png
+- /source/images/middleman.png
+- /source/javascript/all.js
+- /source/stylesheets/all.css
+- /source/stylesheets/normalize.css
+- /source/layouts/layout.erb
+- /source/index.html.erb
 </code></pre>
 
-<p>.bounce
-  position: fixed
-  left: 50%
-  margin-top: -25px
-  margin-left: -25px
-  height: 50px
-  width: 50px
-  -webkit-animation: bounce 1s infinite
-@-webkit-keyframes bounce
-  0%</p>
+<p>Now, Projects was removed from unused files.</p>
 
-<pre><code>bottom: 5px
-</code></pre>
+<h5>Add HAML</h5>
 
-<p>  25%, 75%</p>
+<p>Middleman appear to read HTML by default . Therefore, you should go to</p>
 
-<pre><code>bottom: 15px
-</code></pre>
-
-<p>  50%</p>
-
-<pre><code>bottom: 20px
-</code></pre>
-
-<p>  100%</p>
-
-<pre><code>bottom: 0
-</code></pre>
-
-<p>```</p>
-
-<p>That&rsquo;s all!</p>
-
-<p>I hope helped to you.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Note about write 'data' on  haml ?]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/06/21/note-about-write-data-on-haml/"/>
-    <updated>2014-06-21T17:13:02+03:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/06/21/note-about-write-data-on-haml</id>
-    <content type="html"><![CDATA[<p>Write <code>data</code> attributes on HAML ?</p>
-
-<p>if you write on haml and use <code>data</code> attribute,</p>
-
-<p><code>haml
-%a{"data-slide" =&gt; "prev", href: "#carousel-example-generic", role: "button"}
+<p><code>bash
+ /config.rb
 </code></p>
 
-<p>but you should style of write can be like below :</p>
+<p>in file write:</p>
 
 <p><code>haml
-%a{:data =&gt; {:slide =&gt; 'prev'}, href: '#carousel-generic'}
+set :haml, :format =&gt; :html5
 </code></p>
 
-<p>OR</p>
+<p>Now program convert to html5 from haml.</p>
+
+<ul>
+<li>Add a</li>
+</ul>
+
 
 <p><code>haml
-%li{"data-target" =&gt; ".nav-collapse", "data-toggle" =&gt; "collapse"}
+ layout.haml
 </code></p>
 
-<p>like below</p>
+<p>file to the</p>
 
-<p><code>haml
-%li{:data =&gt; {:toggle =&gt; 'collapse', :target =&gt; '.nav-collapse'}}
-</code></p>
-
-<p>If you want, you can look at <a href="http://stackoverflow.com/questions/10321632/haml-how-do-i-create-this-line-of-html">this page</a> for details .</p>
-
-<p>That&rsquo;s all</p>
-
-<p>I hope helped to you.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How create tree - list menu with HAML]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/03/22/how-create-tree-list-menu-with-haml/"/>
-    <updated>2014-03-22T18:57:27+02:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/03/22/how-create-tree-list-menu-with-haml</id>
-    <content type="html"><![CDATA[<h3>How to created tree &ndash; list menu with haml, sass, coffeescript ?</h3>
-
-<p>Firstly, we create middleman project and create</p>
-
-<pre><code>index.html.haml
-style.css.sass
-application.coffee
+<pre><code>      /source/layouts
 </code></pre>
 
-<p>then we open <code>index.html.haml</code> file and we write your code like this,</p>
+<p>directory. In this file we write</p>
 
 <p>``` haml</p>
 
-<pre><code>--- my code like this ---
-%ul.archive_tool
-  %li#tools Car
-  %ul.archive_requires
-    %li#requires BMW
-    %li#requires Mercedes
-    %li#requires Toyota
-    %li#requires Fiat
-  %li#tools Book
-  %ul.archive_requires
-    %li#requires Ruby
-    %li#requires ROR
-    %li#requires Thought
-  %li#tools Computer
-  %ul.archive_requires
-    %li#requires iMac
-    %li#requires Windows
-    %li#requires Linux
-    %li#requires Seu
-  %li#tools Chair
-  %ul.archive_requires
-    %li#requires comfortable
-    %li#requires uncomfortable
-</code></pre>
-
-<p><code>``
-then open</code>style.css.sass` file and write style code</p>
-
-<p>``` sass</p>
-
-<pre><code>  #tools, #requires
-    cursor: pointer
-  .archive_tool
-    margin-left: 1em
-    font-size: large
-    font-weight: bold
-    cursor: pointer
-  .archive_requires
-    @extend .archive_tool
-    margin:
-      top: 0
-      bottom: 1em
-    font-size: medium
-    list-style-type: circle
+<pre><code>!!!
+%html{ :lang =&gt; "en"}
+    %head
+        %meta{:charset =&gt; "utf-8"}
+        %title= data.page.title
+        = stylesheet_link_tag "your_css_file.css"
+        = javascript_include_tag "your_javascript_file.js"
+    %body
+        = yield
 </code></pre>
 
 <p>```</p>
 
-<p>then open <code>application.coffee</code> file, and</p>
+<p>Now we must create</p>
 
-<p>``` coffeescript</p>
+<p>``` haml</p>
 
-<pre><code>$(document).ready -&gt;
-  $(".archive_tool ul").hide()
-  $(".archive_tool &gt; li").click -&gt;
-    $(this).parent().find("ul").slideToggle()
-    return
-  $(".archive_requires &gt; li").click -&gt;
-    $(this).parent().find("ul").slideToggle()
+<pre><code>index.html.haml
 </code></pre>
 
-<p>```
-we write this code inside haml, sass, and coffeescript file and then saved all, run this middleman project.</p>
+<p>```</p>
 
-<p>According to edit your own project try to run codes.</p>
+<p>in</p>
 
-<p>I hope, helped you.</p>
+<pre><code>            `source/`
+</code></pre>
+
+<p>directory.</p>
+
+<p>``` haml</p>
+
+<pre><code>%h1 Welcome Middleman project
+</code></pre>
+
+<p>```</p>
+
+<p>write in</p>
+
+<pre><code>           `source/index.html.haml`
+</code></pre>
+
+<p>files.</p>
+
+<p>We are create middleman project and write codes, How we run this program?</p>
+
+<p>Wait! Dont worry, When writing to below command in terminal in order of this.</p>
+
+<pre><code># Go to project path
+
+     cd project_name
+     bundle install
+     bundle exec middleman server
+</code></pre>
+
+<p>then we are seen</p>
+
+<pre><code>         http://localhost:3000
+</code></pre>
+
+<p>like url. We should copy this url and paste on browser search bar.</p>
+
+<p>That&rsquo;s it! Try and see.</p>
 ]]></content>
   </entry>
   

@@ -7,7 +7,8 @@
 	<meta name="author" content="Leyla Kapi">
 
 	
-	<meta name="description" content="How to change DNS settings (ip address) or How to set up Google public DNS for Ubuntu Desktop? Firstly, we should look at Google Public DNS. What is &hellip;">
+	<meta name="description" content="How to created tree &ndash; list menu with haml, sass, coffeescript ? Firstly, we create middleman project and create index.html.haml
+style.css.sass &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -87,6 +88,165 @@
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/03/22/how-create-tree-list-menu-with-haml/">
+		
+			How Create Tree - List Menu With HAML</a>
+	</h2>
+	<div class="entry-content">
+		<h3>How to created tree &ndash; list menu with haml, sass, coffeescript ?</h3>
+
+<p>Firstly, we create middleman project and create</p>
+
+<pre><code>index.html.haml
+style.css.sass
+application.coffee
+</code></pre>
+
+<p>then we open <code>index.html.haml</code> file and we write your code like this,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="p">-</span><span class="o">--</span> <span class="n">my</span> <span class="n">code</span> <span class="n">like</span> <span class="n">this</span> <span class="o">---</span>
+</span><span class='line'><span class="nt">%ul</span><span class="nc">.archive_tool</span>
+</span><span class='line'>  <span class="nt">%li</span><span class="nf">#tools</span> Car
+</span><span class='line'>  <span class="nt">%ul</span><span class="nc">.archive_requires</span>
+</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> BMW
+</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> Mercedes
+</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> Toyota
+</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> Fiat
+</span><span class='line'>  <span class="nt">%li</span><span class="nf">#tools</span> Book
+</span><span class='line'>  <span class="nt">%ul</span><span class="nc">.archive_requires</span>
+</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> Ruby
+</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> ROR
+</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> Thought
+</span><span class='line'>  <span class="nt">%li</span><span class="nf">#tools</span> Computer
+</span><span class='line'>  <span class="nt">%ul</span><span class="nc">.archive_requires</span>
+</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> iMac
+</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> Windows
+</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> Linux
+</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> Seu
+</span><span class='line'>  <span class="nt">%li</span><span class="nf">#tools</span> Chair
+</span><span class='line'>  <span class="nt">%ul</span><span class="nc">.archive_requires</span>
+</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> comfortable
+</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> uncomfortable
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>then open <code>style.css.sass</code> file and write style code</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='sass'><span class='line'>  <span class="nn">#tools</span><span class="o">,</span> <span class="nn">#requires</span>
+</span><span class='line'>    <span class="na">cursor</span><span class="o">:</span> <span class="no">pointer</span>
+</span><span class='line'>  <span class="nc">.archive_tool</span>
+</span><span class='line'>    <span class="na">margin-left</span><span class="o">:</span> <span class="mi">1</span><span class="kt">em</span>
+</span><span class='line'>    <span class="na">font-size</span><span class="o">:</span> <span class="no">large</span>
+</span><span class='line'>    <span class="na">font-weight</span><span class="o">:</span> <span class="no">bold</span>
+</span><span class='line'>    <span class="na">cursor</span><span class="o">:</span> <span class="no">pointer</span>
+</span><span class='line'>  <span class="nc">.archive_requires</span>
+</span><span class='line'>    <span class="k">@extend</span> <span class="nc">.archive_tool</span>
+</span><span class='line'>    <span class="na">margin</span><span class="o">:</span>
+</span><span class='line'>      <span class="na">top</span><span class="o">:</span> <span class="mi">0</span>
+</span><span class='line'>      <span class="na">bottom</span><span class="o">:</span> <span class="mi">1</span><span class="kt">em</span>
+</span><span class='line'>    <span class="na">font-size</span><span class="o">:</span> <span class="no">medium</span>
+</span><span class='line'>    <span class="na">list-style-type</span><span class="o">:</span> <span class="no">circle</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>then open <code>application.coffee</code> file, and</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='coffeescript'><span class='line'><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span> <span class="nf">-&gt;</span>
+</span><span class='line'>  <span class="nx">$</span><span class="p">(</span><span class="s">&quot;.archive_tool ul&quot;</span><span class="p">).</span><span class="nx">hide</span><span class="p">()</span>
+</span><span class='line'>  <span class="nx">$</span><span class="p">(</span><span class="s">&quot;.archive_tool &gt; li&quot;</span><span class="p">).</span><span class="nx">click</span> <span class="nf">-&gt;</span>
+</span><span class='line'>    <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">parent</span><span class="p">().</span><span class="nx">find</span><span class="p">(</span><span class="s">&quot;ul&quot;</span><span class="p">).</span><span class="nx">slideToggle</span><span class="p">()</span>
+</span><span class='line'>    <span class="k">return</span>
+</span><span class='line'>  <span class="nx">$</span><span class="p">(</span><span class="s">&quot;.archive_requires &gt; li&quot;</span><span class="p">).</span><span class="nx">click</span> <span class="nf">-&gt;</span>
+</span><span class='line'>    <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">parent</span><span class="p">().</span><span class="nx">find</span><span class="p">(</span><span class="s">&quot;ul&quot;</span><span class="p">).</span><span class="nx">slideToggle</span><span class="p">()</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>we write this code inside haml, sass, and coffeescript file and then saved all, run this middleman project.</p>
+
+<p>According to edit your own project try to run codes.</p>
+
+<p>I hope, helped you.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-22T18:57:27+02:00" pubdate data-updated="true">Mar 22<span>nd</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/coffeescript/'>coffeescript</a>, <a class='category' href='/blog/categories/haml/'>haml</a>, <a class='category' href='/blog/categories/middleman/'>middleman</a>, <a class='category' href='/blog/categories/sass/'>sass</a>, <a class='category' href='/blog/categories/tree-list/'>tree-list</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/03/22/how-create-tree-list-menu-with-haml/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -1283,169 +1443,6 @@ Now, we install the ruby after then</p>
 </div>
 	
 	<div class="comments"><a href="/blog/2014/02/26/how-to-add-aboout-page-in-octopress/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/02/26/commands-of-github-for-setup/">
-		
-			Commands of Github for Setup</a>
-	</h2>
-	<div class="entry-content">
-		<h3>What I can setup github and create repo?</h3>
-
-<ul>
-<li>Firstly we create github account from <a href="https://github.com/">github</a></li>
-<li>We create a new repo from &lsquo;+&rsquo; symbol.</li>
-<li>We named this repo and creating.</li>
-<li>After, We seems to this url</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>HTTP: https://github.com/username/repo_name.git
-</span><span class='line'>SSH: git@github.com:username/repo_name.git
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>We use any link. Now, we clone this repo on pc.</p>
-
-<p>Use this command</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git clone https://github.com/username/repo_name.git
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Now you are cloning to pc but where this file?</p>
-
-<p>For this question, Where you want to setup, install there. For example, if you want to clone in desktop, you should go desktop path
-like this(For Mac);</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">cd </span>Desktop/
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>And then cloning this path.</p>
-
-<ul>
-<li>After clone, We open this file on ide or anywhere, writing our code in file.</li>
-</ul>
-
-
-<p>Now, changed this file, We should push this file to github.
-Hence, we use this code ;</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git add .
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>With this command, we added all changed file on network, we wait for push.</p>
-
-<ul>
-<li>Which file added on network? Answer this question, We write this command and see to adding file.</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>  git status
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>We are saw to adding file , Now We need to commit for then to remember the files which adding.</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>   git commit -m <span class="s2">&quot;your_comment&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>We prepared commit, Now all preparations are prepared, and we should push file n github</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push origin master
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Note: <code>master</code> are name of branch on github, if you use another branch or  don&rsquo;t use &lsquo;master&rsquo; branch we created new branch and push</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push origin branch_name
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>If you want to see branches in your repo,</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git branch -a
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>If you created new branch</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git branch name_of_newbranch
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>Now, you are in name_of_newbranch , but you want to return or switch another branch therefore</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git checkout another_branch
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p> Git command basicly like this.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-02-26T12:31:12+02:00" pubdate data-updated="true">Feb 26<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/github/'>github</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/02/26/commands-of-github-for-setup/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>
