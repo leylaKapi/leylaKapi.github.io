@@ -4,7 +4,7 @@
   <title><![CDATA[Category: bug | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/bug/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-08-16T22:36:45+03:00</updated>
+  <updated>2014-08-21T15:11:53+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -12,6 +12,36 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Fix paperclip gem bug]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/08/21/fix-paperclip-gem-bug/"/>
+    <updated>2014-08-21T13:49:45+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/08/21/fix-paperclip-gem-bug</id>
+    <content type="html"><![CDATA[<h3>How can I fix <code>paperclip</code> error ?</h3>
+
+<p>When you use <code>paperclip</code> gem, if you are getting like this bug</p>
+
+<p><code>ruby
+Photo could not run the identify command. Please install ImageMagick.
+</code></p>
+
+<p>You can fix this bug with</p>
+
+<p><code>bash
+sudo apt-get autoremove
+</code>
+or you can make</p>
+
+<p><code>bash
+sudo apt-get install imagemagick.
+</code></p>
+
+<p>I suggest the second command, because if youcan make <code>autoremove</code> you can get error again.</p>
+
+<p>That' s all.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Rails fix undefined local variable or method]]></title>
