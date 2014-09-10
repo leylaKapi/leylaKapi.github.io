@@ -19,7 +19,7 @@ categories: rails icon-set ico-moon font css js
 paste in your assets for rails projects.
 - Go to css file in which download icomoons files, copy `css` file and paste in your style file
 (If you are using sass or less, you should convert to sass or less). 
-Another way, you can create new file like 
+Another way, you can create new file in stylesheet folder like 
 
 ```css 
 _icon.css.sass
@@ -31,17 +31,20 @@ file then paste in this file all icomoon-css. Then you should add your base styl
 @import 'icon'
 ```
 
-Now, you can use your icon set in your `html` or `haml` page like
+Now, you can use your icon set in your `html` 
 
 ```html
-<span class = 'your_icon_name' />
+<span class = 'your_icon_name' />      /
 ```
 
+or `haml` page like
+
 ```haml
-%span.your_icon_name
+%span.your_icon_name               
 ```
 
 If you want,  you can add some properties like, in your font css file maybe you want to change size your icons automatically,
+in your haml file, 
 
 ```haml
 %span.bf_mobile.bf-4x
