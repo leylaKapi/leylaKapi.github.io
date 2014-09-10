@@ -7,7 +7,7 @@
 	<meta name="author" content="Leyla Kapi">
 
 	
-	<meta name="description" content="Fix to admin_active gem bug You add adminactive gem to your Gemfile, then when you&rsquo;re running to bundle on your terminal, you&#8217; re &hellip;">
+	<meta name="description" content="How to fix rails devise gem generate bug? You use devise gem for add admin page or user page to your project. When you generate to your devise gem, &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -87,6 +87,75 @@
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/07/24/rails-devise-gem-generator-error/">
+		
+			Rails Devise Gem Generator Error</a>
+	</h2>
+	<div class="entry-content">
+		<h3>How to fix rails devise gem generate bug?</h3>
+
+<p>You use <code>devise</code> gem for add admin page or user page to your project. When you generate to your devise gem,
+you&#8217; re getting error to your project,  like ;</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>rails g devise:install
+</span><span class='line'>Could not find generator devise:install
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you get like ths error, you can fix for these order,</p>
+
+<ul>
+<li>Open your <code>Gemfile</code>, add <code>gem 'devise'</code> then,</li>
+<li>Open terminal, run  <code>bundle</code></li>
+<li>Open you computer search bar, Search on your computer to <code>Disk Utility</code></li>
+<li>Select you Disk For example: <code>Macintosh HD</code></li>
+<li>Then click on <code>Repair Disk Permissions</code></li>
+<li>Waiting approximately 15 minutes, then <strong>restart</strong> your computer.</li>
+</ul>
+
+
+<p>That&#8217; s all.</p>
+
+<p>I hope fixed your bug.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-24T15:36:48+03:00" pubdate data-updated="true">Jul 24<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/gemfile/'>Gemfile</a>, <a class='category' href='/blog/categories/bug/'>bug</a>, <a class='category' href='/blog/categories/devise/'>devise</a>, <a class='category' href='/blog/categories/error/'>error</a>, <a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/generate/'>generate</a>, <a class='category' href='/blog/categories/install/'>install</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/07/24/rails-devise-gem-generator-error/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -914,83 +983,6 @@ in your page,</p>
 </div>
 	
 	<div class="comments"><a href="/blog/2014/07/02/bounce-effect-with-css3/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/06/21/note-about-write-data-on-haml/">
-		
-			Note About Write &#8216;Data&#8217; on Haml ?</a>
-	</h2>
-	<div class="entry-content">
-		<p>Write <code>data</code> attributes on HAML ?</p>
-
-<p>if you write on haml and use <code>data</code> attribute,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nt">%a</span><span class="p">{</span><span class="s2">&quot;data-slide&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;prev&quot;</span><span class="p">,</span> <span class="ss">href</span><span class="p">:</span> <span class="s2">&quot;#carousel-example-generic&quot;</span><span class="p">,</span> <span class="ss">role</span><span class="p">:</span> <span class="s2">&quot;button&quot;</span><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>but you should style of write can be like below :</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nt">%a</span><span class="p">{</span><span class="ss">:data</span> <span class="o">=&gt;</span> <span class="p">{</span><span class="ss">:slide</span> <span class="o">=&gt;</span> <span class="s1">&#39;prev&#39;</span><span class="p">}</span>, href: &#39;#carousel-generic&#39;}
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>OR</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nt">%li</span><span class="p">{</span><span class="s2">&quot;data-target&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;.nav-collapse&quot;</span><span class="p">,</span> <span class="s2">&quot;data-toggle&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;collapse&quot;</span><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>like below</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nt">%li</span><span class="p">{</span><span class="ss">:data</span> <span class="o">=&gt;</span> <span class="p">{</span><span class="ss">:toggle</span> <span class="o">=&gt;</span> <span class="s1">&#39;collapse&#39;</span><span class="p">,</span> <span class="ss">:target</span> <span class="o">=&gt;</span> <span class="s1">&#39;.nav-collapse&#39;</span><span class="p">}</span>}
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>If you want, you can look at <a href="http://stackoverflow.com/questions/10321632/haml-how-do-i-create-this-line-of-html">this page</a> for details .</p>
-
-<p>That&rsquo;s all</p>
-
-<p>I hope helped to you.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-06-21T17:13:02+03:00" pubdate data-updated="true">Jun 21<span>st</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/attribute/'>attribute</a>, <a class='category' href='/blog/categories/data/'>data</a>, <a class='category' href='/blog/categories/haml/'>haml</a>, <a class='category' href='/blog/categories/target/'>target</a>, <a class='category' href='/blog/categories/toggle/'>toggle</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/06/21/note-about-write-data-on-haml/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>

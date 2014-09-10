@@ -7,8 +7,8 @@
 	<meta name="author" content="Leyla Kapi">
 
 	
-	<meta name="description" content="How can I fix paperclip error ? When you use paperclip gem, if you are getting like this bug 1
-Photo could not run the identify command. Please &hellip;">
+	<meta name="description" content="How created your icon-set for your rails project ? Firstly, you should go to icomoon.io website.
+You need to create new app on right-up corner of &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -88,6 +88,116 @@ Photo could not run the identify command. Please &hellip;">
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/09/10/create-icon-set-for-your-rails-project/">
+		
+			Create Icon Set for Your Rails Project</a>
+	</h2>
+	<div class="entry-content">
+		<h3>How created your icon-set for your rails project ?</h3>
+
+<ul>
+<li>Firstly, you should go to <a href="https://icomoon.io/">icomoon.io</a> website.</li>
+<li>You need to create new app on right-up corner of webpage</li>
+<li>Now upload your font-icons after press <code>import icons</code> buttons,</li>
+<li>Be careful, because your fonts format must be <code>svg</code> format,</li>
+<li>When upload your icons, you should rename your icons,</li>
+<li>Now select which rename icons, and go to download your icons,</li>
+<li>When you download icomoon which provide to you with <code>css</code> and <code>js</code> files for font.</li>
+<li>When you are opening which download file, you can see this file and copy <code>font</code> directory and
+paste in your assets for rails projects.</li>
+<li>Go to css file in which download icomoons files, copy <code>css</code> file and paste in your style file
+(If you are using sass or less, you should convert to sass or less).
+Another way, you can create new file in stylesheet folder like</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nt">_icon</span><span class="nc">.css.sass</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>file then paste in this file all icomoon-css. Then you should add your base style file like,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="k">@import</span> <span class="s1">&#39;icon&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now, you can use your icon set in your <code>html</code></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;span</span> <span class="na">class =</span><span class="err"> </span><span class="s">&#39;your_icon_name&#39;</span> <span class="nt">/&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>or <code>haml</code> page like</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nt">%span</span><span class="nc">.your_icon_name</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you want,  you can add some properties like, in your <code>css</code> file for your fonts, maybe you want to change size
+your icons automatically, in your <code>haml</code> file,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nt">%span</span><span class="nc">.bf_mobile.bf-4x</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>like above when you write <code>.bf-4x</code>, your font-size should be 4 times bigger.</p>
+
+<p>in your <code>_icon.css.sass</code></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nc">.bf-4x</span>
+</span><span class='line'>    <span class="nt">font-size</span><span class="o">:</span> <span class="nt">4em</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>like above you can add a lot of properties for your icons and make private for your rails projects.</p>
+
+<p> That&#8217; s all.</p>
+
+<p> I hope helped to you.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-10T17:23:26+03:00" pubdate data-updated="true">Sep 10<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/css/'>css</a>, <a class='category' href='/blog/categories/font/'>font</a>, <a class='category' href='/blog/categories/ico-moon/'>ico-moon</a>, <a class='category' href='/blog/categories/icon-set/'>icon-set</a>, <a class='category' href='/blog/categories/js/'>js</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/09/10/create-icon-set-for-your-rails-project/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -961,75 +1071,6 @@ then <em>restart rubymine</em> .</li>
 </div>
 	
 	<div class="comments"><a href="/blog/2014/07/25/rails-fix-undefined-method/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/07/24/rails-devise-gem-generator-error/">
-		
-			Rails Devise Gem Generator Error</a>
-	</h2>
-	<div class="entry-content">
-		<h3>How to fix rails devise gem generate bug?</h3>
-
-<p>You use <code>devise</code> gem for add admin page or user page to your project. When you generate to your devise gem,
-you&#8217; re getting error to your project,  like ;</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>rails g devise:install
-</span><span class='line'>Could not find generator devise:install
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>If you get like ths error, you can fix for these order,</p>
-
-<ul>
-<li>Open your <code>Gemfile</code>, add <code>gem 'devise'</code> then,</li>
-<li>Open terminal, run  <code>bundle</code></li>
-<li>Open you computer search bar, Search on your computer to <code>Disk Utility</code></li>
-<li>Select you Disk For example: <code>Macintosh HD</code></li>
-<li>Then click on <code>Repair Disk Permissions</code></li>
-<li>Waiting approximately 15 minutes, then <strong>restart</strong> your computer.</li>
-</ul>
-
-
-<p>That&#8217; s all.</p>
-
-<p>I hope fixed your bug.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-07-24T15:36:48+03:00" pubdate data-updated="true">Jul 24<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/gemfile/'>Gemfile</a>, <a class='category' href='/blog/categories/bug/'>bug</a>, <a class='category' href='/blog/categories/devise/'>devise</a>, <a class='category' href='/blog/categories/error/'>error</a>, <a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/generate/'>generate</a>, <a class='category' href='/blog/categories/install/'>install</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/07/24/rails-devise-gem-generator-error/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>
