@@ -34,7 +34,7 @@ file then paste in this file all icomoon-css. Then you should add your base styl
 Now, you can use your icon set in your `html` 
 
 ```html
-<span class = 'your_icon_name' />      /
+<span class = 'your_icon_name' />      
 ```
 
 or `haml` page like
@@ -43,13 +43,13 @@ or `haml` page like
 %span.your_icon_name               
 ```
 
-If you want,  you can add some properties like, in your font css file maybe you want to change size your icons automatically,
-in your haml file, 
+If you want,  you can add some properties like, in your `css` file for your fonts, maybe you want to change size 
+your icons automatically, in your `haml` file, 
 
 ```haml
 %span.bf_mobile.bf-4x
 ```
-like above when you write `.bf-4x`, your font -size should be 4 times bigger.
+like above when you write `.bf-4x`, your font-size should be 4 times bigger.
 
 in your `_icon.css.sass`
 
