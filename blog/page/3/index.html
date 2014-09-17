@@ -7,7 +7,7 @@
 	<meta name="author" content="Leyla Kapi">
 
 	
-	<meta name="description" content="How to give effect to arrow like bounce with CSS3 ? You want to use arrow in your web-page with animation like bounce ball. HOW ? Firstly, you &hellip;">
+	<meta name="description" content="How to fix rails undefined local variable or method &lsquo;confirmed_at&rsquo; ? If you getting like, and you thinking how can I fix ? Firstly, you &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -92,867 +92,103 @@
     <article class="post">
 	<h2 class="title">
 		
-		<a href="/blog/2014/07/02/bounce-effect-with-css3/">
+		<a href="/blog/2014/07/25/rails-fix-undefined-method/">
 		
-			Bounce Effect With CSS3</a>
+			Rails Fix Undefined Local Variable or Method</a>
 	</h2>
 	<div class="entry-content">
-		<h3>How to give effect to arrow like bounce with CSS3 ?</h3>
+		<h3>How to fix rails undefined local variable or method &lsquo;confirmed_at&rsquo; ?</h3>
 
-<p>You want to use arrow in your web-page with animation like bounce ball. <code>HOW ?</code></p>
+<p>If you getting like,</p>
 
-<p>Firstly, you should use this <code>haml</code> in your code, where you want to use <code>section</code>
-in your page,</p>
+<p><img src="../images/rails_undefined_error.png" alt="rails undefined" /></p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nt">%p</span><span class="nc">.scroll-down</span>
-</span><span class='line'>   <span class="nc">.bounce</span>
-</span><span class='line'>     <span class="nt">%a</span><span class="p">{</span><span class="ss">href</span><span class="p">:</span> <span class="s1">&#39;#section2&#39;</span><span class="p">}</span>
-</span><span class='line'>        <span class="nt">%i</span><span class="nc">.fa.fa-angle-double-down.fa-5x</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>In your <code>sass</code> file, you should use</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-</pre></td><td class='code'><pre><code class='sass'><span class='line'><span class="nc">.scroll-down</span>
-</span><span class='line'>    <span class="na">text-align</span><span class="o">:</span> <span class="no">center</span>
-</span><span class='line'>    <span class="na">position</span><span class="o">:</span> <span class="no">absolute</span>
-</span><span class='line'>    <span class="na">z-index</span><span class="o">:</span> <span class="mi">2</span>
-</span><span class='line'>    <span class="na">margin</span><span class="o">:</span> <span class="mi">0</span> <span class="no">auto</span>
-</span><span class='line'><span class="nc">.bounce</span>
-</span><span class='line'>  <span class="na">position</span><span class="o">:</span> <span class="no">fixed</span>
-</span><span class='line'>  <span class="na">left</span><span class="o">:</span> <span class="mi">50</span><span class="kt">%</span>
-</span><span class='line'>  <span class="na">margin-top</span><span class="o">:</span> <span class="mi">-25</span><span class="kt">px</span>
-</span><span class='line'>  <span class="na">margin-left</span><span class="o">:</span> <span class="mi">-25</span><span class="kt">px</span>
-</span><span class='line'>  <span class="na">height</span><span class="o">:</span> <span class="mi">50</span><span class="kt">px</span>
-</span><span class='line'>  <span class="na">width</span><span class="o">:</span> <span class="mi">50</span><span class="kt">px</span>
-</span><span class='line'>  <span class="na">-webkit-animation</span><span class="o">:</span> <span class="n">bounce</span> <span class="mi">1</span><span class="kt">s</span> <span class="n">infinite</span>
-</span><span class='line'><span class="k">@-webkit-keyframes</span> <span class="nt">bounce</span>
-</span><span class='line'>  <span class="nt">0</span><span class="err">%</span>
-</span><span class='line'>    <span class="na">bottom</span><span class="o">:</span> <span class="mi">5</span><span class="kt">px</span>
-</span><span class='line'>  <span class="nt">25</span><span class="err">%</span><span class="o">,</span> <span class="nt">75</span><span class="err">%</span>
-</span><span class='line'>    <span class="na">bottom</span><span class="o">:</span> <span class="mi">15</span><span class="kt">px</span>
-</span><span class='line'>  <span class="nt">50</span><span class="err">%</span>
-</span><span class='line'>    <span class="na">bottom</span><span class="o">:</span> <span class="mi">20</span><span class="kt">px</span>
-</span><span class='line'>  <span class="nt">100</span><span class="err">%</span>
-</span><span class='line'>    <span class="na">bottom</span><span class="o">:</span> <span class="mi">0</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>That&rsquo;s all!</p>
-
-<p>I hope helped to you.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-07-02T00:56:56+03:00" pubdate data-updated="true">Jul 2<span>nd</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/animation/'>animation</a>, <a class='category' href='/blog/categories/bounce/'>bounce</a>, <a class='category' href='/blog/categories/css3/'>css3</a>, <a class='category' href='/blog/categories/effect/'>effect</a>, <a class='category' href='/blog/categories/font-awesome/'>font-awesome</a>, <a class='category' href='/blog/categories/haml/'>haml</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/07/02/bounce-effect-with-css3/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/06/21/note-about-write-data-on-haml/">
-		
-			Note About Write &#8216;Data&#8217; on Haml ?</a>
-	</h2>
-	<div class="entry-content">
-		<p>Write <code>data</code> attributes on HAML ?</p>
-
-<p>if you write on haml and use <code>data</code> attribute,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nt">%a</span><span class="p">{</span><span class="s2">&quot;data-slide&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;prev&quot;</span><span class="p">,</span> <span class="ss">href</span><span class="p">:</span> <span class="s2">&quot;#carousel-example-generic&quot;</span><span class="p">,</span> <span class="ss">role</span><span class="p">:</span> <span class="s2">&quot;button&quot;</span><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>but you should style of write can be like below :</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nt">%a</span><span class="p">{</span><span class="ss">:data</span> <span class="o">=&gt;</span> <span class="p">{</span><span class="ss">:slide</span> <span class="o">=&gt;</span> <span class="s1">&#39;prev&#39;</span><span class="p">}</span>, href: &#39;#carousel-generic&#39;}
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>OR</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nt">%li</span><span class="p">{</span><span class="s2">&quot;data-target&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;.nav-collapse&quot;</span><span class="p">,</span> <span class="s2">&quot;data-toggle&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;collapse&quot;</span><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>like below</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nt">%li</span><span class="p">{</span><span class="ss">:data</span> <span class="o">=&gt;</span> <span class="p">{</span><span class="ss">:toggle</span> <span class="o">=&gt;</span> <span class="s1">&#39;collapse&#39;</span><span class="p">,</span> <span class="ss">:target</span> <span class="o">=&gt;</span> <span class="s1">&#39;.nav-collapse&#39;</span><span class="p">}</span>}
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>If you want, you can look at <a href="http://stackoverflow.com/questions/10321632/haml-how-do-i-create-this-line-of-html">this page</a> for details .</p>
-
-<p>That&rsquo;s all</p>
-
-<p>I hope helped to you.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-06-21T17:13:02+03:00" pubdate data-updated="true">Jun 21<span>st</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/attribute/'>attribute</a>, <a class='category' href='/blog/categories/data/'>data</a>, <a class='category' href='/blog/categories/haml/'>haml</a>, <a class='category' href='/blog/categories/target/'>target</a>, <a class='category' href='/blog/categories/toggle/'>toggle</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/06/21/note-about-write-data-on-haml/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/06/17/how-to-deploy-your-project-to-heroku/">
-		
-			How to Deploy Your Project to Heroku ?</a>
-	</h2>
-	<div class="entry-content">
-		<h3>Deploy to Heroku</h3>
-
-<p><strong>You have a rails application, and finished your application want to deploy with <code>Heroku</code>,  HOW ?</strong></p>
-
-<p>You should open your rails application, and in your application find <code>Gemfile</code>. Open Gemfile write this command</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;heroku&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>in your terminal</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>bundle install
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Come again to <code>Gemfile</code>, instead of</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;sqlite3&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>write</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">group</span> <span class="ss">:development</span><span class="p">,</span> <span class="ss">:test</span> <span class="k">do</span>
-</span><span class='line'>    <span class="n">gem</span> <span class="s1">&#39;sqlite3&#39;</span>
-</span><span class='line'><span class="k">end</span>
-</span><span class='line'><span class="n">group</span> <span class="ss">:production</span> <span class="k">do</span>
-</span><span class='line'>    <span class="n">gem</span> <span class="s1">&#39;pg&#39;</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>in terminal</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>bundle install
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Then go to <a href="https://www.heroku.com">Heroku</a>, you should create a free account on heroku. When you create account you can see <code>download toolbet</code> button,
-you can run this in your computer. Open your terminal and write</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>heroku login
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>When you write this command, heroku want to your heroku account information, entered this</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>~  heroku login
-</span><span class='line'>Enter your Heroku credentials.
-</span><span class='line'>Email: leylakapi@gmail.com
-</span><span class='line'>Password <span class="o">(</span>typing will be hidden<span class="o">)</span>:
-</span><span class='line'>Found existing public key: /Users/leylakapi/.ssh/id_rsa.pub
-</span><span class='line'>Uploading SSH public key /Users/leylakapi/.ssh/id_rsa.pub... <span class="k">done</span>
-</span><span class='line'>Authentication successful.
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>After login, you should run with order</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git add .
-</span><span class='line'>git commit -m <span class="s2">&quot;Your commit write here&quot;</span>
-</span><span class='line'>heroku create
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>When you <code>heroku create</code> you should see like</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>Creating pacific-beyond-5670... <span class="k">done</span>, stack is cedar
-</span><span class='line'>http://pacific-beyond-5670.herokuapp.com/ | git@heroku.com:pacific-beyond-5670.git
-</span><span class='line'>Git remote heroku added
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>then</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push heroku master
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>If you want to see in our browser you should use</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>heroku open
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>That&rsquo;s all.</p>
-
-<p>I hope helped to you.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-06-17T16:10:38+03:00" pubdate data-updated="true">Jun 17<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/deploy/'>deploy</a>, <a class='category' href='/blog/categories/heroku/'>heroku</a>, <a class='category' href='/blog/categories/project/'>project</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/06/17/how-to-deploy-your-project-to-heroku/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/05/20/how-can-you-solve-yaml-exception-reading-bug-in-octopress/">
-		
-			How Can You Solve YAML Exception Reading Bug in Octopress ?</a>
-	</h2>
-	<div class="entry-content">
-		<h3>Solve the YAML exception reading invalid byte sequence in US-ASCII</h3>
-
-<p>When you write</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>bundle <span class="nb">exec </span>rake generate
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>you get</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>YAML Exception reading 2014-04-28-your_file.markdown: invalid byte sequence in US-ASCII
-</span><span class='line'>&gt;&gt;&gt; Compass is watching <span class="k">for </span>changes. Press Ctrl-C to Stop.
-</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:35<span class="o">]</span> <span class="s2">&quot;GET / HTTP/1.1&quot;</span> 200 93907 0.0215
-</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:35<span class="o">]</span> <span class="s2">&quot;GET /stylesheets/screen.css HTTP/1.1&quot;</span> 200 28107 0.0019
-</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:35<span class="o">]</span> <span class="s2">&quot;GET /images/index.jpeg HTTP/1.1&quot;</span> 200 7466 0.0020
-</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:35<span class="o">]</span> <span class="s2">&quot;GET /javascripts/slash.js HTTP/1.1&quot;</span> 200 1786 0.0010
-</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:35<span class="o">]</span> <span class="s2">&quot;GET /javascripts/jquery.fancybox.pack.js HTTP/1.1&quot;</span> 200 17638 0.0014
-</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:35<span class="o">]</span> <span class="s2">&quot;GET /images/social/twitter.png?1398238298 HTTP/1.1&quot;</span> 200 554 0.0009
-</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:35<span class="o">]</span> <span class="s2">&quot;GET /images/social/github.png?1398238298 HTTP/1.1&quot;</span> 200 581 0.0029
-</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:35<span class="o">]</span> <span class="s2">&quot;GET /images/social/google.png?1398238298 HTTP/1.1&quot;</span> 200 602 0.0034
-</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:35<span class="o">]</span> <span class="s2">&quot;GET /font/fontawesome-webfont.woff HTTP/1.1&quot;</span> 200 23416 0.0034
-</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:35<span class="o">]</span> <span class="s2">&quot;GET /images/social/rss.png?1398238298 HTTP/1.1&quot;</span> 200 619 0.0069
-</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:36<span class="o">]</span> <span class="s2">&quot;GET /favicon.png HTTP/1.1&quot;</span> 200 400 0.0009
-</span><span class='line'><span class="o">[</span>2014-06-17 17:08:56<span class="o">]</span> regeneration: 1 files changed
-</span><span class='line'>YAML Exception reading 2014-04-28-your_file.markdown: invalid byte sequence in US-ASCII
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>If you want to solve this <code>rake generate</code> bug, you can use instead of <code>bundle exec rake generate</code>,
-you should use</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">LANG</span><span class="o">=</span>en_US.utf-8 bundle <span class="nb">exec </span>rake generate
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>this command, and you can write <code>rake preview</code> or <code>rake deploy</code></p>
-
-<p>Fixed the bug.</p>
-
-<p>I hope helped to you.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-05-20T17:19:18+03:00" pubdate data-updated="true">May 20<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/us-ascii/'>US-ASCII</a>, <a class='category' href='/blog/categories/exception/'>exception</a>, <a class='category' href='/blog/categories/generate/'>generate</a>, <a class='category' href='/blog/categories/invalid/'>invalid</a>, <a class='category' href='/blog/categories/rake/'>rake</a>, <a class='category' href='/blog/categories/yaml/'>yaml</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/05/20/how-can-you-solve-yaml-exception-reading-bug-in-octopress/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/05/04/validation-methods/">
-		
-			Validation Methods</a>
-	</h2>
-	<div class="entry-content">
-		<h3>Ruby on Rails Validation methods</h3>
+<p> and you thinking <strong>how can I fix ?</strong></p>
 
 <ul>
-<li><strong>validates_presence_of</strong></li>
+<li>Firstly, you need to create migration</li>
 </ul>
 
 
-<p>Attribute mustn&rsquo;t be blank(nil,false,[],{})</p>
-
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">validates_presence_of</span> <span class="ss">:field_name</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rails g migration add_confirmable
 </span></code></pre></td></tr></table></div></figure>
 
 
-<ul>
-<li><strong>validates_length_of</strong></li>
-</ul>
-
-
-<p>Attribute must meet length requirements :is, :minimum, :maximum, :within, :in, :too_short, :too_long</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">validates_length_of</span> <span class="ss">:field_name</span><span class="p">,</span> <span class="ss">:minimum</span> <span class="o">=&gt;</span> <span class="mi">100</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li><strong>validates_numericality_of</strong></li>
-</ul>
-
-
-<p>Attribute must be integer or floating number :less_than, :greater_than, :equal_to, :odd, :even, :greater_than_or_equal_to</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">validates_numericality_of</span> <span class="ss">:field_name</span><span class="p">,</span> <span class="ss">:greater_than_or_equal_to</span> <span class="o">=&gt;</span> <span class="mi">5</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li><strong>validates_inclusion_of</strong></li>
-</ul>
-
-
-<p>Attribute must be in a list of choises. (array or range) :in</p>
-
-<ul>
-<li><strong>validates_exclusion_of</strong></li>
-</ul>
-
-
-<p>Attribute mustn&rsquo;t be in a list of choises. (array or range) :in</p>
-
-<ul>
-<li><strong>validates_format_of</strong></li>
-</ul>
-
-
-<p>Attribute must match a regular expression. :with</p>
-
-<ul>
-<li><strong>validates_uniqueness_of</strong></li>
-</ul>
-
-
-<p>Attribute mustn&rsquo;t exist in the database :case_sensitive, :scope</p>
-
-<ul>
-<li><strong>validates_acceptance_of</strong></li>
-</ul>
-
-
-<p>Attribute must be accepted :accept(expected value, 1)</p>
-
-<ul>
-<li><strong>validates_confirmation_of</strong></li>
-</ul>
-
-
-<p>Attribute must be confirmed by entering it twice creates a virtual blank attribute for confirmation.</p>
-
-<ul>
-<li><strong>validates_associated</strong></li>
-</ul>
-
-
-<p>Associated object or objects must all be valid.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="ss">:allow_nil</span> <span class="o">=&gt;</span> <span class="kp">true</span>
-</span><span class='line'><span class="c1">#Skip valid if attribute is nil</span>
-</span><span class='line'><span class="ss">:allow_blank</span> <span class="o">=&gt;</span> <span class="kp">true</span>
-</span><span class='line'><span class="c1">#Skip valid if attribute is blank</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Example of Validations</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">validates_presence_of</span> <span class="ss">:user_name</span>
-</span><span class='line'><span class="n">validates_length_of</span> <span class="ss">:user_name</span><span class="p">,</span> <span class="ss">:maximum</span> <span class="o">=&gt;</span> <span class="mi">50</span>
-</span><span class='line'><span class="n">validates_uniqueness_of</span> <span class="ss">:user_name</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>When we use like above, We diverge to DRY, instead of above</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">validates</span> <span class="ss">:user_name</span><span class="p">,</span> <span class="ss">:presence</span> <span class="o">=&gt;</span> <span class="kp">true</span>
-</span><span class='line'>                     <span class="ss">:length</span> <span class="o">=&gt;</span> <span class="p">{</span><span class="ss">:maximum</span> <span class="o">=&gt;</span> <span class="mi">50</span><span class="p">}</span>
-</span><span class='line'>                     <span class="ss">:uniqueness</span> <span class="o">=&gt;</span> <span class="kp">true</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>That&rsquo;s all.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-05-04T20:39:52+03:00" pubdate data-updated="true">May 4<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/ror/'>RoR</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>, <a class='category' href='/blog/categories/validates/'>validates</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/05/04/validation-methods/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/04/26/rails-gem/">
-		
-			Rails Attributes: &#8216;Attr_accessible&#8217;</a>
-	</h2>
-	<div class="entry-content">
-		<p>If you get <em>attr_accesible</em>&rsquo;s bug, like</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Undefined method 'attr_accessible'</span></code></pre></td></tr></table></div></figure>
-
-
-<p>You can forget write gem about this attributes, open your <em>Gemfile</em> in project</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;protected-attributes&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Save and open terminal run,</p>
-
-<pre><code>bundle
-</code></pre>
-
-<p>that&rsquo;s fix your bug.</p>
-
-<ul>
-<li>If you want more information , you can visit <a href="https://github.com/rails/protected_attributes">ProtectedAttributesGem</a> .</li>
-</ul>
-
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-04-26T14:44:39+03:00" pubdate data-updated="true">Apr 26<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/attr-accessible/'>attr_accessible</a>, <a class='category' href='/blog/categories/bundle/'>bundle</a>, <a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/04/26/rails-gem/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/04/25/scaffolding-in-rails/">
-		
-			Scaffolding in Rails</a>
-	</h2>
-	<div class="entry-content">
-		<p>In this post, I try to explain scaffolding in rails shortly.
-Firstly, Let&rsquo;s create rails project</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rails new blogging
-</span><span class='line'><span class="nb">cd </span>blogging
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Now, we created rails project and enter inside of project.
-We need to create scaffold,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rails generate scaffold Information first_name second_name date_time:date city:boolean
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>We create Information model, in this model</li>
-<li>Type of first_name and second_name is string.</li>
-<li>Type of date_time is date, this provide to create date.</li>
-<li>Type of city is boolean, this provide to create checkbox.</li>
-</ul>
-
-
-<p>then we need to migrate for this reason,</p>
+<p>then,</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='bash'><span class='line'>rake db:migrate
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Then, If you want change your home page(index.html), you should open in your app,</p>
-
-<pre><code>config/routes.rb
-</code></pre>
-
-<p>this path and write</p>
-
-<pre><code>root :to =&gt; 'information#index'
-</code></pre>
-
-<p>save and run</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rails s
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>opened <a href="http://0.0.0.0:3000/">http://localhost:3000/</a></p>
-
-<p>That&rsquo;s all.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-04-25T00:21:58+03:00" pubdate data-updated="true">Apr 25<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/rake/'>rake</a>, <a class='category' href='/blog/categories/scaffold/'>scaffold</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/04/25/scaffolding-in-rails/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/04/24/ruby-on-rails-mvc/">
-		
-			Ruby on Rails MVC</a>
-	</h2>
-	<div class="entry-content">
-		<h3>MVC in Ruby on Rails</h3>
-
-<p>MVC &ndash; model, view, controller</p>
-
-<p>MVC provide to separated of coding and design in app. This property provide to easiness for programmer.</p>
-
-<ul>
-<li><p>M &ndash; Model => Objects, Object-oriented, data, database</p></li>
-<li><p>V &ndash; View => Presentations layer user section, HTML, CSS, javascript &hellip;</p></li>
-<li><p>C &ndash; Controller => Process of respond user action, walk change model on the view make decision.</p></li>
-</ul>
-
-
-<p>Basic web architecture</p>
-
-<pre><code>Browser &lt;=&gt; Pages &lt;=&gt; Databases
-</code></pre>
-
-<p>Another web architecture</p>
-
-<p><img src="./images/index.jpeg" title="MVC architecture" alt="mvc architecture" /></p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-04-24T00:25:52+03:00" pubdate data-updated="true">Apr 24<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/mvc/'>mvc</a>, <a class='category' href='/blog/categories/rails/'>rails,</a>, <a class='category' href='/blog/categories/ruby/'>ruby,</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/04/24/ruby-on-rails-mvc/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/04/23/setup-rubymine/">
-		
-			Setup Rubymine</a>
-	</h2>
-	<div class="entry-content">
-		<h3>How I can set up RubyMine for my Ubuntu Desktop ?</h3>
-
-<ul>
-<li>Firstly, You can install rubymine on <a href="http://www.jetbrains.com/ruby/download/">RubyMine</a></li>
-</ul>
-
-
-<p>Then, open your terminal</p>
-
-<pre><code>CTRL + ALT + T
-</code></pre>
-
-<p>Then, go to Download file then extract from <em>.tar.gz</em> file to normal directory. Then write in terminal</p>
+<p>When you write above command, you get again error, like</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">cd </span>Downloads/RubyMine-6.3/bin/
-</span><span class='line'>./rubymine.sh
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="o">==</span> 20140725114621 Addconfirmable: <span class="nv">migrating</span> <span class="o">===================================</span>
+</span><span class='line'>-- change_table<span class="o">(</span>:admins<span class="o">)</span>
+</span><span class='line'>rake aborted!
+</span><span class='line'>StandardError: An error has occurred, this and all later migrations canceled:
+</span><span class='line'>undefined method <span class="sb">`</span>confirmable<span class="s1">&#39; for #&lt;ActiveRecord::ConnectionAdapters::Table:0x007f8739d3e2e0&gt;..../db/migrate/20140725114621_addconfirmable.rb:4:in `block in up&#39;</span>
+</span><span class='line'>/Users/...../db/migrate/20140725114621_addconfirmable.rb:3:in <span class="sb">`</span>up<span class="err">&#39;</span>
+</span><span class='line'>Tasks: <span class="nv">TOP</span> <span class="o">=</span>&gt; db:migrate
+</span><span class='line'><span class="o">(</span>See full trace by running task with --trace<span class="o">)</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Then, Rubymine opens automatically.</p>
+<p>Let&rsquo;s fix this bug,</p>
+
+<ul>
+<li>You should open your migration which created and delete</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">t</span><span class="o">.</span><span class="n">confirmable</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>then go to another migration named which</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">.</span><span class="n">.</span><span class="o">.</span><span class="n">.</span><span class="o">/</span><span class="n">devise_create</span> <span class="o">.</span><span class="n">.</span><span class="o">.</span> <span class="o">.</span><span class="n">rb</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>in this file, you should see in comment</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'>  <span class="c1">## Confirmable</span>
+</span><span class='line'>  <span class="c1">## t.string   :confirmation_token</span>
+</span><span class='line'>  <span class="c1">## t.datetime :confirmed_at</span>
+</span><span class='line'>  <span class="c1">## t.datetime :confirmation_sent_at</span>
+</span><span class='line'>  <span class="c1">## t.string   :unconfirmed_email # Only if using reconfirmable</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>you should copy or cut above command without comment to your <code>addconfirmable.rb</code> migration file, instead of <code>t.confirmable</code></p>
+
+<p>Then you can write</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake db:migrate
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>That&rsquo;s all.</p>
+
+<p>I hope fix your bug.</p>
 
 		
 		
@@ -972,16 +208,16 @@ We need to create scaffold,</p>
   
 
 
-<time datetime="2014-04-23T23:59:28+03:00" pubdate data-updated="true">Apr 23<span>rd</span>, 2014</time></div>
+<time datetime="2014-07-25T15:52:35+03:00" pubdate data-updated="true">Jul 25<span>th</span>, 2014</time></div>
 	<div class="tags">
 
 
-	<a class='category' href='/blog/categories/ruby/'>ruby,</a>, <a class='category' href='/blog/categories/rubymine/'>rubymine,</a>, <a class='category' href='/blog/categories/set-up/'>set_up,</a>
+	<a class='category' href='/blog/categories/bug/'>bug</a>, <a class='category' href='/blog/categories/confirmed-at/'>confirmed_at</a>, <a class='category' href='/blog/categories/fix/'>fix</a>, <a class='category' href='/blog/categories/generate/'>generate</a>, <a class='category' href='/blog/categories/local/'>local</a>, <a class='category' href='/blog/categories/method/'>method</a>, <a class='category' href='/blog/categories/migration/'>migration</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/variable/'>variable</a>
 
 
 </div>
 	
-	<div class="comments"><a href="/blog/2014/04/23/setup-rubymine/#disqus_thread">Comments</a></div>
+	<div class="comments"><a href="/blog/2014/07/25/rails-fix-undefined-method/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>
@@ -990,106 +226,38 @@ We need to create scaffold,</p>
     <article class="post">
 	<h2 class="title">
 		
-		<a href="/blog/2014/04/20/how-is-the-internet-working-and-what-is-the-protocols/">
+		<a href="/blog/2014/07/24/rails-devise-gem-generator-error/">
 		
-			How Is the Internet Working and What Is the Protocols</a>
+			Rails Devise Gem Generator Error</a>
 	</h2>
 	<div class="entry-content">
-		<h3>How is the internet working ?</h3>
+		<h3>How to fix rails devise gem generate bug?</h3>
 
-<p>Internet like in real life, There are two sides for internet communication. While one of this is making request, another of this
-have to respond to this request. This loop is named</p>
+<p>You use <code>devise</code> gem for add admin page or user page to your project. When you generate to your devise gem,
+you&#8217; re getting error to your project,  like ;</p>
 
-<pre><code>request - respond
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>rails g devise:install
+</span><span class='line'>Could not find generator devise:install
+</span></code></pre></td></tr></table></div></figure>
 
-<p>or</p>
 
-<pre><code>client-server
-</code></pre>
-
-<p>Web relation client &ndash; server</p>
-
-<p><strong>client</strong> => <strong>server</strong></p>
-
-<pre><code>     request
-</code></pre>
-
-<p><strong>client</strong> &lt;= <strong>server</strong></p>
-
-<pre><code>     respond
-</code></pre>
-
-<p>Now, I try to explain when it occur this relation, Which process do occur?</p>
+<p>If you get like ths error, you can fix for these order,</p>
 
 <ul>
-<li><p>This process can be with protocols, protocols What?</p>
-
-<ul>
-<li>Protocols, like rules, this means that ; there are rules for connection two computer(client-server) each other to
-internet.This rules are named protocols.</li>
-</ul>
-</li>
-<li><p>There are many type of Protocols like HTTP(Hyper Text Transfer Protocols), TCP(Transmission Control Protocols),
-UDP(User Dtagram Protocol), SSL(Secure Socket Layer), TLS(Transport Layer Security),FTP(File Transfer Protocols) &hellip;etc.</p>
-
-<p>I try to explain several of the above protocols.</p></li>
-<li><p>HTTP (Hyper Text Transfer Protocol)</p></li>
+<li>Open your <code>Gemfile</code>, add <code>gem 'devise'</code> then,</li>
+<li>Open terminal, run  <code>bundle</code></li>
+<li>Open you computer search bar, Search on your computer to <code>Disk Utility</code></li>
+<li>Select you Disk For example: <code>Macintosh HD</code></li>
+<li>Then click on <code>Repair Disk Permissions</code></li>
+<li>Waiting approximately 15 minutes, then <strong>restart</strong> your computer.</li>
 </ul>
 
 
-<p>HTTP is which distribute in a source, which access to everyone for apply to hyper information system like text, graphics, video ..etc
-In brief HTTP is a set of rules.
-Also The means of name that, When we transferring text using this protocols.</p>
+<p>That&#8217; s all.</p>
 
-<p>In World using the default port number, showing like this <em>:80</em> . When we write url, automatically added to ending of URL,but it
-is hidden.</p>
-
-<ul>
-<li>TCP (Transmission Control Protocol)</li>
-</ul>
-
-
-<p>TCP provide to security of data exchange. The clients create a contact with each other, in this contact provide to data exchange
-and data transmitted in the correct order. Then TCP controlled to data whether it has reached by sending a message.
- It is very slow, because controlled data step by step.</p>
-
-<ul>
-<li>UDP (User Datagram Protocol)</li>
-</ul>
-
-
-<p>UDP is fast transmission data according to TCP but unsafe data . The aim is fast. If we compare with TCP. TCP and UDP similar
-but TCP is very slow. If sending <em>.rar</em> or <em>.zip</em> files, should use TCP because data is important. if you send to video,
-should use UDP because fast is important.</p>
-
-<ul>
-<li>SSL (Secure Socket Layer)</li>
-</ul>
-
-
-<p>SSl development for provide secuirty and privacy of transmission data on network. In SSL, before sending to information
-encrypted, only decrypted by computer which receiver. This provide privacy data exchange.</p>
-
-<pre><code>https  # 's' means that security .
-</code></pre>
-
-<ul>
-<li>TLS (Transport Layer Security)</li>
-</ul>
-
-
-<p>TLS similar to SSL. Differences to SSL is that, process of connection occur simple and without encryption, when data transmission can be done,
-security certificate engaged and then can be security.</p>
-
-<ul>
-<li><p>URL (Uniform Resources Locator)</p>
-
-<p> access_method//:server_name[:port]/site</p></li>
-</ul>
-
-
-<p>I hope this article help you for understanding internet works</p>
+<p>I hope fixed your bug.</p>
 
 		
 		
@@ -1109,16 +277,266 @@ security certificate engaged and then can be security.</p>
   
 
 
-<time datetime="2014-04-20T02:00:37+03:00" pubdate data-updated="true">Apr 20<span>th</span>, 2014</time></div>
+<time datetime="2014-07-24T15:36:48+03:00" pubdate data-updated="true">Jul 24<span>th</span>, 2014</time></div>
 	<div class="tags">
 
 
-	<a class='category' href='/blog/categories/http/'>HTTP</a>, <a class='category' href='/blog/categories/https/'>HTTPS</a>, <a class='category' href='/blog/categories/ssl/'>SSL</a>, <a class='category' href='/blog/categories/tcp/'>TCP</a>, <a class='category' href='/blog/categories/tls/'>TLS</a>, <a class='category' href='/blog/categories/udp/'>UDP</a>, <a class='category' href='/blog/categories/url/'>URL</a>, <a class='category' href='/blog/categories/internet/'>internet</a>, <a class='category' href='/blog/categories/protocols/'>protocols</a>, <a class='category' href='/blog/categories/working/'>working</a>
+	<a class='category' href='/blog/categories/gemfile/'>Gemfile</a>, <a class='category' href='/blog/categories/bug/'>bug</a>, <a class='category' href='/blog/categories/devise/'>devise</a>, <a class='category' href='/blog/categories/error/'>error</a>, <a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/generate/'>generate</a>, <a class='category' href='/blog/categories/install/'>install</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
 
 
 </div>
 	
-	<div class="comments"><a href="/blog/2014/04/20/how-is-the-internet-working-and-what-is-the-protocols/#disqus_thread">Comments</a></div>
+	<div class="comments"><a href="/blog/2014/07/24/rails-devise-gem-generator-error/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/07/22/rails-activeadmin-gem-bug/">
+		
+			Rails Active_admin Gem Bug</a>
+	</h2>
+	<div class="entry-content">
+		<h3>Fix to admin_active gem bug</h3>
+
+<p>You add <code>adminactive</code> gem to your Gemfile, then when you&rsquo;re running to <code>bundle</code> on your terminal,  you&#8217; re getting like,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>bundle
+</span><span class='line'>Fetching gem metadata from https://rubygems.org/..........
+</span><span class='line'>Fetching additional metadata from https://rubygems.org/..
+</span><span class='line'>Resolving dependencies...
+</span><span class='line'>Bundler could not find compatible versions <span class="k">for </span>gem <span class="s2">&quot;rails&quot;</span>:
+</span><span class='line'>  In Gemfile:
+</span><span class='line'>    activeadmin <span class="o">(</span>~&gt; 0.6.3<span class="o">)</span> ruby depends on
+</span><span class='line'>      rails <span class="o">(</span>&lt; 4, &gt;<span class="o">=</span> 3.0.0<span class="o">)</span> ruby
+</span><span class='line'>    rails <span class="o">(</span>4.1.4
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you replace on <code>Gemfile</code> from</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;activeadmin&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>to</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;activeadmin&#39;</span><span class="p">,</span> <span class="ss">github</span><span class="p">:</span> <span class="s1">&#39;gregbell/active_admin&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>you can fix easily.</p>
+
+<p>That&rsquo;s all.</p>
+
+<p>I hope helped to you.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-22T15:55:03+03:00" pubdate data-updated="true">Jul 22<span>nd</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/gemfile/'>Gemfile</a>, <a class='category' href='/blog/categories/active-admin/'>active_admin</a>, <a class='category' href='/blog/categories/bug/'>bug</a>, <a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/07/22/rails-activeadmin-gem-bug/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/07/17/error-compiling-sass-assets/">
+		
+			Error Compiling Sass Assets</a>
+	</h2>
+	<div class="entry-content">
+		<h3>Middleman sass compiling error</h3>
+
+<p>While you were made web template with <code>haml</code> and <code>sass</code>, if you use middleman and bootstrap for your web template and your project give you like,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sass'><span class='line'><span class="nt">Error</span> <span class="nt">compiling</span> <span class="nt">CSS</span> <span class="nt">asset</span>
+</span><span class='line'><span class="na">NoMethodError</span><span class="o">:</span> <span class="n">undefined</span> <span class="n">method</span> <span class="err">`</span><span class="n">font_path</span><span class="err">`</span> <span class="n">for</span> <span class="n">nil</span><span class="o">:</span><span class="n">NilClass</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>error.</p>
+
+<p>You can fix like with edit your <code>Gemfile</code></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;bootstrap-sass&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 3.1.1&#39;</span>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;middleman-sprockets&#39;</span><span class="p">,</span> <span class="s1">&#39;3.2.2&#39;</span>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;middleman-bootstrap-navbar&#39;</span><span class="p">,</span><span class="s1">&#39;~&gt;2.0&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then you can write in terminal <code>bundle install</code>
+Than if errors didn&rsquo;t fixed, you should write on terminal</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>bundle update middleman-sprockets
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you want to researches with details, you should look <a href="https://github.com/middleman/middleman/issues/1265">this page</a></p>
+
+<p>That&rsquo;s all.</p>
+
+<p>I hope helped to you.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-17T16:27:24+03:00" pubdate data-updated="true">Jul 17<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/assets/'>assets</a>, <a class='category' href='/blog/categories/bootstrap/'>bootstrap</a>, <a class='category' href='/blog/categories/compiling/'>compiling</a>, <a class='category' href='/blog/categories/middleman/'>middleman</a>, <a class='category' href='/blog/categories/sass/'>sass</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/07/17/error-compiling-sass-assets/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/07/16/add-search-form-to-rails-projects/">
+		
+			Add Simple Search Form to Rails Projects</a>
+	</h2>
+	<div class="entry-content">
+		<h3>How can you add simple search form to rails project ?</h3>
+
+<p>You want to add search form, but you don&rsquo;t no.  <em>HOW?</em></p>
+
+<p>Let&rsquo;s start, firstly you should use <a href="https://github.com/activerecord-hackery/ransack">ransack</a> and
+<a href="https://github.com/mislav/will_paginate">will_paginate</a> gems in your <code>Gemfile</code> then you should write in
+terminal <code>bundle</code> .</p>
+
+<p>Then open controller which you want to add search bar, like ;</p>
+
+<p><code>projects_controller</code></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">index</span>
+</span><span class='line'>    <span class="vi">@search</span> <span class="o">=</span> <span class="no">Project</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">params</span><span class="o">[</span><span class="ss">:q</span><span class="o">]</span><span class="p">)</span>
+</span><span class='line'>    <span class="vi">@project</span> <span class="o">=</span> <span class="vi">@search</span><span class="o">.</span><span class="n">result</span><span class="p">(</span><span class="ss">distinct</span><span class="p">:</span> <span class="kp">true</span><span class="p">)</span><span class="o">.</span><span class="n">paginate</span><span class="p">(</span><span class="ss">:page</span> <span class="o">=&gt;</span> <span class="n">params</span><span class="o">[</span><span class="ss">:page</span><span class="o">]</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">respond_with</span> <span class="vi">@project</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>When you added controller, you should add below code which relation to index file ;</p>
+
+<p><code>projects/index.html.haml</code></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="p">=</span> <span class="n">search_form_for</span> <span class="vi">@search</span> <span class="k">do</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span>
+</span><span class='line'>    <span class="p">=</span> <span class="n">f</span><span class="o">.</span><span class="n">label</span> <span class="ss">:name_cont</span>
+</span><span class='line'>    <span class="p">=</span> <span class="n">f</span><span class="o">.</span><span class="n">search_field</span> <span class="ss">:name_cont</span>
+</span><span class='line'>    <span class="p">=</span> <span class="n">f</span><span class="o">.</span><span class="n">submit</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&rsquo;s all .</p>
+
+<p>I hope helped to you .</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-16T19:47:15+03:00" pubdate data-updated="true">Jul 16<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/controller/'>controller</a>, <a class='category' href='/blog/categories/form/'>form</a>, <a class='category' href='/blog/categories/model/'>model</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>, <a class='category' href='/blog/categories/search/'>search</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/07/16/add-search-form-to-rails-projects/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>

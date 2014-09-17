@@ -7,7 +7,7 @@
 	<meta name="author" content="Leyla Kapi">
 
 	
-	<meta name="description" content="How to create .haml file in middleman? Firstly, you should go middleman and you need to install middleman 1 gem install middleman Fine, you are &hellip;">
+	<meta name="description" content="How to give effect to arrow like bounce with CSS3 ? You want to use arrow in your web-page with animation like bounce ball. HOW ? Firstly, you &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -92,28 +92,30 @@
     <article class="post">
 	<h2 class="title">
 		
-		<a href="/blog/2014/02/27/middleman-create-haml-file/">
+		<a href="/blog/2014/07/02/bounce-effect-with-css3/">
 		
-			Middleman Create Haml File</a>
+			Bounce Effect With CSS3</a>
 	</h2>
 	<div class="entry-content">
-		<h3>How to create .haml file in middleman?</h3>
+		<h3>How to give effect to arrow like bounce with CSS3 ?</h3>
 
-<p>Firstly, you should go <a href="" title="http://middlemanapp.com/">middleman</a> and you need to <strong>install middleman</strong></p>
+<p>You want to use arrow in your web-page with animation like bounce ball. <code>HOW ?</code></p>
+
+<p>Firstly, you should use this <code>haml</code> in your code, where you want to use <code>section</code>
+in your page,</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>   gem install middleman
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nt">%p</span><span class="nc">.scroll-down</span>
+</span><span class='line'>   <span class="nc">.bounce</span>
+</span><span class='line'>     <span class="nt">%a</span><span class="p">{</span><span class="ss">href</span><span class="p">:</span> <span class="s1">&#39;#section2&#39;</span><span class="p">}</span>
+</span><span class='line'>        <span class="nt">%i</span><span class="nc">.fa.fa-angle-double-down.fa-5x</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Fine, you are installed middleman, now we start to create project in middleman</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>   middleman init project_name
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Then this command give you directory as shown below :</p>
+<p>In your <code>sass</code> file, you should use</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -132,77 +134,325 @@
 <span class='line-number'>15</span>
 <span class='line-number'>16</span>
 <span class='line-number'>17</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'> project_name/
-</span><span class='line'>    Gemfile
-</span><span class='line'>    Gemfile.lock
-</span><span class='line'>    config.rb
-</span><span class='line'>    <span class="nb">source</span>
-</span><span class='line'>        .gitignore
-</span><span class='line'>        images
-</span><span class='line'>            background.png
-</span><span class='line'>            middleman.png
-</span><span class='line'>        javascript
-</span><span class='line'>            all.js
-</span><span class='line'>        stylesheets
-</span><span class='line'>            all.css
-</span><span class='line'>            normalize.css
-</span><span class='line'>        layouts
-</span><span class='line'>            layout.erb
-</span><span class='line'>        index.html.erb
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+</pre></td><td class='code'><pre><code class='sass'><span class='line'><span class="nc">.scroll-down</span>
+</span><span class='line'>    <span class="na">text-align</span><span class="o">:</span> <span class="no">center</span>
+</span><span class='line'>    <span class="na">position</span><span class="o">:</span> <span class="no">absolute</span>
+</span><span class='line'>    <span class="na">z-index</span><span class="o">:</span> <span class="mi">2</span>
+</span><span class='line'>    <span class="na">margin</span><span class="o">:</span> <span class="mi">0</span> <span class="no">auto</span>
+</span><span class='line'><span class="nc">.bounce</span>
+</span><span class='line'>  <span class="na">position</span><span class="o">:</span> <span class="no">fixed</span>
+</span><span class='line'>  <span class="na">left</span><span class="o">:</span> <span class="mi">50</span><span class="kt">%</span>
+</span><span class='line'>  <span class="na">margin-top</span><span class="o">:</span> <span class="mi">-25</span><span class="kt">px</span>
+</span><span class='line'>  <span class="na">margin-left</span><span class="o">:</span> <span class="mi">-25</span><span class="kt">px</span>
+</span><span class='line'>  <span class="na">height</span><span class="o">:</span> <span class="mi">50</span><span class="kt">px</span>
+</span><span class='line'>  <span class="na">width</span><span class="o">:</span> <span class="mi">50</span><span class="kt">px</span>
+</span><span class='line'>  <span class="na">-webkit-animation</span><span class="o">:</span> <span class="n">bounce</span> <span class="mi">1</span><span class="kt">s</span> <span class="n">infinite</span>
+</span><span class='line'><span class="k">@-webkit-keyframes</span> <span class="nt">bounce</span>
+</span><span class='line'>  <span class="nt">0</span><span class="err">%</span>
+</span><span class='line'>    <span class="na">bottom</span><span class="o">:</span> <span class="mi">5</span><span class="kt">px</span>
+</span><span class='line'>  <span class="nt">25</span><span class="err">%</span><span class="o">,</span> <span class="nt">75</span><span class="err">%</span>
+</span><span class='line'>    <span class="na">bottom</span><span class="o">:</span> <span class="mi">15</span><span class="kt">px</span>
+</span><span class='line'>  <span class="nt">50</span><span class="err">%</span>
+</span><span class='line'>    <span class="na">bottom</span><span class="o">:</span> <span class="mi">20</span><span class="kt">px</span>
+</span><span class='line'>  <span class="nt">100</span><span class="err">%</span>
+</span><span class='line'>    <span class="na">bottom</span><span class="o">:</span> <span class="mi">0</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>If you can see this directories, you should open project with your IDE.</p>
+<p>That&rsquo;s all!</p>
 
-<p><strong>Now, We create .haml file but how ?</strong></p>
+<p>I hope helped to you.</p>
 
-<p>Go ahead and remove below files because these files don&rsquo;t use in project.</p>
+		
+		
+	</div>
 
-<pre><code>- /source/images/background.png
-- /source/images/middleman.png
-- /source/javascript/all.js
-- /source/stylesheets/all.css
-- /source/stylesheets/normalize.css
-- /source/layouts/layout.erb
-- /source/index.html.erb
-</code></pre>
 
-<p>Now, Projects was removed from unused files.</p>
+<div class="meta">
+	<div class="date">
 
-<h5>Add HAML</h5>
 
-<p>Middleman appear to read HTML by default . Therefore, you should go to</p>
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-02T00:56:56+03:00" pubdate data-updated="true">Jul 2<span>nd</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/animation/'>animation</a>, <a class='category' href='/blog/categories/bounce/'>bounce</a>, <a class='category' href='/blog/categories/css3/'>css3</a>, <a class='category' href='/blog/categories/effect/'>effect</a>, <a class='category' href='/blog/categories/font-awesome/'>font-awesome</a>, <a class='category' href='/blog/categories/haml/'>haml</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/07/02/bounce-effect-with-css3/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/06/21/note-about-write-data-on-haml/">
+		
+			Note About Write &#8216;Data&#8217; on Haml ?</a>
+	</h2>
+	<div class="entry-content">
+		<p>Write <code>data</code> attributes on HAML ?</p>
+
+<p>if you write on haml and use <code>data</code> attribute,</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'> /config.rb
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nt">%a</span><span class="p">{</span><span class="s2">&quot;data-slide&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;prev&quot;</span><span class="p">,</span> <span class="ss">href</span><span class="p">:</span> <span class="s2">&quot;#carousel-example-generic&quot;</span><span class="p">,</span> <span class="ss">role</span><span class="p">:</span> <span class="s2">&quot;button&quot;</span><span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>in file write:</p>
+<p>but you should style of write can be like below :</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'>set :haml, :format =&gt; :html5
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nt">%a</span><span class="p">{</span><span class="ss">:data</span> <span class="o">=&gt;</span> <span class="p">{</span><span class="ss">:slide</span> <span class="o">=&gt;</span> <span class="s1">&#39;prev&#39;</span><span class="p">}</span>, href: &#39;#carousel-generic&#39;}
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Now program convert to html5 from haml.</p>
-
-<ul>
-<li>Add a</li>
-</ul>
-
+<p>OR</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'> layout.haml
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nt">%li</span><span class="p">{</span><span class="s2">&quot;data-target&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;.nav-collapse&quot;</span><span class="p">,</span> <span class="s2">&quot;data-toggle&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;collapse&quot;</span><span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>file to the</p>
+<p>like below</p>
 
-<pre><code>      /source/layouts
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nt">%li</span><span class="p">{</span><span class="ss">:data</span> <span class="o">=&gt;</span> <span class="p">{</span><span class="ss">:toggle</span> <span class="o">=&gt;</span> <span class="s1">&#39;collapse&#39;</span><span class="p">,</span> <span class="ss">:target</span> <span class="o">=&gt;</span> <span class="s1">&#39;.nav-collapse&#39;</span><span class="p">}</span>}
+</span></code></pre></td></tr></table></div></figure>
 
-<p>directory. In this file we write</p>
+
+<p>If you want, you can look at <a href="http://stackoverflow.com/questions/10321632/haml-how-do-i-create-this-line-of-html">this page</a> for details .</p>
+
+<p>That&rsquo;s all</p>
+
+<p>I hope helped to you.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-21T17:13:02+03:00" pubdate data-updated="true">Jun 21<span>st</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/attribute/'>attribute</a>, <a class='category' href='/blog/categories/data/'>data</a>, <a class='category' href='/blog/categories/haml/'>haml</a>, <a class='category' href='/blog/categories/target/'>target</a>, <a class='category' href='/blog/categories/toggle/'>toggle</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/06/21/note-about-write-data-on-haml/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/06/17/how-to-deploy-your-project-to-heroku/">
+		
+			How to Deploy Your Project to Heroku ?</a>
+	</h2>
+	<div class="entry-content">
+		<h3>Deploy to Heroku</h3>
+
+<p><strong>You have a rails application, and finished your application want to deploy with <code>Heroku</code>,  HOW ?</strong></p>
+
+<p>You should open your rails application, and in your application find <code>Gemfile</code>. Open Gemfile write this command</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;heroku&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>in your terminal</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>bundle install
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Come again to <code>Gemfile</code>, instead of</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;sqlite3&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>write</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">group</span> <span class="ss">:development</span><span class="p">,</span> <span class="ss">:test</span> <span class="k">do</span>
+</span><span class='line'>    <span class="n">gem</span> <span class="s1">&#39;sqlite3&#39;</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'><span class="n">group</span> <span class="ss">:production</span> <span class="k">do</span>
+</span><span class='line'>    <span class="n">gem</span> <span class="s1">&#39;pg&#39;</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>in terminal</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>bundle install
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then go to <a href="https://www.heroku.com">Heroku</a>, you should create a free account on heroku. When you create account you can see <code>download toolbet</code> button,
+you can run this in your computer. Open your terminal and write</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>heroku login
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>When you write this command, heroku want to your heroku account information, entered this</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>~  heroku login
+</span><span class='line'>Enter your Heroku credentials.
+</span><span class='line'>Email: leylakapi@gmail.com
+</span><span class='line'>Password <span class="o">(</span>typing will be hidden<span class="o">)</span>:
+</span><span class='line'>Found existing public key: /Users/leylakapi/.ssh/id_rsa.pub
+</span><span class='line'>Uploading SSH public key /Users/leylakapi/.ssh/id_rsa.pub... <span class="k">done</span>
+</span><span class='line'>Authentication successful.
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>After login, you should run with order</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git add .
+</span><span class='line'>git commit -m <span class="s2">&quot;Your commit write here&quot;</span>
+</span><span class='line'>heroku create
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>When you <code>heroku create</code> you should see like</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>Creating pacific-beyond-5670... <span class="k">done</span>, stack is cedar
+</span><span class='line'>http://pacific-beyond-5670.herokuapp.com/ | git@heroku.com:pacific-beyond-5670.git
+</span><span class='line'>Git remote heroku added
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>then</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push heroku master
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you want to see in our browser you should use</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>heroku open
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&rsquo;s all.</p>
+
+<p>I hope helped to you.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-17T16:10:38+03:00" pubdate data-updated="true">Jun 17<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/deploy/'>deploy</a>, <a class='category' href='/blog/categories/heroku/'>heroku</a>, <a class='category' href='/blog/categories/project/'>project</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/06/17/how-to-deploy-your-project-to-heroku/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/05/20/how-can-you-solve-yaml-exception-reading-bug-in-octopress/">
+		
+			How Can You Solve YAML Exception Reading Bug in Octopress ?</a>
+	</h2>
+	<div class="entry-content">
+		<h3>Solve the YAML exception reading invalid byte sequence in US-ASCII</h3>
+
+<p>When you write</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>bundle <span class="nb">exec </span>rake generate
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>you get</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -213,63 +463,43 @@
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
 <span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nn">!!!</span>
-</span><span class='line'><span class="nt">%html</span><span class="p">{</span> <span class="ss">:lang</span> <span class="o">=&gt;</span> <span class="s2">&quot;en&quot;</span><span class="p">}</span>
-</span><span class='line'>    <span class="nt">%head</span>
-</span><span class='line'>        <span class="nt">%meta</span><span class="p">{</span><span class="ss">:charset</span> <span class="o">=&gt;</span> <span class="s2">&quot;utf-8&quot;</span><span class="p">}</span>
-</span><span class='line'>        <span class="nt">%title</span><span class="p">=</span> <span class="n">data</span><span class="o">.</span><span class="n">page</span><span class="o">.</span><span class="n">title</span>
-</span><span class='line'>        <span class="p">=</span> <span class="n">stylesheet_link_tag</span> <span class="s2">&quot;your_css_file.css&quot;</span>
-</span><span class='line'>        <span class="p">=</span> <span class="n">javascript_include_tag</span> <span class="s2">&quot;your_javascript_file.js&quot;</span>
-</span><span class='line'>    <span class="nt">%body</span>
-</span><span class='line'>        <span class="p">=</span> <span class="k">yield</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>YAML Exception reading 2014-04-28-your_file.markdown: invalid byte sequence in US-ASCII
+</span><span class='line'>&gt;&gt;&gt; Compass is watching <span class="k">for </span>changes. Press Ctrl-C to Stop.
+</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:35<span class="o">]</span> <span class="s2">&quot;GET / HTTP/1.1&quot;</span> 200 93907 0.0215
+</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:35<span class="o">]</span> <span class="s2">&quot;GET /stylesheets/screen.css HTTP/1.1&quot;</span> 200 28107 0.0019
+</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:35<span class="o">]</span> <span class="s2">&quot;GET /images/index.jpeg HTTP/1.1&quot;</span> 200 7466 0.0020
+</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:35<span class="o">]</span> <span class="s2">&quot;GET /javascripts/slash.js HTTP/1.1&quot;</span> 200 1786 0.0010
+</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:35<span class="o">]</span> <span class="s2">&quot;GET /javascripts/jquery.fancybox.pack.js HTTP/1.1&quot;</span> 200 17638 0.0014
+</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:35<span class="o">]</span> <span class="s2">&quot;GET /images/social/twitter.png?1398238298 HTTP/1.1&quot;</span> 200 554 0.0009
+</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:35<span class="o">]</span> <span class="s2">&quot;GET /images/social/github.png?1398238298 HTTP/1.1&quot;</span> 200 581 0.0029
+</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:35<span class="o">]</span> <span class="s2">&quot;GET /images/social/google.png?1398238298 HTTP/1.1&quot;</span> 200 602 0.0034
+</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:35<span class="o">]</span> <span class="s2">&quot;GET /font/fontawesome-webfont.woff HTTP/1.1&quot;</span> 200 23416 0.0034
+</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:35<span class="o">]</span> <span class="s2">&quot;GET /images/social/rss.png?1398238298 HTTP/1.1&quot;</span> 200 619 0.0069
+</span><span class='line'>127.0.0.1 - - <span class="o">[</span>17/Jun/2014 17:08:36<span class="o">]</span> <span class="s2">&quot;GET /favicon.png HTTP/1.1&quot;</span> 200 400 0.0009
+</span><span class='line'><span class="o">[</span>2014-06-17 17:08:56<span class="o">]</span> regeneration: 1 files changed
+</span><span class='line'>YAML Exception reading 2014-04-28-your_file.markdown: invalid byte sequence in US-ASCII
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Now we must create</p>
+<p>If you want to solve this <code>rake generate</code> bug, you can use instead of <code>bundle exec rake generate</code>,
+you should use</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'>index.html.haml
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">LANG</span><span class="o">=</span>en_US.utf-8 bundle <span class="nb">exec </span>rake generate
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>in</p>
+<p>this command, and you can write <code>rake preview</code> or <code>rake deploy</code></p>
 
-<pre><code>            `source/`
-</code></pre>
+<p>Fixed the bug.</p>
 
-<p>directory.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nt">%h1</span> Welcome Middleman project
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>write in</p>
-
-<pre><code>           `source/index.html.haml`
-</code></pre>
-
-<p>files.</p>
-
-<p>We are create middleman project and write codes, How we run this program?</p>
-
-<p>Wait! Dont worry, When writing to below command in terminal in order of this.</p>
-
-<pre><code># Go to project path
-
-     cd project_name
-     bundle install
-     bundle exec middleman server
-</code></pre>
-
-<p>then we are seen</p>
-
-<pre><code>         http://localhost:3000
-</code></pre>
-
-<p>like url. We should copy this url and paste on browser search bar.</p>
-
-<p>That&rsquo;s it! Try and see.</p>
+<p>I hope helped to you.</p>
 
 		
 		
@@ -289,16 +519,16 @@
   
 
 
-<time datetime="2014-02-27T13:49:10+02:00" pubdate data-updated="true">Feb 27<span>th</span>, 2014</time></div>
+<time datetime="2014-05-20T17:19:18+03:00" pubdate data-updated="true">May 20<span>th</span>, 2014</time></div>
 	<div class="tags">
 
 
-	<a class='category' href='/blog/categories/haml/'>Haml</a>, <a class='category' href='/blog/categories/middleman/'>Middleman,</a>
+	<a class='category' href='/blog/categories/us-ascii/'>US-ASCII</a>, <a class='category' href='/blog/categories/exception/'>exception</a>, <a class='category' href='/blog/categories/generate/'>generate</a>, <a class='category' href='/blog/categories/invalid/'>invalid</a>, <a class='category' href='/blog/categories/rake/'>rake</a>, <a class='category' href='/blog/categories/yaml/'>yaml</a>
 
 
 </div>
 	
-	<div class="comments"><a href="/blog/2014/02/27/middleman-create-haml-file/#disqus_thread">Comments</a></div>
+	<div class="comments"><a href="/blog/2014/05/20/how-can-you-solve-yaml-exception-reading-bug-in-octopress/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>
@@ -307,203 +537,132 @@
     <article class="post">
 	<h2 class="title">
 		
-		<a href="/blog/2014/02/26/markdown-article-some-style/">
+		<a href="/blog/2014/05/04/validation-methods/">
 		
-			Markdown Article Some Style</a>
+			Validation Methods</a>
 	</h2>
 	<div class="entry-content">
-		<h2>Write article with markdown</h2>
+		<h3>Ruby on Rails Validation methods</h3>
 
 <ul>
-<li>When you start to write article with markdown, we can recognize to writing regularly and reading easily.</li>
+<li><strong>validates_presence_of</strong></li>
 </ul>
 
 
-<p>Firstly</p>
-
-<h4>How to write header in markdown?</h4>
-
-<p>While you&rsquo;re writing header, you should write in &lsquo;#&rsquo;(pound sign)</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'># Header 1
-</span><span class='line'>## Header 2
-</span><span class='line'>### Header 3
-</span><span class='line'>#### Header 4
-</span><span class='line'>##### Header 5
-</span><span class='line'>###### Header 6</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Bold are header more and more smaller, from above example, the boldest header is Header 1 and the lightest header is Header 2</p>
-
-<h4>How to write lists in markdown?</h4>
-
-<p>If you want to write list, How?</p>
-
-<p><strong>ordered or unordered</strong></p>
-
-<p>Firstly Ordered :</p>
-
-<p>We use number when we want to write ordered.</p>
-
-<p>Secondly unordered :</p>
-
-<p>We use &lsquo;&ndash;&rsquo; and &lsquo;*&rsquo; the symbol provide to write unordered.</p>
+<p>Attribute mustn&rsquo;t be blank(nil,false,[],{})</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'>  <span class="o">-</span> <span class="n">apple</span>
-</span><span class='line'>  <span class="o">-</span> <span class="n">banana</span>
-</span><span class='line'>  <span class="o">-</span> <span class="n">strawberries</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">validates_presence_of</span> <span class="ss">:field_name</span>
 </span></code></pre></td></tr></table></div></figure>
 
-
-<h4>How to write code in markdown?</h4>
-
-<p>When you write code block in markdown, you use &lsquo;&#8220;`&rsquo; symbol. How to write this symbol on keyboard?
- Don&rsquo;t worry! when we press on &lsquo; alt + , &rsquo; we create this symbol.</p>
-
-<p>like this :</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">.</span><span class="n">.</span><span class="o">.</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Also we specify the how write this code ? or with what write ?</p>
-
-<p>We say to terminal, konsol or ide you saying like :</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">.</span><span class="n">.</span><span class="o">.</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Now we say to terminal write ruby code block, and write according to ruby language.</p>
-
-<h4>How to write to link in markdown ?</h4>
-
-<p>When we use link about anything and if you want to be regularly you should use markdown and use like this :</p>
-
-<pre><code>[github](http://github.com)
-[leylakapi](http://leylakapi.github.io)
-</code></pre>
-
-<p>When the click github, redirected to on &lsquo;<a href="http://github.com">http://github.com</a>&rsquo;  this link.</p>
-
-<p>I tried to explain markdown, when we write code, link, header or list. I think these are the most commonly use .</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-02-26T17:59:49+02:00" pubdate data-updated="true">Feb 26<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/markdown/'>Markdown</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/02/26/markdown-article-some-style/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/02/26/how-to-add-aboout-page-in-octopress/">
-		
-			How to Add &#8216;About&#8217; Page in Octopress</a>
-	</h2>
-	<div class="entry-content">
-		<h3>How to add &lsquo;About&rsquo; page in Octopress?</h3>
-
-<p>I needs 2 step for create <code>About</code> page on navigation bar.</p>
 
 <ul>
-<li>Firstly create &lsquo;about page&rsquo;</li>
+<li><strong>validates_length_of</strong></li>
 </ul>
 
 
+<p>Attribute must meet length requirements :is, :minimum, :maximum, :within, :in, :too_short, :too_long</p>
+
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake new_page<span class="se">\[</span><span class="s2">&quot;About&quot;</span><span class="se">\]</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">validates_length_of</span> <span class="ss">:field_name</span><span class="p">,</span> <span class="ss">:minimum</span> <span class="o">=&gt;</span> <span class="mi">100</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Created new page for about and we linked to <code>About</code>, How?</p>
-
 <ul>
-<li>We open</li>
+<li><strong>validates_numericality_of</strong></li>
 </ul>
 
 
+<p>Attribute must be integer or floating number :less_than, :greater_than, :equal_to, :odd, :even, :greater_than_or_equal_to</p>
+
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>/source/_includes/custom/navigation.html
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">validates_numericality_of</span> <span class="ss">:field_name</span><span class="p">,</span> <span class="ss">:greater_than_or_equal_to</span> <span class="o">=&gt;</span> <span class="mi">5</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p> write the 3rd line below:</p>
+<ul>
+<li><strong>validates_inclusion_of</strong></li>
+</ul>
+
+
+<p>Attribute must be in a list of choises. (array or range) :in</p>
+
+<ul>
+<li><strong>validates_exclusion_of</strong></li>
+</ul>
+
+
+<p>Attribute mustn&rsquo;t be in a list of choises. (array or range) :in</p>
+
+<ul>
+<li><strong>validates_format_of</strong></li>
+</ul>
+
+
+<p>Attribute must match a regular expression. :with</p>
+
+<ul>
+<li><strong>validates_uniqueness_of</strong></li>
+</ul>
+
+
+<p>Attribute mustn&rsquo;t exist in the database :case_sensitive, :scope</p>
+
+<ul>
+<li><strong>validates_acceptance_of</strong></li>
+</ul>
+
+
+<p>Attribute must be accepted :accept(expected value, 1)</p>
+
+<ul>
+<li><strong>validates_confirmation_of</strong></li>
+</ul>
+
+
+<p>Attribute must be confirmed by entering it twice creates a virtual blank attribute for confirmation.</p>
+
+<ul>
+<li><strong>validates_associated</strong></li>
+</ul>
+
+
+<p>Associated object or objects must all be valid.</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'>   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;main-navigation&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>     <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/&quot;</span><span class="nt">&gt;</span>Blog<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-</span><span class='line'>     <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/blog/archives&quot;</span><span class="nt">&gt;</span>Archives<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-</span><span class='line'>     <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/about&quot;</span><span class="nt">&gt;</span>About<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-</span><span class='line'>   <span class="nt">&lt;/ul&gt;</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="ss">:allow_nil</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+</span><span class='line'><span class="c1">#Skip valid if attribute is nil</span>
+</span><span class='line'><span class="ss">:allow_blank</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+</span><span class='line'><span class="c1">#Skip valid if attribute is blank</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>then we use git command for sent on github</p>
+<p>Example of Validations</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git add .
-</span><span class='line'>git commit -m <span class="s2">&quot;Your Commit&quot;</span>
-</span><span class='line'>git push origin <span class="nb">source</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">validates_presence_of</span> <span class="ss">:user_name</span>
+</span><span class='line'><span class="n">validates_length_of</span> <span class="ss">:user_name</span><span class="p">,</span> <span class="ss">:maximum</span> <span class="o">=&gt;</span> <span class="mi">50</span>
+</span><span class='line'><span class="n">validates_uniqueness_of</span> <span class="ss">:user_name</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>And, for see on personal blog we need to deploy your code</p>
+<p>When we use like above, We diverge to DRY, instead of above</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake generate
-</span><span class='line'>rake preview   <span class="c">#see on localhost:4000</span>
-</span><span class='line'>rake deploy
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">validates</span> <span class="ss">:user_name</span><span class="p">,</span> <span class="ss">:presence</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+</span><span class='line'>                     <span class="ss">:length</span> <span class="o">=&gt;</span> <span class="p">{</span><span class="ss">:maximum</span> <span class="o">=&gt;</span> <span class="mi">50</span><span class="p">}</span>
+</span><span class='line'>                     <span class="ss">:uniqueness</span> <span class="o">=&gt;</span> <span class="kp">true</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>That&rsquo;s it!</p>
+<p>That&rsquo;s all.</p>
 
 		
 		
@@ -523,361 +682,16 @@
   
 
 
-<time datetime="2014-02-26T14:25:12+02:00" pubdate data-updated="true">Feb 26<span>th</span>, 2014</time></div>
+<time datetime="2014-05-04T20:39:52+03:00" pubdate data-updated="true">May 4<span>th</span>, 2014</time></div>
 	<div class="tags">
 
 
-	<a class='category' href='/blog/categories/octopress/'>Octopress</a>
+	<a class='category' href='/blog/categories/ror/'>RoR</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>, <a class='category' href='/blog/categories/validates/'>validates</a>
 
 
 </div>
 	
-	<div class="comments"><a href="/blog/2014/02/26/how-to-add-aboout-page-in-octopress/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/02/26/commands-of-github-for-setup/">
-		
-			Commands of Github for Setup</a>
-	</h2>
-	<div class="entry-content">
-		<h3>What I can setup github and create repo?</h3>
-
-<ul>
-<li>Firstly we create github account from <a href="https://github.com/">github</a></li>
-<li>We create a new repo from &lsquo;+&rsquo; symbol.</li>
-<li>We named this repo and creating.</li>
-<li>After, We seems to this url</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>HTTP: https://github.com/username/repo_name.git
-</span><span class='line'>SSH: git@github.com:username/repo_name.git
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>We use any link. Now, we clone this repo on pc.</p>
-
-<p>Use this command</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git clone https://github.com/username/repo_name.git
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Now you are cloning to pc but where this file?</p>
-
-<p>For this question, Where you want to setup, install there. For example, if you want to clone in desktop, you should go desktop path
-like this(For Mac);</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">cd </span>Desktop/
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>And then cloning this path.</p>
-
-<ul>
-<li>After clone, We open this file on ide or anywhere, writing our code in file.</li>
-</ul>
-
-
-<p>Now, changed this file, We should push this file to github.
-Hence, we use this code ;</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git add .
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>With this command, we added all changed file on network, we wait for push.</p>
-
-<ul>
-<li>Which file added on network? Answer this question, We write this command and see to adding file.</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>  git status
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>We are saw to adding file , Now We need to commit for then to remember the files which adding.</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>   git commit -m <span class="s2">&quot;your_comment&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>We prepared commit, Now all preparations are prepared, and we should push file n github</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push origin master
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Note: <code>master</code> are name of branch on github, if you use another branch or  don&rsquo;t use &lsquo;master&rsquo; branch we created new branch and push</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push origin branch_name
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>If you want to see branches in your repo,</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git branch -a
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>If you created new branch</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git branch name_of_newbranch
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>Now, you are in name_of_newbranch , but you want to return or switch another branch therefore</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git checkout another_branch
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p> Git command basicly like this.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-02-26T12:31:12+02:00" pubdate data-updated="true">Feb 26<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/github/'>github</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/02/26/commands-of-github-for-setup/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/02/26/after-new-post/">
-		
-			After Create Octopress Blog Fixed Error</a>
-	</h2>
-	<div class="entry-content">
-		<h3>When I setup Octopress Repository, error of</h3>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake deploy
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>I setup the Octopress, and I create,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake new_post<span class="se">\[</span><span class="s2">&quot;Hello World&quot;</span><span class="se">\]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>then push github on</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">source</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>branch, and when I</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake deploy
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p> Terminal show this code :</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>To https://github.com/username/username.github.io.git
-</span><span class='line'>! <span class="o">[</span>rejected<span class="o">]</span>        master -&gt; master <span class="o">(</span>non-fast-forward<span class="o">)</span>
-</span><span class='line'>error: failed to push some refs to <span class="s1">&#39;https://github.com/username/username.github.io.git&#39;</span>
-</span><span class='line'>hint: Updates were rejected because the tip of your current branch is behind
-</span><span class='line'>hint: its remote counterpart. Merge the remote changes <span class="o">(</span>e.g. <span class="s1">&#39;git pull&#39;</span><span class="o">)</span>
-</span><span class='line'>hint: before pushing again.
-</span><span class='line'>hint: See the <span class="s1">&#39;Note about fast-forwards&#39;</span> in <span class="s1">&#39;git push --help&#39;</span> <span class="k">for </span>details.
-</span></code></pre></td></tr></table></div></figure>
-
-
-<pre><code> Github Pages deploy complete
-</code></pre>
-
-<h3>What I can fix it ?</h3>
-
-<p> Firstly</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git clone https://github.com/username/username.github.io.git
-</span><span class='line'>git checkout <span class="nb">source</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p> I cloning to username.github.io into master, and checkout source</p>
-
-<p> Secondly we need to setup &lsquo;deploy&rsquo; directories</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>mkdir _deploy
-</span><span class='line'><span class="nb">cd </span>_deploy
-</span><span class='line'>git init
-</span><span class='line'>git remote add -t master -f origin https://github.com/username/username.github.io.git
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Now, we can use</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake deploy
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>or</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake gen_deploy
-</span></code></pre></td></tr></table></div></figure>
-
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-02-26T11:30:57+02:00" pubdate data-updated="true">Feb 26<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/octopress/'>Octopress</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/02/26/after-new-post/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/02/26/meaning-of-abbreviations/">
-		
-			Meaning of Abbreviations</a>
-	</h2>
-	<div class="entry-content">
-		<h2>What is the meaning of abbreviation for HTML, CSS, &hellip;?</h2>
-
-<ul>
-<li>HTML : Hyper text markup language</li>
-<li>CSS : Cascading Stylesheet</li>
-<li>Haml : HTML Abstraction markup language</li>
-<li>SASS: Syntactically Awesome Stylesheets</li>
-</ul>
-
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-02-26T10:04:36+02:00" pubdate data-updated="true">Feb 26<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/abbreviation/'>Abbreviation</a>, <a class='category' href='/blog/categories/meaning/'>Meaning</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/02/26/meaning-of-abbreviations/#disqus_thread">Comments</a></div>
+	<div class="comments"><a href="/blog/2014/05/04/validation-methods/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>
@@ -886,6 +700,8 @@ Hence, we use this code ;</p>
     
         <a href="/blog/page/4/" class="prev">Prev</a>
     
+    
+        <a href="/blog/page/6/" class="next">Next</a>
     
     <div class="center"><a href="/blog/archives">Blog Archives</a></div>
 </nav></div>

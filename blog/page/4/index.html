@@ -7,7 +7,7 @@
 	<meta name="author" content="Leyla Kapi">
 
 	
-	<meta name="description" content="How I recreate octopress blog another computer ? I formatted my computer and then for my octopress blog What can I do ? reinstall or WHAT? In this &hellip;">
+	<meta name="description" content="When you start to project, which gems are useful ? When you start a rails project, you can use these gems which useful for project. Gems are like, &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -92,104 +92,62 @@
     <article class="post">
 	<h2 class="title">
 		
-		<a href="/blog/2014/04/19/recreate-octopress-blog-for-another-computer/">
+		<a href="/blog/2014/07/13/when-you-start-to-project/">
 		
-			Recreate Octopress Blog for Another Computer</a>
+			Useful Gems</a>
 	</h2>
 	<div class="entry-content">
-		<h3>How I recreate octopress blog another computer ?</h3>
+		<h3>When you start to project, which gems are useful ?</h3>
 
-<p>I formatted my computer and then for my octopress blog <em>What can I do ?</em> <strong>reinstall</strong> or <strong>WHAT?</strong></p>
+<p>When you start a rails project, you can use these gems which useful for project.</p>
 
-<p>In this post I try to explain, if you have a new computer (after format, buy new computer&hellip;etc)but you have octopress blog
-how to entegrated each other?</p>
+<p>Gems are like,</p>
 
-<p>Before starting explain it in this article, I try to explain set up octopress, if you forget this, you can find it easily in another
-blog post or you can look at <a href="http://octopress.org/docs/setup/">Octopress Setup guide</a> .</p>
-
-<p>Now recreate a local repo for octopress</p>
-
-<p>-Clone your blog to the new machine</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git clone -b <span class="nb">source </span>git@github.com:username/username.github.io.git octopress
-</span></code></pre></td></tr></table></div></figure>
+<ul>
+<li><a href="https://rubygems.org/gems/blankable">blankable</a></li>
+<li><a href="https://rubygems.org/gems/simple_form">simple_form</a></li>
+<li><a href="https://rubygems.org/gems/model_to_locale">model_to_locale</a></li>
+<li><a href="https://rubygems.org/gems/responders">responders</a></li>
+<li><a href="https://rubygems.org/gems/will_paginate">will_paginate</a></li>
+<li><a href="https://rubygems.org/gems/will_paginate-bootstrap">will_paginate_bootstrap</a></li>
+<li><a href="https://rubygems.org/gems/better_errors">better_errors</a></li>
+</ul>
 
 
-<p>Then clone the master branch to the _deploy</p>
+<p>1- <strong>blankable gem</strong></p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">cd </span>octopress
-</span><span class='line'>git clone git@github.com:username/username.github.io.git _deploy
-</span></code></pre></td></tr></table></div></figure>
+<p><code>blankable</code> provide to add blank slates to index view &hellip;
+You can look on <a href="https://github.com/lab2023/blankable">gitHub</a></p>
 
+<p>2- <strong>simple_form</strong></p>
 
-<p>then run <em>rake</em></p>
+<p><code>simple_form</code> provide to make easy rails forms, aims is that to be as flexible as possible
+while helping you with powerful components to create your form &hellip; You can look on <a href="https://github.com/plataformatec/simple_form">gitHub</a></p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>gem install bundler
-</span><span class='line'>rbenv rehash
-</span><span class='line'>bundle install
-</span><span class='line'>rake setup_github_pages
-</span></code></pre></td></tr></table></div></figure>
+<p>3- <strong>model_to_locale</strong></p>
 
+<p><code>model_to_locale</code> provide to create locale file for model attributes &hellip;
+You can look on <a href="https://github.com/lab2023/model_to_locale">gitHub</a></p>
 
-<p>Then we ask to you repo url like</p>
+<p>4- <strong>responders</strong></p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>Enter the <span class="nb">read</span>/write url <span class="k">for </span>your repository
-</span><span class='line'><span class="o">(</span>For example, <span class="s1">&#39;git@github.com:your_username/your_username.github.io.git)</span>
-</span><span class='line'><span class="s1">           or &#39;</span>https://github.com/your_username/your_username.github.io<span class="err">&#39;</span><span class="o">)</span>
-</span><span class='line'>Repository url:
-</span></code></pre></td></tr></table></div></figure>
+<p><code>responders</code> provide to dry up your Rails 3.2+ app &hellip;
+You can look on <a href="https://github.com/plataformatec/responders">gitHub</a></p>
 
+<p>5- <strong>will_paginate</strong></p>
 
-<p>Write your like this <em>Repository url: git@github.com:username/username.github.io.git</em></p>
+<p><code>will_paginate</code> provide to pagination library that integrate with RoR, Sinatra &hellip;
+You can look on <a href="https://github.com/mislav/will_paginate">gitHub</a></p>
 
-<p>Then you should write these command :</p>
+<p>6- <strong>will_paginate_bootstrap</strong></p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake generate
-</span><span class='line'>git add .
-</span><span class='line'>git commit -m <span class="s2">&quot;Write comment here&quot;</span>
-</span><span class='line'>git push origin <span class="nb">source</span>
-</span><span class='line'>rake deploy
-</span></code></pre></td></tr></table></div></figure>
+<p><code>will_paginate_bootstrap</code> provide to integrate in <code>will_paginate</code> to <code>bootstrap</code> &hellip;
+You can look on <a href="https://github.com/bootstrap-ruby/will_paginate-bootstrap">gitHub</a></p>
 
+<p>7- <strong>better_errors</strong></p>
 
-<p>then you can write</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">cd </span>octopress
-</span><span class='line'>git pull origin <span class="nb">source</span> <span class="c">#get another computer changing</span>
-</span><span class='line'><span class="nb">cd</span> ./_deploy
-</span><span class='line'>git pull origin master
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>then you can write</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake deploy
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>That&rsquo;s all :)
-I hope this article help you.</p>
+<p><code>better_errors</code> provide to replace standard error page to much better and useful error page
+You can look on <a href="https://github.com/charliesome/better_errorss">gitHub</a></p>
 
 		
 		
@@ -209,16 +167,16 @@ I hope this article help you.</p>
   
 
 
-<time datetime="2014-04-19T22:13:18+03:00" pubdate data-updated="true">Apr 19<span>th</span>, 2014</time></div>
+<time datetime="2014-07-13T13:58:15+03:00" pubdate data-updated="true">Jul 13<span>th</span>, 2014</time></div>
 	<div class="tags">
 
 
-	<a class='category' href='/blog/categories/computer/'>computer</a>, <a class='category' href='/blog/categories/octopress/'>octopress</a>, <a class='category' href='/blog/categories/recreate/'>recreate</a>
+	<a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/github/'>gitHub</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ror/'>ror</a>, <a class='category' href='/blog/categories/rubygems/'>rubygems</a>
 
 
 </div>
 	
-	<div class="comments"><a href="/blog/2014/04/19/recreate-octopress-blog-for-another-computer/#disqus_thread">Comments</a></div>
+	<div class="comments"><a href="/blog/2014/07/13/when-you-start-to-project/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>
@@ -227,978 +185,112 @@ I hope this article help you.</p>
     <article class="post">
 	<h2 class="title">
 		
-		<a href="/blog/2014/04/19/ruby-programming-languages/">
+		<a href="/blog/2014/07/10/how-to-make-a-release/">
 		
-			Ruby Programming Languages</a>
+			How to Make a Release ?</a>
 	</h2>
 	<div class="entry-content">
-		<h1>AB2014 &ndash; Ruby101 for beginners</h1>
+		<p>Make a release</p>
 
-<ul>
-<li><a href="https://ruby-lang.org">Ruby-lang</a></li>
-<li><a href="https://nitrous.io">Nitrous</a></li>
-</ul>
+<p>When you start to make a release, I think if you look at your commit it can be better</p>
 
-
-<p><em>These notes restored in Academic Information Education Mersin from Notes of <strong>Mr. Sıtkı Bagdat</strong> .</em></p>
-
-<h2>Ruby is a programming languages</h2>
-
-<ul>
-<li>Ruby, readable high level a programming languages.</li>
-<li>Started to developt at 1993 and published at 1995.</li>
-<li>In 2013 for Ruby was selected brightest year,the reason is that in this year, two version was developt Ruby-2.0 and Ruby-2.1.</li>
-<li>Ruby, entegration with Rails in 2004.Then we start to use Ruby on Rails in web development.</li>
-<li>Ruby developt by Japon Yukihirato  Matsumoto (Matz).</li>
-<li>Ruby is completely object-oriented. (With a few exceptions)</li>
-<li>Unlike another programming languages, ruby is interpreter languages. This means that, when we developt programm with ruby if can find a bug, Ruby running until bug&rsquo;s line.</li>
-<li>Included dynamic typing. This means that, we goes easily from a type to another type, not necessary to pre-definition.</li>
-<li>Ruby included package managers. (<a href="https://rubygems.org">RubyGems</a>)</li>
-<li>Ruby provide to development to Ruby on Rails and Sinatra .</li>
-</ul>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git log
+</span></code></pre></td></tr></table></div></figure>
 
 
-<p><strong>also</strong></p>
+<p>then if you make some wrong commit, you can delete wrong commit with</p>
 
-<ul>
-<li>Metaprogramming (Coding write code.)</li>
-<li>DSL (Domain Specific Language)</li>
-<li>DRY (Don&rsquo;t repeat yourself)</li>
-<li>TIMTOWTDI (There is more than one way to do it)</li>
-</ul>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git rebase -i HEAD~2
+</span></code></pre></td></tr></table></div></figure>
 
 
-<h2>Ruby.philosopy[]</h2>
+<p>command.
+Then,</p>
 
-<ul>
-<li><strong>Ruby.philosopy[1] </strong></li>
-</ul>
-
-
-<p>Ruby is, stronger than Perl, more object-oriented than Phyton, script languages.</p>
-
-<blockquote><p>Perl + Smalltalk + Phyton + Lisp + Ada + &hellip; = Ruby</p></blockquote>
-
-<ul>
-<li><strong>Ruby.philosopy[2]</strong></li>
-</ul>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push origin +develop
+</span></code></pre></td></tr></table></div></figure>
 
 
-<p>Ruby like a human body, seemingly simple but there are a complex structure inside.</p>
+<p>After that, you can check you branch with</p>
 
-<ul>
-<li><strong>Ruby.philosopy[3]</strong></li>
-</ul>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git branch -a
+</span></code></pre></td></tr></table></div></figure>
 
 
-<p>The aim is, When we coding a programming, coding should provide to express simple and readable.</p>
+<p>then let&rsquo;s start to release ;</p>
 
-<h2>Irb ve Repl Functions</h2>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git flow release start your_version_number
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><code>your_version_number</code> can be like <code>0.1.0</code> . Actually can be like</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git flow release start 0.1.0
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>When we write this command, you can create <code>VERSION.txt</code> file, and open &lsquo;txt&rsquo; file
+then write some number with <code>your_version_number</code></p>
+
+<p>Write with order below commands,</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>irb
-</span><span class='line'>irb<span class="o">(</span>main<span class="o">)</span>:001:0&gt; 2+2
-</span><span class='line'><span class="o">=</span>&gt; 4
-</span><span class='line'><span class="nb">exit</span>
-</span><span class='line'>irb --simple -prompt
-</span><span class='line'>&gt;&gt; 12.class
-</span><span class='line'><span class="o">=</span>&gt; Fixnum
-</span><span class='line'>&gt;&gt; <span class="nb">exit</span>
-</span><span class='line'>irb<span class="o">(</span>main<span class="o">)</span>:003:0&gt; 2*9/3+7
-</span><span class='line'><span class="o">=</span>&gt; 13
-</span><span class='line'>irb<span class="o">(</span>main<span class="o">)</span>:004:0&gt; _ * <span class="nv">3</span>
-</span><span class='line'><span class="o">=</span>&gt;39
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git add .
+</span><span class='line'>git commit -m <span class="s2">&quot;Bump version &#39;your_version_number&#39;&quot;</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Acoording to above <em>irb</em>, opened ruby terminal; <em>exit</em> exit to ruby terminal. In addition <em>irb &mdash;simple -prompt</em> this command is provide to seeming regular to terminal.Strikes the eye another notifications is that</p>
 
-<p><em>_</em></p>
 
-<p>this sign provide to take pre-functions and then make process with this functions.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">system</span><span class="p">(</span><span class="s1">&#39;clear&#39;</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>with this command provide to clear your terminal.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>irb<span class="o">(</span>main<span class="o">)</span>:008:0&gt; <span class="nv">self</span>
-</span><span class='line'><span class="o">=</span>&gt; main
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>this command show the writing on main class .</p>
-
-<p><strong>Also</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>irb<span class="o">(</span>main<span class="o">)</span>:010:0&gt; <span class="nv">a</span><span class="o">=</span><span class="s2">&quot;Ruby&quot;</span>
-</span><span class='line'><span class="o">=</span>&gt; <span class="s2">&quot;Ruby&quot;</span>
-</span><span class='line'>irb<span class="o">(</span>main<span class="o">)</span>:011:0&gt; a.reverse
-</span><span class='line'><span class="o">=</span>&gt; <span class="s2">&quot;ybuR&quot;</span>
-</span><span class='line'>irb<span class="o">(</span>main<span class="o">)</span>:012:0&gt; <span class="s2">&quot;I love</span>
-</span><span class='line'><span class="s2">irb(main):013:0&quot;</span> ruby<span class="s2">&quot;</span>
-</span><span class='line'><span class="s2">=&gt;  &quot;</span>I love<span class="se">\n</span>ruby
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Seeming to above code <em>.reverse</em> method which entered code, provide to writing reverse.Also if when opened quotes then not closed, <strong>></strong> instead <strong>&ldquo;</strong> can be this expression.</p>
-
-<h2>Logical expressions</h2>
-
-<ul>
-<li>False or nil,  acceptable false.</li>
-<li>Except false ve nil, everything acceptable true, like 0, [], &hellip;</li>
-<li>Like another languages, when we make comparisons &lt;,>, ==,! using this expressions.</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>irb<span class="o">(</span>main<span class="o">)</span>:001:0 3 &gt; <span class="nv">5</span>
-</span><span class='line'><span class="o">=</span>&gt; <span class="nb">false</span>
-</span><span class='line'>irb<span class="o">(</span>main<span class="o">)</span>:002:0 3 &lt; <span class="nv">5</span>
-</span><span class='line'><span class="o">=</span>&gt; <span class="nb">true</span>
-</span><span class='line'>irb<span class="o">(</span>main<span class="o">)</span>:003:0 <span class="nv">3</span> <span class="o">==</span> <span class="nv">5</span>
-</span><span class='line'><span class="o">=</span>&gt; <span class="nb">false</span>
-</span><span class='line'>irb<span class="o">(</span>main<span class="o">)</span>:004:0 !13
-</span><span class='line'><span class="o">=</span>&gt; <span class="nb">false</span>
-</span><span class='line'>irb<span class="o">(</span>main<span class="o">)</span>:005:0 true.class
-</span><span class='line'><span class="o">=</span>&gt; TrueClass
-</span><span class='line'>irb<span class="o">(</span>main<span class="o">)</span>:006:0 false.class
-</span><span class='line'><span class="o">=</span>&gt; FalseClass
-</span><span class='line'>irb<span class="o">(</span>main<span class="o">)</span>:007:0 nil.class
-</span><span class='line'><span class="o">=</span>&gt; NilClass
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>We mention to everthing an object and derivation from a class in Ruby, strike to eye above, <em>True</em>, <em>false</em> , <em>nil</em> derivation a class.
-Also we mention about <em>nil</em>, nil means that <em>nothing</em> like another languages null, undefined&hellip;etc.
-In ruby, Not exist relevant to logical expression like <em>Boolean</em> or <em>Bool</em> classes. Also While we are using to logical expression, using like <em>&amp;&amp;, ||, ! (and, or, not)</em> expression.</p>
-
-<h2>Meeting to Methods</h2>
-
-<ul>
-<li>Defining to method start <strong>def</strong>, and ending with <strong>end</strong>.</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">method_name</span>
-</span><span class='line'><span class="o">.</span><span class="n">.</span><span class="o">.</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>If method get a parameter like :</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">method_name</span><span class="p">(</span><span class="n">param1</span><span class="p">)</span>
-</span><span class='line'><span class="o">.</span><span class="n">.</span><span class="o">.</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">method_name</span><span class="p">(</span><span class="n">param1</span><span class="p">,</span> <span class="n">param2</span><span class="p">)</span>
-</span><span class='line'><span class="o">.</span><span class="n">.</span><span class="o">.</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Also</strong> Not required to using parenthesis like :</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">method_name</span> <span class="n">param1</span><span class="p">,</span> <span class="n">param2</span><span class="p">,</span> <span class="o">.</span><span class="n">.</span><span class="o">.</span>
-</span><span class='line'><span class="o">.</span><span class="n">.</span><span class="o">.</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<hr />
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">collection</span> <span class="n">number1</span><span class="p">,</span> <span class="n">number2</span>
-</span><span class='line'>    <span class="n">number1</span> <span class="o">+</span> <span class="n">number2</span>
-</span><span class='line'><span class="k">end</span>
-</span><span class='line'><span class="nb">puts</span> <span class="s2">&quot;Result of collection: &quot;</span><span class="p">,</span> <span class="n">collection</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>The above codes writing in <em>.rb</em> file and then save it, then open your terminal , writing path of files in terminal</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>ruby project_name
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>write above command in terminal.</p>
-
-<p>In Above code, defining <em>collect method</em> for collection two number and make collection process then show in terminal.</p>
-
-<ul>
-<li>Method name, ending with <strong>?, ! or =</strong> ,this characters have special meaning.</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">questioning?</span>    <span class="c1">#return true or false</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">changed_value</span> <span class="o">=</span> <span class="o">.</span><span class="n">.</span><span class="o">.</span>   <span class="c1">#changed value of anything value, assignment operator.</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">danger!</span>    <span class="c1">#changed original text.</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<hr />
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>irb<span class="o">(</span>main<span class="o">)</span>:001:0&gt; <span class="nv">a</span><span class="o">=</span><span class="s2">&quot;Ruby&quot;</span>
-</span><span class='line'><span class="o">=</span>&gt; <span class="s2">&quot;Ruby&quot;</span>
-</span><span class='line'>irb<span class="o">(</span>main<span class="o">)</span>:002:0&gt; a.reverse
-</span><span class='line'><span class="o">=</span>&gt; <span class="s2">&quot;ybuR&quot;</span>
-</span><span class='line'>irb<span class="o">(</span>main<span class="o">)</span>:003:0&gt; <span class="nv">a</span>
-</span><span class='line'><span class="o">=</span>&gt; <span class="s2">&quot;Ruby&quot;</span>
-</span><span class='line'>&gt;&gt; <span class="nb">exit</span>
-</span><span class='line'>irb<span class="o">(</span>main<span class="o">)</span>:004:0&gt; a.reverse!
-</span><span class='line'><span class="o">=</span>&gt;  <span class="s2">&quot;ybuR&quot;</span>
-</span><span class='line'>irb<span class="o">(</span>main<span class="o">)</span>:005:0&gt; <span class="nv">a</span>
-</span><span class='line'><span class="o">=</span>&gt;  <span class="s2">&quot;ybuR&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>In above example entering a value and using <strong>!</strong> character changed original value.</p>
-
-<h2>Rules for named</h2>
-
-<ul>
-<li>class, module and constant name starts with capital letter.</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">ClassName</span>
-</span><span class='line'><span class="o">.</span><span class="n">.</span><span class="o">.</span>
-</span><span class='line'><span class="k">end</span>
-</span><span class='line'><span class="k">module</span> <span class="nn">ModuleName</span>
-</span><span class='line'><span class="o">.</span><span class="n">.</span><span class="o">.</span>
-</span><span class='line'><span class="k">end</span>
-</span><span class='line'><span class="no">PI_CONSTANT</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span><span class="mi">14156</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>must be defined like above. Also you know constants doesn&rsquo;t change, if you want to change can be bug.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>irb<span class="o">(</span>main<span class="o">)</span>:001:0&gt; <span class="nv">PI_CONSTANT</span> <span class="o">=</span> 3,14156
-</span><span class='line'><span class="o">=</span>&gt; <span class="o">[</span>3,14156<span class="o">]</span>
-</span><span class='line'>irb<span class="o">(</span>main<span class="o">)</span>:002:0&gt; <span class="nv">PI_CONSTANT</span>  <span class="o">=</span> 2
-</span><span class='line'><span class="o">(</span>irb<span class="o">)</span>:47: warning: already initialized constant PI_CONSTANT
-</span><span class='line'><span class="o">(</span>irb<span class="o">)</span>:46: warning: previous definition of PI_CONSTANT  was <span class="nv">here</span>
-</span><span class='line'><span class="o">=</span>&gt; 2
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li><strong>local variables</strong> starting with lover letter or &lsquo;_&rsquo; , like :</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">local_variable</span> <span class="o">=</span> <span class="s2">&quot;like this.&quot;</span>
-</span><span class='line'><span class="n">plate</span> <span class="o">=</span> <span class="mi">20</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li><strong>Global variables</strong>  starting with &lsquo;$&rsquo;, like :</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="vg">$global_variables</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li><strong>instance variables</strong> starting with &lsquo;@&rsquo; and class variables starting with &lsquo;@@&rsquo;. like :</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="vi">@instance_variables</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="vc">@@class_variables</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Also</strong> you can writing ruby, without opening <em>irb</em> in terminal. like:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">ruby</span> <span class="o">-</span><span class="n">e</span> <span class="s2">&quot;puts &#39;Hello&#39;&quot;</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="no">Hello</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>But the above method is not a preferred method commonly.</p>
-
-<hr />
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">changed</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
-</span><span class='line'>    <span class="n">variables</span> <span class="o">=</span> <span class="n">value</span>
-</span><span class='line'><span class="k">end</span>
-</span><span class='line'><span class="nb">puts</span> <span class="s2">&quot;Value of variables: </span><span class="si">#{</span><span class="n">changed</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="no">Value</span> <span class="n">of</span> <span class="ss">variables</span><span class="p">:</span> <span class="mi">20</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>included another file in your file.</h2>
-
-<p><strong>external_file.rb</strong> can be ruby file like this.Also can be we are currently working on <strong>calıstıgımız_dosya.rb</strong>.</p>
-
-<p>If we want to embeded in  <strong>external_file.rb</strong> files on <strong>currently_working_file.rb</strong> files, we should use <em>load</em> comand. like :</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">external_file</span><span class="o">.</span><span class="n">rb</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>currently_working_file.rb
-</span><span class='line'>load <span class="s1">&#39;external_file.rb&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>In Rails, we can generally use <em>autoload</em> command. <em>autoload</em> is loading automatically file.</p>
-
-<p>Instead of <em>load</em> command, you can use <em>require</em> command but,when you use <em>load</em>, you can use many times in file, when you use <em>require</em>, <em>require</em> load file only once and generally <em>require</em> more preferred than it.
-In addition, If we use ruby library, we should use, like</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;library_name&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>You can see to use all path and method with <strong>ENV</strong></p>
-
-<p>Writing command about <strong>Gem</strong> :</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>gem -v       <span class="c">#seeing the version of gem</span>
-</span><span class='line'>gem update --system  <span class="c">#provide to update your system</span>
-</span><span class='line'>gem list      <span class="c">#you can see all gem list</span>
-</span><span class='line'>gem list -r   <span class="c">#will see load to gem</span>
-</span><span class='line'>gem install pry   <span class="c">#provide to writing colorful in terminal.</span>
-</span><span class='line'>gem install pry --no-ri   <span class="c"># thanks to this we can install without documentation.</span>
-</span><span class='line'>gem uninstall package_name    <span class="c">#use for uninstall gem</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>If you use package ,before need to install the package, using this command</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="n">install</span> <span class="n">package_name</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>when we install this gem, then we embeded in <em>currently_working_file.rb</em> like</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;package_name&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>If I use many gem, Do I install gem one by one? </strong></p>
-
-<p>Of course No!, instead of this we use  <em>Gemfile</em>, we write in file</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">source</span> <span class="p">(</span><span class="s1">&#39;http://ruby-gems.org&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;package_name&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>we write above command in Gemfile, we install automatically all gems.</p>
-
-<p><strong>Also</strong> If I create a ruby file, go to wanted directory and write below code, These code provided create ruby file in Desktop.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>gem install bundler
-</span><span class='line'><span class="nb">cd </span>Desktop        <span class="c">#for desktop path</span>
-</span><span class='line'>bundle gem package_name
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>For detail viewing <a href="http://bundler.io/">Bundler</a></p>
-
-<p>Opened file, after we make to do, push to package to <a href="http://rubygems.org">RubyGems</a> then we see in this site.</p>
-
-<p><strong>Note :</strong>
--Also <em>Thor</em> is a package(gem) for ruby.
-&ndash;<em>ARGV</em> is constant which hidden to arguments.
--In documentation section writing <em>ri</em>  command, generally we use to search for method.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">ri</span> <span class="no">Class</span><span class="c1">#method</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h1>Input &ndash; Output processing</h1>
-
-<p>For output command write like</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">puts</span>     <span class="c1"># output with \n.</span>
-</span><span class='line'><span class="nb">print</span>
-</span><span class='line'><span class="nb">p</span>         <span class="c1">#when we use &#39;.inspect&#39;, instead of *.inspect* we use *p*.</span>
-</span><span class='line'><span class="nb">printf</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>For input command write like</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">gets</span>     <span class="c1">#get input from user.</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>above instead of  <em>p</em> using  <em>.inspect</em></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">puts</span> <span class="s2">&quot;ruby&quot;</span><span class="o">.</span><span class="n">inspect</span>
-</span><span class='line'><span class="nb">puts</span> <span class="mi">3</span><span class="o">.</span><span class="n">inspect</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><em>.inspect</em> method provide to take hid state of method. This means that if I using <em>.inspect</em> instead of this using <em>p</em>.</p>
-
-<ul>
-<li><em>chomp</em> provide if the last character can exist &ldquo;\n&rdquo; symbol, cleaning the last characters.</li>
-<li><p><em>chom</em> provide to clean all last characters</p>
-
-<pre><code>             Basic Object
-                  ||
-                Object
-                  ||
-                Numeric
-                  ||
-  Integer     float   Rational    Complex
-</code></pre>
-
-<p>  Fixnum  Bignum</p></li>
-</ul>
-
-
-<p>If you generally showing the class, you can show like above.</p>
-
-<ul>
-<li>In Ruby 2.0 version, if you want to defining rational number, you can like <em>30/2r</em>.</li>
-<li>In Ruby monetary system should use <strong>BigDecimal</strong> library in project.</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="mi">1</span><span class="o">.</span><span class="mi">0</span><span class="n">e7</span>          <span class="c1">#10.000.000</span>
-</span><span class='line'><span class="mi">3</span><span class="o">.</span><span class="n">methods</span>       <span class="c1">#for 3 number, bring all methods</span>
-</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;yaml&#39;</span>            <span class="c1"># added yaml .</span>
-</span><span class='line'><span class="nb">puts</span> <span class="mi">2</span><span class="o">.</span><span class="n">methods</span><span class="o">.</span><span class="n">to_yaml</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li><strong>&lt;=>(space ship)</strong> comparative operator.</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">a</span> <span class="o">&lt;=&gt;</span> <span class="n">b</span>
-</span><span class='line'><span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span> <span class="p">;</span> <span class="o">-</span><span class="mi">1</span>
-</span><span class='line'><span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span> <span class="p">;</span> <span class="mi">1</span>
-</span><span class='line'><span class="n">a</span> <span class="o">=</span><span class="n">b</span> <span class="p">;</span> <span class="mi">0</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<hr />
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">&amp;&amp;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
-</span><span class='line'><span class="n">a</span> <span class="o">&lt;=&gt;</span> <span class="n">b</span>            <span class="c1">#-1</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>-times and upto methods</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="mi">10</span><span class="o">.</span><span class="n">times</span> <span class="k">do</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span>
-</span><span class='line'><span class="o">.</span><span class="n">.</span><span class="o">.</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>or</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="mi">10</span><span class="o">.</span><span class="n">times</span> <span class="p">{</span><span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="o">.</span><span class="n">.</span><span class="o">.</span><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>thanks to this we write loop with <em>times</em>.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>irb<span class="o">(</span>main<span class="o">)</span>:001:0&gt; 10.times <span class="k">do</span> |i|
-</span><span class='line'>irb<span class="o">(</span>main<span class="o">)</span>:002:1* puts <span class="s2">&quot;ruby&quot;</span>+i.to_s
-</span><span class='line'>irb<span class="o">(</span>main<span class="o">)</span>:013:1&gt; end
-</span><span class='line'>ruby0
-</span><span class='line'>ruby1
-</span><span class='line'>ruby2
-</span><span class='line'>ruby3
-</span><span class='line'>ruby4
-</span><span class='line'>ruby5
-</span><span class='line'>ruby6
-</span><span class='line'>ruby7
-</span><span class='line'>ruby8
-</span><span class='line'><span class="nv">ruby9</span>
-</span><span class='line'><span class="o">=</span>&gt;10
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>With <em>1.upto(10){&hellip;}</em> same use with <em>times</em></li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>irb<span class="o">(</span>main<span class="o">)</span>:001:0&gt; 10.upto<span class="o">(</span>10<span class="o">)</span> <span class="o">{</span>puts <span class="s2">&quot;ruby&quot;</span><span class="o">}</span>
-</span><span class='line'>ruby
-</span><span class='line'>ruby
-</span><span class='line'>ruby
-</span><span class='line'>ruby
-</span><span class='line'>ruby
-</span><span class='line'>ruby
-</span><span class='line'>ruby
-</span><span class='line'>ruby
-</span><span class='line'>ruby
-</span><span class='line'><span class="nv">ruby</span>
-</span><span class='line'><span class="o">=</span>&gt;1
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>or</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>irb<span class="o">(</span>main<span class="o">)</span>:001:0&gt; 1.upt0<span class="o">(</span>10<span class="o">)</span> <span class="k">do</span> |i|
-</span><span class='line'>irb<span class="o">(</span>main<span class="o">)</span>:002:1* puts <span class="s2">&quot;Ruby&quot;</span>+i.to_s
-</span><span class='line'>irb<span class="o">(</span>main<span class="o">)</span>:013:1&gt; end
-</span><span class='line'>Ruby1
-</span><span class='line'>Ruby2
-</span><span class='line'>Ruby3
-</span><span class='line'>Ruby4
-</span><span class='line'>Ruby5
-</span><span class='line'>Ruby6
-</span><span class='line'>Ruby7
-</span><span class='line'>Ruby8
-</span><span class='line'>Ruby9
-</span><span class='line'><span class="nv">Ruby10</span>
-</span><span class='line'><span class="o">=</span>&gt; 1
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>Text</h2>
-
-<ul>
-<li><p>When we combine the text, we can embed in string expressions.</p>
-
-<p>  &#8220;` ruby
-      puts &ldquo;#{&lsquo;academic&rsquo;.capitalize} #{&lsquo;information&rsquo;.upcase}&rdquo;</p>
-
-<pre><code>  =&gt;  Academic INFORMATION
-</code></pre>
-
-<p>  &#8220;`</p></li>
-</ul>
-
-
-<p>-Also to support Turkish characters, you should use <em>Unicode-Utils</em> library.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>gem install unicode_utils
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>install than, write in file,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;unicode_utils&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">UnicodeUtils</span><span class="o">.</span><span class="n">upcase</span><span class="p">(</span><span class="s2">&quot;ruby&quot;</span><span class="p">)</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="no">RUBY</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>&ndash;%q => use for single quotation</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">text</span> <span class="o">=</span> <span class="sx">%q&lt;Hello&gt;</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="s1">&#39;Hello&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>&ndash;%Q => use for double quotation</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">text</span><span class="o">=</span><span class="sx">%Q{Hello}</span>
-</span><span class='line'>    <span class="o">=&gt;</span> <span class="s2">&quot;Hello&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<hr />
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">002</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="sc">?a</span>
-</span><span class='line'><span class="o">=&gt;</span> <span class="s2">&quot;a&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>Everything can embed in texts.</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">puts</span> <span class="s2">&quot;Everything can embed in text </span><span class="si">#{</span><span class="k">def</span> <span class="nf">name</span>
-</span><span class='line'><span class="vg">$name</span><span class="o">.</span><span class="n">capitalize</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span><span class="o">+</span><span class="vg">$surname</span><span class="o">.</span><span class="n">upcase</span>
-</span><span class='line'><span class="k">end</span><span class="si">}</span><span class="s2"> puts &quot;</span><span class="no">My</span> <span class="nb">name</span> <span class="c1">#{name}&quot;&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<hr />
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">name</span><span class="o">=</span><span class="s2">&quot;Ruby&quot;</span>
-</span><span class='line'><span class="n">surname</span><span class="o">=</span><span class="s2">&quot;Rails&quot;</span>
-</span><span class='line'><span class="n">text</span> <span class="o">=</span> <span class="o">&lt;&lt;</span> <span class="no">ANYTHING</span>
-</span><span class='line'><span class="n">I</span><span class="err">&#39;</span><span class="n">m</span> <span class="n">long</span> <span class="n">text</span>
-</span><span class='line'><span class="c1">#{$name} #{$surname}</span>
-</span><span class='line'><span class="no">ANYTHING</span>
-</span><span class='line'><span class="nb">p</span> <span class="n">text</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>*</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">swapcase</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>this command translate from lower case to uppercase.</p>
-
-<p>*</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">puts</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="o">.</span><span class="n">inspect</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Try above method.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">text</span><span class="o">.</span><span class="n">sub</span> <span class="s1">&#39;m&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span>    <span class="c1">#translate &quot;m=&gt;a&quot;</span>
-</span><span class='line'><span class="n">text</span><span class="o">.</span><span class="n">gsub</span>  <span class="s1">&#39;m&#39;</span><span class="p">,</span>  <span class="s1">&#39;a&#39;</span>      <span class="c1">#translate all  from &quot;m&quot; to &quot;a&quot; .</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>For Convert to Integer</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">.</span><span class="n">to_i</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>For Convert to String</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">.</span><span class="n">to_s</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>For Convert to Array</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">.</span><span class="n">to_a</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>For Convert to Hash</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">.</span><span class="n">to_h</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>Symbols</h2>
-
-<ul>
-<li>When we create symbol like,</li>
-</ul>
-
-
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="ss">:symbol_name</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git flow release finish 0.1.0
 </span></code></pre></td></tr></table></div></figure>
 
 
-<ul>
-<li>If content of text is changing generally, using symbol can be difficult, but using for constant process can be easy.</li>
-</ul>
 
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">object_id</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git checkout release/0.1.0
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Try command</p>
 
-<p>-For Convert to Symbol</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">.</span><span class="n">to_sym</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push origin develop
 </span></code></pre></td></tr></table></div></figure>
-
 
-<h2>Regular expression</h2>
 
-<ul>
-<li>Regular expression</li>
-</ul>
 
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="sr">/ ... /</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push origin +master
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>writing in this tag.</p>
+<p>Yep, Now you made a release you can check on your repo settings on <a href="https://github.com/">github</a>.</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span>      <span class="c1">#this means min 2, max 5.</span>
-</span><span class='line'><span class="sr">/.{2,5}/</span> <span class="o">=~</span>  <span class="c1"># when we write &quot;john&quot;, &quot;john&quot; between 2 and 5.</span>
-</span></code></pre></td></tr></table></div></figure>
-
+<p>Let&#8217; s add Tag,</p>
 
-
-
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">^</span><span class="n">a</span><span class="vg">$b</span> <span class="o">=&gt;</span> <span class="n">starting</span> <span class="n">with</span> <span class="n">a</span><span class="p">,</span> <span class="n">ending</span> <span class="n">with</span> <span class="n">b</span><span class="o">.</span>
-</span><span class='line'><span class="p">(</span><span class="o">+</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="n">how</span> <span class="n">many</span>
-</span><span class='line'><span class="o">[^</span><span class="mi">0</span><span class="o">-</span><span class="mi">9</span><span class="o">]</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">number</span> <span class="n">write</span> <span class="n">it</span> <span class="s1">&#39;^&#39;</span> <span class="n">this</span> <span class="n">means</span> <span class="n">that</span> <span class="s1">&#39;not&#39;</span><span class="o">.</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git tag
 </span></code></pre></td></tr></table></div></figure>
-
 
 
-
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">[</span><span class="n">A</span><span class="o">-</span><span class="no">Za</span><span class="o">-</span><span class="n">z0</span><span class="o">-</span><span class="mi">9</span><span class="n">_</span><span class="o">]</span> <span class="o">=</span> <span class="p">\</span><span class="n">w</span>       <span class="c1">#word character</span>
-</span><span class='line'><span class="o">[</span><span class="err">Â</span><span class="o">-</span><span class="no">Za</span><span class="o">-</span><span class="n">z0</span><span class="o">-</span><span class="mi">9</span><span class="n">_</span><span class="o">]</span> <span class="o">=</span> <span class="p">\</span><span class="n">W</span>         <span class="c1">#not a word character</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push --tags
 </span></code></pre></td></tr></table></div></figure>
-
-
 
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">exp1</span> <span class="o">=</span> <span class="sr">/.*\.$/</span>         <span class="c1">#this means ending with &#39;.&#39;</span>
-</span><span class='line'><span class="n">exp2</span> <span class="o">=</span> <span class="no">Regexp</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">&#39;^[a-z]+$&#39;</span><span class="p">)</span>      <span class="c1">#this means that starting with a ending with z.</span>
-</span><span class='line'><span class="n">exp3</span> <span class="o">=</span> <span class="sr">%r{^[a-z]+$}</span>         <span class="c1">#starting with a but not ending with z.</span>
-</span></code></pre></td></tr></table></div></figure>
 
+<p>That&#8217; s all.
+I hope help to you.</p>
 
 		
 		
@@ -1218,16 +310,16 @@ In addition, If we use ruby library, we should use, like</p>
   
 
 
-<time datetime="2014-04-19T10:52:45+03:00" pubdate data-updated="true">Apr 19<span>th</span>, 2014</time></div>
+<time datetime="2014-07-10T19:01:26+03:00" pubdate data-updated="true">Jul 10<span>th</span>, 2014</time></div>
 	<div class="tags">
 
 
-	<a class='category' href='/blog/categories/beginner/'>beginner</a>, <a class='category' href='/blog/categories/programming-languages/'>programming-languages</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>
+	<a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/github/'>gitHub</a>, <a class='category' href='/blog/categories/release/'>release</a>
 
 
 </div>
 	
-	<div class="comments"><a href="/blog/2014/04/19/ruby-programming-languages/#disqus_thread">Comments</a></div>
+	<div class="comments"><a href="/blog/2014/07/10/how-to-make-a-release/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>
@@ -1236,25 +328,40 @@ In addition, If we use ruby library, we should use, like</p>
     <article class="post">
 	<h2 class="title">
 		
-		<a href="/blog/2014/03/26/how-do-google-analytics-add-to-octopress/">
+		<a href="/blog/2014/07/08/remove-log-and-idea-files-on-your-rails-project/">
 		
-			How Do Google-analytics Add to Octopress?</a>
+			Remove Log and Idea Files on Your Rails Project</a>
 	</h2>
 	<div class="entry-content">
-		<h3>Google &ndash; analytics for Octopress</h3>
+		<h3>How to remove log and idea files on your project ?</h3>
 
-<p>Firstly, if you don&rsquo;t have a google-analytics account, you should create it. Then when you create account, google-analytics provide to <strong>tracking ID</strong> for your octopress blog. This tracking ID like</p>
+<p>Remove idea files</p>
 
-<pre><code>AB-12345678-9
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git rm -r --cached .idea
+</span></code></pre></td></tr></table></div></figure>
 
-<p>and then you should get this id, opened <em>_config.yml</em> in your octopress blog project,</p>
 
-<pre><code>#_config.yml
+<p>While you were remove, terminal gives error about it, you can try to below command :</p>
 
-#Google Analytics
-google_analytics_tracking_id: AB-12345678-9
-</code></pre>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git rm -rf --cached .idea
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Remove log files</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git rm -r log/development.log
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>After that, you should include on your <code>.gitignore</code> file like;</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">echo</span> <span class="s1">&#39;*log&#39;</span> &gt; .gitignore
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>That&rsquo;s all.</p>
 
@@ -1276,16 +383,16 @@ google_analytics_tracking_id: AB-12345678-9
   
 
 
-<time datetime="2014-03-26T03:31:32+02:00" pubdate data-updated="true">Mar 26<span>th</span>, 2014</time></div>
+<time datetime="2014-07-08T01:53:53+03:00" pubdate data-updated="true">Jul 8<span>th</span>, 2014</time></div>
 	<div class="tags">
 
 
-	<a class='category' href='/blog/categories/google/'>google</a>, <a class='category' href='/blog/categories/google-analytics/'>google-analytics</a>, <a class='category' href='/blog/categories/octopress/'>octopress</a>
+	<a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/github/'>gitHub</a>, <a class='category' href='/blog/categories/gitignore/'>gitignore</a>, <a class='category' href='/blog/categories/idea/'>idea</a>, <a class='category' href='/blog/categories/log/'>log</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
 
 
 </div>
 	
-	<div class="comments"><a href="/blog/2014/03/26/how-do-google-analytics-add-to-octopress/#disqus_thread">Comments</a></div>
+	<div class="comments"><a href="/blog/2014/07/08/remove-log-and-idea-files-on-your-rails-project/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>
@@ -1294,128 +401,57 @@ google_analytics_tracking_id: AB-12345678-9
     <article class="post">
 	<h2 class="title">
 		
-		<a href="/blog/2014/03/22/how-create-tree-list-menu-with-haml/">
+		<a href="/blog/2014/07/06/git-stash/">
 		
-			How Create Tree - List Menu With HAML</a>
+			Git Stash</a>
 	</h2>
 	<div class="entry-content">
-		<h3>How to created tree &ndash; list menu with haml, sass, coffeescript ?</h3>
+		<h3>Command of Git Stash</h3>
 
-<p>Firstly, we create middleman project and create</p>
-
-<pre><code>index.html.haml
-style.css.sass
-application.coffee
-</code></pre>
-
-<p>then we open <code>index.html.haml</code> file and we write your code like this,</p>
+<p>Thanks to <code>git stash</code>, provide to stash the changes in a dirty working directory away.</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="p">-</span><span class="o">--</span> <span class="n">my</span> <span class="n">code</span> <span class="n">like</span> <span class="n">this</span> <span class="o">---</span>
-</span><span class='line'><span class="nt">%ul</span><span class="nc">.archive_tool</span>
-</span><span class='line'>  <span class="nt">%li</span><span class="nf">#tools</span> Car
-</span><span class='line'>  <span class="nt">%ul</span><span class="nc">.archive_requires</span>
-</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> BMW
-</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> Mercedes
-</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> Toyota
-</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> Fiat
-</span><span class='line'>  <span class="nt">%li</span><span class="nf">#tools</span> Book
-</span><span class='line'>  <span class="nt">%ul</span><span class="nc">.archive_requires</span>
-</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> Ruby
-</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> ROR
-</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> Thought
-</span><span class='line'>  <span class="nt">%li</span><span class="nf">#tools</span> Computer
-</span><span class='line'>  <span class="nt">%ul</span><span class="nc">.archive_requires</span>
-</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> iMac
-</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> Windows
-</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> Linux
-</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> Seu
-</span><span class='line'>  <span class="nt">%li</span><span class="nf">#tools</span> Chair
-</span><span class='line'>  <span class="nt">%ul</span><span class="nc">.archive_requires</span>
-</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> comfortable
-</span><span class='line'>    <span class="nt">%li</span><span class="nf">#requires</span> uncomfortable
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git stash
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>then open <code>style.css.sass</code> file and write style code</p>
+
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class='sass'><span class='line'>  <span class="nn">#tools</span><span class="o">,</span> <span class="nn">#requires</span>
-</span><span class='line'>    <span class="na">cursor</span><span class="o">:</span> <span class="no">pointer</span>
-</span><span class='line'>  <span class="nc">.archive_tool</span>
-</span><span class='line'>    <span class="na">margin-left</span><span class="o">:</span> <span class="mi">1</span><span class="kt">em</span>
-</span><span class='line'>    <span class="na">font-size</span><span class="o">:</span> <span class="no">large</span>
-</span><span class='line'>    <span class="na">font-weight</span><span class="o">:</span> <span class="no">bold</span>
-</span><span class='line'>    <span class="na">cursor</span><span class="o">:</span> <span class="no">pointer</span>
-</span><span class='line'>  <span class="nc">.archive_requires</span>
-</span><span class='line'>    <span class="k">@extend</span> <span class="nc">.archive_tool</span>
-</span><span class='line'>    <span class="na">margin</span><span class="o">:</span>
-</span><span class='line'>      <span class="na">top</span><span class="o">:</span> <span class="mi">0</span>
-</span><span class='line'>      <span class="na">bottom</span><span class="o">:</span> <span class="mi">1</span><span class="kt">em</span>
-</span><span class='line'>    <span class="na">font-size</span><span class="o">:</span> <span class="no">medium</span>
-</span><span class='line'>    <span class="na">list-style-type</span><span class="o">:</span> <span class="no">circle</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git flow feature start your_feature_name
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>then open <code>application.coffee</code> file, and</p>
+
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='coffeescript'><span class='line'><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span> <span class="nf">-&gt;</span>
-</span><span class='line'>  <span class="nx">$</span><span class="p">(</span><span class="s">&quot;.archive_tool ul&quot;</span><span class="p">).</span><span class="nx">hide</span><span class="p">()</span>
-</span><span class='line'>  <span class="nx">$</span><span class="p">(</span><span class="s">&quot;.archive_tool &gt; li&quot;</span><span class="p">).</span><span class="nx">click</span> <span class="nf">-&gt;</span>
-</span><span class='line'>    <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">parent</span><span class="p">().</span><span class="nx">find</span><span class="p">(</span><span class="s">&quot;ul&quot;</span><span class="p">).</span><span class="nx">slideToggle</span><span class="p">()</span>
-</span><span class='line'>    <span class="k">return</span>
-</span><span class='line'>  <span class="nx">$</span><span class="p">(</span><span class="s">&quot;.archive_requires &gt; li&quot;</span><span class="p">).</span><span class="nx">click</span> <span class="nf">-&gt;</span>
-</span><span class='line'>    <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">parent</span><span class="p">().</span><span class="nx">find</span><span class="p">(</span><span class="s">&quot;ul&quot;</span><span class="p">).</span><span class="nx">slideToggle</span><span class="p">()</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git stash pop  // move to your_feature_name
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>we write this code inside haml, sass, and coffeescript file and then saved all, run this middleman project.</p>
 
-<p>According to edit your own project try to run codes.</p>
 
-<p>I hope, helped you.</p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git stash list
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git stash drop
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git stash branch
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&rsquo;s all.
+I hope helped to you.</p>
 
 		
 		
@@ -1435,16 +471,16 @@ application.coffee
   
 
 
-<time datetime="2014-03-22T18:57:27+02:00" pubdate data-updated="true">Mar 22<span>nd</span>, 2014</time></div>
+<time datetime="2014-07-06T19:12:29+03:00" pubdate data-updated="true">Jul 6<span>th</span>, 2014</time></div>
 	<div class="tags">
 
 
-	<a class='category' href='/blog/categories/coffeescript/'>coffeescript</a>, <a class='category' href='/blog/categories/haml/'>haml</a>, <a class='category' href='/blog/categories/middleman/'>middleman</a>, <a class='category' href='/blog/categories/sass/'>sass</a>, <a class='category' href='/blog/categories/tree-list/'>tree-list</a>
+	<a class='category' href='/blog/categories/vcs/'>VCS</a>, <a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/git-flow/'>git-flow</a>, <a class='category' href='/blog/categories/github/'>gitHub</a>, <a class='category' href='/blog/categories/stash/'>stash</a>
 
 
 </div>
 	
-	<div class="comments"><a href="/blog/2014/03/22/how-create-tree-list-menu-with-haml/#disqus_thread">Comments</a></div>
+	<div class="comments"><a href="/blog/2014/07/06/git-stash/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>
@@ -1453,78 +489,40 @@ application.coffee
     <article class="post">
 	<h2 class="title">
 		
-		<a href="/blog/2014/03/22/how-to-change-dns-settings-on-ubuntu-desktop/">
+		<a href="/blog/2014/07/03/html5-canvas-javascript/">
 		
-			How to Change DNS Settings on Ubuntu Desktop?</a>
+			HTML5 Canvas Javascript</a>
 	</h2>
 	<div class="entry-content">
-		<h3>How to change DNS settings (ip address) or How to set up Google public DNS for Ubuntu Desktop?</h3>
+		<h3>Which libraries should I use in javascript for game development ?</h3>
 
-<p>Firstly, we should look at Google Public DNS.</p>
+<p>When I looking for javascript library, I found some library is used <code>HTML5 Canvas Javascript</code> library
+for game development.</p>
 
-<h5>What is the Google Public DNS?</h5>
+<p>This library provide to <code>build and animate</code> to game project. I found some Html5 canvas javascript libraries :</p>
 
-<p>Google DNS created by Prem Ramaswami at 2009 . Google Public DNS provide to free DNS settings.
-Without DNS, it wil be difficult to know IP address of websites which visit daily.</p>
+<ul>
+<li><a href="http://hyperandroid.github.io/CAAT/">Canvas Advanced Animation Toolkit</a></li>
+<li><a href="http://kineticjs.com/">Kinetic.js</a></li>
+<li><a href="http://fabricjs.com/">Fabric.js</a></li>
+<li><a href="http://craftyjs.com/">Crafty.js</a></li>
+<li><a href="http://www.createjs.com/">Create.js</a></li>
+<li><a href="http://www.createjs.com/#!/EaselJS">Easel.js</a></li>
+<li><a href="http://ocanvas.org/">oCanvas</a></li>
+<li><a href="http://paperjs.org/">Paper.js</a></li>
+<li><a href="http://processingjs.org/">Processing.js</a></li>
+<li><a href="http://threejs.org/">Three.js</a></li>
+<li><a href="http://jawsjs.com/">Jaws.js</a></li>
+<li><a href="http://impactjs.com/">Impact.js</a></li>
+<li><a href="http://www.limejs.com/">Lime.js</a></li>
+<li><a href="http://melonjs.org/">Melon.js</a></li>
+</ul>
 
-<h5>How to change DNS settings ?</h5>
 
-<p>Open terminal in Ubuntu Desktop with</p>
+<p>If you want to researches with details, you can visit <a href="http://lab2023.com/html5_canvas_javascript_libraries.html">this page</a> .</p>
 
-<pre><code>CTRL + ALT + T
-</code></pre>
-
-<p>and run this command</p>
-
-<pre><code>sudo gedit /etc/dhcp/dhclient.conf
-</code></pre>
-
-<p>opened gedit file and find</p>
-
-<pre><code>prepend domain_name_servers
-</code></pre>
-
-<p>then changed to</p>
-
-<pre><code>prepend domain_name_servers 8.8.8.8, 8.8.4.4;
-</code></pre>
-
-<p>and save &ndash; restart computer.</p>
-
-<p>Now, you should go to</p>
-
-<pre><code>System settings -&gt; Network
-</code></pre>
-
-<p>or</p>
-
-<pre><code>Right click on Network Manager
-    Edit Connection
-        Wired Connection 1
-</code></pre>
-
-<p>select Wired</p>
-
-<pre><code>IPv4 Settings
-</code></pre>
-
-<p>change <em>Method</em> to</p>
-
-<pre><code>Automatic (DHCP) address only
-</code></pre>
-
-<p>and restore DNS</p>
-
-<pre><code>DNS Servers: 8.8.8.8, 8.8.4.4
-</code></pre>
-
-<p>then save.</p>
-
-<p>I try to explain change DNS Server and set up google public DNS on Ubuntu Desktop. I wish help you.</p>
-
-<p>That&rsquo;s it.</p>
-
-<p>I try to explain shortly DNS, I hope, this article helped to you .</p>
+<p>That&rsquo;s all .
+I hope helped to you .</p>
 
 		
 		
@@ -1544,657 +542,16 @@ Without DNS, it wil be difficult to know IP address of websites which visit dail
   
 
 
-<time datetime="2014-03-22T15:17:32+02:00" pubdate data-updated="true">Mar 22<span>nd</span>, 2014</time></div>
+<time datetime="2014-07-03T16:10:34+03:00" pubdate data-updated="true">Jul 3<span>rd</span>, 2014</time></div>
 	<div class="tags">
 
 
-	<a class='category' href='/blog/categories/dns/'>DNS,</a>, <a class='category' href='/blog/categories/ip/'>ip</a>
+	<a class='category' href='/blog/categories/canvas/'>canvas</a>, <a class='category' href='/blog/categories/development/'>development</a>, <a class='category' href='/blog/categories/frameworks/'>frameworks</a>, <a class='category' href='/blog/categories/game/'>game</a>, <a class='category' href='/blog/categories/html5/'>html5</a>, <a class='category' href='/blog/categories/javascript/'>javascript</a>, <a class='category' href='/blog/categories/libraries/'>libraries</a>
 
 
 </div>
 	
-	<div class="comments"><a href="/blog/2014/03/22/how-to-change-dns-settings-on-ubuntu-desktop/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/03/15/blog-middleman/">
-		
-			Middleman Blog</a>
-	</h2>
-	<div class="entry-content">
-		<h3>How to create middleman blog for middleman project?</h3>
-
-<ul>
-<li>Middleman supported blogging in your project or your blog.</li>
-</ul>
-
-
-<p>If you create a blog, I think you should with middleman blogging. I hear, you say &lsquo; WHY ? &rsquo;</p>
-
-<p>WHY?</p>
-
-<ul>
-<li>Easy to use,</li>
-<li>Embed in your project easily</li>
-</ul>
-
-
-<p>&hellip;</p>
-
-<p><strong>Let&rsquo;s learn blogging with middleman blog</strong></p>
-
-<p>Firstly, if you use middleman blog in your project, this means if you use blogging in your website or application,
-you  should go to path of your project, open and write above command.</p>
-
-<p>you write in <em>Gemfile</em> :</p>
-
-<pre><code>    gem ' middleman-blog '
-</code></pre>
-
-<p>and then, in <em>config.rb</em></p>
-
-<pre><code>    activate :blog do |blog|
-    ---
-    set
-</code></pre>
-
-<p>and when you write these command in your project, open terminal or console  write</p>
-
-<pre><code>    bundle install                  #install gems
-    bundle exec middleman server    #run your blog in your project
-</code></pre>
-
-<p>If you want to set up from the rough, what you want to open to path, and write in terminal</p>
-
-<pre><code>    middleman init blog_name --template=blog
-</code></pre>
-
-<p>When you write this command you can see, many file created for your blo.</p>
-
-<p>Now open created blog, you should see directories,</p>
-
-<pre><code>    images
-    javascripts
-    stylesheets
-</code></pre>
-
-<p>files,</p>
-
-<pre><code>    index.html.erb
-    layout.erb
-    calendar.html.erb
-    tags.html.erb
-    feed.xml.builder
-    2012-01-01-example-article
-</code></pre>
-
-<ul>
-<li>Middleman provide  many tags and properties for your blog, if you want to organize, you can open <em>config.rb</em> and organize these, and see.</li>
-<li>If you want to organize style for blog, you should write in stylesheets and javascript directories, with CSS3 and Jquery ;)</li>
-<li>If you don&rsquo;t want to use <strong>.html.erb</strong> files, you can translate to <strong>.html.haml</strong> in <a href="http://html2haml.heroku.com/">html2haml</a>.</li>
-</ul>
-
-
-<p>And use this.</p>
-
-<ul>
-<li>If you want to use blog in your middleman project, you should create new layouts, and <em>index.html.haml</em> in your blog directory,
-different from your middleman project.
-and we write code in this.</li>
-</ul>
-
-
-<p>Yep ! you create new blog and prepared write new article your blog,</p>
-
-<p>Let&rsquo;s start :)</p>
-
-<pre><code>middleman article article_name
-</code></pre>
-
-<p>When write this command, middleman created new article file, blogging in this file, but we write with markdown inside created article file.</p>
-
-<p>When you write your article you run project with</p>
-
-<pre><code>bundle exec middleman server
-</code></pre>
-
-<p>after the</p>
-
-<pre><code>bundle install
-</code></pre>
-
-<p>run and see what you can do ?</p>
-
-<p>That&rsquo;s it.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-15T17:05:21+02:00" pubdate data-updated="true">Mar 15<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/blogging/'>blogging</a>, <a class='category' href='/blog/categories/middleman/'>middleman,</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/03/15/blog-middleman/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/03/06/how-to-show-nav-bar-according-to-scroll/">
-		
-			How to Show Nav-bar According to Scroll</a>
-	</h2>
-	<div class="entry-content">
-		<h3>Change CSS class after scrolling &hellip;px down</h3>
-
-<p>I want to change menu or nav-bar according to scroll, How I can do this ?</p>
-
-<p>In this article, I can try to explain with an example.</p>
-
-<p>Please, write these code block on your project or created a new project and try to these .
-Yep!, Let&rsquo;s learn step by step :)</p>
-
-<p>Firstly, Created HTML file in your project and write below code block,</p>
-
-<pre><code>index.html
-
-&lt;div id = 'navigation'&gt; Home &lt;/div&gt;
-    &lt;h1&gt; Welcome to Change scroll according to ...px &lt;/h1&gt;
-    &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-     irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-     id est laborum &lt;/p&gt;
-</code></pre>
-
-<p>then wrote this code block in your HTML file. Let&rsquo;s create CSS file in your project for style of your project.</p>
-
-<pre><code>style.css
-
-#navigation {
-        width : 100px;
-        height : 100px;
-        background-color:blue;
-        position: fixed;
-        display: none;
-}
-</code></pre>
-
-<p>this last step but the most important step for scrolling to navigation. Create javascript file for your animation of your project</p>
-
-<pre><code>application.js
-
-$(document).scroll(function() {
-        $('#navigation').toggle($(this).scrollTop() &gt; 1000);
-});
-</code></pre>
-
-<p>Wrote in your project these block and try to run project and What are you seeing in your project ?</p>
-
-<p>That&rsquo;s easy!</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-06T19:30:31+02:00" pubdate data-updated="true">Mar 6<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/css/'>CSS,</a>, <a class='category' href='/blog/categories/html/'>HTML</a>, <a class='category' href='/blog/categories/javascript/'>javascript,</a>, <a class='category' href='/blog/categories/jquery/'>jquery,</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/03/06/how-to-show-nav-bar-according-to-scroll/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/03/02/css-sprite-use-in-sass/">
-		
-			CSS - Sprite Use in SASS</a>
-	</h2>
-	<div class="entry-content">
-		<h3>What is the CSS sprite? Why do we need to this ?</h3>
-
-<p>CSS Sprite means that combine all images in a single image file. The aim is that,
-when we upload several image file for use in css or sass file, you should upload to each.</p>
-
-<p><strong>If I give an example, you understand easily: </strong></p>
-
-<p>We have <strong>10 or more images</strong> and we should use in CSS folder, but this is difficult
- and mixed not only for 10 picture but also 100, 10000 pictures.
-you will each image upload 10 times or more for use.
-Can you imagine it ?</p>
-
-<p>It&rsquo;s very difficult and mixed !</p>
-
-<p>Instead of this we use CSS Sprite method and fixed this mixed. If you have 10 images,
-you should combine  these images in a single page
-and pull in this page. Thus, CSS Sprite provide to fast loading  when opened quickly your images of website.</p>
-
-<p>I think your understand CSS Sprite, How use it ?</p>
-
-<ul>
-<li><p>Firstly, you create a single page for using images and combine all pictures in single page.</p></li>
-<li><p>And now we use CSS or SASS code for pull each picture in single page.</p></li>
-</ul>
-
-
-<p>For example, you have a icons&#8217; pictures page and we pull each icon on icons&#8217; picture page, we
-should use CSS or SASS sprite</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='sass'><span class='line'><span class="nc">.icon</span>
-</span><span class='line'>    <span class="na">background</span><span class="o">:</span> <span class="sx">url(&quot;../images/icon-sprite.png&quot;)</span> <span class="n">no</span> <span class="no">repeat</span>
-</span><span class='line'>    <span class="na">display</span><span class="o">:</span> <span class="no">inline</span><span class="o">-</span><span class="no">block</span>
-</span><span class='line'><span class="nc">.icon1</span>
-</span><span class='line'>    <span class="k">@extend</span> <span class="nc">.icon</span>
-</span><span class='line'>    <span class="na">background-position</span><span class="o">:</span> <span class="mi">0</span><span class="kt">px</span> <span class="mi">0</span><span class="kt">px</span>
-</span><span class='line'><span class="nc">.icon2</span>
-</span><span class='line'>    <span class="k">@extend</span> <span class="nc">.icon</span>
-</span><span class='line'>    <span class="na">background-position</span><span class="o">:</span> <span class="mi">20</span><span class="kt">px</span> <span class="mi">34</span><span class="kt">px</span>
-</span><span class='line'>    <span class="nc">...</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>means that above code :</p>
-
-<p>We upload single page on <em>icon</em> class and we want to use anything icon in single page which position has these.
-but before use <em>extend</em> for use <em>icon</em> class in <em>icon1</em> class. And I want to use another icon, I prepare position of it.
-and use in</p>
-
-<pre><code>    background-position
-</code></pre>
-
-<p>Thanks to CSS Sprite, when opened images in your site, it opened quickly.</p>
-
-<p>That&rsquo;s it !</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T16:12:43+02:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/sprite/'>,Sprite,</a>, <a class='category' href='/blog/categories/css/'>CSS</a>, <a class='category' href='/blog/categories/sass/'>SASS</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/03/02/css-sprite-use-in-sass/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/03/01/brief-info-about-hash/">
-		
-			Brief Info About Hash</a>
-	</h2>
-	<div class="entry-content">
-		<h3>What is the hash in ruby ?</h3>
-
-<p>Hash, hash, hash ?</p>
-
-<ul>
-<li>Hashes are one of the biggest property which separated another language in ruby.</li>
-<li>Hash was known <strong>associative array</strong> in another programming language.</li>
-<li>In hash, elements keep <strong>&lsquo;key => value&rsquo;</strong> format in ruby . Like</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">hash_example</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;surname&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;doe&#39;</span> <span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>Values of keys can be any type, but when you use <strong>&lsquo;eql?&rsquo;</strong> method, it can be only a key according to each other.</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'>    <span class="n">a</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">3</span> <span class="o">=&gt;</span> <span class="s1">&#39;three&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="o">.</span><span class="mi">0</span> <span class="o">=&gt;</span> <span class="s1">&#39;threedotzero&#39;</span> <span class="p">}</span>
-</span><span class='line'>    <span class="n">a</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span>        <span class="c1">#three</span>
-</span><span class='line'>    <span class="n">a</span><span class="o">[</span><span class="mi">3</span><span class="o">.</span><span class="mi">0</span><span class="o">]</span>      <span class="c1">#threedotzero</span>
-</span><span class='line'>    <span class="mi">3</span> <span class="o">==</span> <span class="mi">3</span><span class="o">.</span><span class="mi">0</span>        <span class="c1">#true</span>
-</span><span class='line'>    <span class="mi">3</span><span class="o">.</span><span class="n">eql?</span> <span class="mi">3</span><span class="o">.</span><span class="mi">0</span>      <span class="c1">#false</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>Hashes usually write with symbols, like :</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'> <span class="n">hash_with_symbol</span><span class="p">{</span> <span class="nb">name</span><span class="p">:</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="ss">surname</span><span class="p">:</span> <span class="s1">&#39;Doe&#39;</span><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>Hashes are similar to Array class, but Array uses integer as its index, hash allow to us any object type.</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">hash_differences_array</span><span class="p">{</span> <span class="s1">&#39;age&#39;</span> <span class="o">=&gt;</span> <span class="mi">15</span><span class="p">,</span> <span class="s1">&#39;year&#39;</span> <span class="o">=&gt;</span> <span class="mi">2014</span> <span class="p">}</span>
-</span><span class='line'><span class="n">array_differences_hash</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="o">]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>In my opinion, You have an information about hashes. Do you agree with me?!</p>
-
-<ul>
-<li>Continue to learn!, I have an information about hash, but if I want to access only keys or values , How does it access or separate these in hash ?</li>
-</ul>
-
-
-<p>For this question, solution: if you want to access to keys use</p>
-
-<pre><code>        keys
-</code></pre>
-
-<p>method, if you want to access to values use</p>
-
-<pre><code>        values
-</code></pre>
-
-<p>methods. Like:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">access_values_keys</span><span class="p">{</span> <span class="nb">name</span><span class="p">:</span> <span class="s1">&#39;john&#39;</span><span class="p">,</span> <span class="ss">surname</span><span class="p">:</span> <span class="s1">&#39;Doe&#39;</span><span class="p">}</span>
-</span><span class='line'><span class="n">access_values_keys</span><span class="o">.</span><span class="n">keys</span>         <span class="c1"># [:name, :surname]</span>
-</span><span class='line'><span class="n">access_values_keys</span><span class="o">.</span><span class="n">values</span>       <span class="c1">#[&#39;John&#39;, &#39;Doe&#39;]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>Generally, hashes are using in parameters of name,</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">parameters_name</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
-</span><span class='line'>    <span class="s1">&#39;#{name} : #{age}&#39;</span>
-</span><span class='line'><span class="k">end</span>
-</span><span class='line'><span class="nb">puts</span> <span class="nb">name</span> <span class="s1">&#39;John&#39;</span> <span class="p">,</span> <span class="mi">18</span>       <span class="c1"># Ali : 18</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>Hashes uses to <strong>ENUMERABLE</strong> module like arrays.</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'>  <span class="p">{}</span><span class="o">.</span><span class="n">class</span><span class="o">.</span><span class="n">ancestors</span>          <span class="c1">#show the hash ancestors.</span>
-</span><span class='line'>                                        <span class="c1">#[Hash, Enumerable, Object, PP::ObjectMixin, Kernel, BasicObject]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>If you want to change from array to hash, you should use</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">.</span><span class="n">to_h</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Lastly</strong> If you want to learn more, you can visit <a href="http://www.ruby-doc.org/core-2.0/Hash.html">ruby-doc</a> .</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-01T18:52:57+02:00" pubdate data-updated="true">Mar 1<span>st</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/hash/'>Hash</a>, <a class='category' href='/blog/categories/ruby/'>Ruby,</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/03/01/brief-info-about-hash/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/02/28/what-is-the-ruby-on-rails/">
-		
-			What Is the Ruby on Rails?</a>
-	</h2>
-	<div class="entry-content">
-		<h2>What is the Ruby On Rails and How install?</h2>
-
-<p><strong>Ruby</strong></p>
-
-<ul>
-<li>Object oriented programming language</li>
-<li>Created in 1995 by Matz</li>
-<li>Used for many purpose, not only web app.</li>
-</ul>
-
-
-<p><strong>Ruby on Rails</strong></p>
-
-<ul>
-<li>Open source, web applications framework.</li>
-<li>Written in Ruby</li>
-<li>Release as open source in 2004</li>
-</ul>
-
-
-<h4>How install Ruby On Rails?</h4>
-
-<p>Firstly, you have to install ruby, and then start install rails.
-Is there ruby in your pc? Look at!</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>ruby -v
-</span><span class='line'><span class="c"># ruby 2.0.0p353 (2013-11-22 revision 43784) [x86_64-darwin13.0.0]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>I hear , &lsquo;my pc don&rsquo;t has ruby.&rsquo; Dont worry, when you are going to <a href="https://www.ruby-lang.org/en/">download ruby</a>.
-Now, we install the ruby after then</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>gem update system
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>start install rails framework.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>gem install rails
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>rails was install and which version?</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rails --version  or rails -v
-</span><span class='line'><span class="c"># Rails 4.0.2</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Yeah!, now pc has ruby and rails.</p>
-
-<p>Then we can start to create Ruby on Rails project.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rails new start_rails_project
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Created rails project. That&rsquo;s very easy!</p>
-
-<p>Go to rails project path and install bundler</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>gem install bundle
-</span><span class='line'>bundle install
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Now, you can write your ruby code on rails framework . How run your rails applications ?</p>
-
-<p>We should write</p>
-
-<pre><code>    rails server or rails s
-</code></pre>
-
-<p>In terminal, you should see this url &lsquo;<a href="http://0.0.0.0:3000">http://0.0.0.0:3000</a>&rsquo; and copy this, paste on your search bar.</p>
-
-<p>You can see Ruby default information page</p>
-
-<p><img src="../images/rails_welcome.png" alt="Default page" /></p>
-
-<p>Yeah, Installed Ruby On Rails and started to code your rails applications.</p>
-
-<p>If you want to learn more, you should visit <a href="http://guides.rubyonrails.org/">rubyonrails</a>.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-02-28T18:25:39+02:00" pubdate data-updated="true">Feb 28<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ruby/'>ruby,</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/02/28/what-is-the-ruby-on-rails/#disqus_thread">Comments</a></div>
+	<div class="comments"><a href="/blog/2014/07/03/html5-canvas-javascript/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>
