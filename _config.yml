@@ -98,10 +98,7 @@ disqus_show_comment_count: true
 
 # Google Analytics
 google_analytics_tracking_id: UA-49378525-1
-# Facebook Like
-facebook_user: leyla.kapi
-facebook_like: true
-facebook_share: true
+
 
 
 #Gravatar
