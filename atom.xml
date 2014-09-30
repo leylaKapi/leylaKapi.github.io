@@ -4,7 +4,7 @@
   <title><![CDATA[Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-10-01T00:45:53+03:00</updated>
+  <updated>2014-10-01T00:51:56+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -1037,7 +1037,7 @@ you can make it easily. Firstly, you should install <code>poppler-utils</code> i
 <p>After that you can see to <code>pdfimages</code> how using it, like</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>pdfimages --help
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>pdfimages --help
 </span></code></pre></td></tr></table></div></figure>
 
 
@@ -1045,7 +1045,7 @@ you can make it easily. Firstly, you should install <code>poppler-utils</code> i
 file path on terminal, then write on terminal this command,</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>pdfimages -j your_pdf_file.pdf which_name_you_want
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>pdfimages -j your_pdf_file.pdf which_name_you_want
 </span></code></pre></td></tr></table></div></figure>
 
 

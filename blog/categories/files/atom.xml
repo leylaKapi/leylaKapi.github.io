@@ -4,7 +4,7 @@
   <title><![CDATA[Category: files | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/files/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-10-01T00:45:53+03:00</updated>
+  <updated>2014-10-01T00:51:56+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -30,14 +30,14 @@ $ sudo apt-get install poppler-utils
 <p>After that you can see to <code>pdfimages</code> how using it, like</p>
 
 <p><code>bash
-pdfimages --help
+$ pdfimages --help
 </code></p>
 
 <p>you install and look at your <code>pdfimages</code> properties with above commands. Now you should go to your pdf
 file path on terminal, then write on terminal this command,</p>
 
 <p><code>bash
-pdfimages -j your_pdf_file.pdf which_name_you_want
+$ pdfimages -j your_pdf_file.pdf which_name_you_want
 </code></p>
 
 <p>you can see all images export in your pdf file in your path.
