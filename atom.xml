@@ -4,7 +4,7 @@
   <title><![CDATA[Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-09-27T15:48:16+03:00</updated>
+  <updated>2014-10-01T00:40:56+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -1020,6 +1020,42 @@ your icons automatically, in your <code>haml</code> file,</p>
   </entry>
   
   <entry>
+    <title type="html"><![CDATA[How to extract images from pdf file on Ubuntu Desktop ?]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/09/01/how-to-extract-images-from-pdf-file-on-ubuntu/"/>
+    <updated>2014-09-01T00:00:00+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/09/01/how-to-extract-images-from-pdf-file-on-ubuntu</id>
+    <content type="html"><![CDATA[<h3>Pdfimages in Ubuntu</h3>
+
+<p>If you have some pdf files which include images and want to extract all images like a image file, you can make it easily.
+Firstly, you should install <code>poppler-utils</code> in your machine, with</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo apt-get install poppler-utils
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>After that you can see to <code>pdfimages</code> how using it, like</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>pdfimages --help
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You install and look at your <code>pdfimages</code> properties with above commands. Now you should go to your pdf file path on terminal,
+then write on terminal this command,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>pdfimages -j your_pdf_file.pdf which_name_you_want
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>you can see all images export in your pdf file in your path.
+It is very easy.
+That&rsquo;s all.</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Fix paperclip gem bug]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/08/21/fix-paperclip-gem-bug/"/>
     <updated>2014-08-21T13:49:45+03:00</updated>
@@ -2030,43 +2066,6 @@ I hope help to you.</p>
 
 <p>That&rsquo;s all.
 I hope helped to you.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[HTML5 Canvas Javascript]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/07/03/html5-canvas-javascript/"/>
-    <updated>2014-07-03T16:10:34+03:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/07/03/html5-canvas-javascript</id>
-    <content type="html"><![CDATA[<h3>Which libraries should I use in javascript for game development ?</h3>
-
-<p>When I looking for javascript library, I found some library is used <code>HTML5 Canvas Javascript</code> library
-for game development.</p>
-
-<p>This library provide to <code>build and animate</code> to game project. I found some Html5 canvas javascript libraries :</p>
-
-<ul>
-<li><a href="http://hyperandroid.github.io/CAAT/">Canvas Advanced Animation Toolkit</a></li>
-<li><a href="http://kineticjs.com/">Kinetic.js</a></li>
-<li><a href="http://fabricjs.com/">Fabric.js</a></li>
-<li><a href="http://craftyjs.com/">Crafty.js</a></li>
-<li><a href="http://www.createjs.com/">Create.js</a></li>
-<li><a href="http://www.createjs.com/#!/EaselJS">Easel.js</a></li>
-<li><a href="http://ocanvas.org/">oCanvas</a></li>
-<li><a href="http://paperjs.org/">Paper.js</a></li>
-<li><a href="http://processingjs.org/">Processing.js</a></li>
-<li><a href="http://threejs.org/">Three.js</a></li>
-<li><a href="http://jawsjs.com/">Jaws.js</a></li>
-<li><a href="http://impactjs.com/">Impact.js</a></li>
-<li><a href="http://www.limejs.com/">Lime.js</a></li>
-<li><a href="http://melonjs.org/">Melon.js</a></li>
-</ul>
-
-
-<p>If you want to researches with details, you can visit <a href="http://lab2023.com/html5_canvas_javascript_libraries.html">this page</a> .</p>
-
-<p>That&rsquo;s all .
-I hope helped to you .</p>
 ]]></content>
   </entry>
   

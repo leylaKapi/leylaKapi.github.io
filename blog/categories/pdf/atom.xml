@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: pdf | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/pdf/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2014-10-01T00:40:56+03:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[Leyla Kapi]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[How to extract images from pdf file on Ubuntu Desktop ?]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/09/01/how-to-extract-images-from-pdf-file-on-ubuntu/"/>
+    <updated>2014-09-01T00:00:00+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/09/01/how-to-extract-images-from-pdf-file-on-ubuntu</id>
+    <content type="html"><![CDATA[<h3>Pdfimages in Ubuntu</h3>
+
+<p>If you have some pdf files which include images and want to extract all images like a image file, you can make it easily.
+Firstly, you should install <code>poppler-utils</code> in your machine, with</p>
+
+<p><code>bash
+$ sudo apt-get install poppler-utils
+</code></p>
+
+<p>After that you can see to <code>pdfimages</code> how using it, like</p>
+
+<p><code>bash
+pdfimages --help
+</code></p>
+
+<p>You install and look at your <code>pdfimages</code> properties with above commands. Now you should go to your pdf file path on terminal,
+then write on terminal this command,</p>
+
+<p><code>bash
+pdfimages -j your_pdf_file.pdf which_name_you_want
+</code></p>
+
+<p>you can see all images export in your pdf file in your path.
+It is very easy.
+That&rsquo;s all.</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -7,8 +7,8 @@
 	<meta name="author" content="Leyla Kapi">
 
 	
-	<meta name="description" content="If you get attr_accesible&rsquo;s bug, like 1
-Undefined method 'attr_accessible' You can forget write gem about this attributes, open your Gemfile &hellip;">
+	<meta name="description" content="Ruby on Rails Validation methods validates_presence_of Attribute mustn&rsquo;t be blank(nil,false,[],{}) 1
+validates_presence_of :field_name &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -86,6 +86,169 @@ Undefined method 'attr_accessible' You can forget write gem about this attribute
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/05/04/validation-methods/">
+		
+			Validation Methods</a>
+	</h2>
+	<div class="entry-content">
+		<h3>Ruby on Rails Validation methods</h3>
+
+<ul>
+<li><strong>validates_presence_of</strong></li>
+</ul>
+
+
+<p>Attribute mustn&rsquo;t be blank(nil,false,[],{})</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">validates_presence_of</span> <span class="ss">:field_name</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li><strong>validates_length_of</strong></li>
+</ul>
+
+
+<p>Attribute must meet length requirements :is, :minimum, :maximum, :within, :in, :too_short, :too_long</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">validates_length_of</span> <span class="ss">:field_name</span><span class="p">,</span> <span class="ss">:minimum</span> <span class="o">=&gt;</span> <span class="mi">100</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li><strong>validates_numericality_of</strong></li>
+</ul>
+
+
+<p>Attribute must be integer or floating number :less_than, :greater_than, :equal_to, :odd, :even, :greater_than_or_equal_to</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">validates_numericality_of</span> <span class="ss">:field_name</span><span class="p">,</span> <span class="ss">:greater_than_or_equal_to</span> <span class="o">=&gt;</span> <span class="mi">5</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li><strong>validates_inclusion_of</strong></li>
+</ul>
+
+
+<p>Attribute must be in a list of choises. (array or range) :in</p>
+
+<ul>
+<li><strong>validates_exclusion_of</strong></li>
+</ul>
+
+
+<p>Attribute mustn&rsquo;t be in a list of choises. (array or range) :in</p>
+
+<ul>
+<li><strong>validates_format_of</strong></li>
+</ul>
+
+
+<p>Attribute must match a regular expression. :with</p>
+
+<ul>
+<li><strong>validates_uniqueness_of</strong></li>
+</ul>
+
+
+<p>Attribute mustn&rsquo;t exist in the database :case_sensitive, :scope</p>
+
+<ul>
+<li><strong>validates_acceptance_of</strong></li>
+</ul>
+
+
+<p>Attribute must be accepted :accept(expected value, 1)</p>
+
+<ul>
+<li><strong>validates_confirmation_of</strong></li>
+</ul>
+
+
+<p>Attribute must be confirmed by entering it twice creates a virtual blank attribute for confirmation.</p>
+
+<ul>
+<li><strong>validates_associated</strong></li>
+</ul>
+
+
+<p>Associated object or objects must all be valid.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="ss">:allow_nil</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+</span><span class='line'><span class="c1">#Skip valid if attribute is nil</span>
+</span><span class='line'><span class="ss">:allow_blank</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+</span><span class='line'><span class="c1">#Skip valid if attribute is blank</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Example of Validations</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">validates_presence_of</span> <span class="ss">:user_name</span>
+</span><span class='line'><span class="n">validates_length_of</span> <span class="ss">:user_name</span><span class="p">,</span> <span class="ss">:maximum</span> <span class="o">=&gt;</span> <span class="mi">50</span>
+</span><span class='line'><span class="n">validates_uniqueness_of</span> <span class="ss">:user_name</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>When we use like above, We diverge to DRY, instead of above</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">validates</span> <span class="ss">:user_name</span><span class="p">,</span> <span class="ss">:presence</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+</span><span class='line'>                     <span class="ss">:length</span> <span class="o">=&gt;</span> <span class="p">{</span><span class="ss">:maximum</span> <span class="o">=&gt;</span> <span class="mi">50</span><span class="p">}</span>
+</span><span class='line'>                     <span class="ss">:uniqueness</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&rsquo;s all.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-04T20:39:52+03:00" pubdate data-updated="true">May 4<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/ror/'>RoR</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>, <a class='category' href='/blog/categories/validates/'>validates</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/05/04/validation-methods/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -373,143 +536,6 @@ We need to create scaffold,</p>
 </div>
 	
 	<div class="comments"><a href="/blog/2014/04/23/setup-rubymine/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/04/20/how-is-the-internet-working-and-what-is-the-protocols/">
-		
-			How Is the Internet Working and What Is the Protocols</a>
-	</h2>
-	<div class="entry-content">
-		<h3>How is the internet working ?</h3>
-
-<p>Internet like in real life, There are two sides for internet communication. While one of this is making request, another of this
-have to respond to this request. This loop is named</p>
-
-<pre><code>request - respond
-</code></pre>
-
-<p>or</p>
-
-<pre><code>client-server
-</code></pre>
-
-<p>Web relation client &ndash; server</p>
-
-<p><strong>client</strong> => <strong>server</strong></p>
-
-<pre><code>     request
-</code></pre>
-
-<p><strong>client</strong> &lt;= <strong>server</strong></p>
-
-<pre><code>     respond
-</code></pre>
-
-<p>Now, I try to explain when it occur this relation, Which process do occur?</p>
-
-<ul>
-<li><p>This process can be with protocols, protocols What?</p>
-
-<ul>
-<li>Protocols, like rules, this means that ; there are rules for connection two computer(client-server) each other to
-internet.This rules are named protocols.</li>
-</ul>
-</li>
-<li><p>There are many type of Protocols like HTTP(Hyper Text Transfer Protocols), TCP(Transmission Control Protocols),
-UDP(User Dtagram Protocol), SSL(Secure Socket Layer), TLS(Transport Layer Security),FTP(File Transfer Protocols) &hellip;etc.</p>
-
-<p>I try to explain several of the above protocols.</p></li>
-<li><p>HTTP (Hyper Text Transfer Protocol)</p></li>
-</ul>
-
-
-<p>HTTP is which distribute in a source, which access to everyone for apply to hyper information system like text, graphics, video ..etc
-In brief HTTP is a set of rules.
-Also The means of name that, When we transferring text using this protocols.</p>
-
-<p>In World using the default port number, showing like this <em>:80</em> . When we write url, automatically added to ending of URL,but it
-is hidden.</p>
-
-<ul>
-<li>TCP (Transmission Control Protocol)</li>
-</ul>
-
-
-<p>TCP provide to security of data exchange. The clients create a contact with each other, in this contact provide to data exchange
-and data transmitted in the correct order. Then TCP controlled to data whether it has reached by sending a message.
- It is very slow, because controlled data step by step.</p>
-
-<ul>
-<li>UDP (User Datagram Protocol)</li>
-</ul>
-
-
-<p>UDP is fast transmission data according to TCP but unsafe data . The aim is fast. If we compare with TCP. TCP and UDP similar
-but TCP is very slow. If sending <em>.rar</em> or <em>.zip</em> files, should use TCP because data is important. if you send to video,
-should use UDP because fast is important.</p>
-
-<ul>
-<li>SSL (Secure Socket Layer)</li>
-</ul>
-
-
-<p>SSl development for provide secuirty and privacy of transmission data on network. In SSL, before sending to information
-encrypted, only decrypted by computer which receiver. This provide privacy data exchange.</p>
-
-<pre><code>https  # 's' means that security .
-</code></pre>
-
-<ul>
-<li>TLS (Transport Layer Security)</li>
-</ul>
-
-
-<p>TLS similar to SSL. Differences to SSL is that, process of connection occur simple and without encryption, when data transmission can be done,
-security certificate engaged and then can be security.</p>
-
-<ul>
-<li><p>URL (Uniform Resources Locator)</p>
-
-<p> access_method//:server_name[:port]/site</p></li>
-</ul>
-
-
-<p>I hope this article help you for understanding internet works</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-04-20T02:00:37+03:00" pubdate data-updated="true">Apr 20<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/http/'>HTTP</a>, <a class='category' href='/blog/categories/https/'>HTTPS</a>, <a class='category' href='/blog/categories/ssl/'>SSL</a>, <a class='category' href='/blog/categories/tcp/'>TCP</a>, <a class='category' href='/blog/categories/tls/'>TLS</a>, <a class='category' href='/blog/categories/udp/'>UDP</a>, <a class='category' href='/blog/categories/url/'>URL</a>, <a class='category' href='/blog/categories/internet/'>internet</a>, <a class='category' href='/blog/categories/protocols/'>protocols</a>, <a class='category' href='/blog/categories/working/'>working</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/04/20/how-is-the-internet-working-and-what-is-the-protocols/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>
