@@ -18,14 +18,14 @@ $ sudo apt-get install poppler-utils
 After that you can see to `pdfimages` how using it, like
 
 ```bash
-pdfimages --help
+$ pdfimages --help
 ```
 
 you install and look at your `pdfimages` properties with above commands. Now you should go to your pdf 
 file path on terminal, then write on terminal this command,
 
 ```bash 
-pdfimages -j your_pdf_file.pdf which_name_you_want
+$ pdfimages -j your_pdf_file.pdf which_name_you_want
 ```
 
 you can see all images export in your pdf file in your path.
