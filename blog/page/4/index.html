@@ -7,7 +7,7 @@
 	<meta name="author" content="Leyla Kapi">
 
 	
-	<meta name="description" content="How can you add simple search form to rails project ? You want to add search form, but you don&rsquo;t no. HOW? Let&rsquo;s start, firstly you &hellip;">
+	<meta name="description" content="Middleman sass compiling error While you were made web template with haml and sass, if you use middleman and bootstrap for your web template and &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -85,6 +85,85 @@
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/07/17/error-compiling-sass-assets/">
+		
+			Error Compiling Sass Assets</a>
+	</h2>
+	<div class="entry-content">
+		<h3>Middleman sass compiling error</h3>
+
+<p>While you were made web template with <code>haml</code> and <code>sass</code>, if you use middleman and bootstrap for your web template and your project give you like,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sass'><span class='line'><span class="nt">Error</span> <span class="nt">compiling</span> <span class="nt">CSS</span> <span class="nt">asset</span>
+</span><span class='line'><span class="na">NoMethodError</span><span class="o">:</span> <span class="n">undefined</span> <span class="n">method</span> <span class="err">`</span><span class="n">font_path</span><span class="err">`</span> <span class="n">for</span> <span class="n">nil</span><span class="o">:</span><span class="n">NilClass</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>error.</p>
+
+<p>You can fix like with edit your <code>Gemfile</code></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;bootstrap-sass&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 3.1.1&#39;</span>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;middleman-sprockets&#39;</span><span class="p">,</span> <span class="s1">&#39;3.2.2&#39;</span>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;middleman-bootstrap-navbar&#39;</span><span class="p">,</span><span class="s1">&#39;~&gt;2.0&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then you can write in terminal <code>bundle install</code>
+Than if errors didn&rsquo;t fixed, you should write on terminal</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>bundle update middleman-sprockets
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you want to researches with details, you should look <a href="https://github.com/middleman/middleman/issues/1265">this page</a></p>
+
+<p>That&rsquo;s all.</p>
+
+<p>I hope helped to you.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-17T16:27:24+03:00" pubdate data-updated="true">Jul 17<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/assets/'>assets</a>, <a class='category' href='/blog/categories/bootstrap/'>bootstrap</a>, <a class='category' href='/blog/categories/compiling/'>compiling</a>, <a class='category' href='/blog/categories/middleman/'>middleman</a>, <a class='category' href='/blog/categories/sass/'>sass</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/07/17/error-compiling-sass-assets/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -476,94 +555,6 @@ I hope help to you.</p>
 </div>
 	
 	<div class="comments"><a href="/blog/2014/07/08/remove-log-and-idea-files-on-your-rails-project/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/07/06/git-stash/">
-		
-			Git Stash</a>
-	</h2>
-	<div class="entry-content">
-		<h3>Command of Git Stash</h3>
-
-<p>Thanks to <code>git stash</code>, provide to stash the changes in a dirty working directory away.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git stash
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git flow feature start your_feature_name
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git stash pop  // move to your_feature_name
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git stash list
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git stash drop
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git stash branch
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>That&rsquo;s all.
-I hope helped to you.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-07-06T19:12:29+03:00" pubdate data-updated="true">Jul 6<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/vcs/'>VCS</a>, <a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/git-flow/'>git-flow</a>, <a class='category' href='/blog/categories/github/'>gitHub</a>, <a class='category' href='/blog/categories/stash/'>stash</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/07/06/git-stash/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>

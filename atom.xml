@@ -4,7 +4,7 @@
   <title><![CDATA[Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-10-01T00:51:56+03:00</updated>
+  <updated>2014-10-02T21:47:01+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -12,6 +12,59 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Trick: Add page number with javascript ?]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/10/02/dipnote-add-page-number-with-javascript/"/>
+    <updated>2014-10-02T21:32:05+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/10/02/dipnote-add-page-number-with-javascript</id>
+    <content type="html"><![CDATA[<h3>How can you show page number in js ?</h3>
+
+<p>If you create middleman or rails project and you want to add pagination in your pages with js.
+You can make easily with below codes</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'>  <span class="kd">var</span> <span class="nx">numberOfPages</span> <span class="o">=</span> <span class="mi">14</span><span class="p">;</span>
+</span><span class='line'>  <span class="kd">function</span> <span class="nx">addPage</span><span class="p">(</span><span class="nx">page</span><span class="p">,</span> <span class="nx">book</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">book</span><span class="p">.</span><span class="nx">turn</span><span class="p">(</span><span class="s1">&#39;hasPage&#39;</span><span class="p">,</span> <span class="nx">page</span><span class="p">))</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+</span><span class='line'>        <span class="nx">element</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span><span class="s1">&#39;&lt;div class=&quot;data&quot;&gt;Data for page &#39;</span><span class="o">+</span><span class="nx">page</span><span class="o">+</span><span class="s1">&#39;&lt;/div&gt;&#39;</span><span class="p">);</span>
+</span><span class='line'>      <span class="p">},</span> <span class="mi">14</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#number-pages&#39;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">numberOfPages</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>in haml page can be like</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nf">#controls</span>
+</span><span class='line'>  <span class="nt">%label</span><span class="p">{</span><span class="ss">:for</span> <span class="o">=&gt;</span> <span class="s2">&quot;page-number&quot;</span><span class="p">}</span> Page:
+</span><span class='line'>  <span class="nt">%input</span><span class="nf">#page-number</span><span class="p">{</span><span class="ss">:size</span> <span class="o">=&gt;</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span> <span class="ss">:type</span> <span class="o">=&gt;</span> <span class="s2">&quot;text&quot;</span><span class="p">}/</span>
+</span><span class='line'>  of
+</span><span class='line'>  <span class="nt">%span</span><span class="nf">#number-pages</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>now you can try easily this <code>js</code> trick.</p>
+
+<p>That&rsquo;s all .
+I hope helped to you.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How to create scroll-page for rails project]]></title>
@@ -2013,60 +2066,6 @@ I hope help to you.</p>
 
 
 <p>That&rsquo;s all.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Git Stash]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/07/06/git-stash/"/>
-    <updated>2014-07-06T19:12:29+03:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/07/06/git-stash</id>
-    <content type="html"><![CDATA[<h3>Command of Git Stash</h3>
-
-<p>Thanks to <code>git stash</code>, provide to stash the changes in a dirty working directory away.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git stash
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git flow feature start your_feature_name
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git stash pop  // move to your_feature_name
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git stash list
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git stash drop
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git stash branch
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>That&rsquo;s all.
-I hope helped to you.</p>
 ]]></content>
   </entry>
   
