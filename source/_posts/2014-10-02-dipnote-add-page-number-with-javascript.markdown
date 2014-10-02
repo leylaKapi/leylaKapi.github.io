@@ -8,7 +8,7 @@ categories: pagination js  haml number pages frontend
 
 ### How can you show page number in js ?
 
-If you create middleman files or rails project and you want to add pagination in your pages with js. 
+If you create middleman or rails project and you want to add pagination in your pages with js. 
 You can make easily with below codes
 
 ```js
@@ -22,7 +22,7 @@ You can make easily with below codes
   }
     $('#number-pages').html(numberOfPages);
 ```
-in haml page can be like
+in haml page can be like 
 
 ```haml
 #controls
