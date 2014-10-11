@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: bug | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/bug/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2014-10-11T13:26:32+03:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[Leyla Kapi]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Fix paperclip gem bug]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/08/21/fix-paperclip-gem-bug/"/>
+    <updated>2014-08-21T13:49:45+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/08/21/fix-paperclip-gem-bug</id>
+    <content type="html"><![CDATA[<h3>How can I fix <code>paperclip</code> error ?</h3>
+
+<p>When you use <code>paperclip</code> gem, if you are getting like this bug</p>
+
+<p><code>ruby
+Photo could not run the identify command. Please install ImageMagick.
+</code></p>
+
+<p>You can fix this bug with</p>
+
+<p><code>bash
+sudo apt-get autoremove
+</code>
+or you can make</p>
+
+<p><code>bash
+sudo apt-get install imagemagick.
+</code></p>
+
+<p>I suggest the second command, because if youcan make <code>autoremove</code> you can get error again.</p>
+
+<p>That' s all.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Rails fix undefined local variable or method]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/07/25/rails-fix-undefined-method/"/>
+    <updated>2014-07-25T15:52:35+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/07/25/rails-fix-undefined-method</id>
+    <content type="html"><![CDATA[<h3>How to fix rails undefined local variable or method &lsquo;confirmed_at&rsquo; ?</h3>
+
+<p>If you getting like,</p>
+
+<p><img src="../images/rails_undefined_error.png" alt="rails undefined" /></p>
+
+<p> and you thinking <strong>how can I fix ?</strong></p>
+
+<ul>
+<li>Firstly, you need to create migration</li>
+</ul>
+
+
+<p><code>bash
+rails g migration add_confirmable
+</code></p>
+
+<p>then,</p>
+
+<p><code>bash
+rake db:migrate
+</code></p>
+
+<p>When you write above command, you get again error, like</p>
+
+<p><code>bash
+== 20140725114621 Addconfirmable: migrating ===================================
+-- change_table(:admins)
+rake aborted!
+StandardError: An error has occurred, this and all later migrations canceled:
+undefined method `confirmable' for #&lt;ActiveRecord::ConnectionAdapters::Table:0x007f8739d3e2e0&gt;..../db/migrate/20140725114621_addconfirmable.rb:4:in `block in up'
+/Users/...../db/migrate/20140725114621_addconfirmable.rb:3:in `up'
+Tasks: TOP =&gt; db:migrate
+(See full trace by running task with --trace)
+</code>
+Let&rsquo;s fix this bug,</p>
+
+<ul>
+<li>You should open your migration which created and delete</li>
+</ul>
+
+
+<p><code>ruby
+t.confirmable
+</code></p>
+
+<p>then go to another migration named which</p>
+
+<p><code>ruby
+..../devise_create ... .rb
+</code></p>
+
+<p>in this file, you should see in comment</p>
+
+<p>```ruby</p>
+
+<pre><code>  ## Confirmable
+  ## t.string   :confirmation_token
+  ## t.datetime :confirmed_at
+  ## t.datetime :confirmation_sent_at
+  ## t.string   :unconfirmed_email # Only if using reconfirmable
+</code></pre>
+
+<p>```</p>
+
+<p>you should copy or cut above command without comment to your <code>addconfirmable.rb</code> migration file, instead of <code>t.confirmable</code></p>
+
+<p>Then you can write</p>
+
+<p><code>bash
+rake db:migrate
+</code></p>
+
+<p>That&rsquo;s all.</p>
+
+<p>I hope fix your bug.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Rails devise gem generator error]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/07/24/rails-devise-gem-generator-error/"/>
+    <updated>2014-07-24T15:36:48+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/07/24/rails-devise-gem-generator-error</id>
+    <content type="html"><![CDATA[<h3>How to fix rails devise gem generate bug?</h3>
+
+<p>You use <code>devise</code> gem for add admin page or user page to your project. When you generate to your devise gem,
+you' re getting error to your project,  like ;</p>
+
+<p><code>bash
+$ rails g devise:install
+Could not find generator devise:install
+</code>
+If you get like ths error, you can fix for these order,</p>
+
+<ul>
+<li>Open your <code>Gemfile</code>, add <code>gem 'devise'</code> then,</li>
+<li>Open terminal, run  <code>bundle</code></li>
+<li>Open you computer search bar, Search on your computer to <code>Disk Utility</code></li>
+<li>Select you Disk For example: <code>Macintosh HD</code></li>
+<li>Then click on <code>Repair Disk Permissions</code></li>
+<li>Waiting approximately 15 minutes, then <strong>restart</strong> your computer.</li>
+</ul>
+
+
+<p>That' s all.</p>
+
+<p>I hope fixed your bug.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Rails active_admin gem bug]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/07/22/rails-activeadmin-gem-bug/"/>
+    <updated>2014-07-22T15:55:03+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/07/22/rails-activeadmin-gem-bug</id>
+    <content type="html"><![CDATA[<h3>Fix to admin_active gem bug</h3>
+
+<p>You add <code>adminactive</code> gem to your Gemfile, then when you&rsquo;re running to <code>bundle</code> on your terminal,  you' re getting like,</p>
+
+<p>```bash
+$ bundle
+Fetching gem metadata from <a href="https://rubygems.org/..........">https://rubygems.org/..........</a>
+Fetching additional metadata from <a href="https://rubygems.org/..">https://rubygems.org/..</a>
+Resolving dependencies&hellip;
+Bundler could not find compatible versions for gem &ldquo;rails&rdquo;:
+  In Gemfile:</p>
+
+<pre><code>activeadmin (~&gt; 0.6.3) ruby depends on
+  rails (&lt; 4, &gt;= 3.0.0) ruby
+rails (4.1.4
+</code></pre>
+
+<p>```</p>
+
+<p>If you replace on <code>Gemfile</code> from</p>
+
+<p><code>ruby
+gem 'activeadmin'
+</code></p>
+
+<p>to</p>
+
+<p><code>ruby
+gem 'activeadmin', github: 'gregbell/active_admin'
+</code></p>
+
+<p>you can fix easily.</p>
+
+<p>That&rsquo;s all.</p>
+
+<p>I hope helped to you.</p>
+]]></content>
+  </entry>
+  
+</feed>

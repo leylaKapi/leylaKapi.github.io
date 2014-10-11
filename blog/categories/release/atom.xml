@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: release | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/release/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2014-10-11T13:26:32+03:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[Leyla Kapi]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[How to make a release ?]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/07/10/how-to-make-a-release/"/>
+    <updated>2014-07-10T19:01:26+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/07/10/how-to-make-a-release</id>
+    <content type="html"><![CDATA[<p>Make a release</p>
+
+<p>When you start to make a release, I think if you look at your commit it can be better</p>
+
+<p><code>bash
+git log
+</code>
+then if you make some wrong commit, you can delete wrong commit with</p>
+
+<p><code>bash
+git rebase -i HEAD~2
+</code>
+command.
+Then,</p>
+
+<p><code>bash
+git push origin +develop
+</code></p>
+
+<p>After that, you can check you branch with</p>
+
+<p><code>bash
+git branch -a
+</code>
+then let&rsquo;s start to release ;</p>
+
+<p><code>bash
+git flow release start your_version_number
+</code>
+<code>your_version_number</code> can be like <code>0.1.0</code> . Actually can be like</p>
+
+<p><code>bash
+git flow release start 0.1.0
+</code>
+When we write this command, you can create <code>VERSION.txt</code> file, and open &lsquo;txt&rsquo; file
+then write some number with <code>your_version_number</code></p>
+
+<p>Write with order below commands,</p>
+
+<p><code>bash
+git add .
+git commit -m "Bump version 'your_version_number'"
+</code></p>
+
+<p><code>bash
+git flow release finish 0.1.0
+</code></p>
+
+<p><code>bash
+git checkout release/0.1.0
+</code></p>
+
+<p><code>bash
+git push origin develop
+</code></p>
+
+<p><code>bash
+git push origin +master
+</code></p>
+
+<p>Yep, Now you made a release you can check on your repo settings on <a href="https://github.com/">github</a>.</p>
+
+<p>Let' s add Tag,</p>
+
+<p><code>bash
+git tag
+</code>
+<code>bash
+git push --tags
+</code></p>
+
+<p>That' s all.
+I hope help to you.</p>
+]]></content>
+  </entry>
+  
+</feed>

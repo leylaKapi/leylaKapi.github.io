@@ -1,0 +1,222 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Note about write 'data' on  haml ? - Leyla's Blog</title>
+	<meta name="author" content="Leyla Kapi">
+
+	
+	<meta name="description" content="Write data attributes on HAML ? if you write on haml and use data attribute, 1
+%a{&quot;data-slide&quot; =&gt; &quot;prev&quot;, href: &quot;# &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Leyla's Blog" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script async="true" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">Leyla's Blog</a></h1>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+    <li><a href="/about">About</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+    <li><a href="/about">About</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="http://google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:leylaKapi.github.io">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+        
+        <a class="github" href="https://github.com/leylakapi" title="GitHub">GitHub</a>
+        
+        
+        <a class="linkedin" href="http://www.linkedin.com/in/leylakapi">LinkedIn</a>
+        
+        
+        <a class="google" href="https://plus.google.com/+leylakapi?rel=author" title="Google+">Google+</a>
+        
+        
+        <a class="twitter" href="http://twitter.com/leylakapi" title="Twitter">Twitter</a>
+        
+        
+    
+		
+
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+    
+	</div>
+	<form class="search" action="http://google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:leylaKapi.github.io">
+	</form>
+</nav>
+
+</header>
+	
+		
+	
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Note About Write 'Data' on Haml ?</h2>
+	<div class="entry-content"><p>Write <code>data</code> attributes on HAML ?</p>
+
+<p>if you write on haml and use <code>data</code> attribute,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nt">%a</span><span class="p">{</span><span class="s2">&quot;data-slide&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;prev&quot;</span><span class="p">,</span> <span class="ss">href</span><span class="p">:</span> <span class="s2">&quot;#carousel-example-generic&quot;</span><span class="p">,</span> <span class="ss">role</span><span class="p">:</span> <span class="s2">&quot;button&quot;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>but you should style of write can be like below :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nt">%a</span><span class="p">{</span><span class="ss">:data</span> <span class="o">=&gt;</span> <span class="p">{</span><span class="ss">:slide</span> <span class="o">=&gt;</span> <span class="s1">&#39;prev&#39;</span><span class="p">}</span>, href: &#39;#carousel-generic&#39;}
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>OR</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nt">%li</span><span class="p">{</span><span class="s2">&quot;data-target&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;.nav-collapse&quot;</span><span class="p">,</span> <span class="s2">&quot;data-toggle&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;collapse&quot;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>like below</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nt">%li</span><span class="p">{</span><span class="ss">:data</span> <span class="o">=&gt;</span> <span class="p">{</span><span class="ss">:toggle</span> <span class="o">=&gt;</span> <span class="s1">&#39;collapse&#39;</span><span class="p">,</span> <span class="ss">:target</span> <span class="o">=&gt;</span> <span class="s1">&#39;.nav-collapse&#39;</span><span class="p">}</span>}
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you want, you can look at <a href="http://stackoverflow.com/questions/10321632/haml-how-do-i-create-this-line-of-html">this page</a> for details .</p>
+
+<p>That&rsquo;s all</p>
+
+<p>I hope helped to you.</p>
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-21T17:13:02+03:00" pubdate data-updated="true">Jun 21<span>st</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/attribute/'>attribute</a>, <a class='category' href='/blog/categories/data/'>data</a>, <a class='category' href='/blog/categories/haml/'>haml</a>, <a class='category' href='/blog/categories/target/'>target</a>, <a class='category' href='/blog/categories/toggle/'>toggle</a>
+
+
+</div>
+	
+	<div class="comments"><a href="#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+		
+		
+		<a class="addthis_button_tweet"></a>
+		
+		
+		
+	</div>
+	
+</div>
+
+
+
+<section id="comment">
+    <h2 class="title">Comments</h2>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2014
+
+    Leyla Kapi
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'leylasblog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://leylaKapi.github.io/blog/2014/06/21/note-about-write-data-on-haml/';
+        var disqus_url = 'http://leylaKapi.github.io/blog/2014/06/21/note-about-write-data-on-haml/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//go.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-49378525-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+</body>
+</html>

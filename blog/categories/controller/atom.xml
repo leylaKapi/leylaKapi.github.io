@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: controller | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/controller/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2014-10-11T13:26:32+03:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[Leyla Kapi]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Fix Invalid Authentication Token error in rails]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/08/06/fix-invalid-authentication-token-error-in-rails/"/>
+    <updated>2014-08-06T23:49:35+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/08/06/fix-invalid-authentication-token-error-in-rails</id>
+    <content type="html"><![CDATA[<h3>How to fix <code>ActionController: InvalidAuthentication Token error</code> ?</h3>
+
+<p>If you use <code>devise</code> gem and when you enter login page in your rails project, you get
+<code>Invalid Token</code> error, you thinking on <code>controller</code> .</p>
+
+<p>Try to fix this bug ;</p>
+
+<ul>
+<li>Open <code>application_controller.rb</code> then remove this line,</li>
+</ul>
+
+
+<p><code>ruby
+protect_form_forgery, with: :exception
+</code></p>
+
+<p>on your controller.</p>
+
+<ul>
+<li>Then add</li>
+</ul>
+
+
+<p><code>ruby
+skip_before_filter :verify_authenticity_token
+</code></p>
+
+<p>But, this method not safe, so when you get like this bug, you can search and use <code>ajax</code> for the solve it.</p>
+
+<p>That&rsquo;s all.</p>
+
+<p>I hope helped to you .</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Add simple search form to rails projects]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/07/16/add-search-form-to-rails-projects/"/>
+    <updated>2014-07-16T19:47:15+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/07/16/add-search-form-to-rails-projects</id>
+    <content type="html"><![CDATA[<h3>How can you add simple search form to rails project ?</h3>
+
+<p>You want to add search form, but you don&rsquo;t no.  <em>HOW?</em></p>
+
+<p>Let&rsquo;s start, firstly you should use <a href="https://github.com/activerecord-hackery/ransack">ransack</a> and
+<a href="https://github.com/mislav/will_paginate">will_paginate</a> gems in your <code>Gemfile</code> then you should write in
+terminal <code>bundle</code> .</p>
+
+<p>Then open controller which you want to add search bar, like ;</p>
+
+<p><code>projects_controller</code></p>
+
+<p>```ruby
+def index</p>
+
+<pre><code>@search = Project.search(params[:q])
+@project = @search.result(distinct: true).paginate(:page =&gt; params[:page])
+respond_with @project
+</code></pre>
+
+<p>end
+```</p>
+
+<p>When you added controller, you should add below code which relation to index file ;</p>
+
+<p><code>projects/index.html.haml</code></p>
+
+<p>```haml
+= search_form_for @search do |f|</p>
+
+<pre><code>= f.label :name_cont
+= f.search_field :name_cont
+= f.submit
+</code></pre>
+
+<p>```</p>
+
+<p>That&rsquo;s all .</p>
+
+<p>I hope helped to you .</p>
+]]></content>
+  </entry>
+  
+</feed>

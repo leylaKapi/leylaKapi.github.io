@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Haml | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/haml/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2014-10-11T13:26:32+03:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[Leyla Kapi]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Middleman create haml file]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/02/27/middleman-create-haml-file/"/>
+    <updated>2014-02-27T13:49:10+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/02/27/middleman-create-haml-file</id>
+    <content type="html"><![CDATA[<h3>How to create .haml file in middleman?</h3>
+
+<p>Firstly, you should go <a href="" title="http://middlemanapp.com/">middleman</a> and you need to <strong>install middleman</strong></p>
+
+<p><code>bash
+   gem install middleman
+</code></p>
+
+<p>Fine, you are installed middleman, now we start to create project in middleman</p>
+
+<p><code>bash
+   middleman init project_name
+</code></p>
+
+<p>Then this command give you directory as shown below :</p>
+
+<p>``` bash
+ project_name/</p>
+
+<pre><code>Gemfile
+Gemfile.lock
+config.rb
+source
+    .gitignore
+    images
+        background.png
+        middleman.png
+    javascript
+        all.js
+    stylesheets
+        all.css
+        normalize.css
+    layouts
+        layout.erb
+    index.html.erb
+</code></pre>
+
+<p>```</p>
+
+<p>If you can see this directories, you should open project with your IDE.</p>
+
+<p><strong>Now, We create .haml file but how ?</strong></p>
+
+<p>Go ahead and remove below files because these files don&rsquo;t use in project.</p>
+
+<pre><code>- /source/images/background.png
+- /source/images/middleman.png
+- /source/javascript/all.js
+- /source/stylesheets/all.css
+- /source/stylesheets/normalize.css
+- /source/layouts/layout.erb
+- /source/index.html.erb
+</code></pre>
+
+<p>Now, Projects was removed from unused files.</p>
+
+<h5>Add HAML</h5>
+
+<p>Middleman appear to read HTML by default . Therefore, you should go to</p>
+
+<p><code>bash
+ /config.rb
+</code></p>
+
+<p>in file write:</p>
+
+<p><code>haml
+set :haml, :format =&gt; :html5
+</code></p>
+
+<p>Now program convert to html5 from haml.</p>
+
+<ul>
+<li>Add a</li>
+</ul>
+
+
+<p><code>haml
+ layout.haml
+</code></p>
+
+<p>file to the</p>
+
+<pre><code>      /source/layouts
+</code></pre>
+
+<p>directory. In this file we write</p>
+
+<p>``` haml</p>
+
+<pre><code>!!!
+%html{ :lang =&gt; "en"}
+    %head
+        %meta{:charset =&gt; "utf-8"}
+        %title= data.page.title
+        = stylesheet_link_tag "your_css_file.css"
+        = javascript_include_tag "your_javascript_file.js"
+    %body
+        = yield
+</code></pre>
+
+<p>```</p>
+
+<p>Now we must create</p>
+
+<p>``` haml</p>
+
+<pre><code>index.html.haml
+</code></pre>
+
+<p>```</p>
+
+<p>in</p>
+
+<pre><code>            `source/`
+</code></pre>
+
+<p>directory.</p>
+
+<p>``` haml</p>
+
+<pre><code>%h1 Welcome Middleman project
+</code></pre>
+
+<p>```</p>
+
+<p>write in</p>
+
+<pre><code>           `source/index.html.haml`
+</code></pre>
+
+<p>files.</p>
+
+<p>We are create middleman project and write codes, How we run this program?</p>
+
+<p>Wait! Dont worry, When writing to below command in terminal in order of this.</p>
+
+<pre><code># Go to project path
+
+     cd project_name
+     bundle install
+     bundle exec middleman server
+</code></pre>
+
+<p>then we are seen</p>
+
+<pre><code>         http://localhost:3000
+</code></pre>
+
+<p>like url. We should copy this url and paste on browser search bar.</p>
+
+<p>That&rsquo;s it! Try and see.</p>
+]]></content>
+  </entry>
+  
+</feed>

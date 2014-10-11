@@ -3,12 +3,12 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Leyla's Blog</title>
+	<title>How to create scroll-page for rails project - Leyla's Blog</title>
 	<meta name="author" content="Leyla Kapi">
 
 	
-	<meta name="description" content="How can you show page number in js ? If you create middleman or rails project and you want to add pagination in your pages with js.
-You can make &hellip;">
+	<meta name="description" content="Create scroll page with sass and javascript While I was creating demo for scroll page,
+firstly I created middleman project according to haml and sass &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -85,105 +85,9 @@ You can make &hellip;">
 	
 		
 	
-	<div id="content" class="inner">
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/10/02/dipnote-add-page-number-with-javascript/">
-		
-			Trick: Add Page Number With Javascript ?</a>
-	</h2>
-	<div class="entry-content">
-		<h3>How can you show page number in js ?</h3>
-
-<p>If you create middleman or rails project and you want to add pagination in your pages with js.
-You can make easily with below codes</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'>  <span class="kd">var</span> <span class="nx">numberOfPages</span> <span class="o">=</span> <span class="mi">14</span><span class="p">;</span>
-</span><span class='line'>  <span class="kd">function</span> <span class="nx">addPage</span><span class="p">(</span><span class="nx">page</span><span class="p">,</span> <span class="nx">book</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">book</span><span class="p">.</span><span class="nx">turn</span><span class="p">(</span><span class="s1">&#39;hasPage&#39;</span><span class="p">,</span> <span class="nx">page</span><span class="p">))</span> <span class="p">{</span>
-</span><span class='line'>      <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
-</span><span class='line'>        <span class="nx">element</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span><span class="s1">&#39;&lt;div class=&quot;data&quot;&gt;Data for page &#39;</span><span class="o">+</span><span class="nx">page</span><span class="o">+</span><span class="s1">&#39;&lt;/div&gt;&#39;</span><span class="p">);</span>
-</span><span class='line'>      <span class="p">},</span> <span class="mi">14</span><span class="p">);</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'>    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#number-pages&#39;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">numberOfPages</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>in haml page can be like</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nf">#controls</span>
-</span><span class='line'>  <span class="nt">%label</span><span class="p">{</span><span class="ss">:for</span> <span class="o">=&gt;</span> <span class="s2">&quot;page-number&quot;</span><span class="p">}</span> Page:
-</span><span class='line'>  <span class="nt">%input</span><span class="nf">#page-number</span><span class="p">{</span><span class="ss">:size</span> <span class="o">=&gt;</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span> <span class="ss">:type</span> <span class="o">=&gt;</span> <span class="s2">&quot;text&quot;</span><span class="p">}/</span>
-</span><span class='line'>  of
-</span><span class='line'>  <span class="nt">%span</span><span class="nf">#number-pages</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>now you can try easily this <code>js</code> trick.</p>
-
-<p>That&rsquo;s all .
-I hope helped to you.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-10-02T21:32:05+03:00" pubdate data-updated="true">Oct 2<span>nd</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/frontend/'>frontend</a>, <a class='category' href='/blog/categories/haml/'>haml</a>, <a class='category' href='/blog/categories/js/'>js</a>, <a class='category' href='/blog/categories/number/'>number</a>, <a class='category' href='/blog/categories/pages/'>pages</a>, <a class='category' href='/blog/categories/pagination/'>pagination</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/10/02/dipnote-add-page-number-with-javascript/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/09/17/how-to-create-scroll-page-for-rails-project/">
-		
-			How to Create Scroll-page for Rails Project</a>
-	</h2>
-	<div class="entry-content">
-		<h2>Create scroll page with sass and javascript</h2>
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">How to Create Scroll-page for Rails Project</h2>
+	<div class="entry-content"><h2>Create scroll page with sass and javascript</h2>
 
 <p>While I was creating <a href="https://github.com/leylaKapi/scroll-page">demo</a> for scroll page,
 firstly I created middleman project according to <code>haml</code> and <code>sass</code>, but if you want to embed in your for example rails project,
@@ -1105,10 +1009,7 @@ for <a href="https://github.com/peachananr/onepage-scroll">detail</a>.</p>
 <p>That&#8217; s all.</p>
 
 <p>I hope helped to you :)</p>
-
-		
-		
-	</div>
+</div>
 
 
 <div class="meta">
@@ -1133,267 +1034,31 @@ for <a href="https://github.com/peachananr/onepage-scroll">detail</a>.</p>
 
 </div>
 	
-	<div class="comments"><a href="/blog/2014/09/17/how-to-create-scroll-page-for-rails-project/#disqus_thread">Comments</a></div>
+	<div class="comments"><a href="#disqus_thread">Comments</a></div>
 	
 </div>
 </article>
 
-
-    <article class="post">
-	<h2 class="title">
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
 		
-		<a href="/blog/2014/09/10/create-icon-set-for-your-rails-project/">
 		
-			Create Icon Set for Your Rails Project</a>
-	</h2>
-	<div class="entry-content">
-		<h3>How created your icon-set for your rails project ?</h3>
-
-<ul>
-<li>Firstly, you should go to <a href="https://icomoon.io/">icomoon.io</a> website.</li>
-<li>You need to create new app on right-up corner of webpage</li>
-<li>Now upload your font-icons after press <code>import icons</code> buttons,</li>
-<li>Be careful, because your fonts format must be <code>svg</code> format,</li>
-<li>When upload your icons, you should rename your icons,</li>
-<li>Now select which rename icons, and go to download your icons,</li>
-<li>When you download icomoon which provide to you with <code>css</code> and <code>js</code> files for font.</li>
-<li>When you are opening which download file, you can see this file and copy <code>font</code> directory and
-paste in your assets for rails projects.</li>
-<li>Go to css file in which download icomoons files, copy <code>css</code> file and paste in your style file
-(If you are using sass or less, you should convert to sass or less).
-Another way, you can create new file in stylesheet folder like</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nt">_icon</span><span class="nc">.css.sass</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>file then paste in this file all icomoon-css. Then you should add your base style file like,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="k">@import</span> <span class="s1">&#39;icon&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Now, you can use your icon set in your <code>html</code></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;span</span> <span class="na">class =</span><span class="err"> </span><span class="s">&#39;your_icon_name&#39;</span> <span class="nt">/&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>or <code>haml</code> page like</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nt">%span</span><span class="nc">.your_icon_name</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>If you want,  you can add some properties like, in your <code>css</code> file for your fonts, maybe you want to change size
-your icons automatically, in your <code>haml</code> file,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nt">%span</span><span class="nc">.bf_mobile.bf-4x</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>like above when you write <code>.bf-4x</code>, your font-size should be 4 times bigger.</p>
-
-<p>in your <code>_icon.css.sass</code></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nc">.bf-4x</span>
-</span><span class='line'>    <span class="nt">font-size</span><span class="o">:</span> <span class="nt">4em</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>like above you can add a lot of properties for your icons and make private for your rails projects.</p>
-
-<p> That&#8217; s all.</p>
-
-<p> I hope helped to you.</p>
-
+		<a class="addthis_button_tweet"></a>
+		
 		
 		
 	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-09-10T17:23:26+03:00" pubdate data-updated="true">Sep 10<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/css/'>css</a>, <a class='category' href='/blog/categories/font/'>font</a>, <a class='category' href='/blog/categories/ico-moon/'>ico-moon</a>, <a class='category' href='/blog/categories/icon-set/'>icon-set</a>, <a class='category' href='/blog/categories/js/'>js</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/09/10/create-icon-set-for-your-rails-project/#disqus_thread">Comments</a></div>
 	
 </div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/09/01/how-to-extract-images-from-pdf-file-on-ubuntu/">
-		
-			How to Extract Images From Pdf File on Ubuntu Desktop ?</a>
-	</h2>
-	<div class="entry-content">
-		<h3>Pdfimages in Ubuntu</h3>
-
-<p>If you have some pdf files which include images and want to extract all images like a image file,
-you can make it easily. Firstly, you should install <code>poppler-utils</code> in your machine, with</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo apt-get install poppler-utils
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>After that you can see to <code>pdfimages</code> how using it, like</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>pdfimages --help
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>you install and look at your <code>pdfimages</code> properties with above commands. Now you should go to your pdf
-file path on terminal, then write on terminal this command,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>pdfimages -j your_pdf_file.pdf which_name_you_want
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>you can see all images export in your pdf file in your path.
-It is very easy.</p>
-
-<p>That&rsquo;s all.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
 
 
 
-
-
-
-
-
-  
-
-
-<time datetime="2014-09-01T00:00:00+03:00" pubdate data-updated="true">Sep 1<span>st</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/files/'>files</a>, <a class='category' href='/blog/categories/images/'>images</a>, <a class='category' href='/blog/categories/pdf/'>pdf</a>, <a class='category' href='/blog/categories/pdfimages/'>pdfimages</a>, <a class='category' href='/blog/categories/ubuntu/'>ubuntu</a>
-
-
+<section id="comment">
+    <h2 class="title">Comments</h2>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
-	
-	<div class="comments"><a href="/blog/2014/09/01/how-to-extract-images-from-pdf-file-on-ubuntu/#disqus_thread">Comments</a></div>
-	
+</section>
 </div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/08/21/fix-paperclip-gem-bug/">
-		
-			Fix Paperclip Gem Bug</a>
-	</h2>
-	<div class="entry-content">
-		<h3>How can I fix <code>paperclip</code> error ?</h3>
-
-<p>When you use <code>paperclip</code> gem, if you are getting like this bug</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Photo</span> <span class="n">could</span> <span class="ow">not</span> <span class="n">run</span> <span class="n">the</span> <span class="n">identify</span> <span class="n">command</span><span class="o">.</span> <span class="no">Please</span> <span class="n">install</span> <span class="no">ImageMagick</span><span class="o">.</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>You can fix this bug with</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo apt-get autoremove
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>or you can make</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo apt-get install imagemagick.
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>I suggest the second command, because if youcan make <code>autoremove</code> you can get error again.</p>
-
-<p>That&#8217; s all.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-08-21T13:49:45+03:00" pubdate data-updated="true">Aug 21<span>st</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/bug/'>bug</a>, <a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/image/'>image</a>, <a class='category' href='/blog/categories/paperclip/'>paperclip</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>, <a class='category' href='/blog/categories/upload/'>upload</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/08/21/fix-paperclip-gem-bug/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-<nav id="pagenavi">
-    
-    
-        <a href="/blog/page/2/" class="next">Next</a>
-    
-    <div class="center"><a href="/blog/archives">Blog Archives</a></div>
-</nav></div>
 	<footer id="footer" class="inner">Copyright &copy; 2014
 
     Leyla Kapi
@@ -1412,7 +1077,10 @@ It is very easy.</p>
       var disqus_shortname = 'leylasblog';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://leylaKapi.github.io/blog/2014/09/17/how-to-create-scroll-page-for-rails-project/';
+        var disqus_url = 'http://leylaKapi.github.io/blog/2014/09/17/how-to-create-scroll-page-for-rails-project/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: heroku | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/heroku/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2014-10-11T13:26:32+03:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[Leyla Kapi]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[How to deploy your project to Heroku ?]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/06/17/how-to-deploy-your-project-to-heroku/"/>
+    <updated>2014-06-17T16:10:38+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/06/17/how-to-deploy-your-project-to-heroku</id>
+    <content type="html"><![CDATA[<h3>Deploy to Heroku</h3>
+
+<p><strong>You have a rails application, and finished your application want to deploy with <code>Heroku</code>,  HOW ?</strong></p>
+
+<p>You should open your rails application, and in your application find <code>Gemfile</code>. Open Gemfile write this command</p>
+
+<p><code>ruby
+gem 'heroku'
+</code>
+in your terminal</p>
+
+<p><code>bash
+bundle install
+</code>
+Come again to <code>Gemfile</code>, instead of</p>
+
+<p><code>ruby
+gem 'sqlite3'
+</code>
+write</p>
+
+<p>``` ruby
+group :development, :test do</p>
+
+<pre><code>gem 'sqlite3'
+</code></pre>
+
+<p>end
+group :production do</p>
+
+<pre><code>gem 'pg'
+</code></pre>
+
+<p>end
+```
+in terminal</p>
+
+<p><code>bash
+bundle install
+</code>
+Then go to <a href="https://www.heroku.com">Heroku</a>, you should create a free account on heroku. When you create account you can see <code>download toolbet</code> button,
+you can run this in your computer. Open your terminal and write</p>
+
+<p><code>bash
+heroku login
+</code></p>
+
+<p>When you write this command, heroku want to your heroku account information, entered this</p>
+
+<p><code>bash
+~  heroku login
+Enter your Heroku credentials.
+Email: leylakapi@gmail.com
+Password (typing will be hidden):
+Found existing public key: /Users/leylakapi/.ssh/id_rsa.pub
+Uploading SSH public key /Users/leylakapi/.ssh/id_rsa.pub... done
+Authentication successful.
+</code></p>
+
+<p>After login, you should run with order</p>
+
+<p><code>bash
+git add .
+git commit -m "Your commit write here"
+heroku create
+</code></p>
+
+<p>When you <code>heroku create</code> you should see like</p>
+
+<p><code>bash
+Creating pacific-beyond-5670... done, stack is cedar
+http://pacific-beyond-5670.herokuapp.com/ | git@heroku.com:pacific-beyond-5670.git
+Git remote heroku added
+</code>
+then</p>
+
+<p><code>bash
+git push heroku master
+</code>
+If you want to see in our browser you should use</p>
+
+<p><code>bash
+heroku open
+</code>
+That&rsquo;s all.</p>
+
+<p>I hope helped to you.</p>
+]]></content>
+  </entry>
+  
+</feed>
