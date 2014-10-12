@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: virtual-machine | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/virtual-machine/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2014-10-12T16:23:51+03:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[Leyla Kapi]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[What is the Vagrant ?]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/10/12/what-is-the-vagrant/"/>
+    <updated>2014-10-12T14:58:37+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/10/12/what-is-the-vagrant</id>
+    <content type="html"><![CDATA[<h3>How to set up vagrant on Ubuntu Desktop?</h3>
+
+<p><code>Vagrant</code> is a application which improved your application in virtual machine, this means that,
+you can create your project environment on virtual machine. Thanks to vagrant, you cloned local environment on virtual machine
+so, when you sent to your project to <code>server</code>, you can&rsquo;t see any bug or error on your server.
+On the other hand vagrant is useful, while you are working in a team.</p>
+
+<p>For the install and use vagrant, you should follow below steps respectively.</p>
+
+<p>Let&rsquo;s look, how to set up and use <code>Vagrant</code> in Ubuntu desktop,</p>
+
+<ul>
+<li>Install Vagrant</li>
+<li>Create Vagrant Folders</li>
+<li>Install Precise32 Box</li>
+<li>Set up new Virtual Machine</li>
+<li>Install Virtual Machine configuration</li>
+</ul>
+
+
+<p>1) Install Vagrant</p>
+
+<p>For the install vagrant on your Ubuntu desktop is very easy. Open your terminal and write below command.</p>
+
+<p><code>bash
+leylakapi@leylakapicmd:~$ sudo apt-get install vagrant
+...
+</code></p>
+
+<p>2) Create Vagrant Folder</p>
+
+<p>Continue on terminal, write below commands,</p>
+
+<p><code>bash
+leylakapi@leylakapicmd:~$ mkdir Vagrant
+leylakapi@leylakapicmd:~$ mkdir Vagrant/Projects
+leylakapi@leylakapicmd:~$ mkdir Vagrant/Projects/VM_169.x
+</code>
+3) Install Precise32 Box</p>
+
+<p>Precise32 box is important on ubuntu desktop, because thanks to this box you can modify your virtual machine.</p>
+
+<p><code>bash
+leylakapi@leylakapicmd:~$ cd Vagrant/Projects/VM_169.x
+leylakapi@leylakapicmd:~/Vagrant/Projects/VM_169.x$ vagrant box add precise32 http://files.vagrantup.com/precise32.box --provider virtualbox
+...
+</code></p>
+
+<p>After install, you can check with,</p>
+
+<p><code>bash
+leylakapi@leylakapicmd:~/Vagrant/Projects/VM_169.x$ vagrant box list
+precise32 (virtualbox, 0)
+</code>
+4) Create New Virtual Machine</p>
+
+<p>For create new virtual machine, you should initialize precise32 box,</p>
+
+<p><code>bash
+leylakapi@leylakapicmd:~/Vagrant/Projects/VM_169.x$ vagrant init precise32
+</code>
+When you wrote above command, you get warning about it, this means include <code>Vagrantfile</code>.</p>
+
+<p>5) Install Virtual Machine configuration</p>
+
+<p><code>bash
+leylakapi@leylakapicmd:~/Vagrant/Projects/VM_169.x$ wget https://raw.github.com/saasbook/courseware/master/vm-setup/configure-image-0.10.3.sh
+</code>
+You should configure permission for virtual machine configuration</p>
+
+<p><code>bash
+leylakapi@leylakapicmd:~/Vagrant/Projects/VM_169.x$ chmod +x configure-image-0.10.3.sh
+</code>
+&ndash; Run the virtual machine with</p>
+
+<p><code>bash
+leylakapi@leylakapicmd:~/Vagrant/Projects/VM_169.x$ vagrant up
+</code></p>
+
+<ul>
+<li>Connecting with virtual machine</li>
+</ul>
+
+
+<p><code>bash
+leylakapi@leylakapicmd:~/Vagrant/Projects/VM_169.x$ vagrant ssh
+Welcome to Ubuntu 12.04 LTS (GNU/Linux 3.2.0-23-generic-pae i686)
+ * Documentation:  https://help.ubuntu.com/
+New release '14.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+Welcome to your Vagrant-built virtual machine.
+Last login: Sun Oct 12 09:36:51 2014 from 10.0.2.2
+vagrant@precise32:~$
+</code>
+&ndash; Run virtual machine configuration,</p>
+
+<p><code>bash
+vagrant@precise32:~$ /vagrant/configure-image-0.10.3.sh
+Enter password to be used for sudo commands:
+</code>
+you should enter a password for commands above.</p>
+
+<p>If you finish work on virtual machine, you write below commands for exit or turn off virtual machine</p>
+
+<p><code>bash
+leylakapi@leylakapicmd:~/Vagrant/Projects/VM_169.x$ vagrant suspend
+leylakapi@leylakapicmd:~/Vagrant/Projects/VM_169.x$ vagrant resume
+leylakapi@leylakapicmd:~/Vagrant/Projects/VM_169.x$ vagrant halt
+</code>
+Or if you want to remove all things from virtual machine</p>
+
+<p><code>bash
+leylakapi@leylakapicmd:~/Vagrant/Projects/VM_169.x$ vagrant destroy
+</code>
+But for the built again to your project only below commands it&rsquo;s enough.</p>
+
+<p><code>bash
+vagrant up
+</code></p>
+
+<p>When I say <code>Vagrant</code> is useful for working in a team, look <a href="https://vagrantcloud.com/">Vagrant Cloud</a>
+You can create account and share your vagrant environment with anyone with <code>vagrant cloud</code>.
+After create your account, open your terminal,</p>
+
+<p><code>bash
+$ vagrant login
+...
+</code>
+Write email or username and password for vagrant cloud, then</p>
+
+<p><code>bash
+$ vagrant share
+</code>
+For more detail about Vagrant, you can look
+&ndash; <a href="http://docs.vagrantup.com/v2/getting-started/index.html">Vagrant</a>
+&ndash; <a href="https://github.com/saasbook/courseware/wiki/Setting-Up-Vagrant-Environment-on-Ubuntu-Platform">Vagrant on Ubunbtu</a></p>
+
+<p>That' s all.</p>
+
+<p>I hope helped you .</p>
+]]></content>
+  </entry>
+  
+</feed>
