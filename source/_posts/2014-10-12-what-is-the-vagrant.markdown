@@ -6,7 +6,7 @@ comments: true
 categories: vagrant virtual-machine virtual-box vm ssh shell script 
 ---
 
-### How to set up vagrant on Ubuntu Desktop?
+### How to Set Up Vagrant on Ubuntu Desktop?
 
 `Vagrant` is a application which improved your application in virtual machine, this means that, 
 you can create your project environment on virtual machine. Thanks to vagrant, you cloned local environment on virtual machine. 
@@ -15,7 +15,7 @@ On the other hand vagrant is useful, while you are working in a team.
 
 For the install and use vagrant, you should follow below steps respectively.
 
-Let's look, how to set up and use `Vagrant` in Ubuntu desktop,
+Let's look, how to set up and use `Vagrant in Ubuntu desktop`,
 
 - Install Vagrant
 - Create Vagrant Folders
@@ -97,6 +97,7 @@ Welcome to your Vagrant-built virtual machine.
 Last login: Sun Oct 12 09:36:51 2014 from 10.0.2.2
 vagrant@precise32:~$ 
 ``` 
+
 - Run virtual machine configuration, 
  
 ```bash
@@ -136,9 +137,12 @@ Write email or username and password for vagrant cloud, then
 ```bash
 $ vagrant share
 ```
-For more detail about Vagrant, you can look
+For more detail about Vagrant, you can look ;
+
 - [Vagrant](http://docs.vagrantup.com/v2/getting-started/index.html) 
+
 - [Vagrant on Ubunbtu](https://github.com/saasbook/courseware/wiki/Setting-Up-Vagrant-Environment-on-Ubuntu-Platform)
+
 
 That' s all.
 
