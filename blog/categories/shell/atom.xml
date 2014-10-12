@@ -4,7 +4,7 @@
   <title><![CDATA[Category: shell | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/shell/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-10-12T16:41:14+03:00</updated>
+  <updated>2014-10-12T16:44:26+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -145,11 +145,12 @@ vagrant up
 </code></p>
 
 <ul>
-<li>When I say <code>Vagrant</code> is useful for working in a team, look <a href="https://vagrantcloud.com/">Vagrant Cloud</a>
-You can create account and share your vagrant environment with anyone with <code>vagrant cloud</code>.
-After create your account, open your terminal,</li>
+<li>When I say <code>Vagrant</code> is useful for working in a team, look <a href="https://vagrantcloud.com/">Vagrant Cloud</a>.</li>
 </ul>
 
+
+<p>You can create account and share your vagrant environment with anyone with <code>vagrant cloud</code>.
+After create your account, open your terminal,</p>
 
 <p><code>bash
 $ vagrant login
