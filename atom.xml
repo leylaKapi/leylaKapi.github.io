@@ -4,7 +4,7 @@
   <title><![CDATA[Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-10-12T16:33:00+03:00</updated>
+  <updated>2014-10-12T16:41:14+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -18,7 +18,7 @@
     <link href="http://leylaKapi.github.io/blog/2014/10/12/what-is-the-vagrant/"/>
     <updated>2014-10-12T14:58:37+03:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/10/12/what-is-the-vagrant</id>
-    <content type="html"><![CDATA[<h3>How to set up vagrant on Ubuntu Desktop?</h3>
+    <content type="html"><![CDATA[<h3>How to Set Up Vagrant on Ubuntu Desktop?</h3>
 
 <p><code>Vagrant</code> is a application which improved your application in virtual machine, this means that,
 you can create your project environment on virtual machine. Thanks to vagrant, you cloned local environment on virtual machine.
@@ -27,7 +27,7 @@ On the other hand vagrant is useful, while you are working in a team.</p>
 
 <p>For the install and use vagrant, you should follow below steps respectively.</p>
 
-<p>Let&rsquo;s look, how to set up and use <code>Vagrant</code> in Ubuntu desktop,</p>
+<p>Let&rsquo;s look, how to set up and use <code>Vagrant in Ubuntu desktop</code>,</p>
 
 <ul>
 <li>Install Vagrant</li>
@@ -143,8 +143,12 @@ On the other hand vagrant is useful, while you are working in a team.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>
-&ndash; Run virtual machine configuration,</p>
+<p></p>
+
+<ul>
+<li>Run virtual machine configuration,</li>
+</ul>
+
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -203,9 +207,13 @@ After create your account, open your terminal,</li>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>For more detail about Vagrant, you can look
-&ndash; <a href="http://docs.vagrantup.com/v2/getting-started/index.html">Vagrant</a>
-&ndash; <a href="https://github.com/saasbook/courseware/wiki/Setting-Up-Vagrant-Environment-on-Ubuntu-Platform">Vagrant on Ubunbtu</a></p>
+<p>For more detail about Vagrant, you can look ;</p>
+
+<ul>
+<li><p><a href="http://docs.vagrantup.com/v2/getting-started/index.html">Vagrant</a></p></li>
+<li><p><a href="https://github.com/saasbook/courseware/wiki/Setting-Up-Vagrant-Environment-on-Ubuntu-Platform">Vagrant on Ubunbtu</a></p></li>
+</ul>
+
 
 <p>That&#8217; s all.</p>
 
