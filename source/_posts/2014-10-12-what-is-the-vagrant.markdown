@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "What is the Vagrant ?"
+title: "What's the Vagrant ?"
 date: 2014-10-12 14:58:37 +0300
 comments: true
 categories: vagrant virtual-machine virtual-box vm ssh shell script 
@@ -9,8 +9,8 @@ categories: vagrant virtual-machine virtual-box vm ssh shell script
 ### How to set up vagrant on Ubuntu Desktop?
 
 `Vagrant` is a application which improved your application in virtual machine, this means that, 
-you can create your project environment on virtual machine. Thanks to vagrant, you cloned local environment on virtual machine 
-so, when you sent to your project to `server`, you can't see any bug or error on your server.
+you can create your project environment on virtual machine. Thanks to vagrant, you cloned local environment on virtual machine. 
+So, when you sent to your project to `server`, you can't see any bug or error on your server.
 On the other hand vagrant is useful, while you are working in a team.
 
 For the install and use vagrant, you should follow below steps respectively.
@@ -24,7 +24,7 @@ Let's look, how to set up and use `Vagrant` in Ubuntu desktop,
 - Install Virtual Machine configuration
 
 
-1) Install Vagrant
+#### 1) Install Vagrant
 
 For the install vagrant on your Ubuntu desktop is very easy. Open your terminal and write below command.
 
@@ -33,7 +33,7 @@ leylakapi@leylakapicmd:~$ sudo apt-get install vagrant
 ...
 ```
 
-2) Create Vagrant Folder
+#### 2) Create Vagrant Folder
 
 Continue on terminal, write below commands,
 
@@ -42,7 +42,8 @@ leylakapi@leylakapicmd:~$ mkdir Vagrant
 leylakapi@leylakapicmd:~$ mkdir Vagrant/Projects
 leylakapi@leylakapicmd:~$ mkdir Vagrant/Projects/VM_169.x
 ```
-3) Install Precise32 Box
+
+#### 3) Install Precise32 Box
 
 Precise32 box is important on ubuntu desktop, because thanks to this box you can modify your virtual machine.
  
@@ -58,7 +59,8 @@ After install, you can check with,
 leylakapi@leylakapicmd:~/Vagrant/Projects/VM_169.x$ vagrant box list
 precise32 (virtualbox, 0)
 ```
-4) Create New Virtual Machine
+
+#### 4) Create New Virtual Machine
 
 For create new virtual machine, you should initialize precise32 box,
 
@@ -67,7 +69,7 @@ leylakapi@leylakapicmd:~/Vagrant/Projects/VM_169.x$ vagrant init precise32
 ```
 When you wrote above command, you get warning about it, this means include `Vagrantfile`.
 
-5) Install Virtual Machine configuration
+#### 5) Install Virtual Machine configuration
 
 ```bash
 leylakapi@leylakapicmd:~/Vagrant/Projects/VM_169.x$ wget https://raw.github.com/saasbook/courseware/master/vm-setup/configure-image-0.10.3.sh
@@ -121,7 +123,7 @@ But for the built again to your project only below commands it's enough.
 vagrant up
 ```
 
-When I say `Vagrant` is useful for working in a team, look [Vagrant Cloud](https://vagrantcloud.com/)
+- When I say `Vagrant` is useful for working in a team, look [Vagrant Cloud](https://vagrantcloud.com/)
 You can create account and share your vagrant environment with anyone with `vagrant cloud`.
 After create your account, open your terminal,
 
