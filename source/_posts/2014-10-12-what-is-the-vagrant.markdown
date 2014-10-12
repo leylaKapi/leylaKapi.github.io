@@ -124,7 +124,8 @@ But for the built again to your project only below commands it's enough.
 vagrant up
 ```
 
-- When I say `Vagrant` is useful for working in a team, look [Vagrant Cloud](https://vagrantcloud.com/)
+- When I say `Vagrant` is useful for working in a team, look [Vagrant Cloud](https://vagrantcloud.com/).
+
 You can create account and share your vagrant environment with anyone with `vagrant cloud`.
 After create your account, open your terminal,
 
