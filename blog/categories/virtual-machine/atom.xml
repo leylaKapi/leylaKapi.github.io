@@ -4,7 +4,7 @@
   <title><![CDATA[Category: virtual-machine | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/virtual-machine/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-10-12T16:23:51+03:00</updated>
+  <updated>2014-10-12T16:33:00+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -14,15 +14,15 @@
 
   
   <entry>
-    <title type="html"><![CDATA[What is the Vagrant ?]]></title>
+    <title type="html"><![CDATA[What's the Vagrant ?]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/10/12/what-is-the-vagrant/"/>
     <updated>2014-10-12T14:58:37+03:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/10/12/what-is-the-vagrant</id>
     <content type="html"><![CDATA[<h3>How to set up vagrant on Ubuntu Desktop?</h3>
 
 <p><code>Vagrant</code> is a application which improved your application in virtual machine, this means that,
-you can create your project environment on virtual machine. Thanks to vagrant, you cloned local environment on virtual machine
-so, when you sent to your project to <code>server</code>, you can&rsquo;t see any bug or error on your server.
+you can create your project environment on virtual machine. Thanks to vagrant, you cloned local environment on virtual machine.
+So, when you sent to your project to <code>server</code>, you can&rsquo;t see any bug or error on your server.
 On the other hand vagrant is useful, while you are working in a team.</p>
 
 <p>For the install and use vagrant, you should follow below steps respectively.</p>
@@ -38,7 +38,7 @@ On the other hand vagrant is useful, while you are working in a team.</p>
 </ul>
 
 
-<p>1) Install Vagrant</p>
+<h4>1) Install Vagrant</h4>
 
 <p>For the install vagrant on your Ubuntu desktop is very easy. Open your terminal and write below command.</p>
 
@@ -47,7 +47,7 @@ leylakapi@leylakapicmd:~$ sudo apt-get install vagrant
 ...
 </code></p>
 
-<p>2) Create Vagrant Folder</p>
+<h4>2) Create Vagrant Folder</h4>
 
 <p>Continue on terminal, write below commands,</p>
 
@@ -55,8 +55,9 @@ leylakapi@leylakapicmd:~$ sudo apt-get install vagrant
 leylakapi@leylakapicmd:~$ mkdir Vagrant
 leylakapi@leylakapicmd:~$ mkdir Vagrant/Projects
 leylakapi@leylakapicmd:~$ mkdir Vagrant/Projects/VM_169.x
-</code>
-3) Install Precise32 Box</p>
+</code></p>
+
+<h4>3) Install Precise32 Box</h4>
 
 <p>Precise32 box is important on ubuntu desktop, because thanks to this box you can modify your virtual machine.</p>
 
@@ -71,8 +72,9 @@ leylakapi@leylakapicmd:~/Vagrant/Projects/VM_169.x$ vagrant box add precise32 ht
 <p><code>bash
 leylakapi@leylakapicmd:~/Vagrant/Projects/VM_169.x$ vagrant box list
 precise32 (virtualbox, 0)
-</code>
-4) Create New Virtual Machine</p>
+</code></p>
+
+<h4>4) Create New Virtual Machine</h4>
 
 <p>For create new virtual machine, you should initialize precise32 box,</p>
 
@@ -81,7 +83,7 @@ leylakapi@leylakapicmd:~/Vagrant/Projects/VM_169.x$ vagrant init precise32
 </code>
 When you wrote above command, you get warning about it, this means include <code>Vagrantfile</code>.</p>
 
-<p>5) Install Virtual Machine configuration</p>
+<h4>5) Install Virtual Machine configuration</h4>
 
 <p><code>bash
 leylakapi@leylakapicmd:~/Vagrant/Projects/VM_169.x$ wget https://raw.github.com/saasbook/courseware/master/vm-setup/configure-image-0.10.3.sh
@@ -138,9 +140,12 @@ But for the built again to your project only below commands it&rsquo;s enough.</
 vagrant up
 </code></p>
 
-<p>When I say <code>Vagrant</code> is useful for working in a team, look <a href="https://vagrantcloud.com/">Vagrant Cloud</a>
+<ul>
+<li>When I say <code>Vagrant</code> is useful for working in a team, look <a href="https://vagrantcloud.com/">Vagrant Cloud</a>
 You can create account and share your vagrant environment with anyone with <code>vagrant cloud</code>.
-After create your account, open your terminal,</p>
+After create your account, open your terminal,</li>
+</ul>
+
 
 <p><code>bash
 $ vagrant login
