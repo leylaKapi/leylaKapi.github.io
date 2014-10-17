@@ -4,7 +4,7 @@
   <title><![CDATA[Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-10-18T00:22:45+03:00</updated>
+  <updated>2014-10-18T00:25:44+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -22,7 +22,7 @@
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'>parseSdkContent failed
+</pre></td><td class='code'><pre><code class='xml'><span class='line'>parseSdkContent failed
 </span><span class='line'>Could not initialize class android.graphics.Typeface
 </span></code></pre></td></tr></table></div></figure>
 
