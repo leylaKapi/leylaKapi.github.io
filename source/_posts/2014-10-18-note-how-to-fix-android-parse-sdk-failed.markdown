@@ -8,7 +8,7 @@ categories: android fix bug error parse sdk typer-face initialize run eclipse
 
 If you are coding android on eclipse and when you are open your eclipse getting like
 
-```html
+```xml
 parseSdkContent failed
 Could not initialize class android.graphics.Typeface
 ```
