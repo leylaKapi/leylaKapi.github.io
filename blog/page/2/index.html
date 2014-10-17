@@ -7,8 +7,8 @@
 	<meta name="author" content="Leyla Kapi">
 
 	
-	<meta name="description" content="How can I fix paperclip error ? When you use paperclip gem, if you are getting like this bug 1
-Photo could not run the identify command. Please &hellip;">
+	<meta name="description" content="Pdfimages in Ubuntu If you have some pdf files which include images and want to extract all images like a image file,
+you can make it easily. &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -86,6 +86,77 @@ Photo could not run the identify command. Please &hellip;">
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/09/01/how-to-extract-images-from-pdf-file-on-ubuntu/">
+		
+			How to Extract Images From Pdf File on Ubuntu Desktop ?</a>
+	</h2>
+	<div class="entry-content">
+		<h3>Pdfimages in Ubuntu</h3>
+
+<p>If you have some pdf files which include images and want to extract all images like a image file,
+you can make it easily. Firstly, you should install <code>poppler-utils</code> in your machine, with</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo apt-get install poppler-utils
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>After that you can see to <code>pdfimages</code> how using it, like</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>pdfimages --help
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>you install and look at your <code>pdfimages</code> properties with above commands. Now you should go to your pdf
+file path on terminal, then write on terminal this command,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>pdfimages -j your_pdf_file.pdf which_name_you_want
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>you can see all images export in your pdf file in your path.
+It is very easy.</p>
+
+<p>That&rsquo;s all.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-01T00:00:00+03:00" pubdate data-updated="true">Sep 1<span>st</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/files/'>files</a>, <a class='category' href='/blog/categories/images/'>images</a>, <a class='category' href='/blog/categories/pdf/'>pdf</a>, <a class='category' href='/blog/categories/pdfimages/'>pdfimages</a>, <a class='category' href='/blog/categories/ubuntu/'>ubuntu</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/09/01/how-to-extract-images-from-pdf-file-on-ubuntu/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -455,82 +526,6 @@ Photo could not run the identify command. Please &hellip;">
 </div>
 	
 	<div class="comments"><a href="/blog/2014/08/08/fix-rake-db-populate/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/08/06/fix-invalid-authentication-token-error-in-rails/">
-		
-			Fix Invalid Authentication Token Error in Rails</a>
-	</h2>
-	<div class="entry-content">
-		<h3>How to fix <code>ActionController: InvalidAuthentication Token error</code> ?</h3>
-
-<p>If you use <code>devise</code> gem and when you enter login page in your rails project, you get
-<code>Invalid Token</code> error, you thinking on <code>controller</code> .</p>
-
-<p>Try to fix this bug ;</p>
-
-<ul>
-<li>Open <code>application_controller.rb</code> then remove this line,</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">protect_form_forgery</span><span class="p">,</span> <span class="ss">with</span><span class="p">:</span> <span class="ss">:exception</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>on your controller.</p>
-
-<ul>
-<li>Then add</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">skip_before_filter</span> <span class="ss">:verify_authenticity_token</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>But, this method not safe, so when you get like this bug, you can search and use <code>ajax</code> for the solve it.</p>
-
-<p>That&rsquo;s all.</p>
-
-<p>I hope helped to you .</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-08-06T23:49:35+03:00" pubdate data-updated="true">Aug 6<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/ajax/'>ajax</a>, <a class='category' href='/blog/categories/authentication/'>authentication</a>, <a class='category' href='/blog/categories/controller/'>controller</a>, <a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/08/06/fix-invalid-authentication-token-error-in-rails/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>

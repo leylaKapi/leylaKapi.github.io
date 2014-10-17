@@ -4,7 +4,7 @@
   <title><![CDATA[Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-10-17T16:06:22+03:00</updated>
+  <updated>2014-10-18T00:22:45+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -12,6 +12,42 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Note:How to fix Android Parse Sdk failed?]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/10/18/note-how-to-fix-android-parse-sdk-failed/"/>
+    <updated>2014-10-18T00:00:00+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/10/18/note-how-to-fix-android-parse-sdk-failed</id>
+    <content type="html"><![CDATA[<p>If you are coding android on eclipse and when you are open your eclipse getting like</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>parseSdkContent failed
+</span><span class='line'>Could not initialize class android.graphics.Typeface
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>For the fix above error, you should open your <code>home</code> directory, then search the <code>android</code> file with</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span><span class="nb">cd</span> .android
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If <code>.android</code> folder is exist in your home, you should remove this folder for fox the bug,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>rm -rf .android
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>you should run above command for fix the bug. Then you can check it.</p>
+
+<p>That&rsquo;s all.</p>
+
+<p>I hope helped to you.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[What's the Vagrant ?]]></title>
@@ -2127,115 +2163,6 @@ You can look on <a href="https://github.com/bootstrap-ruby/will_paginate-bootstr
 
 <p><code>better_errors</code> provide to replace standard error page to much better and useful error page
 You can look on <a href="https://github.com/charliesome/better_errorss">gitHub</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How to make a release ?]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/07/10/how-to-make-a-release/"/>
-    <updated>2014-07-10T19:01:26+03:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/07/10/how-to-make-a-release</id>
-    <content type="html"><![CDATA[<p>Make a release</p>
-
-<p>When you start to make a release, I think if you look at your commit it can be better</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git log
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>then if you make some wrong commit, you can delete wrong commit with</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git rebase -i HEAD~2
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>command.
-Then,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push origin +develop
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>After that, you can check you branch with</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git branch -a
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>then let&rsquo;s start to release ;</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git flow release start your_version_number
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><code>your_version_number</code> can be like <code>0.1.0</code> . Actually can be like</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git flow release start 0.1.0
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>When we write this command, you can create <code>VERSION.txt</code> file, and open &lsquo;txt&rsquo; file
-then write some number with <code>your_version_number</code></p>
-
-<p>Write with order below commands,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git add .
-</span><span class='line'>git commit -m <span class="s2">&quot;Bump version &#39;your_version_number&#39;&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git flow release finish 0.1.0
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git checkout release/0.1.0
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push origin develop
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push origin +master
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Yep, Now you made a release you can check on your repo settings on <a href="https://github.com/">github</a>.</p>
-
-<p>Let&#8217; s add Tag,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git tag
-</span></code></pre></td></tr></table></div></figure>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push --tags
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>That&#8217; s all.
-I hope help to you.</p>
 ]]></content>
   </entry>
   

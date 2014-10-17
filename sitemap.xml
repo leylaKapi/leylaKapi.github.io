@@ -227,8 +227,14 @@
         <lastmod>2014-10-12T16:42:33+03:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://leylaKapi.github.io/blog/2014/10/18/note-how-to-fix-android-parse-sdk-failed/
+        </loc>
+        <lastmod>2014-10-18T00:21:12+03:00</lastmod>
+    </url>
+    <url>
         <loc>http://leylaKapi.github.io/</loc>
-        <lastmod>2014-10-17T16:04:57+03:00</lastmod>
+        <lastmod>2014-10-18T00:21:12+03:00</lastmod>
     </url>
     <url>
         <loc>http://leylaKapi.github.io/about/</loc>
@@ -240,6 +246,6 @@
     </url>
     <url>
         <loc>http://leylaKapi.github.io/blog/archives/</loc>
-        <lastmod>2014-10-17T16:04:57+03:00</lastmod>
+        <lastmod>2014-10-18T00:21:12+03:00</lastmod>
     </url>
 </urlset>

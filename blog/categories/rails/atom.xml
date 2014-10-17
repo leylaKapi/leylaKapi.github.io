@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: rails, | Leyla's Blog]]></title>
+  <title><![CDATA[Category: rails | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/rails/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-10-17T16:06:22+03:00</updated>
+  <updated>2014-10-18T00:23:06+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -14,31 +14,787 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Ruby on Rails MVC]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/04/24/ruby-on-rails-mvc/"/>
-    <updated>2014-04-24T00:25:52+03:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/04/24/ruby-on-rails-mvc</id>
-    <content type="html"><![CDATA[<h3>MVC in Ruby on Rails</h3>
+    <title type="html"><![CDATA[How to create scroll-page for rails project]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/09/17/how-to-create-scroll-page-for-rails-project/"/>
+    <updated>2014-09-17T17:05:01+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/09/17/how-to-create-scroll-page-for-rails-project</id>
+    <content type="html"><![CDATA[<h2>Create scroll page with sass and javascript</h2>
 
-<p>MVC &ndash; model, view, controller</p>
+<p>While I was creating <a href="https://github.com/leylaKapi/scroll-page">demo</a> for scroll page,
+firstly I created middleman project according to <code>haml</code> and <code>sass</code>, but if you want to embed in your for example rails project,
+you can embed in it. In this post, I try to explain creating scroll page according to middleman page.</p>
 
-<p>MVC provide to separated of coding and design in app. This property provide to easiness for programmer.</p>
+<p><img src="../images/capture_image-home.png" alt="home-page" /></p>
+
+<p>Let&rsquo;s look the codes for scroll page</p>
 
 <ul>
-<li><p>M &ndash; Model => Objects, Object-oriented, data, database</p></li>
-<li><p>V &ndash; View => Presentations layer user section, HTML, CSS, javascript &hellip;</p></li>
-<li><p>C &ndash; Controller => Process of respond user action, walk change model on the view make decision.</p></li>
+<li>Open js file in your project, and copy it</li>
 </ul>
 
 
-<p>Basic web architecture</p>
+<p>```javascript
+!function($){
+  var defaults = {</p>
 
-<pre><code>Browser &lt;=&gt; Pages &lt;=&gt; Databases
+<pre><code>sectionContainer: "section",
+easing: "ease",
+animationTime: 1000,
+pagination: true,
+updateURL: false,
+keyboard: true,
+beforeMove: null,
+afterMove: null,
+loop: true,
+responsiveFallback: false,
+direction : 'vertical'
+};
+$.fn.swipeEvents = function() {
+  return this.each(function() {
+    var startX,
+        startY,
+        $this = $(this);
+    $this.bind('touchstart', touchstart);
+    function touchstart(event) {
+      var touches = event.originalEvent.touches;
+      if (touches &amp;&amp; touches.length) {
+        startX = touches[0].pageX;
+        startY = touches[0].pageY;
+        $this.bind('touchmove', touchmove);
+      }
+    }
+    function touchmove(event) {
+      var touches = event.originalEvent.touches;
+      if (touches &amp;&amp; touches.length) {
+        var deltaX = startX - touches[0].pageX;
+        var deltaY = startY - touches[0].pageY;
+        if (deltaX &gt;= 50) {
+          $this.trigger("swipeLeft");
+        }
+        if (deltaX &lt;= -50) {
+          $this.trigger("swipeRight");
+        }
+        if (deltaY &gt;= 50) {
+          $this.trigger("swipeUp");
+        }
+        if (deltaY &lt;= -50) {
+          $this.trigger("swipeDown");
+        }
+        if (Math.abs(deltaX) &gt;= 50 || Math.abs(deltaY) &gt;= 50) {
+          $this.unbind('touchmove', touchmove);
+        }
+      }
+    }
+  });
+};
 </code></pre>
 
-<p>Another web architecture</p>
+<p>  $.fn.onepage_scroll = function(options){</p>
 
-<p><img src="./images/index.jpeg" title="MVC architecture" alt="mvc architecture" /></p>
+<pre><code>var settings = $.extend({}, defaults, options),
+    el = $(this),
+    sections = $(settings.sectionContainer)
+    total = sections.length,
+    status = "off",
+    topPos = 0,
+    leftPos = 0,
+    lastAnimation = 0,
+    quietPeriod = 500,
+    paginationList = "";
+$.fn.transformPage = function(settings, pos, index) {
+  if (typeof settings.beforeMove == 'function') settings.beforeMove(index);
+    if($('html').hasClass('ie8')){
+    if (settings.direction == 'horizontal') {
+      var toppos = (el.width()/100)*pos;
+      $(this).animate({left: toppos+'px'},settings.animationTime);
+    } else {
+      var toppos = (el.height()/100)*pos;
+      $(this).animate({top: toppos+'px'},settings.animationTime);
+    }
+    } else{
+      $(this).css({
+        "-webkit-transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
+     "-webkit-transition": "all " + settings.animationTime + "ms " + settings.easing,
+     "-moz-transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
+     "-moz-transition": "all " + settings.animationTime + "ms " + settings.easing,
+     "-ms-transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
+     "-ms-transition": "all " + settings.animationTime + "ms " + settings.easing,
+     "transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
+     "transition": "all " + settings.animationTime + "ms " + settings.easing
+      });
+    }
+  $(this).one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
+    if (typeof settings.afterMove == 'function') settings.afterMove(index);
+  });
+}
+$.fn.moveDown = function() {
+  var el = $(this)
+  index = $(settings.sectionContainer +".active").data("index");
+  current = $(settings.sectionContainer + "[data-index='" + index + "']");
+  next = $(settings.sectionContainer + "[data-index='" + (index + 1) + "']");
+  if(next.length &lt; 1) {
+    if (settings.loop == true) {
+      pos = 0;
+      next = $(settings.sectionContainer + "[data-index='1']");
+    } else {
+      return
+    }
+  }else {
+    pos = (index * 100) * -1;
+  }
+  if (typeof settings.beforeMove == 'function') settings.beforeMove( next.data("index"));
+  current.removeClass("active")
+  next.addClass("active");
+  if(settings.pagination == true) {
+    $(".onepage-pagination li a" + "[data-index='" + index + "']").removeClass("active");
+    $(".onepage-pagination li a" + "[data-index='" + next.data("index") + "']").addClass("active");
+  }
+  $("body")[0].className = $("body")[0].className.replace(/\bviewing-page-\d.*?\b/g, '');
+  $("body").addClass("viewing-page-"+next.data("index"))
+  if (history.replaceState &amp;&amp; settings.updateURL == true) {
+    var href = window.location.href.substr(0,window.location.href.indexOf('#')) + "#" + (index + 1);
+    history.pushState( {}, document.title, href );
+  }
+  el.transformPage(settings, pos, next.data("index"));
+}
+$.fn.moveUp = function() {
+  var el = $(this)
+  index = $(settings.sectionContainer +".active").data("index");
+  current = $(settings.sectionContainer + "[data-index='" + index + "']");
+  next = $(settings.sectionContainer + "[data-index='" + (index - 1) + "']");
+  if(next.length &lt; 1) {
+    if (settings.loop == true) {
+      pos = ((total - 1) * 100) * -1;
+      next = $(settings.sectionContainer + "[data-index='"+total+"']");
+    }
+    else {
+      return
+    }
+  }else {
+    pos = ((next.data("index") - 1) * 100) * -1;
+  }
+  if (typeof settings.beforeMove == 'function') settings.beforeMove(next.data("index"));
+  current.removeClass("active")
+  next.addClass("active")
+  if(settings.pagination == true) {
+    $(".onepage-pagination li a" + "[data-index='" + index + "']").removeClass("active");
+    $(".onepage-pagination li a" + "[data-index='" + next.data("index") + "']").addClass("active");
+  }
+  $("body")[0].className = $("body")[0].className.replace(/\bviewing-page-\d.*?\b/g, '');
+  $("body").addClass("viewing-page-"+next.data("index"))
+  if (history.replaceState &amp;&amp; settings.updateURL == true) {
+    var href = window.location.href.substr(0,window.location.href.indexOf('#')) + "#" + (index - 1);
+    history.pushState( {}, document.title, href );
+  }
+  el.transformPage(settings, pos, next.data("index"));
+}
+$.fn.moveTo = function(page_index) {
+  current = $(settings.sectionContainer + ".active")
+  next = $(settings.sectionContainer + "[data-index='" + (page_index) + "']");
+  if(next.length &gt; 0) {
+    if (typeof settings.beforeMove == 'function') settings.beforeMove(next.data("index"));
+    current.removeClass("active")
+    next.addClass("active")
+    $(".onepage-pagination li a" + ".active").removeClass("active");
+    $(".onepage-pagination li a" + "[data-index='" + (page_index) + "']").addClass("active");
+    $("body")[0].className = $("body")[0].className.replace(/\bviewing-page-\d.*?\b/g, '');
+    $("body").addClass("viewing-page-"+next.data("index"))
+    pos = ((page_index - 1) * 100) * -1;
+    if (history.replaceState &amp;&amp; settings.updateURL == true) {
+        var href = window.location.href.substr(0,window.location.href.indexOf('#')) + "#" + (page_index - 1);
+        history.pushState( {}, document.title, href );
+    }
+    el.transformPage(settings, pos, page_index);
+  }
+}
+function responsive() {
+  var valForTest = false;
+  var typeOfRF = typeof settings.responsiveFallback
+  if(typeOfRF == "number"){
+    valForTest = $(window).width() &lt; settings.responsiveFallback;
+  }
+  if(typeOfRF == "boolean"){
+    valForTest = settings.responsiveFallback;
+  }
+  if(typeOfRF == "function"){
+    valFunction = settings.responsiveFallback();
+    valForTest = valFunction;
+    typeOFv = typeof valForTest;
+    if(typeOFv == "number"){
+        valForTest = $(window).width() &lt; valFunction;
+    }
+  }
+  if (valForTest) {
+    $("body").addClass("disabled-onepage-scroll");
+    $(document).unbind('mousewheel DOMMouseScroll MozMousePixelScroll');
+    el.swipeEvents().unbind("swipeDown swipeUp");
+  } else {
+    if($("body").hasClass("disabled-onepage-scroll")) {
+      $("body").removeClass("disabled-onepage-scroll");
+      $("html, body, .wrapper").animate({ scrollTop: 0 }, "fast");
+    }
+    el.swipeEvents().bind("swipeDown",  function(event){
+      if (!$("body").hasClass("disabled-onepage-scroll")) event.preventDefault();
+      el.moveUp();
+    }).bind("swipeUp", function(event){
+      if (!$("body").hasClass("disabled-onepage-scroll")) event.preventDefault();
+      el.moveDown();
+    });
+    $(document).bind('mousewheel DOMMouseScroll MozMousePixelScroll', function(event) {
+      event.preventDefault();
+      var delta = event.originalEvent.wheelDelta || -event.originalEvent.detail;
+      init_scroll(event, delta);
+    });
+  }
+}
+function init_scroll(event, delta) {
+    deltaOfInterest = delta;
+    var timeNow = new Date().getTime();
+    if(timeNow - lastAnimation &lt; quietPeriod + settings.animationTime) {
+        event.preventDefault();
+        return;
+    }
+    if (deltaOfInterest &lt; 0) {
+      el.moveDown()
+    } else {
+      el.moveUp()
+    }
+    lastAnimation = timeNow;
+}
+el.addClass("onepage-wrapper").css("position","relative");
+$.each( sections, function(i) {
+  $(this).css({
+    position: "absolute",
+    top: topPos + "%"
+  }).addClass("section").attr("data-index", i+1);
+  $(this).css({
+    position: "absolute",
+    left: ( settings.direction == 'horizontal' )
+      ? leftPos + "%"
+      : 0,
+    top: ( settings.direction == 'vertical' || settings.direction != 'horizontal' )
+      ? topPos + "%"
+      : 0
+  });
+  if (settings.direction == 'horizontal')
+    leftPos = leftPos + 100;
+  else
+    topPos = topPos + 100;
+  if(settings.pagination == true) {
+    paginationList += "&lt;li&gt;&lt;a data-index='"+(i+1)+"' href='#" + (i+1) + "'&gt;&lt;/a&gt;&lt;/li&gt;"
+  }
+});
+el.swipeEvents().bind("swipeDown",  function(event){
+  if (!$("body").hasClass("disabled-onepage-scroll")) event.preventDefault();
+  el.moveUp();
+}).bind("swipeUp", function(event){
+  if (!$("body").hasClass("disabled-onepage-scroll")) event.preventDefault();
+  el.moveDown();
+});
+if (settings.pagination == true) {
+  if ($('ul.onepage-pagination').length &lt; 1) $("&lt;ul class='onepage-pagination'&gt;&lt;/ul&gt;").prependTo("body");
+  if( settings.direction == 'horizontal' ) {
+    posLeft = (el.find(".onepage-pagination").width() / 2) * -1;
+    el.find(".onepage-pagination").css("margin-left", posLeft);
+  } else {
+    posTop = (el.find(".onepage-pagination").height() / 2) * -1;
+    el.find(".onepage-pagination").css("margin-top", posTop);
+  }
+  $('ul.onepage-pagination').html(paginationList);
+}
+if(window.location.hash != "" &amp;&amp; window.location.hash != "#1") {
+  init_index =  window.location.hash.replace("#", "")
+  if (parseInt(init_index) &lt;= total &amp;&amp; parseInt(init_index) &gt; 0) {
+    $(settings.sectionContainer + "[data-index='" + init_index + "']").addClass("active")
+    $("body").addClass("viewing-page-"+ init_index)
+    if(settings.pagination == true) $(".onepage-pagination li a" + "[data-index='" + init_index + "']").addClass("active");
+    next = $(settings.sectionContainer + "[data-index='" + (init_index) + "']");
+    if(next) {
+      next.addClass("active")
+      if(settings.pagination == true) $(".onepage-pagination li a" + "[data-index='" + (init_index) + "']").addClass("active");
+      $("body")[0].className = $("body")[0].className.replace(/\bviewing-page-\d.*?\b/g, '');
+      $("body").addClass("viewing-page-"+next.data("index"))
+      if (history.replaceState &amp;&amp; settings.updateURL == true) {
+        var href = window.location.href.substr(0,window.location.href.indexOf('#')) + "#" + (init_index);
+        history.pushState( {}, document.title, href );
+      }
+    }
+    pos = ((init_index - 1) * 100) * -1;
+    el.transformPage(settings, pos, init_index);
+  } else {
+    $(settings.sectionContainer + "[data-index='1']").addClass("active")
+    $("body").addClass("viewing-page-1")
+    if(settings.pagination == true) $(".onepage-pagination li a" + "[data-index='1']").addClass("active");
+  }
+}else{
+  $(settings.sectionContainer + "[data-index='1']").addClass("active")
+  $("body").addClass("viewing-page-1")
+  if(settings.pagination == true) $(".onepage-pagination li a" + "[data-index='1']").addClass("active");
+}
+if(settings.pagination == true)  {
+  $(".onepage-pagination li a").click(function (){
+    var page_index = $(this).data("index");
+    el.moveTo(page_index);
+  });
+}
+$(document).bind('mousewheel DOMMouseScroll MozMousePixelScroll', function(event) {
+  event.preventDefault();
+  var delta = event.originalEvent.wheelDelta || -event.originalEvent.detail;
+  if(!$("body").hasClass("disabled-onepage-scroll")) init_scroll(event, delta);
+});
+if(settings.responsiveFallback != false) {
+  $(window).resize(function() {
+    responsive();
+  });
+  responsive();
+}
+if(settings.keyboard == true) {
+  $(document).keydown(function(e) {
+    var tag = e.target.tagName.toLowerCase();
+    if (!$("body").hasClass("disabled-onepage-scroll")) {
+      switch(e.which) {
+        case 38:
+          if (tag != 'input' &amp;&amp; tag != 'textarea') el.moveUp()
+        break;
+        case 40:
+          if (tag != 'input' &amp;&amp; tag != 'textarea') el.moveDown()
+        break;
+        case 32: 
+          if (tag != 'input' &amp;&amp; tag != 'textarea') el.moveDown()
+        break;
+        case 33: 
+          if (tag != 'input' &amp;&amp; tag != 'textarea') el.moveUp()
+        break;
+        case 34: 
+          if (tag != 'input' &amp;&amp; tag != 'textarea') el.moveDown()
+        break;
+        case 36: 
+          el.moveTo(1);
+        break;
+        case 35: 
+          el.moveTo(total);
+        break;
+        default: return;
+      }
+    }
+  });
+}
+return false;
+</code></pre>
+
+<p>  }
+}(window.jQuery);
+```</p>
+
+<p><img src="../images/capture_image-2.png" alt="second-page" /></p>
+
+<ul>
+<li>Then open <code>sass</code> file and copy below code for your project</li>
+</ul>
+
+
+<p>```sass
+  html</p>
+
+<pre><code>height: 100%
+</code></pre>
+
+<p>  body</p>
+
+<pre><code>padding: 0
+position: relative
+margin: 0
+height: 100%
+</code></pre>
+
+<p>  .wrapper</p>
+
+<pre><code>height: 100% !important
+margin: 0 auto
+</code></pre>
+
+<p>  .main section</p>
+
+<pre><code>&amp;.page1
+  background: rgb(78, 225, 197)
+&amp;.page2
+  background: #d9c337
+&amp;.page3
+  background: #e3242e
+&amp;.page4
+  background: #f2f4e8
+</code></pre>
+
+<p>  body.disabled-onepage-scroll</p>
+
+<pre><code>.onepage-wrapper section
+  min-height: 100%
+  height: auto
+</code></pre>
+
+<p>  body, html</p>
+
+<pre><code>margin: 0
+overflow: hidden
+-webkit-transition: opacity 400ms
+-moz-transition: opacity 400ms
+transition: opacity 400ms
+</code></pre>
+
+<p>  .onepage-wrapper</p>
+
+<pre><code>width: 100%
+height: 100%
+display: block
+position: relative
+padding: 0
+-webkit-transform-style: preserve-3d
+.section
+  width: 100%
+  height: 100%
+</code></pre>
+
+<p>  .onepage-pagination</p>
+
+<pre><code>position: absolute
+right: 10px
+top: 50%
+z-index: 5
+list-style: none
+margin: 0
+padding: 0
+li
+  padding: 0
+  text-align: center
+  a
+    padding: 10px
+    width: 4px
+    height: 4px
+    display: block
+    &amp;:before
+      content: ''
+      position: absolute
+      width: 4px
+      height: 4px
+      background: rgba(0, 0, 0, 0.85)
+      border-radius: 10px
+      -webkit-border-radius: 10px
+      -moz-border-radius: 10px
+    &amp;.active:before
+      width: 10px
+      height: 10px
+      background: none
+      border: 1px solid black
+      margin-top: -4px
+      left: 8px
+</code></pre>
+
+<p>```</p>
+
+<p><img src="../images/capture_image-3.png" alt="third-page" /></p>
+
+<p>For try your scroll page add in <code>haml</code> page</p>
+
+<p>```haml
+.wrapper
+  .main</p>
+
+<pre><code>%section.page1
+  .page_container
+    ...
+%section.page2
+  .page_container
+    ...
+%section.page3
+  .page_container
+    ...
+%section.page4
+  .page_container
+    ...
+</code></pre>
+
+<p>```</p>
+
+<p>Lastly open your <code>layout</code> and add codes</p>
+
+<p>```haml
+:javascript</p>
+
+<pre><code>$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    loop: true
+  });
+  });
+</code></pre>
+
+<p>```</p>
+
+<p><img src="../images/capture_image-4.png" alt="fourth-page" /></p>
+
+<p>Look at code of <a href="https://github.com/leylaKapi/scroll-page">demo</a> and
+for <a href="https://github.com/peachananr/onepage-scroll">detail</a>.</p>
+
+<p>That' s all.</p>
+
+<p>I hope helped to you :)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Create icon set for your rails project]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/09/10/create-icon-set-for-your-rails-project/"/>
+    <updated>2014-09-10T17:23:26+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/09/10/create-icon-set-for-your-rails-project</id>
+    <content type="html"><![CDATA[<h3>How created your icon-set for your rails project ?</h3>
+
+<ul>
+<li>Firstly, you should go to <a href="https://icomoon.io/">icomoon.io</a> website.</li>
+<li>You need to create new app on right-up corner of webpage</li>
+<li>Now upload your font-icons after press <code>import icons</code> buttons,</li>
+<li>Be careful, because your fonts format must be <code>svg</code> format,</li>
+<li>When upload your icons, you should rename your icons,</li>
+<li>Now select which rename icons, and go to download your icons,</li>
+<li>When you download icomoon which provide to you with <code>css</code> and <code>js</code> files for font.</li>
+<li>When you are opening which download file, you can see this file and copy <code>font</code> directory and
+paste in your assets for rails projects.</li>
+<li>Go to css file in which download icomoons files, copy <code>css</code> file and paste in your style file
+(If you are using sass or less, you should convert to sass or less).
+Another way, you can create new file in stylesheet folder like</li>
+</ul>
+
+
+<p><code>css
+_icon.css.sass
+</code></p>
+
+<p>file then paste in this file all icomoon-css. Then you should add your base style file like,</p>
+
+<p><code>css
+@import 'icon'
+</code></p>
+
+<p>Now, you can use your icon set in your <code>html</code></p>
+
+<p><code>html
+&lt;span class = 'your_icon_name' /&gt;      
+</code></p>
+
+<p>or <code>haml</code> page like</p>
+
+<p><code>haml
+%span.your_icon_name               
+</code></p>
+
+<p>If you want,  you can add some properties like, in your <code>css</code> file for your fonts, maybe you want to change size
+your icons automatically, in your <code>haml</code> file,</p>
+
+<p><code>haml
+%span.bf_mobile.bf-4x
+</code>
+like above when you write <code>.bf-4x</code>, your font-size should be 4 times bigger.</p>
+
+<p>in your <code>_icon.css.sass</code></p>
+
+<p>```css
+.bf-4x</p>
+
+<pre><code>font-size: 4em
+</code></pre>
+
+<p>```</p>
+
+<p>like above you can add a lot of properties for your icons and make private for your rails projects.</p>
+
+<p> That' s all.</p>
+
+<p> I hope helped to you.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Fix paperclip gem bug]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/08/21/fix-paperclip-gem-bug/"/>
+    <updated>2014-08-21T13:49:45+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/08/21/fix-paperclip-gem-bug</id>
+    <content type="html"><![CDATA[<h3>How can I fix <code>paperclip</code> error ?</h3>
+
+<p>When you use <code>paperclip</code> gem, if you are getting like this bug</p>
+
+<p><code>ruby
+Photo could not run the identify command. Please install ImageMagick.
+</code></p>
+
+<p>You can fix this bug with</p>
+
+<p><code>bash
+sudo apt-get autoremove
+</code>
+or you can make</p>
+
+<p><code>bash
+sudo apt-get install imagemagick.
+</code></p>
+
+<p>I suggest the second command, because if youcan make <code>autoremove</code> you can get error again.</p>
+
+<p>That' s all.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Upload picture to rails app]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/08/09/upload-picture-to-rails-app/"/>
+    <updated>2014-08-09T13:03:08+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/08/09/upload-picture-to-rails-app</id>
+    <content type="html"><![CDATA[<h3>How to upload picture in rails app ?</h3>
+
+<p>If you want to upload picture in your rails app, you should make</p>
+
+<ul>
+<li>Open your <code>Gemfile</code> in rails app then add</li>
+</ul>
+
+
+<p><code>ruby
+gem 'paperclip', :git =&gt; "git://github.com/thoughtbot/paperclip.git"
+</code></p>
+
+<p>in terminal write <code>bundle</code> for install gem.</p>
+
+<ul>
+<li><p>Which models do you want to upload picture ? For example, you have <code>books</code> model, because of this,  I write all command according to <code>book</code> model.</p></li>
+<li><p>After install <code>paperclip</code> gem, open your <code>terminal</code> again then write</p></li>
+</ul>
+
+
+<p><code>bash
+ $ rails g paperclip Book photo
+</code>
+then</p>
+
+<p><code>bash
+$ bundle exec rake db:migrate
+</code></p>
+
+<ul>
+<li>Open <code>models/book.rb</code> add</li>
+</ul>
+
+
+<p>```ruby
+  include Paperclip::Glue
+  has_attached_file :photo, :styles => { :small => &ldquo;250x250>&rdquo; },</p>
+
+<pre><code>                :url  =&gt; "/assets/books/:id/:style/:basename.:extension",
+                :path =&gt; ":rails_root/public/assets/books/:id/:style/:basename.:extension"
+</code></pre>
+
+<p>  validates_attachment_presence :photo
+  validates_attachment_size :photo, :less_than => 10.megabytes
+  validates_attachment_content_type :photo, :content_type => [&lsquo;image/jpeg&rsquo;, &lsquo;image/png&rsquo;]
+```</p>
+
+<ul>
+<li>Open <code>books/show.html.haml</code> add</li>
+</ul>
+
+
+<p><code>haml
+= image_tag @book.photo.url(:small)
+</code></p>
+
+<ul>
+<li>Open <code>books/_form.html.haml</code> add</li>
+</ul>
+
+
+<p><code>haml
+= form_for @book, html: { multipart: true }  do |f|
+  = f.file_field :photo
+</code></p>
+
+<ul>
+<li>Open <code>controllers/books_controller.rb</code>, then check <code>create</code> method if you use</li>
+</ul>
+
+
+<p>```ruby
+ def create</p>
+
+<pre><code>@book = Book.new(book_params)
+</code></pre>
+
+<p> end
+```
+instead of above, you should write</p>
+
+<p>```ruby
+ def create</p>
+
+<pre><code>@book = Book.create(book_params)
+</code></pre>
+
+<p> end
+```</p>
+
+<p>Lastly, you should control to add <code>:photo</code> in your <code>book_params</code> method.</p>
+
+<p>```ruby
+private</p>
+
+<pre><code>def book_params
+  params.require(:book).permit(:category_id, :author_id, :isbn, :name, :photo)
+end
+</code></pre>
+
+<p>```</p>
+
+<p>If you want to learn with details, you can visit <a href="http://railscasts.com/episodes/134-paperclip?autoplay=true">this site</a></p>
+
+<p>That' s all.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Fix rake db:populate]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/08/08/fix-rake-db-populate/"/>
+    <updated>2014-08-08T10:33:06+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/08/08/fix-rake-db-populate</id>
+    <content type="html"><![CDATA[<h3><code>Rake aborted! Don't know how to build task 'populate'</code></h3>
+
+<p><code>bash
+$ rake db:populate
+</code>
+or</p>
+
+<p><code>bash
+$ bundle exec rake db:populate
+</code></p>
+
+<p>While you were writing above command, you get errors like <code>Don't know how to build task 'populate'</code>.</p>
+
+<p>Let&rsquo;s fix,</p>
+
+<p>Firstly, you should check</p>
+
+<p><code>ruby
+lib/tasks/sample_data.rb
+</code>
+&ndash; if this file exist, you should rename this file</p>
+
+<p><code>ruby
+sample_data.rake
+</code>
+then try to run tour rails project.</p>
+
+<ul>
+<li>if not exist, you should create new file in <code>lib/tasks</code> directory, <code>sample_data.rake</code>.</li>
+</ul>
+
+
+<p>That' s all.</p>
 ]]></content>
   </entry>
   

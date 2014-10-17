@@ -7,7 +7,7 @@
 	<meta name="author" content="Leyla Kapi">
 
 	
-	<meta name="description" content="Fix to admin_active gem bug You add adminactive gem to your Gemfile, then when you&rsquo;re running to bundle on your terminal, you&#8217; re &hellip;">
+	<meta name="description" content="How to fix rails devise gem generate bug? You use devise gem for add admin page or user page to your project. When you generate to your devise gem, &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -85,6 +85,75 @@
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/07/24/rails-devise-gem-generator-error/">
+		
+			Rails Devise Gem Generator Error</a>
+	</h2>
+	<div class="entry-content">
+		<h3>How to fix rails devise gem generate bug?</h3>
+
+<p>You use <code>devise</code> gem for add admin page or user page to your project. When you generate to your devise gem,
+you&#8217; re getting error to your project,  like ;</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>rails g devise:install
+</span><span class='line'>Could not find generator devise:install
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you get like ths error, you can fix for these order,</p>
+
+<ul>
+<li>Open your <code>Gemfile</code>, add <code>gem 'devise'</code> then,</li>
+<li>Open terminal, run  <code>bundle</code></li>
+<li>Open you computer search bar, Search on your computer to <code>Disk Utility</code></li>
+<li>Select you Disk For example: <code>Macintosh HD</code></li>
+<li>Then click on <code>Repair Disk Permissions</code></li>
+<li>Waiting approximately 15 minutes, then <strong>restart</strong> your computer.</li>
+</ul>
+
+
+<p>That&#8217; s all.</p>
+
+<p>I hope fixed your bug.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-24T15:36:48+03:00" pubdate data-updated="true">Jul 24<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/gemfile/'>Gemfile</a>, <a class='category' href='/blog/categories/bug/'>bug</a>, <a class='category' href='/blog/categories/devise/'>devise</a>, <a class='category' href='/blog/categories/error/'>error</a>, <a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/generate/'>generate</a>, <a class='category' href='/blog/categories/install/'>install</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/07/24/rails-devise-gem-generator-error/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -425,149 +494,6 @@ You can look on <a href="https://github.com/charliesome/better_errorss">gitHub</
 </div>
 	
 	<div class="comments"><a href="/blog/2014/07/13/when-you-start-to-project/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/07/10/how-to-make-a-release/">
-		
-			How to Make a Release ?</a>
-	</h2>
-	<div class="entry-content">
-		<p>Make a release</p>
-
-<p>When you start to make a release, I think if you look at your commit it can be better</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git log
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>then if you make some wrong commit, you can delete wrong commit with</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git rebase -i HEAD~2
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>command.
-Then,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push origin +develop
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>After that, you can check you branch with</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git branch -a
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>then let&rsquo;s start to release ;</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git flow release start your_version_number
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><code>your_version_number</code> can be like <code>0.1.0</code> . Actually can be like</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git flow release start 0.1.0
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>When we write this command, you can create <code>VERSION.txt</code> file, and open &lsquo;txt&rsquo; file
-then write some number with <code>your_version_number</code></p>
-
-<p>Write with order below commands,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git add .
-</span><span class='line'>git commit -m <span class="s2">&quot;Bump version &#39;your_version_number&#39;&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git flow release finish 0.1.0
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git checkout release/0.1.0
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push origin develop
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push origin +master
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Yep, Now you made a release you can check on your repo settings on <a href="https://github.com/">github</a>.</p>
-
-<p>Let&#8217; s add Tag,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git tag
-</span></code></pre></td></tr></table></div></figure>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push --tags
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>That&#8217; s all.
-I hope help to you.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-07-10T19:01:26+03:00" pubdate data-updated="true">Jul 10<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/github/'>gitHub</a>, <a class='category' href='/blog/categories/release/'>release</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/07/10/how-to-make-a-release/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>
