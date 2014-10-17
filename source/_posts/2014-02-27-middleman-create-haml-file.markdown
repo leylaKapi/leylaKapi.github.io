@@ -136,7 +136,7 @@ Wait! Dont worry, When writing to below command in terminal in order of this.
 
 then we are seen
 
-             http://localhost:3000
+             http://localhost:4567
 
 like url. We should copy this url and paste on browser search bar.
 
