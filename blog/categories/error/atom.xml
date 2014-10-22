@@ -4,7 +4,7 @@
   <title><![CDATA[Category: error | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/error/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-10-22T23:26:25+03:00</updated>
+  <updated>2014-10-22T23:29:51+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla Kapi]]></name>
@@ -33,7 +33,7 @@ $ sudo apt-get install qt4-dev-tools libqt4-dev libqt4-core libqt4-gui
 <p> Then you need to install <code>capybara-webkit</code> gem to your project with,</p>
 
 <p><code>bash
-gem install capybara-webkit
+$ gem install capybara-webkit
 </code></p>
 
 <p>You can search this bug on <a href="http://stackoverflow.com/questions/11354656/error-error-error-installing-capybara-webkit">stackoverflow</a></p>
