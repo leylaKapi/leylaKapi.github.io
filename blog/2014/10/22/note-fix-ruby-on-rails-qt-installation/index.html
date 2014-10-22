@@ -1,0 +1,213 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Note: Fix Ruby on Rails Qt installation - Leyla's Blog</title>
+	<meta name="author" content="Leyla Kapi">
+
+	
+	<meta name="description" content="In your rails project when you run bundle command, if you getting below error, 1
+/ruby extconf.rb qmake:couldn&#39;t find a QT installation of &#39 &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Leyla's Blog" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script async="true" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">Leyla's Blog</a></h1>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+    <li><a href="/about">About</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+    <li><a href="/about">About</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="http://google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:leylaKapi.github.io">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+        
+        <a class="github" href="https://github.com/leylakapi" title="GitHub">GitHub</a>
+        
+        
+        <a class="linkedin" href="http://www.linkedin.com/in/leylakapi">LinkedIn</a>
+        
+        
+        <a class="google" href="https://plus.google.com/+leylakapi?rel=author" title="Google+">Google+</a>
+        
+        
+        <a class="twitter" href="http://twitter.com/leylakapi" title="Twitter">Twitter</a>
+        
+        
+    
+		
+
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+    
+	</div>
+	<form class="search" action="http://google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:leylaKapi.github.io">
+	</form>
+</nav>
+
+</header>
+	
+		
+	
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Note: Fix Ruby on Rails Qt Installation</h2>
+	<div class="entry-content"><p>In your rails project when you run <code>bundle</code> command, if you getting below error,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>/ruby extconf.rb qmake:couldn<span class="s1">&#39;t find a QT installation of &#39;&#39; Command &#39;</span>qmake_spec linux-gtt<span class="err">&#39;</span> failed
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>on Ubuntu, you can fix with below command to this error.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo apt-get install qt4-dev-tools libqt4-dev libqt4-core libqt4-gui
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p> Then you need to install <code>capybara-webkit</code> gem to your project with,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>gem install capybara-webkit
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You can search this bug on <a href="http://stackoverflow.com/questions/11354656/error-error-error-installing-capybara-webkit">stackoverflow</a></p>
+
+<p>That&rsquo;s all.</p>
+
+<p>I hope your bug is fixed.</p>
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-10-22T23:16:22+03:00" pubdate data-updated="true">Oct 22<span>nd</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/built/'>built</a>, <a class='category' href='/blog/categories/capybara-webkit/'>capybara-webkit</a>, <a class='category' href='/blog/categories/error/'>error</a>, <a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/install/'>install</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>
+
+
+</div>
+	
+	<div class="comments"><a href="#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+		
+		
+		<a class="addthis_button_tweet"></a>
+		
+		
+		
+	</div>
+	
+</div>
+
+
+
+<section id="comment">
+    <h2 class="title">Comments</h2>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2014
+
+    Leyla Kapi
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'leylasblog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://leylaKapi.github.io/blog/2014/10/22/note-fix-ruby-on-rails-qt-installation/';
+        var disqus_url = 'http://leylaKapi.github.io/blog/2014/10/22/note-fix-ruby-on-rails-qt-installation/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//go.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-49378525-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+</body>
+</html>

@@ -7,10 +7,8 @@
 	<meta name="author" content="Leyla Kapi">
 
 	
-	<meta name="description" content="If you are coding android on eclipse and when you are open your eclipse getting like 1
-2
-parseSdkContent failed
-Could not initialize class android. &hellip;">
+	<meta name="description" content="In your rails project when you run bundle command, if you getting below error, 1
+/ruby extconf.rb qmake:couldn&#39;t find a QT installation of &#39 &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -88,6 +86,74 @@ Could not initialize class android. &hellip;">
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/10/22/note-fix-ruby-on-rails-qt-installation/">
+		
+			Note: Fix Ruby on Rails Qt Installation</a>
+	</h2>
+	<div class="entry-content">
+		<p>In your rails project when you run <code>bundle</code> command, if you getting below error,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>/ruby extconf.rb qmake:couldn<span class="s1">&#39;t find a QT installation of &#39;&#39; Command &#39;</span>qmake_spec linux-gtt<span class="err">&#39;</span> failed
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>on Ubuntu, you can fix with below command to this error.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo apt-get install qt4-dev-tools libqt4-dev libqt4-core libqt4-gui
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p> Then you need to install <code>capybara-webkit</code> gem to your project with,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>gem install capybara-webkit
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You can search this bug on <a href="http://stackoverflow.com/questions/11354656/error-error-error-installing-capybara-webkit">stackoverflow</a></p>
+
+<p>That&rsquo;s all.</p>
+
+<p>I hope your bug is fixed.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-10-22T23:16:22+03:00" pubdate data-updated="true">Oct 22<span>nd</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/built/'>built</a>, <a class='category' href='/blog/categories/capybara-webkit/'>capybara-webkit</a>, <a class='category' href='/blog/categories/error/'>error</a>, <a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/install/'>install</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/10/22/note-fix-ruby-on-rails-qt-installation/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -1449,116 +1515,6 @@ for <a href="https://github.com/peachananr/onepage-scroll">detail</a>.</p>
 </div>
 	
 	<div class="comments"><a href="/blog/2014/09/17/how-to-create-scroll-page-for-rails-project/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/09/10/create-icon-set-for-your-rails-project/">
-		
-			Create Icon Set for Your Rails Project</a>
-	</h2>
-	<div class="entry-content">
-		<h3>How created your icon-set for your rails project ?</h3>
-
-<ul>
-<li>Firstly, you should go to <a href="https://icomoon.io/">icomoon.io</a> website.</li>
-<li>You need to create new app on right-up corner of webpage</li>
-<li>Now upload your font-icons after press <code>import icons</code> buttons,</li>
-<li>Be careful, because your fonts format must be <code>svg</code> format,</li>
-<li>When upload your icons, you should rename your icons,</li>
-<li>Now select which rename icons, and go to download your icons,</li>
-<li>When you download icomoon which provide to you with <code>css</code> and <code>js</code> files for font.</li>
-<li>When you are opening which download file, you can see this file and copy <code>font</code> directory and
-paste in your assets for rails projects.</li>
-<li>Go to css file in which download icomoons files, copy <code>css</code> file and paste in your style file
-(If you are using sass or less, you should convert to sass or less).
-Another way, you can create new file in stylesheet folder like</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nt">_icon</span><span class="nc">.css.sass</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>file then paste in this file all icomoon-css. Then you should add your base style file like,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="k">@import</span> <span class="s1">&#39;icon&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Now, you can use your icon set in your <code>html</code></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;span</span> <span class="na">class =</span><span class="err"> </span><span class="s">&#39;your_icon_name&#39;</span> <span class="nt">/&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>or <code>haml</code> page like</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nt">%span</span><span class="nc">.your_icon_name</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>If you want,  you can add some properties like, in your <code>css</code> file for your fonts, maybe you want to change size
-your icons automatically, in your <code>haml</code> file,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nt">%span</span><span class="nc">.bf_mobile.bf-4x</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>like above when you write <code>.bf-4x</code>, your font-size should be 4 times bigger.</p>
-
-<p>in your <code>_icon.css.sass</code></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nc">.bf-4x</span>
-</span><span class='line'>    <span class="nt">font-size</span><span class="o">:</span> <span class="nt">4em</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>like above you can add a lot of properties for your icons and make private for your rails projects.</p>
-
-<p> That&#8217; s all.</p>
-
-<p> I hope helped to you.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-09-10T17:23:26+03:00" pubdate data-updated="true">Sep 10<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/css/'>css</a>, <a class='category' href='/blog/categories/font/'>font</a>, <a class='category' href='/blog/categories/ico-moon/'>ico-moon</a>, <a class='category' href='/blog/categories/icon-set/'>icon-set</a>, <a class='category' href='/blog/categories/js/'>js</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/09/10/create-icon-set-for-your-rails-project/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>
