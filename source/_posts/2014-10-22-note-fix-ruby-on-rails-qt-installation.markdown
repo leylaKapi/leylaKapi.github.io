@@ -21,7 +21,7 @@ $ sudo apt-get install qt4-dev-tools libqt4-dev libqt4-core libqt4-gui
  Then you need to install `capybara-webkit` gem to your project with,
  
 ```bash
-gem install capybara-webkit
+$ gem install capybara-webkit
 ```
 
 You can search this bug on [stackoverflow](http://stackoverflow.com/questions/11354656/error-error-error-installing-capybara-webkit)
