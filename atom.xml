@@ -4,7 +4,7 @@
   <title><![CDATA[Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-10-27T22:10:40+02:00</updated>
+  <updated>2014-10-27T23:04:25+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[ Leyla Kapi ]]></name>
@@ -12,6 +12,104 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[How to add multi-lingual support to your web-page in middleman]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/10/27/how-to-add-multi-lingual-support-to-your-web-page-in-middleman/"/>
+    <updated>2014-10-27T00:00:00+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/10/27/how-to-add-multi-lingual-support-to-your-web-page-in-middleman</id>
+    <content type="html"><![CDATA[<h3>Multi-Lingual Support</h3>
+
+<p>Firstly you should create middleman project with, if doesn&rsquo;t exist it. Then in your project,
+open <code>config.rb</code>  file add below code,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">activate</span> <span class="ss">:i18n</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>when you add above code, you can active to <code>:i18n</code>. i18n extension provides an way to localize your site.
+After that you should add path of your locale directories in your project roots <code>~/MyProject/locales</code> directory and code
+should be seems like below</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">activate</span> <span class="ss">:i18n</span><span class="p">,</span> <span class="ss">:path</span> <span class="o">=&gt;</span> <span class="s2">&quot;/:locale/&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>But before above command you should create new directory in your root of your project. Means of above code, created
+locale directory which including languages <code>yaml</code> files.</p>
+
+<p>Then you should add root of your project according to your page language. If you want to seems to your page in english
+languages, you should add below code according to yml file in <code>~/MyProject/locales/en.yml</code>,
+if it is exist, you can write below code,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">activate</span> <span class="ss">:i18n</span><span class="p">,</span> <span class="ss">:path</span> <span class="o">=&gt;</span> <span class="s2">&quot;/:locale/&quot;</span><span class="p">,</span> <span class="ss">:mount_at_root</span> <span class="o">=&gt;</span> <span class="ss">:en</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now your page always seems in english language, but if write in search bar like <code>localhost:4567/es/index.html</code>, you can see in
+spanish languages, if there is exist in locales directory <code>es.yml</code> file.</p>
+
+<p>According to above,  you want to change language of your page according to your place, for example, if your page was opened in Italy,
+automatically shows your page in italian language, you can write instead of above,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">activate</span> <span class="ss">:i18n</span><span class="p">,</span> <span class="ss">:path</span> <span class="o">=&gt;</span> <span class="s2">&quot;/:locale/&quot;</span><span class="p">,</span> <span class="ss">:mount_at_root</span> <span class="o">=&gt;</span> <span class="kp">false</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You can be carefully according to above, <code>false</code> and <code>:en</code>, because these codes provide to seems your page in root which language.</p>
+
+<p>If you created <code>locale</code> directory in root of your project, you can add which languages you want, to seem your page view,
+for example I want to seems my page in russian language, because of this I should create in locale directories <code>ru.yml</code> file.
+or want see in english language, can be <code>en.yml</code>. In <code>en.yml</code> you start to add your sentence like</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='yaml'><span class='line'><span class="nn">---</span>
+</span><span class='line'><span class="l-Scalar-Plain">en</span><span class="p-Indicator">:</span>
+</span><span class='line'>  <span class="l-Scalar-Plain">hello</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Hello</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>and</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='yaml'><span class='line'><span class="nn">---</span>
+</span><span class='line'><span class="l-Scalar-Plain">ru</span><span class="p-Indicator">:</span>
+</span><span class='line'>   <span class="l-Scalar-Plain">hello</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">привет</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>When create your yaml file like above, I want to page seems in russian and english because I created two yaml file
+one of the <code>en.yml</code> another of <code>ru.yml</code> .</p>
+
+<p>Then you should go to source directory in project than create <code>~/MyProject/source/localizable/</code> folder in source directory,
+after you should copy your <code>index.html.erb</code> or if your use <code>haml</code>, copy your <code>index.html.haml</code> to inside <code>~/MyProject/source/localizable/</code>
+folder. You should change sentences or words in your project according to yml file. While you are doing this you
+can be <code>t</code> parameter for can be shortly instead of <code>i18n</code>. According to above yml files, if I change words or sentence
+in <code>index.html.haml</code> , can be like</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="p">=</span> <span class="n">t</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>After when running your project, middleman thanks to <code>i18n</code> perceive automatically. if in address bar
+write <code>/ru/index.html</code>, <code>i18n</code> according to <code>ru.yml</code> changed your words and sentences or if you write <code>en/index.html</code>,
+changed according to <code>en.yml</code> file.</p>
+
+<p>For more information you look at <a href="http://middlemanapp.com/advanced/localization/">home page</a></p>
+
+<p>That&rsquo;s all.
+I hope helped to you.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Note: Fix Ruby on Rails Qt installation]]></title>
@@ -2087,57 +2185,6 @@ Than if errors didn&rsquo;t fixed, you should write on terminal</p>
 <p>That&rsquo;s all.</p>
 
 <p>I hope helped to you.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Add simple search form to rails projects]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/07/16/add-search-form-to-rails-projects/"/>
-    <updated>2014-07-16T19:47:15+03:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/07/16/add-search-form-to-rails-projects</id>
-    <content type="html"><![CDATA[<h3>How can you add simple search form to rails project ?</h3>
-
-<p>You want to add search form, but you don&rsquo;t no.  <em>HOW?</em></p>
-
-<p>Let&rsquo;s start, firstly you should use <a href="https://github.com/activerecord-hackery/ransack">ransack</a> and
-<a href="https://github.com/mislav/will_paginate">will_paginate</a> gems in your <code>Gemfile</code> then you should write in
-terminal <code>bundle</code> .</p>
-
-<p>Then open controller which you want to add search bar, like ;</p>
-
-<p><code>projects_controller</code></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">index</span>
-</span><span class='line'>    <span class="vi">@search</span> <span class="o">=</span> <span class="no">Project</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">params</span><span class="o">[</span><span class="ss">:q</span><span class="o">]</span><span class="p">)</span>
-</span><span class='line'>    <span class="vi">@project</span> <span class="o">=</span> <span class="vi">@search</span><span class="o">.</span><span class="n">result</span><span class="p">(</span><span class="ss">distinct</span><span class="p">:</span> <span class="kp">true</span><span class="p">)</span><span class="o">.</span><span class="n">paginate</span><span class="p">(</span><span class="ss">:page</span> <span class="o">=&gt;</span> <span class="n">params</span><span class="o">[</span><span class="ss">:page</span><span class="o">]</span><span class="p">)</span>
-</span><span class='line'>    <span class="n">respond_with</span> <span class="vi">@project</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>When you added controller, you should add below code which relation to index file ;</p>
-
-<p><code>projects/index.html.haml</code></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="p">=</span> <span class="n">search_form_for</span> <span class="vi">@search</span> <span class="k">do</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span>
-</span><span class='line'>    <span class="p">=</span> <span class="n">f</span><span class="o">.</span><span class="n">label</span> <span class="ss">:name_cont</span>
-</span><span class='line'>    <span class="p">=</span> <span class="n">f</span><span class="o">.</span><span class="n">search_field</span> <span class="ss">:name_cont</span>
-</span><span class='line'>    <span class="p">=</span> <span class="n">f</span><span class="o">.</span><span class="n">submit</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>That&rsquo;s all .</p>
-
-<p>I hope helped to you .</p>
 ]]></content>
   </entry>
   

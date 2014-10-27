@@ -7,9 +7,9 @@
 <!--<meta name="author" content="<a href=" http://leylaKapi.github.io/about/"> Leyla Kapi </a>"> <!-->
 
 	
-	<meta name="description" content="What is the meaning of abbreviation for HTML, CSS, &hellip;? HTML : Hyper text markup language
-CSS : Cascading Stylesheet
-Haml : HTML Abstraction &hellip;">
+	<meta name="description" content="When I setup Octopress Repository, error of 1
+rake deploy I setup the Octopress, and I create, 1
+rake new_post\[&quot;Hello World&quot;\] then push &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -87,6 +87,137 @@ Haml : HTML Abstraction &hellip;">
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/02/26/after-new-post/">
+		
+			After Create Octopress Blog Fixed Error</a>
+	</h2>
+	<div class="entry-content">
+		<h3>When I setup Octopress Repository, error of</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake deploy
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I setup the Octopress, and I create,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake new_post<span class="se">\[</span><span class="s2">&quot;Hello World&quot;</span><span class="se">\]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>then push github on</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">source</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>branch, and when I</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake deploy
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p> Terminal show this code :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>To https://github.com/username/username.github.io.git
+</span><span class='line'>! <span class="o">[</span>rejected<span class="o">]</span>        master -&gt; master <span class="o">(</span>non-fast-forward<span class="o">)</span>
+</span><span class='line'>error: failed to push some refs to <span class="s1">&#39;https://github.com/username/username.github.io.git&#39;</span>
+</span><span class='line'>hint: Updates were rejected because the tip of your current branch is behind
+</span><span class='line'>hint: its remote counterpart. Merge the remote changes <span class="o">(</span>e.g. <span class="s1">&#39;git pull&#39;</span><span class="o">)</span>
+</span><span class='line'>hint: before pushing again.
+</span><span class='line'>hint: See the <span class="s1">&#39;Note about fast-forwards&#39;</span> in <span class="s1">&#39;git push --help&#39;</span> <span class="k">for </span>details.
+</span></code></pre></td></tr></table></div></figure>
+
+
+<pre><code> Github Pages deploy complete
+</code></pre>
+
+<h3>What I can fix it ?</h3>
+
+<p> Firstly</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git clone https://github.com/username/username.github.io.git
+</span><span class='line'>git checkout <span class="nb">source</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p> I cloning to username.github.io into master, and checkout source</p>
+
+<p> Secondly we need to setup &lsquo;deploy&rsquo; directories</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>mkdir _deploy
+</span><span class='line'><span class="nb">cd </span>_deploy
+</span><span class='line'>git init
+</span><span class='line'>git remote add -t master -f origin https://github.com/username/username.github.io.git
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now, we can use</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake deploy
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>or</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake gen_deploy
+</span></code></pre></td></tr></table></div></figure>
+
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-26T11:30:57+02:00" pubdate data-updated="true">Feb 26<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/octopress/'>Octopress</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/02/26/after-new-post/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
 
 
     <article class="post">
