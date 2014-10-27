@@ -4,7 +4,7 @@
   <title><![CDATA[Category: page | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/page/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-10-27T23:04:25+02:00</updated>
+  <updated>2014-10-27T23:14:55+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[ Leyla Kapi ]]></name>
@@ -20,14 +20,14 @@
     <id>http://leylaKapi.github.io/blog/2014/10/27/how-to-add-multi-lingual-support-to-your-web-page-in-middleman</id>
     <content type="html"><![CDATA[<h3>Multi-Lingual Support</h3>
 
-<p>Firstly you should create middleman project with, if doesn&rsquo;t exist it. Then in your project,
+<p>Firstly you should create middleman project , if doesn&rsquo;t exist it. Then in your project,
 open <code>config.rb</code>  file add below code,</p>
 
 <p><code>ruby
 activate :i18n
 </code></p>
 
-<p>when you add above code, you can active to <code>:i18n</code>. i18n extension provides an way to localize your site.
+<p>when you add above code, you can active to <code>:i18n</code>. <code>i18n</code> extension provides a way to localize your site.
 After that you should add path of your locale directories in your project roots <code>~/MyProject/locales</code> directory and code
 should be seems like below</p>
 
@@ -40,13 +40,13 @@ locale directory which including languages <code>yaml</code> files.</p>
 
 <p>Then you should add root of your project according to your page language. If you want to seems to your page in english
 languages, you should add below code according to yml file in <code>~/MyProject/locales/en.yml</code>,
-if it is exist, you can write below code,</p>
+if it is exist, you can write below code in <code>config.rb</code>,</p>
 
 <p><code>ruby
 activate :i18n, :path =&gt; "/:locale/", :mount_at_root =&gt; :en
 </code></p>
 
-<p>Now your page always seems in english language, but if write in search bar like <code>localhost:4567/es/index.html</code>, you can see in
+<p>Now your page always seems in english language, but if write in address bar like <code>/es/index.html</code>, you can see in
 spanish languages, if there is exist in locales directory <code>es.yml</code> file.</p>
 
 <p>According to above,  you want to change language of your page according to your place, for example, if your page was opened in Italy,
@@ -95,8 +95,9 @@ changed according to <code>en.yml</code> file.</p>
 
 <p>For more information you look at <a href="http://middlemanapp.com/advanced/localization/">home page</a></p>
 
-<p>That&rsquo;s all.
-I hope helped to you.</p>
+<p>That&rsquo;s all.</p>
+
+<p>I hope helped to you.</p>
 ]]></content>
   </entry>
   

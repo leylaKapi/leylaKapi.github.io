@@ -7,8 +7,8 @@
 <!--<meta name="author" content="<a href=" http://leylaKapi.github.io/about/"> Leyla Kapi </a>"> <!-->
 
 	
-	<meta name="description" content="Multi-Lingual Support Firstly you should create middleman project with, if doesn&rsquo;t exist it. Then in your project,
-open config.rb file add &hellip;">
+	<meta name="description" content="Multi-Lingual Support Firstly you should create middleman project , if doesn&rsquo;t exist it. Then in your project,
+open config.rb file add below &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -98,7 +98,7 @@ open config.rb file add &hellip;">
 	<div class="entry-content">
 		<h3>Multi-Lingual Support</h3>
 
-<p>Firstly you should create middleman project with, if doesn&rsquo;t exist it. Then in your project,
+<p>Firstly you should create middleman project , if doesn&rsquo;t exist it. Then in your project,
 open <code>config.rb</code>  file add below code,</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -106,7 +106,7 @@ open <code>config.rb</code>  file add below code,</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>when you add above code, you can active to <code>:i18n</code>. i18n extension provides an way to localize your site.
+<p>when you add above code, you can active to <code>:i18n</code>. <code>i18n</code> extension provides a way to localize your site.
 After that you should add path of your locale directories in your project roots <code>~/MyProject/locales</code> directory and code
 should be seems like below</p>
 
@@ -120,14 +120,14 @@ locale directory which including languages <code>yaml</code> files.</p>
 
 <p>Then you should add root of your project according to your page language. If you want to seems to your page in english
 languages, you should add below code according to yml file in <code>~/MyProject/locales/en.yml</code>,
-if it is exist, you can write below code,</p>
+if it is exist, you can write below code in <code>config.rb</code>,</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">activate</span> <span class="ss">:i18n</span><span class="p">,</span> <span class="ss">:path</span> <span class="o">=&gt;</span> <span class="s2">&quot;/:locale/&quot;</span><span class="p">,</span> <span class="ss">:mount_at_root</span> <span class="o">=&gt;</span> <span class="ss">:en</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Now your page always seems in english language, but if write in search bar like <code>localhost:4567/es/index.html</code>, you can see in
+<p>Now your page always seems in english language, but if write in address bar like <code>/es/index.html</code>, you can see in
 spanish languages, if there is exist in locales directory <code>es.yml</code> file.</p>
 
 <p>According to above,  you want to change language of your page according to your place, for example, if your page was opened in Italy,
@@ -184,8 +184,9 @@ changed according to <code>en.yml</code> file.</p>
 
 <p>For more information you look at <a href="http://middlemanapp.com/advanced/localization/">home page</a></p>
 
-<p>That&rsquo;s all.
-I hope helped to you.</p>
+<p>That&rsquo;s all.</p>
+
+<p>I hope helped to you.</p>
 
 		
 		
