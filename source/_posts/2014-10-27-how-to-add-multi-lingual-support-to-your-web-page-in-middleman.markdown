@@ -8,14 +8,14 @@ categories: languages page middleman i18n locales yml localization
 
 ### Multi-Lingual Support
 
-Firstly you should create middleman project with, if doesn't exist it. Then in your project, 
+Firstly you should create middleman project , if doesn't exist it. Then in your project, 
 open `config.rb`  file add below code,
 
 ```ruby
 activate :i18n
 ```
 
-when you add above code, you can active to `:i18n`. i18n extension provides an way to localize your site. 
+when you add above code, you can active to `:i18n`. `i18n` extension provides a way to localize your site. 
 After that you should add path of your locale directories in your project roots `~/MyProject/locales` directory and code
 should be seems like below
 
@@ -28,13 +28,13 @@ locale directory which including languages `yaml` files.
 
 Then you should add root of your project according to your page language. If you want to seems to your page in english 
 languages, you should add below code according to yml file in `~/MyProject/locales/en.yml`, 
-if it is exist, you can write below code, 
+if it is exist, you can write below code in `config.rb`, 
 
 ```ruby
 activate :i18n, :path => "/:locale/", :mount_at_root => :en
 ```
 
-Now your page always seems in english language, but if write in search bar like `localhost:4567/es/index.html`, you can see in 
+Now your page always seems in english language, but if write in address bar like `/es/index.html`, you can see in 
 spanish languages, if there is exist in locales directory `es.yml` file. 
 
 According to above,  you want to change language of your page according to your place, for example, if your page was opened in Italy,
@@ -64,6 +64,7 @@ ru:
    hello: привет 
 ```
 
+
 When create your yaml file like above, I want to page seems in russian and english because I created two yaml file 
 one of the `en.yml` another of `ru.yml` . 
 
@@ -84,4 +85,6 @@ changed according to `en.yml` file.
 For more information you look at [home page](http://middlemanapp.com/advanced/localization/)
 
 That's all.
+
+
 I hope helped to you.
