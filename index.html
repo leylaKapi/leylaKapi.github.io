@@ -7,8 +7,8 @@
 <!--<meta name="author" content="<a href=" http://leylaKapi.github.io/about/"> Leyla Kapi </a>"> <!-->
 
 	
-	<meta name="description" content="Multi-Lingual Support Firstly you should create middleman project , if doesn&rsquo;t exist it. Then in your project,
-open config.rb file add below &hellip;">
+	<meta name="description" content="Fix date/time in menu bar If you are update or upgrade your pc, you can getting error about menu bar for date &ndash; time missing .
+For fixing this &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -86,6 +86,88 @@ open config.rb file add below &hellip;">
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/11/07/ubuntu-13-dot-10-missing-date-and-time-in-the-menu-bar/">
+		
+			Ubuntu 13.10 : Missing Date and Time in the Menu Bar</a>
+	</h2>
+	<div class="entry-content">
+		<h3>Fix date/time in menu bar</h3>
+
+<p>If you are update or upgrade your pc, you can getting error about menu bar for date &ndash; time missing .
+For fixing this bug, you should write below commands step by step ,</p>
+
+<ul>
+<li>Re-install <code>indicator-datetime</code> run ,</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo apt-get install indicator-datetime
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Re-configure date-time</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo dpkg-reconfigure --frontend noninteractive tzdata
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>finally, restart</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo killall unity-panel-service
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<p>That&#8217; s all. For more information <a href="http://www.maketecheasier.com/date-time-missing-ubuntu-1310/">click page</a></p>
+
+<p>I hope helped to you .</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-11-07T17:15:38+02:00" pubdate data-updated="true">Nov 7<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/bug/'>bug</a>, <a class='category' href='/blog/categories/date/'>date</a>, <a class='category' href='/blog/categories/linux/'>linux</a>, <a class='category' href='/blog/categories/menu/'>menu</a>, <a class='category' href='/blog/categories/pc/'>pc</a>, <a class='category' href='/blog/categories/time/'>time</a>, <a class='category' href='/blog/categories/ubuntu/'>ubuntu</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/11/07/ubuntu-13-dot-10-missing-date-and-time-in-the-menu-bar/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -597,93 +679,6 @@ After create your account, open your terminal,</p>
 </div>
 	
 	<div class="comments"><a href="/blog/2014/10/12/what-is-the-vagrant/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/10/02/dipnote-add-page-number-with-javascript/">
-		
-			Trick: Add Page Number With Javascript ?</a>
-	</h2>
-	<div class="entry-content">
-		<h3>How can you show page number in js ?</h3>
-
-<p>If you create middleman or rails project and you want to add pagination in your pages with js.
-You can make easily with below codes</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'>  <span class="kd">var</span> <span class="nx">numberOfPages</span> <span class="o">=</span> <span class="mi">14</span><span class="p">;</span>
-</span><span class='line'>  <span class="kd">function</span> <span class="nx">addPage</span><span class="p">(</span><span class="nx">page</span><span class="p">,</span> <span class="nx">book</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">book</span><span class="p">.</span><span class="nx">turn</span><span class="p">(</span><span class="s1">&#39;hasPage&#39;</span><span class="p">,</span> <span class="nx">page</span><span class="p">))</span> <span class="p">{</span>
-</span><span class='line'>      <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
-</span><span class='line'>        <span class="nx">element</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span><span class="s1">&#39;&lt;div class=&quot;data&quot;&gt;Data for page &#39;</span><span class="o">+</span><span class="nx">page</span><span class="o">+</span><span class="s1">&#39;&lt;/div&gt;&#39;</span><span class="p">);</span>
-</span><span class='line'>      <span class="p">},</span> <span class="mi">14</span><span class="p">);</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'>    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#number-pages&#39;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">numberOfPages</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>in haml page can be like</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nf">#controls</span>
-</span><span class='line'>  <span class="nt">%label</span><span class="p">{</span><span class="ss">:for</span> <span class="o">=&gt;</span> <span class="s2">&quot;page-number&quot;</span><span class="p">}</span> Page:
-</span><span class='line'>  <span class="nt">%input</span><span class="nf">#page-number</span><span class="p">{</span><span class="ss">:size</span> <span class="o">=&gt;</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span> <span class="ss">:type</span> <span class="o">=&gt;</span> <span class="s2">&quot;text&quot;</span><span class="p">}/</span>
-</span><span class='line'>  of
-</span><span class='line'>  <span class="nt">%span</span><span class="nf">#number-pages</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>now you can try easily this <code>js</code> trick.</p>
-
-<p>That&rsquo;s all .
-I hope helped to you.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-10-02T21:32:05+03:00" pubdate data-updated="true">Oct 2<span>nd</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/frontend/'>frontend</a>, <a class='category' href='/blog/categories/haml/'>haml</a>, <a class='category' href='/blog/categories/js/'>js</a>, <a class='category' href='/blog/categories/number/'>number</a>, <a class='category' href='/blog/categories/pages/'>pages</a>, <a class='category' href='/blog/categories/pagination/'>pagination</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/10/02/dipnote-add-page-number-with-javascript/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: time | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/time/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2014-11-07T17:25:52+02:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[ Leyla Kapi ]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Ubuntu 13.10 : Missing date and time in the menu bar]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/11/07/ubuntu-13-dot-10-missing-date-and-time-in-the-menu-bar/"/>
+    <updated>2014-11-07T17:15:38+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/11/07/ubuntu-13-dot-10-missing-date-and-time-in-the-menu-bar</id>
+    <content type="html"><![CDATA[<h3>Fix date/time in menu bar</h3>
+
+<p>If you are update or upgrade your pc, you can getting error about menu bar for date &ndash; time missing .
+For fixing this bug, you should write below commands step by step ,</p>
+
+<ul>
+<li>Re-install <code>indicator-datetime</code> run ,</li>
+</ul>
+
+
+<p><code>bash
+$ sudo apt-get install indicator-datetime
+</code></p>
+
+<ul>
+<li>Re-configure date-time</li>
+</ul>
+
+
+<p><code>bash
+$ sudo dpkg-reconfigure --frontend noninteractive tzdata
+</code></p>
+
+<ul>
+<li>finally, restart</li>
+</ul>
+
+
+<p><code>bash
+$ sudo killall unity-panel-service
+</code></p>
+
+<p>That' s all. For more information <a href="http://www.maketecheasier.com/date-time-missing-ubuntu-1310/">click page</a></p>
+
+<p>I hope helped to you .</p>
+]]></content>
+  </entry>
+  
+</feed>

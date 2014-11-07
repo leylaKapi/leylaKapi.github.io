@@ -4,7 +4,7 @@
   <title><![CDATA[Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-10-27T23:14:38+02:00</updated>
+  <updated>2014-11-07T17:25:52+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[ Leyla Kapi ]]></name>
@@ -12,6 +12,54 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Ubuntu 13.10 : Missing date and time in the menu bar]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/11/07/ubuntu-13-dot-10-missing-date-and-time-in-the-menu-bar/"/>
+    <updated>2014-11-07T17:15:38+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/11/07/ubuntu-13-dot-10-missing-date-and-time-in-the-menu-bar</id>
+    <content type="html"><![CDATA[<h3>Fix date/time in menu bar</h3>
+
+<p>If you are update or upgrade your pc, you can getting error about menu bar for date &ndash; time missing .
+For fixing this bug, you should write below commands step by step ,</p>
+
+<ul>
+<li>Re-install <code>indicator-datetime</code> run ,</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo apt-get install indicator-datetime
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Re-configure date-time</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo dpkg-reconfigure --frontend noninteractive tzdata
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>finally, restart</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo killall unity-panel-service
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<p>That&#8217; s all. For more information <a href="http://www.maketecheasier.com/date-time-missing-ubuntu-1310/">click page</a></p>
+
+<p>I hope helped to you .</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How to add multi-lingual support to your web-page in middleman]]></title>
@@ -2137,51 +2185,6 @@ you&#8217; re getting error to your project,  like ;</p>
 
 
 <p>you can fix easily.</p>
-
-<p>That&rsquo;s all.</p>
-
-<p>I hope helped to you.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Error compiling sass assets]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/07/17/error-compiling-sass-assets/"/>
-    <updated>2014-07-17T16:27:24+03:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/07/17/error-compiling-sass-assets</id>
-    <content type="html"><![CDATA[<h3>Middleman sass compiling error</h3>
-
-<p>While you were made web template with <code>haml</code> and <code>sass</code>, if you use middleman and bootstrap for your web template and your project give you like,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='sass'><span class='line'><span class="nt">Error</span> <span class="nt">compiling</span> <span class="nt">CSS</span> <span class="nt">asset</span>
-</span><span class='line'><span class="na">NoMethodError</span><span class="o">:</span> <span class="n">undefined</span> <span class="n">method</span> <span class="err">`</span><span class="n">font_path</span><span class="err">`</span> <span class="n">for</span> <span class="n">nil</span><span class="o">:</span><span class="n">NilClass</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>error.</p>
-
-<p>You can fix like with edit your <code>Gemfile</code></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;bootstrap-sass&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 3.1.1&#39;</span>
-</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;middleman-sprockets&#39;</span><span class="p">,</span> <span class="s1">&#39;3.2.2&#39;</span>
-</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;middleman-bootstrap-navbar&#39;</span><span class="p">,</span><span class="s1">&#39;~&gt;2.0&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Then you can write in terminal <code>bundle install</code>
-Than if errors didn&rsquo;t fixed, you should write on terminal</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>bundle update middleman-sprockets
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>If you want to researches with details, you should look <a href="https://github.com/middleman/middleman/issues/1265">this page</a></p>
 
 <p>That&rsquo;s all.</p>
 
