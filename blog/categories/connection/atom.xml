@@ -4,7 +4,7 @@
   <title><![CDATA[Category: connection | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/connection/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-11-07T17:51:53+02:00</updated>
+  <updated>2014-11-07T17:56:33+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[ Leyla Kapi ]]></name>
@@ -26,12 +26,12 @@ but you can not return to previous page, for return to first page, we can use ve
 <p>Where you want to use button for return from second to first, open your <code>secondactivity.xml</code></p>
 
 <p>```xml
-   &lt;Button</p>
+&lt;Button</p>
 
-<pre><code>    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:onClick="ReturnHome"
-    android:text="Return Previous Page" /&gt;
+<pre><code>android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:onClick="ReturnHome"
+android:text="Return Previous Page" /&gt;
 </code></pre>
 
 <p>```</p>
@@ -39,14 +39,14 @@ but you can not return to previous page, for return to first page, we can use ve
 <p>Then we getting, what is the <code>android:onClick</code> name, you can give the what you want name for <code>onClick</code> but can be
 careful for use in <code>java</code>, open <code>SecondActivity.java</code> write below code</p>
 
-<p>```java</p>
+<p>```java
+public void ReturnHome(View view){</p>
 
-<pre><code>public void ReturnHome(View view){
-    super.onBackPressed();
-}
+<pre><code>super.onBackPressed();
 </code></pre>
 
-<p>```</p>
+<p>}
+```</p>
 
 <p>That &rsquo;s all, now you can go back to previous activity.</p>
 
