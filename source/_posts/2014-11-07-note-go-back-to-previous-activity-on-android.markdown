@@ -3,7 +3,7 @@ layout: post
 title: "Note: Go back to previous activity on Android"
 date: 2014-11-07 17:33:09 +0200
 comments: true
-categories: android activity method start-learning 
+categories: android activity method start-learning intent mobile connection pages
 ---
 
 ### Method for go previous activity
