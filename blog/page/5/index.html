@@ -7,7 +7,7 @@
 <!--<meta name="author" content="<a href=" http://leylaKapi.github.io/about/"> Leyla Kapi </a>"> <!-->
 
 	
-	<meta name="description" content="Middleman sass compiling error While you were made web template with haml and sass, if you use middleman and bootstrap for your web template and &hellip;">
+	<meta name="description" content="Fix to admin_active gem bug You add adminactive gem to your Gemfile, then when you&rsquo;re running to bundle on your terminal, you&#8217; re &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -85,6 +85,92 @@
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/07/22/rails-activeadmin-gem-bug/">
+		
+			Rails Active_admin Gem Bug</a>
+	</h2>
+	<div class="entry-content">
+		<h3>Fix to admin_active gem bug</h3>
+
+<p>You add <code>adminactive</code> gem to your Gemfile, then when you&rsquo;re running to <code>bundle</code> on your terminal,  you&#8217; re getting like,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>bundle
+</span><span class='line'>Fetching gem metadata from https://rubygems.org/..........
+</span><span class='line'>Fetching additional metadata from https://rubygems.org/..
+</span><span class='line'>Resolving dependencies...
+</span><span class='line'>Bundler could not find compatible versions <span class="k">for </span>gem <span class="s2">&quot;rails&quot;</span>:
+</span><span class='line'>  In Gemfile:
+</span><span class='line'>    activeadmin <span class="o">(</span>~&gt; 0.6.3<span class="o">)</span> ruby depends on
+</span><span class='line'>      rails <span class="o">(</span>&lt; 4, &gt;<span class="o">=</span> 3.0.0<span class="o">)</span> ruby
+</span><span class='line'>    rails <span class="o">(</span>4.1.4
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you replace on <code>Gemfile</code> from</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;activeadmin&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>to</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;activeadmin&#39;</span><span class="p">,</span> <span class="ss">github</span><span class="p">:</span> <span class="s1">&#39;gregbell/active_admin&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>you can fix easily.</p>
+
+<p>That&rsquo;s all.</p>
+
+<p>I hope helped to you.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-22T15:55:03+03:00" pubdate data-updated="true">Jul 22<span>nd</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/gemfile/'>Gemfile</a>, <a class='category' href='/blog/categories/active-admin/'>active_admin</a>, <a class='category' href='/blog/categories/bug/'>bug</a>, <a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/07/22/rails-activeadmin-gem-bug/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -482,79 +568,6 @@ I hope help to you.</p>
 </div>
 	
 	<div class="comments"><a href="/blog/2014/07/10/how-to-make-a-release/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/07/08/remove-log-and-idea-files-on-your-rails-project/">
-		
-			Remove Log and Idea Files on Your Rails Project</a>
-	</h2>
-	<div class="entry-content">
-		<h3>How to remove log and idea files on your project ?</h3>
-
-<p>Remove idea files</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git rm -r --cached .idea
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>While you were remove, terminal gives error about it, you can try to below command :</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git rm -rf --cached .idea
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Remove log files</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git rm -r log/development.log
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>After that, you should include on your <code>.gitignore</code> file like;</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">echo</span> <span class="s1">&#39;*log&#39;</span> &gt; .gitignore
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>That&rsquo;s all.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-07-08T01:53:53+03:00" pubdate data-updated="true">Jul 8<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/github/'>gitHub</a>, <a class='category' href='/blog/categories/gitignore/'>gitignore</a>, <a class='category' href='/blog/categories/idea/'>idea</a>, <a class='category' href='/blog/categories/log/'>log</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/07/08/remove-log-and-idea-files-on-your-rails-project/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>

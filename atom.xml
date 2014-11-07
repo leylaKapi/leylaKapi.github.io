@@ -4,7 +4,7 @@
   <title><![CDATA[Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-11-07T17:25:52+02:00</updated>
+  <updated>2014-11-07T17:46:10+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[ Leyla Kapi ]]></name>
@@ -12,6 +12,49 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Note: Go back to previous activity on Android]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/11/07/note-go-back-to-previous-activity-on-android/"/>
+    <updated>2014-11-07T17:33:09+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/11/07/note-go-back-to-previous-activity-on-android</id>
+    <content type="html"><![CDATA[<h3>Method for go previous activity</h3>
+
+<p>If you make connection between first and second activity, this means, you can go to from first activity to second activity
+but you can not return to previous page, for return to first page, we can use very common method, <code>onBackPressed()</code>.</p>
+
+<p>Where you want to use button for return from second to first, open your <code>secondactivity.xml</code></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'>   <span class="nt">&lt;Button</span>
+</span><span class='line'>        <span class="na">android:layout_width=</span><span class="s">&quot;fill_parent&quot;</span>
+</span><span class='line'>        <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+</span><span class='line'>        <span class="na">android:onClick=</span><span class="s">&quot;ReturnHome&quot;</span>
+</span><span class='line'>        <span class="na">android:text=</span><span class="s">&quot;Return Previous Page&quot;</span> <span class="nt">/&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then we getting, what is the <code>android:onClick</code> name, you can give the what you want name for <code>onClick</code> but can be
+careful for use in <code>java</code>, open <code>SecondActivity.java</code> write below code</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">public</span> <span class="kt">void</span> <span class="nf">ReturnHome</span><span class="o">(</span><span class="n">View</span> <span class="n">view</span><span class="o">){</span>
+</span><span class='line'>  <span class="kd">super</span><span class="o">.</span><span class="na">onBackPressed</span><span class="o">();</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That &rsquo;s all, now you can go back to previous activity.</p>
+
+<p>I hope helped to you.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ubuntu 13.10 : Missing date and time in the menu bar]]></title>
@@ -2137,58 +2180,6 @@ you&#8217; re getting error to your project,  like ;</p>
 <p>That&#8217; s all.</p>
 
 <p>I hope fixed your bug.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Rails active_admin gem bug]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/07/22/rails-activeadmin-gem-bug/"/>
-    <updated>2014-07-22T15:55:03+03:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/07/22/rails-activeadmin-gem-bug</id>
-    <content type="html"><![CDATA[<h3>Fix to admin_active gem bug</h3>
-
-<p>You add <code>adminactive</code> gem to your Gemfile, then when you&rsquo;re running to <code>bundle</code> on your terminal,  you&#8217; re getting like,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>bundle
-</span><span class='line'>Fetching gem metadata from https://rubygems.org/..........
-</span><span class='line'>Fetching additional metadata from https://rubygems.org/..
-</span><span class='line'>Resolving dependencies...
-</span><span class='line'>Bundler could not find compatible versions <span class="k">for </span>gem <span class="s2">&quot;rails&quot;</span>:
-</span><span class='line'>  In Gemfile:
-</span><span class='line'>    activeadmin <span class="o">(</span>~&gt; 0.6.3<span class="o">)</span> ruby depends on
-</span><span class='line'>      rails <span class="o">(</span>&lt; 4, &gt;<span class="o">=</span> 3.0.0<span class="o">)</span> ruby
-</span><span class='line'>    rails <span class="o">(</span>4.1.4
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>If you replace on <code>Gemfile</code> from</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;activeadmin&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>to</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;activeadmin&#39;</span><span class="p">,</span> <span class="ss">github</span><span class="p">:</span> <span class="s1">&#39;gregbell/active_admin&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>you can fix easily.</p>
-
-<p>That&rsquo;s all.</p>
-
-<p>I hope helped to you.</p>
 ]]></content>
   </entry>
   

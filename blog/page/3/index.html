@@ -7,11 +7,8 @@
 <!--<meta name="author" content="<a href=" http://leylaKapi.github.io/about/"> Leyla Kapi </a>"> <!-->
 
 	
-	<meta name="description" content="How to change github global core editor ? Open your terminal, then which editor is easy for you (vim, emacs, nano) ? 1
-2
-3
-4
-git config --global &hellip;">
+	<meta name="description" content="How can I fix paperclip error ? When you use paperclip gem, if you are getting like this bug 1
+Photo could not run the identify command. Please &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -89,6 +86,74 @@ git config --global &hellip;">
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/08/21/fix-paperclip-gem-bug/">
+		
+			Fix Paperclip Gem Bug</a>
+	</h2>
+	<div class="entry-content">
+		<h3>How can I fix <code>paperclip</code> error ?</h3>
+
+<p>When you use <code>paperclip</code> gem, if you are getting like this bug</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Photo</span> <span class="n">could</span> <span class="ow">not</span> <span class="n">run</span> <span class="n">the</span> <span class="n">identify</span> <span class="n">command</span><span class="o">.</span> <span class="no">Please</span> <span class="n">install</span> <span class="no">ImageMagick</span><span class="o">.</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You can fix this bug with</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo apt-get autoremove
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>or you can make</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo apt-get install imagemagick.
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I suggest the second command, because if youcan make <code>autoremove</code> you can get error again.</p>
+
+<p>That&#8217; s all.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-08-21T13:49:45+03:00" pubdate data-updated="true">Aug 21<span>st</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/bug/'>bug</a>, <a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/image/'>image</a>, <a class='category' href='/blog/categories/paperclip/'>paperclip</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>, <a class='category' href='/blog/categories/upload/'>upload</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/08/21/fix-paperclip-gem-bug/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -466,71 +531,6 @@ git config --global &hellip;">
 </div>
 	
 	<div class="comments"><a href="/blog/2014/08/06/fix-invalid-authentication-token-error-in-rails/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/08/03/install-open-jdk-or-oracle-on-ubuntu/">
-		
-			Install Open-jdk or Oracle on Ubuntu</a>
-	</h2>
-	<div class="entry-content">
-		<h3>Note about installation of java on Ubuntu computer</h3>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo apt-get install openjdk-7-jdk
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>OR</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo add-apt-repository ppa:webupd8team/java
-</span><span class='line'><span class="nv">$ </span>sudo apt-get update
-</span><span class='line'><span class="nv">$ </span>sudo apt-get install oracle-java7-installer
-</span><span class='line'><span class="nv">$ </span>sudo apt-get update
-</span><span class='line'><span class="nv">$ </span>java -version
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>That&rsquo;s all</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-08-03T23:25:29+03:00" pubdate data-updated="true">Aug 3<span>rd</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/install/'>install</a>, <a class='category' href='/blog/categories/java/'>java</a>, <a class='category' href='/blog/categories/jdk/'>jdk</a>, <a class='category' href='/blog/categories/linux/'>linux</a>, <a class='category' href='/blog/categories/openjdk/'>openjdk</a>, <a class='category' href='/blog/categories/oracle/'>oracle</a>, <a class='category' href='/blog/categories/ubuntu/'>ubuntu</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/08/03/install-open-jdk-or-oracle-on-ubuntu/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>
