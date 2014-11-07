@@ -9,7 +9,7 @@ categories: ubuntu linux date time menu pc bug
 ### Fix date/time in menu bar
  
 If you are update or upgrade your pc, you can getting error about menu bar for date - time missing .
-For fix this bug, you should write below commands step by step ,
+For fixing this bug, you should write below commands step by step ,
 
 - Re-install `indicator-datetime` run ,
 
