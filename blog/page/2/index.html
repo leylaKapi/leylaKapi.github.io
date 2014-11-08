@@ -7,8 +7,10 @@
 <!--<meta name="author" content="<a href=" http://leylaKapi.github.io/about/"> Leyla Kapi </a>"> <!-->
 
 	
-	<meta name="description" content="How to Set Up Vagrant on Ubuntu Desktop? Vagrant is a application which improved your application in virtual machine, this means that,
-you can &hellip;">
+	<meta name="description" content="If you are coding android on eclipse and when you are open your eclipse getting like 1
+2
+parseSdkContent failed
+Could not initialize class android. &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -86,6 +88,76 @@ you can &hellip;">
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/10/18/note-how-to-fix-android-parse-sdk-failed/">
+		
+			Note:How to Fix Android Parse Sdk Failed?</a>
+	</h2>
+	<div class="entry-content">
+		<p>If you are coding android on eclipse and when you are open your eclipse getting like</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'>parseSdkContent failed
+</span><span class='line'>Could not initialize class android.graphics.Typeface
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>For the fix above error, you should open your <code>home</code> directory, then search the <code>android</code> file with</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span><span class="nb">cd</span> .android
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If <code>.android</code> folder is exist in your home, you should remove this folder for fox the bug,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>rm -rf .android
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>you should run above command for fix the bug. Then you can check it.</p>
+
+<p>That&rsquo;s all.</p>
+
+<p>I hope helped to you.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-10-18T00:00:00+03:00" pubdate data-updated="true">Oct 18<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/android/'>android</a>, <a class='category' href='/blog/categories/bug/'>bug</a>, <a class='category' href='/blog/categories/eclipse/'>eclipse</a>, <a class='category' href='/blog/categories/error/'>error</a>, <a class='category' href='/blog/categories/fix/'>fix</a>, <a class='category' href='/blog/categories/initialize/'>initialize</a>, <a class='category' href='/blog/categories/parse/'>parse</a>, <a class='category' href='/blog/categories/run/'>run</a>, <a class='category' href='/blog/categories/sdk/'>sdk</a>, <a class='category' href='/blog/categories/typer-face/'>typer-face</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/10/18/note-how-to-fix-android-parse-sdk-failed/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -1487,77 +1559,6 @@ your icons automatically, in your <code>haml</code> file,</p>
 </div>
 	
 	<div class="comments"><a href="/blog/2014/09/10/create-icon-set-for-your-rails-project/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/09/01/how-to-extract-images-from-pdf-file-on-ubuntu/">
-		
-			How to Extract Images From Pdf File on Ubuntu Desktop ?</a>
-	</h2>
-	<div class="entry-content">
-		<h3>Pdfimages in Ubuntu</h3>
-
-<p>If you have some pdf files which include images and want to extract all images like a image file,
-you can make it easily. Firstly, you should install <code>poppler-utils</code> in your machine, with</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo apt-get install poppler-utils
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>After that you can see to <code>pdfimages</code> how using it, like</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>pdfimages --help
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>you install and look at your <code>pdfimages</code> properties with above commands. Now you should go to your pdf
-file path on terminal, then write on terminal this command,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>pdfimages -j your_pdf_file.pdf which_name_you_want
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>you can see all images export in your pdf file in your path.
-It is very easy.</p>
-
-<p>That&rsquo;s all.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-09-01T00:00:00+03:00" pubdate data-updated="true">Sep 1<span>st</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/files/'>files</a>, <a class='category' href='/blog/categories/images/'>images</a>, <a class='category' href='/blog/categories/pdf/'>pdf</a>, <a class='category' href='/blog/categories/pdfimages/'>pdfimages</a>, <a class='category' href='/blog/categories/ubuntu/'>ubuntu</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/09/01/how-to-extract-images-from-pdf-file-on-ubuntu/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>
