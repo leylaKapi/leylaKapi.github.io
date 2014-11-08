@@ -8,7 +8,7 @@ categories: getExtra putExtra android mobile application user string data get se
 
 ### Use getExtra and putExtra
 
-Firstly if you want to get some information like name, surname, email when user login on Android, and show on 
+You want to get some information like name, surname, email when user login on Android, and show on 
 second activity these information , we can use getExtra and putExtra . There are a lot of method for getting information
 from first to second activity, I try to explain getting with getExtra and putExtra on getting user name and surname to 
 show second activity, let 's start,
@@ -38,7 +38,7 @@ second .
  
 ```xml
 <Button
-     android:id="@+id/button2"
+     android:id="@+id/button1"
      android:layout_width="fill_parent"
      android:layout_height="wrap_content"
      android:layout_alignTop="@+id/textView1"
