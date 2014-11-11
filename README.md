@@ -3,4 +3,4 @@
 
 My personal :octocat: blog
 
-*You can find information and post about `linux`, `ubuntu`,`ruby`, `rails`,`html5`,`css3`, `js`, `jquery`,`android`*
+*You can find informations and posts about `linux`, `ubuntu`,`ruby`, `rails`,`html5`,`css3`, `js`, `jquery`,`android`, `...`*
