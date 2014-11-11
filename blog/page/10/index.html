@@ -7,7 +7,7 @@
 <!--<meta name="author" content="<a href=" http://leylaKapi.github.io/about/"> Leyla Kapi </a>"> <!-->
 
 	
-	<meta name="description" content="Change CSS class after scrolling &hellip;px down I want to change menu or nav-bar according to scroll, How I can do this ? In this article, I can &hellip;">
+	<meta name="description" content="How to create middleman blog for middleman project? Middleman supported blogging in your project or your blog. If you create a blog, I think you &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -85,6 +85,152 @@
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/03/15/blog-middleman/">
+		
+			Middleman Blog</a>
+	</h2>
+	<div class="entry-content">
+		<h3>How to create middleman blog for middleman project?</h3>
+
+<ul>
+<li>Middleman supported blogging in your project or your blog.</li>
+</ul>
+
+
+<p>If you create a blog, I think you should with middleman blogging. I hear, you say &lsquo; WHY ? &rsquo;</p>
+
+<p>WHY?</p>
+
+<ul>
+<li>Easy to use,</li>
+<li>Embed in your project easily</li>
+</ul>
+
+
+<p>&hellip;</p>
+
+<p><strong>Let&rsquo;s learn blogging with middleman blog</strong></p>
+
+<p>Firstly, if you use middleman blog in your project, this means if you use blogging in your website or application,
+you  should go to path of your project, open and write above command.</p>
+
+<p>you write in <em>Gemfile</em> :</p>
+
+<pre><code>    gem ' middleman-blog '
+</code></pre>
+
+<p>and then, in <em>config.rb</em></p>
+
+<pre><code>    activate :blog do |blog|
+    ---
+    set
+</code></pre>
+
+<p>and when you write these command in your project, open terminal or console  write</p>
+
+<pre><code>    bundle install                  #install gems
+    bundle exec middleman server    #run your blog in your project
+</code></pre>
+
+<p>If you want to set up from the rough, what you want to open to path, and write in terminal</p>
+
+<pre><code>    middleman init blog_name --template=blog
+</code></pre>
+
+<p>When you write this command you can see, many file created for your blo.</p>
+
+<p>Now open created blog, you should see directories,</p>
+
+<pre><code>    images
+    javascripts
+    stylesheets
+</code></pre>
+
+<p>files,</p>
+
+<pre><code>    index.html.erb
+    layout.erb
+    calendar.html.erb
+    tags.html.erb
+    feed.xml.builder
+    2012-01-01-example-article
+</code></pre>
+
+<ul>
+<li>Middleman provide  many tags and properties for your blog, if you want to organize, you can open <em>config.rb</em> and organize these, and see.</li>
+<li>If you want to organize style for blog, you should write in stylesheets and javascript directories, with CSS3 and Jquery ;)</li>
+<li>If you don&rsquo;t want to use <strong>.html.erb</strong> files, you can translate to <strong>.html.haml</strong> in <a href="http://html2haml.heroku.com/">html2haml</a>.</li>
+</ul>
+
+
+<p>And use this.</p>
+
+<ul>
+<li>If you want to use blog in your middleman project, you should create new layouts, and <em>index.html.haml</em> in your blog directory,
+different from your middleman project.
+and we write code in this.</li>
+</ul>
+
+
+<p>Yep ! you create new blog and prepared write new article your blog,</p>
+
+<p>Let&rsquo;s start :)</p>
+
+<pre><code>middleman article article_name
+</code></pre>
+
+<p>When write this command, middleman created new article file, blogging in this file, but we write with markdown inside created article file.</p>
+
+<p>When you write your article you run project with</p>
+
+<pre><code>bundle exec middleman server
+</code></pre>
+
+<p>after the</p>
+
+<pre><code>bundle install
+</code></pre>
+
+<p>run and see what you can do ?</p>
+
+<p>That&rsquo;s it.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-15T17:05:21+02:00" pubdate data-updated="true">Mar 15<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/blogging/'>blogging</a>, <a class='category' href='/blog/categories/middleman/'>middleman,</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/03/15/blog-middleman/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -577,221 +723,6 @@ Now, we install the ruby after then</p>
 </div>
 	
 	<div class="comments"><a href="/blog/2014/02/28/what-is-the-ruby-on-rails/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/02/27/middleman-create-haml-file/">
-		
-			Middleman Create Haml File</a>
-	</h2>
-	<div class="entry-content">
-		<h3>How to create .haml file in middleman?</h3>
-
-<p>Firstly, you should go <a href="" title="http://middlemanapp.com/">middleman</a> and you need to <strong>install middleman</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>   gem install middleman
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Fine, you are installed middleman, now we start to create project in middleman</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>   middleman init project_name
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Then this command give you directory as shown below :</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'> project_name/
-</span><span class='line'>    Gemfile
-</span><span class='line'>    Gemfile.lock
-</span><span class='line'>    config.rb
-</span><span class='line'>    <span class="nb">source</span>
-</span><span class='line'>        .gitignore
-</span><span class='line'>        images
-</span><span class='line'>            background.png
-</span><span class='line'>            middleman.png
-</span><span class='line'>        javascript
-</span><span class='line'>            all.js
-</span><span class='line'>        stylesheets
-</span><span class='line'>            all.css
-</span><span class='line'>            normalize.css
-</span><span class='line'>        layouts
-</span><span class='line'>            layout.erb
-</span><span class='line'>        index.html.erb
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>If you can see this directories, you should open project with your IDE.</p>
-
-<p><strong>Now, We create .haml file but how ?</strong></p>
-
-<p>Go ahead and remove below files because these files don&rsquo;t use in project.</p>
-
-<pre><code>- /source/images/background.png
-- /source/images/middleman.png
-- /source/javascript/all.js
-- /source/stylesheets/all.css
-- /source/stylesheets/normalize.css
-- /source/layouts/layout.erb
-- /source/index.html.erb
-</code></pre>
-
-<p>Now, Projects was removed from unused files.</p>
-
-<h5>Add HAML</h5>
-
-<p>Middleman appear to read HTML by default . Therefore, you should go to</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'> /config.rb
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>in file write:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'>set :haml, :format =&gt; :html5
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Now program convert to html5 from haml.</p>
-
-<ul>
-<li>Add a</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'> layout.haml
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>file to the</p>
-
-<pre><code>      /source/layouts
-</code></pre>
-
-<p>directory. In this file we write</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nn">!!!</span>
-</span><span class='line'><span class="nt">%html</span><span class="p">{</span> <span class="ss">:lang</span> <span class="o">=&gt;</span> <span class="s2">&quot;en&quot;</span><span class="p">}</span>
-</span><span class='line'>    <span class="nt">%head</span>
-</span><span class='line'>        <span class="nt">%meta</span><span class="p">{</span><span class="ss">:charset</span> <span class="o">=&gt;</span> <span class="s2">&quot;utf-8&quot;</span><span class="p">}</span>
-</span><span class='line'>        <span class="nt">%title</span><span class="p">=</span> <span class="n">data</span><span class="o">.</span><span class="n">page</span><span class="o">.</span><span class="n">title</span>
-</span><span class='line'>        <span class="p">=</span> <span class="n">stylesheet_link_tag</span> <span class="s2">&quot;your_css_file.css&quot;</span>
-</span><span class='line'>        <span class="p">=</span> <span class="n">javascript_include_tag</span> <span class="s2">&quot;your_javascript_file.js&quot;</span>
-</span><span class='line'>    <span class="nt">%body</span>
-</span><span class='line'>        <span class="p">=</span> <span class="k">yield</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Now we must create</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'>index.html.haml
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>in</p>
-
-<pre><code>            `source/`
-</code></pre>
-
-<p>directory.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nt">%h1</span> Welcome Middleman project
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>write in</p>
-
-<pre><code>           `source/index.html.haml`
-</code></pre>
-
-<p>files.</p>
-
-<p>We are create middleman project and write codes, How we run this program?</p>
-
-<p>Wait! Dont worry, When writing to below command in terminal in order of this.</p>
-
-<pre><code># Go to project path
-
-     cd project_name
-     bundle install
-     bundle exec middleman server
-</code></pre>
-
-<p>then we are seen</p>
-
-<pre><code>         http://localhost:4567
-</code></pre>
-
-<p>like url. We should copy this url and paste on browser search bar.</p>
-
-<p>That&rsquo;s it! Try and see.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-02-27T13:49:10+02:00" pubdate data-updated="true">Feb 27<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/haml/'>Haml</a>, <a class='category' href='/blog/categories/middleman/'>Middleman,</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/02/27/middleman-create-haml-file/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>

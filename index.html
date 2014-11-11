@@ -461,6 +461,74 @@ For fixing this bug, you should write below commands step by step ,</p>
     <article class="post">
 	<h2 class="title">
 		
+		<a href="/blog/2014/11/02/notes-how-to-install-stick-notes-to-ubuntu/">
+		
+			Notes: How to Install Sticker-notes to Ubuntu Desktop?</a>
+	</h2>
+	<div class="entry-content">
+		<p>I want to sticker notes for my pc, when I search about it, I found <code>sticky notes</code> for <code>Ubuntu 13.10</code> .
+This notes provide to reminder of something like a agenda, when you wrote some notes inside,
+you see always the notes. If you want to add sticker notes you can use below command.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo add-apt-repository ppa:umang/indicator-stickynotes
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo apt-get update
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo apt-get install indicator-stickynotes
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That &rsquo;s it. This notes very helpful for me .</p>
+
+<p>I hope helped to you too.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-11-02T21:36:43+02:00" pubdate data-updated="true">Nov 2<span>nd</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/notes/'>notes</a>, <a class='category' href='/blog/categories/pc/'>pc</a>, <a class='category' href='/blog/categories/stick/'>stick</a>, <a class='category' href='/blog/categories/sticker/'>sticker</a>, <a class='category' href='/blog/categories/ubuntu/'>ubuntu</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/11/02/notes-how-to-install-stick-notes-to-ubuntu/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
 		<a href="/blog/2014/10/27/how-to-add-multi-lingual-support-to-your-web-page-in-middleman/">
 		
 			How to Add Multi-lingual Support to Your Web-page in Middleman</a>
@@ -586,74 +654,6 @@ changed according to <code>en.yml</code> file.</p>
 </div>
 	
 	<div class="comments"><a href="/blog/2014/10/27/how-to-add-multi-lingual-support-to-your-web-page-in-middleman/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/10/22/note-fix-ruby-on-rails-qt-installation/">
-		
-			Note: Fix Ruby on Rails Qt Installation</a>
-	</h2>
-	<div class="entry-content">
-		<p>In your rails project when you run <code>bundle</code> command, if you getting below error,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>/ruby extconf.rb qmake:couldn<span class="s1">&#39;t find a QT installation of &#39;&#39; Command &#39;</span>qmake_spec linux-gtt<span class="err">&#39;</span> failed
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>on Ubuntu, you can fix with below command to this error.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo apt-get install qt4-dev-tools libqt4-dev libqt4-core libqt4-gui
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p> Then you need to install <code>capybara-webkit</code> gem to your project with,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>gem install capybara-webkit
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>You can search this bug on <a href="http://stackoverflow.com/questions/11354656/error-error-error-installing-capybara-webkit">stackoverflow</a></p>
-
-<p>That&rsquo;s all.</p>
-
-<p>I hope your bug is fixed.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-10-22T23:16:22+03:00" pubdate data-updated="true">Oct 22<span>nd</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/built/'>built</a>, <a class='category' href='/blog/categories/capybara-webkit/'>capybara-webkit</a>, <a class='category' href='/blog/categories/error/'>error</a>, <a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/install/'>install</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/10/22/note-fix-ruby-on-rails-qt-installation/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>

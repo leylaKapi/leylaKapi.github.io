@@ -4,7 +4,7 @@
   <title><![CDATA[Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-11-08T14:55:34+02:00</updated>
+  <updated>2014-11-11T21:52:47+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[ Leyla Kapi ]]></name>
@@ -278,6 +278,40 @@ For fixing this bug, you should write below commands step by step ,</p>
 <p>That&#8217; s all. For more information <a href="http://www.maketecheasier.com/date-time-missing-ubuntu-1310/">click page</a></p>
 
 <p>I hope helped to you .</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Notes: How to install sticker-notes to Ubuntu Desktop?]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/11/02/notes-how-to-install-stick-notes-to-ubuntu/"/>
+    <updated>2014-11-02T21:36:43+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/11/02/notes-how-to-install-stick-notes-to-ubuntu</id>
+    <content type="html"><![CDATA[<p>I want to sticker notes for my pc, when I search about it, I found <code>sticky notes</code> for <code>Ubuntu 13.10</code> .
+This notes provide to reminder of something like a agenda, when you wrote some notes inside,
+you see always the notes. If you want to add sticker notes you can use below command.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo add-apt-repository ppa:umang/indicator-stickynotes
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo apt-get update
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo apt-get install indicator-stickynotes
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That &rsquo;s it. This notes very helpful for me .</p>
+
+<p>I hope helped to you too.</p>
 ]]></content>
   </entry>
   
@@ -2222,106 +2256,6 @@ then <em>restart rubymine</em> .</li>
 <p>That&rsquo;s all.</p>
 
 <p>I hope solve your problem.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Rails fix undefined local variable or method]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/07/25/rails-fix-undefined-method/"/>
-    <updated>2014-07-25T15:52:35+03:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/07/25/rails-fix-undefined-method</id>
-    <content type="html"><![CDATA[<h3>How to fix rails undefined local variable or method &lsquo;confirmed_at&rsquo; ?</h3>
-
-<p>If you getting like,</p>
-
-<p><img src="../images/rails_undefined_error.png" alt="rails undefined" /></p>
-
-<p> and you thinking <strong>how can I fix ?</strong></p>
-
-<ul>
-<li>Firstly, you need to create migration</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rails g migration add_confirmable
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>then,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake db:migrate
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>When you write above command, you get again error, like</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="o">==</span> 20140725114621 Addconfirmable: <span class="nv">migrating</span> <span class="o">===================================</span>
-</span><span class='line'>-- change_table<span class="o">(</span>:admins<span class="o">)</span>
-</span><span class='line'>rake aborted!
-</span><span class='line'>StandardError: An error has occurred, this and all later migrations canceled:
-</span><span class='line'>undefined method <span class="sb">`</span>confirmable<span class="s1">&#39; for #&lt;ActiveRecord::ConnectionAdapters::Table:0x007f8739d3e2e0&gt;..../db/migrate/20140725114621_addconfirmable.rb:4:in `block in up&#39;</span>
-</span><span class='line'>/Users/...../db/migrate/20140725114621_addconfirmable.rb:3:in <span class="sb">`</span>up<span class="err">&#39;</span>
-</span><span class='line'>Tasks: <span class="nv">TOP</span> <span class="o">=</span>&gt; db:migrate
-</span><span class='line'><span class="o">(</span>See full trace by running task with --trace<span class="o">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Let&rsquo;s fix this bug,</p>
-
-<ul>
-<li>You should open your migration which created and delete</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">t</span><span class="o">.</span><span class="n">confirmable</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>then go to another migration named which</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">.</span><span class="n">.</span><span class="o">.</span><span class="n">.</span><span class="o">/</span><span class="n">devise_create</span> <span class="o">.</span><span class="n">.</span><span class="o">.</span> <span class="o">.</span><span class="n">rb</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>in this file, you should see in comment</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'>  <span class="c1">## Confirmable</span>
-</span><span class='line'>  <span class="c1">## t.string   :confirmation_token</span>
-</span><span class='line'>  <span class="c1">## t.datetime :confirmed_at</span>
-</span><span class='line'>  <span class="c1">## t.datetime :confirmation_sent_at</span>
-</span><span class='line'>  <span class="c1">## t.string   :unconfirmed_email # Only if using reconfirmable</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>you should copy or cut above command without comment to your <code>addconfirmable.rb</code> migration file, instead of <code>t.confirmable</code></p>
-
-<p>Then you can write</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake db:migrate
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>That&rsquo;s all.</p>
-
-<p>I hope fix your bug.</p>
 ]]></content>
   </entry>
   

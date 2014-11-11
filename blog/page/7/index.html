@@ -7,8 +7,7 @@
 <!--<meta name="author" content="<a href=" http://leylaKapi.github.io/about/"> Leyla Kapi </a>"> <!-->
 
 	
-	<meta name="description" content="Write data attributes on HAML ? if you write on haml and use data attribute, 1
-%a{&quot;data-slide&quot; =&gt; &quot;prev&quot;, href: &quot;# &hellip;">
+	<meta name="description" content="How to give effect to arrow like bounce with CSS3 ? You want to use arrow in your web-page with animation like bounce ball. HOW ? Firstly, you &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -86,6 +85,118 @@
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/07/02/bounce-effect-with-css3/">
+		
+			Bounce Effect With CSS3</a>
+	</h2>
+	<div class="entry-content">
+		<h3>How to give effect to arrow like bounce with CSS3 ?</h3>
+
+<p>You want to use arrow in your web-page with animation like bounce ball. <code>HOW ?</code></p>
+
+<p>Firstly, you should use this <code>haml</code> in your code, where you want to use <code>section</code>
+in your page,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nt">%p</span><span class="nc">.scroll-down</span>
+</span><span class='line'>   <span class="nc">.bounce</span>
+</span><span class='line'>     <span class="nt">%a</span><span class="p">{</span><span class="ss">href</span><span class="p">:</span> <span class="s1">&#39;#section2&#39;</span><span class="p">}</span>
+</span><span class='line'>        <span class="nt">%i</span><span class="nc">.fa.fa-angle-double-down.fa-5x</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>In your <code>sass</code> file, you should use</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+</pre></td><td class='code'><pre><code class='sass'><span class='line'><span class="nc">.scroll-down</span>
+</span><span class='line'>    <span class="na">text-align</span><span class="o">:</span> <span class="no">center</span>
+</span><span class='line'>    <span class="na">position</span><span class="o">:</span> <span class="no">absolute</span>
+</span><span class='line'>    <span class="na">z-index</span><span class="o">:</span> <span class="mi">2</span>
+</span><span class='line'>    <span class="na">margin</span><span class="o">:</span> <span class="mi">0</span> <span class="no">auto</span>
+</span><span class='line'><span class="nc">.bounce</span>
+</span><span class='line'>  <span class="na">position</span><span class="o">:</span> <span class="no">fixed</span>
+</span><span class='line'>  <span class="na">left</span><span class="o">:</span> <span class="mi">50</span><span class="kt">%</span>
+</span><span class='line'>  <span class="na">margin-top</span><span class="o">:</span> <span class="mi">-25</span><span class="kt">px</span>
+</span><span class='line'>  <span class="na">margin-left</span><span class="o">:</span> <span class="mi">-25</span><span class="kt">px</span>
+</span><span class='line'>  <span class="na">height</span><span class="o">:</span> <span class="mi">50</span><span class="kt">px</span>
+</span><span class='line'>  <span class="na">width</span><span class="o">:</span> <span class="mi">50</span><span class="kt">px</span>
+</span><span class='line'>  <span class="na">-webkit-animation</span><span class="o">:</span> <span class="n">bounce</span> <span class="mi">1</span><span class="kt">s</span> <span class="n">infinite</span>
+</span><span class='line'><span class="k">@-webkit-keyframes</span> <span class="nt">bounce</span>
+</span><span class='line'>  <span class="nt">0</span><span class="err">%</span>
+</span><span class='line'>    <span class="na">bottom</span><span class="o">:</span> <span class="mi">5</span><span class="kt">px</span>
+</span><span class='line'>  <span class="nt">25</span><span class="err">%</span><span class="o">,</span> <span class="nt">75</span><span class="err">%</span>
+</span><span class='line'>    <span class="na">bottom</span><span class="o">:</span> <span class="mi">15</span><span class="kt">px</span>
+</span><span class='line'>  <span class="nt">50</span><span class="err">%</span>
+</span><span class='line'>    <span class="na">bottom</span><span class="o">:</span> <span class="mi">20</span><span class="kt">px</span>
+</span><span class='line'>  <span class="nt">100</span><span class="err">%</span>
+</span><span class='line'>    <span class="na">bottom</span><span class="o">:</span> <span class="mi">0</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&rsquo;s all!</p>
+
+<p>I hope helped to you.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-02T00:56:56+03:00" pubdate data-updated="true">Jul 2<span>nd</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/animation/'>animation</a>, <a class='category' href='/blog/categories/bounce/'>bounce</a>, <a class='category' href='/blog/categories/css3/'>css3</a>, <a class='category' href='/blog/categories/effect/'>effect</a>, <a class='category' href='/blog/categories/font-awesome/'>font-awesome</a>, <a class='category' href='/blog/categories/haml/'>haml</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/07/02/bounce-effect-with-css3/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -579,72 +690,6 @@ you should use</p>
 </div>
 	
 	<div class="comments"><a href="/blog/2014/05/04/validation-methods/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/04/26/rails-gem/">
-		
-			Rails Attributes: &#8216;Attr_accessible&#8217;</a>
-	</h2>
-	<div class="entry-content">
-		<p>If you get <em>attr_accesible</em>&rsquo;s bug, like</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Undefined method 'attr_accessible'</span></code></pre></td></tr></table></div></figure>
-
-
-<p>You can forget write gem about this attributes, open your <em>Gemfile</em> in project</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;protected-attributes&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Save and open terminal run,</p>
-
-<pre><code>bundle
-</code></pre>
-
-<p>that&rsquo;s fix your bug.</p>
-
-<ul>
-<li>If you want more information , you can visit <a href="https://github.com/rails/protected_attributes">ProtectedAttributesGem</a> .</li>
-</ul>
-
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-04-26T14:44:39+03:00" pubdate data-updated="true">Apr 26<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/attr-accessible/'>attr_accessible</a>, <a class='category' href='/blog/categories/bundle/'>bundle</a>, <a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/04/26/rails-gem/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>

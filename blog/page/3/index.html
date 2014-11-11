@@ -7,8 +7,8 @@
 <!--<meta name="author" content="<a href=" http://leylaKapi.github.io/about/"> Leyla Kapi </a>"> <!-->
 
 	
-	<meta name="description" content="Pdfimages in Ubuntu If you have some pdf files which include images and want to extract all images like a image file,
-you can make it easily. &hellip;">
+	<meta name="description" content="How created your icon-set for your rails project ? Firstly, you should go to icomoon.io website.
+You need to create new app on right-up corner of &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -86,6 +86,116 @@ you can make it easily. &hellip;">
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/09/10/create-icon-set-for-your-rails-project/">
+		
+			Create Icon Set for Your Rails Project</a>
+	</h2>
+	<div class="entry-content">
+		<h3>How created your icon-set for your rails project ?</h3>
+
+<ul>
+<li>Firstly, you should go to <a href="https://icomoon.io/">icomoon.io</a> website.</li>
+<li>You need to create new app on right-up corner of webpage</li>
+<li>Now upload your font-icons after press <code>import icons</code> buttons,</li>
+<li>Be careful, because your fonts format must be <code>svg</code> format,</li>
+<li>When upload your icons, you should rename your icons,</li>
+<li>Now select which rename icons, and go to download your icons,</li>
+<li>When you download icomoon which provide to you with <code>css</code> and <code>js</code> files for font.</li>
+<li>When you are opening which download file, you can see this file and copy <code>font</code> directory and
+paste in your assets for rails projects.</li>
+<li>Go to css file in which download icomoons files, copy <code>css</code> file and paste in your style file
+(If you are using sass or less, you should convert to sass or less).
+Another way, you can create new file in stylesheet folder like</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nt">_icon</span><span class="nc">.css.sass</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>file then paste in this file all icomoon-css. Then you should add your base style file like,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="k">@import</span> <span class="s1">&#39;icon&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now, you can use your icon set in your <code>html</code></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;span</span> <span class="na">class =</span><span class="err"> </span><span class="s">&#39;your_icon_name&#39;</span> <span class="nt">/&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>or <code>haml</code> page like</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nt">%span</span><span class="nc">.your_icon_name</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you want,  you can add some properties like, in your <code>css</code> file for your fonts, maybe you want to change size
+your icons automatically, in your <code>haml</code> file,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nt">%span</span><span class="nc">.bf_mobile.bf-4x</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>like above when you write <code>.bf-4x</code>, your font-size should be 4 times bigger.</p>
+
+<p>in your <code>_icon.css.sass</code></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nc">.bf-4x</span>
+</span><span class='line'>    <span class="nt">font-size</span><span class="o">:</span> <span class="nt">4em</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>like above you can add a lot of properties for your icons and make private for your rails projects.</p>
+
+<p> That&#8217; s all.</p>
+
+<p> I hope helped to you.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-10T17:23:26+03:00" pubdate data-updated="true">Sep 10<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/css/'>css</a>, <a class='category' href='/blog/categories/font/'>font</a>, <a class='category' href='/blog/categories/ico-moon/'>ico-moon</a>, <a class='category' href='/blog/categories/icon-set/'>icon-set</a>, <a class='category' href='/blog/categories/js/'>js</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/09/10/create-icon-set-for-your-rails-project/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -441,91 +551,6 @@ It is very easy.</p>
 </div>
 	
 	<div class="comments"><a href="/blog/2014/08/09/upload-picture-to-rails-app/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/08/08/fix-rake-db-populate/">
-		
-			Fix Rake Db:populate</a>
-	</h2>
-	<div class="entry-content">
-		<h3><code>Rake aborted! Don't know how to build task 'populate'</code></h3>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>rake db:populate
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>or</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>bundle <span class="nb">exec </span>rake db:populate
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>While you were writing above command, you get errors like <code>Don't know how to build task 'populate'</code>.</p>
-
-<p>Let&rsquo;s fix,</p>
-
-<p>Firstly, you should check</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">lib</span><span class="o">/</span><span class="n">tasks</span><span class="o">/</span><span class="n">sample_data</span><span class="o">.</span><span class="n">rb</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>if this file exist, you should rename this file</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">sample_data</span><span class="o">.</span><span class="n">rake</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>then try to run tour rails project.</p>
-
-<ul>
-<li>if not exist, you should create new file in <code>lib/tasks</code> directory, <code>sample_data.rake</code>.</li>
-</ul>
-
-
-<p>That&#8217; s all.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-08-08T10:33:06+03:00" pubdate data-updated="true">Aug 8<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/create/'>create</a>, <a class='category' href='/blog/categories/database/'>database</a>, <a class='category' href='/blog/categories/migration/'>migration</a>, <a class='category' href='/blog/categories/populate/'>populate</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/rake/'>rake</a>, <a class='category' href='/blog/categories/reset/'>reset</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>, <a class='category' href='/blog/categories/sqlite/'>sqlite</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/08/08/fix-rake-db-populate/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>
