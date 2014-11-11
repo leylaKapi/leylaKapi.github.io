@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Notes: How to install sticker-notes to Ubuntu Desktop?"
+title: "Note: How to install sticker-notes to Ubuntu Desktop?"
 date: 2014-11-02 21:36:43 +0200
 comments: true
 categories: stick sticker notes ubuntu pc 
