@@ -4,7 +4,7 @@
   <title><![CDATA[Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-11-23T17:03:17+02:00</updated>
+  <updated>2014-11-23T17:13:00+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[ Leyla Kapi ]]></name>
@@ -278,6 +278,18 @@ For fixing this bug, you should write below commands step by step ,</p>
 <p>That&#8217; s all. For more information <a href="http://www.maketecheasier.com/date-time-missing-ubuntu-1310/">click page</a></p>
 
 <p>I hope helped to you .</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Türkçe Makalelerim]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/11/06/turkce-blog-yazilari/"/>
+    <updated>2014-11-06T00:00:00+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/11/06/turkce-blog-yazilari</id>
+    <content type="html"><![CDATA[<p>Uzun zamandır düşündüğüm bloguma türkçe destek eklemekti. Bunun nedeni ise birçok yabancı konunun (yazılım anlamında) türkçe desteğinin olmamasıdır.
+Umarım faydalı olur.</p>
+
+<p>Teşekkür ederim.</p>
 ]]></content>
   </entry>
   
@@ -2115,147 +2127,6 @@ then <em>restart rubymine</em> .</li>
 
 
 <p>That&#8217; s all.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Fix after destroy user model try add user model]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/07/27/fix-after-destroy-user-model-try-add-user-model/"/>
-    <updated>2014-07-27T14:34:26+03:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/07/27/fix-after-destroy-user-model-try-add-user-model</id>
-    <content type="html"><![CDATA[<p>After you made <code>rails destroy Users</code> and you want to create again <code>User</code> model, When you create, if you&#8217; re getting like this error,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-<span class='line-number'>46</span>
-<span class='line-number'>47</span>
-<span class='line-number'>48</span>
-<span class='line-number'>49</span>
-<span class='line-number'>50</span>
-<span class='line-number'>51</span>
-<span class='line-number'>52</span>
-<span class='line-number'>53</span>
-<span class='line-number'>54</span>
-<span class='line-number'>55</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>leylakapicmd@leylakapicmd:~/workspace/project-library<span class="nv">$ </span>rails g model User provider uid name oauth_token
-</span><span class='line'> /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/inflector/methods.rb:238:in const_get: uninitialized constant User <span class="o">(</span>NameError<span class="o">)</span>
-</span><span class='line'><span class="nv">$ </span>leylakapicmd@leylakapicmd:~/workspace/project-library<span class="nv">$ </span>rails g model User
-</span><span class='line'>/home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/inflector/methods.rb:238:inconst_get<span class="s1">&#39;: uninitialized constant User (NameError)</span>
-</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/inflector/methods.rb:238:inblock in constantize&#39;</span>
-</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/inflector/methods.rb:236:ineach<span class="s1">&#39;</span>
-</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/inflector/methods.rb:236:ininject&#39;</span>
-</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/inflector/methods.rb:236:inconstantize<span class="s1">&#39;</span>
-</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise.rb:297:inget&#39;</span>
-</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise/mapping.rb:77:into<span class="s1">&#39;</span>
-</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise/mapping.rb:72:inmodules&#39;</span>
-</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise/mapping.rb:89:inroutes<span class="s1">&#39;</span>
-</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise/mapping.rb:156:indefault_used_route&#39;</span>
-</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise/mapping.rb:66:ininitialize<span class="s1">&#39;</span>
-</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise.rb:331:innew&#39;</span>
-</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise.rb:331:inadd_mapping<span class="s1">&#39;</span>
-</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise/rails/routes.rb:221:inblock in devise_for&#39;</span>
-</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise/rails/routes.rb:220:ineach<span class="s1">&#39;</span>
-</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise/rails/routes.rb:220:indevise_for&#39;</span>
-</span><span class='line'>from /home/leylakapicmd/workspace/project-library/config/routes.rb:3:inblock in &lt;top <span class="o">(</span>required<span class="o">)</span>&gt;<span class="s1">&#39;</span>
-</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/routing/route_set.rb:335:ininstance_exec&#39;</span>
-</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/routing/route_set.rb:335:ineval_block<span class="s1">&#39;</span>
-</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/routing/route_set.rb:313:indraw&#39;</span>
-</span><span class='line'>from /home/leylakapicmd/workspace/project-library/config/routes.rb:1:in&lt;top <span class="o">(</span>required<span class="o">)</span>&gt;<span class="s1">&#39;</span>
-</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/application/routes_reloader.rb:40:inblock in load_paths&#39;</span>
-</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/application/routes_reloader.rb:40:ineach<span class="s1">&#39;</span>
-</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/application/routes_reloader.rb:40:inload_paths&#39;</span>
-</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/application/routes_reloader.rb:16:inreload!<span class="s1">&#39;</span>
-</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/application/routes_reloader.rb:26:inblock in updater&#39;</span>
-</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/file_update_checker.rb:75:incall<span class="s1">&#39;</span>
-</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/file_update_checker.rb:75:inexecute&#39;</span>
-</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/application/routes_reloader.rb:27:inupdater<span class="s1">&#39;</span>
-</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/application/routes_reloader.rb:7:inexecute_if_updated&#39;</span>
-</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/application/finisher.rb:71:inblock in &lt;module:Finisher&gt;<span class="s1">&#39;</span>
-</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/initializable.rb:30:ininstance_exec&#39;</span>
-</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/initializable.rb:30:inrun<span class="s1">&#39;</span>
-</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/initializable.rb:55:inblock in run_initializers&#39;</span>
-</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/2.0.0/tsort.rb:150:inblock in tsort_each<span class="s1">&#39;</span>
-</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/2.0.0/tsort.rb:183:inblock (2 levels) in each_strongly_connected_component&#39;</span>
-</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/2.0.0/tsort.rb:219:ineach_strongly_connected_component_from<span class="s1">&#39;</span>
-</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/2.0.0/tsort.rb:182:inblock in each_strongly_connected_component&#39;</span>
-</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/2.0.0/tsort.rb:180:ineach<span class="s1">&#39;</span>
-</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/2.0.0/tsort.rb:180:ineach_strongly_connected_component&#39;</span>
-</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/2.0.0/tsort.rb:148:intsort_each<span class="s1">&#39;</span>
-</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/initializable.rb:54:inrun_initializers&#39;</span>
-</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/application.rb:288:ininitialize!<span class="s1">&#39;</span>
-</span><span class='line'><span class="s1">from /home/leylakapicmd/workspace/project-library/config/environment.rb:5:in&lt;top (required)&gt;&#39;</span>
-</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/application.rb:264:inrequire_environment!<span class="s1">&#39;</span>
-</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/commands/commands_tasks.rb:147:inrequire_application_and_environment!&#39;</span>
-</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/commands/commands_tasks.rb:133:ingenerate_or_destroy<span class="s1">&#39;</span>
-</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/commands/commands_tasks.rb:51:ingenerate&#39;</span>
-</span><span class='line'>from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/commands/commands_tasks.rb:40:inrun_command!<span class="s1">&#39;</span>
-</span><span class='line'><span class="s1">from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/commands.rb:17:in&lt;top (required)&gt;&#39;</span>
-</span><span class='line'>from bin/rails:4:inrequire<span class="s1">&#39;</span>
-</span><span class='line'><span class="s1">from bin/rails:4:in&lt;main&gt;&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>You need to remove  <code>devise_for :users</code> from <code>routes.rb</code>, then try generate and you don&rsquo;t forget made  <code>rake:db migrate</code>.</p>
-
-<p>After <code>migrate</code>, if you have new error from <code>db</code>, you can make this command with orderly.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake db:drop
-</span><span class='line'>rake db:create
-</span><span class='line'>rake db:reset
-</span><span class='line'>rake db:migrate
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>That&rsquo;s all.</p>
-
-<p>I hope solve your problem.</p>
 ]]></content>
   </entry>
   

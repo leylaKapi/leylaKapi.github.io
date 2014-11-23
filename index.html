@@ -468,6 +468,52 @@ For fixing this bug, you should write below commands step by step ,</p>
     <article class="post">
 	<h2 class="title">
 		
+		<a href="/blog/2014/11/06/turkce-blog-yazilari/">
+		
+			Türkçe Makalelerim</a>
+	</h2>
+	<div class="entry-content">
+		<p>Uzun zamandır düşündüğüm bloguma türkçe destek eklemekti. Bunun nedeni ise birçok yabancı konunun (yazılım anlamında) türkçe desteğinin olmamasıdır.
+Umarım faydalı olur.</p>
+
+<p>Teşekkür ederim.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-11-06T00:00:00+02:00" pubdate data-updated="true">Nov 6<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/blog/'>blog</a>, <a class='category' href='/blog/categories/blogger/'>blogger</a>, <a class='category' href='/blog/categories/tr/'>tr</a>, <a class='category' href='/blog/categories/turkce/'>türkçe</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/11/06/turkce-blog-yazilari/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
 		<a href="/blog/2014/11/02/note-how-to-install-stick-notes-to-ubuntu/">
 		
 			Note: How to Install Sticker-notes to Ubuntu Desktop?</a>
@@ -528,139 +574,6 @@ you see always the notes. If you want to add sticker notes you can use below com
 </div>
 	
 	<div class="comments"><a href="/blog/2014/11/02/note-how-to-install-stick-notes-to-ubuntu/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/10/27/how-to-add-multi-lingual-support-to-your-web-page-in-middleman/">
-		
-			How to Add Multi-lingual Support to Your Web-page in Middleman</a>
-	</h2>
-	<div class="entry-content">
-		<h3>Multi-Lingual Support</h3>
-
-<p>Firstly you should create middleman project , if doesn&rsquo;t exist it. Then in your project,
-open <code>config.rb</code>  file add below code,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">activate</span> <span class="ss">:i18n</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>when you add above code, you can active to <code>:i18n</code>. <code>i18n</code> extension provides a way to localize your site.
-After that you should add path of your locale directories in your project roots <code>~/MyProject/locales</code> directory and code
-should be seems like below</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">activate</span> <span class="ss">:i18n</span><span class="p">,</span> <span class="ss">:path</span> <span class="o">=&gt;</span> <span class="s2">&quot;/:locale/&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>But before above command you should create new directory in your root of your project. Means of above code, created
-locale directory which including languages <code>yaml</code> files.</p>
-
-<p>Then you should add root of your project according to your page language. If you want to seems to your page in english
-languages, you should add below code according to yml file in <code>~/MyProject/locales/en.yml</code>,
-if it is exist, you can write below code in <code>config.rb</code>,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">activate</span> <span class="ss">:i18n</span><span class="p">,</span> <span class="ss">:path</span> <span class="o">=&gt;</span> <span class="s2">&quot;/:locale/&quot;</span><span class="p">,</span> <span class="ss">:mount_at_root</span> <span class="o">=&gt;</span> <span class="ss">:en</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Now your page always seems in english language, but if write in address bar like <code>/es/index.html</code>, you can see in
-spanish languages, if there is exist in locales directory <code>es.yml</code> file.</p>
-
-<p>According to above,  you want to change language of your page according to your place, for example, if your page was opened in Italy,
-automatically shows your page in italian language, you can write instead of above,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">activate</span> <span class="ss">:i18n</span><span class="p">,</span> <span class="ss">:path</span> <span class="o">=&gt;</span> <span class="s2">&quot;/:locale/&quot;</span><span class="p">,</span> <span class="ss">:mount_at_root</span> <span class="o">=&gt;</span> <span class="kp">false</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>You can be carefully according to above, <code>false</code> and <code>:en</code>, because these codes provide to seems your page in root which language.</p>
-
-<p>If you created <code>locale</code> directory in root of your project, you can add which languages you want, to seem your page view,
-for example I want to seems my page in russian language, because of this I should create in locale directories <code>ru.yml</code> file.
-or want see in english language, can be <code>en.yml</code>. In <code>en.yml</code> you start to add your sentence like</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='yaml'><span class='line'><span class="nn">---</span>
-</span><span class='line'><span class="l-Scalar-Plain">en</span><span class="p-Indicator">:</span>
-</span><span class='line'>  <span class="l-Scalar-Plain">hello</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Hello</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>and</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='yaml'><span class='line'><span class="nn">---</span>
-</span><span class='line'><span class="l-Scalar-Plain">ru</span><span class="p-Indicator">:</span>
-</span><span class='line'>   <span class="l-Scalar-Plain">hello</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">привет</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>When create your yaml file like above, I want to page seems in russian and english because I created two yaml file
-one of the <code>en.yml</code> another of <code>ru.yml</code> .</p>
-
-<p>Then you should go to source directory in project than create <code>~/MyProject/source/localizable/</code> folder in source directory,
-after you should copy your <code>index.html.erb</code> or if your use <code>haml</code>, copy your <code>index.html.haml</code> to inside <code>~/MyProject/source/localizable/</code>
-folder. You should change sentences or words in your project according to yml file. While you are doing this you
-can be <code>t</code> parameter for can be shortly instead of <code>i18n</code>. According to above yml files, if I change words or sentence
-in <code>index.html.haml</code> , can be like</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="p">=</span> <span class="n">t</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>After when running your project, middleman thanks to <code>i18n</code> perceive automatically. if in address bar
-write <code>/ru/index.html</code>, <code>i18n</code> according to <code>ru.yml</code> changed your words and sentences or if you write <code>en/index.html</code>,
-changed according to <code>en.yml</code> file.</p>
-
-<p>For more information you look at <a href="http://middlemanapp.com/advanced/localization/">home page</a></p>
-
-<p>That&rsquo;s all.</p>
-
-<p>I hope helped to you.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-10-27T00:00:00+02:00" pubdate data-updated="true">Oct 27<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/i18n/'>i18n</a>, <a class='category' href='/blog/categories/languages/'>languages</a>, <a class='category' href='/blog/categories/locales/'>locales</a>, <a class='category' href='/blog/categories/localization/'>localization</a>, <a class='category' href='/blog/categories/middleman/'>middleman</a>, <a class='category' href='/blog/categories/page/'>page</a>, <a class='category' href='/blog/categories/yml/'>yml</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/10/27/how-to-add-multi-lingual-support-to-your-web-page-in-middleman/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>

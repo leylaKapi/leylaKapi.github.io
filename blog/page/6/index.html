@@ -7,7 +7,7 @@
 <!--<meta name="author" content="<a href=" http://leylaKapi.github.io/about/"> Leyla Kapi </a>"> <!-->
 
 	
-	<meta name="description" content="When you start to project, which gems are useful ? When you start a rails project, you can use these gems which useful for project. Gems are like, &hellip;">
+	<meta name="description" content="How can you add simple search form to rails project ? You want to add search form, but you don&rsquo;t no. HOW? Let&rsquo;s start, firstly you &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -92,6 +92,91 @@
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/07/16/add-search-form-to-rails-projects/">
+		
+			Add Simple Search Form to Rails Projects</a>
+	</h2>
+	<div class="entry-content">
+		<h3>How can you add simple search form to rails project ?</h3>
+
+<p>You want to add search form, but you don&rsquo;t no.  <em>HOW?</em></p>
+
+<p>Let&rsquo;s start, firstly you should use <a href="https://github.com/activerecord-hackery/ransack">ransack</a> and
+<a href="https://github.com/mislav/will_paginate">will_paginate</a> gems in your <code>Gemfile</code> then you should write in
+terminal <code>bundle</code> .</p>
+
+<p>Then open controller which you want to add search bar, like ;</p>
+
+<p><code>projects_controller</code></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">index</span>
+</span><span class='line'>    <span class="vi">@search</span> <span class="o">=</span> <span class="no">Project</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">params</span><span class="o">[</span><span class="ss">:q</span><span class="o">]</span><span class="p">)</span>
+</span><span class='line'>    <span class="vi">@project</span> <span class="o">=</span> <span class="vi">@search</span><span class="o">.</span><span class="n">result</span><span class="p">(</span><span class="ss">distinct</span><span class="p">:</span> <span class="kp">true</span><span class="p">)</span><span class="o">.</span><span class="n">paginate</span><span class="p">(</span><span class="ss">:page</span> <span class="o">=&gt;</span> <span class="n">params</span><span class="o">[</span><span class="ss">:page</span><span class="o">]</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">respond_with</span> <span class="vi">@project</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>When you added controller, you should add below code which relation to index file ;</p>
+
+<p><code>projects/index.html.haml</code></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="p">=</span> <span class="n">search_form_for</span> <span class="vi">@search</span> <span class="k">do</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span>
+</span><span class='line'>    <span class="p">=</span> <span class="n">f</span><span class="o">.</span><span class="n">label</span> <span class="ss">:name_cont</span>
+</span><span class='line'>    <span class="p">=</span> <span class="n">f</span><span class="o">.</span><span class="n">search_field</span> <span class="ss">:name_cont</span>
+</span><span class='line'>    <span class="p">=</span> <span class="n">f</span><span class="o">.</span><span class="n">submit</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&rsquo;s all .</p>
+
+<p>I hope helped to you .</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-16T19:47:15+03:00" pubdate data-updated="true">Jul 16<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/controller/'>controller</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/form/'>form</a>, <a class='category' href='/blog/categories/model/'>model</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>, <a class='category' href='/blog/categories/search/'>search</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/07/16/add-search-form-to-rails-projects/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -486,77 +571,6 @@ I hope helped to you.</p>
 </div>
 	
 	<div class="comments"><a href="/blog/2014/07/06/git-stash/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/07/03/html5-canvas-javascript/">
-		
-			HTML5 Canvas Javascript</a>
-	</h2>
-	<div class="entry-content">
-		<h3>Which libraries should I use in javascript for game development ?</h3>
-
-<p>When I looking for javascript library, I found some library is used <code>HTML5 Canvas Javascript</code> library
-for game development.</p>
-
-<p>This library provide to <code>build and animate</code> to game project. I found some Html5 canvas javascript libraries :</p>
-
-<ul>
-<li><a href="http://hyperandroid.github.io/CAAT/">Canvas Advanced Animation Toolkit</a></li>
-<li><a href="http://kineticjs.com/">Kinetic.js</a></li>
-<li><a href="http://fabricjs.com/">Fabric.js</a></li>
-<li><a href="http://craftyjs.com/">Crafty.js</a></li>
-<li><a href="http://www.createjs.com/">Create.js</a></li>
-<li><a href="http://www.createjs.com/#!/EaselJS">Easel.js</a></li>
-<li><a href="http://ocanvas.org/">oCanvas</a></li>
-<li><a href="http://paperjs.org/">Paper.js</a></li>
-<li><a href="http://processingjs.org/">Processing.js</a></li>
-<li><a href="http://threejs.org/">Three.js</a></li>
-<li><a href="http://jawsjs.com/">Jaws.js</a></li>
-<li><a href="http://impactjs.com/">Impact.js</a></li>
-<li><a href="http://www.limejs.com/">Lime.js</a></li>
-<li><a href="http://melonjs.org/">Melon.js</a></li>
-</ul>
-
-
-<p>If you want to researches with details, you can visit <a href="http://lab2023.com/html5_canvas_javascript_libraries.html">this page</a> .</p>
-
-<p>That&rsquo;s all .
-I hope helped to you .</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-07-03T16:10:34+03:00" pubdate data-updated="true">Jul 3<span>rd</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/canvas/'>canvas</a>, <a class='category' href='/blog/categories/development/'>development</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/frameworks/'>frameworks</a>, <a class='category' href='/blog/categories/game/'>game</a>, <a class='category' href='/blog/categories/html5/'>html5</a>, <a class='category' href='/blog/categories/javascript/'>javascript</a>, <a class='category' href='/blog/categories/libraries/'>libraries</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/07/03/html5-canvas-javascript/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>

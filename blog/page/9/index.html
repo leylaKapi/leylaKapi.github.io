@@ -7,7 +7,7 @@
 <!--<meta name="author" content="<a href=" http://leylaKapi.github.io/about/"> Leyla Kapi </a>"> <!-->
 
 	
-	<meta name="description" content="How I recreate octopress blog another computer ? I formatted my computer and then for my octopress blog What can I do ? reinstall or WHAT? In this &hellip;">
+	<meta name="description" content="How is the internet working ? Internet like in real life, There are two sides for internet communication. While one of this is making request, &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -92,6 +92,143 @@
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/04/20/how-is-the-internet-working-and-what-is-the-protocols/">
+		
+			How Is the Internet Working and What Is the Protocols</a>
+	</h2>
+	<div class="entry-content">
+		<h3>How is the internet working ?</h3>
+
+<p>Internet like in real life, There are two sides for internet communication. While one of this is making request, another of this
+have to respond to this request. This loop is named</p>
+
+<pre><code>request - respond
+</code></pre>
+
+<p>or</p>
+
+<pre><code>client-server
+</code></pre>
+
+<p>Web relation client &ndash; server</p>
+
+<p><strong>client</strong> => <strong>server</strong></p>
+
+<pre><code>     request
+</code></pre>
+
+<p><strong>client</strong> &lt;= <strong>server</strong></p>
+
+<pre><code>     respond
+</code></pre>
+
+<p>Now, I try to explain when it occur this relation, Which process do occur?</p>
+
+<ul>
+<li><p>This process can be with protocols, protocols What?</p>
+
+<ul>
+<li>Protocols, like rules, this means that ; there are rules for connection two computer(client-server) each other to
+internet.This rules are named protocols.</li>
+</ul>
+</li>
+<li><p>There are many type of Protocols like HTTP(Hyper Text Transfer Protocols), TCP(Transmission Control Protocols),
+UDP(User Dtagram Protocol), SSL(Secure Socket Layer), TLS(Transport Layer Security),FTP(File Transfer Protocols) &hellip;etc.</p>
+
+<p>I try to explain several of the above protocols.</p></li>
+<li><p>HTTP (Hyper Text Transfer Protocol)</p></li>
+</ul>
+
+
+<p>HTTP is which distribute in a source, which access to everyone for apply to hyper information system like text, graphics, video ..etc
+In brief HTTP is a set of rules.
+Also The means of name that, When we transferring text using this protocols.</p>
+
+<p>In World using the default port number, showing like this <em>:80</em> . When we write url, automatically added to ending of URL,but it
+is hidden.</p>
+
+<ul>
+<li>TCP (Transmission Control Protocol)</li>
+</ul>
+
+
+<p>TCP provide to security of data exchange. The clients create a contact with each other, in this contact provide to data exchange
+and data transmitted in the correct order. Then TCP controlled to data whether it has reached by sending a message.
+ It is very slow, because controlled data step by step.</p>
+
+<ul>
+<li>UDP (User Datagram Protocol)</li>
+</ul>
+
+
+<p>UDP is fast transmission data according to TCP but unsafe data . The aim is fast. If we compare with TCP. TCP and UDP similar
+but TCP is very slow. If sending <em>.rar</em> or <em>.zip</em> files, should use TCP because data is important. if you send to video,
+should use UDP because fast is important.</p>
+
+<ul>
+<li>SSL (Secure Socket Layer)</li>
+</ul>
+
+
+<p>SSl development for provide secuirty and privacy of transmission data on network. In SSL, before sending to information
+encrypted, only decrypted by computer which receiver. This provide privacy data exchange.</p>
+
+<pre><code>https  # 's' means that security .
+</code></pre>
+
+<ul>
+<li>TLS (Transport Layer Security)</li>
+</ul>
+
+
+<p>TLS similar to SSL. Differences to SSL is that, process of connection occur simple and without encryption, when data transmission can be done,
+security certificate engaged and then can be security.</p>
+
+<ul>
+<li><p>URL (Uniform Resources Locator)</p>
+
+<p> access_method//:server_name[:port]/site</p></li>
+</ul>
+
+
+<p>I hope this article help you for understanding internet works</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-20T02:00:37+03:00" pubdate data-updated="true">Apr 20<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/http/'>HTTP</a>, <a class='category' href='/blog/categories/https/'>HTTPS</a>, <a class='category' href='/blog/categories/ssl/'>SSL</a>, <a class='category' href='/blog/categories/tcp/'>TCP</a>, <a class='category' href='/blog/categories/tls/'>TLS</a>, <a class='category' href='/blog/categories/udp/'>UDP</a>, <a class='category' href='/blog/categories/url/'>URL</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/internet/'>internet</a>, <a class='category' href='/blog/categories/protocols/'>protocols</a>, <a class='category' href='/blog/categories/working/'>working</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/04/20/how-is-the-internet-working-and-what-is-the-protocols/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -1450,115 +1587,6 @@ application.coffee
 </div>
 	
 	<div class="comments"><a href="/blog/2014/03/22/how-create-tree-list-menu-with-haml/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/03/22/how-to-change-dns-settings-on-ubuntu-desktop/">
-		
-			How to Change DNS Settings on Ubuntu Desktop?</a>
-	</h2>
-	<div class="entry-content">
-		<h3>How to change DNS settings (ip address) or How to set up Google public DNS for Ubuntu Desktop?</h3>
-
-<p>Firstly, we should look at Google Public DNS.</p>
-
-<h5>What is the Google Public DNS?</h5>
-
-<p>Google DNS created by Prem Ramaswami at 2009 . Google Public DNS provide to free DNS settings.
-Without DNS, it wil be difficult to know IP address of websites which visit daily.</p>
-
-<h5>How to change DNS settings ?</h5>
-
-<p>Open terminal in Ubuntu Desktop with</p>
-
-<pre><code>CTRL + ALT + T
-</code></pre>
-
-<p>and run this command</p>
-
-<pre><code>sudo gedit /etc/dhcp/dhclient.conf
-</code></pre>
-
-<p>opened gedit file and find</p>
-
-<pre><code>prepend domain_name_servers
-</code></pre>
-
-<p>then changed to</p>
-
-<pre><code>prepend domain_name_servers 8.8.8.8, 8.8.4.4;
-</code></pre>
-
-<p>and save &ndash; restart computer.</p>
-
-<p>Now, you should go to</p>
-
-<pre><code>System settings -&gt; Network
-</code></pre>
-
-<p>or</p>
-
-<pre><code>Right click on Network Manager
-    Edit Connection
-        Wired Connection 1
-</code></pre>
-
-<p>select Wired</p>
-
-<pre><code>IPv4 Settings
-</code></pre>
-
-<p>change <em>Method</em> to</p>
-
-<pre><code>Automatic (DHCP) address only
-</code></pre>
-
-<p>and restore DNS</p>
-
-<pre><code>DNS Servers: 8.8.8.8, 8.8.4.4
-</code></pre>
-
-<p>then save.</p>
-
-<p>I try to explain change DNS Server and set up google public DNS on Ubuntu Desktop. I wish help you.</p>
-
-<p>That&rsquo;s it.</p>
-
-<p>I try to explain shortly DNS, I hope, this article helped to you .</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-22T15:17:32+02:00" pubdate data-updated="true">Mar 22<span>nd</span>, 2014</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/dns/'>DNS,</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/ip/'>ip</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/03/22/how-to-change-dns-settings-on-ubuntu-desktop/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>
