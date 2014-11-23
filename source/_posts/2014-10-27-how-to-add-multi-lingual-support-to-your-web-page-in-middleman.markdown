@@ -3,7 +3,7 @@ layout: post
 title: "How to add multi-lingual support to your web-page in middleman"
 date: 2014-10-27 
 comments: true
-categories: languages page middleman i18n locales yml localization
+categories: languages page middleman i18n locales yml localization en
 ---
 
 ### Multi-Lingual Support

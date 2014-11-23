@@ -3,7 +3,7 @@ layout: post
 title: "Add simple search form to rails projects"
 date: 2014-07-16 19:47:15 +0300
 comments: true
-categories: rails search form ruby model controller
+categories: rails search form ruby model controller en
 ---
 
 ### How can you add simple search form to rails project ?

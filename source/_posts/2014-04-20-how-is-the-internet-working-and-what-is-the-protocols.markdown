@@ -3,7 +3,7 @@ layout: post
 title: "How is the internet working and what is the protocols"
 date: 2014-04-20 02:00:37 +0300
 comments: true
-categories: internet working protocols HTTP HTTPS TCP UDP SSL TLS URL
+categories: internet working protocols HTTP HTTPS TCP UDP SSL TLS URL en
 ---
 
 ###How is the internet working ?

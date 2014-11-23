@@ -3,7 +3,7 @@ layout: post
 title: "How to make a release ?"
 date: 2014-07-10 19:01:26 +0300
 comments: true
-categories: git gitHub release
+categories: git gitHub release en
 ---
 
 Make a release

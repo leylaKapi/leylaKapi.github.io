@@ -3,7 +3,7 @@ layout: post
 title: "Fix rake db:populate"
 date: 2014-08-08 10:33:06 +0300
 comments: true
-categories: rails rake database sqlite ruby populate migration reset create
+categories: rails rake database sqlite ruby populate migration reset create en
 ---
 
 

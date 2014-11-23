@@ -3,7 +3,7 @@ layout: post
 title: "Git Stash"
 date: 2014-07-06 19:12:29 +0300
 comments: true
-categories: git gitHub stash VCS git-flow
+categories: git gitHub stash VCS git-flow en
 ---
 
 ### Command of Git Stash

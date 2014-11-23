@@ -3,7 +3,7 @@ layout: post
 title: "Ruby on Rails MVC"
 date: 2014-04-24 00:25:52 +0300
 comments: true
-categories: ruby, rails, mvc
+categories: ruby, rails, mvc en
 ---
 
 ### MVC in Ruby on Rails

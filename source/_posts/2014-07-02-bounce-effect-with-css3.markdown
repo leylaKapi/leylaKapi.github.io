@@ -3,7 +3,7 @@ layout: post
 title: "Bounce effect with CSS3"
 date: 2014-07-02 00:56:56 +0300
 comments: true
-categories: bounce effect animation font-awesome css3 haml
+categories: bounce effect animation font-awesome css3 haml en
 ---
 
 ### How to give effect to arrow like bounce with CSS3 ?

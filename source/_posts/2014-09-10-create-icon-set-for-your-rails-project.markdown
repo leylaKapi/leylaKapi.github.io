@@ -3,7 +3,7 @@ layout: post
 title: "Create icon set for your rails project"
 date: 2014-09-10 17:23:26 +0300
 comments: true
-categories: rails icon-set ico-moon font css js  
+categories: rails icon-set ico-moon font css js en  
 ---
 
 ### How created your icon-set for your rails project ?

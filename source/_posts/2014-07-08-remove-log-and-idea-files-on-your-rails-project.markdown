@@ -3,7 +3,7 @@ layout: post
 title: "Remove log and idea files on your Rails Project"
 date: 2014-07-08 01:53:53 +0300
 comments: true
-categories: log idea git gitHub rails gitignore
+categories: log idea git gitHub rails gitignore en
 ---
 
 ### How to remove log and idea files on your project ?

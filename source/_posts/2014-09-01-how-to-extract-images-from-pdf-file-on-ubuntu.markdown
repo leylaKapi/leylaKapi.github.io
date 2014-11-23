@@ -3,7 +3,7 @@ layout: post
 title: "How to extract images from pdf file on Ubuntu Desktop ?"
 date: 2014-09-01 
 comments: true
-categories: ubuntu pdf files images pdfimages
+categories: ubuntu pdf files images pdfimages en
 ---
 
 ### Pdfimages in Ubuntu

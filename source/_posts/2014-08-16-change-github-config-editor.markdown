@@ -3,7 +3,7 @@ layout: post
 title: "Change github config editor"
 date: 2014-08-16 22:28:27 +0300
 comments: true
-categories: git gitHub editor vim vi nano 
+categories: git gitHub editor vim vi nano en 
 ---
 
 ### How to change github global core editor ?

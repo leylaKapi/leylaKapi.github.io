@@ -3,7 +3,7 @@ layout: post
 title: "Ubuntu 13.10 : Missing date and time in the menu bar"
 date: 2014-11-07 17:15:38 +0200
 comments: true
-categories: ubuntu linux date time menu pc bug
+categories: ubuntu linux date time menu pc bug en
 ---
 
 ### Fix date/time in menu bar

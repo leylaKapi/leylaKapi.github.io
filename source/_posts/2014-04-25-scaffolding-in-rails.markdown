@@ -3,7 +3,7 @@ layout: post
 title: "Scaffolding in Rails"
 date: 2014-04-25 00:21:58 +0300
 comments: true
-categories: scaffold rails rake
+categories: scaffold rails rake en
 ---
 
 In this post, I try to explain scaffolding in rails shortly.

@@ -3,7 +3,7 @@ layout: post
 title: "Middleman create haml file"
 date: 2014-02-27 13:49:10 +0200
 comments: true
-categories: Middleman, Haml
+categories: Middleman, Haml en
 ---
 
 ### How to create .haml file in middleman?

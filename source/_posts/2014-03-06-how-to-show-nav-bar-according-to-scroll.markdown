@@ -3,7 +3,7 @@ layout: post
 title: "How to show nav-bar according to scroll"
 date: 2014-03-06 19:30:31 +0200
 comments: true
-categories: javascript, jquery, CSS, HTML
+categories: javascript, jquery, CSS, HTML en
 ---
 
 

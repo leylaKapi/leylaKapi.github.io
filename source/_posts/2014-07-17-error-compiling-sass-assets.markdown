@@ -3,7 +3,7 @@ layout: post
 title: "Error compiling sass assets"
 date: 2014-07-17 16:27:24 +0300
 comments: true
-categories: middleman sass bootstrap compiling assets
+categories: middleman sass bootstrap compiling assets en
 ---
 
 ### Middleman sass compiling error

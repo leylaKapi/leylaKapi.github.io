@@ -3,7 +3,7 @@ layout: post
 title: "Markdown article some style"
 date: 2014-02-26 17:59:49 +0200
 comments: true
-categories: Markdown
+categories: Markdown en
 ---
 
 ## Write article with markdown

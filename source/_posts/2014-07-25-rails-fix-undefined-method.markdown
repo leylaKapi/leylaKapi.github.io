@@ -3,7 +3,7 @@ layout: post
 title: "Rails fix undefined local variable or method"
 date: 2014-07-25 15:52:35 +0300
 comments: true
-categories: rails fix bug local confirmed_at variable method migration generate
+categories: rails fix bug local confirmed_at variable method migration generate en
 ---
 
 ### How to fix rails undefined local variable or method 'confirmed_at' ?

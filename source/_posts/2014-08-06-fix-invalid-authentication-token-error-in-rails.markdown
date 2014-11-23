@@ -3,7 +3,7 @@ layout: post
 title: "Fix Invalid Authentication Token error in rails"
 date: 2014-08-06 23:49:35 +0300
 comments: true
-categories: rails controller authentication gem ajax 
+categories: rails controller authentication gem ajax en
 ---
 
 ### How to fix `ActionController: InvalidAuthentication Token error` ?

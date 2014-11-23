@@ -3,7 +3,7 @@ layout: post
 title: "Install open-jdk or oracle on Ubuntu"
 date: 2014-08-03 23:25:29 +0300
 comments: true
-categories: jdk java openjdk oracle install ubuntu linux
+categories: jdk java openjdk oracle install ubuntu linux en
 ---
 
 ### Note about installation of java on Ubuntu computer

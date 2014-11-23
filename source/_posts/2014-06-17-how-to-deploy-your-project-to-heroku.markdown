@@ -3,7 +3,7 @@ layout: post
 title: "How to deploy your project to Heroku ?"
 date: 2014-06-17 16:10:38 +0300
 comments: true
-categories: project rails heroku deploy
+categories: project rails heroku deploy en
 ---
 
 ### Deploy to Heroku

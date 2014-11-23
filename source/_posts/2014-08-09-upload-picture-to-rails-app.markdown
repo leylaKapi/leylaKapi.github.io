@@ -3,7 +3,7 @@ layout: post
 title: "Upload picture to rails app"
 date: 2014-08-09 13:03:08 +0300
 comments: true
-categories: rails paperclip gem picture upload
+categories: rails paperclip gem picture upload en
 ---
 
 ### How to upload picture in rails app ?

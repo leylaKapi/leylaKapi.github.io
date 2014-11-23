@@ -3,7 +3,7 @@ layout: post
 title: "Note: How to install sticker-notes to Ubuntu Desktop?"
 date: 2014-11-02 21:36:43 +0200
 comments: true
-categories: stick sticker notes ubuntu pc 
+categories: stick sticker notes ubuntu pc en 
 ---
 
 I want to sticker notes for my pc, when I search about it, I found `sticky notes` for `Ubuntu 13.10` .

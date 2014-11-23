@@ -3,7 +3,7 @@ layout: post
 title: "Recreate octopress blog for another computer"
 date: 2014-04-19 22:13:18 +0300
 comments: true
-categories: octopress recreate computer
+categories: octopress recreate computer en
 ---
 
 ###How I recreate octopress blog another computer ?

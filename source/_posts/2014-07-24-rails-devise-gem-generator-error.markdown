@@ -3,7 +3,7 @@ layout: post
 title: "Rails devise gem generator error"
 date: 2014-07-24 15:36:48 +0300
 comments: true
-categories: rails devise gem Gemfile error bug  generate install
+categories: rails devise gem Gemfile error bug  generate install en
 ---
 
 ### How to fix rails devise gem generate bug?

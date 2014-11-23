@@ -3,7 +3,7 @@ layout: post
 title: "Fix after destroy user model try add user model"
 date: 2014-07-27 14:34:26 +0300
 comments: true
-categories: rails g destroy User devise
+categories: rails g destroy User devise en
 ---
 
 

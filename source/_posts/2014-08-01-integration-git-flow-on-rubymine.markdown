@@ -3,7 +3,7 @@ layout: post
 title: "Integration git-flow on Rubymine"
 date: 2014-08-01 23:02:42 +0300
 comments: true
-categories: git git-flow gitHub ruby rubymine note
+categories: git git-flow gitHub ruby rubymine note en
 ---
 
 ### How to integration git-flow on Rubymine ?

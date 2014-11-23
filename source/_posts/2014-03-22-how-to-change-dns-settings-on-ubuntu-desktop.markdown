@@ -3,7 +3,7 @@ layout: post
 title: "How to change DNS settings on Ubuntu Desktop?"
 date: 2014-03-22 15:17:32 +0200
 comments: true
-categories: DNS, ip
+categories: DNS, ip en
 ---
 
 ### How to change DNS settings (ip address) or How to set up Google public DNS for Ubuntu Desktop?

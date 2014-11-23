@@ -3,7 +3,7 @@ layout: post
 title: "How to use getExtra and putExtra in Android for string data"
 date: 2014-11-08 14:21:19 +0200
 comments: true
-categories: getExtra putExtra android mobile application user string data get set put 
+categories: getExtra putExtra android mobile application user string data get set put en 
 ---
 
 ### Use getExtra and putExtra

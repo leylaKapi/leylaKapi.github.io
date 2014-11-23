@@ -3,7 +3,7 @@ layout: post
 title: "Rails active_admin gem bug"
 date: 2014-07-22 15:55:03 +0300
 comments: true
-categories: rails gem active_admin bug Gemfile
+categories: rails gem active_admin bug Gemfile en
 ---
 
 ### Fix to admin_active gem bug

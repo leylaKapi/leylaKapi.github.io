@@ -3,7 +3,7 @@ layout: post
 title: "How to add 'About' page in octopress"
 date: 2014-02-26 14:25:12 +0200
 comments: true
-categories: Octopress
+categories: Octopress en
 ---
 
 ### How to add 'About' page in Octopress?

@@ -3,7 +3,7 @@ layout: post
 title: "Note: Fix Ruby on Rails Qt installation"
 date: 2014-10-22 23:16:22 +0300
 comments: true
-categories: ruby rails gem capybara-webkit install built error
+categories: ruby rails gem capybara-webkit install built error en
 ---
 
 In your rails project when you run `bundle` command, if you getting below error, 

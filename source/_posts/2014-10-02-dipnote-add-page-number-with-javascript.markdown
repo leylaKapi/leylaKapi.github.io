@@ -3,7 +3,7 @@ layout: post
 title: "Trick: Add page number with javascript ?"
 date: 2014-10-02 21:32:05 +0300
 comments: true
-categories: pagination js  haml number pages frontend 
+categories: pagination js  haml number pages frontend en 
 ---
 
 ### How can you show page number in js ?

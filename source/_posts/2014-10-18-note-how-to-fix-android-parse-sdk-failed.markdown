@@ -3,7 +3,7 @@ layout: post
 title: "Note:How to fix Android Parse Sdk failed?"
 date: 2014-10-18
 comments: true
-categories: android fix bug error parse sdk typer-face initialize run eclipse
+categories: android fix bug error parse sdk typer-face initialize run eclipse en
 ---
 
 If you are coding android on eclipse and when you are open your eclipse getting like

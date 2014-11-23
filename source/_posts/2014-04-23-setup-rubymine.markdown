@@ -3,7 +3,7 @@ layout: post
 title: "Setup Rubymine"
 date: 2014-04-23 23:59:28 +0300
 comments: true
-categories: ruby, rubymine, set_up,
+categories: ruby, rubymine, set_up, en
 ---
 
 ### How I can set up RubyMine for my Ubuntu Desktop ?

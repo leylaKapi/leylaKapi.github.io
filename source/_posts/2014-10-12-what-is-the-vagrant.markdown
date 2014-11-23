@@ -3,7 +3,7 @@ layout: post
 title: "What's the Vagrant ?"
 date: 2014-10-12 14:58:37 +0300
 comments: true
-categories: vagrant virtual-machine virtual-box vm ssh shell script 
+categories: vagrant virtual-machine virtual-box vm ssh shell script en 
 ---
 
 ### How to Set Up Vagrant on Ubuntu Desktop?

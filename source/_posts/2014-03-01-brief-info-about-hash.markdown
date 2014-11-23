@@ -3,7 +3,7 @@ layout: post
 title: "Brief info about Hash"
 date: 2014-03-01 18:52:57 +0200
 comments: true
-categories: Ruby, Hash
+categories: Ruby, Hash en
 ---
 
 ### What is the hash in ruby ?

@@ -3,7 +3,7 @@ layout: post
 title: "How to create scroll-page for rails project"
 date: 2014-09-17 17:05:01 +0300
 comments: true
-categories: rails js scroll parallax pages sass haml ror 
+categories: rails js scroll parallax pages sass haml ror en 
 ---
 
 ## Create scroll page with sass and javascript

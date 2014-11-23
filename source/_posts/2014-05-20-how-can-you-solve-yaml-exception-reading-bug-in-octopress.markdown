@@ -3,7 +3,7 @@ layout: post
 title: "How can you solve YAML exception reading bug in octopress ?"
 date: 2014-05-20 17:19:18 +0300
 comments: true
-categories: rake generate exception yaml US-ASCII invalid
+categories: rake generate exception yaml US-ASCII invalid en
 ---
 
 ### Solve the YAML exception reading invalid byte sequence in US-ASCII

@@ -3,7 +3,7 @@ layout: post
 title: "Fix paperclip gem bug"
 date: 2014-08-21 13:49:45 +0300
 comments: true
-categories: rails ruby gem paperclip bug image upload
+categories: rails ruby gem paperclip bug image upload en
 ---
 
 ### How can I fix `paperclip` error ?

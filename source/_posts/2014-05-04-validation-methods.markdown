@@ -3,7 +3,7 @@ layout: post
 title: "Validation methods"
 date: 2014-05-04 20:39:52 +0300
 comments: true
-categories: validates ruby rails RoR
+categories: validates ruby rails RoR en
 ---
 
 ### Ruby on Rails Validation methods

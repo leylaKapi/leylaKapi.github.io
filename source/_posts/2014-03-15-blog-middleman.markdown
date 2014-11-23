@@ -3,7 +3,7 @@ layout: post
 title: "Middleman blog"
 date: 2014-03-15 17:05:21 +0200
 comments: true
-categories: middleman, blogging
+categories: middleman, blogging en
 ---
 
 ### How to create middleman blog for middleman project?

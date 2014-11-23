@@ -3,7 +3,7 @@ layout: post
 title: "CSS - Sprite use in SASS"
 date: 2014-03-02 16:12:43 +0200
 comments: true
-categories: CSS ,Sprite, SASS
+categories: CSS ,Sprite, SASS en
 ---
 
 ### What is the CSS sprite? Why do we need to this ?

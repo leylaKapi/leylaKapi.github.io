@@ -3,7 +3,7 @@ layout: post
 title: "What is the Ruby On Rails?"
 date: 2014-02-28 18:25:39 +0200
 comments: true
-categories: ruby, rails
+categories: ruby, rails en
 ---
 
 ## What is the Ruby On Rails and How install?
