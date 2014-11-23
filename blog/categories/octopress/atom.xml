@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Octopress | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-11-11T21:57:41+02:00</updated>
+  <updated>2014-11-23T16:54:44+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[ Leyla Kapi ]]></name>
@@ -53,9 +53,9 @@
 <p>``` html
    <ul class="main-navigation"></p>
 
-<pre><code> &lt;li&gt;&lt;a href="/"&gt;Blog&lt;/a&gt;&lt;/li&gt;
- &lt;li&gt;&lt;a href="/blog/archives"&gt;Archives&lt;/a&gt;&lt;/li&gt;
- &lt;li&gt;&lt;a href="/about"&gt;About&lt;/a&gt;&lt;/li&gt;
+<pre><code> &lt;li&gt;&lt;a href="{{ root_url }}/"&gt;Blog&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="{{ root_url }}/blog/archives"&gt;Archives&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="{{ root_url}}/about"&gt;About&lt;/a&gt;&lt;/li&gt;
 </code></pre>
 
 <p>   </ul>
