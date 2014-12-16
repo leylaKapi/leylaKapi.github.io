@@ -7,9 +7,8 @@
 <!--<meta name="author" content="<a href=" http://leylaKapi.github.io/about/"> Leyla Kapi </a>"> <!-->
 
 	
-	<meta name="description" content="What is the Ruby On Rails and How install? Ruby Object oriented programming language
-Created in 1995 by Matz
-Used for many purpose, not only web app &hellip;">
+	<meta name="description" content="What is the hash in ruby ? Hash, hash, hash ? Hashes are one of the biggest property which separated another language in ruby.
+Hash was known &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -96,6 +95,172 @@ Used for many purpose, not only web app &hellip;">
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/03/01/brief-info-about-hash/">
+		
+			Brief Info About Hash</a>
+	</h2>
+	<div class="entry-content">
+		<h3>What is the hash in ruby ?</h3>
+
+<p>Hash, hash, hash ?</p>
+
+<ul>
+<li>Hashes are one of the biggest property which separated another language in ruby.</li>
+<li>Hash was known <strong>associative array</strong> in another programming language.</li>
+<li>In hash, elements keep <strong>&lsquo;key => value&rsquo;</strong> format in ruby . Like</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">hash_example</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;surname&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;doe&#39;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Values of keys can be any type, but when you use <strong>&lsquo;eql?&rsquo;</strong> method, it can be only a key according to each other.</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'>    <span class="n">a</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">3</span> <span class="o">=&gt;</span> <span class="s1">&#39;three&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="o">.</span><span class="mi">0</span> <span class="o">=&gt;</span> <span class="s1">&#39;threedotzero&#39;</span> <span class="p">}</span>
+</span><span class='line'>    <span class="n">a</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span>        <span class="c1">#three</span>
+</span><span class='line'>    <span class="n">a</span><span class="o">[</span><span class="mi">3</span><span class="o">.</span><span class="mi">0</span><span class="o">]</span>      <span class="c1">#threedotzero</span>
+</span><span class='line'>    <span class="mi">3</span> <span class="o">==</span> <span class="mi">3</span><span class="o">.</span><span class="mi">0</span>        <span class="c1">#true</span>
+</span><span class='line'>    <span class="mi">3</span><span class="o">.</span><span class="n">eql?</span> <span class="mi">3</span><span class="o">.</span><span class="mi">0</span>      <span class="c1">#false</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Hashes usually write with symbols, like :</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'> <span class="n">hash_with_symbol</span><span class="p">{</span> <span class="nb">name</span><span class="p">:</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="ss">surname</span><span class="p">:</span> <span class="s1">&#39;Doe&#39;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Hashes are similar to Array class, but Array uses integer as its index, hash allow to us any object type.</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">hash_differences_array</span><span class="p">{</span> <span class="s1">&#39;age&#39;</span> <span class="o">=&gt;</span> <span class="mi">15</span><span class="p">,</span> <span class="s1">&#39;year&#39;</span> <span class="o">=&gt;</span> <span class="mi">2014</span> <span class="p">}</span>
+</span><span class='line'><span class="n">array_differences_hash</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>In my opinion, You have an information about hashes. Do you agree with me?!</p>
+
+<ul>
+<li>Continue to learn!, I have an information about hash, but if I want to access only keys or values , How does it access or separate these in hash ?</li>
+</ul>
+
+
+<p>For this question, solution: if you want to access to keys use</p>
+
+<pre><code>        keys
+</code></pre>
+
+<p>method, if you want to access to values use</p>
+
+<pre><code>        values
+</code></pre>
+
+<p>methods. Like:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">access_values_keys</span><span class="p">{</span> <span class="nb">name</span><span class="p">:</span> <span class="s1">&#39;john&#39;</span><span class="p">,</span> <span class="ss">surname</span><span class="p">:</span> <span class="s1">&#39;Doe&#39;</span><span class="p">}</span>
+</span><span class='line'><span class="n">access_values_keys</span><span class="o">.</span><span class="n">keys</span>         <span class="c1"># [:name, :surname]</span>
+</span><span class='line'><span class="n">access_values_keys</span><span class="o">.</span><span class="n">values</span>       <span class="c1">#[&#39;John&#39;, &#39;Doe&#39;]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Generally, hashes are using in parameters of name,</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">parameters_name</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
+</span><span class='line'>    <span class="s1">&#39;#{name} : #{age}&#39;</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'><span class="nb">puts</span> <span class="nb">name</span> <span class="s1">&#39;John&#39;</span> <span class="p">,</span> <span class="mi">18</span>       <span class="c1"># Ali : 18</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Hashes uses to <strong>ENUMERABLE</strong> module like arrays.</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'>  <span class="p">{}</span><span class="o">.</span><span class="n">class</span><span class="o">.</span><span class="n">ancestors</span>          <span class="c1">#show the hash ancestors.</span>
+</span><span class='line'>                                        <span class="c1">#[Hash, Enumerable, Object, PP::ObjectMixin, Kernel, BasicObject]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>If you want to change from array to hash, you should use</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">.</span><span class="n">to_h</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Lastly</strong> If you want to learn more, you can visit <a href="http://www.ruby-doc.org/core-2.0/Hash.html">ruby-doc</a> .</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-01T18:52:57+02:00" pubdate data-updated="true">Mar 1<span>st</span>, 2014</time></div>
+	<div class="tags">
+
+
+
+	<a class='category' href='/blog/categories/hash/'>Hash</a>, <a class='category' href='/blog/categories/ruby/'>Ruby,</a>, <a class='category' href='/blog/categories/en/'>en</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/03/01/brief-info-about-hash/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -680,170 +845,6 @@ Now, we install the ruby after then</p>
 </div>
 	
 	<div class="comments"><a href="/blog/2014/02/26/how-to-add-aboout-page-in-octopress/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/02/26/commands-of-github-for-setup/">
-		
-			Commands of Github for Setup</a>
-	</h2>
-	<div class="entry-content">
-		<h3>What I can setup github and create repo?</h3>
-
-<ul>
-<li>Firstly we create github account from <a href="https://github.com/">github</a></li>
-<li>We create a new repo from &lsquo;+&rsquo; symbol.</li>
-<li>We named this repo and creating.</li>
-<li>After, We seems to this url</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>HTTP: https://github.com/username/repo_name.git
-</span><span class='line'>SSH: git@github.com:username/repo_name.git
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>We use any link. Now, we clone this repo on pc.</p>
-
-<p>Use this command</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git clone https://github.com/username/repo_name.git
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Now you are cloning to pc but where this file?</p>
-
-<p>For this question, Where you want to setup, install there. For example, if you want to clone in desktop, you should go desktop path
-like this(For Mac);</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">cd </span>Desktop/
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>And then cloning this path.</p>
-
-<ul>
-<li>After clone, We open this file on ide or anywhere, writing our code in file.</li>
-</ul>
-
-
-<p>Now, changed this file, We should push this file to github.
-Hence, we use this code ;</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git add .
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>With this command, we added all changed file on network, we wait for push.</p>
-
-<ul>
-<li>Which file added on network? Answer this question, We write this command and see to adding file.</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>  git status
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>We are saw to adding file , Now We need to commit for then to remember the files which adding.</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>   git commit -m <span class="s2">&quot;your_comment&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>We prepared commit, Now all preparations are prepared, and we should push file n github</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push origin master
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Note: <code>master</code> are name of branch on github, if you use another branch or  don&rsquo;t use &lsquo;master&rsquo; branch we created new branch and push</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push origin branch_name
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>If you want to see branches in your repo,</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git branch -a
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>If you created new branch</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git branch name_of_newbranch
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>Now, you are in name_of_newbranch , but you want to return or switch another branch therefore</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git checkout another_branch
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p> Git command basicly like this.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-02-26T12:31:12+02:00" pubdate data-updated="true">Feb 26<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-
-	<a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/github/'>github</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/02/26/commands-of-github-for-setup/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>

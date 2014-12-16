@@ -7,9 +7,9 @@
 <!--<meta name="author" content="<a href=" http://leylaKapi.github.io/about/"> Leyla Kapi </a>"> <!-->
 
 	
-	<meta name="description" content="When I setup Octopress Repository, error of 1
-rake deploy I setup the Octopress, and I create, 1
-rake new_post\[&quot;Hello World&quot;\] then push &hellip;">
+	<meta name="description" content="What I can setup github and create repo? Firstly we create github account from github
+We create a new repo from &lsquo;+&rsquo; symbol.
+We named &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -96,6 +96,170 @@ rake new_post\[&quot;Hello World&quot;\] then push &hellip;">
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/02/26/commands-of-github-for-setup/">
+		
+			Commands of Github for Setup</a>
+	</h2>
+	<div class="entry-content">
+		<h3>What I can setup github and create repo?</h3>
+
+<ul>
+<li>Firstly we create github account from <a href="https://github.com/">github</a></li>
+<li>We create a new repo from &lsquo;+&rsquo; symbol.</li>
+<li>We named this repo and creating.</li>
+<li>After, We seems to this url</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>HTTP: https://github.com/username/repo_name.git
+</span><span class='line'>SSH: git@github.com:username/repo_name.git
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>We use any link. Now, we clone this repo on pc.</p>
+
+<p>Use this command</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git clone https://github.com/username/repo_name.git
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now you are cloning to pc but where this file?</p>
+
+<p>For this question, Where you want to setup, install there. For example, if you want to clone in desktop, you should go desktop path
+like this(For Mac);</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">cd </span>Desktop/
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And then cloning this path.</p>
+
+<ul>
+<li>After clone, We open this file on ide or anywhere, writing our code in file.</li>
+</ul>
+
+
+<p>Now, changed this file, We should push this file to github.
+Hence, we use this code ;</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git add .
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>With this command, we added all changed file on network, we wait for push.</p>
+
+<ul>
+<li>Which file added on network? Answer this question, We write this command and see to adding file.</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>  git status
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>We are saw to adding file , Now We need to commit for then to remember the files which adding.</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>   git commit -m <span class="s2">&quot;your_comment&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>We prepared commit, Now all preparations are prepared, and we should push file n github</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push origin master
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Note: <code>master</code> are name of branch on github, if you use another branch or  don&rsquo;t use &lsquo;master&rsquo; branch we created new branch and push</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push origin branch_name
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>If you want to see branches in your repo,</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git branch -a
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>If you created new branch</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git branch name_of_newbranch
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Now, you are in name_of_newbranch , but you want to return or switch another branch therefore</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git checkout another_branch
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p> Git command basicly like this.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-26T12:31:12+02:00" pubdate data-updated="true">Feb 26<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+
+	<a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/github/'>github</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/02/26/commands-of-github-for-setup/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
 
 
     <article class="post">

@@ -7,8 +7,7 @@
 <!--<meta name="author" content="<a href=" http://leylaKapi.github.io/about/"> Leyla Kapi </a>"> <!-->
 
 	
-	<meta name="description" content="Use getExtra and putExtra You want to get some information like name, surname, email when user login on Android, and show on
-second activity these &hellip;">
+	<meta name="description" content="How to fix N+1 query in Rails ? I try to explain fix N+1 on example. Let&rsquo;s start, firstly, in your rails application, you created association &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -95,6 +94,127 @@ second activity these &hellip;">
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/12/16/rails-fix-n-plus-1-query/">
+		
+			Rails Fix N+1 Query</a>
+	</h2>
+	<div class="entry-content">
+		<h3>How to fix N+1 query in Rails ?</h3>
+
+<p>I try to explain fix <code>N+1</code> on example. Let&rsquo;s start, firstly, in your rails application, you created association between <code>user</code> and <code>user_profile</code>
+models like below :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="ss">ActiveRecord</span><span class="p">:</span><span class="ss">:Base</span>
+</span><span class='line'>   <span class="n">has_one</span> <span class="ss">:profile</span><span class="p">,</span> <span class="n">class_name</span><span class="p">:</span> <span class="s1">&#39;UserProfile&#39;</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>and</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">UserProfile</span> <span class="o">&lt;</span> <span class="ss">ActiveRecord</span><span class="p">:</span><span class="ss">:Base</span>
+</span><span class='line'>  <span class="n">belongs_to</span> <span class="ss">:user</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>When you created association between <code>user</code> and <code>user_profile</code> like above (you can derive it), then you are getting like below error while you refresh to app page or
+edit something&hellip; The error is that :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">The</span> <span class="n">page</span> <span class="n">at</span> <span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="p">:</span><span class="mi">3000</span> <span class="ss">says</span><span class="p">:</span>
+</span><span class='line'><span class="ss">user</span><span class="p">:</span><span class="o">-----</span>
+</span><span class='line'><span class="n">N</span><span class="o">+</span><span class="mi">1</span> <span class="no">Query</span> <span class="n">detected</span>
+</span><span class='line'><span class="no">User</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="ss">:profile</span><span class="o">]</span>
+</span><span class='line'><span class="no">Add</span> <span class="n">to</span> <span class="n">your</span> <span class="ss">finder</span><span class="p">:</span><span class="ss">:include</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="ss">:profile</span><span class="o">]</span>
+</span><span class='line'><span class="n">N</span><span class="o">+</span><span class="mi">1</span> <span class="no">Query</span> <span class="nb">method</span> <span class="n">call</span> <span class="n">stack</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Actually rails says to you for fix above bug(it says use <code>include</code> to <code>profile</code>&hellip;), for fix bug open <code>users_controller.rb</code> then
+add :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">User</span><span class="o">.</span><span class="n">includes</span><span class="p">(</span><span class="ss">:profile</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>instead of</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">User</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>like below ;</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">UsersController</span> <span class="o">&lt;</span> <span class="no">ApplicationController</span>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">index</span>
+</span><span class='line'>        <span class="vi">@search</span> <span class="o">=</span> <span class="no">User</span><span class="o">.</span><span class="n">includes</span><span class="p">(</span><span class="ss">:profile</span><span class="p">)</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">params</span><span class="o">[</span><span class="ss">:q</span><span class="o">]</span><span class="p">)</span>
+</span><span class='line'>        <span class="vi">@users</span> <span class="o">=</span> <span class="vi">@search</span><span class="o">.</span><span class="n">result</span><span class="p">(</span><span class="ss">:distinct</span> <span class="o">=&gt;</span> <span class="kp">true</span><span class="p">)</span><span class="o">.</span><span class="n">paginate</span><span class="p">(</span><span class="ss">:page</span> <span class="o">=&gt;</span> <span class="n">params</span><span class="o">[</span><span class="ss">:page</span><span class="o">]</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&rsquo;s it.</p>
+
+<p>I hope helped to you .</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-12-16T00:00:00+02:00" pubdate data-updated="true">Dec 16<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+
+	<a class='category' href='/blog/categories/association/'>association</a>, <a class='category' href='/blog/categories/bug/'>bug</a>, <a class='category' href='/blog/categories/controller/'>controller</a>, <a class='category' href='/blog/categories/fix/'>fix</a>, <a class='category' href='/blog/categories/model/'>model</a>, <a class='category' href='/blog/categories/n-plus-1/'>n+1</a>, <a class='category' href='/blog/categories/query/'>query</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/12/16/rails-fix-n-plus-1-query/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -512,75 +632,6 @@ Umarım faydalı olur.</p>
 </div>
 	
 	<div class="comments"><a href="/blog/2014/11/06/turkce-blog-yazilari/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/11/02/note-how-to-install-stick-notes-to-ubuntu/">
-		
-			Note: How to Install Sticker-notes to Ubuntu Desktop?</a>
-	</h2>
-	<div class="entry-content">
-		<p>I want to sticker notes for my pc, when I search about it, I found <code>sticky notes</code> for <code>Ubuntu 13.10</code> .
-This notes provide to reminder of something like a agenda, when you wrote some notes inside,
-you see always the notes. If you want to add sticker notes you can use below command.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo add-apt-repository ppa:umang/indicator-stickynotes
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo apt-get update
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo apt-get install indicator-stickynotes
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>That &rsquo;s it. This notes very helpful for me .</p>
-
-<p>I hope helped to you too.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-11-02T21:36:43+02:00" pubdate data-updated="true">Nov 2<span>nd</span>, 2014</time></div>
-	<div class="tags">
-
-
-
-	<a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/notes/'>notes</a>, <a class='category' href='/blog/categories/pc/'>pc</a>, <a class='category' href='/blog/categories/stick/'>stick</a>, <a class='category' href='/blog/categories/sticker/'>sticker</a>, <a class='category' href='/blog/categories/ubuntu/'>ubuntu</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/11/02/note-how-to-install-stick-notes-to-ubuntu/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>

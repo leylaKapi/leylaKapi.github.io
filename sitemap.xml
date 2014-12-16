@@ -273,8 +273,12 @@
         <lastmod>2014-11-23T17:00:17+02:00</lastmod>
     </url>
     <url>
+        <loc>http://leylaKapi.github.io/blog/2014/12/16/rails-fix-n-plus-1-query/</loc>
+        <lastmod>2014-12-16T02:25:10+02:00</lastmod>
+    </url>
+    <url>
         <loc>http://leylaKapi.github.io/</loc>
-        <lastmod>2014-12-07T03:41:44+02:00</lastmod>
+        <lastmod>2014-12-16T02:25:10+02:00</lastmod>
     </url>
     <url>
         <loc>http://leylaKapi.github.io/about/</loc>
@@ -286,6 +290,6 @@
     </url>
     <url>
         <loc>http://leylaKapi.github.io/blog/archives/</loc>
-        <lastmod>2014-12-07T21:14:55+02:00</lastmod>
+        <lastmod>2014-12-16T02:25:10+02:00</lastmod>
     </url>
 </urlset>

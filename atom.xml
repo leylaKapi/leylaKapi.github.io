@@ -4,7 +4,7 @@
   <title><![CDATA[Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-12-07T21:28:56+02:00</updated>
+  <updated>2014-12-16T02:27:51+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[ Leyla Kapi ]]></name>
@@ -12,6 +12,92 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Rails fix N+1 query]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/12/16/rails-fix-n-plus-1-query/"/>
+    <updated>2014-12-16T00:00:00+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/12/16/rails-fix-n-plus-1-query</id>
+    <content type="html"><![CDATA[<h3>How to fix N+1 query in Rails ?</h3>
+
+<p>I try to explain fix <code>N+1</code> on example. Let&rsquo;s start, firstly, in your rails application, you created association between <code>user</code> and <code>user_profile</code>
+models like below :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="ss">ActiveRecord</span><span class="p">:</span><span class="ss">:Base</span>
+</span><span class='line'>   <span class="n">has_one</span> <span class="ss">:profile</span><span class="p">,</span> <span class="n">class_name</span><span class="p">:</span> <span class="s1">&#39;UserProfile&#39;</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>and</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">UserProfile</span> <span class="o">&lt;</span> <span class="ss">ActiveRecord</span><span class="p">:</span><span class="ss">:Base</span>
+</span><span class='line'>  <span class="n">belongs_to</span> <span class="ss">:user</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>When you created association between <code>user</code> and <code>user_profile</code> like above (you can derive it), then you are getting like below error while you refresh to app page or
+edit something&hellip; The error is that :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">The</span> <span class="n">page</span> <span class="n">at</span> <span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="p">:</span><span class="mi">3000</span> <span class="ss">says</span><span class="p">:</span>
+</span><span class='line'><span class="ss">user</span><span class="p">:</span><span class="o">-----</span>
+</span><span class='line'><span class="n">N</span><span class="o">+</span><span class="mi">1</span> <span class="no">Query</span> <span class="n">detected</span>
+</span><span class='line'><span class="no">User</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="ss">:profile</span><span class="o">]</span>
+</span><span class='line'><span class="no">Add</span> <span class="n">to</span> <span class="n">your</span> <span class="ss">finder</span><span class="p">:</span><span class="ss">:include</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="ss">:profile</span><span class="o">]</span>
+</span><span class='line'><span class="n">N</span><span class="o">+</span><span class="mi">1</span> <span class="no">Query</span> <span class="nb">method</span> <span class="n">call</span> <span class="n">stack</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Actually rails says to you for fix above bug(it says use <code>include</code> to <code>profile</code>&hellip;), for fix bug open <code>users_controller.rb</code> then
+add :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">User</span><span class="o">.</span><span class="n">includes</span><span class="p">(</span><span class="ss">:profile</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>instead of</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">User</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>like below ;</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">UsersController</span> <span class="o">&lt;</span> <span class="no">ApplicationController</span>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">index</span>
+</span><span class='line'>        <span class="vi">@search</span> <span class="o">=</span> <span class="no">User</span><span class="o">.</span><span class="n">includes</span><span class="p">(</span><span class="ss">:profile</span><span class="p">)</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">params</span><span class="o">[</span><span class="ss">:q</span><span class="o">]</span><span class="p">)</span>
+</span><span class='line'>        <span class="vi">@users</span> <span class="o">=</span> <span class="vi">@search</span><span class="o">.</span><span class="n">result</span><span class="p">(</span><span class="ss">:distinct</span> <span class="o">=&gt;</span> <span class="kp">true</span><span class="p">)</span><span class="o">.</span><span class="n">paginate</span><span class="p">(</span><span class="ss">:page</span> <span class="o">=&gt;</span> <span class="n">params</span><span class="o">[</span><span class="ss">:page</span><span class="o">]</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&rsquo;s it.</p>
+
+<p>I hope helped to you .</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How to use getExtra and putExtra in Android for string data]]></title>
@@ -2107,26 +2193,6 @@ It is very easy.</p>
 
 
 <p>That&rsquo;s all</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Integration git-flow on Rubymine]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/08/01/integration-git-flow-on-rubymine/"/>
-    <updated>2014-08-01T23:02:42+03:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/08/01/integration-git-flow-on-rubymine</id>
-    <content type="html"><![CDATA[<h3>How to integration git-flow on Rubymine ?</h3>
-
-<ul>
-<li>Firstly you should start to rubymine ide on your computer with <code>./rubymine.sh</code> then,</li>
-<li>You can open <code>Help</code> in  nav-bar of rubymine, <code>find-action</code> or <code>ctrl+shift+A</code> then you should search <code>plugins</code>.</li>
-<li>Open plugins of rubymine then search again <code>git-flow</code> , if you saw &lsquo;click on Browser&rsquo;,
-click then search again in search bar to <code>git-flow</code>, Then you ca find easily integrate on <code>Rubymine</code>,
-then <em>restart rubymine</em> .</li>
-</ul>
-
-
-<p>That&#8217; s all.</p>
 ]]></content>
   </entry>
   

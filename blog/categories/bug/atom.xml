@@ -4,7 +4,7 @@
   <title><![CDATA[Category: bug | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/bug/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-12-07T21:28:56+02:00</updated>
+  <updated>2014-12-16T02:27:51+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[ Leyla Kapi ]]></name>
@@ -12,6 +12,73 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Rails fix N+1 query]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/12/16/rails-fix-n-plus-1-query/"/>
+    <updated>2014-12-16T00:00:00+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/12/16/rails-fix-n-plus-1-query</id>
+    <content type="html"><![CDATA[<h3>How to fix N+1 query in Rails ?</h3>
+
+<p>I try to explain fix <code>N+1</code> on example. Let&rsquo;s start, firstly, in your rails application, you created association between <code>user</code> and <code>user_profile</code>
+models like below :</p>
+
+<p><code>ruby
+class User &lt; ActiveRecord::Base
+   has_one :profile, class_name: 'UserProfile'
+end
+</code>
+and</p>
+
+<p><code>ruby
+class UserProfile &lt; ActiveRecord::Base
+  belongs_to :user
+end
+</code></p>
+
+<p>When you created association between <code>user</code> and <code>user_profile</code> like above (you can derive it), then you are getting like below error while you refresh to app page or
+edit something&hellip; The error is that :</p>
+
+<p><code>ruby
+The page at 0.0.0.0:3000 says:
+user:-----
+N+1 Query detected
+User =&gt; [:profile]
+Add to your finder::include =&gt; [:profile]
+N+1 Query method call stack
+</code></p>
+
+<p>Actually rails says to you for fix above bug(it says use <code>include</code> to <code>profile</code>&hellip;), for fix bug open <code>users_controller.rb</code> then
+add :</p>
+
+<p><code>ruby
+User.includes(:profile)
+</code></p>
+
+<p>instead of</p>
+
+<p><code>ruby
+User
+</code>
+like below ;</p>
+
+<p>```ruby
+class UsersController &lt; ApplicationController</p>
+
+<pre><code>def index
+    @search = User.includes(:profile).search(params[:q])
+    @users = @search.result(:distinct =&gt; true).paginate(:page =&gt; params[:page])
+end
+</code></pre>
+
+<p>end
+```</p>
+
+<p>That&rsquo;s it.</p>
+
+<p>I hope helped to you .</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ubuntu 13.10 : Missing date and time in the menu bar]]></title>
@@ -198,38 +265,6 @@ rake db:migrate
 <p>That&rsquo;s all.</p>
 
 <p>I hope fix your bug.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Rails devise gem generator error]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/07/24/rails-devise-gem-generator-error/"/>
-    <updated>2014-07-24T15:36:48+03:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/07/24/rails-devise-gem-generator-error</id>
-    <content type="html"><![CDATA[<h3>How to fix rails devise gem generate bug?</h3>
-
-<p>You use <code>devise</code> gem for add admin page or user page to your project. When you generate to your devise gem,
-you' re getting error to your project,  like ;</p>
-
-<p><code>bash
-$ rails g devise:install
-Could not find generator devise:install
-</code>
-If you get like ths error, you can fix for these order,</p>
-
-<ul>
-<li>Open your <code>Gemfile</code>, add <code>gem 'devise'</code> then,</li>
-<li>Open terminal, run  <code>bundle</code></li>
-<li>Open you computer search bar, Search on your computer to <code>Disk Utility</code></li>
-<li>Select you Disk For example: <code>Macintosh HD</code></li>
-<li>Then click on <code>Repair Disk Permissions</code></li>
-<li>Waiting approximately 15 minutes, then <strong>restart</strong> your computer.</li>
-</ul>
-
-
-<p>That' s all.</p>
-
-<p>I hope fixed your bug.</p>
 ]]></content>
   </entry>
   

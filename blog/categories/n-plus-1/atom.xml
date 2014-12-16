@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: n+1 | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/n-plus-1/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2014-12-16T02:27:51+02:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[ Leyla Kapi ]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Rails fix N+1 query]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/12/16/rails-fix-n-plus-1-query/"/>
+    <updated>2014-12-16T00:00:00+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/12/16/rails-fix-n-plus-1-query</id>
+    <content type="html"><![CDATA[<h3>How to fix N+1 query in Rails ?</h3>
+
+<p>I try to explain fix <code>N+1</code> on example. Let&rsquo;s start, firstly, in your rails application, you created association between <code>user</code> and <code>user_profile</code>
+models like below :</p>
+
+<p><code>ruby
+class User &lt; ActiveRecord::Base
+   has_one :profile, class_name: 'UserProfile'
+end
+</code>
+and</p>
+
+<p><code>ruby
+class UserProfile &lt; ActiveRecord::Base
+  belongs_to :user
+end
+</code></p>
+
+<p>When you created association between <code>user</code> and <code>user_profile</code> like above (you can derive it), then you are getting like below error while you refresh to app page or
+edit something&hellip; The error is that :</p>
+
+<p><code>ruby
+The page at 0.0.0.0:3000 says:
+user:-----
+N+1 Query detected
+User =&gt; [:profile]
+Add to your finder::include =&gt; [:profile]
+N+1 Query method call stack
+</code></p>
+
+<p>Actually rails says to you for fix above bug(it says use <code>include</code> to <code>profile</code>&hellip;), for fix bug open <code>users_controller.rb</code> then
+add :</p>
+
+<p><code>ruby
+User.includes(:profile)
+</code></p>
+
+<p>instead of</p>
+
+<p><code>ruby
+User
+</code>
+like below ;</p>
+
+<p>```ruby
+class UsersController &lt; ApplicationController</p>
+
+<pre><code>def index
+    @search = User.includes(:profile).search(params[:q])
+    @users = @search.result(:distinct =&gt; true).paginate(:page =&gt; params[:page])
+end
+</code></pre>
+
+<p>end
+```</p>
+
+<p>That&rsquo;s it.</p>
+
+<p>I hope helped to you .</p>
+]]></content>
+  </entry>
+  
+</feed>
