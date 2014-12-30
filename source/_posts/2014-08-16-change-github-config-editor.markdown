@@ -10,6 +10,8 @@ categories: git gitHub editor vim vi nano en
 
 Open your terminal, then which editor is easy for you (vim, emacs, nano) ?
 
+<!-- more -->
+
 ```bash
 git config --global core.editor "vim"  #or 
 git config --global core.editor "vi"

@@ -18,6 +18,8 @@ For the fix above error, you should open your `home` directory, then search the 
 $ cd .android
 ```
 
+<!-- more -->
+
 If `.android` folder is exist in your home, you should remove this folder for fox the bug,
 
 ```bash

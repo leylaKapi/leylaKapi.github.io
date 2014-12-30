@@ -14,6 +14,8 @@ Firstly, if you don't have a google-analytics account, you should create it. The
   
 and then you should get this id, opened *_config.yml* in your octopress blog project,
 
+<!-- more -->
+
     #_config.yml
     
     #Google Analytics

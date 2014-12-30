@@ -18,6 +18,7 @@ Hash, hash, hash ?
     hash_example = { 'name' => 'John', 'surname' => 'doe' }
 ```
 
+<!-- more -->
 
 
 - Values of keys can be any type, but when you use **'eql?'** method, it can be only a key according to each other.

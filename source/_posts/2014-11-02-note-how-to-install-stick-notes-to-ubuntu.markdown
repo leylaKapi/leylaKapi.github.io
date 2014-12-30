@@ -14,6 +14,8 @@ you see always the notes. If you want to add sticker notes you can use below com
 $ sudo add-apt-repository ppa:umang/indicator-stickynotes
 ```   
 
+<!-- more -->
+
 ```bash
 $ sudo apt-get update
 ```

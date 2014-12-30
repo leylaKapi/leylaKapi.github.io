@@ -16,6 +16,8 @@ NoMethodError: undefined method `font_path` for nil:NilClass
 ```
 error.
 
+<!-- more -->
+
 You can fix like with edit your `Gemfile`
 
 ```ruby

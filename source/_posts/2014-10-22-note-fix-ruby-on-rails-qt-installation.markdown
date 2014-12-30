@@ -17,6 +17,8 @@ on Ubuntu, you can fix with below command to this error.
 ```bash
 $ sudo apt-get install qt4-dev-tools libqt4-dev libqt4-core libqt4-gui
 ```
+
+<!-- more -->
  
  Then you need to install `capybara-webkit` gem to your project with,
  

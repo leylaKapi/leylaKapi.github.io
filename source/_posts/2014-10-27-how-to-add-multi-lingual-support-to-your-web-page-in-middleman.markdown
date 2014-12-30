@@ -23,6 +23,8 @@ should be seems like below
 activate :i18n, :path => "/:locale/"
 ```
 
+<!-- more -->
+
 But before above command you should create new directory in your root of your project. Means of above code, created 
 locale directory which including languages `yaml` files.
 

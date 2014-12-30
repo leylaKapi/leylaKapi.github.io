@@ -24,6 +24,8 @@ You can make easily with below codes
 ```
 in haml page can be like 
 
+<!-- more -->
+
 ```haml
 #controls
   %label{:for => "page-number"} Page:

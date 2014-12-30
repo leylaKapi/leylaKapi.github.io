@@ -16,6 +16,8 @@ I needs 2 step for create `About` page on navigation bar.
     rake new_page\["About"\]
 ```
 
+<!-- more -->
+
 Created new page for about and we linked to `About`, How?
 
 - We open

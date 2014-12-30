@@ -10,6 +10,8 @@ categories: ruby, rails, mvc en
 
 MVC - model, view, controller
 
+<!-- more -->
+
 MVC provide to separated of coding and design in app. This property provide to easiness for programmer.
 
 - M - Model => Objects, Object-oriented, data, database

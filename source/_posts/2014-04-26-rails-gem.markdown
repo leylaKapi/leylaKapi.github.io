@@ -6,11 +6,13 @@ comments: true
 categories: rails gem attr_accessible bundle en
 ---
 
-If you get *attr_accesible*'s bug, like
+If you get *attr_accesible*'s bug, like 
 
 ```
 Undefined method 'attr_accessible'
 ```
+
+<!-- more -->
 
 You can forget write gem about this attributes, open your *Gemfile* in project
 

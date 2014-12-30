@@ -13,11 +13,14 @@ If you use `devise` gem and when you enter login page in your rails project, you
 
 Try to fix this bug ;
 
+<!-- more -->
+
 - Open `application_controller.rb` then remove this line, 
 
 ```ruby
 protect_form_forgery, with: :exception
 ```
+
 
 on your controller.
 

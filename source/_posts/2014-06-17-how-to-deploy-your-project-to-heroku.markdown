@@ -17,6 +17,8 @@ gem 'heroku'
 ```
 in your terminal
 
+<!-- more -->
+
 ``` bash
 bundle install
 ```

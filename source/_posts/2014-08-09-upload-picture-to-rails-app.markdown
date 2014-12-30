@@ -16,6 +16,8 @@ If you want to upload picture in your rails app, you should make
 gem 'paperclip', :git => "git://github.com/thoughtbot/paperclip.git"
 ```
 
+<!-- more -->
+
 in terminal write `bundle` for install gem.
 
 - Which models do you want to upload picture ? For example, you have `books` model, because of this,  I write all command according to `book` model.

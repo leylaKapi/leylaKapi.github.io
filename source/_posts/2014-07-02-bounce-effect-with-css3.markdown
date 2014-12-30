@@ -22,6 +22,8 @@ in your page,
 
 In your `sass` file, you should use
 
+<!-- more -->
+
 ```sass
 .scroll-down
     text-align: center

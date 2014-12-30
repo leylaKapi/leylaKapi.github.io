@@ -18,6 +18,8 @@ or
 $ bundle exec rake db:populate
 ```
 
+<!-- more -->
+
 While you were writing above command, you get errors like `Don't know how to build task 'populate'`.
 
 Let's fix,

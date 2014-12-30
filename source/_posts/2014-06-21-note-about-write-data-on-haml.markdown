@@ -14,6 +14,8 @@ if you write on haml and use `data` attribute,
 %a{"data-slide" => "prev", href: "#carousel-example-generic", role: "button"}
 ```
 
+<!-- more -->
+
 but you should style of write can be like below :
 
 ```haml

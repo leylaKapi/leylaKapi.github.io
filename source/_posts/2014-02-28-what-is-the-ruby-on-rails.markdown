@@ -14,6 +14,8 @@ categories: ruby, rails en
 - Created in 1995 by Matz
 - Used for many purpose, not only web app.
 
+<!-- more -->
+
 **Ruby on Rails**
 
 - Open source, web applications framework.

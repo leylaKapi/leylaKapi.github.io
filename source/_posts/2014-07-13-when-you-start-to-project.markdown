@@ -21,6 +21,7 @@ Gems are like,
 * [will_paginate_bootstrap](https://rubygems.org/gems/will_paginate-bootstrap)
 * [better_errors](https://rubygems.org/gems/better_errors)
 
+<!-- more -->
 
 1- **blankable gem**
 

@@ -17,6 +17,8 @@ For fixing this bug, you should write below commands step by step ,
 $ sudo apt-get install indicator-datetime
 ```
 
+<!-- more -->
+
 - Re-configure date-time
 
 ```bash

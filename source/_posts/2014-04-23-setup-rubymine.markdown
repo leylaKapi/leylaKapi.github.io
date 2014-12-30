@@ -10,6 +10,8 @@ categories: ruby, rubymine, set_up, en
 
 - Firstly, You can install rubymine on [RubyMine](http://www.jetbrains.com/ruby/download/)
 
+<!-- more -->
+
 Then, open your terminal
 
     CTRL + ALT + T

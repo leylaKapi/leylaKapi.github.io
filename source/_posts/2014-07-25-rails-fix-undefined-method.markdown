@@ -21,6 +21,8 @@ If you getting like,
 rails g migration add_confirmable
 ```
 
+<!-- more -->
+
 then,
 
 ```bash

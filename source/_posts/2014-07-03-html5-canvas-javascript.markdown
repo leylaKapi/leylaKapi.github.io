@@ -11,6 +11,8 @@ categories: html5 canvas javascript game development libraries frameworks en
 When I looking for javascript library, I found some library is used `HTML5 Canvas Javascript` library
 for game development.
 
+<!-- more -->
+
 This library provide to `build and animate` to game project. I found some Html5 canvas javascript libraries :
 
 * [Canvas Advanced Animation Toolkit](http://hyperandroid.github.io/CAAT/)

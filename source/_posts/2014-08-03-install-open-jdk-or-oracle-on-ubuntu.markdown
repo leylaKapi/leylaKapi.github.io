@@ -12,6 +12,8 @@ categories: jdk java openjdk oracle install ubuntu linux en
 $ sudo apt-get install openjdk-7-jdk
 ```
 
+<!-- more -->
+
 OR
 
 ```bash

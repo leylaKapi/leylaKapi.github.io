@@ -16,6 +16,8 @@ terminal `bundle` .
 
 Then open controller which you want to add search bar, like ;
 
+<!-- more -->
+
 `projects_controller`
 
 ```ruby

@@ -11,6 +11,8 @@ categories: CSS ,Sprite, SASS en
 CSS Sprite means that combine all images in a single image file. The aim is that,
 when we upload several image file for use in css or sass file, you should upload to each.
 
+<!-- more -->
+
 **If I give an example, you understand easily: **
 
 We have **10 or more images** and we should use in CSS folder, but this is difficult

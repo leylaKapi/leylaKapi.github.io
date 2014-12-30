@@ -14,6 +14,7 @@ Firstly, you should go [middleman]('http://middlemanapp.com/') and you need to *
    gem install middleman
 ```
 
+<!-- more -->
 
 Fine, you are installed middleman, now we start to create project in middleman
 

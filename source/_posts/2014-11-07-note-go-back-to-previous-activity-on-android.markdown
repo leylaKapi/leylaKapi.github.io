@@ -20,6 +20,8 @@ Where you want to use button for return from second to first, open your `seconda
     android:onClick="ReturnHome"
     android:text="Return Previous Page" />
 ```
+
+<!-- more -->      
       
 Then we getting, what is the `android:onClick` name, you can give the what you want name for `onClick` but can be 
 careful for use in `java`, open `SecondActivity.java` write below code 

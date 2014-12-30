@@ -14,6 +14,8 @@ Firstly
 
 #### How to write header in markdown?
 
+<!-- more -->
+
 While you're writing header, you should write in '#'(pound sign)
 
 ```

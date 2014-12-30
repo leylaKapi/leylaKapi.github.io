@@ -14,6 +14,8 @@ If you create a blog, I think you should with middleman blogging. I hear, you sa
 
 WHY?
 
+<!-- more -->
+
 - Easy to use,
 - Embed in your project easily
 

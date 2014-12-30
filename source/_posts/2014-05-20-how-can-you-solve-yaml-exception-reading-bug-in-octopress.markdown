@@ -14,6 +14,8 @@ When you write
 bundle exec rake generate
 ```
 
+<!-- more -->
+
 you get
 
 ``` bash

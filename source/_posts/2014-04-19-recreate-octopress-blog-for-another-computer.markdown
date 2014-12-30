@@ -13,6 +13,8 @@ I formatted my computer and then for my octopress blog *What can I do ?* **reins
 In this post I try to explain, if you have a new computer (after format, buy new computer...etc)but you have octopress blog
 how to entegrated each other?
 
+<!-- more -->
+
 Before starting explain it in this article, I try to explain set up octopress, if you forget this, you can find it easily in another
 blog post or you can look at [Octopress Setup guide](http://octopress.org/docs/setup/) .
 

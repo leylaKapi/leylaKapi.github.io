@@ -15,6 +15,8 @@ Firstly, we should look at Google Public DNS.
 Google DNS created by Prem Ramaswami at 2009 . Google Public DNS provide to free DNS settings.
 Without DNS, it wil be difficult to know IP address of websites which visit daily.
 
+<!-- more -->
+
 ##### How to change DNS settings ?
 
 Open terminal in Ubuntu Desktop with

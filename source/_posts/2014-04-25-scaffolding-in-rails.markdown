@@ -14,6 +14,8 @@ rails new blogging
 cd blogging
 ```
 
+<!-- more -->
+
 Now, we created rails project and enter inside of project.
 We need to create scaffold,
 

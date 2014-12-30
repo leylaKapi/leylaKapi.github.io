@@ -22,6 +22,8 @@ Bundler could not find compatible versions for gem "rails":
     rails (4.1.4
 ```
 
+<!-- more -->
+
 If you replace on `Gemfile` from
 
 ```ruby

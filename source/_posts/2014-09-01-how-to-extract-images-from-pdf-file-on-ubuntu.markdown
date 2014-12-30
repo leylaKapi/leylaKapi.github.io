@@ -15,6 +15,8 @@ you can make it easily. Firstly, you should install `poppler-utils` in your mach
 $ sudo apt-get install poppler-utils
 ```
 
+<!-- more -->
+
 After that you can see to `pdfimages` how using it, like
 
 ```bash

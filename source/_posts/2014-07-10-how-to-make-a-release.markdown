@@ -19,6 +19,9 @@ then if you make some wrong commit, you can delete wrong commit with
 git rebase -i HEAD~2
 ```
 command.
+
+<!-- more -->
+
 Then,
 
 ```bash

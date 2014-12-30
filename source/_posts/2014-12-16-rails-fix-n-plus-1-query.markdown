@@ -24,6 +24,8 @@ class UserProfile < ActiveRecord::Base
 end
 ```
 
+<!-- more -->
+
 When you created association between `user` and `user_profile` like above (you can derive it), then you are getting like below error while you refresh to app page or
 edit something... The error is that :
 

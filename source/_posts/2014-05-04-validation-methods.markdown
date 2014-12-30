@@ -12,6 +12,8 @@ categories: validates ruby rails RoR en
 
 Attribute mustn't be blank(nil,false,[],{})
 
+<!-- more -->
+
 ``` ruby
 validates_presence_of :field_name
 ```

@@ -13,6 +13,8 @@ I want to change menu or nav-bar according to scroll, How I can do this ?
 
 In this article, I can try to explain with an example.
 
+<!-- more -->
+
 Please, write these code block on your project or created a new project and try to these .
 Yep!, Let's learn step by step :)
 

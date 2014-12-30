@@ -21,6 +21,8 @@ paste in your assets for rails projects.
 (If you are using sass or less, you should convert to sass or less). 
 Another way, you can create new file in stylesheet folder like 
 
+<!-- more -->
+
 ```css 
 _icon.css.sass
 ```

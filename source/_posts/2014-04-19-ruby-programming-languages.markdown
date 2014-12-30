@@ -14,6 +14,9 @@ categories: ruby programming-languages beginner en
 
 - Ruby, readable high level a programming languages.
 - Started to developt at 1993 and published at 1995.
+
+<!-- more -->
+
 - In 2013 for Ruby was selected brightest year,the reason is that in this year, two version was developt Ruby-2.0 and Ruby-2.1.
 - Ruby, entegration with Rails in 2004.Then we start to use Ruby on Rails in web development.
 - Ruby developt by Japon Yukihirato  Matsumoto (Matz).

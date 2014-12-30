@@ -23,6 +23,7 @@ Let's look, how to set up and use `Vagrant in Ubuntu desktop`,
 - Set up new Virtual Machine
 - Install Virtual Machine configuration
 
+<!-- more -->
 
 #### 1) Install Vagrant
 

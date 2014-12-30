@@ -14,6 +14,8 @@ Thanks to `git stash`, provide to stash the changes in a dirty working directory
 git stash
 ```
 
+<!-- more -->
+
 ```bash
 git flow feature start your_feature_name
 ```

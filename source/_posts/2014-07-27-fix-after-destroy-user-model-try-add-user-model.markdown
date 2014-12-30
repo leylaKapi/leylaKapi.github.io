@@ -67,6 +67,7 @@ After you made `rails destroy Users` and you want to create again `User` model, 
 	from bin/rails:4:in<main>'
 ```
 
+<!-- more -->
 
 You need to remove  `devise_for :users` from `routes.rb`, then try generate and you don't forget made  `rake:db migrate`.
 

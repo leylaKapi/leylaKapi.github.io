@@ -16,6 +16,8 @@ you can embed in it. In this post, I try to explain creating scroll page accordi
 
 Let's look the codes for scroll page
 
+<!-- more -->
+
 - Open js file in your project, and copy it 
 
 ```javascript

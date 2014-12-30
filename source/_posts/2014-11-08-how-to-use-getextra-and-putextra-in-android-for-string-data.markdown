@@ -33,6 +33,8 @@ second .
     </intent-filter>  
 </activity>
 ```
+
+<!-- more -->
  
 - After that we need to create button on `activtiy_main.xml` after click this button goes the second activity .
  

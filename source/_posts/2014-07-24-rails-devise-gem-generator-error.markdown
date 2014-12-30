@@ -15,6 +15,9 @@ you' re getting error to your project,  like ;
 $ rails g devise:install
 Could not find generator devise:install
 ```
+
+<!-- more -->
+
 If you get like ths error, you can fix for these order,
 
 - Open your `Gemfile`, add `gem 'devise'` then,

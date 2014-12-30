@@ -11,6 +11,8 @@ categories: internet working protocols HTTP HTTPS TCP UDP SSL TLS URL en
 Internet like in real life, There are two sides for internet communication. While one of this is making request, another of this
 have to respond to this request. This loop is named
 
+<!-- more -->
+
 
     request - respond
 

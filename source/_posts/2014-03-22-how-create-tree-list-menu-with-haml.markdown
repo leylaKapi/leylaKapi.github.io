@@ -16,6 +16,8 @@ Firstly, we create middleman project and create
 
 then we open `index.html.haml` file and we write your code like this,
 
+<!-- more -->
+
 ``` haml
     --- my code like this ---
     %ul.archive_tool

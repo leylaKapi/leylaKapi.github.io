@@ -20,6 +20,8 @@ git rm -rf --cached .idea
 ```
 Remove log files
 
+<!-- more -->
+
 ```bash
 git rm -r log/development.log
 ```

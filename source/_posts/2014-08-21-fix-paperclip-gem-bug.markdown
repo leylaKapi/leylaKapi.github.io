@@ -14,6 +14,8 @@ When you use `paperclip` gem, if you are getting like this bug
 Photo could not run the identify command. Please install ImageMagick.
 ```
 
+<!-- more -->
+
 You can fix this bug with
 
 ```bash

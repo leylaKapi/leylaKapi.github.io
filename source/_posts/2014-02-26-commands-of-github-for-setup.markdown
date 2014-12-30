@@ -20,6 +20,8 @@ categories: git  github en
     SSH: git@github.com:username/repo_name.git
 ```
 
+<!-- more -->
+
 We use any link. Now, we clone this repo on pc.
 
 Use this command
