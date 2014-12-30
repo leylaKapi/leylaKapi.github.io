@@ -4,7 +4,7 @@
   <title><![CDATA[Category: jquery, | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/jquery/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-12-16T02:27:51+02:00</updated>
+  <updated>2014-12-30T14:43:58+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[ Leyla Kapi ]]></name>
@@ -23,6 +23,9 @@
 <p>I want to change menu or nav-bar according to scroll, How I can do this ?</p>
 
 <p>In this article, I can try to explain with an example.</p>
+
+<!-- more -->
+
 
 <p>Please, write these code block on your project or created a new project and try to these .
 Yep!, Let&rsquo;s learn step by step :)</p>

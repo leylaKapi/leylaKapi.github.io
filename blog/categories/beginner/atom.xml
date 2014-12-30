@@ -4,7 +4,7 @@
   <title><![CDATA[Category: beginner | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/beginner/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-12-16T02:27:51+02:00</updated>
+  <updated>2014-12-30T14:43:58+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[ Leyla Kapi ]]></name>
@@ -33,6 +33,13 @@
 <ul>
 <li>Ruby, readable high level a programming languages.</li>
 <li>Started to developt at 1993 and published at 1995.</li>
+</ul>
+
+
+<!-- more -->
+
+
+<ul>
 <li>In 2013 for Ruby was selected brightest year,the reason is that in this year, two version was developt Ruby-2.0 and Ruby-2.1.</li>
 <li>Ruby, entegration with Rails in 2004.Then we start to use Ruby on Rails in web development.</li>
 <li>Ruby developt by Japon Yukihirato  Matsumoto (Matz).</li>

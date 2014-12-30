@@ -7,11 +7,8 @@
 <!--<meta name="author" content="<a href=" http://leylaKapi.github.io/about/"> Leyla Kapi </a>"> <!-->
 
 	
-	<meta name="description" content="How to change github global core editor ? Open your terminal, then which editor is easy for you (vim, emacs, nano) ? 1
-2
-3
-4
-git config --global &hellip;">
+	<meta name="description" content="Command of Git Stash Thanks to git stash, provide to stash the changes in a dirty working directory away. 1
+git stash Read more Jul 6th, 2014 VCS, &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -103,30 +100,25 @@ git config --global &hellip;">
     <article class="post">
 	<h2 class="title">
 		
-		<a href="/blog/2014/08/16/change-github-config-editor/">
+		<a href="/blog/2014/07/06/git-stash/">
 		
-			Change Github Config Editor</a>
+			Git Stash</a>
 	</h2>
 	<div class="entry-content">
-		<h3>How to change github global core editor ?</h3>
+		<h3>Command of Git Stash</h3>
 
-<p>Open your terminal, then which editor is easy for you (vim, emacs, nano) ?</p>
+<p>Thanks to <code>git stash</code>, provide to stash the changes in a dirty working directory away.</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git config --global core.editor <span class="s2">&quot;vim&quot;</span>  <span class="c">#or </span>
-</span><span class='line'>git config --global core.editor <span class="s2">&quot;vi&quot;</span>
-</span><span class='line'>git config --global core.editor <span class="s2">&quot;emacs&quot;</span>  <span class="c">#or</span>
-</span><span class='line'>git config --global core.editor <span class="s2">&quot;nano&quot;</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git stash
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>That&#8217; s all</p>
+
+
 
 		
-		
+		<a href="/blog/2014/07/06/git-stash/" class="more-link">Read more</a>
 	</div>
 
 
@@ -143,17 +135,17 @@ git config --global &hellip;">
   
 
 
-<time datetime="2014-08-16T22:28:27+03:00" pubdate data-updated="true">Aug 16<span>th</span>, 2014</time></div>
+<time datetime="2014-07-06T19:12:29+03:00" pubdate data-updated="true">Jul 6<span>th</span>, 2014</time></div>
 	<div class="tags">
 
 
 
-	<a class='category' href='/blog/categories/editor/'>editor</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/github/'>gitHub</a>, <a class='category' href='/blog/categories/nano/'>nano</a>, <a class='category' href='/blog/categories/vi/'>vi</a>, <a class='category' href='/blog/categories/vim/'>vim</a>
+	<a class='category' href='/blog/categories/vcs/'>VCS</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/git-flow/'>git-flow</a>, <a class='category' href='/blog/categories/github/'>gitHub</a>, <a class='category' href='/blog/categories/stash/'>stash</a>
 
 
 </div>
 	
-	<div class="comments"><a href="/blog/2014/08/16/change-github-config-editor/#disqus_thread">Comments</a></div>
+	<div class="comments"><a href="/blog/2014/07/06/git-stash/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>
@@ -162,133 +154,19 @@ git config --global &hellip;">
     <article class="post">
 	<h2 class="title">
 		
-		<a href="/blog/2014/08/09/upload-picture-to-rails-app/">
+		<a href="/blog/2014/07/03/html5-canvas-javascript/">
 		
-			Upload Picture to Rails App</a>
+			HTML5 Canvas Javascript</a>
 	</h2>
 	<div class="entry-content">
-		<h3>How to upload picture in rails app ?</h3>
+		<h3>Which libraries should I use in javascript for game development ?</h3>
 
-<p>If you want to upload picture in your rails app, you should make</p>
+<p>When I looking for javascript library, I found some library is used <code>HTML5 Canvas Javascript</code> library
+for game development.</p>
 
-<ul>
-<li>Open your <code>Gemfile</code> in rails app then add</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;paperclip&#39;</span><span class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s2">&quot;git://github.com/thoughtbot/paperclip.git&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>in terminal write <code>bundle</code> for install gem.</p>
-
-<ul>
-<li><p>Which models do you want to upload picture ? For example, you have <code>books</code> model, because of this,  I write all command according to <code>book</code> model.</p></li>
-<li><p>After install <code>paperclip</code> gem, open your <code>terminal</code> again then write</p></li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'> <span class="nv">$ </span>rails g paperclip Book photo
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>then</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>bundle <span class="nb">exec </span>rake db:migrate
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>Open <code>models/book.rb</code> add</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'>  <span class="kp">include</span> <span class="ss">Paperclip</span><span class="p">:</span><span class="ss">:Glue</span>
-</span><span class='line'>  <span class="n">has_attached_file</span> <span class="ss">:photo</span><span class="p">,</span> <span class="ss">:styles</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="ss">:small</span> <span class="o">=&gt;</span> <span class="s2">&quot;250x250&gt;&quot;</span> <span class="p">},</span>
-</span><span class='line'>                    <span class="ss">:url</span>  <span class="o">=&gt;</span> <span class="s2">&quot;/assets/books/:id/:style/:basename.:extension&quot;</span><span class="p">,</span>
-</span><span class='line'>                    <span class="ss">:path</span> <span class="o">=&gt;</span> <span class="s2">&quot;:rails_root/public/assets/books/:id/:style/:basename.:extension&quot;</span>
-</span><span class='line'>  <span class="n">validates_attachment_presence</span> <span class="ss">:photo</span>
-</span><span class='line'>  <span class="n">validates_attachment_size</span> <span class="ss">:photo</span><span class="p">,</span> <span class="ss">:less_than</span> <span class="o">=&gt;</span> <span class="mi">10</span><span class="o">.</span><span class="n">megabytes</span>
-</span><span class='line'>  <span class="n">validates_attachment_content_type</span> <span class="ss">:photo</span><span class="p">,</span> <span class="ss">:content_type</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="s1">&#39;image/jpeg&#39;</span><span class="p">,</span> <span class="s1">&#39;image/png&#39;</span><span class="o">]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>Open <code>books/show.html.haml</code> add</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="p">=</span> <span class="n">image_tag</span> <span class="vi">@book</span><span class="o">.</span><span class="n">photo</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="ss">:small</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>Open <code>books/_form.html.haml</code> add</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="p">=</span> <span class="n">form_for</span> <span class="vi">@book</span><span class="p">,</span> <span class="ss">html</span><span class="p">:</span> <span class="p">{</span> <span class="ss">multipart</span><span class="p">:</span> <span class="kp">true</span> <span class="p">}</span>  <span class="k">do</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span>
-</span><span class='line'>  <span class="p">=</span> <span class="n">f</span><span class="o">.</span><span class="n">file_field</span> <span class="ss">:photo</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>Open <code>controllers/books_controller.rb</code>, then check <code>create</code> method if you use</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'> <span class="k">def</span> <span class="nf">create</span>
-</span><span class='line'>    <span class="vi">@book</span> <span class="o">=</span> <span class="no">Book</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">book_params</span><span class="p">)</span>
-</span><span class='line'> <span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>instead of above, you should write</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'> <span class="k">def</span> <span class="nf">create</span>
-</span><span class='line'>    <span class="vi">@book</span> <span class="o">=</span> <span class="no">Book</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">book_params</span><span class="p">)</span>
-</span><span class='line'> <span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Lastly, you should control to add <code>:photo</code> in your <code>book_params</code> method.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="kp">private</span>
-</span><span class='line'>    <span class="k">def</span> <span class="nf">book_params</span>
-</span><span class='line'>      <span class="n">params</span><span class="o">.</span><span class="n">require</span><span class="p">(</span><span class="ss">:book</span><span class="p">)</span><span class="o">.</span><span class="n">permit</span><span class="p">(</span><span class="ss">:category_id</span><span class="p">,</span> <span class="ss">:author_id</span><span class="p">,</span> <span class="ss">:isbn</span><span class="p">,</span> <span class="ss">:name</span><span class="p">,</span> <span class="ss">:photo</span><span class="p">)</span>
-</span><span class='line'>    <span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>If you want to learn with details, you can visit <a href="http://railscasts.com/episodes/134-paperclip?autoplay=true">this site</a></p>
-
-<p>That&#8217; s all.</p>
 
 		
-		
+		<a href="/blog/2014/07/03/html5-canvas-javascript/" class="more-link">Read more</a>
 	</div>
 
 
@@ -305,17 +183,17 @@ git config --global &hellip;">
   
 
 
-<time datetime="2014-08-09T13:03:08+03:00" pubdate data-updated="true">Aug 9<span>th</span>, 2014</time></div>
+<time datetime="2014-07-03T16:10:34+03:00" pubdate data-updated="true">Jul 3<span>rd</span>, 2014</time></div>
 	<div class="tags">
 
 
 
-	<a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/paperclip/'>paperclip</a>, <a class='category' href='/blog/categories/picture/'>picture</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/upload/'>upload</a>
+	<a class='category' href='/blog/categories/canvas/'>canvas</a>, <a class='category' href='/blog/categories/development/'>development</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/frameworks/'>frameworks</a>, <a class='category' href='/blog/categories/game/'>game</a>, <a class='category' href='/blog/categories/html5/'>html5</a>, <a class='category' href='/blog/categories/javascript/'>javascript</a>, <a class='category' href='/blog/categories/libraries/'>libraries</a>
 
 
 </div>
 	
-	<div class="comments"><a href="/blog/2014/08/09/upload-picture-to-rails-app/#disqus_thread">Comments</a></div>
+	<div class="comments"><a href="/blog/2014/07/03/html5-canvas-javascript/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>
@@ -324,200 +202,34 @@ git config --global &hellip;">
     <article class="post">
 	<h2 class="title">
 		
-		<a href="/blog/2014/08/08/fix-rake-db-populate/">
+		<a href="/blog/2014/07/02/bounce-effect-with-css3/">
 		
-			Fix Rake Db:populate</a>
+			Bounce Effect With CSS3</a>
 	</h2>
 	<div class="entry-content">
-		<h3><code>Rake aborted! Don't know how to build task 'populate'</code></h3>
+		<h3>How to give effect to arrow like bounce with CSS3 ?</h3>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>rake db:populate
-</span></code></pre></td></tr></table></div></figure>
+<p>You want to use arrow in your web-page with animation like bounce ball. <code>HOW ?</code></p>
 
-
-<p>or</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>bundle <span class="nb">exec </span>rake db:populate
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>While you were writing above command, you get errors like <code>Don't know how to build task 'populate'</code>.</p>
-
-<p>Let&rsquo;s fix,</p>
-
-<p>Firstly, you should check</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">lib</span><span class="o">/</span><span class="n">tasks</span><span class="o">/</span><span class="n">sample_data</span><span class="o">.</span><span class="n">rb</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>if this file exist, you should rename this file</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">sample_data</span><span class="o">.</span><span class="n">rake</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>then try to run tour rails project.</p>
-
-<ul>
-<li>if not exist, you should create new file in <code>lib/tasks</code> directory, <code>sample_data.rake</code>.</li>
-</ul>
-
-
-<p>That&#8217; s all.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-08-08T10:33:06+03:00" pubdate data-updated="true">Aug 8<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-
-	<a class='category' href='/blog/categories/create/'>create</a>, <a class='category' href='/blog/categories/database/'>database</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/migration/'>migration</a>, <a class='category' href='/blog/categories/populate/'>populate</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/rake/'>rake</a>, <a class='category' href='/blog/categories/reset/'>reset</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>, <a class='category' href='/blog/categories/sqlite/'>sqlite</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/08/08/fix-rake-db-populate/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/08/06/fix-invalid-authentication-token-error-in-rails/">
-		
-			Fix Invalid Authentication Token Error in Rails</a>
-	</h2>
-	<div class="entry-content">
-		<h3>How to fix <code>ActionController: InvalidAuthentication Token error</code> ?</h3>
-
-<p>If you use <code>devise</code> gem and when you enter login page in your rails project, you get
-<code>Invalid Token</code> error, you thinking on <code>controller</code> .</p>
-
-<p>Try to fix this bug ;</p>
-
-<ul>
-<li>Open <code>application_controller.rb</code> then remove this line,</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">protect_form_forgery</span><span class="p">,</span> <span class="ss">with</span><span class="p">:</span> <span class="ss">:exception</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>on your controller.</p>
-
-<ul>
-<li>Then add</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">skip_before_filter</span> <span class="ss">:verify_authenticity_token</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>But, this method not safe, so when you get like this bug, you can search and use <code>ajax</code> for the solve it.</p>
-
-<p>That&rsquo;s all.</p>
-
-<p>I hope helped to you .</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-08-06T23:49:35+03:00" pubdate data-updated="true">Aug 6<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-
-	<a class='category' href='/blog/categories/ajax/'>ajax</a>, <a class='category' href='/blog/categories/authentication/'>authentication</a>, <a class='category' href='/blog/categories/controller/'>controller</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/08/06/fix-invalid-authentication-token-error-in-rails/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/08/03/install-open-jdk-or-oracle-on-ubuntu/">
-		
-			Install Open-jdk or Oracle on Ubuntu</a>
-	</h2>
-	<div class="entry-content">
-		<h3>Note about installation of java on Ubuntu computer</h3>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo apt-get install openjdk-7-jdk
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>OR</p>
+<p>Firstly, you should use this <code>haml</code> in your code, where you want to use <code>section</code>
+in your page,</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo add-apt-repository ppa:webupd8team/java
-</span><span class='line'><span class="nv">$ </span>sudo apt-get update
-</span><span class='line'><span class="nv">$ </span>sudo apt-get install oracle-java7-installer
-</span><span class='line'><span class="nv">$ </span>sudo apt-get update
-</span><span class='line'><span class="nv">$ </span>java -version
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nt">%p</span><span class="nc">.scroll-down</span>
+</span><span class='line'>   <span class="nc">.bounce</span>
+</span><span class='line'>     <span class="nt">%a</span><span class="p">{</span><span class="ss">href</span><span class="p">:</span> <span class="s1">&#39;#section2&#39;</span><span class="p">}</span>
+</span><span class='line'>        <span class="nt">%i</span><span class="nc">.fa.fa-angle-double-down.fa-5x</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>That&rsquo;s all</p>
+<p>In your <code>sass</code> file, you should use</p>
+
 
 		
-		
+		<a href="/blog/2014/07/02/bounce-effect-with-css3/" class="more-link">Read more</a>
 	</div>
 
 
@@ -534,17 +246,386 @@ git config --global &hellip;">
   
 
 
-<time datetime="2014-08-03T23:25:29+03:00" pubdate data-updated="true">Aug 3<span>rd</span>, 2014</time></div>
+<time datetime="2014-07-02T00:56:56+03:00" pubdate data-updated="true">Jul 2<span>nd</span>, 2014</time></div>
 	<div class="tags">
 
 
 
-	<a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/install/'>install</a>, <a class='category' href='/blog/categories/java/'>java</a>, <a class='category' href='/blog/categories/jdk/'>jdk</a>, <a class='category' href='/blog/categories/linux/'>linux</a>, <a class='category' href='/blog/categories/openjdk/'>openjdk</a>, <a class='category' href='/blog/categories/oracle/'>oracle</a>, <a class='category' href='/blog/categories/ubuntu/'>ubuntu</a>
+	<a class='category' href='/blog/categories/animation/'>animation</a>, <a class='category' href='/blog/categories/bounce/'>bounce</a>, <a class='category' href='/blog/categories/css3/'>css3</a>, <a class='category' href='/blog/categories/effect/'>effect</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/font-awesome/'>font-awesome</a>, <a class='category' href='/blog/categories/haml/'>haml</a>
 
 
 </div>
 	
-	<div class="comments"><a href="/blog/2014/08/03/install-open-jdk-or-oracle-on-ubuntu/#disqus_thread">Comments</a></div>
+	<div class="comments"><a href="/blog/2014/07/02/bounce-effect-with-css3/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/06/21/note-about-write-data-on-haml/">
+		
+			Note About Write &#8216;Data&#8217; on Haml ?</a>
+	</h2>
+	<div class="entry-content">
+		<p>Write <code>data</code> attributes on HAML ?</p>
+
+<p>if you write on haml and use <code>data</code> attribute,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nt">%a</span><span class="p">{</span><span class="s2">&quot;data-slide&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;prev&quot;</span><span class="p">,</span> <span class="ss">href</span><span class="p">:</span> <span class="s2">&quot;#carousel-example-generic&quot;</span><span class="p">,</span> <span class="ss">role</span><span class="p">:</span> <span class="s2">&quot;button&quot;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+
+		
+		<a href="/blog/2014/06/21/note-about-write-data-on-haml/" class="more-link">Read more</a>
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-21T17:13:02+03:00" pubdate data-updated="true">Jun 21<span>st</span>, 2014</time></div>
+	<div class="tags">
+
+
+
+	<a class='category' href='/blog/categories/attribute/'>attribute</a>, <a class='category' href='/blog/categories/data/'>data</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/haml/'>haml</a>, <a class='category' href='/blog/categories/target/'>target</a>, <a class='category' href='/blog/categories/toggle/'>toggle</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/06/21/note-about-write-data-on-haml/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/06/17/how-to-deploy-your-project-to-heroku/">
+		
+			How to Deploy Your Project to Heroku ?</a>
+	</h2>
+	<div class="entry-content">
+		<h3>Deploy to Heroku</h3>
+
+<p><strong>You have a rails application, and finished your application want to deploy with <code>Heroku</code>,  HOW ?</strong></p>
+
+<p>You should open your rails application, and in your application find <code>Gemfile</code>. Open Gemfile write this command</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;heroku&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>in your terminal</p>
+
+
+		
+		<a href="/blog/2014/06/17/how-to-deploy-your-project-to-heroku/" class="more-link">Read more</a>
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-17T16:10:38+03:00" pubdate data-updated="true">Jun 17<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+
+	<a class='category' href='/blog/categories/deploy/'>deploy</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/heroku/'>heroku</a>, <a class='category' href='/blog/categories/project/'>project</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/06/17/how-to-deploy-your-project-to-heroku/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/05/20/how-can-you-solve-yaml-exception-reading-bug-in-octopress/">
+		
+			How Can You Solve YAML Exception Reading Bug in Octopress ?</a>
+	</h2>
+	<div class="entry-content">
+		<h3>Solve the YAML exception reading invalid byte sequence in US-ASCII</h3>
+
+<p>When you write</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>bundle <span class="nb">exec </span>rake generate
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+
+		
+		<a href="/blog/2014/05/20/how-can-you-solve-yaml-exception-reading-bug-in-octopress/" class="more-link">Read more</a>
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-20T17:19:18+03:00" pubdate data-updated="true">May 20<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+
+	<a class='category' href='/blog/categories/us-ascii/'>US-ASCII</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/exception/'>exception</a>, <a class='category' href='/blog/categories/generate/'>generate</a>, <a class='category' href='/blog/categories/invalid/'>invalid</a>, <a class='category' href='/blog/categories/rake/'>rake</a>, <a class='category' href='/blog/categories/yaml/'>yaml</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/05/20/how-can-you-solve-yaml-exception-reading-bug-in-octopress/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/05/04/validation-methods/">
+		
+			Validation Methods</a>
+	</h2>
+	<div class="entry-content">
+		<h3>Ruby on Rails Validation methods</h3>
+
+<ul>
+<li><strong>validates_presence_of</strong></li>
+</ul>
+
+
+<p>Attribute mustn&rsquo;t be blank(nil,false,[],{})</p>
+
+
+		
+		<a href="/blog/2014/05/04/validation-methods/" class="more-link">Read more</a>
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-04T20:39:52+03:00" pubdate data-updated="true">May 4<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+
+	<a class='category' href='/blog/categories/ror/'>RoR</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>, <a class='category' href='/blog/categories/validates/'>validates</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/05/04/validation-methods/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/04/26/rails-gem/">
+		
+			Rails Attributes: &#8216;Attr_accessible&#8217;</a>
+	</h2>
+	<div class="entry-content">
+		<p>If you get <em>attr_accesible</em>&rsquo;s bug, like</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Undefined method 'attr_accessible'</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+
+		
+		<a href="/blog/2014/04/26/rails-gem/" class="more-link">Read more</a>
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-26T14:44:39+03:00" pubdate data-updated="true">Apr 26<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+
+	<a class='category' href='/blog/categories/attr-accessible/'>attr_accessible</a>, <a class='category' href='/blog/categories/bundle/'>bundle</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/04/26/rails-gem/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/04/25/scaffolding-in-rails/">
+		
+			Scaffolding in Rails</a>
+	</h2>
+	<div class="entry-content">
+		<p>In this post, I try to explain scaffolding in rails shortly.
+Firstly, Let&rsquo;s create rails project</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rails new blogging
+</span><span class='line'><span class="nb">cd </span>blogging
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+
+		
+		<a href="/blog/2014/04/25/scaffolding-in-rails/" class="more-link">Read more</a>
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-25T00:21:58+03:00" pubdate data-updated="true">Apr 25<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+
+	<a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/rake/'>rake</a>, <a class='category' href='/blog/categories/scaffold/'>scaffold</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/04/25/scaffolding-in-rails/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/04/24/ruby-on-rails-mvc/">
+		
+			Ruby on Rails MVC</a>
+	</h2>
+	<div class="entry-content">
+		<h3>MVC in Ruby on Rails</h3>
+
+<p>MVC &ndash; model, view, controller</p>
+
+
+		
+		<a href="/blog/2014/04/24/ruby-on-rails-mvc/" class="more-link">Read more</a>
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-24T00:25:52+03:00" pubdate data-updated="true">Apr 24<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+
+	<a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/mvc/'>mvc</a>, <a class='category' href='/blog/categories/rails/'>rails,</a>, <a class='category' href='/blog/categories/ruby/'>ruby,</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/04/24/ruby-on-rails-mvc/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>

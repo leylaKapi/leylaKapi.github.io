@@ -4,7 +4,7 @@
   <title><![CDATA[Category: parallax | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/parallax/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-12-16T02:27:51+02:00</updated>
+  <updated>2014-12-30T14:43:58+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[ Leyla Kapi ]]></name>
@@ -27,6 +27,9 @@ you can embed in it. In this post, I try to explain creating scroll page accordi
 <p><img src="../images/capture_image-home.png" alt="home-page" /></p>
 
 <p>Let&rsquo;s look the codes for scroll page</p>
+
+<!-- more -->
+
 
 <ul>
 <li>Open js file in your project, and copy it</li>

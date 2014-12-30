@@ -4,7 +4,7 @@
   <title><![CDATA[Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-12-16T02:27:51+02:00</updated>
+  <updated>2014-12-30T14:43:58+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[ Leyla Kapi ]]></name>
@@ -41,6 +41,11 @@ models like below :</p>
 </span><span class='line'>  <span class="n">belongs_to</span> <span class="ss">:user</span>
 </span><span class='line'><span class="k">end</span>
 </span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<!-- more -->
 
 
 <p>When you created association between <code>user</code> and <code>user_profile</code> like above (you can derive it), then you are getting like below error while you refresh to app page or
@@ -140,6 +145,11 @@ second .</p></li>
 </span><span class='line'>    <span class="nt">&lt;/intent-filter&gt;</span>
 </span><span class='line'><span class="nt">&lt;/activity&gt;</span>
 </span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<!-- more -->
 
 
 <ul>
@@ -301,6 +311,13 @@ but you can not return to previous page, for return to first page, we can use ve
 </span></code></pre></td></tr></table></div></figure>
 
 
+
+
+<!-- more -->
+
+
+<p></p>
+
 <p>Then we getting, what is the <code>android:onClick</code> name, you can give the what you want name for <code>onClick</code> but can be
 careful for use in <code>java</code>, open <code>SecondActivity.java</code> write below code</p>
 
@@ -337,6 +354,11 @@ For fixing this bug, you should write below commands step by step ,</p>
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo apt-get install indicator-datetime
 </span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<!-- more -->
 
 
 <ul>
@@ -395,6 +417,11 @@ you see always the notes. If you want to add sticker notes you can use below com
 
 <p></p>
 
+<!-- more -->
+
+
+
+
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo apt-get update
 </span></code></pre></td></tr></table></div></figure>
@@ -435,6 +462,11 @@ should be seems like below</p>
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">activate</span> <span class="ss">:i18n</span><span class="p">,</span> <span class="ss">:path</span> <span class="o">=&gt;</span> <span class="s2">&quot;/:locale/&quot;</span>
 </span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<!-- more -->
 
 
 <p>But before above command you should create new directory in your root of your project. Means of above code, created
@@ -531,6 +563,11 @@ changed according to <code>en.yml</code> file.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
+
+
+<!-- more -->
+
+
 <p> Then you need to install <code>capybara-webkit</code> gem to your project with,</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -565,6 +602,11 @@ changed according to <code>en.yml</code> file.</p>
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span><span class="nb">cd</span> .android
 </span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<!-- more -->
 
 
 <p>If <code>.android</code> folder is exist in your home, you should remove this folder for fox the bug,</p>
@@ -605,6 +647,9 @@ On the other hand vagrant is useful, while you are working in a team.</p>
 <li>Set up new Virtual Machine</li>
 <li>Install Virtual Machine configuration</li>
 </ul>
+
+
+<!-- more -->
 
 
 <h4>1) Install Vagrant</h4>
@@ -824,6 +869,11 @@ You can make easily with below codes</p>
 
 <p>in haml page can be like</p>
 
+<!-- more -->
+
+
+
+
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -858,6 +908,9 @@ you can embed in it. In this post, I try to explain creating scroll page accordi
 <p><img src="../images/capture_image-home.png" alt="home-page" /></p>
 
 <p>Let&rsquo;s look the codes for scroll page</p>
+
+<!-- more -->
+
 
 <ul>
 <li>Open js file in your project, and copy it</li>
@@ -1797,6 +1850,11 @@ Another way, you can create new file in stylesheet folder like</li>
 </ul>
 
 
+<!-- more -->
+
+
+
+
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nt">_icon</span><span class="nc">.css.sass</span>
 </span></code></pre></td></tr></table></div></figure>
@@ -1865,6 +1923,11 @@ you can make it easily. Firstly, you should install <code>poppler-utils</code> i
 </span></code></pre></td></tr></table></div></figure>
 
 
+
+
+<!-- more -->
+
+
 <p>After that you can see to <code>pdfimages</code> how using it, like</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -1901,6 +1964,11 @@ It is very easy.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
+
+
+<!-- more -->
+
+
 <p>You can fix this bug with</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -1929,6 +1997,11 @@ It is very easy.</p>
     <content type="html"><![CDATA[<h3>How to change github global core editor ?</h3>
 
 <p>Open your terminal, then which editor is easy for you (vim, emacs, nano) ?</p>
+
+<!-- more -->
+
+
+
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -1962,6 +2035,11 @@ It is very easy.</p>
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;paperclip&#39;</span><span class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s2">&quot;git://github.com/thoughtbot/paperclip.git&quot;</span>
 </span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<!-- more -->
 
 
 <p>in terminal write <code>bundle</code> for install gem.</p>
@@ -2091,6 +2169,11 @@ It is very easy.</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
+
+
+<!-- more -->
+
+
 <p>While you were writing above command, you get errors like <code>Don't know how to build task 'populate'</code>.</p>
 
 <p>Let&rsquo;s fix,</p>
@@ -2135,6 +2218,9 @@ It is very easy.</p>
 
 <p>Try to fix this bug ;</p>
 
+<!-- more -->
+
+
 <ul>
 <li>Open <code>application_controller.rb</code> then remove this line,</li>
 </ul>
@@ -2175,6 +2261,11 @@ It is very easy.</p>
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo apt-get install openjdk-7-jdk
 </span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<!-- more -->
 
 
 <p>OR</p>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: exception | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/exception/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-12-16T02:27:51+02:00</updated>
+  <updated>2014-12-30T14:43:58+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[ Leyla Kapi ]]></name>
@@ -25,6 +25,9 @@
 <p><code>bash
 bundle exec rake generate
 </code></p>
+
+<!-- more -->
+
 
 <p>you get</p>
 

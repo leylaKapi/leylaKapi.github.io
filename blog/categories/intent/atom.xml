@@ -4,7 +4,7 @@
   <title><![CDATA[Category: intent | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/intent/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-12-16T02:27:51+02:00</updated>
+  <updated>2014-12-30T14:43:58+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[ Leyla Kapi ]]></name>
@@ -35,6 +35,11 @@ android:text="Return Previous Page" /&gt;
 </code></pre>
 
 <p>```</p>
+
+<!-- more -->
+
+
+<p></p>
 
 <p>Then we getting, what is the <code>android:onClick</code> name, you can give the what you want name for <code>onClick</code> but can be
 careful for use in <code>java</code>, open <code>SecondActivity.java</code> write below code</p>

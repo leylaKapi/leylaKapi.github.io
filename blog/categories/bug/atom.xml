@@ -4,7 +4,7 @@
   <title><![CDATA[Category: bug | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/bug/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-12-16T02:27:51+02:00</updated>
+  <updated>2014-12-30T14:43:58+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[ Leyla Kapi ]]></name>
@@ -35,6 +35,9 @@ class UserProfile &lt; ActiveRecord::Base
   belongs_to :user
 end
 </code></p>
+
+<!-- more -->
+
 
 <p>When you created association between <code>user</code> and <code>user_profile</code> like above (you can derive it), then you are getting like below error while you refresh to app page or
 edit something&hellip; The error is that :</p>
@@ -99,6 +102,9 @@ For fixing this bug, you should write below commands step by step ,</p>
 $ sudo apt-get install indicator-datetime
 </code></p>
 
+<!-- more -->
+
+
 <ul>
 <li>Re-configure date-time</li>
 </ul>
@@ -140,6 +146,9 @@ For the fix above error, you should open your <code>home</code> directory, then 
 $ cd .android
 </code></p>
 
+<!-- more -->
+
+
 <p>If <code>.android</code> folder is exist in your home, you should remove this folder for fox the bug,</p>
 
 <p><code>bash
@@ -166,6 +175,9 @@ $ rm -rf .android
 <p><code>ruby
 Photo could not run the identify command. Please install ImageMagick.
 </code></p>
+
+<!-- more -->
+
 
 <p>You can fix this bug with</p>
 
@@ -205,6 +217,9 @@ sudo apt-get install imagemagick.
 <p><code>bash
 rails g migration add_confirmable
 </code></p>
+
+<!-- more -->
+
 
 <p>then,</p>
 

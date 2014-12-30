@@ -7,8 +7,8 @@
 <!--<meta name="author" content="<a href=" http://leylaKapi.github.io/about/"> Leyla Kapi </a>"> <!-->
 
 	
-	<meta name="description" content="I want to sticker notes for my pc, when I search about it, I found sticky notes for Ubuntu 13.10 .
-This notes provide to reminder of something like &hellip;">
+	<meta name="description" content="How can you show page number in js ? If you create middleman or rails project and you want to add pagination in your pages with js.
+You can make &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -100,459 +100,15 @@ This notes provide to reminder of something like &hellip;">
     <article class="post">
 	<h2 class="title">
 		
-		<a href="/blog/2014/11/02/note-how-to-install-stick-notes-to-ubuntu/">
+		<a href="/blog/2014/10/02/dipnote-add-page-number-with-javascript/">
 		
-			Note: How to Install Sticker-notes to Ubuntu Desktop?</a>
+			Trick: Add Page Number With Javascript ?</a>
 	</h2>
 	<div class="entry-content">
-		<p>I want to sticker notes for my pc, when I search about it, I found <code>sticky notes</code> for <code>Ubuntu 13.10</code> .
-This notes provide to reminder of something like a agenda, when you wrote some notes inside,
-you see always the notes. If you want to add sticker notes you can use below command.</p>
+		<h3>How can you show page number in js ?</h3>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo add-apt-repository ppa:umang/indicator-stickynotes
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo apt-get update
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo apt-get install indicator-stickynotes
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>That &rsquo;s it. This notes very helpful for me .</p>
-
-<p>I hope helped to you too.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-11-02T21:36:43+02:00" pubdate data-updated="true">Nov 2<span>nd</span>, 2014</time></div>
-	<div class="tags">
-
-
-
-	<a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/notes/'>notes</a>, <a class='category' href='/blog/categories/pc/'>pc</a>, <a class='category' href='/blog/categories/stick/'>stick</a>, <a class='category' href='/blog/categories/sticker/'>sticker</a>, <a class='category' href='/blog/categories/ubuntu/'>ubuntu</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/11/02/note-how-to-install-stick-notes-to-ubuntu/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/10/27/how-to-add-multi-lingual-support-to-your-web-page-in-middleman/">
-		
-			How to Add Multi-lingual Support to Your Web-page in Middleman</a>
-	</h2>
-	<div class="entry-content">
-		<h3>Multi-Lingual Support</h3>
-
-<p>Firstly you should create middleman project , if doesn&rsquo;t exist it. Then in your project,
-open <code>config.rb</code>  file add below code,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">activate</span> <span class="ss">:i18n</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>when you add above code, you can active to <code>:i18n</code>. <code>i18n</code> extension provides a way to localize your site.
-After that you should add path of your locale directories in your project roots <code>~/MyProject/locales</code> directory and code
-should be seems like below</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">activate</span> <span class="ss">:i18n</span><span class="p">,</span> <span class="ss">:path</span> <span class="o">=&gt;</span> <span class="s2">&quot;/:locale/&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>But before above command you should create new directory in your root of your project. Means of above code, created
-locale directory which including languages <code>yaml</code> files.</p>
-
-<p>Then you should add root of your project according to your page language. If you want to seems to your page in english
-languages, you should add below code according to yml file in <code>~/MyProject/locales/en.yml</code>,
-if it is exist, you can write below code in <code>config.rb</code>,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">activate</span> <span class="ss">:i18n</span><span class="p">,</span> <span class="ss">:path</span> <span class="o">=&gt;</span> <span class="s2">&quot;/:locale/&quot;</span><span class="p">,</span> <span class="ss">:mount_at_root</span> <span class="o">=&gt;</span> <span class="ss">:en</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Now your page always seems in english language, but if write in address bar like <code>/es/index.html</code>, you can see in
-spanish languages, if there is exist in locales directory <code>es.yml</code> file.</p>
-
-<p>According to above,  you want to change language of your page according to your place, for example, if your page was opened in Italy,
-automatically shows your page in italian language, you can write instead of above,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">activate</span> <span class="ss">:i18n</span><span class="p">,</span> <span class="ss">:path</span> <span class="o">=&gt;</span> <span class="s2">&quot;/:locale/&quot;</span><span class="p">,</span> <span class="ss">:mount_at_root</span> <span class="o">=&gt;</span> <span class="kp">false</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>You can be carefully according to above, <code>false</code> and <code>:en</code>, because these codes provide to seems your page in root which language.</p>
-
-<p>If you created <code>locale</code> directory in root of your project, you can add which languages you want, to seem your page view,
-for example I want to seems my page in russian language, because of this I should create in locale directories <code>ru.yml</code> file.
-or want see in english language, can be <code>en.yml</code>. In <code>en.yml</code> you start to add your sentence like</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='yaml'><span class='line'><span class="nn">---</span>
-</span><span class='line'><span class="l-Scalar-Plain">en</span><span class="p-Indicator">:</span>
-</span><span class='line'>  <span class="l-Scalar-Plain">hello</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Hello</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>and</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='yaml'><span class='line'><span class="nn">---</span>
-</span><span class='line'><span class="l-Scalar-Plain">ru</span><span class="p-Indicator">:</span>
-</span><span class='line'>   <span class="l-Scalar-Plain">hello</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">привет</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>When create your yaml file like above, I want to page seems in russian and english because I created two yaml file
-one of the <code>en.yml</code> another of <code>ru.yml</code> .</p>
-
-<p>Then you should go to source directory in project than create <code>~/MyProject/source/localizable/</code> folder in source directory,
-after you should copy your <code>index.html.erb</code> or if your use <code>haml</code>, copy your <code>index.html.haml</code> to inside <code>~/MyProject/source/localizable/</code>
-folder. You should change sentences or words in your project according to yml file. While you are doing this you
-can be <code>t</code> parameter for can be shortly instead of <code>i18n</code>. According to above yml files, if I change words or sentence
-in <code>index.html.haml</code> , can be like</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="p">=</span> <span class="n">t</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>After when running your project, middleman thanks to <code>i18n</code> perceive automatically. if in address bar
-write <code>/ru/index.html</code>, <code>i18n</code> according to <code>ru.yml</code> changed your words and sentences or if you write <code>en/index.html</code>,
-changed according to <code>en.yml</code> file.</p>
-
-<p>For more information you look at <a href="http://middlemanapp.com/advanced/localization/">home page</a></p>
-
-<p>That&rsquo;s all.</p>
-
-<p>I hope helped to you.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-10-27T00:00:00+02:00" pubdate data-updated="true">Oct 27<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-
-	<a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/i18n/'>i18n</a>, <a class='category' href='/blog/categories/languages/'>languages</a>, <a class='category' href='/blog/categories/locales/'>locales</a>, <a class='category' href='/blog/categories/localization/'>localization</a>, <a class='category' href='/blog/categories/middleman/'>middleman</a>, <a class='category' href='/blog/categories/page/'>page</a>, <a class='category' href='/blog/categories/yml/'>yml</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/10/27/how-to-add-multi-lingual-support-to-your-web-page-in-middleman/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/10/22/note-fix-ruby-on-rails-qt-installation/">
-		
-			Note: Fix Ruby on Rails Qt Installation</a>
-	</h2>
-	<div class="entry-content">
-		<p>In your rails project when you run <code>bundle</code> command, if you getting below error,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>/ruby extconf.rb qmake:couldn<span class="s1">&#39;t find a QT installation of &#39;&#39; Command &#39;</span>qmake_spec linux-gtt<span class="err">&#39;</span> failed
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>on Ubuntu, you can fix with below command to this error.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo apt-get install qt4-dev-tools libqt4-dev libqt4-core libqt4-gui
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p> Then you need to install <code>capybara-webkit</code> gem to your project with,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>gem install capybara-webkit
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>You can search this bug on <a href="http://stackoverflow.com/questions/11354656/error-error-error-installing-capybara-webkit">stackoverflow</a></p>
-
-<p>That&rsquo;s all.</p>
-
-<p>I hope your bug is fixed.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-10-22T23:16:22+03:00" pubdate data-updated="true">Oct 22<span>nd</span>, 2014</time></div>
-	<div class="tags">
-
-
-
-	<a class='category' href='/blog/categories/built/'>built</a>, <a class='category' href='/blog/categories/capybara-webkit/'>capybara-webkit</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/error/'>error</a>, <a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/install/'>install</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/10/22/note-fix-ruby-on-rails-qt-installation/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/10/18/note-how-to-fix-android-parse-sdk-failed/">
-		
-			Note:How to Fix Android Parse Sdk Failed?</a>
-	</h2>
-	<div class="entry-content">
-		<p>If you are coding android on eclipse and when you are open your eclipse getting like</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='xml'><span class='line'>parseSdkContent failed
-</span><span class='line'>Could not initialize class android.graphics.Typeface
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>For the fix above error, you should open your <code>home</code> directory, then search the <code>android</code> file with</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span><span class="nb">cd</span> .android
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>If <code>.android</code> folder is exist in your home, you should remove this folder for fox the bug,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>rm -rf .android
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>you should run above command for fix the bug. Then you can check it.</p>
-
-<p>That&rsquo;s all.</p>
-
-<p>I hope helped to you.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-10-18T00:00:00+03:00" pubdate data-updated="true">Oct 18<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-
-	<a class='category' href='/blog/categories/android/'>android</a>, <a class='category' href='/blog/categories/bug/'>bug</a>, <a class='category' href='/blog/categories/eclipse/'>eclipse</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/error/'>error</a>, <a class='category' href='/blog/categories/fix/'>fix</a>, <a class='category' href='/blog/categories/initialize/'>initialize</a>, <a class='category' href='/blog/categories/parse/'>parse</a>, <a class='category' href='/blog/categories/run/'>run</a>, <a class='category' href='/blog/categories/sdk/'>sdk</a>, <a class='category' href='/blog/categories/typer-face/'>typer-face</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/10/18/note-how-to-fix-android-parse-sdk-failed/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/10/12/what-is-the-vagrant/">
-		
-			What&#8217;s the Vagrant ?</a>
-	</h2>
-	<div class="entry-content">
-		<h3>How to Set Up Vagrant on Ubuntu Desktop?</h3>
-
-<p><code>Vagrant</code> is a application which improved your application in virtual machine, this means that,
-you can create your project environment on virtual machine. Thanks to vagrant, you cloned local environment on virtual machine.
-So, when you sent to your project to <code>server</code>, you can&rsquo;t see any bug or error on your server.
-On the other hand vagrant is useful, while you are working in a team.</p>
-
-<p>For the install and use vagrant, you should follow below steps respectively.</p>
-
-<p>Let&rsquo;s look, how to set up and use <code>Vagrant in Ubuntu desktop</code>,</p>
-
-<ul>
-<li>Install Vagrant</li>
-<li>Create Vagrant Folders</li>
-<li>Install Precise32 Box</li>
-<li>Set up new Virtual Machine</li>
-<li>Install Virtual Machine configuration</li>
-</ul>
-
-
-<h4>1) Install Vagrant</h4>
-
-<p>For the install vagrant on your Ubuntu desktop is very easy. Open your terminal and write below command.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>leylakapi@leylakapicmd:~<span class="nv">$ </span>sudo apt-get install vagrant
-</span><span class='line'>...
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h4>2) Create Vagrant Folder</h4>
-
-<p>Continue on terminal, write below commands,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>leylakapi@leylakapicmd:~<span class="nv">$ </span>mkdir Vagrant
-</span><span class='line'>leylakapi@leylakapicmd:~<span class="nv">$ </span>mkdir Vagrant/Projects
-</span><span class='line'>leylakapi@leylakapicmd:~<span class="nv">$ </span>mkdir Vagrant/Projects/VM_169.x
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h4>3) Install Precise32 Box</h4>
-
-<p>Precise32 box is important on ubuntu desktop, because thanks to this box you can modify your virtual machine.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>leylakapi@leylakapicmd:~<span class="nv">$ </span><span class="nb">cd </span>Vagrant/Projects/VM_169.x
-</span><span class='line'>leylakapi@leylakapicmd:~/Vagrant/Projects/VM_169.x<span class="nv">$ </span>vagrant box add precise32 http://files.vagrantup.com/precise32.box --provider virtualbox
-</span><span class='line'>...
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>After install, you can check with,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>leylakapi@leylakapicmd:~/Vagrant/Projects/VM_169.x<span class="nv">$ </span>vagrant box list
-</span><span class='line'>precise32 <span class="o">(</span>virtualbox, 0<span class="o">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h4>4) Create New Virtual Machine</h4>
-
-<p>For create new virtual machine, you should initialize precise32 box,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>leylakapi@leylakapicmd:~/Vagrant/Projects/VM_169.x<span class="nv">$ </span>vagrant init precise32
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>When you wrote above command, you get warning about it, this means include <code>Vagrantfile</code>.</p>
-
-<h4>5) Install Virtual Machine configuration</h4>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>leylakapi@leylakapicmd:~/Vagrant/Projects/VM_169.x<span class="nv">$ </span>wget https://raw.github.com/saasbook/courseware/master/vm-setup/configure-image-0.10.3.sh
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>You should configure permission for virtual machine configuration</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>leylakapi@leylakapicmd:~/Vagrant/Projects/VM_169.x<span class="nv">$ </span>chmod +x configure-image-0.10.3.sh
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>Run the virtual machine with</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>leylakapi@leylakapicmd:~/Vagrant/Projects/VM_169.x<span class="nv">$ </span>vagrant up
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>Connecting with virtual machine</li>
-</ul>
-
+<p>If you create middleman or rails project and you want to add pagination in your pages with js.
+You can make easily with below codes</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -562,96 +118,24 @@ On the other hand vagrant is useful, while you are working in a team.</p>
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>leylakapi@leylakapicmd:~/Vagrant/Projects/VM_169.x<span class="nv">$ </span>vagrant ssh
-</span><span class='line'>Welcome to Ubuntu 12.04 LTS <span class="o">(</span>GNU/Linux 3.2.0-23-generic-pae i686<span class="o">)</span>
-</span><span class='line'> * Documentation:  https://help.ubuntu.com/
-</span><span class='line'>New release <span class="s1">&#39;14.04.1 LTS&#39;</span> available.
-</span><span class='line'>Run <span class="s1">&#39;do-release-upgrade&#39;</span> to upgrade to it.
-</span><span class='line'>Welcome to your Vagrant-built virtual machine.
-</span><span class='line'>Last login: Sun Oct 12 09:36:51 2014 from 10.0.2.2
-</span><span class='line'>vagrant@precise32:~<span class="nv">$ </span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'>  <span class="kd">var</span> <span class="nx">numberOfPages</span> <span class="o">=</span> <span class="mi">14</span><span class="p">;</span>
+</span><span class='line'>  <span class="kd">function</span> <span class="nx">addPage</span><span class="p">(</span><span class="nx">page</span><span class="p">,</span> <span class="nx">book</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">book</span><span class="p">.</span><span class="nx">turn</span><span class="p">(</span><span class="s1">&#39;hasPage&#39;</span><span class="p">,</span> <span class="nx">page</span><span class="p">))</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+</span><span class='line'>        <span class="nx">element</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span><span class="s1">&#39;&lt;div class=&quot;data&quot;&gt;Data for page &#39;</span><span class="o">+</span><span class="nx">page</span><span class="o">+</span><span class="s1">&#39;&lt;/div&gt;&#39;</span><span class="p">);</span>
+</span><span class='line'>      <span class="p">},</span> <span class="mi">14</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#number-pages&#39;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">numberOfPages</span><span class="p">);</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p></p>
+<p>in haml page can be like</p>
 
-<ul>
-<li>Run virtual machine configuration,</li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>vagrant@precise32:~<span class="nv">$ </span>/vagrant/configure-image-0.10.3.sh
-</span><span class='line'>Enter password to be used <span class="k">for </span>sudo commands:
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>
-you should enter a password for commands above.</p>
-
-<p>If you finish work on virtual machine, you write below commands for exit or turn off virtual machine</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>leylakapi@leylakapicmd:~/Vagrant/Projects/VM_169.x<span class="nv">$ </span>vagrant <span class="nb">suspend</span>
-</span><span class='line'>leylakapi@leylakapicmd:~/Vagrant/Projects/VM_169.x<span class="nv">$ </span>vagrant resume
-</span><span class='line'>leylakapi@leylakapicmd:~/Vagrant/Projects/VM_169.x<span class="nv">$ </span>vagrant halt
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>
-Or if you want to remove all things from virtual machine</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>leylakapi@leylakapicmd:~/Vagrant/Projects/VM_169.x<span class="nv">$ </span>vagrant destroy
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>But for the built again to your project only below commands it&rsquo;s enough.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>vagrant up
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>When I say <code>Vagrant</code> is useful for working in a team, look <a href="https://vagrantcloud.com/">Vagrant Cloud</a>.</li>
-</ul>
-
-
-<p>You can create account and share your vagrant environment with anyone with <code>vagrant cloud</code>.
-After create your account, open your terminal,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>vagrant login
-</span><span class='line'>...
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Write email or username and password for vagrant cloud, then</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>vagrant share
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>For more detail about Vagrant, you can look ;</p>
-
-<ul>
-<li><p><a href="http://docs.vagrantup.com/v2/getting-started/index.html">Vagrant</a></p></li>
-<li><p><a href="https://github.com/saasbook/courseware/wiki/Setting-Up-Vagrant-Environment-on-Ubuntu-Platform">Vagrant on Ubunbtu</a></p></li>
-</ul>
-
-
-<p>That&#8217; s all.</p>
-
-<p>I hope helped you .</p>
 
 		
-		
+		<a href="/blog/2014/10/02/dipnote-add-page-number-with-javascript/" class="more-link">Read more</a>
 	</div>
 
 
@@ -668,17 +152,507 @@ After create your account, open your terminal,</p>
   
 
 
-<time datetime="2014-10-12T14:58:37+03:00" pubdate data-updated="true">Oct 12<span>th</span>, 2014</time></div>
+<time datetime="2014-10-02T21:32:05+03:00" pubdate data-updated="true">Oct 2<span>nd</span>, 2014</time></div>
 	<div class="tags">
 
 
 
-	<a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/script/'>script</a>, <a class='category' href='/blog/categories/shell/'>shell</a>, <a class='category' href='/blog/categories/ssh/'>ssh</a>, <a class='category' href='/blog/categories/vagrant/'>vagrant</a>, <a class='category' href='/blog/categories/virtual-box/'>virtual-box</a>, <a class='category' href='/blog/categories/virtual-machine/'>virtual-machine</a>, <a class='category' href='/blog/categories/vm/'>vm</a>
+	<a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/frontend/'>frontend</a>, <a class='category' href='/blog/categories/haml/'>haml</a>, <a class='category' href='/blog/categories/js/'>js</a>, <a class='category' href='/blog/categories/number/'>number</a>, <a class='category' href='/blog/categories/pages/'>pages</a>, <a class='category' href='/blog/categories/pagination/'>pagination</a>
 
 
 </div>
 	
-	<div class="comments"><a href="/blog/2014/10/12/what-is-the-vagrant/#disqus_thread">Comments</a></div>
+	<div class="comments"><a href="/blog/2014/10/02/dipnote-add-page-number-with-javascript/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/09/17/how-to-create-scroll-page-for-rails-project/">
+		
+			How to Create Scroll-page for Rails Project</a>
+	</h2>
+	<div class="entry-content">
+		<h2>Create scroll page with sass and javascript</h2>
+
+<p>While I was creating <a href="https://github.com/leylaKapi/scroll-page">demo</a> for scroll page,
+firstly I created middleman project according to <code>haml</code> and <code>sass</code>, but if you want to embed in your for example rails project,
+you can embed in it. In this post, I try to explain creating scroll page according to middleman page.</p>
+
+<p><img src="../images/capture_image-home.png" alt="home-page" /></p>
+
+<p>Let&rsquo;s look the codes for scroll page</p>
+
+
+		
+		<a href="/blog/2014/09/17/how-to-create-scroll-page-for-rails-project/" class="more-link">Read more</a>
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-17T17:05:01+03:00" pubdate data-updated="true">Sep 17<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+
+	<a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/haml/'>haml</a>, <a class='category' href='/blog/categories/js/'>js</a>, <a class='category' href='/blog/categories/pages/'>pages</a>, <a class='category' href='/blog/categories/parallax/'>parallax</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ror/'>ror</a>, <a class='category' href='/blog/categories/sass/'>sass</a>, <a class='category' href='/blog/categories/scroll/'>scroll</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/09/17/how-to-create-scroll-page-for-rails-project/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/09/10/create-icon-set-for-your-rails-project/">
+		
+			Create Icon Set for Your Rails Project</a>
+	</h2>
+	<div class="entry-content">
+		<h3>How created your icon-set for your rails project ?</h3>
+
+<ul>
+<li>Firstly, you should go to <a href="https://icomoon.io/">icomoon.io</a> website.</li>
+<li>You need to create new app on right-up corner of webpage</li>
+<li>Now upload your font-icons after press <code>import icons</code> buttons,</li>
+<li>Be careful, because your fonts format must be <code>svg</code> format,</li>
+<li>When upload your icons, you should rename your icons,</li>
+<li>Now select which rename icons, and go to download your icons,</li>
+<li>When you download icomoon which provide to you with <code>css</code> and <code>js</code> files for font.</li>
+<li>When you are opening which download file, you can see this file and copy <code>font</code> directory and
+paste in your assets for rails projects.</li>
+<li>Go to css file in which download icomoons files, copy <code>css</code> file and paste in your style file
+(If you are using sass or less, you should convert to sass or less).
+Another way, you can create new file in stylesheet folder like</li>
+</ul>
+
+
+
+		
+		<a href="/blog/2014/09/10/create-icon-set-for-your-rails-project/" class="more-link">Read more</a>
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-10T17:23:26+03:00" pubdate data-updated="true">Sep 10<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+
+	<a class='category' href='/blog/categories/css/'>css</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/font/'>font</a>, <a class='category' href='/blog/categories/ico-moon/'>ico-moon</a>, <a class='category' href='/blog/categories/icon-set/'>icon-set</a>, <a class='category' href='/blog/categories/js/'>js</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/09/10/create-icon-set-for-your-rails-project/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/09/01/how-to-extract-images-from-pdf-file-on-ubuntu/">
+		
+			How to Extract Images From Pdf File on Ubuntu Desktop ?</a>
+	</h2>
+	<div class="entry-content">
+		<h3>Pdfimages in Ubuntu</h3>
+
+<p>If you have some pdf files which include images and want to extract all images like a image file,
+you can make it easily. Firstly, you should install <code>poppler-utils</code> in your machine, with</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo apt-get install poppler-utils
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+
+		
+		<a href="/blog/2014/09/01/how-to-extract-images-from-pdf-file-on-ubuntu/" class="more-link">Read more</a>
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-01T00:00:00+03:00" pubdate data-updated="true">Sep 1<span>st</span>, 2014</time></div>
+	<div class="tags">
+
+
+
+	<a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/files/'>files</a>, <a class='category' href='/blog/categories/images/'>images</a>, <a class='category' href='/blog/categories/pdf/'>pdf</a>, <a class='category' href='/blog/categories/pdfimages/'>pdfimages</a>, <a class='category' href='/blog/categories/ubuntu/'>ubuntu</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/09/01/how-to-extract-images-from-pdf-file-on-ubuntu/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/08/21/fix-paperclip-gem-bug/">
+		
+			Fix Paperclip Gem Bug</a>
+	</h2>
+	<div class="entry-content">
+		<h3>How can I fix <code>paperclip</code> error ?</h3>
+
+<p>When you use <code>paperclip</code> gem, if you are getting like this bug</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Photo</span> <span class="n">could</span> <span class="ow">not</span> <span class="n">run</span> <span class="n">the</span> <span class="n">identify</span> <span class="n">command</span><span class="o">.</span> <span class="no">Please</span> <span class="n">install</span> <span class="no">ImageMagick</span><span class="o">.</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+
+		
+		<a href="/blog/2014/08/21/fix-paperclip-gem-bug/" class="more-link">Read more</a>
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-08-21T13:49:45+03:00" pubdate data-updated="true">Aug 21<span>st</span>, 2014</time></div>
+	<div class="tags">
+
+
+
+	<a class='category' href='/blog/categories/bug/'>bug</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/image/'>image</a>, <a class='category' href='/blog/categories/paperclip/'>paperclip</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>, <a class='category' href='/blog/categories/upload/'>upload</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/08/21/fix-paperclip-gem-bug/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/08/16/change-github-config-editor/">
+		
+			Change Github Config Editor</a>
+	</h2>
+	<div class="entry-content">
+		<h3>How to change github global core editor ?</h3>
+
+<p>Open your terminal, then which editor is easy for you (vim, emacs, nano) ?</p>
+
+
+		
+		<a href="/blog/2014/08/16/change-github-config-editor/" class="more-link">Read more</a>
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-08-16T22:28:27+03:00" pubdate data-updated="true">Aug 16<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+
+	<a class='category' href='/blog/categories/editor/'>editor</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/github/'>gitHub</a>, <a class='category' href='/blog/categories/nano/'>nano</a>, <a class='category' href='/blog/categories/vi/'>vi</a>, <a class='category' href='/blog/categories/vim/'>vim</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/08/16/change-github-config-editor/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/08/09/upload-picture-to-rails-app/">
+		
+			Upload Picture to Rails App</a>
+	</h2>
+	<div class="entry-content">
+		<h3>How to upload picture in rails app ?</h3>
+
+<p>If you want to upload picture in your rails app, you should make</p>
+
+<ul>
+<li>Open your <code>Gemfile</code> in rails app then add</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;paperclip&#39;</span><span class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s2">&quot;git://github.com/thoughtbot/paperclip.git&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+
+		
+		<a href="/blog/2014/08/09/upload-picture-to-rails-app/" class="more-link">Read more</a>
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-08-09T13:03:08+03:00" pubdate data-updated="true">Aug 9<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+
+	<a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/paperclip/'>paperclip</a>, <a class='category' href='/blog/categories/picture/'>picture</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/upload/'>upload</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/08/09/upload-picture-to-rails-app/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/08/08/fix-rake-db-populate/">
+		
+			Fix Rake Db:populate</a>
+	</h2>
+	<div class="entry-content">
+		<h3><code>Rake aborted! Don't know how to build task 'populate'</code></h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>rake db:populate
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>or</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>bundle <span class="nb">exec </span>rake db:populate
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+
+		
+		<a href="/blog/2014/08/08/fix-rake-db-populate/" class="more-link">Read more</a>
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-08-08T10:33:06+03:00" pubdate data-updated="true">Aug 8<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+
+	<a class='category' href='/blog/categories/create/'>create</a>, <a class='category' href='/blog/categories/database/'>database</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/migration/'>migration</a>, <a class='category' href='/blog/categories/populate/'>populate</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/rake/'>rake</a>, <a class='category' href='/blog/categories/reset/'>reset</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>, <a class='category' href='/blog/categories/sqlite/'>sqlite</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/08/08/fix-rake-db-populate/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/08/06/fix-invalid-authentication-token-error-in-rails/">
+		
+			Fix Invalid Authentication Token Error in Rails</a>
+	</h2>
+	<div class="entry-content">
+		<h3>How to fix <code>ActionController: InvalidAuthentication Token error</code> ?</h3>
+
+<p>If you use <code>devise</code> gem and when you enter login page in your rails project, you get
+<code>Invalid Token</code> error, you thinking on <code>controller</code> .</p>
+
+<p>Try to fix this bug ;</p>
+
+
+		
+		<a href="/blog/2014/08/06/fix-invalid-authentication-token-error-in-rails/" class="more-link">Read more</a>
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-08-06T23:49:35+03:00" pubdate data-updated="true">Aug 6<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+
+	<a class='category' href='/blog/categories/ajax/'>ajax</a>, <a class='category' href='/blog/categories/authentication/'>authentication</a>, <a class='category' href='/blog/categories/controller/'>controller</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/08/06/fix-invalid-authentication-token-error-in-rails/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/08/03/install-open-jdk-or-oracle-on-ubuntu/">
+		
+			Install Open-jdk or Oracle on Ubuntu</a>
+	</h2>
+	<div class="entry-content">
+		<h3>Note about installation of java on Ubuntu computer</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo apt-get install openjdk-7-jdk
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+
+		
+		<a href="/blog/2014/08/03/install-open-jdk-or-oracle-on-ubuntu/" class="more-link">Read more</a>
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-08-03T23:25:29+03:00" pubdate data-updated="true">Aug 3<span>rd</span>, 2014</time></div>
+	<div class="tags">
+
+
+
+	<a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/install/'>install</a>, <a class='category' href='/blog/categories/java/'>java</a>, <a class='category' href='/blog/categories/jdk/'>jdk</a>, <a class='category' href='/blog/categories/linux/'>linux</a>, <a class='category' href='/blog/categories/openjdk/'>openjdk</a>, <a class='category' href='/blog/categories/oracle/'>oracle</a>, <a class='category' href='/blog/categories/ubuntu/'>ubuntu</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/08/03/install-open-jdk-or-oracle-on-ubuntu/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>

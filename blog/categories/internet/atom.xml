@@ -4,7 +4,7 @@
   <title><![CDATA[Category: internet | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/internet/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-12-16T02:27:51+02:00</updated>
+  <updated>2014-12-30T14:43:58+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[ Leyla Kapi ]]></name>
@@ -22,6 +22,9 @@
 
 <p>Internet like in real life, There are two sides for internet communication. While one of this is making request, another of this
 have to respond to this request. This loop is named</p>
+
+<!-- more -->
+
 
 <pre><code>request - respond
 </code></pre>

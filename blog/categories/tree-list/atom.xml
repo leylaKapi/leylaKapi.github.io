@@ -4,7 +4,7 @@
   <title><![CDATA[Category: tree-list | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/tree-list/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-12-16T02:27:51+02:00</updated>
+  <updated>2014-12-30T14:43:58+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[ Leyla Kapi ]]></name>
@@ -28,6 +28,9 @@ application.coffee
 </code></pre>
 
 <p>then we open <code>index.html.haml</code> file and we write your code like this,</p>
+
+<!-- more -->
+
 
 <p>``` haml</p>
 

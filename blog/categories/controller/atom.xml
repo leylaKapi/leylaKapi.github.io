@@ -4,7 +4,7 @@
   <title><![CDATA[Category: controller | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/controller/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-12-16T02:27:51+02:00</updated>
+  <updated>2014-12-30T14:43:58+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[ Leyla Kapi ]]></name>
@@ -35,6 +35,9 @@ class UserProfile &lt; ActiveRecord::Base
   belongs_to :user
 end
 </code></p>
+
+<!-- more -->
+
 
 <p>When you created association between <code>user</code> and <code>user_profile</code> like above (you can derive it), then you are getting like below error while you refresh to app page or
 edit something&hellip; The error is that :</p>
@@ -92,6 +95,9 @@ end
 
 <p>Try to fix this bug ;</p>
 
+<!-- more -->
+
+
 <ul>
 <li>Open <code>application_controller.rb</code> then remove this line,</li>
 </ul>
@@ -134,6 +140,9 @@ skip_before_filter :verify_authenticity_token
 terminal <code>bundle</code> .</p>
 
 <p>Then open controller which you want to add search bar, like ;</p>
+
+<!-- more -->
+
 
 <p><code>projects_controller</code></p>
 

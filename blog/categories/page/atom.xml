@@ -4,7 +4,7 @@
   <title><![CDATA[Category: page | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/page/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-12-16T02:27:51+02:00</updated>
+  <updated>2014-12-30T14:43:58+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[ Leyla Kapi ]]></name>
@@ -34,6 +34,9 @@ should be seems like below</p>
 <p><code>ruby
 activate :i18n, :path =&gt; "/:locale/"
 </code></p>
+
+<!-- more -->
+
 
 <p>But before above command you should create new directory in your root of your project. Means of above code, created
 locale directory which including languages <code>yaml</code> files.</p>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: git | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/git/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-12-16T02:27:51+02:00</updated>
+  <updated>2014-12-30T14:43:58+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[ Leyla Kapi ]]></name>
@@ -21,6 +21,9 @@
     <content type="html"><![CDATA[<h3>How to change github global core editor ?</h3>
 
 <p>Open your terminal, then which editor is easy for you (vim, emacs, nano) ?</p>
+
+<!-- more -->
+
 
 <p><code>bash
 git config --global core.editor "vim"  #or
@@ -42,6 +45,13 @@ git config --global core.editor "nano"
 
 <ul>
 <li>Firstly you should start to rubymine ide on your computer with <code>./rubymine.sh</code> then,</li>
+</ul>
+
+
+<!-- more -->
+
+
+<ul>
 <li>You can open <code>Help</code> in  nav-bar of rubymine, <code>find-action</code> or <code>ctrl+shift+A</code> then you should search <code>plugins</code>.</li>
 <li>Open plugins of rubymine then search again <code>git-flow</code> , if you saw &lsquo;click on Browser&rsquo;,
 click then search again in search bar to <code>git-flow</code>, Then you ca find easily integrate on <code>Rubymine</code>,
@@ -70,8 +80,12 @@ then if you make some wrong commit, you can delete wrong commit with</p>
 <p><code>bash
 git rebase -i HEAD~2
 </code>
-command.
-Then,</p>
+command.</p>
+
+<!-- more -->
+
+
+<p>Then,</p>
 
 <p><code>bash
 git push origin +develop
@@ -153,6 +167,9 @@ git rm -rf --cached .idea
 </code>
 Remove log files</p>
 
+<!-- more -->
+
+
 <p><code>bash
 git rm -r log/development.log
 </code></p>
@@ -179,6 +196,9 @@ echo '*log' &gt; .gitignore
 <p><code>bash
 git stash
 </code></p>
+
+<!-- more -->
+
 
 <p><code>bash
 git flow feature start your_feature_name

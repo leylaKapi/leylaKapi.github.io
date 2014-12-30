@@ -4,7 +4,7 @@
   <title><![CDATA[Category: rails, | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/rails/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-12-16T02:27:51+02:00</updated>
+  <updated>2014-12-30T14:43:58+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[ Leyla Kapi ]]></name>
@@ -21,6 +21,9 @@
     <content type="html"><![CDATA[<h3>MVC in Ruby on Rails</h3>
 
 <p>MVC &ndash; model, view, controller</p>
+
+<!-- more -->
+
 
 <p>MVC provide to separated of coding and design in app. This property provide to easiness for programmer.</p>
 

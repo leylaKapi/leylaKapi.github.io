@@ -4,7 +4,7 @@
   <title><![CDATA[Category: stick | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/stick/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-12-16T02:27:51+02:00</updated>
+  <updated>2014-12-30T14:43:58+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[ Leyla Kapi ]]></name>
@@ -25,6 +25,9 @@ you see always the notes. If you want to add sticker notes you can use below com
 <p><code>bash
 $ sudo add-apt-repository ppa:umang/indicator-stickynotes
 </code></p>
+
+<!-- more -->
+
 
 <p><code>bash
 $ sudo apt-get update

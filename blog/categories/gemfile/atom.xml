@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Gemfile | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/gemfile/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-12-16T02:27:51+02:00</updated>
+  <updated>2014-12-30T14:43:58+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[ Leyla Kapi ]]></name>
@@ -26,8 +26,12 @@ you' re getting error to your project,  like ;</p>
 <p><code>bash
 $ rails g devise:install
 Could not find generator devise:install
-</code>
-If you get like ths error, you can fix for these order,</p>
+</code></p>
+
+<!-- more -->
+
+
+<p>If you get like ths error, you can fix for these order,</p>
 
 <ul>
 <li>Open your <code>Gemfile</code>, add <code>gem 'devise'</code> then,</li>
@@ -68,6 +72,9 @@ rails (4.1.4
 </code></pre>
 
 <p>```</p>
+
+<!-- more -->
+
 
 <p>If you replace on <code>Gemfile</code> from</p>
 

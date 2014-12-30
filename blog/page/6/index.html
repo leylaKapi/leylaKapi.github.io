@@ -7,7 +7,8 @@
 <!--<meta name="author" content="<a href=" http://leylaKapi.github.io/about/"> Leyla Kapi </a>"> <!-->
 
 	
-	<meta name="description" content="Middleman sass compiling error While you were made web template with haml and sass, if you use middleman and bootstrap for your web template and &hellip;">
+	<meta name="description" content="What is the hash in ruby ? Hash, hash, hash ? Hashes are one of the biggest property which separated another language in ruby.
+Hash was known &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -99,231 +100,32 @@
     <article class="post">
 	<h2 class="title">
 		
-		<a href="/blog/2014/07/17/error-compiling-sass-assets/">
+		<a href="/blog/2014/03/01/brief-info-about-hash/">
 		
-			Error Compiling Sass Assets</a>
+			Brief Info About Hash</a>
 	</h2>
 	<div class="entry-content">
-		<h3>Middleman sass compiling error</h3>
+		<h3>What is the hash in ruby ?</h3>
 
-<p>While you were made web template with <code>haml</code> and <code>sass</code>, if you use middleman and bootstrap for your web template and your project give you like,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='sass'><span class='line'><span class="nt">Error</span> <span class="nt">compiling</span> <span class="nt">CSS</span> <span class="nt">asset</span>
-</span><span class='line'><span class="na">NoMethodError</span><span class="o">:</span> <span class="n">undefined</span> <span class="n">method</span> <span class="err">`</span><span class="n">font_path</span><span class="err">`</span> <span class="n">for</span> <span class="n">nil</span><span class="o">:</span><span class="n">NilClass</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>error.</p>
-
-<p>You can fix like with edit your <code>Gemfile</code></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;bootstrap-sass&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 3.1.1&#39;</span>
-</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;middleman-sprockets&#39;</span><span class="p">,</span> <span class="s1">&#39;3.2.2&#39;</span>
-</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;middleman-bootstrap-navbar&#39;</span><span class="p">,</span><span class="s1">&#39;~&gt;2.0&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Then you can write in terminal <code>bundle install</code>
-Than if errors didn&rsquo;t fixed, you should write on terminal</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>bundle update middleman-sprockets
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>If you want to researches with details, you should look <a href="https://github.com/middleman/middleman/issues/1265">this page</a></p>
-
-<p>That&rsquo;s all.</p>
-
-<p>I hope helped to you.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-07-17T16:27:24+03:00" pubdate data-updated="true">Jul 17<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-
-	<a class='category' href='/blog/categories/assets/'>assets</a>, <a class='category' href='/blog/categories/bootstrap/'>bootstrap</a>, <a class='category' href='/blog/categories/compiling/'>compiling</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/middleman/'>middleman</a>, <a class='category' href='/blog/categories/sass/'>sass</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/07/17/error-compiling-sass-assets/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/07/16/add-search-form-to-rails-projects/">
-		
-			Add Simple Search Form to Rails Projects</a>
-	</h2>
-	<div class="entry-content">
-		<h3>How can you add simple search form to rails project ?</h3>
-
-<p>You want to add search form, but you don&rsquo;t no.  <em>HOW?</em></p>
-
-<p>Let&rsquo;s start, firstly you should use <a href="https://github.com/activerecord-hackery/ransack">ransack</a> and
-<a href="https://github.com/mislav/will_paginate">will_paginate</a> gems in your <code>Gemfile</code> then you should write in
-terminal <code>bundle</code> .</p>
-
-<p>Then open controller which you want to add search bar, like ;</p>
-
-<p><code>projects_controller</code></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">index</span>
-</span><span class='line'>    <span class="vi">@search</span> <span class="o">=</span> <span class="no">Project</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">params</span><span class="o">[</span><span class="ss">:q</span><span class="o">]</span><span class="p">)</span>
-</span><span class='line'>    <span class="vi">@project</span> <span class="o">=</span> <span class="vi">@search</span><span class="o">.</span><span class="n">result</span><span class="p">(</span><span class="ss">distinct</span><span class="p">:</span> <span class="kp">true</span><span class="p">)</span><span class="o">.</span><span class="n">paginate</span><span class="p">(</span><span class="ss">:page</span> <span class="o">=&gt;</span> <span class="n">params</span><span class="o">[</span><span class="ss">:page</span><span class="o">]</span><span class="p">)</span>
-</span><span class='line'>    <span class="n">respond_with</span> <span class="vi">@project</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>When you added controller, you should add below code which relation to index file ;</p>
-
-<p><code>projects/index.html.haml</code></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="p">=</span> <span class="n">search_form_for</span> <span class="vi">@search</span> <span class="k">do</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span>
-</span><span class='line'>    <span class="p">=</span> <span class="n">f</span><span class="o">.</span><span class="n">label</span> <span class="ss">:name_cont</span>
-</span><span class='line'>    <span class="p">=</span> <span class="n">f</span><span class="o">.</span><span class="n">search_field</span> <span class="ss">:name_cont</span>
-</span><span class='line'>    <span class="p">=</span> <span class="n">f</span><span class="o">.</span><span class="n">submit</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>That&rsquo;s all .</p>
-
-<p>I hope helped to you .</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-07-16T19:47:15+03:00" pubdate data-updated="true">Jul 16<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-
-	<a class='category' href='/blog/categories/controller/'>controller</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/form/'>form</a>, <a class='category' href='/blog/categories/model/'>model</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>, <a class='category' href='/blog/categories/search/'>search</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/07/16/add-search-form-to-rails-projects/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/07/13/when-you-start-to-project/">
-		
-			Useful Gems</a>
-	</h2>
-	<div class="entry-content">
-		<h3>When you start to project, which gems are useful ?</h3>
-
-<p>When you start a rails project, you can use these gems which useful for project.</p>
-
-<p>Gems are like,</p>
+<p>Hash, hash, hash ?</p>
 
 <ul>
-<li><a href="https://rubygems.org/gems/blankable">blankable</a></li>
-<li><a href="https://rubygems.org/gems/simple_form">simple_form</a></li>
-<li><a href="https://rubygems.org/gems/model_to_locale">model_to_locale</a></li>
-<li><a href="https://rubygems.org/gems/responders">responders</a></li>
-<li><a href="https://rubygems.org/gems/will_paginate">will_paginate</a></li>
-<li><a href="https://rubygems.org/gems/will_paginate-bootstrap">will_paginate_bootstrap</a></li>
-<li><a href="https://rubygems.org/gems/better_errors">better_errors</a></li>
+<li>Hashes are one of the biggest property which separated another language in ruby.</li>
+<li>Hash was known <strong>associative array</strong> in another programming language.</li>
+<li>In hash, elements keep <strong>&lsquo;key => value&rsquo;</strong> format in ruby . Like</li>
 </ul>
 
 
-<p>1- <strong>blankable gem</strong></p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">hash_example</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;surname&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;doe&#39;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<p><code>blankable</code> provide to add blank slates to index view &hellip;
-You can look on <a href="https://github.com/lab2023/blankable">gitHub</a></p>
 
-<p>2- <strong>simple_form</strong></p>
 
-<p><code>simple_form</code> provide to make easy rails forms, aims is that to be as flexible as possible
-while helping you with powerful components to create your form &hellip; You can look on <a href="https://github.com/plataformatec/simple_form">gitHub</a></p>
 
-<p>3- <strong>model_to_locale</strong></p>
-
-<p><code>model_to_locale</code> provide to create locale file for model attributes &hellip;
-You can look on <a href="https://github.com/lab2023/model_to_locale">gitHub</a></p>
-
-<p>4- <strong>responders</strong></p>
-
-<p><code>responders</code> provide to dry up your Rails 3.2+ app &hellip;
-You can look on <a href="https://github.com/plataformatec/responders">gitHub</a></p>
-
-<p>5- <strong>will_paginate</strong></p>
-
-<p><code>will_paginate</code> provide to pagination library that integrate with RoR, Sinatra &hellip;
-You can look on <a href="https://github.com/mislav/will_paginate">gitHub</a></p>
-
-<p>6- <strong>will_paginate_bootstrap</strong></p>
-
-<p><code>will_paginate_bootstrap</code> provide to integrate in <code>will_paginate</code> to <code>bootstrap</code> &hellip;
-You can look on <a href="https://github.com/bootstrap-ruby/will_paginate-bootstrap">gitHub</a></p>
-
-<p>7- <strong>better_errors</strong></p>
-
-<p><code>better_errors</code> provide to replace standard error page to much better and useful error page
-You can look on <a href="https://github.com/charliesome/better_errorss">gitHub</a></p>
 
 		
-		
+		<a href="/blog/2014/03/01/brief-info-about-hash/" class="more-link">Read more</a>
 	</div>
 
 
@@ -340,17 +142,17 @@ You can look on <a href="https://github.com/charliesome/better_errorss">gitHub</
   
 
 
-<time datetime="2014-07-13T13:58:15+03:00" pubdate data-updated="true">Jul 13<span>th</span>, 2014</time></div>
+<time datetime="2014-03-01T18:52:57+02:00" pubdate data-updated="true">Mar 1<span>st</span>, 2014</time></div>
 	<div class="tags">
 
 
 
-	<a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/github/'>gitHub</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ror/'>ror</a>, <a class='category' href='/blog/categories/rubygems/'>rubygems</a>
+	<a class='category' href='/blog/categories/hash/'>Hash</a>, <a class='category' href='/blog/categories/ruby/'>Ruby,</a>, <a class='category' href='/blog/categories/en/'>en</a>
 
 
 </div>
 	
-	<div class="comments"><a href="/blog/2014/07/13/when-you-start-to-project/#disqus_thread">Comments</a></div>
+	<div class="comments"><a href="/blog/2014/03/01/brief-info-about-hash/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>
@@ -359,115 +161,254 @@ You can look on <a href="https://github.com/charliesome/better_errorss">gitHub</
     <article class="post">
 	<h2 class="title">
 		
-		<a href="/blog/2014/07/10/how-to-make-a-release/">
+		<a href="/blog/2014/02/28/what-is-the-ruby-on-rails/">
 		
-			How to Make a Release ?</a>
+			What Is the Ruby on Rails?</a>
 	</h2>
 	<div class="entry-content">
-		<p>Make a release</p>
+		<h2>What is the Ruby On Rails and How install?</h2>
 
-<p>When you start to make a release, I think if you look at your commit it can be better</p>
+<p><strong>Ruby</strong></p>
+
+<ul>
+<li>Object oriented programming language</li>
+<li>Created in 1995 by Matz</li>
+<li>Used for many purpose, not only web app.</li>
+</ul>
+
+
+
+		
+		<a href="/blog/2014/02/28/what-is-the-ruby-on-rails/" class="more-link">Read more</a>
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-28T18:25:39+02:00" pubdate data-updated="true">Feb 28<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+
+	<a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ruby/'>ruby,</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/02/28/what-is-the-ruby-on-rails/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/02/27/middleman-create-haml-file/">
+		
+			Middleman Create Haml File</a>
+	</h2>
+	<div class="entry-content">
+		<h3>How to create .haml file in middleman?</h3>
+
+<p>Firstly, you should go <a href="" title="http://middlemanapp.com/">middleman</a> and you need to <strong>install middleman</strong></p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git log
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>   gem install middleman
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>then if you make some wrong commit, you can delete wrong commit with</p>
+
+
+
+		
+		<a href="/blog/2014/02/27/middleman-create-haml-file/" class="more-link">Read more</a>
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-27T13:49:10+02:00" pubdate data-updated="true">Feb 27<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+
+	<a class='category' href='/blog/categories/haml/'>Haml</a>, <a class='category' href='/blog/categories/middleman/'>Middleman,</a>, <a class='category' href='/blog/categories/en/'>en</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/02/27/middleman-create-haml-file/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/02/26/markdown-article-some-style/">
+		
+			Markdown Article Some Style</a>
+	</h2>
+	<div class="entry-content">
+		<h2>Write article with markdown</h2>
+
+<ul>
+<li>When you start to write article with markdown, we can recognize to writing regularly and reading easily.</li>
+</ul>
+
+
+<p>Firstly</p>
+
+<h4>How to write header in markdown?</h4>
+
+
+		
+		<a href="/blog/2014/02/26/markdown-article-some-style/" class="more-link">Read more</a>
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-26T17:59:49+02:00" pubdate data-updated="true">Feb 26<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+
+	<a class='category' href='/blog/categories/markdown/'>Markdown</a>, <a class='category' href='/blog/categories/en/'>en</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/02/26/markdown-article-some-style/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/02/26/how-to-add-aboout-page-in-octopress/">
+		
+			How to Add &#8216;About&#8217; Page in Octopress</a>
+	</h2>
+	<div class="entry-content">
+		<h3>How to add &lsquo;About&rsquo; page in Octopress?</h3>
+
+<p>I needs 2 step for create <code>About</code> page on navigation bar.</p>
+
+<ul>
+<li>Firstly create &lsquo;about page&rsquo;</li>
+</ul>
+
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git rebase -i HEAD~2
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake new_page<span class="se">\[</span><span class="s2">&quot;About&quot;</span><span class="se">\]</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>command.
-Then,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push origin +develop
-</span></code></pre></td></tr></table></div></figure>
 
 
-<p>After that, you can check you branch with</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git branch -a
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>then let&rsquo;s start to release ;</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git flow release start your_version_number
-</span></code></pre></td></tr></table></div></figure>
+		
+		<a href="/blog/2014/02/26/how-to-add-aboout-page-in-octopress/" class="more-link">Read more</a>
+	</div>
 
 
-<p><code>your_version_number</code> can be like <code>0.1.0</code> . Actually can be like</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git flow release start 0.1.0
-</span></code></pre></td></tr></table></div></figure>
+<div class="meta">
+	<div class="date">
 
 
-<p>When we write this command, you can create <code>VERSION.txt</code> file, and open &lsquo;txt&rsquo; file
-then write some number with <code>your_version_number</code></p>
 
-<p>Write with order below commands,</p>
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-26T14:25:12+02:00" pubdate data-updated="true">Feb 26<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+
+	<a class='category' href='/blog/categories/octopress/'>Octopress</a>, <a class='category' href='/blog/categories/en/'>en</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/02/26/how-to-add-aboout-page-in-octopress/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/02/26/commands-of-github-for-setup/">
+		
+			Commands of Github for Setup</a>
+	</h2>
+	<div class="entry-content">
+		<h3>What I can setup github and create repo?</h3>
+
+<ul>
+<li>Firstly we create github account from <a href="https://github.com/">github</a></li>
+<li>We create a new repo from &lsquo;+&rsquo; symbol.</li>
+<li>We named this repo and creating.</li>
+<li>After, We seems to this url</li>
+</ul>
+
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git add .
-</span><span class='line'>git commit -m <span class="s2">&quot;Bump version &#39;your_version_number&#39;&quot;</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>HTTP: https://github.com/username/repo_name.git
+</span><span class='line'>SSH: git@github.com:username/repo_name.git
 </span></code></pre></td></tr></table></div></figure>
 
 
 
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git flow release finish 0.1.0
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git checkout release/0.1.0
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push origin develop
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push origin +master
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Yep, Now you made a release you can check on your repo settings on <a href="https://github.com/">github</a>.</p>
-
-<p>Let&#8217; s add Tag,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git tag
-</span></code></pre></td></tr></table></div></figure>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git push --tags
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>That&#8217; s all.
-I hope help to you.</p>
 
 		
-		
+		<a href="/blog/2014/02/26/commands-of-github-for-setup/" class="more-link">Read more</a>
 	</div>
 
 
@@ -484,17 +425,17 @@ I hope help to you.</p>
   
 
 
-<time datetime="2014-07-10T19:01:26+03:00" pubdate data-updated="true">Jul 10<span>th</span>, 2014</time></div>
+<time datetime="2014-02-26T12:31:12+02:00" pubdate data-updated="true">Feb 26<span>th</span>, 2014</time></div>
 	<div class="tags">
 
 
 
-	<a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/github/'>gitHub</a>, <a class='category' href='/blog/categories/release/'>release</a>
+	<a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/github/'>github</a>
 
 
 </div>
 	
-	<div class="comments"><a href="/blog/2014/07/10/how-to-make-a-release/#disqus_thread">Comments</a></div>
+	<div class="comments"><a href="/blog/2014/02/26/commands-of-github-for-setup/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>
@@ -503,42 +444,72 @@ I hope help to you.</p>
     <article class="post">
 	<h2 class="title">
 		
-		<a href="/blog/2014/07/08/remove-log-and-idea-files-on-your-rails-project/">
+		<a href="/blog/2014/02/26/after-new-post/">
 		
-			Remove Log and Idea Files on Your Rails Project</a>
+			After Create Octopress Blog Fixed Error</a>
 	</h2>
 	<div class="entry-content">
-		<h3>How to remove log and idea files on your project ?</h3>
-
-<p>Remove idea files</p>
+		<h3>When I setup Octopress Repository, error of</h3>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git rm -r --cached .idea
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake deploy
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>While you were remove, terminal gives error about it, you can try to below command :</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git rm -rf --cached .idea
-</span></code></pre></td></tr></table></div></figure>
 
 
-<p>Remove log files</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git rm -r log/development.log
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>After that, you should include on your <code>.gitignore</code> file like;</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">echo</span> <span class="s1">&#39;*log&#39;</span> &gt; .gitignore
-</span></code></pre></td></tr></table></div></figure>
+		
+		<a href="/blog/2014/02/26/after-new-post/" class="more-link">Read more</a>
+	</div>
 
 
-<p>That&rsquo;s all.</p>
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-26T11:30:57+02:00" pubdate data-updated="true">Feb 26<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+
+	<a class='category' href='/blog/categories/octopress/'>Octopress</a>, <a class='category' href='/blog/categories/en/'>en</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/02/26/after-new-post/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/02/26/meaning-of-abbreviations/">
+		
+			Meaning of Abbreviations</a>
+	</h2>
+	<div class="entry-content">
+		<h2>What is the meaning of abbreviation for HTML, CSS, &hellip;?</h2>
+
+<ul>
+<li>HTML : Hyper text markup language</li>
+<li>CSS : Cascading Stylesheet</li>
+<li>Haml : HTML Abstraction markup language</li>
+<li>SASS: Syntactically Awesome Stylesheets</li>
+</ul>
+
 
 		
 		
@@ -558,17 +529,17 @@ I hope help to you.</p>
   
 
 
-<time datetime="2014-07-08T01:53:53+03:00" pubdate data-updated="true">Jul 8<span>th</span>, 2014</time></div>
+<time datetime="2014-02-26T10:04:36+02:00" pubdate data-updated="true">Feb 26<span>th</span>, 2014</time></div>
 	<div class="tags">
 
 
 
-	<a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/github/'>gitHub</a>, <a class='category' href='/blog/categories/gitignore/'>gitignore</a>, <a class='category' href='/blog/categories/idea/'>idea</a>, <a class='category' href='/blog/categories/log/'>log</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
+	<a class='category' href='/blog/categories/abbreviation/'>abbreviation</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/meaning/'>meaning</a>
 
 
 </div>
 	
-	<div class="comments"><a href="/blog/2014/07/08/remove-log-and-idea-files-on-your-rails-project/#disqus_thread">Comments</a></div>
+	<div class="comments"><a href="/blog/2014/02/26/meaning-of-abbreviations/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>
@@ -577,8 +548,6 @@ I hope help to you.</p>
     
         <a href="/blog/page/5/" class="prev">Prev</a>
     
-    
-        <a href="/blog/page/7/" class="next">Next</a>
     
     <div class="center"><a href="/blog/archives">Blog Archives</a></div>
 </nav>

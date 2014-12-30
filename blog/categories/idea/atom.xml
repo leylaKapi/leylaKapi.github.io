@@ -4,7 +4,7 @@
   <title><![CDATA[Category: idea | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/idea/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-12-16T02:27:51+02:00</updated>
+  <updated>2014-12-30T14:43:58+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[ Leyla Kapi ]]></name>
@@ -31,6 +31,9 @@ While you were remove, terminal gives error about it, you can try to below comma
 git rm -rf --cached .idea
 </code>
 Remove log files</p>
+
+<!-- more -->
+
 
 <p><code>bash
 git rm -r log/development.log

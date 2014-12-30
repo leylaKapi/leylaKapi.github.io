@@ -4,7 +4,7 @@
   <title><![CDATA[Category: sqlite | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/sqlite/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-12-16T02:27:51+02:00</updated>
+  <updated>2014-12-30T14:43:58+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[ Leyla Kapi ]]></name>
@@ -28,6 +28,9 @@ or</p>
 <p><code>bash
 $ bundle exec rake db:populate
 </code></p>
+
+<!-- more -->
+
 
 <p>While you were writing above command, you get errors like <code>Don't know how to build task 'populate'</code>.</p>
 

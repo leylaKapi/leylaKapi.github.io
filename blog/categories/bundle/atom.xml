@@ -4,7 +4,7 @@
   <title><![CDATA[Category: bundle | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/bundle/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-12-16T02:27:51+02:00</updated>
+  <updated>2014-12-30T14:43:58+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[ Leyla Kapi ]]></name>
@@ -23,6 +23,9 @@
 <p><code>
 Undefined method 'attr_accessible'
 </code></p>
+
+<!-- more -->
+
 
 <p>You can forget write gem about this attributes, open your <em>Gemfile</em> in project</p>
 

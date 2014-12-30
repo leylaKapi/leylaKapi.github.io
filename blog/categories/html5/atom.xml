@@ -4,7 +4,7 @@
   <title><![CDATA[Category: html5 | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/html5/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-12-16T02:27:51+02:00</updated>
+  <updated>2014-12-30T14:43:58+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[ Leyla Kapi ]]></name>
@@ -22,6 +22,9 @@
 
 <p>When I looking for javascript library, I found some library is used <code>HTML5 Canvas Javascript</code> library
 for game development.</p>
+
+<!-- more -->
+
 
 <p>This library provide to <code>build and animate</code> to game project. I found some Html5 canvas javascript libraries :</p>
 

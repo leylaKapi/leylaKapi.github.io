@@ -4,7 +4,7 @@
   <title><![CDATA[Category: rake | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/rake/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-12-16T02:27:51+02:00</updated>
+  <updated>2014-12-30T14:43:58+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[ Leyla Kapi ]]></name>
@@ -28,6 +28,9 @@ or</p>
 <p><code>bash
 $ bundle exec rake db:populate
 </code></p>
+
+<!-- more -->
+
 
 <p>While you were writing above command, you get errors like <code>Don't know how to build task 'populate'</code>.</p>
 
@@ -66,6 +69,9 @@ then try to run tour rails project.</p>
 <p><code>bash
 bundle exec rake generate
 </code></p>
+
+<!-- more -->
+
 
 <p>you get</p>
 
@@ -113,6 +119,9 @@ Firstly, Let&rsquo;s create rails project</p>
 rails new blogging
 cd blogging
 </code></p>
+
+<!-- more -->
+
 
 <p>Now, we created rails project and enter inside of project.
 We need to create scaffold,</p>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: script | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/script/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-12-16T02:27:51+02:00</updated>
+  <updated>2014-12-30T14:43:58+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[ Leyla Kapi ]]></name>
@@ -36,6 +36,9 @@ On the other hand vagrant is useful, while you are working in a team.</p>
 <li>Set up new Virtual Machine</li>
 <li>Install Virtual Machine configuration</li>
 </ul>
+
+
+<!-- more -->
 
 
 <h4>1) Install Vagrant</h4>

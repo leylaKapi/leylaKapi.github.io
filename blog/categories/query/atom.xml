@@ -4,7 +4,7 @@
   <title><![CDATA[Category: query | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/query/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-12-16T02:27:51+02:00</updated>
+  <updated>2014-12-30T14:43:58+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[ Leyla Kapi ]]></name>
@@ -35,6 +35,9 @@ class UserProfile &lt; ActiveRecord::Base
   belongs_to :user
 end
 </code></p>
+
+<!-- more -->
+
 
 <p>When you created association between <code>user</code> and <code>user_profile</code> like above (you can derive it), then you are getting like below error while you refresh to app page or
 edit something&hellip; The error is that :</p>

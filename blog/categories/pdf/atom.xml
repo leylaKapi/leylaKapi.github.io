@@ -4,7 +4,7 @@
   <title><![CDATA[Category: pdf | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/pdf/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-12-16T02:27:51+02:00</updated>
+  <updated>2014-12-30T14:43:58+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[ Leyla Kapi ]]></name>
@@ -26,6 +26,9 @@ you can make it easily. Firstly, you should install <code>poppler-utils</code> i
 <p><code>bash
 $ sudo apt-get install poppler-utils
 </code></p>
+
+<!-- more -->
+
 
 <p>After that you can see to <code>pdfimages</code> how using it, like</p>
 

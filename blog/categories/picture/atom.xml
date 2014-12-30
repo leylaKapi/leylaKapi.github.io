@@ -4,7 +4,7 @@
   <title><![CDATA[Category: picture | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/picture/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-12-16T02:27:51+02:00</updated>
+  <updated>2014-12-30T14:43:58+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[ Leyla Kapi ]]></name>
@@ -30,6 +30,9 @@
 <p><code>ruby
 gem 'paperclip', :git =&gt; "git://github.com/thoughtbot/paperclip.git"
 </code></p>
+
+<!-- more -->
+
 
 <p>in terminal write <code>bundle</code> for install gem.</p>
 

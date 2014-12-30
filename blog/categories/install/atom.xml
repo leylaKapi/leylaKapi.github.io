@@ -4,7 +4,7 @@
   <title><![CDATA[Category: install | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/install/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-12-16T02:27:51+02:00</updated>
+  <updated>2014-12-30T14:43:58+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[ Leyla Kapi ]]></name>
@@ -30,6 +30,9 @@
 $ sudo apt-get install qt4-dev-tools libqt4-dev libqt4-core libqt4-gui
 </code></p>
 
+<!-- more -->
+
+
 <p> Then you need to install <code>capybara-webkit</code> gem to your project with,</p>
 
 <p><code>bash
@@ -54,6 +57,9 @@ $ gem install capybara-webkit
 <p><code>bash
 $ sudo apt-get install openjdk-7-jdk
 </code></p>
+
+<!-- more -->
+
 
 <p>OR</p>
 
@@ -82,8 +88,12 @@ you' re getting error to your project,  like ;</p>
 <p><code>bash
 $ rails g devise:install
 Could not find generator devise:install
-</code>
-If you get like ths error, you can fix for these order,</p>
+</code></p>
+
+<!-- more -->
+
+
+<p>If you get like ths error, you can fix for these order,</p>
 
 <ul>
 <li>Open your <code>Gemfile</code>, add <code>gem 'devise'</code> then,</li>

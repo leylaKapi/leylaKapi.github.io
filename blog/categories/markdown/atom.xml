@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Markdown | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/markdown/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-12-16T02:27:51+02:00</updated>
+  <updated>2014-12-30T14:43:58+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[ Leyla Kapi ]]></name>
@@ -28,6 +28,9 @@
 <p>Firstly</p>
 
 <h4>How to write header in markdown?</h4>
+
+<!-- more -->
+
 
 <p>While you&rsquo;re writing header, you should write in &lsquo;#&rsquo;(pound sign)</p>
 

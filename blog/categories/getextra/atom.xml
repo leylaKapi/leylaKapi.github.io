@@ -4,7 +4,7 @@
   <title><![CDATA[Category: getExtra | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/getextra/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-12-16T02:27:51+02:00</updated>
+  <updated>2014-12-30T14:43:58+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[ Leyla Kapi ]]></name>
@@ -49,6 +49,9 @@ android:label="Second Activity"
 
 <p></activity>
 ```</p>
+
+<!-- more -->
+
 
 <ul>
 <li>After that we need to create button on <code>activtiy_main.xml</code> after click this button goes the second activity .</li>

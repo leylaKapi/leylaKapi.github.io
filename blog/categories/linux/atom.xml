@@ -4,7 +4,7 @@
   <title><![CDATA[Category: linux | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/linux/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-12-16T02:27:51+02:00</updated>
+  <updated>2014-12-30T14:43:58+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[ Leyla Kapi ]]></name>
@@ -31,6 +31,9 @@ For fixing this bug, you should write below commands step by step ,</p>
 <p><code>bash
 $ sudo apt-get install indicator-datetime
 </code></p>
+
+<!-- more -->
+
 
 <ul>
 <li>Re-configure date-time</li>
@@ -66,6 +69,9 @@ $ sudo killall unity-panel-service
 <p><code>bash
 $ sudo apt-get install openjdk-7-jdk
 </code></p>
+
+<!-- more -->
+
 
 <p>OR</p>
 

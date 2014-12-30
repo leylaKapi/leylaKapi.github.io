@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Octopress | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2014-12-16T02:27:51+02:00</updated>
+  <updated>2014-12-30T14:43:58+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[ Leyla Kapi ]]></name>
@@ -33,6 +33,9 @@
 </code></pre>
 
 <p>```</p>
+
+<!-- more -->
+
 
 <p>Created new page for about and we linked to <code>About</code>, How?</p>
 
@@ -98,6 +101,9 @@ rake deploy
 </code></pre>
 
 <p>```</p>
+
+<!-- more -->
+
 
 <p>I setup the Octopress, and I create,</p>
 
