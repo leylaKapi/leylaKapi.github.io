@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: exception | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/exception/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2015-01-16T00:22:20+02:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[ Leyla Kapi ]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[How can you solve YAML exception reading bug in octopress ?]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/05/20/how-can-you-solve-yaml-exception-reading-bug-in-octopress/"/>
+    <updated>2014-05-20T17:19:18+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/05/20/how-can-you-solve-yaml-exception-reading-bug-in-octopress</id>
+    <content type="html"><![CDATA[<h3>Solve the YAML exception reading invalid byte sequence in US-ASCII</h3>
+
+<p>When you write</p>
+
+<p><code>bash
+bundle exec rake generate
+</code></p>
+
+<!-- more -->
+
+
+<p>you get</p>
+
+<p>``` bash
+YAML Exception reading 2014-04-28-your_file.markdown: invalid byte sequence in US-ASCII</p>
+
+<blockquote><blockquote><blockquote><p>Compass is watching for changes. Press Ctrl-C to Stop.
+127.0.0.1 &ndash; &ndash; [17/Jun/2014 17:08:35] &ldquo;GET / HTTP/1.1&rdquo; 200 93907 0.0215
+127.0.0.1 &ndash; &ndash; [17/Jun/2014 17:08:35] &ldquo;GET /stylesheets/screen.css HTTP/1.1&rdquo; 200 28107 0.0019
+127.0.0.1 &ndash; &ndash; [17/Jun/2014 17:08:35] &ldquo;GET /images/index.jpeg HTTP/1.1&rdquo; 200 7466 0.0020
+127.0.0.1 &ndash; &ndash; [17/Jun/2014 17:08:35] &ldquo;GET /javascripts/slash.js HTTP/1.1&rdquo; 200 1786 0.0010
+127.0.0.1 &ndash; &ndash; [17/Jun/2014 17:08:35] &ldquo;GET /javascripts/jquery.fancybox.pack.js HTTP/1.1&rdquo; 200 17638 0.0014
+127.0.0.1 &ndash; &ndash; [17/Jun/2014 17:08:35] &ldquo;GET /images/social/twitter.png?1398238298 HTTP/1.1&rdquo; 200 554 0.0009
+127.0.0.1 &ndash; &ndash; [17/Jun/2014 17:08:35] &ldquo;GET /images/social/github.png?1398238298 HTTP/1.1&rdquo; 200 581 0.0029
+127.0.0.1 &ndash; &ndash; [17/Jun/2014 17:08:35] &ldquo;GET /images/social/google.png?1398238298 HTTP/1.1&rdquo; 200 602 0.0034
+127.0.0.1 &ndash; &ndash; [17/Jun/2014 17:08:35] &ldquo;GET /font/fontawesome-webfont.woff HTTP/1.1&rdquo; 200 23416 0.0034
+127.0.0.1 &ndash; &ndash; [17/Jun/2014 17:08:35] &ldquo;GET /images/social/rss.png?1398238298 HTTP/1.1&rdquo; 200 619 0.0069
+127.0.0.1 &ndash; &ndash; [17/Jun/2014 17:08:36] &ldquo;GET /favicon.png HTTP/1.1&rdquo; 200 400 0.0009
+[2014-06-17 17:08:56] regeneration: 1 files changed
+YAML Exception reading 2014-04-28-your_file.markdown: invalid byte sequence in US-ASCII
+<code>``
+If you want to solve this</code>rake generate<code>bug, you can use instead of</code>bundle exec rake generate`,
+you should use</p></blockquote></blockquote></blockquote>
+
+<p><code>bash
+LANG=en_US.utf-8 bundle exec rake generate
+</code>
+this command, and you can write <code>rake preview</code> or <code>rake deploy</code></p>
+
+<p>Fixed the bug.</p>
+
+<p>I hope helped to you.</p>
+]]></content>
+  </entry>
+  
+</feed>

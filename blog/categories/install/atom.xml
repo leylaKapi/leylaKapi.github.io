@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: install | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/install/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2015-01-16T00:22:20+02:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[ Leyla Kapi ]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Note: Fix Ruby on Rails Qt installation]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/10/22/note-fix-ruby-on-rails-qt-installation/"/>
+    <updated>2014-10-22T23:16:22+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/10/22/note-fix-ruby-on-rails-qt-installation</id>
+    <content type="html"><![CDATA[<p>In your rails project when you run <code>bundle</code> command, if you getting below error,</p>
+
+<p><code>bash
+/ruby extconf.rb qmake:couldn't find a QT installation of '' Command 'qmake_spec linux-gtt' failed
+</code></p>
+
+<p>on Ubuntu, you can fix with below command to this error.</p>
+
+<p><code>bash
+$ sudo apt-get install qt4-dev-tools libqt4-dev libqt4-core libqt4-gui
+</code></p>
+
+<!-- more -->
+
+
+<p> Then you need to install <code>capybara-webkit</code> gem to your project with,</p>
+
+<p><code>bash
+$ gem install capybara-webkit
+</code></p>
+
+<p>You can search this bug on <a href="http://stackoverflow.com/questions/11354656/error-error-error-installing-capybara-webkit">stackoverflow</a></p>
+
+<p>That&rsquo;s all.</p>
+
+<p>I hope your bug is fixed.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Install open-jdk or oracle on Ubuntu]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/08/03/install-open-jdk-or-oracle-on-ubuntu/"/>
+    <updated>2014-08-03T23:25:29+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/08/03/install-open-jdk-or-oracle-on-ubuntu</id>
+    <content type="html"><![CDATA[<h3>Note about installation of java on Ubuntu computer</h3>
+
+<p><code>bash
+$ sudo apt-get install openjdk-7-jdk
+</code></p>
+
+<!-- more -->
+
+
+<p>OR</p>
+
+<p><code>bash
+$ sudo add-apt-repository ppa:webupd8team/java
+$ sudo apt-get update
+$ sudo apt-get install oracle-java7-installer
+$ sudo apt-get update
+$ java -version
+</code></p>
+
+<p>That&rsquo;s all</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Rails devise gem generator error]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/07/24/rails-devise-gem-generator-error/"/>
+    <updated>2014-07-24T15:36:48+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/07/24/rails-devise-gem-generator-error</id>
+    <content type="html"><![CDATA[<h3>How to fix rails devise gem generate bug?</h3>
+
+<p>You use <code>devise</code> gem for add admin page or user page to your project. When you generate to your devise gem,
+you' re getting error to your project,  like ;</p>
+
+<p><code>bash
+$ rails g devise:install
+Could not find generator devise:install
+</code></p>
+
+<!-- more -->
+
+
+<p>If you get like ths error, you can fix for these order,</p>
+
+<ul>
+<li>Open your <code>Gemfile</code>, add <code>gem 'devise'</code> then,</li>
+<li>Open terminal, run  <code>bundle</code></li>
+<li>Open you computer search bar, Search on your computer to <code>Disk Utility</code></li>
+<li>Select you Disk For example: <code>Macintosh HD</code></li>
+<li>Then click on <code>Repair Disk Permissions</code></li>
+<li>Waiting approximately 15 minutes, then <strong>restart</strong> your computer.</li>
+</ul>
+
+
+<p>That' s all.</p>
+
+<p>I hope fixed your bug.</p>
+]]></content>
+  </entry>
+  
+</feed>
