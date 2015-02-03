@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: font | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/font/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2015-02-03T14:11:08+02:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[ Leyla Kapi ]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Create icon set for your rails project]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/09/10/create-icon-set-for-your-rails-project/"/>
+    <updated>2014-09-10T17:23:26+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/09/10/create-icon-set-for-your-rails-project</id>
+    <content type="html"><![CDATA[<h3>How created your icon-set for your rails project ?</h3>
+
+<ul>
+<li>Firstly, you should go to <a href="https://icomoon.io/">icomoon.io</a> website.</li>
+<li>You need to create new app on right-up corner of webpage</li>
+<li>Now upload your font-icons after press <code>import icons</code> buttons,</li>
+<li>Be careful, because your fonts format must be <code>svg</code> format,</li>
+<li>When upload your icons, you should rename your icons,</li>
+<li>Now select which rename icons, and go to download your icons,</li>
+<li>When you download icomoon which provide to you with <code>css</code> and <code>js</code> files for font.</li>
+<li>When you are opening which download file, you can see this file and copy <code>font</code> directory and
+paste in your assets for rails projects.</li>
+<li>Go to css file in which download icomoons files, copy <code>css</code> file and paste in your style file
+(If you are using sass or less, you should convert to sass or less).
+Another way, you can create new file in stylesheet folder like</li>
+</ul>
+
+
+<!-- more -->
+
+
+<p><code>css
+_icon.css.sass
+</code></p>
+
+<p>file then paste in this file all icomoon-css. Then you should add your base style file like,</p>
+
+<p><code>css
+@import 'icon'
+</code></p>
+
+<p>Now, you can use your icon set in your <code>html</code></p>
+
+<p><code>html
+&lt;span class = 'your_icon_name' /&gt;      
+</code></p>
+
+<p>or <code>haml</code> page like</p>
+
+<p><code>haml
+%span.your_icon_name               
+</code></p>
+
+<p>If you want,  you can add some properties like, in your <code>css</code> file for your fonts, maybe you want to change size
+your icons automatically, in your <code>haml</code> file,</p>
+
+<p><code>haml
+%span.bf_mobile.bf-4x
+</code>
+like above when you write <code>.bf-4x</code>, your font-size should be 4 times bigger.</p>
+
+<p>in your <code>_icon.css.sass</code></p>
+
+<p>```css
+.bf-4x</p>
+
+<pre><code>font-size: 4em
+</code></pre>
+
+<p>```</p>
+
+<p>like above you can add a lot of properties for your icons and make private for your rails projects.</p>
+
+<p> That' s all.</p>
+
+<p> I hope helped to you.</p>
+]]></content>
+  </entry>
+  
+</feed>

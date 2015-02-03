@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: rubygems | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/rubygems/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2015-02-03T14:11:08+02:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[ Leyla Kapi ]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Useful gems]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/07/13/when-you-start-to-project/"/>
+    <updated>2014-07-13T13:58:15+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/07/13/when-you-start-to-project</id>
+    <content type="html"><![CDATA[<h3>When you start to project, which gems are useful ?</h3>
+
+<p>When you start a rails project, you can use these gems which useful for project.</p>
+
+<p>Gems are like,</p>
+
+<ul>
+<li><a href="https://rubygems.org/gems/blankable">blankable</a></li>
+<li><a href="https://rubygems.org/gems/simple_form">simple_form</a></li>
+<li><a href="https://rubygems.org/gems/model_to_locale">model_to_locale</a></li>
+<li><a href="https://rubygems.org/gems/responders">responders</a></li>
+<li><a href="https://rubygems.org/gems/will_paginate">will_paginate</a></li>
+<li><a href="https://rubygems.org/gems/will_paginate-bootstrap">will_paginate_bootstrap</a></li>
+<li><a href="https://rubygems.org/gems/better_errors">better_errors</a></li>
+</ul>
+
+
+<!-- more -->
+
+
+<p>1- <strong>blankable gem</strong></p>
+
+<p><code>blankable</code> provide to add blank slates to index view &hellip;
+You can look on <a href="https://github.com/lab2023/blankable">gitHub</a></p>
+
+<p>2- <strong>simple_form</strong></p>
+
+<p><code>simple_form</code> provide to make easy rails forms, aims is that to be as flexible as possible
+while helping you with powerful components to create your form &hellip; You can look on <a href="https://github.com/plataformatec/simple_form">gitHub</a></p>
+
+<p>3- <strong>model_to_locale</strong></p>
+
+<p><code>model_to_locale</code> provide to create locale file for model attributes &hellip;
+You can look on <a href="https://github.com/lab2023/model_to_locale">gitHub</a></p>
+
+<p>4- <strong>responders</strong></p>
+
+<p><code>responders</code> provide to dry up your Rails 3.2+ app &hellip;
+You can look on <a href="https://github.com/plataformatec/responders">gitHub</a></p>
+
+<p>5- <strong>will_paginate</strong></p>
+
+<p><code>will_paginate</code> provide to pagination library that integrate with RoR, Sinatra &hellip;
+You can look on <a href="https://github.com/mislav/will_paginate">gitHub</a></p>
+
+<p>6- <strong>will_paginate_bootstrap</strong></p>
+
+<p><code>will_paginate_bootstrap</code> provide to integrate in <code>will_paginate</code> to <code>bootstrap</code> &hellip;
+You can look on <a href="https://github.com/bootstrap-ruby/will_paginate-bootstrap">gitHub</a></p>
+
+<p>7- <strong>better_errors</strong></p>
+
+<p><code>better_errors</code> provide to replace standard error page to much better and useful error page
+You can look on <a href="https://github.com/charliesome/better_errorss">gitHub</a></p>
+]]></content>
+  </entry>
+  
+</feed>

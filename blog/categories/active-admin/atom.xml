@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: active_admin | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/active-admin/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2015-02-03T14:11:08+02:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[ Leyla Kapi ]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Rails active_admin gem bug]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/07/22/rails-activeadmin-gem-bug/"/>
+    <updated>2014-07-22T15:55:03+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/07/22/rails-activeadmin-gem-bug</id>
+    <content type="html"><![CDATA[<h3>Fix to admin_active gem bug</h3>
+
+<p>You add <code>adminactive</code> gem to your Gemfile, then when you&rsquo;re running to <code>bundle</code> on your terminal,  you' re getting like,</p>
+
+<p>```bash
+$ bundle
+Fetching gem metadata from <a href="https://rubygems.org/..........">https://rubygems.org/..........</a>
+Fetching additional metadata from <a href="https://rubygems.org/..">https://rubygems.org/..</a>
+Resolving dependencies&hellip;
+Bundler could not find compatible versions for gem &ldquo;rails&rdquo;:
+  In Gemfile:</p>
+
+<pre><code>activeadmin (~&gt; 0.6.3) ruby depends on
+  rails (&lt; 4, &gt;= 3.0.0) ruby
+rails (4.1.4
+</code></pre>
+
+<p>```</p>
+
+<!-- more -->
+
+
+<p>If you replace on <code>Gemfile</code> from</p>
+
+<p><code>ruby
+gem 'activeadmin'
+</code></p>
+
+<p>to</p>
+
+<p><code>ruby
+gem 'activeadmin', github: 'gregbell/active_admin'
+</code></p>
+
+<p>you can fix easily.</p>
+
+<p>That&rsquo;s all.</p>
+
+<p>I hope helped to you.</p>
+]]></content>
+  </entry>
+  
+</feed>

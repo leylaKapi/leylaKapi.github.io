@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: picture | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/picture/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2015-02-03T14:11:08+02:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[ Leyla Kapi ]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Upload picture to rails app]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/08/09/upload-picture-to-rails-app/"/>
+    <updated>2014-08-09T13:03:08+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/08/09/upload-picture-to-rails-app</id>
+    <content type="html"><![CDATA[<h3>How to upload picture in rails app ?</h3>
+
+<p>If you want to upload picture in your rails app, you should make</p>
+
+<ul>
+<li>Open your <code>Gemfile</code> in rails app then add</li>
+</ul>
+
+
+<p><code>ruby
+gem 'paperclip', :git =&gt; "git://github.com/thoughtbot/paperclip.git"
+</code></p>
+
+<!-- more -->
+
+
+<p>in terminal write <code>bundle</code> for install gem.</p>
+
+<ul>
+<li><p>Which models do you want to upload picture ? For example, you have <code>books</code> model, because of this,  I write all command according to <code>book</code> model.</p></li>
+<li><p>After install <code>paperclip</code> gem, open your <code>terminal</code> again then write</p></li>
+</ul>
+
+
+<p><code>bash
+ $ rails g paperclip Book photo
+</code>
+then</p>
+
+<p><code>bash
+$ bundle exec rake db:migrate
+</code></p>
+
+<ul>
+<li>Open <code>models/book.rb</code> add</li>
+</ul>
+
+
+<p>```ruby
+  include Paperclip::Glue
+  has_attached_file :photo, :styles => { :small => &ldquo;250x250>&rdquo; },</p>
+
+<pre><code>                :url  =&gt; "/assets/books/:id/:style/:basename.:extension",
+                :path =&gt; ":rails_root/public/assets/books/:id/:style/:basename.:extension"
+</code></pre>
+
+<p>  validates_attachment_presence :photo
+  validates_attachment_size :photo, :less_than => 10.megabytes
+  validates_attachment_content_type :photo, :content_type => [&lsquo;image/jpeg&rsquo;, &lsquo;image/png&rsquo;]
+```</p>
+
+<ul>
+<li>Open <code>books/show.html.haml</code> add</li>
+</ul>
+
+
+<p><code>haml
+= image_tag @book.photo.url(:small)
+</code></p>
+
+<ul>
+<li>Open <code>books/_form.html.haml</code> add</li>
+</ul>
+
+
+<p><code>haml
+= form_for @book, html: { multipart: true }  do |f|
+  = f.file_field :photo
+</code></p>
+
+<ul>
+<li>Open <code>controllers/books_controller.rb</code>, then check <code>create</code> method if you use</li>
+</ul>
+
+
+<p>```ruby
+ def create</p>
+
+<pre><code>@book = Book.new(book_params)
+</code></pre>
+
+<p> end
+```
+instead of above, you should write</p>
+
+<p>```ruby
+ def create</p>
+
+<pre><code>@book = Book.create(book_params)
+</code></pre>
+
+<p> end
+```</p>
+
+<p>Lastly, you should control to add <code>:photo</code> in your <code>book_params</code> method.</p>
+
+<p>```ruby
+private</p>
+
+<pre><code>def book_params
+  params.require(:book).permit(:category_id, :author_id, :isbn, :name, :photo)
+end
+</code></pre>
+
+<p>```</p>
+
+<p>If you want to learn with details, you can visit <a href="http://railscasts.com/episodes/134-paperclip?autoplay=true">this site</a></p>
+
+<p>That' s all.</p>
+]]></content>
+  </entry>
+  
+</feed>

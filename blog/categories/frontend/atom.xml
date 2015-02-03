@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: frontend | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/frontend/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2015-02-03T14:11:08+02:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[ Leyla Kapi ]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Trick: Add page number with javascript ?]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/10/02/dipnote-add-page-number-with-javascript/"/>
+    <updated>2014-10-02T21:32:05+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/10/02/dipnote-add-page-number-with-javascript</id>
+    <content type="html"><![CDATA[<h3>How can you show page number in js ?</h3>
+
+<p>If you create middleman or rails project and you want to add pagination in your pages with js.
+You can make easily with below codes</p>
+
+<p>```js
+  var numberOfPages = 14;
+  function addPage(page, book) {</p>
+
+<pre><code>if (!book.turn('hasPage', page)) {
+  setTimeout(function(){
+    element.html('&lt;div class="data"&gt;Data for page '+page+'&lt;/div&gt;');
+  }, 14);
+}
+</code></pre>
+
+<p>  }</p>
+
+<pre><code>$('#number-pages').html(numberOfPages);
+</code></pre>
+
+<p>```
+in haml page can be like</p>
+
+<!-- more -->
+
+
+<p>```haml</p>
+
+<h1>controls</h1>
+
+<p>  %label{:for => &ldquo;page-number&rdquo;} Page:
+  %input#page-number{:size => &ldquo;3&rdquo;, :type => &ldquo;text&rdquo;}/
+  of
+  %span#number-pages
+```</p>
+
+<p>now you can try easily this <code>js</code> trick.</p>
+
+<p>That&rsquo;s all .
+I hope helped to you.</p>
+]]></content>
+  </entry>
+  
+</feed>

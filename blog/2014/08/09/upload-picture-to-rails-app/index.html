@@ -1,0 +1,326 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Upload picture to rails app - Leyla's Blog</title>
+<!--<meta name="author" content="<a href=" http://leylaKapi.github.io/about/"> Leyla Kapi </a>"> <!-->
+
+	
+	<meta name="description" content="How to upload picture in rails app ? If you want to upload picture in your rails app, you should make Open your Gemfile in rails app then add 1
+gem &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Leyla's Blog" type="application/atom+xml">
+	<link rel="canonical" href="">
+    <link href="/source/favicon.png" rel="icon">
+    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script async="true" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<link href="../../favicon.png" rel="icon">
+
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1 id="head-title"><a href="/">Leyla's Blog</a></h1>
+
+<div id="lang">
+    <a href="/blog/categories/en">EN</a> &
+    <a href="/blog/categories/tr">TR</a>
+</div>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+    <li><a href="/about">About</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+    <li><a href="/about">About</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="http://google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:leylaKapi.github.io">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+        
+        <a class="github" href="https://github.com/leylakapi" title="GitHub">GitHub</a>
+        
+        
+        <a class="linkedin" href="http://www.linkedin.com/in/leylakapi">LinkedIn</a>
+        
+        
+        <a class="google" href="https://plus.google.com/+leylakapi?rel=author" title="Google+">Google+</a>
+        
+        
+        <a class="twitter" href="http://twitter.com/leylakapi" title="Twitter">Twitter</a>
+        
+        
+    
+		
+
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+    
+	</div>
+	<form class="search" action="http://google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:leylaKapi.github.io">
+	</form>
+
+
+</nav>
+
+</header>
+	
+		
+	
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Upload Picture to Rails App</h2>
+	<div class="entry-content"><h3>How to upload picture in rails app ?</h3>
+
+<p>If you want to upload picture in your rails app, you should make</p>
+
+<ul>
+<li>Open your <code>Gemfile</code> in rails app then add</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;paperclip&#39;</span><span class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s2">&quot;git://github.com/thoughtbot/paperclip.git&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<!-- more -->
+
+
+<p>in terminal write <code>bundle</code> for install gem.</p>
+
+<ul>
+<li><p>Which models do you want to upload picture ? For example, you have <code>books</code> model, because of this,  I write all command according to <code>book</code> model.</p></li>
+<li><p>After install <code>paperclip</code> gem, open your <code>terminal</code> again then write</p></li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'> <span class="nv">$ </span>rails g paperclip Book photo
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>then</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>bundle <span class="nb">exec </span>rake db:migrate
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Open <code>models/book.rb</code> add</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'>  <span class="kp">include</span> <span class="ss">Paperclip</span><span class="p">:</span><span class="ss">:Glue</span>
+</span><span class='line'>  <span class="n">has_attached_file</span> <span class="ss">:photo</span><span class="p">,</span> <span class="ss">:styles</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="ss">:small</span> <span class="o">=&gt;</span> <span class="s2">&quot;250x250&gt;&quot;</span> <span class="p">},</span>
+</span><span class='line'>                    <span class="ss">:url</span>  <span class="o">=&gt;</span> <span class="s2">&quot;/assets/books/:id/:style/:basename.:extension&quot;</span><span class="p">,</span>
+</span><span class='line'>                    <span class="ss">:path</span> <span class="o">=&gt;</span> <span class="s2">&quot;:rails_root/public/assets/books/:id/:style/:basename.:extension&quot;</span>
+</span><span class='line'>  <span class="n">validates_attachment_presence</span> <span class="ss">:photo</span>
+</span><span class='line'>  <span class="n">validates_attachment_size</span> <span class="ss">:photo</span><span class="p">,</span> <span class="ss">:less_than</span> <span class="o">=&gt;</span> <span class="mi">10</span><span class="o">.</span><span class="n">megabytes</span>
+</span><span class='line'>  <span class="n">validates_attachment_content_type</span> <span class="ss">:photo</span><span class="p">,</span> <span class="ss">:content_type</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="s1">&#39;image/jpeg&#39;</span><span class="p">,</span> <span class="s1">&#39;image/png&#39;</span><span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Open <code>books/show.html.haml</code> add</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="p">=</span> <span class="n">image_tag</span> <span class="vi">@book</span><span class="o">.</span><span class="n">photo</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="ss">:small</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Open <code>books/_form.html.haml</code> add</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="p">=</span> <span class="n">form_for</span> <span class="vi">@book</span><span class="p">,</span> <span class="ss">html</span><span class="p">:</span> <span class="p">{</span> <span class="ss">multipart</span><span class="p">:</span> <span class="kp">true</span> <span class="p">}</span>  <span class="k">do</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span>
+</span><span class='line'>  <span class="p">=</span> <span class="n">f</span><span class="o">.</span><span class="n">file_field</span> <span class="ss">:photo</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Open <code>controllers/books_controller.rb</code>, then check <code>create</code> method if you use</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'> <span class="k">def</span> <span class="nf">create</span>
+</span><span class='line'>    <span class="vi">@book</span> <span class="o">=</span> <span class="no">Book</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">book_params</span><span class="p">)</span>
+</span><span class='line'> <span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>instead of above, you should write</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'> <span class="k">def</span> <span class="nf">create</span>
+</span><span class='line'>    <span class="vi">@book</span> <span class="o">=</span> <span class="no">Book</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">book_params</span><span class="p">)</span>
+</span><span class='line'> <span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Lastly, you should control to add <code>:photo</code> in your <code>book_params</code> method.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="kp">private</span>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">book_params</span>
+</span><span class='line'>      <span class="n">params</span><span class="o">.</span><span class="n">require</span><span class="p">(</span><span class="ss">:book</span><span class="p">)</span><span class="o">.</span><span class="n">permit</span><span class="p">(</span><span class="ss">:category_id</span><span class="p">,</span> <span class="ss">:author_id</span><span class="p">,</span> <span class="ss">:isbn</span><span class="p">,</span> <span class="ss">:name</span><span class="p">,</span> <span class="ss">:photo</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you want to learn with details, you can visit <a href="http://railscasts.com/episodes/134-paperclip?autoplay=true">this site</a></p>
+
+<p>That&#8217; s all.</p>
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-08-09T13:03:08+03:00" pubdate data-updated="true">Aug 9<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+
+	<a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/paperclip/'>paperclip</a>, <a class='category' href='/blog/categories/picture/'>picture</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/upload/'>upload</a>
+
+
+</div>
+	
+	<div class="comments"><a href="#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
+
+	<div class="share">
+    <div class="logo_article">
+        <a href="/blog/archives">
+        <div id="leylakapi"></div>
+        </a>
+    </div>
+	<div class="addthis_toolbox addthis_default_style ">
+		
+		
+		<a class="addthis_button_tweet"></a>
+		
+		
+		
+	</div>
+	
+
+</div>
+
+
+
+<section id="comment">
+    <h2 class="title">Comments</h2>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2015
+
+    <a href=" http://leylaKapi.github.io/about/"> Leyla Kapi </a>
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'leylasblog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://leylaKapi.github.io/blog/2014/08/09/upload-picture-to-rails-app/';
+        var disqus_url = 'http://leylaKapi.github.io/blog/2014/08/09/upload-picture-to-rails-app/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//go.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-49378525-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+</body>
+</html>

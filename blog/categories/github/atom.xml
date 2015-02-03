@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: github | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/github/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2015-02-03T14:11:08+02:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[ Leyla Kapi ]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Commands of github for setup]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/02/26/commands-of-github-for-setup/"/>
+    <updated>2014-02-26T12:31:12+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/02/26/commands-of-github-for-setup</id>
+    <content type="html"><![CDATA[<h3>What I can setup github and create repo?</h3>
+
+<ul>
+<li>Firstly we create github account from <a href="https://github.com/">github</a></li>
+<li>We create a new repo from &lsquo;+&rsquo; symbol.</li>
+<li>We named this repo and creating.</li>
+<li>After, We seems to this url</li>
+</ul>
+
+
+<p>``` bash</p>
+
+<pre><code>HTTP: https://github.com/username/repo_name.git
+SSH: git@github.com:username/repo_name.git
+</code></pre>
+
+<p>```</p>
+
+<!-- more -->
+
+
+<p>We use any link. Now, we clone this repo on pc.</p>
+
+<p>Use this command</p>
+
+<p>``` bash</p>
+
+<pre><code>git clone https://github.com/username/repo_name.git
+</code></pre>
+
+<p>```</p>
+
+<p>Now you are cloning to pc but where this file?</p>
+
+<p>For this question, Where you want to setup, install there. For example, if you want to clone in desktop, you should go desktop path
+like this(For Mac);</p>
+
+<p>``` bash</p>
+
+<pre><code>cd Desktop/
+</code></pre>
+
+<p>```</p>
+
+<p>And then cloning this path.</p>
+
+<ul>
+<li>After clone, We open this file on ide or anywhere, writing our code in file.</li>
+</ul>
+
+
+<p>Now, changed this file, We should push this file to github.
+Hence, we use this code ;</p>
+
+<p>``` bash</p>
+
+<pre><code>git add .
+</code></pre>
+
+<p>```</p>
+
+<p>With this command, we added all changed file on network, we wait for push.</p>
+
+<ul>
+<li>Which file added on network? Answer this question, We write this command and see to adding file.</li>
+</ul>
+
+
+<p><code>bash
+  git status
+</code></p>
+
+<ul>
+<li>We are saw to adding file , Now We need to commit for then to remember the files which adding.</li>
+</ul>
+
+
+<p><code>bash
+   git commit -m "your_comment"
+</code></p>
+
+<ul>
+<li>We prepared commit, Now all preparations are prepared, and we should push file n github</li>
+</ul>
+
+
+<p>``` bash</p>
+
+<pre><code>git push origin master
+</code></pre>
+
+<p>```</p>
+
+<p>Note: <code>master</code> are name of branch on github, if you use another branch or  don&rsquo;t use &lsquo;master&rsquo; branch we created new branch and push</p>
+
+<p>``` bash</p>
+
+<pre><code>git push origin branch_name
+</code></pre>
+
+<p>```</p>
+
+<ul>
+<li>If you want to see branches in your repo,</li>
+</ul>
+
+
+<p>``` bash</p>
+
+<pre><code>git branch -a
+</code></pre>
+
+<p>```</p>
+
+<ul>
+<li>If you created new branch</li>
+</ul>
+
+
+<p>``` bash</p>
+
+<pre><code>git branch name_of_newbranch
+</code></pre>
+
+<p>```</p>
+
+<ul>
+<li>Now, you are in name_of_newbranch , but you want to return or switch another branch therefore</li>
+</ul>
+
+
+<p>``` bash</p>
+
+<pre><code>git checkout another_branch
+</code></pre>
+
+<p>```</p>
+
+<p> Git command basicly like this.</p>
+]]></content>
+  </entry>
+  
+</feed>
