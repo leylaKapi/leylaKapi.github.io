@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: user | Leyla's Blog]]></title>
+  <title><![CDATA[Category: User | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/user/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2015-06-05T23:52:55+03:00</updated>
+  <updated>2015-06-06T01:18:03+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[ Leyla Kapi ]]></name>
@@ -14,144 +14,90 @@
 
   
   <entry>
-    <title type="html"><![CDATA[How to use getExtra and putExtra in Android for string data]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/11/08/how-to-use-getextra-and-putextra-in-android-for-string-data/"/>
-    <updated>2014-11-08T14:21:19+02:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/11/08/how-to-use-getextra-and-putextra-in-android-for-string-data</id>
-    <content type="html"><![CDATA[<h3>Use getExtra and putExtra</h3>
+    <title type="html"><![CDATA[Fix after destroy user model try add user model]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/07/27/fix-after-destroy-user-model-try-add-user-model/"/>
+    <updated>2014-07-27T14:34:26+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/07/27/fix-after-destroy-user-model-try-add-user-model</id>
+    <content type="html"><![CDATA[<p>After you made <code>rails destroy Users</code> and you want to create again <code>User</code> model, When you create, if you' re getting like this error,</p>
 
-<p>You want to get some information like name, surname, email when user login on Android, and show on
-second activity these information , we can use getExtra and putExtra . There are a lot of method for getting information
-from first to second activity, I try to explain getting with getExtra and putExtra on getting user name and surname to
-show second activity, let &rsquo;s start,</p>
+<p>```bash</p>
 
-<ul>
-<li><p>Firstly I created two label(TextView) for definition to name and surname and EditText for enter name and surname to users
-on <code>activity_main.xml</code>,</p></li>
-<li><p>Then we created new class under <code>src</code> folder and under the package name <code>SecondActivity.java</code>, and under the
-<code>/res/layout/</code> folder created <code>secondactivity.xml</code> .</p></li>
-<li><p>For definite and connect between main and second activity open <code>AndroidManifest.xml</code> and create new <code>activity</code> for
-second .</p></li>
-</ul>
-
-
-<p>```xml
-&lt;activity</p>
-
-<pre><code>android:name=".SecondActivity"
-android:label="Second Activity"
-&gt;
-&lt;intent-filter &gt;
-    &lt;action android:name="com.example.package_path.SecondActivity"/&gt;
-    &lt;category android:name="android.intent.category.DEFAULT" /&gt;       
-&lt;/intent-filter&gt;  
+<pre><code>$ leylakapicmd@leylakapicmd:~/workspace/project-library$ rails g model User provider uid name oauth_token
+ /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/inflector/methods.rb:238:in const_get: uninitialized constant User (NameError)
+$ leylakapicmd@leylakapicmd:~/workspace/project-library$ rails g model User
+/home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/inflector/methods.rb:238:inconst_get': uninitialized constant User (NameError)
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/inflector/methods.rb:238:inblock in constantize'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/inflector/methods.rb:236:ineach'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/inflector/methods.rb:236:ininject'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/inflector/methods.rb:236:inconstantize'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise.rb:297:inget'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise/mapping.rb:77:into'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise/mapping.rb:72:inmodules'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise/mapping.rb:89:inroutes'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise/mapping.rb:156:indefault_used_route'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise/mapping.rb:66:ininitialize'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise.rb:331:innew'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise.rb:331:inadd_mapping'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise/rails/routes.rb:221:inblock in devise_for'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise/rails/routes.rb:220:ineach'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise/rails/routes.rb:220:indevise_for'
+from /home/leylakapicmd/workspace/project-library/config/routes.rb:3:inblock in &lt;top (required)&gt;'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/routing/route_set.rb:335:ininstance_exec'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/routing/route_set.rb:335:ineval_block'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/routing/route_set.rb:313:indraw'
+from /home/leylakapicmd/workspace/project-library/config/routes.rb:1:in&lt;top (required)&gt;'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/application/routes_reloader.rb:40:inblock in load_paths'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/application/routes_reloader.rb:40:ineach'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/application/routes_reloader.rb:40:inload_paths'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/application/routes_reloader.rb:16:inreload!'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/application/routes_reloader.rb:26:inblock in updater'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/file_update_checker.rb:75:incall'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/file_update_checker.rb:75:inexecute'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/application/routes_reloader.rb:27:inupdater'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/application/routes_reloader.rb:7:inexecute_if_updated'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/application/finisher.rb:71:inblock in &lt;module:Finisher&gt;'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/initializable.rb:30:ininstance_exec'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/initializable.rb:30:inrun'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/initializable.rb:55:inblock in run_initializers'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/2.0.0/tsort.rb:150:inblock in tsort_each'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/2.0.0/tsort.rb:183:inblock (2 levels) in each_strongly_connected_component'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/2.0.0/tsort.rb:219:ineach_strongly_connected_component_from'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/2.0.0/tsort.rb:182:inblock in each_strongly_connected_component'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/2.0.0/tsort.rb:180:ineach'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/2.0.0/tsort.rb:180:ineach_strongly_connected_component'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/2.0.0/tsort.rb:148:intsort_each'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/initializable.rb:54:inrun_initializers'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/application.rb:288:ininitialize!'
+from /home/leylakapicmd/workspace/project-library/config/environment.rb:5:in&lt;top (required)&gt;'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/application.rb:264:inrequire_environment!'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/commands/commands_tasks.rb:147:inrequire_application_and_environment!'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/commands/commands_tasks.rb:133:ingenerate_or_destroy'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/commands/commands_tasks.rb:51:ingenerate'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/commands/commands_tasks.rb:40:inrun_command!'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/commands.rb:17:in&lt;top (required)&gt;'
+from bin/rails:4:inrequire'
+from bin/rails:4:in&lt;main&gt;'
 </code></pre>
 
-<p></activity>
-```</p>
+<p>```</p>
 
 <!-- more -->
 
 
-<ul>
-<li>After that we need to create button on <code>activtiy_main.xml</code> after click this button goes the second activity .</li>
-</ul>
+<p>You need to remove  <code>devise_for :users</code> from <code>routes.rb</code>, then try generate and you don&rsquo;t forget made  <code>rake:db migrate</code>.</p>
 
+<p>After <code>migrate</code>, if you have new error from <code>db</code>, you can make this command with orderly.</p>
 
-<p>```xml
-&lt;Button</p>
+<p><code>bash
+rake db:drop
+rake db:create
+rake db:reset
+rake db:migrate
+</code></p>
 
-<pre><code> android:id="@+id/button1"
- android:layout_width="fill_parent"
- android:layout_height="wrap_content"
- android:layout_alignTop="@+id/textView1"
- android:layout_centerHorizontal="true"
- android:layout_marginTop="50dp"
- android:onClick="onClick"
- android:text="Sign in" /&gt;
-</code></pre>
+<p>That&rsquo;s all.</p>
 
-<p>```</p>
-
-<p>On <code>MainActivity.java</code></p>
-
-<p>```java
-public void onClick(View view){</p>
-
-<pre><code>startActivity(new Intent("com.example.package_path.SecondActivity"));
-</code></pre>
-
-<p>}
-```</p>
-
-<p>Now when you click on <code>Sign in</code> button, you should go to second activity,</p>
-
-<ul>
-<li>After you need to add TextView to <code>secondactivity.xml</code></li>
-</ul>
-
-
-<p>```xml
-&lt;TextView</p>
-
-<pre><code>android:id="@+id/textView1"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:layout_marginTop="10dp"
-android:textColor="#0000ff"
-android:textSize="25dp"
-android:text="Welcome !" /&gt;
-</code></pre>
-
-<p>```</p>
-
-<p>Now we can getting to username and surname from EditTexts and show instead of TextView on <code>Second Activity</code>.</p>
-
-<p>Firstly open <code>MainActivity.java</code> and write below</p>
-
-<p>```java</p>
-
-<pre><code>public class MainActivity extends ActionBarActivity {
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }
-    public void onClick(View view){         
-        EditText etName1 = (EditText) findViewById(R.id.editText1);
-        EditText etName2 = (EditText) findViewById(R.id.editText2);
-        Intent intent = new Intent(MainActivity.this, SecondActivity.class);
-        intent.putExtra("name", etName1.getText()+" "+etName2.getText());
-        startActivity(intent);      
-    }
-</code></pre>
-
-<p>```</p>
-
-<p>After write above on <code>SecondActivity</code></p>
-
-<p>```java
-public void onCreate(Bundle savedInstanceState) {</p>
-
-<pre><code>    super.onCreate(savedInstanceState);
-    setContentView(R.layout.secondactivity);        
-    TextView txtView = (TextView) findViewById(R.id.textView1);
-    Intent intent = getIntent();
-    Bundle bd = intent.getExtras();     
-    if(bd != null)
-    {
-        String getName = (String) bd.get("name");
-        txtView.setText(getName);           
-    }
-}
-</code></pre>
-
-<p>```</p>
-
-<p>That &rsquo;s it . Now you should enter your username and surname to editText after you can see your name and surname
-on <code>Second Activity</code>.</p>
-
-<p>I hope helped to you.</p>
+<p>I hope solve your problem.</p>
 ]]></content>
   </entry>
   
