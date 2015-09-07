@@ -9,7 +9,7 @@ footer: true
 Hi ,
 
 I' m leyla . I' m computer engineering student at [Pamukkale University](http://www.pau.edu.tr) and [Polytechnic of Medimurje University](http://www.mev.hr/). 
-Also I'm web developer at [lab2023](http://www.lab2023.com/). 
+Also I'm web developer at [lab2023](http://www.lab2023.com/). This blog like a diary which I finding issue, or solve problem on my apps . In shortly, this blog make easier to remember all works and errors on my apps.
 I works on;
 
 - [Ruby](https://www.ruby-lang.org/en/),
