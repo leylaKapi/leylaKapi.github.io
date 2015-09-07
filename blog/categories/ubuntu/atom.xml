@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: ubuntu | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/ubuntu/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2015-09-07T18:49:26+03:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[ Leyla Kapi ]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Ubuntu 13.10 : Missing date and time in the menu bar]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/11/07/ubuntu-13-dot-10-missing-date-and-time-in-the-menu-bar/"/>
+    <updated>2014-11-07T17:15:38+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/11/07/ubuntu-13-dot-10-missing-date-and-time-in-the-menu-bar</id>
+    <content type="html"><![CDATA[<h3>Fix date/time in menu bar</h3>
+
+<p>If you are update or upgrade your pc, you can getting error about menu bar for date &ndash; time missing .
+For fixing this bug, you should write below commands step by step ,</p>
+
+<ul>
+<li>Re-install <code>indicator-datetime</code> run ,</li>
+</ul>
+
+
+<p><code>bash
+$ sudo apt-get install indicator-datetime
+</code></p>
+
+<!-- more -->
+
+
+<ul>
+<li>Re-configure date-time</li>
+</ul>
+
+
+<p><code>bash
+$ sudo dpkg-reconfigure --frontend noninteractive tzdata
+</code></p>
+
+<ul>
+<li>finally, restart</li>
+</ul>
+
+
+<p><code>bash
+$ sudo killall unity-panel-service
+</code></p>
+
+<p>That' s all. For more information <a href="http://www.maketecheasier.com/date-time-missing-ubuntu-1310/">click page</a></p>
+
+<p>I hope helped to you .</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Note: How to install sticker-notes to Ubuntu Desktop?]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/11/02/note-how-to-install-stick-notes-to-ubuntu/"/>
+    <updated>2014-11-02T21:36:43+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/11/02/note-how-to-install-stick-notes-to-ubuntu</id>
+    <content type="html"><![CDATA[<p>I want to sticker notes for my pc, when I search about it, I found <code>sticky notes</code> for <code>Ubuntu 13.10</code> .
+This notes provide to reminder of something like a agenda, when you wrote some notes inside,
+you see always the notes. If you want to add sticker notes you can use below command.</p>
+
+<p><code>bash
+$ sudo add-apt-repository ppa:umang/indicator-stickynotes
+</code></p>
+
+<!-- more -->
+
+
+<p><code>bash
+$ sudo apt-get update
+</code></p>
+
+<p><code>bash
+$ sudo apt-get install indicator-stickynotes
+</code></p>
+
+<p>That &rsquo;s it. This notes very helpful for me .</p>
+
+<p>I hope helped to you too.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to extract images from pdf file on Ubuntu Desktop ?]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/09/01/how-to-extract-images-from-pdf-file-on-ubuntu/"/>
+    <updated>2014-09-01T00:00:00+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/09/01/how-to-extract-images-from-pdf-file-on-ubuntu</id>
+    <content type="html"><![CDATA[<h3>Pdfimages in Ubuntu</h3>
+
+<p>If you have some pdf files which include images and want to extract all images like a image file,
+you can make it easily. Firstly, you should install <code>poppler-utils</code> in your machine, with</p>
+
+<p><code>bash
+$ sudo apt-get install poppler-utils
+</code></p>
+
+<!-- more -->
+
+
+<p>After that you can see to <code>pdfimages</code> how using it, like</p>
+
+<p><code>bash
+$ pdfimages --help
+</code></p>
+
+<p>you install and look at your <code>pdfimages</code> properties with above commands. Now you should go to your pdf
+file path on terminal, then write on terminal this command,</p>
+
+<p><code>bash
+$ pdfimages -j your_pdf_file.pdf which_name_you_want
+</code></p>
+
+<p>you can see all images export in your pdf file in your path.
+It is very easy.</p>
+
+<p>That&rsquo;s all.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Install open-jdk or oracle on Ubuntu]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/08/03/install-open-jdk-or-oracle-on-ubuntu/"/>
+    <updated>2014-08-03T23:25:29+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/08/03/install-open-jdk-or-oracle-on-ubuntu</id>
+    <content type="html"><![CDATA[<h3>Note about installation of java on Ubuntu computer</h3>
+
+<p><code>bash
+$ sudo apt-get install openjdk-7-jdk
+</code></p>
+
+<!-- more -->
+
+
+<p>OR</p>
+
+<p><code>bash
+$ sudo add-apt-repository ppa:webupd8team/java
+$ sudo apt-get update
+$ sudo apt-get install oracle-java7-installer
+$ sudo apt-get update
+$ java -version
+</code></p>
+
+<p>That&rsquo;s all</p>
+]]></content>
+  </entry>
+  
+</feed>

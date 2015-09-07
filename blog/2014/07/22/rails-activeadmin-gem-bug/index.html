@@ -1,0 +1,250 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Rails active_admin gem bug - Leyla's Blog</title>
+<!--<meta name="author" content="<a href=" http://leylaKapi.github.io/about/"> Leyla Kapi </a>"> <!-->
+
+	
+	<meta name="description" content="Fix to admin_active gem bug You add adminactive gem to your Gemfile, then when you&rsquo;re running to bundle on your terminal, you&#8217; re getting &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Leyla's Blog" type="application/atom+xml">
+	<link rel="canonical" href="">
+    <link href="/source/favicon.png" rel="icon">
+    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script async="true" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<link href="../../favicon.png" rel="icon">
+
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1 id="head-title"><a href="/">Leyla's Blog</a></h1>
+
+<div id="lang">
+    <a href="/blog/categories/en">EN</a> &
+    <a href="/blog/categories/tr">TR</a>
+</div>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+    <li><a href="/about">About</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+    <li><a href="/about">About</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="http://google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:leylaKapi.github.io">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+        
+        <a class="github" href="https://github.com/leylakapi" title="GitHub">GitHub</a>
+        
+        
+        <a class="linkedin" href="http://www.linkedin.com/in/leylakapi">LinkedIn</a>
+        
+        
+        <a class="google" href="https://plus.google.com/+leylakapi?rel=author" title="Google+">Google+</a>
+        
+        
+        <a class="twitter" href="http://twitter.com/leylakapi" title="Twitter">Twitter</a>
+        
+        
+    
+		
+
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+    
+	</div>
+	<form class="search" action="http://google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:leylaKapi.github.io">
+	</form>
+
+
+</nav>
+
+</header>
+	
+		
+	
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Rails Active_admin Gem Bug</h2>
+	<div class="entry-content"><h3>Fix to admin_active gem bug</h3>
+
+<p>You add <code>adminactive</code> gem to your Gemfile, then when you&rsquo;re running to <code>bundle</code> on your terminal,  you&#8217; re getting like,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>bundle
+</span><span class='line'>Fetching gem metadata from https://rubygems.org/..........
+</span><span class='line'>Fetching additional metadata from https://rubygems.org/..
+</span><span class='line'>Resolving dependencies...
+</span><span class='line'>Bundler could not find compatible versions <span class="k">for </span>gem <span class="s2">&quot;rails&quot;</span>:
+</span><span class='line'>  In Gemfile:
+</span><span class='line'>    activeadmin <span class="o">(</span>~&gt; 0.6.3<span class="o">)</span> ruby depends on
+</span><span class='line'>      rails <span class="o">(</span>&lt; 4, &gt;<span class="o">=</span> 3.0.0<span class="o">)</span> ruby
+</span><span class='line'>    rails <span class="o">(</span>4.1.4
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<!-- more -->
+
+
+<p>If you replace on <code>Gemfile</code> from</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;activeadmin&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>to</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;activeadmin&#39;</span><span class="p">,</span> <span class="ss">github</span><span class="p">:</span> <span class="s1">&#39;gregbell/active_admin&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>you can fix easily.</p>
+
+<p>That&rsquo;s all.</p>
+
+<p>I hope helped to you.</p>
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-22T15:55:03+03:00" pubdate data-updated="true">Jul 22<span>nd</span>, 2014</time></div>
+	<div class="tags">
+
+
+
+	<a class='category' href='/blog/categories/gemfile/'>Gemfile</a>, <a class='category' href='/blog/categories/active-admin/'>active_admin</a>, <a class='category' href='/blog/categories/bug/'>bug</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
+
+
+</div>
+	
+	<div class="comments"><a href="#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
+
+	<div class="share">
+    <div class="logo_article">
+        <a href="/blog/archives">
+        <div id="leylakapi"></div>
+        </a>
+    </div>
+	<div class="addthis_toolbox addthis_default_style ">
+		
+		
+		<a class="addthis_button_tweet"></a>
+		
+		
+		
+	</div>
+	
+
+</div>
+
+
+
+<section id="comment">
+    <h2 class="title">Comments</h2>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2015
+
+    <a href=" http://leylaKapi.github.io/about/"> Leyla Kapi </a>
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'leylasblog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://leylaKapi.github.io/blog/2014/07/22/rails-activeadmin-gem-bug/';
+        var disqus_url = 'http://leylaKapi.github.io/blog/2014/07/22/rails-activeadmin-gem-bug/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//go.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-49378525-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+</body>
+</html>

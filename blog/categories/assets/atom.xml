@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: assets | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/assets/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2015-09-07T18:49:26+03:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[ Leyla Kapi ]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Error compiling sass assets]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/07/17/error-compiling-sass-assets/"/>
+    <updated>2014-07-17T16:27:24+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/07/17/error-compiling-sass-assets</id>
+    <content type="html"><![CDATA[<h3>Middleman sass compiling error</h3>
+
+<p>While you were made web template with <code>haml</code> and <code>sass</code>, if you use middleman and bootstrap for your web template and your project give you like,</p>
+
+<p><code>sass
+Error compiling CSS asset
+NoMethodError: undefined method `font_path` for nil:NilClass
+</code>
+error.</p>
+
+<!-- more -->
+
+
+<p>You can fix like with edit your <code>Gemfile</code></p>
+
+<p><code>ruby
+gem 'bootstrap-sass', '~&gt; 3.1.1'
+gem 'middleman-sprockets', '3.2.2'
+gem 'middleman-bootstrap-navbar','~&gt;2.0'
+</code></p>
+
+<p>Then you can write in terminal <code>bundle install</code>
+Than if errors didn&rsquo;t fixed, you should write on terminal</p>
+
+<p><code>bash
+bundle update middleman-sprockets
+</code></p>
+
+<p>If you want to researches with details, you should look <a href="https://github.com/middleman/middleman/issues/1265">this page</a></p>
+
+<p>That&rsquo;s all.</p>
+
+<p>I hope helped to you.</p>
+]]></content>
+  </entry>
+  
+</feed>

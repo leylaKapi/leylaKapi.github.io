@@ -1,0 +1,271 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>How to change DNS settings on Ubuntu Desktop? - Leyla's Blog</title>
+<!--<meta name="author" content="<a href=" http://leylaKapi.github.io/about/"> Leyla Kapi </a>"> <!-->
+
+	
+	<meta name="description" content="How to change DNS settings (ip address) or How to set up Google public DNS for Ubuntu Desktop? Firstly, we should look at Google Public DNS. What is &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Leyla's Blog" type="application/atom+xml">
+	<link rel="canonical" href="">
+    <link href="/source/favicon.png" rel="icon">
+    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script async="true" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<link href="../../favicon.png" rel="icon">
+
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1 id="head-title"><a href="/">Leyla's Blog</a></h1>
+
+<div id="lang">
+    <a href="/blog/categories/en">EN</a> &
+    <a href="/blog/categories/tr">TR</a>
+</div>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+    <li><a href="/about">About</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+    <li><a href="/about">About</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="http://google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:leylaKapi.github.io">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+        
+        <a class="github" href="https://github.com/leylakapi" title="GitHub">GitHub</a>
+        
+        
+        <a class="linkedin" href="http://www.linkedin.com/in/leylakapi">LinkedIn</a>
+        
+        
+        <a class="google" href="https://plus.google.com/+leylakapi?rel=author" title="Google+">Google+</a>
+        
+        
+        <a class="twitter" href="http://twitter.com/leylakapi" title="Twitter">Twitter</a>
+        
+        
+    
+		
+
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+    
+	</div>
+	<form class="search" action="http://google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:leylaKapi.github.io">
+	</form>
+
+
+</nav>
+
+</header>
+	
+		
+	
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">How to Change DNS Settings on Ubuntu Desktop?</h2>
+	<div class="entry-content"><h3>How to change DNS settings (ip address) or How to set up Google public DNS for Ubuntu Desktop?</h3>
+
+<p>Firstly, we should look at Google Public DNS.</p>
+
+<h5>What is the Google Public DNS?</h5>
+
+<p>Google DNS created by Prem Ramaswami at 2009 . Google Public DNS provide to free DNS settings.
+Without DNS, it wil be difficult to know IP address of websites which visit daily.</p>
+
+<!-- more -->
+
+
+<h5>How to change DNS settings ?</h5>
+
+<p>Open terminal in Ubuntu Desktop with</p>
+
+<pre><code>CTRL + ALT + T
+</code></pre>
+
+<p>and run this command</p>
+
+<pre><code>sudo gedit /etc/dhcp/dhclient.conf
+</code></pre>
+
+<p>opened gedit file and find</p>
+
+<pre><code>prepend domain_name_servers
+</code></pre>
+
+<p>then changed to</p>
+
+<pre><code>prepend domain_name_servers 8.8.8.8, 8.8.4.4;
+</code></pre>
+
+<p>and save &ndash; restart computer.</p>
+
+<p>Now, you should go to</p>
+
+<pre><code>System settings -&gt; Network
+</code></pre>
+
+<p>or</p>
+
+<pre><code>Right click on Network Manager
+    Edit Connection
+        Wired Connection 1
+</code></pre>
+
+<p>select Wired</p>
+
+<pre><code>IPv4 Settings
+</code></pre>
+
+<p>change <em>Method</em> to</p>
+
+<pre><code>Automatic (DHCP) address only
+</code></pre>
+
+<p>and restore DNS</p>
+
+<pre><code>DNS Servers: 8.8.8.8, 8.8.4.4
+</code></pre>
+
+<p>then save.</p>
+
+<p>I try to explain change DNS Server and set up google public DNS on Ubuntu Desktop. I wish help you.</p>
+
+<p>That&rsquo;s it.</p>
+
+<p>I try to explain shortly DNS, I hope, this article helped to you .</p>
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-22T15:17:32+02:00" pubdate data-updated="true">Mar 22<span>nd</span>, 2014</time></div>
+	<div class="tags">
+
+
+
+	<a class='category' href='/blog/categories/dns/'>DNS,</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/ip/'>ip</a>
+
+
+</div>
+	
+	<div class="comments"><a href="#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
+
+	<div class="share">
+    <div class="logo_article">
+        <a href="/blog/archives">
+        <div id="leylakapi"></div>
+        </a>
+    </div>
+	<div class="addthis_toolbox addthis_default_style ">
+		
+		
+		<a class="addthis_button_tweet"></a>
+		
+		
+		
+	</div>
+	
+
+</div>
+
+
+
+<section id="comment">
+    <h2 class="title">Comments</h2>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2015
+
+    <a href=" http://leylaKapi.github.io/about/"> Leyla Kapi </a>
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'leylasblog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://leylaKapi.github.io/blog/2014/03/22/how-to-change-dns-settings-on-ubuntu-desktop/';
+        var disqus_url = 'http://leylaKapi.github.io/blog/2014/03/22/how-to-change-dns-settings-on-ubuntu-desktop/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//go.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-49378525-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+</body>
+</html>

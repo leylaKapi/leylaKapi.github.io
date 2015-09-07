@@ -1,0 +1,422 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Tricks on Rails - Leyla's Blog</title>
+<!--<meta name="author" content="<a href=" http://leylaKapi.github.io/about/"> Leyla Kapi </a>"> <!-->
+
+	
+	<meta name="description" content="rake db:migrate for an existing model Firstly I created new rails app, after that created several models, or you make some changes on your model &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Leyla's Blog" type="application/atom+xml">
+	<link rel="canonical" href="">
+    <link href="/source/favicon.png" rel="icon">
+    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script async="true" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<link href="../../favicon.png" rel="icon">
+
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1 id="head-title"><a href="/">Leyla's Blog</a></h1>
+
+<div id="lang">
+    <a href="/blog/categories/en">EN</a> &
+    <a href="/blog/categories/tr">TR</a>
+</div>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+    <li><a href="/about">About</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+    <li><a href="/about">About</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="http://google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:leylaKapi.github.io">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+        
+        <a class="github" href="https://github.com/leylakapi" title="GitHub">GitHub</a>
+        
+        
+        <a class="linkedin" href="http://www.linkedin.com/in/leylakapi">LinkedIn</a>
+        
+        
+        <a class="google" href="https://plus.google.com/+leylakapi?rel=author" title="Google+">Google+</a>
+        
+        
+        <a class="twitter" href="http://twitter.com/leylakapi" title="Twitter">Twitter</a>
+        
+        
+    
+		
+
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+    
+	</div>
+	<form class="search" action="http://google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:leylaKapi.github.io">
+	</form>
+
+
+</nav>
+
+</header>
+	
+		
+	
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Tricks on Rails</h2>
+	<div class="entry-content"><ul>
+<li><h3><code>rake db:migrate</code> for an existing model</h3></li>
+</ul>
+
+
+<p>Firstly I created new rails app, after that created several models, or you make some changes on your model manually(wrong way), while you are running <code>rake db:migrate</code> getting error for an existing model in your app. For fix that issue
+you can write,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake db:schema:load
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>or</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake db:drop
+</span><span class='line'>rake db:create
+</span><span class='line'>rake db:migrate
+</span><span class='line'>rake db:schema:dump
+</span><span class='line'>rake db:text:prepare
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<!-- more -->
+
+
+<ul>
+<li><h3><code>background-image</code> use in haml</h3></li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nt">%li</span><span class="p">{</span><span class="ss">style</span><span class="p">:</span> <span class="s2">&quot;background-image: url(</span><span class="si">#{</span><span class="n">image_path</span> <span class="s2">&quot;image.png&quot;</span><span class="si">}</span>)&quot;}
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li><strong>In rails, if you give <code>/</code> to path, this means that look to <code>public</code> directory.</strong></li>
+<li><p><strong><code>bundle exec rake db:drop db:create db:migrate</code></strong></p></li>
+<li><h3>Rename table more easier with Migration!</h3></li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">RenameOldTableToNewTable</span> <span class="o">&lt;</span> <span class="ss">ActiveRecord</span><span class="p">:</span><span class="ss">:Migration</span>
+</span><span class='line'>    <span class="n">rename_table</span> <span class="ss">:old_table_name</span><span class="p">,</span> <span class="ss">:new_table_name</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li><h3>Radio button on with <code>simple_form</code></h3></li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="p">=</span> <span class="n">simple_form_for</span> <span class="vi">@new</span> <span class="k">do</span> <span class="o">|</span><span class="kp">new</span><span class="o">|</span>
+</span><span class='line'>    <span class="p">=</span>  <span class="kp">new</span><span class="o">.</span><span class="n">error_notification</span>
+</span><span class='line'>    <span class="nc">.form-inputs</span>
+</span><span class='line'>        <span class="p">=</span> <span class="n">f</span><span class="o">.</span><span class="n">input</span> <span class="ss">:title</span>
+</span><span class='line'>        <span class="p">-</span> <span class="o">[</span><span class="s1">&#39;Url&#39;</span><span class="p">,</span> <span class="s1">&#39;file&#39;</span><span class="o">].</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">content</span><span class="o">|</span>
+</span><span class='line'>            <span class="nt">%label</span>
+</span><span class='line'>                <span class="p">=</span> <span class="kp">new</span><span class="o">.</span><span class="n">radio_button</span><span class="p">(</span><span class="ss">:file</span><span class="p">,</span> <span class="n">content</span><span class="p">)</span>
+</span><span class='line'>            <span class="p">=</span> <span class="n">content</span><span class="o">.</span><span class="n">humanize</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li><h3>Getting data from admin panel to home</h3></li>
+</ul>
+
+
+<p> Getting all data or some data which is added in admin panel to show in home .</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">WelcomeController</span> <span class="o">&lt;</span> <span class="no">ApplicationController</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">index</span>
+</span><span class='line'>    <span class="vi">@news</span> <span class="o">=</span> <span class="no">New</span><span class="o">.</span><span class="n">all</span><span class="o">.</span><span class="n">order</span><span class="p">(</span><span class="nb">id</span><span class="p">:</span> <span class="ss">:desc</span><span class="p">)</span> <span class="sr">//</span> <span class="n">you</span> <span class="n">can</span> <span class="n">give</span> <span class="n">limit</span> <span class="n">like</span>
+</span><span class='line'>    <span class="vi">@news</span> <span class="o">=</span> <span class="no">New</span><span class="o">.</span><span class="n">all</span><span class="o">.</span><span class="n">order</span><span class="p">(</span><span class="nb">id</span><span class="p">:</span> <span class="ss">:desc</span><span class="p">)</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="sr">//</span> <span class="n">taking</span> <span class="n">limited</span> <span class="n">data</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="p">-</span> <span class="vi">@news</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="kp">new</span><span class="o">|</span>
+</span><span class='line'>    <span class="nt">%p</span>
+</span><span class='line'>        <span class="p">=</span> <span class="n">link_to</span> <span class="s1">&#39;{new.title}&#39;</span><span class="p">,</span> <span class="s1">&#39;{new.url}&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li><h3>Add <a href="https://mandrillapp.com/">mandrill</a> to your rails app</h3></li>
+</ul>
+
+
+<p>For contact form in your app,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='yaml'><span class='line'><span class="l-Scalar-Plain">--config/settings.yml, config/settings/development.yml, config/settings/production.yml, config/settings/staging.yml --</span>
+</span><span class='line'><span class="l-Scalar-Plain">smtp</span><span class="p-Indicator">:</span>
+</span><span class='line'>  <span class="l-Scalar-Plain">mandrill</span><span class="p-Indicator">:</span>
+</span><span class='line'>    <span class="l-Scalar-Plain">address</span><span class="p-Indicator">:</span> <span class="s">&#39;smtp.mandrillapp.com&#39;</span>
+</span><span class='line'>    <span class="l-Scalar-Plain">port</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">123</span>
+</span><span class='line'>    <span class="l-Scalar-Plain">enable_starttls_auto</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+</span><span class='line'>    <span class="l-Scalar-Plain">user_name</span><span class="p-Indicator">:</span> <span class="s">&#39;your_mail&#39;</span><span class="err">,</span>
+</span><span class='line'>    <span class="l-Scalar-Plain">password</span><span class="p-Indicator">:</span> <span class="s">&#39;your_api_password&#39;</span>
+</span><span class='line'>    <span class="l-Scalar-Plain">authentication</span><span class="p-Indicator">:</span> <span class="s">&#39;plain&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">--</span><span class="n">config</span><span class="o">/</span><span class="n">environments</span><span class="o">/</span><span class="n">development</span><span class="o">.</span><span class="n">rb</span> <span class="ow">and</span> <span class="n">config</span><span class="o">/</span><span class="n">environments</span><span class="o">/</span><span class="n">production</span><span class="o">.</span><span class="n">rb</span> <span class="o">--</span>
+</span><span class='line'>  <span class="n">config</span><span class="o">.</span><span class="n">action_mailer</span><span class="o">.</span><span class="n">smtp_settings</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>      <span class="ss">address</span><span class="p">:</span> <span class="s1">&#39;smtp.mandrillapp.com&#39;</span><span class="p">,</span>
+</span><span class='line'>      <span class="ss">port</span><span class="p">:</span> <span class="mi">123</span><span class="p">,</span>
+</span><span class='line'>      <span class="n">enable_starttls_auto</span><span class="p">:</span> <span class="kp">true</span><span class="p">,</span>
+</span><span class='line'>      <span class="n">user_name</span><span class="p">:</span> <span class="s1">&#39;your_mail&#39;</span><span class="p">,</span>
+</span><span class='line'>      <span class="ss">password</span><span class="p">:</span> <span class="s1">&#39;your_api_password&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li><h3>Deploy to server with capistrano shortly</h3></li>
+</ul>
+
+
+<p>for <a href="https://gist.githubusercontent.com/ismailakbudak/6e42120bc86b20b7dc15/raw/b66d79746a6429a029b70ce7fd052fb122f426d2/server-base.sh">server-base.sh</a></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>ssh username@ip_adress
+</span><span class='line'>wget url/server-base.sh
+</span><span class='line'>ls-al
+</span><span class='line'>chmod +x server-base.sh
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>if give you permission denied please use <code>sudo su</code></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo su
+</span><span class='line'>./server-base.sh
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Same way for <a href="https://gist.githubusercontent.com/ismailakbudak/e2cbcd17c54967b9b387/raw/44ab2cae6e2ebb1c55766bac9dc9a45443695bd0/deploy-user.sh">deploy-user.sh</a> and after that open new tab in term</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>ssh deploy@ip_adress
+</span><span class='line'>wget url/deploy-user-env.sh
+</span><span class='line'>ls-al
+</span><span class='line'>chmod +x deploy-user-env.sh
+</span><span class='line'>./deploy-user-env.sh
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>For <a href="https://gist.githubusercontent.com/ismailakbudak/9fb946df9f6ec469c7db/raw/8f7a1411e034a85f8b6d25f55416375351787c1f/deploy-user-ruby-environment.sh">deploy-user-env.sh</a>
+if give you language exception open /etc/environment</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">LC_ALL</span><span class="o">=</span>en_US.UTF-8
+</span><span class='line'><span class="nv">LANG</span><span class="o">=</span>en_US.UTF-8
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>After that use <a href="https://github.com/lab2023/recipes_matic">recipes_matic gem</a> for install capistrano and all derivatives .
+Then make all customizations.</p>
+
+<p>That &rsquo;s all, I hope solve your issues.</p>
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-09-07T14:37:16+03:00" pubdate data-updated="true">Sep 7<span>th</span>, 2015</time></div>
+	<div class="tags">
+
+
+
+	<a class='category' href='/blog/categories/bg/'>bg</a>, <a class='category' href='/blog/categories/cap/'>cap</a>, <a class='category' href='/blog/categories/capistrano/'>capistrano</a>, <a class='category' href='/blog/categories/control/'>control</a>, <a class='category' href='/blog/categories/create/'>create</a>, <a class='category' href='/blog/categories/db/'>db</a>, <a class='category' href='/blog/categories/deploy/'>deploy</a>, <a class='category' href='/blog/categories/error/'>error</a>, <a class='category' href='/blog/categories/exist/'>exist</a>, <a class='category' href='/blog/categories/image/'>image</a>, <a class='category' href='/blog/categories/mandrill/'>mandrill</a>, <a class='category' href='/blog/categories/migrate/'>migrate</a>, <a class='category' href='/blog/categories/model/'>model</a>, <a class='category' href='/blog/categories/public/'>public</a>, <a class='category' href='/blog/categories/radio-button/'>radio-button</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/recipes-matic/'>recipes-matic</a>, <a class='category' href='/blog/categories/schema/'>schema</a>, <a class='category' href='/blog/categories/server/'>server</a>, <a class='category' href='/blog/categories/ssh/'>ssh</a>, <a class='category' href='/blog/categories/tips/'>tips</a>, <a class='category' href='/blog/categories/tricks/'>tricks</a>
+
+
+</div>
+	
+	<div class="comments"><a href="#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
+
+	<div class="share">
+    <div class="logo_article">
+        <a href="/blog/archives">
+        <div id="leylakapi"></div>
+        </a>
+    </div>
+	<div class="addthis_toolbox addthis_default_style ">
+		
+		
+		<a class="addthis_button_tweet"></a>
+		
+		
+		
+	</div>
+	
+
+</div>
+
+
+
+<section id="comment">
+    <h2 class="title">Comments</h2>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2015
+
+    <a href=" http://leylaKapi.github.io/about/"> Leyla Kapi </a>
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'leylasblog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://leylaKapi.github.io/blog/2015/09/07/trick-on-rails/';
+        var disqus_url = 'http://leylaKapi.github.io/blog/2015/09/07/trick-on-rails/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//go.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-49378525-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+</body>
+</html>

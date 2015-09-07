@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: bug | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/bug/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2015-09-07T18:49:26+03:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[ Leyla Kapi ]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Rails fix N+1 query]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/12/16/rails-fix-n-plus-1-query/"/>
+    <updated>2014-12-16T00:00:00+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/12/16/rails-fix-n-plus-1-query</id>
+    <content type="html"><![CDATA[<h3>How to fix N+1 query in Rails ?</h3>
+
+<p>I try to explain fix <code>N+1</code> on example. Let&rsquo;s start, firstly, in your rails application, you created association between <code>user</code> and <code>user_profile</code>
+models like below :</p>
+
+<p><code>ruby
+class User &lt; ActiveRecord::Base
+   has_one :profile, class_name: 'UserProfile'
+end
+</code>
+and</p>
+
+<p><code>ruby
+class UserProfile &lt; ActiveRecord::Base
+  belongs_to :user
+end
+</code></p>
+
+<!-- more -->
+
+
+<p>When you created association between <code>user</code> and <code>user_profile</code> like above (you can derive it), then you are getting like below error while you refresh to app page or
+edit something&hellip; The error is that :</p>
+
+<p><code>ruby
+The page at 0.0.0.0:3000 says:
+user:-----
+N+1 Query detected
+User =&gt; [:profile]
+Add to your finder::include =&gt; [:profile]
+N+1 Query method call stack
+</code></p>
+
+<p>Actually rails says to you for fix above bug(it says use <code>include</code> to <code>profile</code>&hellip;), for fix bug open <code>users_controller.rb</code> then
+add :</p>
+
+<p><code>ruby
+User.includes(:profile)
+</code></p>
+
+<p>instead of</p>
+
+<p><code>ruby
+User
+</code>
+like below ;</p>
+
+<p>```ruby
+class UsersController &lt; ApplicationController</p>
+
+<pre><code>def index
+    @search = User.includes(:profile).search(params[:q])
+    @users = @search.result(:distinct =&gt; true).paginate(:page =&gt; params[:page])
+end
+</code></pre>
+
+<p>end
+```</p>
+
+<p>That&rsquo;s it.</p>
+
+<p>I hope helped to you .</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Ubuntu 13.10 : Missing date and time in the menu bar]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/11/07/ubuntu-13-dot-10-missing-date-and-time-in-the-menu-bar/"/>
+    <updated>2014-11-07T17:15:38+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/11/07/ubuntu-13-dot-10-missing-date-and-time-in-the-menu-bar</id>
+    <content type="html"><![CDATA[<h3>Fix date/time in menu bar</h3>
+
+<p>If you are update or upgrade your pc, you can getting error about menu bar for date &ndash; time missing .
+For fixing this bug, you should write below commands step by step ,</p>
+
+<ul>
+<li>Re-install <code>indicator-datetime</code> run ,</li>
+</ul>
+
+
+<p><code>bash
+$ sudo apt-get install indicator-datetime
+</code></p>
+
+<!-- more -->
+
+
+<ul>
+<li>Re-configure date-time</li>
+</ul>
+
+
+<p><code>bash
+$ sudo dpkg-reconfigure --frontend noninteractive tzdata
+</code></p>
+
+<ul>
+<li>finally, restart</li>
+</ul>
+
+
+<p><code>bash
+$ sudo killall unity-panel-service
+</code></p>
+
+<p>That' s all. For more information <a href="http://www.maketecheasier.com/date-time-missing-ubuntu-1310/">click page</a></p>
+
+<p>I hope helped to you .</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Note:How to fix Android Parse Sdk failed?]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/10/18/note-how-to-fix-android-parse-sdk-failed/"/>
+    <updated>2014-10-18T00:00:00+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/10/18/note-how-to-fix-android-parse-sdk-failed</id>
+    <content type="html"><![CDATA[<p>If you are coding android on eclipse and when you are open your eclipse getting like</p>
+
+<p><code>xml
+parseSdkContent failed
+Could not initialize class android.graphics.Typeface
+</code>
+For the fix above error, you should open your <code>home</code> directory, then search the <code>android</code> file with</p>
+
+<p><code>bash
+$ cd .android
+</code></p>
+
+<!-- more -->
+
+
+<p>If <code>.android</code> folder is exist in your home, you should remove this folder for fox the bug,</p>
+
+<p><code>bash
+$ rm -rf .android
+</code></p>
+
+<p>you should run above command for fix the bug. Then you can check it.</p>
+
+<p>That&rsquo;s all.</p>
+
+<p>I hope helped to you.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Fix paperclip gem bug]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/08/21/fix-paperclip-gem-bug/"/>
+    <updated>2014-08-21T13:49:45+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/08/21/fix-paperclip-gem-bug</id>
+    <content type="html"><![CDATA[<h3>How can I fix <code>paperclip</code> error ?</h3>
+
+<p>When you use <code>paperclip</code> gem, if you are getting like this bug</p>
+
+<p><code>ruby
+Photo could not run the identify command. Please install ImageMagick.
+</code></p>
+
+<!-- more -->
+
+
+<p>You can fix this bug with</p>
+
+<p><code>bash
+sudo apt-get autoremove
+</code>
+or you can make</p>
+
+<p><code>bash
+sudo apt-get install imagemagick.
+</code></p>
+
+<p>I suggest the second command, because if youcan make <code>autoremove</code> you can get error again.</p>
+
+<p>That' s all.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Rails fix undefined local variable or method]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/07/25/rails-fix-undefined-method/"/>
+    <updated>2014-07-25T15:52:35+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/07/25/rails-fix-undefined-method</id>
+    <content type="html"><![CDATA[<h3>How to fix rails undefined local variable or method &lsquo;confirmed_at&rsquo; ?</h3>
+
+<p>If you getting like,</p>
+
+<p><img src="../images/rails_undefined_error.png" alt="rails undefined" /></p>
+
+<p> and you thinking <strong>how can I fix ?</strong></p>
+
+<ul>
+<li>Firstly, you need to create migration</li>
+</ul>
+
+
+<p><code>bash
+rails g migration add_confirmable
+</code></p>
+
+<!-- more -->
+
+
+<p>then,</p>
+
+<p><code>bash
+rake db:migrate
+</code></p>
+
+<p>When you write above command, you get again error, like</p>
+
+<p><code>bash
+== 20140725114621 Addconfirmable: migrating ===================================
+-- change_table(:admins)
+rake aborted!
+StandardError: An error has occurred, this and all later migrations canceled:
+undefined method `confirmable' for #&lt;ActiveRecord::ConnectionAdapters::Table:0x007f8739d3e2e0&gt;..../db/migrate/20140725114621_addconfirmable.rb:4:in `block in up'
+/Users/...../db/migrate/20140725114621_addconfirmable.rb:3:in `up'
+Tasks: TOP =&gt; db:migrate
+(See full trace by running task with --trace)
+</code>
+Let&rsquo;s fix this bug,</p>
+
+<ul>
+<li>You should open your migration which created and delete</li>
+</ul>
+
+
+<p><code>ruby
+t.confirmable
+</code></p>
+
+<p>then go to another migration named which</p>
+
+<p><code>ruby
+..../devise_create ... .rb
+</code></p>
+
+<p>in this file, you should see in comment</p>
+
+<p>```ruby</p>
+
+<pre><code>  ## Confirmable
+  ## t.string   :confirmation_token
+  ## t.datetime :confirmed_at
+  ## t.datetime :confirmation_sent_at
+  ## t.string   :unconfirmed_email # Only if using reconfirmable
+</code></pre>
+
+<p>```</p>
+
+<p>you should copy or cut above command without comment to your <code>addconfirmable.rb</code> migration file, instead of <code>t.confirmable</code></p>
+
+<p>Then you can write</p>
+
+<p><code>bash
+rake db:migrate
+</code></p>
+
+<p>That&rsquo;s all.</p>
+
+<p>I hope fix your bug.</p>
+]]></content>
+  </entry>
+  
+</feed>

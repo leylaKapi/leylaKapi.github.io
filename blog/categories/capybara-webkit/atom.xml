@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: capybara-webkit | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/capybara-webkit/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2015-09-07T18:49:26+03:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[ Leyla Kapi ]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Note: Fix Ruby on Rails Qt installation]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/10/22/note-fix-ruby-on-rails-qt-installation/"/>
+    <updated>2014-10-22T23:16:22+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/10/22/note-fix-ruby-on-rails-qt-installation</id>
+    <content type="html"><![CDATA[<p>In your rails project when you run <code>bundle</code> command, if you getting below error,</p>
+
+<p><code>bash
+/ruby extconf.rb qmake:couldn't find a QT installation of '' Command 'qmake_spec linux-gtt' failed
+</code></p>
+
+<p>on Ubuntu, you can fix with below command to this error.</p>
+
+<p><code>bash
+$ sudo apt-get install qt4-dev-tools libqt4-dev libqt4-core libqt4-gui
+</code></p>
+
+<!-- more -->
+
+
+<p> Then you need to install <code>capybara-webkit</code> gem to your project with,</p>
+
+<p><code>bash
+$ gem install capybara-webkit
+</code></p>
+
+<p>You can search this bug on <a href="http://stackoverflow.com/questions/11354656/error-error-error-installing-capybara-webkit">stackoverflow</a></p>
+
+<p>That&rsquo;s all.</p>
+
+<p>I hope your bug is fixed.</p>
+]]></content>
+  </entry>
+  
+</feed>

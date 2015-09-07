@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: set | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/set/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2015-09-07T18:49:26+03:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[ Leyla Kapi ]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[How to use getExtra and putExtra in Android for string data]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/11/08/how-to-use-getextra-and-putextra-in-android-for-string-data/"/>
+    <updated>2014-11-08T14:21:19+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/11/08/how-to-use-getextra-and-putextra-in-android-for-string-data</id>
+    <content type="html"><![CDATA[<h3>Use getExtra and putExtra</h3>
+
+<p>You want to get some information like name, surname, email when user login on Android, and show on
+second activity these information , we can use getExtra and putExtra . There are a lot of method for getting information
+from first to second activity, I try to explain getting with getExtra and putExtra on getting user name and surname to
+show second activity, let &rsquo;s start,</p>
+
+<ul>
+<li><p>Firstly I created two label(TextView) for definition to name and surname and EditText for enter name and surname to users
+on <code>activity_main.xml</code>,</p></li>
+<li><p>Then we created new class under <code>src</code> folder and under the package name <code>SecondActivity.java</code>, and under the
+<code>/res/layout/</code> folder created <code>secondactivity.xml</code> .</p></li>
+<li><p>For definite and connect between main and second activity open <code>AndroidManifest.xml</code> and create new <code>activity</code> for
+second .</p></li>
+</ul>
+
+
+<p>```xml
+&lt;activity</p>
+
+<pre><code>android:name=".SecondActivity"
+android:label="Second Activity"
+&gt;
+&lt;intent-filter &gt;
+    &lt;action android:name="com.example.package_path.SecondActivity"/&gt;
+    &lt;category android:name="android.intent.category.DEFAULT" /&gt;       
+&lt;/intent-filter&gt;  
+</code></pre>
+
+<p></activity>
+```</p>
+
+<!-- more -->
+
+
+<ul>
+<li>After that we need to create button on <code>activtiy_main.xml</code> after click this button goes the second activity .</li>
+</ul>
+
+
+<p>```xml
+&lt;Button</p>
+
+<pre><code> android:id="@+id/button1"
+ android:layout_width="fill_parent"
+ android:layout_height="wrap_content"
+ android:layout_alignTop="@+id/textView1"
+ android:layout_centerHorizontal="true"
+ android:layout_marginTop="50dp"
+ android:onClick="onClick"
+ android:text="Sign in" /&gt;
+</code></pre>
+
+<p>```</p>
+
+<p>On <code>MainActivity.java</code></p>
+
+<p>```java
+public void onClick(View view){</p>
+
+<pre><code>startActivity(new Intent("com.example.package_path.SecondActivity"));
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Now when you click on <code>Sign in</code> button, you should go to second activity,</p>
+
+<ul>
+<li>After you need to add TextView to <code>secondactivity.xml</code></li>
+</ul>
+
+
+<p>```xml
+&lt;TextView</p>
+
+<pre><code>android:id="@+id/textView1"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginTop="10dp"
+android:textColor="#0000ff"
+android:textSize="25dp"
+android:text="Welcome !" /&gt;
+</code></pre>
+
+<p>```</p>
+
+<p>Now we can getting to username and surname from EditTexts and show instead of TextView on <code>Second Activity</code>.</p>
+
+<p>Firstly open <code>MainActivity.java</code> and write below</p>
+
+<p>```java</p>
+
+<pre><code>public class MainActivity extends ActionBarActivity {
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+    public void onClick(View view){         
+        EditText etName1 = (EditText) findViewById(R.id.editText1);
+        EditText etName2 = (EditText) findViewById(R.id.editText2);
+        Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+        intent.putExtra("name", etName1.getText()+" "+etName2.getText());
+        startActivity(intent);      
+    }
+</code></pre>
+
+<p>```</p>
+
+<p>After write above on <code>SecondActivity</code></p>
+
+<p>```java
+public void onCreate(Bundle savedInstanceState) {</p>
+
+<pre><code>    super.onCreate(savedInstanceState);
+    setContentView(R.layout.secondactivity);        
+    TextView txtView = (TextView) findViewById(R.id.textView1);
+    Intent intent = getIntent();
+    Bundle bd = intent.getExtras();     
+    if(bd != null)
+    {
+        String getName = (String) bd.get("name");
+        txtView.setText(getName);           
+    }
+}
+</code></pre>
+
+<p>```</p>
+
+<p>That &rsquo;s it . Now you should enter your username and surname to editText after you can see your name and surname
+on <code>Second Activity</code>.</p>
+
+<p>I hope helped to you.</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,406 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>What's the Vagrant ? - Leyla's Blog</title>
+<!--<meta name="author" content="<a href=" http://leylaKapi.github.io/about/"> Leyla Kapi </a>"> <!-->
+
+	
+	<meta name="description" content="How to Set Up Vagrant on Ubuntu Desktop? Vagrant is a application which improved your application in virtual machine, this means that,
+you can create &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Leyla's Blog" type="application/atom+xml">
+	<link rel="canonical" href="">
+    <link href="/source/favicon.png" rel="icon">
+    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script async="true" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<link href="../../favicon.png" rel="icon">
+
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1 id="head-title"><a href="/">Leyla's Blog</a></h1>
+
+<div id="lang">
+    <a href="/blog/categories/en">EN</a> &
+    <a href="/blog/categories/tr">TR</a>
+</div>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+    <li><a href="/about">About</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+    <li><a href="/about">About</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="http://google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:leylaKapi.github.io">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+        
+        <a class="github" href="https://github.com/leylakapi" title="GitHub">GitHub</a>
+        
+        
+        <a class="linkedin" href="http://www.linkedin.com/in/leylakapi">LinkedIn</a>
+        
+        
+        <a class="google" href="https://plus.google.com/+leylakapi?rel=author" title="Google+">Google+</a>
+        
+        
+        <a class="twitter" href="http://twitter.com/leylakapi" title="Twitter">Twitter</a>
+        
+        
+    
+		
+
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+    
+	</div>
+	<form class="search" action="http://google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:leylaKapi.github.io">
+	</form>
+
+
+</nav>
+
+</header>
+	
+		
+	
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">What's the Vagrant ?</h2>
+	<div class="entry-content"><h3>How to Set Up Vagrant on Ubuntu Desktop?</h3>
+
+<p><code>Vagrant</code> is a application which improved your application in virtual machine, this means that,
+you can create your project environment on virtual machine. Thanks to vagrant, you cloned local environment on virtual machine.
+So, when you sent to your project to <code>server</code>, you can&rsquo;t see any bug or error on your server.
+On the other hand vagrant is useful, while you are working in a team.</p>
+
+<p>For the install and use vagrant, you should follow below steps respectively.</p>
+
+<p>Let&rsquo;s look, how to set up and use <code>Vagrant in Ubuntu desktop</code>,</p>
+
+<ul>
+<li>Install Vagrant</li>
+<li>Create Vagrant Folders</li>
+<li>Install Precise32 Box</li>
+<li>Set up new Virtual Machine</li>
+<li>Install Virtual Machine configuration</li>
+</ul>
+
+
+<!-- more -->
+
+
+<h4>1) Install Vagrant</h4>
+
+<p>For the install vagrant on your Ubuntu desktop is very easy. Open your terminal and write below command.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>leylakapi@leylakapicmd:~<span class="nv">$ </span>sudo apt-get install vagrant
+</span><span class='line'>...
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>2) Create Vagrant Folder</h4>
+
+<p>Continue on terminal, write below commands,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>leylakapi@leylakapicmd:~<span class="nv">$ </span>mkdir Vagrant
+</span><span class='line'>leylakapi@leylakapicmd:~<span class="nv">$ </span>mkdir Vagrant/Projects
+</span><span class='line'>leylakapi@leylakapicmd:~<span class="nv">$ </span>mkdir Vagrant/Projects/VM_169.x
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>3) Install Precise32 Box</h4>
+
+<p>Precise32 box is important on ubuntu desktop, because thanks to this box you can modify your virtual machine.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>leylakapi@leylakapicmd:~<span class="nv">$ </span><span class="nb">cd </span>Vagrant/Projects/VM_169.x
+</span><span class='line'>leylakapi@leylakapicmd:~/Vagrant/Projects/VM_169.x<span class="nv">$ </span>vagrant box add precise32 http://files.vagrantup.com/precise32.box --provider virtualbox
+</span><span class='line'>...
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>After install, you can check with,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>leylakapi@leylakapicmd:~/Vagrant/Projects/VM_169.x<span class="nv">$ </span>vagrant box list
+</span><span class='line'>precise32 <span class="o">(</span>virtualbox, 0<span class="o">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>4) Create New Virtual Machine</h4>
+
+<p>For create new virtual machine, you should initialize precise32 box,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>leylakapi@leylakapicmd:~/Vagrant/Projects/VM_169.x<span class="nv">$ </span>vagrant init precise32
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>When you wrote above command, you get warning about it, this means include <code>Vagrantfile</code>.</p>
+
+<h4>5) Install Virtual Machine configuration</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>leylakapi@leylakapicmd:~/Vagrant/Projects/VM_169.x<span class="nv">$ </span>wget https://raw.github.com/saasbook/courseware/master/vm-setup/configure-image-0.10.3.sh
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You should configure permission for virtual machine configuration</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>leylakapi@leylakapicmd:~/Vagrant/Projects/VM_169.x<span class="nv">$ </span>chmod +x configure-image-0.10.3.sh
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Run the virtual machine with</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>leylakapi@leylakapicmd:~/Vagrant/Projects/VM_169.x<span class="nv">$ </span>vagrant up
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Connecting with virtual machine</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>leylakapi@leylakapicmd:~/Vagrant/Projects/VM_169.x<span class="nv">$ </span>vagrant ssh
+</span><span class='line'>Welcome to Ubuntu 12.04 LTS <span class="o">(</span>GNU/Linux 3.2.0-23-generic-pae i686<span class="o">)</span>
+</span><span class='line'> * Documentation:  https://help.ubuntu.com/
+</span><span class='line'>New release <span class="s1">&#39;14.04.1 LTS&#39;</span> available.
+</span><span class='line'>Run <span class="s1">&#39;do-release-upgrade&#39;</span> to upgrade to it.
+</span><span class='line'>Welcome to your Vagrant-built virtual machine.
+</span><span class='line'>Last login: Sun Oct 12 09:36:51 2014 from 10.0.2.2
+</span><span class='line'>vagrant@precise32:~<span class="nv">$ </span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<ul>
+<li>Run virtual machine configuration,</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>vagrant@precise32:~<span class="nv">$ </span>/vagrant/configure-image-0.10.3.sh
+</span><span class='line'>Enter password to be used <span class="k">for </span>sudo commands:
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>
+you should enter a password for commands above.</p>
+
+<p>If you finish work on virtual machine, you write below commands for exit or turn off virtual machine</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>leylakapi@leylakapicmd:~/Vagrant/Projects/VM_169.x<span class="nv">$ </span>vagrant <span class="nb">suspend</span>
+</span><span class='line'>leylakapi@leylakapicmd:~/Vagrant/Projects/VM_169.x<span class="nv">$ </span>vagrant resume
+</span><span class='line'>leylakapi@leylakapicmd:~/Vagrant/Projects/VM_169.x<span class="nv">$ </span>vagrant halt
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>
+Or if you want to remove all things from virtual machine</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>leylakapi@leylakapicmd:~/Vagrant/Projects/VM_169.x<span class="nv">$ </span>vagrant destroy
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>But for the built again to your project only below commands it&rsquo;s enough.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>vagrant up
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>When I say <code>Vagrant</code> is useful for working in a team, look <a href="https://vagrantcloud.com/">Vagrant Cloud</a>.</li>
+</ul>
+
+
+<p>You can create account and share your vagrant environment with anyone with <code>vagrant cloud</code>.
+After create your account, open your terminal,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>vagrant login
+</span><span class='line'>...
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Write email or username and password for vagrant cloud, then</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>vagrant share
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>For more detail about Vagrant, you can look ;</p>
+
+<ul>
+<li><p><a href="http://docs.vagrantup.com/v2/getting-started/index.html">Vagrant</a></p></li>
+<li><p><a href="https://github.com/saasbook/courseware/wiki/Setting-Up-Vagrant-Environment-on-Ubuntu-Platform">Vagrant on Ubunbtu</a></p></li>
+</ul>
+
+
+<p>That&#8217; s all.</p>
+
+<p>I hope helped you .</p>
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-10-12T14:58:37+03:00" pubdate data-updated="true">Oct 12<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+
+	<a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/script/'>script</a>, <a class='category' href='/blog/categories/shell/'>shell</a>, <a class='category' href='/blog/categories/ssh/'>ssh</a>, <a class='category' href='/blog/categories/vagrant/'>vagrant</a>, <a class='category' href='/blog/categories/virtual-box/'>virtual-box</a>, <a class='category' href='/blog/categories/virtual-machine/'>virtual-machine</a>, <a class='category' href='/blog/categories/vm/'>vm</a>
+
+
+</div>
+	
+	<div class="comments"><a href="#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
+
+	<div class="share">
+    <div class="logo_article">
+        <a href="/blog/archives">
+        <div id="leylakapi"></div>
+        </a>
+    </div>
+	<div class="addthis_toolbox addthis_default_style ">
+		
+		
+		<a class="addthis_button_tweet"></a>
+		
+		
+		
+	</div>
+	
+
+</div>
+
+
+
+<section id="comment">
+    <h2 class="title">Comments</h2>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2015
+
+    <a href=" http://leylaKapi.github.io/about/"> Leyla Kapi </a>
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'leylasblog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://leylaKapi.github.io/blog/2014/10/12/what-is-the-vagrant/';
+        var disqus_url = 'http://leylaKapi.github.io/blog/2014/10/12/what-is-the-vagrant/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//go.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-49378525-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+</body>
+</html>
