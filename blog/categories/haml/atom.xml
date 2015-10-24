@@ -4,7 +4,7 @@
   <title><![CDATA[Category: haml | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/haml/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2015-09-07T18:49:26+03:00</updated>
+  <updated>2015-10-24T18:37:24+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[ Leyla Kapi ]]></name>
@@ -12,6 +12,61 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Bootstrap active class solution for navbar in rails]]></title>
+    <link href="http://leylaKapi.github.io/blog/2015/10/24/bootstrap-active-class-solution-for-navbar-in-rails/"/>
+    <updated>2015-10-24T17:32:38+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2015/10/24/bootstrap-active-class-solution-for-navbar-in-rails</id>
+    <content type="html"><![CDATA[<p>Sometimes while you are adding bootstrap to your rails app, you can getting some problem on javascript side. In this article I try to explain how we can fix <code>active</code> class to navbar . For fixing, you can write in helper <code>active_class</code> method like below</p>
+
+<p>```ruby
+module ApplicationHelper
+  def active_class(link_path)</p>
+
+<pre><code>current_page?(link_path) ? 'active' : ""
+</code></pre>
+
+<p>  end
+end
+```</p>
+
+<!-- more -->
+
+
+<p>In your views from bootstrap classes should be like,</p>
+
+<p>```html
+%ul.nav.navbar-nav
+  %li{class: active_class(about_path)}</p>
+
+<pre><code>= link_to 'About', about_path
+</code></pre>
+
+<p>  %li{class: active_class(works_path)}</p>
+
+<pre><code>= link_to 'Our Works', works_path
+</code></pre>
+
+<p>  %li{class: active_class(contact_path)}</p>
+
+<pre><code>= link_to 'Contact', contact_path
+</code></pre>
+
+<p>```</p>
+
+<p>In addition, you can update according to your style to below command, but in this part it s important to use  <code>!important</code> method for overwrite on <code>active</code> class .</p>
+
+<p><code>css
+.navbar-default .navbar-nav &gt; .active &gt; a, .navbar-default .navbar-nav &gt; .active &gt; a:hover, .navbar-default .navbar-nav &gt; .active &gt; a:active
+  color: red !important
+</code></p>
+
+<p>That&rsquo;s all. I hope helped to you.</p>
+
+<p>For more information: <a href="http://goo.gl/twDl3t">http://goo.gl/twDl3t</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Trick: Add page number with javascript ?]]></title>
@@ -706,97 +761,6 @@ margin: 0 auto
 <p>That&rsquo;s all</p>
 
 <p>I hope helped to you.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How create tree - list menu with HAML]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/03/22/how-create-tree-list-menu-with-haml/"/>
-    <updated>2014-03-22T18:57:27+02:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/03/22/how-create-tree-list-menu-with-haml</id>
-    <content type="html"><![CDATA[<h3>How to created tree &ndash; list menu with haml, sass, coffeescript ?</h3>
-
-<p>Firstly, we create middleman project and create</p>
-
-<pre><code>index.html.haml
-style.css.sass
-application.coffee
-</code></pre>
-
-<p>then we open <code>index.html.haml</code> file and we write your code like this,</p>
-
-<!-- more -->
-
-
-<p>``` haml</p>
-
-<pre><code>--- my code like this ---
-%ul.archive_tool
-  %li#tools Car
-  %ul.archive_requires
-    %li#requires BMW
-    %li#requires Mercedes
-    %li#requires Toyota
-    %li#requires Fiat
-  %li#tools Book
-  %ul.archive_requires
-    %li#requires Ruby
-    %li#requires ROR
-    %li#requires Thought
-  %li#tools Computer
-  %ul.archive_requires
-    %li#requires iMac
-    %li#requires Windows
-    %li#requires Linux
-    %li#requires Seu
-  %li#tools Chair
-  %ul.archive_requires
-    %li#requires comfortable
-    %li#requires uncomfortable
-</code></pre>
-
-<p><code>``
-then open</code>style.css.sass` file and write style code</p>
-
-<p>``` sass</p>
-
-<pre><code>  #tools, #requires
-    cursor: pointer
-  .archive_tool
-    margin-left: 1em
-    font-size: large
-    font-weight: bold
-    cursor: pointer
-  .archive_requires
-    @extend .archive_tool
-    margin:
-      top: 0
-      bottom: 1em
-    font-size: medium
-    list-style-type: circle
-</code></pre>
-
-<p>```</p>
-
-<p>then open <code>application.coffee</code> file, and</p>
-
-<p>``` coffeescript</p>
-
-<pre><code>$(document).ready -&gt;
-  $(".archive_tool ul").hide()
-  $(".archive_tool &gt; li").click -&gt;
-    $(this).parent().find("ul").slideToggle()
-    return
-  $(".archive_requires &gt; li").click -&gt;
-    $(this).parent().find("ul").slideToggle()
-</code></pre>
-
-<p>```
-we write this code inside haml, sass, and coffeescript file and then saved all, run this middleman project.</p>
-
-<p>According to edit your own project try to run codes.</p>
-
-<p>I hope, helped you.</p>
 ]]></content>
   </entry>
   

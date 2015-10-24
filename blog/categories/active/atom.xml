@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: active | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/active/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2015-10-24T18:37:24+03:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[ Leyla Kapi ]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Bootstrap active class solution for navbar in rails]]></title>
+    <link href="http://leylaKapi.github.io/blog/2015/10/24/bootstrap-active-class-solution-for-navbar-in-rails/"/>
+    <updated>2015-10-24T17:32:38+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2015/10/24/bootstrap-active-class-solution-for-navbar-in-rails</id>
+    <content type="html"><![CDATA[<p>Sometimes while you are adding bootstrap to your rails app, you can getting some problem on javascript side. In this article I try to explain how we can fix <code>active</code> class to navbar . For fixing, you can write in helper <code>active_class</code> method like below</p>
+
+<p>```ruby
+module ApplicationHelper
+  def active_class(link_path)</p>
+
+<pre><code>current_page?(link_path) ? 'active' : ""
+</code></pre>
+
+<p>  end
+end
+```</p>
+
+<!-- more -->
+
+
+<p>In your views from bootstrap classes should be like,</p>
+
+<p>```html
+%ul.nav.navbar-nav
+  %li{class: active_class(about_path)}</p>
+
+<pre><code>= link_to 'About', about_path
+</code></pre>
+
+<p>  %li{class: active_class(works_path)}</p>
+
+<pre><code>= link_to 'Our Works', works_path
+</code></pre>
+
+<p>  %li{class: active_class(contact_path)}</p>
+
+<pre><code>= link_to 'Contact', contact_path
+</code></pre>
+
+<p>```</p>
+
+<p>In addition, you can update according to your style to below command, but in this part it s important to use  <code>!important</code> method for overwrite on <code>active</code> class .</p>
+
+<p><code>css
+.navbar-default .navbar-nav &gt; .active &gt; a, .navbar-default .navbar-nav &gt; .active &gt; a:hover, .navbar-default .navbar-nav &gt; .active &gt; a:active
+  color: red !important
+</code></p>
+
+<p>That&rsquo;s all. I hope helped to you.</p>
+
+<p>For more information: <a href="http://goo.gl/twDl3t">http://goo.gl/twDl3t</a></p>
+]]></content>
+  </entry>
+  
+</feed>

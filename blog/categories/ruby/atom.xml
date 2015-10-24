@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ruby | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2015-09-07T18:49:26+03:00</updated>
+  <updated>2015-10-24T18:37:24+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[ Leyla Kapi ]]></name>
@@ -12,6 +12,61 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Bootstrap active class solution for navbar in rails]]></title>
+    <link href="http://leylaKapi.github.io/blog/2015/10/24/bootstrap-active-class-solution-for-navbar-in-rails/"/>
+    <updated>2015-10-24T17:32:38+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2015/10/24/bootstrap-active-class-solution-for-navbar-in-rails</id>
+    <content type="html"><![CDATA[<p>Sometimes while you are adding bootstrap to your rails app, you can getting some problem on javascript side. In this article I try to explain how we can fix <code>active</code> class to navbar . For fixing, you can write in helper <code>active_class</code> method like below</p>
+
+<p>```ruby
+module ApplicationHelper
+  def active_class(link_path)</p>
+
+<pre><code>current_page?(link_path) ? 'active' : ""
+</code></pre>
+
+<p>  end
+end
+```</p>
+
+<!-- more -->
+
+
+<p>In your views from bootstrap classes should be like,</p>
+
+<p>```html
+%ul.nav.navbar-nav
+  %li{class: active_class(about_path)}</p>
+
+<pre><code>= link_to 'About', about_path
+</code></pre>
+
+<p>  %li{class: active_class(works_path)}</p>
+
+<pre><code>= link_to 'Our Works', works_path
+</code></pre>
+
+<p>  %li{class: active_class(contact_path)}</p>
+
+<pre><code>= link_to 'Contact', contact_path
+</code></pre>
+
+<p>```</p>
+
+<p>In addition, you can update according to your style to below command, but in this part it s important to use  <code>!important</code> method for overwrite on <code>active</code> class .</p>
+
+<p><code>css
+.navbar-default .navbar-nav &gt; .active &gt; a, .navbar-default .navbar-nav &gt; .active &gt; a:hover, .navbar-default .navbar-nav &gt; .active &gt; a:active
+  color: red !important
+</code></p>
+
+<p>That&rsquo;s all. I hope helped to you.</p>
+
+<p>For more information: <a href="http://goo.gl/twDl3t">http://goo.gl/twDl3t</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Rails fix N+1 query]]></title>
@@ -187,33 +242,6 @@ then try to run tour rails project.</p>
 
 <ul>
 <li>if not exist, you should create new file in <code>lib/tasks</code> directory, <code>sample_data.rake</code>.</li>
-</ul>
-
-
-<p>That' s all.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Integration git-flow on Rubymine]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/08/01/integration-git-flow-on-rubymine/"/>
-    <updated>2014-08-01T23:02:42+03:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/08/01/integration-git-flow-on-rubymine</id>
-    <content type="html"><![CDATA[<h3>How to integration git-flow on Rubymine ?</h3>
-
-<ul>
-<li>Firstly you should start to rubymine ide on your computer with <code>./rubymine.sh</code> then,</li>
-</ul>
-
-
-<!-- more -->
-
-
-<ul>
-<li>You can open <code>Help</code> in  nav-bar of rubymine, <code>find-action</code> or <code>ctrl+shift+A</code> then you should search <code>plugins</code>.</li>
-<li>Open plugins of rubymine then search again <code>git-flow</code> , if you saw &lsquo;click on Browser&rsquo;,
-click then search again in search bar to <code>git-flow</code>, Then you ca find easily integrate on <code>Rubymine</code>,
-then <em>restart rubymine</em> .</li>
 </ul>
 
 

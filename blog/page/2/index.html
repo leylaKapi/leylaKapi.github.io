@@ -7,10 +7,8 @@
 <!--<meta name="author" content="<a href=" http://leylaKapi.github.io/about/"> Leyla Kapi </a>"> <!-->
 
 	
-	<meta name="description" content="If you are coding android on eclipse and when you are open your eclipse getting like 1
-2
-parseSdkContent failed
-Could not initialize class android. &hellip;">
+	<meta name="description" content="In your rails project when you run bundle command, if you getting below error, 1
+/ruby extconf.rb qmake:couldn&#39;t find a QT installation of &#39 &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -96,6 +94,65 @@ Could not initialize class android. &hellip;">
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/10/22/note-fix-ruby-on-rails-qt-installation/">
+		
+			Note: Fix Ruby on Rails Qt Installation</a>
+	</h2>
+	<div class="entry-content">
+		<p>In your rails project when you run <code>bundle</code> command, if you getting below error,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>/ruby extconf.rb qmake:couldn<span class="s1">&#39;t find a QT installation of &#39;&#39; Command &#39;</span>qmake_spec linux-gtt<span class="err">&#39;</span> failed
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>on Ubuntu, you can fix with below command to this error.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo apt-get install qt4-dev-tools libqt4-dev libqt4-core libqt4-gui
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+
+		
+		<a href="/blog/2014/10/22/note-fix-ruby-on-rails-qt-installation/" class="more-link">Read more</a>
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-10-22T23:16:22+03:00" pubdate data-updated="true">Oct 22<span>nd</span>, 2014</time></div>
+	<div class="tags">
+
+
+
+	<a class='category' href='/blog/categories/built/'>built</a>, <a class='category' href='/blog/categories/capybara-webkit/'>capybara-webkit</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/error/'>error</a>, <a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/install/'>install</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/10/22/note-fix-ruby-on-rails-qt-installation/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -617,65 +674,6 @@ you can make it easily. Firstly, you should install <code>poppler-utils</code> i
 </div>
 	
 	<div class="comments"><a href="/blog/2014/08/09/upload-picture-to-rails-app/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/08/08/fix-rake-db-populate/">
-		
-			Fix Rake Db:populate</a>
-	</h2>
-	<div class="entry-content">
-		<h3><code>Rake aborted! Don't know how to build task 'populate'</code></h3>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>rake db:populate
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>or</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>bundle <span class="nb">exec </span>rake db:populate
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-
-		
-		<a href="/blog/2014/08/08/fix-rake-db-populate/" class="more-link">Read more</a>
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-08-08T10:33:06+03:00" pubdate data-updated="true">Aug 8<span>th</span>, 2014</time></div>
-	<div class="tags">
-
-
-
-	<a class='category' href='/blog/categories/create/'>create</a>, <a class='category' href='/blog/categories/database/'>database</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/migration/'>migration</a>, <a class='category' href='/blog/categories/populate/'>populate</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/rake/'>rake</a>, <a class='category' href='/blog/categories/reset/'>reset</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>, <a class='category' href='/blog/categories/sqlite/'>sqlite</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/08/08/fix-rake-db-populate/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>

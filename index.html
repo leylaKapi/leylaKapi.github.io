@@ -7,7 +7,7 @@
 <!--<meta name="author" content="<a href=" http://leylaKapi.github.io/about/"> Leyla Kapi </a>"> <!-->
 
 	
-	<meta name="description" content="rake db:migrate for an existing model Firstly I created new rails app, after that created several models, or you make some changes on your model &hellip;">
+	<meta name="description" content="Sometimes while you are adding bootstrap to your rails app, you can getting some problem on javascript side. In this article I try to explain how we &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -93,6 +93,66 @@
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2015/10/24/bootstrap-active-class-solution-for-navbar-in-rails/">
+		
+			Bootstrap Active Class Solution for Navbar in Rails</a>
+	</h2>
+	<div class="entry-content">
+		<p>Sometimes while you are adding bootstrap to your rails app, you can getting some problem on javascript side. In this article I try to explain how we can fix <code>active</code> class to navbar . For fixing, you can write in helper <code>active_class</code> method like below</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">module</span> <span class="nn">ApplicationHelper</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">active_class</span><span class="p">(</span><span class="n">link_path</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">current_page?</span><span class="p">(</span><span class="n">link_path</span><span class="p">)</span> <span class="p">?</span> <span class="s1">&#39;active&#39;</span> <span class="p">:</span> <span class="s2">&quot;&quot;</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+
+		
+		<a href="/blog/2015/10/24/bootstrap-active-class-solution-for-navbar-in-rails/" class="more-link">Read more</a>
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-10-24T17:32:38+03:00" pubdate data-updated="true">Oct 24<span>th</span>, 2015</time></div>
+	<div class="tags">
+
+
+
+	<a class='category' href='/blog/categories/active/'>active</a>, <a class='category' href='/blog/categories/active-class/'>active_class</a>, <a class='category' href='/blog/categories/application/'>application</a>, <a class='category' href='/blog/categories/bootstrap/'>bootstrap</a>, <a class='category' href='/blog/categories/bug/'>bug</a>, <a class='category' href='/blog/categories/fix/'>fix</a>, <a class='category' href='/blog/categories/haml/'>haml</a>, <a class='category' href='/blog/categories/helper/'>helper</a>, <a class='category' href='/blog/categories/js/'>js</a>, <a class='category' href='/blog/categories/li/'>li</a>, <a class='category' href='/blog/categories/nav/'>nav</a>, <a class='category' href='/blog/categories/navbar/'>navbar</a>, <a class='category' href='/blog/categories/problem/'>problem</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ror/'>ror</a>, <a class='category' href='/blog/categories/route/'>route</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>, <a class='category' href='/blog/categories/sass/'>sass</a>, <a class='category' href='/blog/categories/solutions/'>solutions</a>, <a class='category' href='/blog/categories/tip/'>tip</a>, <a class='category' href='/blog/categories/tricks/'>tricks</a>, <a class='category' href='/blog/categories/ul/'>ul</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2015/10/24/bootstrap-active-class-solution-for-navbar-in-rails/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -685,65 +745,6 @@ should be seems like below</p>
 </div>
 	
 	<div class="comments"><a href="/blog/2014/10/27/how-to-add-multi-lingual-support-to-your-web-page-in-middleman/#disqus_thread">Comments</a></div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2014/10/22/note-fix-ruby-on-rails-qt-installation/">
-		
-			Note: Fix Ruby on Rails Qt Installation</a>
-	</h2>
-	<div class="entry-content">
-		<p>In your rails project when you run <code>bundle</code> command, if you getting below error,</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>/ruby extconf.rb qmake:couldn<span class="s1">&#39;t find a QT installation of &#39;&#39; Command &#39;</span>qmake_spec linux-gtt<span class="err">&#39;</span> failed
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>on Ubuntu, you can fix with below command to this error.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo apt-get install qt4-dev-tools libqt4-dev libqt4-core libqt4-gui
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-
-		
-		<a href="/blog/2014/10/22/note-fix-ruby-on-rails-qt-installation/" class="more-link">Read more</a>
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-10-22T23:16:22+03:00" pubdate data-updated="true">Oct 22<span>nd</span>, 2014</time></div>
-	<div class="tags">
-
-
-
-	<a class='category' href='/blog/categories/built/'>built</a>, <a class='category' href='/blog/categories/capybara-webkit/'>capybara-webkit</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/error/'>error</a>, <a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/install/'>install</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>
-
-
-</div>
-	
-	<div class="comments"><a href="/blog/2014/10/22/note-fix-ruby-on-rails-qt-installation/#disqus_thread">Comments</a></div>
 	
 </div>
 </article>
