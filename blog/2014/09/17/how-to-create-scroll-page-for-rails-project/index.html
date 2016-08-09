@@ -1,0 +1,1105 @@
+
+
+<html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>How to Create Scroll-page for Rails Project - Leyla's Blog</title>
+  <!--<meta name="author" content="Leyla KAPI">-->
+
+  
+  <meta name="description" content="How to Create Scroll-page for Rails Project written Sep 17th, 2014 in en, haml, js, pages, parallax, rails, ror, sass, scroll Create scroll page &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://leylaKapi.github.io/blog/2014/09/17/how-to-create-scroll-page-for-rails-project">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Leyla's Blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-49378525-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+  <body class="home-template nav-closed">
+    <a href="/" class="home-icon">
+      <img src="/images/home.png"/>
+    </a>
+
+    <article role="article" class="full-single-article">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h1>How to Create Scroll-page for Rails Project</h1>
+        <div class="meta">
+          written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-09-17T17:05:01+03:00" pubdate data-updated="true">Sep 17<span>th</span>, 2014</time>
+          
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/haml/'>haml</a>, <a class='category' href='/blog/categories/js/'>js</a>, <a class='category' href='/blog/categories/pages/'>pages</a>, <a class='category' href='/blog/categories/parallax/'>parallax</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ror/'>ror</a>, <a class='category' href='/blog/categories/sass/'>sass</a>, <a class='category' href='/blog/categories/scroll/'>scroll</a>
+  
+</span>
+
+
+        </div>
+        <h2>Create scroll page with sass and javascript</h2>
+
+<p>While I was creating <a href="https://github.com/leylaKapi/scroll-page">demo</a> for scroll page,
+firstly I created middleman project according to <code>haml</code> and <code>sass</code>, but if you want to embed in your for example rails project,
+you can embed in it. In this post, I try to explain creating scroll page according to middleman page.</p>
+
+<p><img src="../images/capture_image-home.png" alt="home-page" /></p>
+
+<p>Let&rsquo;s look the codes for scroll page</p>
+
+<!-- more -->
+
+
+<ul>
+<li>Open js file in your project, and copy it</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+<span class='line-number'>87</span>
+<span class='line-number'>88</span>
+<span class='line-number'>89</span>
+<span class='line-number'>90</span>
+<span class='line-number'>91</span>
+<span class='line-number'>92</span>
+<span class='line-number'>93</span>
+<span class='line-number'>94</span>
+<span class='line-number'>95</span>
+<span class='line-number'>96</span>
+<span class='line-number'>97</span>
+<span class='line-number'>98</span>
+<span class='line-number'>99</span>
+<span class='line-number'>100</span>
+<span class='line-number'>101</span>
+<span class='line-number'>102</span>
+<span class='line-number'>103</span>
+<span class='line-number'>104</span>
+<span class='line-number'>105</span>
+<span class='line-number'>106</span>
+<span class='line-number'>107</span>
+<span class='line-number'>108</span>
+<span class='line-number'>109</span>
+<span class='line-number'>110</span>
+<span class='line-number'>111</span>
+<span class='line-number'>112</span>
+<span class='line-number'>113</span>
+<span class='line-number'>114</span>
+<span class='line-number'>115</span>
+<span class='line-number'>116</span>
+<span class='line-number'>117</span>
+<span class='line-number'>118</span>
+<span class='line-number'>119</span>
+<span class='line-number'>120</span>
+<span class='line-number'>121</span>
+<span class='line-number'>122</span>
+<span class='line-number'>123</span>
+<span class='line-number'>124</span>
+<span class='line-number'>125</span>
+<span class='line-number'>126</span>
+<span class='line-number'>127</span>
+<span class='line-number'>128</span>
+<span class='line-number'>129</span>
+<span class='line-number'>130</span>
+<span class='line-number'>131</span>
+<span class='line-number'>132</span>
+<span class='line-number'>133</span>
+<span class='line-number'>134</span>
+<span class='line-number'>135</span>
+<span class='line-number'>136</span>
+<span class='line-number'>137</span>
+<span class='line-number'>138</span>
+<span class='line-number'>139</span>
+<span class='line-number'>140</span>
+<span class='line-number'>141</span>
+<span class='line-number'>142</span>
+<span class='line-number'>143</span>
+<span class='line-number'>144</span>
+<span class='line-number'>145</span>
+<span class='line-number'>146</span>
+<span class='line-number'>147</span>
+<span class='line-number'>148</span>
+<span class='line-number'>149</span>
+<span class='line-number'>150</span>
+<span class='line-number'>151</span>
+<span class='line-number'>152</span>
+<span class='line-number'>153</span>
+<span class='line-number'>154</span>
+<span class='line-number'>155</span>
+<span class='line-number'>156</span>
+<span class='line-number'>157</span>
+<span class='line-number'>158</span>
+<span class='line-number'>159</span>
+<span class='line-number'>160</span>
+<span class='line-number'>161</span>
+<span class='line-number'>162</span>
+<span class='line-number'>163</span>
+<span class='line-number'>164</span>
+<span class='line-number'>165</span>
+<span class='line-number'>166</span>
+<span class='line-number'>167</span>
+<span class='line-number'>168</span>
+<span class='line-number'>169</span>
+<span class='line-number'>170</span>
+<span class='line-number'>171</span>
+<span class='line-number'>172</span>
+<span class='line-number'>173</span>
+<span class='line-number'>174</span>
+<span class='line-number'>175</span>
+<span class='line-number'>176</span>
+<span class='line-number'>177</span>
+<span class='line-number'>178</span>
+<span class='line-number'>179</span>
+<span class='line-number'>180</span>
+<span class='line-number'>181</span>
+<span class='line-number'>182</span>
+<span class='line-number'>183</span>
+<span class='line-number'>184</span>
+<span class='line-number'>185</span>
+<span class='line-number'>186</span>
+<span class='line-number'>187</span>
+<span class='line-number'>188</span>
+<span class='line-number'>189</span>
+<span class='line-number'>190</span>
+<span class='line-number'>191</span>
+<span class='line-number'>192</span>
+<span class='line-number'>193</span>
+<span class='line-number'>194</span>
+<span class='line-number'>195</span>
+<span class='line-number'>196</span>
+<span class='line-number'>197</span>
+<span class='line-number'>198</span>
+<span class='line-number'>199</span>
+<span class='line-number'>200</span>
+<span class='line-number'>201</span>
+<span class='line-number'>202</span>
+<span class='line-number'>203</span>
+<span class='line-number'>204</span>
+<span class='line-number'>205</span>
+<span class='line-number'>206</span>
+<span class='line-number'>207</span>
+<span class='line-number'>208</span>
+<span class='line-number'>209</span>
+<span class='line-number'>210</span>
+<span class='line-number'>211</span>
+<span class='line-number'>212</span>
+<span class='line-number'>213</span>
+<span class='line-number'>214</span>
+<span class='line-number'>215</span>
+<span class='line-number'>216</span>
+<span class='line-number'>217</span>
+<span class='line-number'>218</span>
+<span class='line-number'>219</span>
+<span class='line-number'>220</span>
+<span class='line-number'>221</span>
+<span class='line-number'>222</span>
+<span class='line-number'>223</span>
+<span class='line-number'>224</span>
+<span class='line-number'>225</span>
+<span class='line-number'>226</span>
+<span class='line-number'>227</span>
+<span class='line-number'>228</span>
+<span class='line-number'>229</span>
+<span class='line-number'>230</span>
+<span class='line-number'>231</span>
+<span class='line-number'>232</span>
+<span class='line-number'>233</span>
+<span class='line-number'>234</span>
+<span class='line-number'>235</span>
+<span class='line-number'>236</span>
+<span class='line-number'>237</span>
+<span class='line-number'>238</span>
+<span class='line-number'>239</span>
+<span class='line-number'>240</span>
+<span class='line-number'>241</span>
+<span class='line-number'>242</span>
+<span class='line-number'>243</span>
+<span class='line-number'>244</span>
+<span class='line-number'>245</span>
+<span class='line-number'>246</span>
+<span class='line-number'>247</span>
+<span class='line-number'>248</span>
+<span class='line-number'>249</span>
+<span class='line-number'>250</span>
+<span class='line-number'>251</span>
+<span class='line-number'>252</span>
+<span class='line-number'>253</span>
+<span class='line-number'>254</span>
+<span class='line-number'>255</span>
+<span class='line-number'>256</span>
+<span class='line-number'>257</span>
+<span class='line-number'>258</span>
+<span class='line-number'>259</span>
+<span class='line-number'>260</span>
+<span class='line-number'>261</span>
+<span class='line-number'>262</span>
+<span class='line-number'>263</span>
+<span class='line-number'>264</span>
+<span class='line-number'>265</span>
+<span class='line-number'>266</span>
+<span class='line-number'>267</span>
+<span class='line-number'>268</span>
+<span class='line-number'>269</span>
+<span class='line-number'>270</span>
+<span class='line-number'>271</span>
+<span class='line-number'>272</span>
+<span class='line-number'>273</span>
+<span class='line-number'>274</span>
+<span class='line-number'>275</span>
+<span class='line-number'>276</span>
+<span class='line-number'>277</span>
+<span class='line-number'>278</span>
+<span class='line-number'>279</span>
+<span class='line-number'>280</span>
+<span class='line-number'>281</span>
+<span class='line-number'>282</span>
+<span class='line-number'>283</span>
+<span class='line-number'>284</span>
+<span class='line-number'>285</span>
+<span class='line-number'>286</span>
+<span class='line-number'>287</span>
+<span class='line-number'>288</span>
+<span class='line-number'>289</span>
+<span class='line-number'>290</span>
+<span class='line-number'>291</span>
+<span class='line-number'>292</span>
+<span class='line-number'>293</span>
+<span class='line-number'>294</span>
+<span class='line-number'>295</span>
+<span class='line-number'>296</span>
+<span class='line-number'>297</span>
+<span class='line-number'>298</span>
+<span class='line-number'>299</span>
+<span class='line-number'>300</span>
+<span class='line-number'>301</span>
+<span class='line-number'>302</span>
+<span class='line-number'>303</span>
+<span class='line-number'>304</span>
+<span class='line-number'>305</span>
+<span class='line-number'>306</span>
+<span class='line-number'>307</span>
+<span class='line-number'>308</span>
+<span class='line-number'>309</span>
+<span class='line-number'>310</span>
+<span class='line-number'>311</span>
+<span class='line-number'>312</span>
+<span class='line-number'>313</span>
+<span class='line-number'>314</span>
+<span class='line-number'>315</span>
+<span class='line-number'>316</span>
+<span class='line-number'>317</span>
+<span class='line-number'>318</span>
+<span class='line-number'>319</span>
+<span class='line-number'>320</span>
+<span class='line-number'>321</span>
+<span class='line-number'>322</span>
+<span class='line-number'>323</span>
+<span class='line-number'>324</span>
+<span class='line-number'>325</span>
+<span class='line-number'>326</span>
+<span class='line-number'>327</span>
+<span class='line-number'>328</span>
+<span class='line-number'>329</span>
+<span class='line-number'>330</span>
+<span class='line-number'>331</span>
+<span class='line-number'>332</span>
+<span class='line-number'>333</span>
+<span class='line-number'>334</span>
+<span class='line-number'>335</span>
+<span class='line-number'>336</span>
+<span class='line-number'>337</span>
+<span class='line-number'>338</span>
+<span class='line-number'>339</span>
+<span class='line-number'>340</span>
+<span class='line-number'>341</span>
+<span class='line-number'>342</span>
+<span class='line-number'>343</span>
+<span class='line-number'>344</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="o">!</span><span class="kd">function</span><span class="p">(</span><span class="nx">$</span><span class="p">){</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">defaults</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">sectionContainer</span><span class="o">:</span> <span class="s2">&quot;section&quot;</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">easing</span><span class="o">:</span> <span class="s2">&quot;ease&quot;</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">animationTime</span><span class="o">:</span> <span class="mi">1000</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">pagination</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">updateURL</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">keyboard</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">beforeMove</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">afterMove</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">loop</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">responsiveFallback</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">direction</span> <span class="o">:</span> <span class="s1">&#39;vertical&#39;</span>
+</span><span class='line'>  <span class="p">};</span>
+</span><span class='line'>  <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">swipeEvents</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>        <span class="kd">var</span> <span class="nx">startX</span><span class="p">,</span>
+</span><span class='line'>            <span class="nx">startY</span><span class="p">,</span>
+</span><span class='line'>            <span class="nx">$this</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+</span><span class='line'>        <span class="nx">$this</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="s1">&#39;touchstart&#39;</span><span class="p">,</span> <span class="nx">touchstart</span><span class="p">);</span>
+</span><span class='line'>        <span class="kd">function</span> <span class="nx">touchstart</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>          <span class="kd">var</span> <span class="nx">touches</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">originalEvent</span><span class="p">.</span><span class="nx">touches</span><span class="p">;</span>
+</span><span class='line'>          <span class="k">if</span> <span class="p">(</span><span class="nx">touches</span> <span class="o">&amp;&amp;</span> <span class="nx">touches</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nx">startX</span> <span class="o">=</span> <span class="nx">touches</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">pageX</span><span class="p">;</span>
+</span><span class='line'>            <span class="nx">startY</span> <span class="o">=</span> <span class="nx">touches</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">pageY</span><span class="p">;</span>
+</span><span class='line'>            <span class="nx">$this</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="s1">&#39;touchmove&#39;</span><span class="p">,</span> <span class="nx">touchmove</span><span class="p">);</span>
+</span><span class='line'>          <span class="p">}</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="kd">function</span> <span class="nx">touchmove</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>          <span class="kd">var</span> <span class="nx">touches</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">originalEvent</span><span class="p">.</span><span class="nx">touches</span><span class="p">;</span>
+</span><span class='line'>          <span class="k">if</span> <span class="p">(</span><span class="nx">touches</span> <span class="o">&amp;&amp;</span> <span class="nx">touches</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="kd">var</span> <span class="nx">deltaX</span> <span class="o">=</span> <span class="nx">startX</span> <span class="o">-</span> <span class="nx">touches</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">pageX</span><span class="p">;</span>
+</span><span class='line'>            <span class="kd">var</span> <span class="nx">deltaY</span> <span class="o">=</span> <span class="nx">startY</span> <span class="o">-</span> <span class="nx">touches</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">pageY</span><span class="p">;</span>
+</span><span class='line'>            <span class="k">if</span> <span class="p">(</span><span class="nx">deltaX</span> <span class="o">&gt;=</span> <span class="mi">50</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>              <span class="nx">$this</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="s2">&quot;swipeLeft&quot;</span><span class="p">);</span>
+</span><span class='line'>            <span class="p">}</span>
+</span><span class='line'>            <span class="k">if</span> <span class="p">(</span><span class="nx">deltaX</span> <span class="o">&lt;=</span> <span class="o">-</span><span class="mi">50</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>              <span class="nx">$this</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="s2">&quot;swipeRight&quot;</span><span class="p">);</span>
+</span><span class='line'>            <span class="p">}</span>
+</span><span class='line'>            <span class="k">if</span> <span class="p">(</span><span class="nx">deltaY</span> <span class="o">&gt;=</span> <span class="mi">50</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>              <span class="nx">$this</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="s2">&quot;swipeUp&quot;</span><span class="p">);</span>
+</span><span class='line'>            <span class="p">}</span>
+</span><span class='line'>            <span class="k">if</span> <span class="p">(</span><span class="nx">deltaY</span> <span class="o">&lt;=</span> <span class="o">-</span><span class="mi">50</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>              <span class="nx">$this</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="s2">&quot;swipeDown&quot;</span><span class="p">);</span>
+</span><span class='line'>            <span class="p">}</span>
+</span><span class='line'>            <span class="k">if</span> <span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="nx">deltaX</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">50</span> <span class="o">||</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="nx">deltaY</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">50</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>              <span class="nx">$this</span><span class="p">.</span><span class="nx">unbind</span><span class="p">(</span><span class="s1">&#39;touchmove&#39;</span><span class="p">,</span> <span class="nx">touchmove</span><span class="p">);</span>
+</span><span class='line'>            <span class="p">}</span>
+</span><span class='line'>          <span class="p">}</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>      <span class="p">});</span>
+</span><span class='line'>    <span class="p">};</span>
+</span><span class='line'>  <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">onepage_scroll</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">options</span><span class="p">){</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">settings</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">extend</span><span class="p">({},</span> <span class="nx">defaults</span><span class="p">,</span> <span class="nx">options</span><span class="p">),</span>
+</span><span class='line'>        <span class="nx">el</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">),</span>
+</span><span class='line'>        <span class="nx">sections</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">sectionContainer</span><span class="p">)</span>
+</span><span class='line'>        <span class="nx">total</span> <span class="o">=</span> <span class="nx">sections</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">status</span> <span class="o">=</span> <span class="s2">&quot;off&quot;</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">topPos</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">leftPos</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">lastAnimation</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">quietPeriod</span> <span class="o">=</span> <span class="mi">500</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">paginationList</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+</span><span class='line'>    <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">transformPage</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">settings</span><span class="p">,</span> <span class="nx">pos</span><span class="p">,</span> <span class="nx">index</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">beforeMove</span> <span class="o">==</span> <span class="s1">&#39;function&#39;</span><span class="p">)</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">beforeMove</span><span class="p">(</span><span class="nx">index</span><span class="p">);</span>
+</span><span class='line'>      <span class="k">if</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;html&#39;</span><span class="p">).</span><span class="nx">hasClass</span><span class="p">(</span><span class="s1">&#39;ie8&#39;</span><span class="p">)){</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">direction</span> <span class="o">==</span> <span class="s1">&#39;horizontal&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>          <span class="kd">var</span> <span class="nx">toppos</span> <span class="o">=</span> <span class="p">(</span><span class="nx">el</span><span class="p">.</span><span class="nx">width</span><span class="p">()</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span><span class="o">*</span><span class="nx">pos</span><span class="p">;</span>
+</span><span class='line'>          <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">animate</span><span class="p">({</span><span class="nx">left</span><span class="o">:</span> <span class="nx">toppos</span><span class="o">+</span><span class="s1">&#39;px&#39;</span><span class="p">},</span><span class="nx">settings</span><span class="p">.</span><span class="nx">animationTime</span><span class="p">);</span>
+</span><span class='line'>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>          <span class="kd">var</span> <span class="nx">toppos</span> <span class="o">=</span> <span class="p">(</span><span class="nx">el</span><span class="p">.</span><span class="nx">height</span><span class="p">()</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span><span class="o">*</span><span class="nx">pos</span><span class="p">;</span>
+</span><span class='line'>          <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">animate</span><span class="p">({</span><span class="nx">top</span><span class="o">:</span> <span class="nx">toppos</span><span class="o">+</span><span class="s1">&#39;px&#39;</span><span class="p">},</span><span class="nx">settings</span><span class="p">.</span><span class="nx">animationTime</span><span class="p">);</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>      <span class="p">}</span> <span class="k">else</span><span class="p">{</span>
+</span><span class='line'>        <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">css</span><span class="p">({</span>
+</span><span class='line'>          <span class="s2">&quot;-webkit-transform&quot;</span><span class="o">:</span> <span class="p">(</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">direction</span> <span class="o">==</span> <span class="s1">&#39;horizontal&#39;</span> <span class="p">)</span> <span class="o">?</span> <span class="s2">&quot;translate3d(&quot;</span> <span class="o">+</span> <span class="nx">pos</span> <span class="o">+</span> <span class="s2">&quot;%, 0, 0)&quot;</span> <span class="o">:</span> <span class="s2">&quot;translate3d(0, &quot;</span> <span class="o">+</span> <span class="nx">pos</span> <span class="o">+</span> <span class="s2">&quot;%, 0)&quot;</span><span class="p">,</span>
+</span><span class='line'>         <span class="s2">&quot;-webkit-transition&quot;</span><span class="o">:</span> <span class="s2">&quot;all &quot;</span> <span class="o">+</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">animationTime</span> <span class="o">+</span> <span class="s2">&quot;ms &quot;</span> <span class="o">+</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">easing</span><span class="p">,</span>
+</span><span class='line'>         <span class="s2">&quot;-moz-transform&quot;</span><span class="o">:</span> <span class="p">(</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">direction</span> <span class="o">==</span> <span class="s1">&#39;horizontal&#39;</span> <span class="p">)</span> <span class="o">?</span> <span class="s2">&quot;translate3d(&quot;</span> <span class="o">+</span> <span class="nx">pos</span> <span class="o">+</span> <span class="s2">&quot;%, 0, 0)&quot;</span> <span class="o">:</span> <span class="s2">&quot;translate3d(0, &quot;</span> <span class="o">+</span> <span class="nx">pos</span> <span class="o">+</span> <span class="s2">&quot;%, 0)&quot;</span><span class="p">,</span>
+</span><span class='line'>         <span class="s2">&quot;-moz-transition&quot;</span><span class="o">:</span> <span class="s2">&quot;all &quot;</span> <span class="o">+</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">animationTime</span> <span class="o">+</span> <span class="s2">&quot;ms &quot;</span> <span class="o">+</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">easing</span><span class="p">,</span>
+</span><span class='line'>         <span class="s2">&quot;-ms-transform&quot;</span><span class="o">:</span> <span class="p">(</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">direction</span> <span class="o">==</span> <span class="s1">&#39;horizontal&#39;</span> <span class="p">)</span> <span class="o">?</span> <span class="s2">&quot;translate3d(&quot;</span> <span class="o">+</span> <span class="nx">pos</span> <span class="o">+</span> <span class="s2">&quot;%, 0, 0)&quot;</span> <span class="o">:</span> <span class="s2">&quot;translate3d(0, &quot;</span> <span class="o">+</span> <span class="nx">pos</span> <span class="o">+</span> <span class="s2">&quot;%, 0)&quot;</span><span class="p">,</span>
+</span><span class='line'>         <span class="s2">&quot;-ms-transition&quot;</span><span class="o">:</span> <span class="s2">&quot;all &quot;</span> <span class="o">+</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">animationTime</span> <span class="o">+</span> <span class="s2">&quot;ms &quot;</span> <span class="o">+</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">easing</span><span class="p">,</span>
+</span><span class='line'>         <span class="s2">&quot;transform&quot;</span><span class="o">:</span> <span class="p">(</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">direction</span> <span class="o">==</span> <span class="s1">&#39;horizontal&#39;</span> <span class="p">)</span> <span class="o">?</span> <span class="s2">&quot;translate3d(&quot;</span> <span class="o">+</span> <span class="nx">pos</span> <span class="o">+</span> <span class="s2">&quot;%, 0, 0)&quot;</span> <span class="o">:</span> <span class="s2">&quot;translate3d(0, &quot;</span> <span class="o">+</span> <span class="nx">pos</span> <span class="o">+</span> <span class="s2">&quot;%, 0)&quot;</span><span class="p">,</span>
+</span><span class='line'>         <span class="s2">&quot;transition&quot;</span><span class="o">:</span> <span class="s2">&quot;all &quot;</span> <span class="o">+</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">animationTime</span> <span class="o">+</span> <span class="s2">&quot;ms &quot;</span> <span class="o">+</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">easing</span>
+</span><span class='line'>        <span class="p">});</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>      <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">one</span><span class="p">(</span><span class="s1">&#39;webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">afterMove</span> <span class="o">==</span> <span class="s1">&#39;function&#39;</span><span class="p">)</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">afterMove</span><span class="p">(</span><span class="nx">index</span><span class="p">);</span>
+</span><span class='line'>      <span class="p">});</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">moveDown</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>      <span class="kd">var</span> <span class="nx">el</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">)</span>
+</span><span class='line'>      <span class="nx">index</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">sectionContainer</span> <span class="o">+</span><span class="s2">&quot;.active&quot;</span><span class="p">).</span><span class="nx">data</span><span class="p">(</span><span class="s2">&quot;index&quot;</span><span class="p">);</span>
+</span><span class='line'>      <span class="nx">current</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">sectionContainer</span> <span class="o">+</span> <span class="s2">&quot;[data-index=&#39;&quot;</span> <span class="o">+</span> <span class="nx">index</span> <span class="o">+</span> <span class="s2">&quot;&#39;]&quot;</span><span class="p">);</span>
+</span><span class='line'>      <span class="nx">next</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">sectionContainer</span> <span class="o">+</span> <span class="s2">&quot;[data-index=&#39;&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="nx">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;&#39;]&quot;</span><span class="p">);</span>
+</span><span class='line'>      <span class="k">if</span><span class="p">(</span><span class="nx">next</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">loop</span> <span class="o">==</span> <span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>          <span class="nx">pos</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>          <span class="nx">next</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">sectionContainer</span> <span class="o">+</span> <span class="s2">&quot;[data-index=&#39;1&#39;]&quot;</span><span class="p">);</span>
+</span><span class='line'>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>          <span class="k">return</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>      <span class="p">}</span><span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">pos</span> <span class="o">=</span> <span class="p">(</span><span class="nx">index</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span> <span class="o">*</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>      <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">beforeMove</span> <span class="o">==</span> <span class="s1">&#39;function&#39;</span><span class="p">)</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">beforeMove</span><span class="p">(</span> <span class="nx">next</span><span class="p">.</span><span class="nx">data</span><span class="p">(</span><span class="s2">&quot;index&quot;</span><span class="p">));</span>
+</span><span class='line'>      <span class="nx">current</span><span class="p">.</span><span class="nx">removeClass</span><span class="p">(</span><span class="s2">&quot;active&quot;</span><span class="p">)</span>
+</span><span class='line'>      <span class="nx">next</span><span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="s2">&quot;active&quot;</span><span class="p">);</span>
+</span><span class='line'>      <span class="k">if</span><span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">pagination</span> <span class="o">==</span> <span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.onepage-pagination li a&quot;</span> <span class="o">+</span> <span class="s2">&quot;[data-index=&#39;&quot;</span> <span class="o">+</span> <span class="nx">index</span> <span class="o">+</span> <span class="s2">&quot;&#39;]&quot;</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s2">&quot;active&quot;</span><span class="p">);</span>
+</span><span class='line'>        <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.onepage-pagination li a&quot;</span> <span class="o">+</span> <span class="s2">&quot;[data-index=&#39;&quot;</span> <span class="o">+</span> <span class="nx">next</span><span class="p">.</span><span class="nx">data</span><span class="p">(</span><span class="s2">&quot;index&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;&#39;]&quot;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s2">&quot;active&quot;</span><span class="p">);</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>      <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;body&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">className</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;body&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">className</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/\bviewing-page-\d.*?\b/g</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
+</span><span class='line'>      <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;body&quot;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s2">&quot;viewing-page-&quot;</span><span class="o">+</span><span class="nx">next</span><span class="p">.</span><span class="nx">data</span><span class="p">(</span><span class="s2">&quot;index&quot;</span><span class="p">))</span>
+</span><span class='line'>      <span class="k">if</span> <span class="p">(</span><span class="nx">history</span><span class="p">.</span><span class="nx">replaceState</span> <span class="o">&amp;&amp;</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">updateURL</span> <span class="o">==</span> <span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="kd">var</span> <span class="nx">href</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">&#39;#&#39;</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot;#&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="nx">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+</span><span class='line'>        <span class="nx">history</span><span class="p">.</span><span class="nx">pushState</span><span class="p">(</span> <span class="p">{},</span> <span class="nb">document</span><span class="p">.</span><span class="nx">title</span><span class="p">,</span> <span class="nx">href</span> <span class="p">);</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>      <span class="nx">el</span><span class="p">.</span><span class="nx">transformPage</span><span class="p">(</span><span class="nx">settings</span><span class="p">,</span> <span class="nx">pos</span><span class="p">,</span> <span class="nx">next</span><span class="p">.</span><span class="nx">data</span><span class="p">(</span><span class="s2">&quot;index&quot;</span><span class="p">));</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">moveUp</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>      <span class="kd">var</span> <span class="nx">el</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">)</span>
+</span><span class='line'>      <span class="nx">index</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">sectionContainer</span> <span class="o">+</span><span class="s2">&quot;.active&quot;</span><span class="p">).</span><span class="nx">data</span><span class="p">(</span><span class="s2">&quot;index&quot;</span><span class="p">);</span>
+</span><span class='line'>      <span class="nx">current</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">sectionContainer</span> <span class="o">+</span> <span class="s2">&quot;[data-index=&#39;&quot;</span> <span class="o">+</span> <span class="nx">index</span> <span class="o">+</span> <span class="s2">&quot;&#39;]&quot;</span><span class="p">);</span>
+</span><span class='line'>      <span class="nx">next</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">sectionContainer</span> <span class="o">+</span> <span class="s2">&quot;[data-index=&#39;&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="nx">index</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;&#39;]&quot;</span><span class="p">);</span>
+</span><span class='line'>      <span class="k">if</span><span class="p">(</span><span class="nx">next</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">loop</span> <span class="o">==</span> <span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>          <span class="nx">pos</span> <span class="o">=</span> <span class="p">((</span><span class="nx">total</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span> <span class="o">*</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</span><span class='line'>          <span class="nx">next</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">sectionContainer</span> <span class="o">+</span> <span class="s2">&quot;[data-index=&#39;&quot;</span><span class="o">+</span><span class="nx">total</span><span class="o">+</span><span class="s2">&quot;&#39;]&quot;</span><span class="p">);</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>          <span class="k">return</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>      <span class="p">}</span><span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">pos</span> <span class="o">=</span> <span class="p">((</span><span class="nx">next</span><span class="p">.</span><span class="nx">data</span><span class="p">(</span><span class="s2">&quot;index&quot;</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span> <span class="o">*</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>      <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">beforeMove</span> <span class="o">==</span> <span class="s1">&#39;function&#39;</span><span class="p">)</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">beforeMove</span><span class="p">(</span><span class="nx">next</span><span class="p">.</span><span class="nx">data</span><span class="p">(</span><span class="s2">&quot;index&quot;</span><span class="p">));</span>
+</span><span class='line'>      <span class="nx">current</span><span class="p">.</span><span class="nx">removeClass</span><span class="p">(</span><span class="s2">&quot;active&quot;</span><span class="p">)</span>
+</span><span class='line'>      <span class="nx">next</span><span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="s2">&quot;active&quot;</span><span class="p">)</span>
+</span><span class='line'>      <span class="k">if</span><span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">pagination</span> <span class="o">==</span> <span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.onepage-pagination li a&quot;</span> <span class="o">+</span> <span class="s2">&quot;[data-index=&#39;&quot;</span> <span class="o">+</span> <span class="nx">index</span> <span class="o">+</span> <span class="s2">&quot;&#39;]&quot;</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s2">&quot;active&quot;</span><span class="p">);</span>
+</span><span class='line'>        <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.onepage-pagination li a&quot;</span> <span class="o">+</span> <span class="s2">&quot;[data-index=&#39;&quot;</span> <span class="o">+</span> <span class="nx">next</span><span class="p">.</span><span class="nx">data</span><span class="p">(</span><span class="s2">&quot;index&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;&#39;]&quot;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s2">&quot;active&quot;</span><span class="p">);</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>      <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;body&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">className</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;body&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">className</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/\bviewing-page-\d.*?\b/g</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
+</span><span class='line'>      <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;body&quot;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s2">&quot;viewing-page-&quot;</span><span class="o">+</span><span class="nx">next</span><span class="p">.</span><span class="nx">data</span><span class="p">(</span><span class="s2">&quot;index&quot;</span><span class="p">))</span>
+</span><span class='line'>      <span class="k">if</span> <span class="p">(</span><span class="nx">history</span><span class="p">.</span><span class="nx">replaceState</span> <span class="o">&amp;&amp;</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">updateURL</span> <span class="o">==</span> <span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="kd">var</span> <span class="nx">href</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">&#39;#&#39;</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot;#&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="nx">index</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+</span><span class='line'>        <span class="nx">history</span><span class="p">.</span><span class="nx">pushState</span><span class="p">(</span> <span class="p">{},</span> <span class="nb">document</span><span class="p">.</span><span class="nx">title</span><span class="p">,</span> <span class="nx">href</span> <span class="p">);</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>      <span class="nx">el</span><span class="p">.</span><span class="nx">transformPage</span><span class="p">(</span><span class="nx">settings</span><span class="p">,</span> <span class="nx">pos</span><span class="p">,</span> <span class="nx">next</span><span class="p">.</span><span class="nx">data</span><span class="p">(</span><span class="s2">&quot;index&quot;</span><span class="p">));</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">moveTo</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">page_index</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">current</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">sectionContainer</span> <span class="o">+</span> <span class="s2">&quot;.active&quot;</span><span class="p">)</span>
+</span><span class='line'>      <span class="nx">next</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">sectionContainer</span> <span class="o">+</span> <span class="s2">&quot;[data-index=&#39;&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="nx">page_index</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;&#39;]&quot;</span><span class="p">);</span>
+</span><span class='line'>      <span class="k">if</span><span class="p">(</span><span class="nx">next</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">beforeMove</span> <span class="o">==</span> <span class="s1">&#39;function&#39;</span><span class="p">)</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">beforeMove</span><span class="p">(</span><span class="nx">next</span><span class="p">.</span><span class="nx">data</span><span class="p">(</span><span class="s2">&quot;index&quot;</span><span class="p">));</span>
+</span><span class='line'>        <span class="nx">current</span><span class="p">.</span><span class="nx">removeClass</span><span class="p">(</span><span class="s2">&quot;active&quot;</span><span class="p">)</span>
+</span><span class='line'>        <span class="nx">next</span><span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="s2">&quot;active&quot;</span><span class="p">)</span>
+</span><span class='line'>        <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.onepage-pagination li a&quot;</span> <span class="o">+</span> <span class="s2">&quot;.active&quot;</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s2">&quot;active&quot;</span><span class="p">);</span>
+</span><span class='line'>        <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.onepage-pagination li a&quot;</span> <span class="o">+</span> <span class="s2">&quot;[data-index=&#39;&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="nx">page_index</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;&#39;]&quot;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s2">&quot;active&quot;</span><span class="p">);</span>
+</span><span class='line'>        <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;body&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">className</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;body&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">className</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/\bviewing-page-\d.*?\b/g</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
+</span><span class='line'>        <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;body&quot;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s2">&quot;viewing-page-&quot;</span><span class="o">+</span><span class="nx">next</span><span class="p">.</span><span class="nx">data</span><span class="p">(</span><span class="s2">&quot;index&quot;</span><span class="p">))</span>
+</span><span class='line'>        <span class="nx">pos</span> <span class="o">=</span> <span class="p">((</span><span class="nx">page_index</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span> <span class="o">*</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="nx">history</span><span class="p">.</span><span class="nx">replaceState</span> <span class="o">&amp;&amp;</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">updateURL</span> <span class="o">==</span> <span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="kd">var</span> <span class="nx">href</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">&#39;#&#39;</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot;#&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="nx">page_index</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+</span><span class='line'>            <span class="nx">history</span><span class="p">.</span><span class="nx">pushState</span><span class="p">(</span> <span class="p">{},</span> <span class="nb">document</span><span class="p">.</span><span class="nx">title</span><span class="p">,</span> <span class="nx">href</span> <span class="p">);</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="nx">el</span><span class="p">.</span><span class="nx">transformPage</span><span class="p">(</span><span class="nx">settings</span><span class="p">,</span> <span class="nx">pos</span><span class="p">,</span> <span class="nx">page_index</span><span class="p">);</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="kd">function</span> <span class="nx">responsive</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>      <span class="kd">var</span> <span class="nx">valForTest</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'>      <span class="kd">var</span> <span class="nx">typeOfRF</span> <span class="o">=</span> <span class="k">typeof</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">responsiveFallback</span>
+</span><span class='line'>      <span class="k">if</span><span class="p">(</span><span class="nx">typeOfRF</span> <span class="o">==</span> <span class="s2">&quot;number&quot;</span><span class="p">){</span>
+</span><span class='line'>          <span class="nx">valForTest</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nb">window</span><span class="p">).</span><span class="nx">width</span><span class="p">()</span> <span class="o">&lt;</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">responsiveFallback</span><span class="p">;</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>      <span class="k">if</span><span class="p">(</span><span class="nx">typeOfRF</span> <span class="o">==</span> <span class="s2">&quot;boolean&quot;</span><span class="p">){</span>
+</span><span class='line'>          <span class="nx">valForTest</span> <span class="o">=</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">responsiveFallback</span><span class="p">;</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>      <span class="k">if</span><span class="p">(</span><span class="nx">typeOfRF</span> <span class="o">==</span> <span class="s2">&quot;function&quot;</span><span class="p">){</span>
+</span><span class='line'>          <span class="nx">valFunction</span> <span class="o">=</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">responsiveFallback</span><span class="p">();</span>
+</span><span class='line'>          <span class="nx">valForTest</span> <span class="o">=</span> <span class="nx">valFunction</span><span class="p">;</span>
+</span><span class='line'>          <span class="nx">typeOFv</span> <span class="o">=</span> <span class="k">typeof</span> <span class="nx">valForTest</span><span class="p">;</span>
+</span><span class='line'>          <span class="k">if</span><span class="p">(</span><span class="nx">typeOFv</span> <span class="o">==</span> <span class="s2">&quot;number&quot;</span><span class="p">){</span>
+</span><span class='line'>              <span class="nx">valForTest</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nb">window</span><span class="p">).</span><span class="nx">width</span><span class="p">()</span> <span class="o">&lt;</span> <span class="nx">valFunction</span><span class="p">;</span>
+</span><span class='line'>          <span class="p">}</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>      <span class="k">if</span> <span class="p">(</span><span class="nx">valForTest</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;body&quot;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s2">&quot;disabled-onepage-scroll&quot;</span><span class="p">);</span>
+</span><span class='line'>        <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">unbind</span><span class="p">(</span><span class="s1">&#39;mousewheel DOMMouseScroll MozMousePixelScroll&#39;</span><span class="p">);</span>
+</span><span class='line'>        <span class="nx">el</span><span class="p">.</span><span class="nx">swipeEvents</span><span class="p">().</span><span class="nx">unbind</span><span class="p">(</span><span class="s2">&quot;swipeDown swipeUp&quot;</span><span class="p">);</span>
+</span><span class='line'>      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">if</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;body&quot;</span><span class="p">).</span><span class="nx">hasClass</span><span class="p">(</span><span class="s2">&quot;disabled-onepage-scroll&quot;</span><span class="p">))</span> <span class="p">{</span>
+</span><span class='line'>          <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;body&quot;</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s2">&quot;disabled-onepage-scroll&quot;</span><span class="p">);</span>
+</span><span class='line'>          <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;html, body, .wrapper&quot;</span><span class="p">).</span><span class="nx">animate</span><span class="p">({</span> <span class="nx">scrollTop</span><span class="o">:</span> <span class="mi">0</span> <span class="p">},</span> <span class="s2">&quot;fast&quot;</span><span class="p">);</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="nx">el</span><span class="p">.</span><span class="nx">swipeEvents</span><span class="p">().</span><span class="nx">bind</span><span class="p">(</span><span class="s2">&quot;swipeDown&quot;</span><span class="p">,</span>  <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">){</span>
+</span><span class='line'>          <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;body&quot;</span><span class="p">).</span><span class="nx">hasClass</span><span class="p">(</span><span class="s2">&quot;disabled-onepage-scroll&quot;</span><span class="p">))</span> <span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+</span><span class='line'>          <span class="nx">el</span><span class="p">.</span><span class="nx">moveUp</span><span class="p">();</span>
+</span><span class='line'>        <span class="p">}).</span><span class="nx">bind</span><span class="p">(</span><span class="s2">&quot;swipeUp&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">){</span>
+</span><span class='line'>          <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;body&quot;</span><span class="p">).</span><span class="nx">hasClass</span><span class="p">(</span><span class="s2">&quot;disabled-onepage-scroll&quot;</span><span class="p">))</span> <span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+</span><span class='line'>          <span class="nx">el</span><span class="p">.</span><span class="nx">moveDown</span><span class="p">();</span>
+</span><span class='line'>        <span class="p">});</span>
+</span><span class='line'>        <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">bind</span><span class="p">(</span><span class="s1">&#39;mousewheel DOMMouseScroll MozMousePixelScroll&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>          <span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+</span><span class='line'>          <span class="kd">var</span> <span class="nx">delta</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">originalEvent</span><span class="p">.</span><span class="nx">wheelDelta</span> <span class="o">||</span> <span class="o">-</span><span class="nx">event</span><span class="p">.</span><span class="nx">originalEvent</span><span class="p">.</span><span class="nx">detail</span><span class="p">;</span>
+</span><span class='line'>          <span class="nx">init_scroll</span><span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">delta</span><span class="p">);</span>
+</span><span class='line'>        <span class="p">});</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="kd">function</span> <span class="nx">init_scroll</span><span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">delta</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">deltaOfInterest</span> <span class="o">=</span> <span class="nx">delta</span><span class="p">;</span>
+</span><span class='line'>        <span class="kd">var</span> <span class="nx">timeNow</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">().</span><span class="nx">getTime</span><span class="p">();</span>
+</span><span class='line'>        <span class="k">if</span><span class="p">(</span><span class="nx">timeNow</span> <span class="o">-</span> <span class="nx">lastAnimation</span> <span class="o">&lt;</span> <span class="nx">quietPeriod</span> <span class="o">+</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">animationTime</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+</span><span class='line'>            <span class="k">return</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="nx">deltaOfInterest</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>          <span class="nx">el</span><span class="p">.</span><span class="nx">moveDown</span><span class="p">()</span>
+</span><span class='line'>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>          <span class="nx">el</span><span class="p">.</span><span class="nx">moveUp</span><span class="p">()</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="nx">lastAnimation</span> <span class="o">=</span> <span class="nx">timeNow</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="nx">el</span><span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="s2">&quot;onepage-wrapper&quot;</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s2">&quot;position&quot;</span><span class="p">,</span><span class="s2">&quot;relative&quot;</span><span class="p">);</span>
+</span><span class='line'>    <span class="nx">$</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span> <span class="nx">sections</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">css</span><span class="p">({</span>
+</span><span class='line'>        <span class="nx">position</span><span class="o">:</span> <span class="s2">&quot;absolute&quot;</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">top</span><span class="o">:</span> <span class="nx">topPos</span> <span class="o">+</span> <span class="s2">&quot;%&quot;</span>
+</span><span class='line'>      <span class="p">}).</span><span class="nx">addClass</span><span class="p">(</span><span class="s2">&quot;section&quot;</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;data-index&quot;</span><span class="p">,</span> <span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+</span><span class='line'>      <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">css</span><span class="p">({</span>
+</span><span class='line'>        <span class="nx">position</span><span class="o">:</span> <span class="s2">&quot;absolute&quot;</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">left</span><span class="o">:</span> <span class="p">(</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">direction</span> <span class="o">==</span> <span class="s1">&#39;horizontal&#39;</span> <span class="p">)</span>
+</span><span class='line'>          <span class="o">?</span> <span class="nx">leftPos</span> <span class="o">+</span> <span class="s2">&quot;%&quot;</span>
+</span><span class='line'>          <span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">top</span><span class="o">:</span> <span class="p">(</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">direction</span> <span class="o">==</span> <span class="s1">&#39;vertical&#39;</span> <span class="o">||</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">direction</span> <span class="o">!=</span> <span class="s1">&#39;horizontal&#39;</span> <span class="p">)</span>
+</span><span class='line'>          <span class="o">?</span> <span class="nx">topPos</span> <span class="o">+</span> <span class="s2">&quot;%&quot;</span>
+</span><span class='line'>          <span class="o">:</span> <span class="mi">0</span>
+</span><span class='line'>      <span class="p">});</span>
+</span><span class='line'>      <span class="k">if</span> <span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">direction</span> <span class="o">==</span> <span class="s1">&#39;horizontal&#39;</span><span class="p">)</span>
+</span><span class='line'>        <span class="nx">leftPos</span> <span class="o">=</span> <span class="nx">leftPos</span> <span class="o">+</span> <span class="mi">100</span><span class="p">;</span>
+</span><span class='line'>      <span class="k">else</span>
+</span><span class='line'>        <span class="nx">topPos</span> <span class="o">=</span> <span class="nx">topPos</span> <span class="o">+</span> <span class="mi">100</span><span class="p">;</span>
+</span><span class='line'>      <span class="k">if</span><span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">pagination</span> <span class="o">==</span> <span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">paginationList</span> <span class="o">+=</span> <span class="s2">&quot;&lt;li&gt;&lt;a data-index=&#39;&quot;</span><span class="o">+</span><span class="p">(</span><span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;&#39; href=&#39;#&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;&#39;&gt;&lt;/a&gt;&lt;/li&gt;&quot;</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>    <span class="p">});</span>
+</span><span class='line'>    <span class="nx">el</span><span class="p">.</span><span class="nx">swipeEvents</span><span class="p">().</span><span class="nx">bind</span><span class="p">(</span><span class="s2">&quot;swipeDown&quot;</span><span class="p">,</span>  <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">){</span>
+</span><span class='line'>      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;body&quot;</span><span class="p">).</span><span class="nx">hasClass</span><span class="p">(</span><span class="s2">&quot;disabled-onepage-scroll&quot;</span><span class="p">))</span> <span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+</span><span class='line'>      <span class="nx">el</span><span class="p">.</span><span class="nx">moveUp</span><span class="p">();</span>
+</span><span class='line'>    <span class="p">}).</span><span class="nx">bind</span><span class="p">(</span><span class="s2">&quot;swipeUp&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">){</span>
+</span><span class='line'>      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;body&quot;</span><span class="p">).</span><span class="nx">hasClass</span><span class="p">(</span><span class="s2">&quot;disabled-onepage-scroll&quot;</span><span class="p">))</span> <span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+</span><span class='line'>      <span class="nx">el</span><span class="p">.</span><span class="nx">moveDown</span><span class="p">();</span>
+</span><span class='line'>    <span class="p">});</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">pagination</span> <span class="o">==</span> <span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">if</span> <span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;ul.onepage-pagination&#39;</span><span class="p">).</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;&lt;ul class=&#39;onepage-pagination&#39;&gt;&lt;/ul&gt;&quot;</span><span class="p">).</span><span class="nx">prependTo</span><span class="p">(</span><span class="s2">&quot;body&quot;</span><span class="p">);</span>
+</span><span class='line'>      <span class="k">if</span><span class="p">(</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">direction</span> <span class="o">==</span> <span class="s1">&#39;horizontal&#39;</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">posLeft</span> <span class="o">=</span> <span class="p">(</span><span class="nx">el</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&quot;.onepage-pagination&quot;</span><span class="p">).</span><span class="nx">width</span><span class="p">()</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</span><span class='line'>        <span class="nx">el</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&quot;.onepage-pagination&quot;</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s2">&quot;margin-left&quot;</span><span class="p">,</span> <span class="nx">posLeft</span><span class="p">);</span>
+</span><span class='line'>      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">posTop</span> <span class="o">=</span> <span class="p">(</span><span class="nx">el</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&quot;.onepage-pagination&quot;</span><span class="p">).</span><span class="nx">height</span><span class="p">()</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</span><span class='line'>        <span class="nx">el</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">&quot;.onepage-pagination&quot;</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s2">&quot;margin-top&quot;</span><span class="p">,</span> <span class="nx">posTop</span><span class="p">);</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>      <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;ul.onepage-pagination&#39;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">paginationList</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">if</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">hash</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span> <span class="o">&amp;&amp;</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">hash</span> <span class="o">!=</span> <span class="s2">&quot;#1&quot;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">init_index</span> <span class="o">=</span>  <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">hash</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+</span><span class='line'>      <span class="k">if</span> <span class="p">(</span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">init_index</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="nx">total</span> <span class="o">&amp;&amp;</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">init_index</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">$</span><span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">sectionContainer</span> <span class="o">+</span> <span class="s2">&quot;[data-index=&#39;&quot;</span> <span class="o">+</span> <span class="nx">init_index</span> <span class="o">+</span> <span class="s2">&quot;&#39;]&quot;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s2">&quot;active&quot;</span><span class="p">)</span>
+</span><span class='line'>        <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;body&quot;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s2">&quot;viewing-page-&quot;</span><span class="o">+</span> <span class="nx">init_index</span><span class="p">)</span>
+</span><span class='line'>        <span class="k">if</span><span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">pagination</span> <span class="o">==</span> <span class="kc">true</span><span class="p">)</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.onepage-pagination li a&quot;</span> <span class="o">+</span> <span class="s2">&quot;[data-index=&#39;&quot;</span> <span class="o">+</span> <span class="nx">init_index</span> <span class="o">+</span> <span class="s2">&quot;&#39;]&quot;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s2">&quot;active&quot;</span><span class="p">);</span>
+</span><span class='line'>        <span class="nx">next</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">sectionContainer</span> <span class="o">+</span> <span class="s2">&quot;[data-index=&#39;&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="nx">init_index</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;&#39;]&quot;</span><span class="p">);</span>
+</span><span class='line'>        <span class="k">if</span><span class="p">(</span><span class="nx">next</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>          <span class="nx">next</span><span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="s2">&quot;active&quot;</span><span class="p">)</span>
+</span><span class='line'>          <span class="k">if</span><span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">pagination</span> <span class="o">==</span> <span class="kc">true</span><span class="p">)</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.onepage-pagination li a&quot;</span> <span class="o">+</span> <span class="s2">&quot;[data-index=&#39;&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="nx">init_index</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;&#39;]&quot;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s2">&quot;active&quot;</span><span class="p">);</span>
+</span><span class='line'>          <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;body&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">className</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;body&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">className</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/\bviewing-page-\d.*?\b/g</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
+</span><span class='line'>          <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;body&quot;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s2">&quot;viewing-page-&quot;</span><span class="o">+</span><span class="nx">next</span><span class="p">.</span><span class="nx">data</span><span class="p">(</span><span class="s2">&quot;index&quot;</span><span class="p">))</span>
+</span><span class='line'>          <span class="k">if</span> <span class="p">(</span><span class="nx">history</span><span class="p">.</span><span class="nx">replaceState</span> <span class="o">&amp;&amp;</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">updateURL</span> <span class="o">==</span> <span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="kd">var</span> <span class="nx">href</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">&#39;#&#39;</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot;#&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="nx">init_index</span><span class="p">);</span>
+</span><span class='line'>            <span class="nx">history</span><span class="p">.</span><span class="nx">pushState</span><span class="p">(</span> <span class="p">{},</span> <span class="nb">document</span><span class="p">.</span><span class="nx">title</span><span class="p">,</span> <span class="nx">href</span> <span class="p">);</span>
+</span><span class='line'>          <span class="p">}</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="nx">pos</span> <span class="o">=</span> <span class="p">((</span><span class="nx">init_index</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span> <span class="o">*</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</span><span class='line'>        <span class="nx">el</span><span class="p">.</span><span class="nx">transformPage</span><span class="p">(</span><span class="nx">settings</span><span class="p">,</span> <span class="nx">pos</span><span class="p">,</span> <span class="nx">init_index</span><span class="p">);</span>
+</span><span class='line'>      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">$</span><span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">sectionContainer</span> <span class="o">+</span> <span class="s2">&quot;[data-index=&#39;1&#39;]&quot;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s2">&quot;active&quot;</span><span class="p">)</span>
+</span><span class='line'>        <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;body&quot;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s2">&quot;viewing-page-1&quot;</span><span class="p">)</span>
+</span><span class='line'>        <span class="k">if</span><span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">pagination</span> <span class="o">==</span> <span class="kc">true</span><span class="p">)</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.onepage-pagination li a&quot;</span> <span class="o">+</span> <span class="s2">&quot;[data-index=&#39;1&#39;]&quot;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s2">&quot;active&quot;</span><span class="p">);</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+</span><span class='line'>      <span class="nx">$</span><span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">sectionContainer</span> <span class="o">+</span> <span class="s2">&quot;[data-index=&#39;1&#39;]&quot;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s2">&quot;active&quot;</span><span class="p">)</span>
+</span><span class='line'>      <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;body&quot;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s2">&quot;viewing-page-1&quot;</span><span class="p">)</span>
+</span><span class='line'>      <span class="k">if</span><span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">pagination</span> <span class="o">==</span> <span class="kc">true</span><span class="p">)</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.onepage-pagination li a&quot;</span> <span class="o">+</span> <span class="s2">&quot;[data-index=&#39;1&#39;]&quot;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s2">&quot;active&quot;</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">if</span><span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">pagination</span> <span class="o">==</span> <span class="kc">true</span><span class="p">)</span>  <span class="p">{</span>
+</span><span class='line'>      <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.onepage-pagination li a&quot;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span> <span class="p">(){</span>
+</span><span class='line'>        <span class="kd">var</span> <span class="nx">page_index</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">data</span><span class="p">(</span><span class="s2">&quot;index&quot;</span><span class="p">);</span>
+</span><span class='line'>        <span class="nx">el</span><span class="p">.</span><span class="nx">moveTo</span><span class="p">(</span><span class="nx">page_index</span><span class="p">);</span>
+</span><span class='line'>      <span class="p">});</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">bind</span><span class="p">(</span><span class="s1">&#39;mousewheel DOMMouseScroll MozMousePixelScroll&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+</span><span class='line'>      <span class="kd">var</span> <span class="nx">delta</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">originalEvent</span><span class="p">.</span><span class="nx">wheelDelta</span> <span class="o">||</span> <span class="o">-</span><span class="nx">event</span><span class="p">.</span><span class="nx">originalEvent</span><span class="p">.</span><span class="nx">detail</span><span class="p">;</span>
+</span><span class='line'>      <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;body&quot;</span><span class="p">).</span><span class="nx">hasClass</span><span class="p">(</span><span class="s2">&quot;disabled-onepage-scroll&quot;</span><span class="p">))</span> <span class="nx">init_scroll</span><span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">delta</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">});</span>
+</span><span class='line'>    <span class="k">if</span><span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">responsiveFallback</span> <span class="o">!=</span> <span class="kc">false</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">$</span><span class="p">(</span><span class="nb">window</span><span class="p">).</span><span class="nx">resize</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">responsive</span><span class="p">();</span>
+</span><span class='line'>      <span class="p">});</span>
+</span><span class='line'>      <span class="nx">responsive</span><span class="p">();</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">if</span><span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">keyboard</span> <span class="o">==</span> <span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">keydown</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="kd">var</span> <span class="nx">tag</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">tagName</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">();</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;body&quot;</span><span class="p">).</span><span class="nx">hasClass</span><span class="p">(</span><span class="s2">&quot;disabled-onepage-scroll&quot;</span><span class="p">))</span> <span class="p">{</span>
+</span><span class='line'>          <span class="k">switch</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">which</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="k">case</span> <span class="mi">38</span><span class="o">:</span>
+</span><span class='line'>              <span class="k">if</span> <span class="p">(</span><span class="nx">tag</span> <span class="o">!=</span> <span class="s1">&#39;input&#39;</span> <span class="o">&amp;&amp;</span> <span class="nx">tag</span> <span class="o">!=</span> <span class="s1">&#39;textarea&#39;</span><span class="p">)</span> <span class="nx">el</span><span class="p">.</span><span class="nx">moveUp</span><span class="p">()</span>
+</span><span class='line'>            <span class="k">break</span><span class="p">;</span>
+</span><span class='line'>            <span class="k">case</span> <span class="mi">40</span><span class="o">:</span>
+</span><span class='line'>              <span class="k">if</span> <span class="p">(</span><span class="nx">tag</span> <span class="o">!=</span> <span class="s1">&#39;input&#39;</span> <span class="o">&amp;&amp;</span> <span class="nx">tag</span> <span class="o">!=</span> <span class="s1">&#39;textarea&#39;</span><span class="p">)</span> <span class="nx">el</span><span class="p">.</span><span class="nx">moveDown</span><span class="p">()</span>
+</span><span class='line'>            <span class="k">break</span><span class="p">;</span>
+</span><span class='line'>            <span class="k">case</span> <span class="mi">32</span><span class="o">:</span>
+</span><span class='line'>              <span class="k">if</span> <span class="p">(</span><span class="nx">tag</span> <span class="o">!=</span> <span class="s1">&#39;input&#39;</span> <span class="o">&amp;&amp;</span> <span class="nx">tag</span> <span class="o">!=</span> <span class="s1">&#39;textarea&#39;</span><span class="p">)</span> <span class="nx">el</span><span class="p">.</span><span class="nx">moveDown</span><span class="p">()</span>
+</span><span class='line'>            <span class="k">break</span><span class="p">;</span>
+</span><span class='line'>            <span class="k">case</span> <span class="mi">33</span><span class="o">:</span>
+</span><span class='line'>              <span class="k">if</span> <span class="p">(</span><span class="nx">tag</span> <span class="o">!=</span> <span class="s1">&#39;input&#39;</span> <span class="o">&amp;&amp;</span> <span class="nx">tag</span> <span class="o">!=</span> <span class="s1">&#39;textarea&#39;</span><span class="p">)</span> <span class="nx">el</span><span class="p">.</span><span class="nx">moveUp</span><span class="p">()</span>
+</span><span class='line'>            <span class="k">break</span><span class="p">;</span>
+</span><span class='line'>            <span class="k">case</span> <span class="mi">34</span><span class="o">:</span>
+</span><span class='line'>              <span class="k">if</span> <span class="p">(</span><span class="nx">tag</span> <span class="o">!=</span> <span class="s1">&#39;input&#39;</span> <span class="o">&amp;&amp;</span> <span class="nx">tag</span> <span class="o">!=</span> <span class="s1">&#39;textarea&#39;</span><span class="p">)</span> <span class="nx">el</span><span class="p">.</span><span class="nx">moveDown</span><span class="p">()</span>
+</span><span class='line'>            <span class="k">break</span><span class="p">;</span>
+</span><span class='line'>            <span class="k">case</span> <span class="mi">36</span><span class="o">:</span>
+</span><span class='line'>              <span class="nx">el</span><span class="p">.</span><span class="nx">moveTo</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</span><span class='line'>            <span class="k">break</span><span class="p">;</span>
+</span><span class='line'>            <span class="k">case</span> <span class="mi">35</span><span class="o">:</span>
+</span><span class='line'>              <span class="nx">el</span><span class="p">.</span><span class="nx">moveTo</span><span class="p">(</span><span class="nx">total</span><span class="p">);</span>
+</span><span class='line'>            <span class="k">break</span><span class="p">;</span>
+</span><span class='line'>            <span class="k">default</span><span class="o">:</span> <span class="k">return</span><span class="p">;</span>
+</span><span class='line'>          <span class="p">}</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>      <span class="p">});</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}(</span><span class="nb">window</span><span class="p">.</span><span class="nx">jQuery</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><img src="../images/capture_image-2.png" alt="second-page" /></p>
+
+<ul>
+<li>Then open <code>sass</code> file and copy below code for your project</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+</pre></td><td class='code'><pre><code class='sass'><span class='line'>  <span class="nt">html</span>
+</span><span class='line'>    <span class="na">height</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span>
+</span><span class='line'>  <span class="nt">body</span>
+</span><span class='line'>    <span class="na">padding</span><span class="o">:</span> <span class="mi">0</span>
+</span><span class='line'>    <span class="na">position</span><span class="o">:</span> <span class="no">relative</span>
+</span><span class='line'>    <span class="na">margin</span><span class="o">:</span> <span class="mi">0</span>
+</span><span class='line'>    <span class="na">height</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span>
+</span><span class='line'>  <span class="nc">.wrapper</span>
+</span><span class='line'>    <span class="na">height</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span> <span class="nv">!important</span>
+</span><span class='line'>    <span class="na">margin</span><span class="o">:</span> <span class="mi">0</span> <span class="no">auto</span>
+</span><span class='line'>  <span class="nc">.main</span> <span class="nt">section</span>
+</span><span class='line'>    <span class="k">&amp;</span><span class="nc">.page1</span>
+</span><span class='line'>      <span class="na">background</span><span class="o">:</span> <span class="nf">rgb</span><span class="p">(</span><span class="mi">78</span><span class="o">,</span> <span class="mi">225</span><span class="o">,</span> <span class="mi">197</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">&amp;</span><span class="nc">.page2</span>
+</span><span class='line'>      <span class="na">background</span><span class="o">:</span> <span class="mh">#d9c337</span>
+</span><span class='line'>    <span class="k">&amp;</span><span class="nc">.page3</span>
+</span><span class='line'>      <span class="na">background</span><span class="o">:</span> <span class="mh">#e3242e</span>
+</span><span class='line'>    <span class="k">&amp;</span><span class="nc">.page4</span>
+</span><span class='line'>      <span class="na">background</span><span class="o">:</span> <span class="mh">#f2f4e8</span>
+</span><span class='line'>  <span class="nt">body</span><span class="nc">.disabled-onepage-scroll</span>
+</span><span class='line'>    <span class="nc">.onepage-wrapper</span> <span class="nt">section</span>
+</span><span class='line'>      <span class="na">min-height</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span>
+</span><span class='line'>      <span class="na">height</span><span class="o">:</span> <span class="no">auto</span>
+</span><span class='line'>  <span class="nt">body</span><span class="o">,</span> <span class="nt">html</span>
+</span><span class='line'>    <span class="na">margin</span><span class="o">:</span> <span class="mi">0</span>
+</span><span class='line'>    <span class="na">overflow</span><span class="o">:</span> <span class="no">hidden</span>
+</span><span class='line'>    <span class="na">-webkit-transition</span><span class="o">:</span> <span class="no">opacity</span> <span class="mi">400</span><span class="kt">ms</span>
+</span><span class='line'>    <span class="na">-moz-transition</span><span class="o">:</span> <span class="no">opacity</span> <span class="mi">400</span><span class="kt">ms</span>
+</span><span class='line'>    <span class="na">transition</span><span class="o">:</span> <span class="no">opacity</span> <span class="mi">400</span><span class="kt">ms</span>
+</span><span class='line'>  <span class="nc">.onepage-wrapper</span>
+</span><span class='line'>    <span class="na">width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span>
+</span><span class='line'>    <span class="na">height</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span>
+</span><span class='line'>    <span class="na">display</span><span class="o">:</span> <span class="no">block</span>
+</span><span class='line'>    <span class="na">position</span><span class="o">:</span> <span class="no">relative</span>
+</span><span class='line'>    <span class="na">padding</span><span class="o">:</span> <span class="mi">0</span>
+</span><span class='line'>    <span class="na">-webkit-transform-style</span><span class="o">:</span> <span class="n">preserve-3d</span>
+</span><span class='line'>    <span class="nc">.section</span>
+</span><span class='line'>      <span class="na">width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span>
+</span><span class='line'>      <span class="na">height</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span>
+</span><span class='line'>  <span class="nc">.onepage-pagination</span>
+</span><span class='line'>    <span class="na">position</span><span class="o">:</span> <span class="no">absolute</span>
+</span><span class='line'>    <span class="na">right</span><span class="o">:</span> <span class="mi">10</span><span class="kt">px</span>
+</span><span class='line'>    <span class="na">top</span><span class="o">:</span> <span class="mi">50</span><span class="kt">%</span>
+</span><span class='line'>    <span class="na">z-index</span><span class="o">:</span> <span class="mi">5</span>
+</span><span class='line'>    <span class="na">list-style</span><span class="o">:</span> <span class="no">none</span>
+</span><span class='line'>    <span class="na">margin</span><span class="o">:</span> <span class="mi">0</span>
+</span><span class='line'>    <span class="na">padding</span><span class="o">:</span> <span class="mi">0</span>
+</span><span class='line'>    <span class="nt">li</span>
+</span><span class='line'>      <span class="na">padding</span><span class="o">:</span> <span class="mi">0</span>
+</span><span class='line'>      <span class="na">text-align</span><span class="o">:</span> <span class="no">center</span>
+</span><span class='line'>      <span class="nt">a</span>
+</span><span class='line'>        <span class="na">padding</span><span class="o">:</span> <span class="mi">10</span><span class="kt">px</span>
+</span><span class='line'>        <span class="na">width</span><span class="o">:</span> <span class="mi">4</span><span class="kt">px</span>
+</span><span class='line'>        <span class="na">height</span><span class="o">:</span> <span class="mi">4</span><span class="kt">px</span>
+</span><span class='line'>        <span class="na">display</span><span class="o">:</span> <span class="no">block</span>
+</span><span class='line'>        <span class="k">&amp;</span><span class="nd">:before</span>
+</span><span class='line'>          <span class="na">content</span><span class="o">:</span> <span class="s1">&#39;</span><span class="s2">&#39;</span>
+</span><span class='line'>          <span class="na">position</span><span class="o">:</span> <span class="no">absolute</span>
+</span><span class='line'>          <span class="na">width</span><span class="o">:</span> <span class="mi">4</span><span class="kt">px</span>
+</span><span class='line'>          <span class="na">height</span><span class="o">:</span> <span class="mi">4</span><span class="kt">px</span>
+</span><span class='line'>          <span class="na">background</span><span class="o">:</span> <span class="nf">rgba</span><span class="p">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="mf">.85</span><span class="p">)</span>
+</span><span class='line'>          <span class="na">border-radius</span><span class="o">:</span> <span class="mi">10</span><span class="kt">px</span>
+</span><span class='line'>          <span class="na">-webkit-border-radius</span><span class="o">:</span> <span class="mi">10</span><span class="kt">px</span>
+</span><span class='line'>          <span class="na">-moz-border-radius</span><span class="o">:</span> <span class="mi">10</span><span class="kt">px</span>
+</span><span class='line'>        <span class="k">&amp;</span><span class="nc">.active</span><span class="nd">:before</span>
+</span><span class='line'>          <span class="na">width</span><span class="o">:</span> <span class="mi">10</span><span class="kt">px</span>
+</span><span class='line'>          <span class="na">height</span><span class="o">:</span> <span class="mi">10</span><span class="kt">px</span>
+</span><span class='line'>          <span class="na">background</span><span class="o">:</span> <span class="no">none</span>
+</span><span class='line'>          <span class="na">border</span><span class="o">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="no">solid</span> <span class="nb">black</span>
+</span><span class='line'>          <span class="na">margin-top</span><span class="o">:</span> <span class="mi">-4</span><span class="kt">px</span>
+</span><span class='line'>          <span class="na">left</span><span class="o">:</span> <span class="mi">8</span><span class="kt">px</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><img src="../images/capture_image-3.png" alt="third-page" /></p>
+
+<p>For try your scroll page add in <code>haml</code> page</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nc">.wrapper</span>
+</span><span class='line'>  <span class="nc">.main</span>
+</span><span class='line'>    <span class="nt">%section</span><span class="nc">.page1</span>
+</span><span class='line'>      <span class="nc">.page_container</span>
+</span><span class='line'>        ...
+</span><span class='line'>    <span class="nt">%section</span><span class="nc">.page2</span>
+</span><span class='line'>      <span class="nc">.page_container</span>
+</span><span class='line'>        ...
+</span><span class='line'>    <span class="nt">%section</span><span class="nc">.page3</span>
+</span><span class='line'>      <span class="nc">.page_container</span>
+</span><span class='line'>        ...
+</span><span class='line'>    <span class="nt">%section</span><span class="nc">.page4</span>
+</span><span class='line'>      <span class="nc">.page_container</span>
+</span><span class='line'>        ...
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Lastly open your <code>layout</code> and add codes</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nd">:javascript</span>
+</span><span class='line'>    <span class="nd">$(document).ready(function(){</span>
+</span><span class='line'>      <span class="nd">$(&quot;.main&quot;).onepage_scroll({</span>
+</span><span class='line'>        <span class="nd">sectionContainer: &quot;section&quot;,</span>
+</span><span class='line'>        <span class="nd">responsiveFallback: 600,</span>
+</span><span class='line'>        <span class="nd">loop: true</span>
+</span><span class='line'>      <span class="nd">});</span>
+</span><span class='line'>      <span class="nd">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><img src="../images/capture_image-4.png" alt="fourth-page" /></p>
+
+<p>Look at code of <a href="https://github.com/leylaKapi/scroll-page">demo</a> and
+for <a href="https://github.com/peachananr/onepage-scroll">detail</a>.</p>
+
+<p>That&#8217; s all.</p>
+
+<p>I hope helped to you :)</p>
+
+
+        <hr class="divider-short"/>
+
+        
+        <section>
+          <h1>Comments</h1>
+          <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+        </section>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+<hr class="divider-short"/>
+
+<div class="archive-link">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        
+          <a class="pull-left" href="/blog/2014/09/10/create-icon-set-for-your-rails-project/" title="Previous Post: Create icon set for your rails project">&laquo; Previous: Create icon set for your rails project</a>
+        
+
+        
+          <a class="pull-right" href="/blog/2014/10/02/dipnote-add-page-number-with-javascript/" title="Next Post: Trick: Add page number with javascript ?">Next: Trick: Add page number with javascript ? &raquo;</a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="her-row">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-1">
+  <a href="/"><h4>Home</h4></a>
+</div>
+
+<div class="col-md-2">
+  <div class="social-icon-list">
+    
+    <a href="https://twitter.com/leylakapi"><img src="/images/glyphicons_social_31_twitter.png"/></a>
+    
+
+    
+    <a href="https://github.com/leylakapi"><img src="/images/glyphicons_social_21_github.png"/></a>
+    
+
+    
+    <a href="https://linkedin.com/in/leylakapi"><img src="/images/glyphicons_social_17_linked_in.png"/></a>
+    
+
+    
+    <a href="mailto:leylakapi@gmail.com"><img src="/images/glyphicons_social_39_e-mail.png"/></a>
+    
+  </div>
+</div>
+
+<div class="pull-right">
+  <h4>Created by <a href="http://www.leylakapi.com/">Leyla Kapi</a></h4>
+</div>
+
+
+    </div>
+  </div>
+</footer>
+
+    
+      
+
+<script type="text/javascript">
+      var disqus_shortname = 'leylasblog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://leylaKapi.github.io/blog/2014/09/17/how-to-create-scroll-page-for-rails-project/';
+        var disqus_url = 'http://leylaKapi.github.io/blog/2014/09/17/how-to-create-scroll-page-for-rails-project/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//go.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+    
+  </body>
+</html>
+
+

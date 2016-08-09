@@ -1,0 +1,287 @@
+
+
+<html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Middleman Blog - Leyla's Blog</title>
+  <!--<meta name="author" content="Leyla KAPI">-->
+
+  
+  <meta name="description" content="Middleman Blog written Mar 15th, 2014 in blogging, en, middleman, How to create middleman blog for middleman project? Middleman supported blogging &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://leylaKapi.github.io/blog/2014/03/15/blog-middleman">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Leyla's Blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-49378525-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+  <body class="home-template nav-closed">
+    <a href="/" class="home-icon">
+      <img src="/images/home.png"/>
+    </a>
+
+    <article role="article" class="full-single-article">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h1>Middleman Blog</h1>
+        <div class="meta">
+          written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-03-15T17:05:21+02:00" pubdate data-updated="true">Mar 15<span>th</span>, 2014</time>
+          
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/blogging/'>blogging</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/middleman/'>middleman,</a>
+  
+</span>
+
+
+        </div>
+        <h3>How to create middleman blog for middleman project?</h3>
+
+<ul>
+<li>Middleman supported blogging in your project or your blog.</li>
+</ul>
+
+
+<p>If you create a blog, I think you should with middleman blogging. I hear, you say &lsquo; WHY ? &rsquo;</p>
+
+<p>WHY?</p>
+
+<!-- more -->
+
+
+<ul>
+<li>Easy to use,</li>
+<li>Embed in your project easily</li>
+</ul>
+
+
+<p>&hellip;</p>
+
+<p><strong>Let&rsquo;s learn blogging with middleman blog</strong></p>
+
+<p>Firstly, if you use middleman blog in your project, this means if you use blogging in your website or application,
+you  should go to path of your project, open and write above command.</p>
+
+<p>you write in <em>Gemfile</em> :</p>
+
+<pre><code>    gem ' middleman-blog '
+</code></pre>
+
+<p>and then, in <em>config.rb</em></p>
+
+<pre><code>    activate :blog do |blog|
+    ---
+    set
+</code></pre>
+
+<p>and when you write these command in your project, open terminal or console  write</p>
+
+<pre><code>    bundle install                  #install gems
+    bundle exec middleman server    #run your blog in your project
+</code></pre>
+
+<p>If you want to set up from the rough, what you want to open to path, and write in terminal</p>
+
+<pre><code>    middleman init blog_name --template=blog
+</code></pre>
+
+<p>When you write this command you can see, many file created for your blo.</p>
+
+<p>Now open created blog, you should see directories,</p>
+
+<pre><code>    images
+    javascripts
+    stylesheets
+</code></pre>
+
+<p>files,</p>
+
+<pre><code>    index.html.erb
+    layout.erb
+    calendar.html.erb
+    tags.html.erb
+    feed.xml.builder
+    2012-01-01-example-article
+</code></pre>
+
+<ul>
+<li>Middleman provide  many tags and properties for your blog, if you want to organize, you can open <em>config.rb</em> and organize these, and see.</li>
+<li>If you want to organize style for blog, you should write in stylesheets and javascript directories, with CSS3 and Jquery ;)</li>
+<li>If you don&rsquo;t want to use <strong>.html.erb</strong> files, you can translate to <strong>.html.haml</strong> in <a href="http://html2haml.heroku.com/">html2haml</a>.</li>
+</ul>
+
+
+<p>And use this.</p>
+
+<ul>
+<li>If you want to use blog in your middleman project, you should create new layouts, and <em>index.html.haml</em> in your blog directory,
+different from your middleman project.
+and we write code in this.</li>
+</ul>
+
+
+<p>Yep ! you create new blog and prepared write new article your blog,</p>
+
+<p>Let&rsquo;s start :)</p>
+
+<pre><code>middleman article article_name
+</code></pre>
+
+<p>When write this command, middleman created new article file, blogging in this file, but we write with markdown inside created article file.</p>
+
+<p>When you write your article you run project with</p>
+
+<pre><code>bundle exec middleman server
+</code></pre>
+
+<p>after the</p>
+
+<pre><code>bundle install
+</code></pre>
+
+<p>run and see what you can do ?</p>
+
+<p>That&rsquo;s it.</p>
+
+
+        <hr class="divider-short"/>
+
+        
+        <section>
+          <h1>Comments</h1>
+          <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+        </section>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+<hr class="divider-short"/>
+
+<div class="archive-link">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        
+          <a class="pull-left" href="/blog/2014/03/06/how-to-show-nav-bar-according-to-scroll/" title="Previous Post: How to show nav-bar according to scroll">&laquo; Previous: How to show nav-bar according to scroll</a>
+        
+
+        
+          <a class="pull-right" href="/blog/2014/03/22/how-to-change-dns-settings-on-ubuntu-desktop/" title="Next Post: How to change DNS settings on Ubuntu Desktop?">Next: How to change DNS settings on Ubuntu Desktop? &raquo;</a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="her-row">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-1">
+  <a href="/"><h4>Home</h4></a>
+</div>
+
+<div class="col-md-2">
+  <div class="social-icon-list">
+    
+    <a href="https://twitter.com/leylakapi"><img src="/images/glyphicons_social_31_twitter.png"/></a>
+    
+
+    
+    <a href="https://github.com/leylakapi"><img src="/images/glyphicons_social_21_github.png"/></a>
+    
+
+    
+    <a href="https://linkedin.com/in/leylakapi"><img src="/images/glyphicons_social_17_linked_in.png"/></a>
+    
+
+    
+    <a href="mailto:leylakapi@gmail.com"><img src="/images/glyphicons_social_39_e-mail.png"/></a>
+    
+  </div>
+</div>
+
+<div class="pull-right">
+  <h4>Created by <a href="http://www.leylakapi.com/">Leyla Kapi</a></h4>
+</div>
+
+
+    </div>
+  </div>
+</footer>
+
+    
+      
+
+<script type="text/javascript">
+      var disqus_shortname = 'leylasblog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://leylaKapi.github.io/blog/2014/03/15/blog-middleman/';
+        var disqus_url = 'http://leylaKapi.github.io/blog/2014/03/15/blog-middleman/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//go.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+    
+  </body>
+</html>
+
+

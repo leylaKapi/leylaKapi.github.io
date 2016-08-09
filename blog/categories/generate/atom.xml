@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: generate | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/generate/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2016-08-09T14:00:32+03:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[Leyla KAPI]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Rails fix undefined local variable or method]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/07/25/rails-fix-undefined-method/"/>
+    <updated>2014-07-25T15:52:35+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/07/25/rails-fix-undefined-method</id>
+    <content type="html"><![CDATA[<h3>How to fix rails undefined local variable or method &lsquo;confirmed_at&rsquo; ?</h3>
+
+<p>If you getting like,</p>
+
+<p><img src="../images/rails_undefined_error.png" alt="rails undefined" /></p>
+
+<p> and you thinking <strong>how can I fix ?</strong></p>
+
+<ul>
+<li>Firstly, you need to create migration</li>
+</ul>
+
+
+<p><code>bash
+rails g migration add_confirmable
+</code></p>
+
+<!-- more -->
+
+
+<p>then,</p>
+
+<p><code>bash
+rake db:migrate
+</code></p>
+
+<p>When you write above command, you get again error, like</p>
+
+<p><code>bash
+== 20140725114621 Addconfirmable: migrating ===================================
+-- change_table(:admins)
+rake aborted!
+StandardError: An error has occurred, this and all later migrations canceled:
+undefined method `confirmable' for #&lt;ActiveRecord::ConnectionAdapters::Table:0x007f8739d3e2e0&gt;..../db/migrate/20140725114621_addconfirmable.rb:4:in `block in up'
+/Users/...../db/migrate/20140725114621_addconfirmable.rb:3:in `up'
+Tasks: TOP =&gt; db:migrate
+(See full trace by running task with --trace)
+</code>
+Let&rsquo;s fix this bug,</p>
+
+<ul>
+<li>You should open your migration which created and delete</li>
+</ul>
+
+
+<p><code>ruby
+t.confirmable
+</code></p>
+
+<p>then go to another migration named which</p>
+
+<p><code>ruby
+..../devise_create ... .rb
+</code></p>
+
+<p>in this file, you should see in comment</p>
+
+<p>```ruby</p>
+
+<pre><code>  ## Confirmable
+  ## t.string   :confirmation_token
+  ## t.datetime :confirmed_at
+  ## t.datetime :confirmation_sent_at
+  ## t.string   :unconfirmed_email # Only if using reconfirmable
+</code></pre>
+
+<p>```</p>
+
+<p>you should copy or cut above command without comment to your <code>addconfirmable.rb</code> migration file, instead of <code>t.confirmable</code></p>
+
+<p>Then you can write</p>
+
+<p><code>bash
+rake db:migrate
+</code></p>
+
+<p>That&rsquo;s all.</p>
+
+<p>I hope fix your bug.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Rails devise gem generator error]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/07/24/rails-devise-gem-generator-error/"/>
+    <updated>2014-07-24T15:36:48+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/07/24/rails-devise-gem-generator-error</id>
+    <content type="html"><![CDATA[<h3>How to fix rails devise gem generate bug?</h3>
+
+<p>You use <code>devise</code> gem for add admin page or user page to your project. When you generate to your devise gem,
+you' re getting error to your project,  like ;</p>
+
+<p><code>bash
+$ rails g devise:install
+Could not find generator devise:install
+</code></p>
+
+<!-- more -->
+
+
+<p>If you get like ths error, you can fix for these order,</p>
+
+<ul>
+<li>Open your <code>Gemfile</code>, add <code>gem 'devise'</code> then,</li>
+<li>Open terminal, run  <code>bundle</code></li>
+<li>Open you computer search bar, Search on your computer to <code>Disk Utility</code></li>
+<li>Select you Disk For example: <code>Macintosh HD</code></li>
+<li>Then click on <code>Repair Disk Permissions</code></li>
+<li>Waiting approximately 15 minutes, then <strong>restart</strong> your computer.</li>
+</ul>
+
+
+<p>That' s all.</p>
+
+<p>I hope fixed your bug.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How can you solve YAML exception reading bug in octopress ?]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/05/20/how-can-you-solve-yaml-exception-reading-bug-in-octopress/"/>
+    <updated>2014-05-20T17:19:18+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/05/20/how-can-you-solve-yaml-exception-reading-bug-in-octopress</id>
+    <content type="html"><![CDATA[<h3>Solve the YAML exception reading invalid byte sequence in US-ASCII</h3>
+
+<p>When you write</p>
+
+<p><code>bash
+bundle exec rake generate
+</code></p>
+
+<!-- more -->
+
+
+<p>you get</p>
+
+<p>``` bash
+YAML Exception reading 2014-04-28-your_file.markdown: invalid byte sequence in US-ASCII</p>
+
+<blockquote><blockquote><blockquote><p>Compass is watching for changes. Press Ctrl-C to Stop.
+127.0.0.1 &ndash; &ndash; [17/Jun/2014 17:08:35] &ldquo;GET / HTTP/1.1&rdquo; 200 93907 0.0215
+127.0.0.1 &ndash; &ndash; [17/Jun/2014 17:08:35] &ldquo;GET /stylesheets/screen.css HTTP/1.1&rdquo; 200 28107 0.0019
+127.0.0.1 &ndash; &ndash; [17/Jun/2014 17:08:35] &ldquo;GET /images/index.jpeg HTTP/1.1&rdquo; 200 7466 0.0020
+127.0.0.1 &ndash; &ndash; [17/Jun/2014 17:08:35] &ldquo;GET /javascripts/slash.js HTTP/1.1&rdquo; 200 1786 0.0010
+127.0.0.1 &ndash; &ndash; [17/Jun/2014 17:08:35] &ldquo;GET /javascripts/jquery.fancybox.pack.js HTTP/1.1&rdquo; 200 17638 0.0014
+127.0.0.1 &ndash; &ndash; [17/Jun/2014 17:08:35] &ldquo;GET /images/social/twitter.png?1398238298 HTTP/1.1&rdquo; 200 554 0.0009
+127.0.0.1 &ndash; &ndash; [17/Jun/2014 17:08:35] &ldquo;GET /images/social/github.png?1398238298 HTTP/1.1&rdquo; 200 581 0.0029
+127.0.0.1 &ndash; &ndash; [17/Jun/2014 17:08:35] &ldquo;GET /images/social/google.png?1398238298 HTTP/1.1&rdquo; 200 602 0.0034
+127.0.0.1 &ndash; &ndash; [17/Jun/2014 17:08:35] &ldquo;GET /font/fontawesome-webfont.woff HTTP/1.1&rdquo; 200 23416 0.0034
+127.0.0.1 &ndash; &ndash; [17/Jun/2014 17:08:35] &ldquo;GET /images/social/rss.png?1398238298 HTTP/1.1&rdquo; 200 619 0.0069
+127.0.0.1 &ndash; &ndash; [17/Jun/2014 17:08:36] &ldquo;GET /favicon.png HTTP/1.1&rdquo; 200 400 0.0009
+[2014-06-17 17:08:56] regeneration: 1 files changed
+YAML Exception reading 2014-04-28-your_file.markdown: invalid byte sequence in US-ASCII
+<code>``
+If you want to solve this</code>rake generate<code>bug, you can use instead of</code>bundle exec rake generate`,
+you should use</p></blockquote></blockquote></blockquote>
+
+<p><code>bash
+LANG=en_US.utf-8 bundle exec rake generate
+</code>
+this command, and you can write <code>rake preview</code> or <code>rake deploy</code></p>
+
+<p>Fixed the bug.</p>
+
+<p>I hope helped to you.</p>
+]]></content>
+  </entry>
+  
+</feed>

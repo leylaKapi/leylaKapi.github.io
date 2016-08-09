@@ -1,0 +1,377 @@
+
+
+<html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Google App Engine - PHP - Leyla's Blog</title>
+  <!--<meta name="author" content="Leyla KAPI">-->
+
+  
+  <meta name="description" content="Google App Engine - PHP written Jan 13th, 2015 in app, deploy, engine, google, php, programming, start, tool, tr App engine ve PHP Uzun zamandır &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://leylaKapi.github.io/blog/2015/01/13/google-app-engine-php">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Leyla's Blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-49378525-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+  <body class="home-template nav-closed">
+    <a href="/" class="home-icon">
+      <img src="/images/home.png"/>
+    </a>
+
+    <article role="article" class="full-single-article">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h1>Google App Engine - PHP</h1>
+        <div class="meta">
+          written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2015-01-13T23:14:20+02:00" pubdate data-updated="true">Jan 13<span>th</span>, 2015</time>
+          
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/app/'>app</a>, <a class='category' href='/blog/categories/deploy/'>deploy</a>, <a class='category' href='/blog/categories/engine/'>engine</a>, <a class='category' href='/blog/categories/google/'>google</a>, <a class='category' href='/blog/categories/php/'>php</a>, <a class='category' href='/blog/categories/programming/'>programming</a>, <a class='category' href='/blog/categories/start/'>start</a>, <a class='category' href='/blog/categories/tool/'>tool</a>, <a class='category' href='/blog/categories/tr/'>tr</a>
+  
+</span>
+
+
+        </div>
+        <h3>App engine ve PHP</h3>
+
+<p>Uzun zamandır ingilizce olarak yazdığım yazılara ufak bir ara verip, türkçe yazılar paylaşmaya çalışacağım.
+Tabi amaç dile yatırım yapmak, neyse lafı daha fazla uzatmadan biz konumuza dönelim. Bu yazımda, App engine ile PhpStorm
+üzerinde nasıl çalışır, nasıl proje oluşturulur ve nasıl deploy edilir işlemlerinden bahsetmeye çalışacağım.</p>
+
+<h4>Google App Engine</h4>
+
+<p>Öncelikle herhangi bir google hesabınızla <a href="https://appengine.google.com/">Google App engine</a> sisteme giriş yapmanız,
+hesabınız yoksada basit bir google hesabı oluşturmanız gerekmekte, siz hesabı oluşturduktan sonra google size ücretsiz
+25 repoluk bir sistem oluşturuyor. Giriş yaptığınız sistemden öncelikle bir proje oluşturuyorsunuz. Sistemde proje oluştururken
+dikkat etmeniz gereken nokta <strong>Application Identifier</strong> kısmı zira burda aslında sayfanızın url kısmını belirlemiş oluyorsunuz (proje_id.appspot.com).
+Tabi belirledikten sonra daha önce böyle bir adres kullanılmışmı diye kontrol etmeniz gerekmektedir, yoksa projeyi oluşturamıyorsunuz.</p>
+
+<p>Ardından localinizde PhpStorm&#8217;u çalıştırıp, <em>Create New Project</em> kısmından yeni bir proje oluşturup,</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Project name: blog-leylakapi
+</span><span class='line'>Location: /Workspace/PhpstormProjects/blog-leylakapi
+</span><span class='line'>Project type: App engine Project</span></code></pre></td></tr></table></div></figure>
+
+
+<p>kısımlarını girdikten sonra, Phpstorm sizden</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Application ID: blog-leylakapi
+</span><span class='line'>SDK directory: /home/leylakapi/google_appengine
+</span><span class='line'>Python executable: /usr/bin/python</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<!-- more -->
+
+
+<p>doldurmanızı isteyecektir. Projeyi oluşturduktan sonra, Phpstorm otomatik olarak, size <code>app.yaml</code> ve <code>main.php</code>
+diye 2 tane dosya oluşturacaktır. İçeriklerine bakacak olursak,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='yaml'><span class='line'><span class="l-Scalar-Plain">----- app.yaml</span>
+</span><span class='line'><span class="l-Scalar-Plain">application</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">blog-leylakapi</span>
+</span><span class='line'><span class="l-Scalar-Plain">version</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">1</span>
+</span><span class='line'><span class="l-Scalar-Plain">runtime</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">php</span>
+</span><span class='line'><span class="l-Scalar-Plain">api_version</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">1</span>
+</span><span class='line'><span class="l-Scalar-Plain">threadsafe</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+</span><span class='line'><span class="l-Scalar-Plain">handlers</span><span class="p-Indicator">:</span>
+</span><span class='line'><span class="p-Indicator">-</span> <span class="l-Scalar-Plain">url</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">.*</span>
+</span><span class='line'>  <span class="l-Scalar-Plain">script</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">main.php</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>ve</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="o">-----</span> <span class="nx">main</span><span class="o">.</span><span class="nx">php</span>
+</span><span class='line'><span class="o">&lt;?</span><span class="nx">php</span>
+</span><span class='line'><span class="k">echo</span> <span class="s1">&#39;Hello, world!&#39;</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Yaml ile ilgili <a href="https://cloud.google.com/appengine/docs/php/config/appconfig">daha fazla</a> bilgi için,</p>
+
+<p>Projemizi oluşturduktan sonra, her programcının yaptığı gibi, yada benim yaptığım gibi proje çalışıyormu diye bir
+test etmek, onun içinde</p>
+
+<p><strong>&lt;google_appengine folder path>/dev_appserver.py &lt;php_executable_path> &lt;project_path></strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span><span class="nb">cd</span>
+</span><span class='line'><span class="nv">$ </span>google_appengine/dev_appserver.py --php_executable_path<span class="o">=</span>/usr/bin/php-cgi /home/leylakapi/PhpstormProjects/blog-leylakapi
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>yukardaki komutu terminalden koşunca, size iki adres verecektir,</p>
+
+<p><a href="http://localhost:8080">http://localhost:8080</a> ve <a href="http://localhost:8000">http://localhost:8000</a> dir. <a href="http://localhost:8000">http://localhost:8000</a> sizi google app engine sistemine götürecek
+(<a href="http://localhost:8000/instances">http://localhost:8000/instances</a>), <a href="http://localhost:8080/">http://localhost:8080/</a> ise size projenizin çıktısını verecektir. Bizimki basit bir
+&ldquo;Hello World&rdquo; uygulaması olduğu için sistemde <strong>Hello World</strong> yazısını görmemiz gerekmekte. Eğer sistemde herhangi bir hata yoksa
+devam edelim ancak varsada bunun nedeni &ldquo;php_executable_path&rdquo; olacaktır. Düzeltmek için PhpStorm içinde
+<em>Run > Edit Configurations</em> içine girip <code>php-cgi</code> yolunu projenizi çalıştırırken yazdığınız <code>executable path</code> &lsquo;ini girmeniz gerekmektedir.</p>
+
+<p>Bu aşamada basit bir <code>GAE</code> projesi oluşturduk ve çalıştırdık, şimdi deploy etme zamanı,</p>
+
+<p><em>Phpstorm > Tools > Google App Engine For PHP > Upload App Engine PHP app..</em> gidip projemizi google&#8217;a upload ediyoruz,
+bu işlemi yaparken bizden eposta ve şifremizi doğruladıktan sonra, IDE içinde,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>/usr/bin/python /home/leylakapi/google_appengine/appcfg.py -e leylakapi@gmail.com --passin --no_cookies -R --runtime<span class="o">=</span>php update .
+</span><span class='line'>12:12 AM Application: blog-leylakapi; version: 1
+</span><span class='line'>12:12 AM Host: appengine.google.com
+</span><span class='line'>12:12 AM
+</span><span class='line'>Starting update of app: blog-leylakapi, version: 1
+</span><span class='line'>12:12 AM Getting current resource limits.
+</span><span class='line'>Password <span class="k">for </span>leylakapi@gmail.com: 12:12 AM Scanning files on <span class="nb">local </span>disk.
+</span><span class='line'>Error 404: --- begin server output ---
+</span><span class='line'>This application does not exist <span class="o">(</span><span class="nv">app_id</span><span class="o">=</span>u<span class="s1">&#39;blog-leylakapi&#39;</span><span class="o">)</span>.
+</span><span class='line'>--- end server output ---
+</span><span class='line'>Process finished with <span class="nb">exit </span>code 1
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>çıktısını alabilirsiniz. Ardından <a href="https://console.developers.google.com/project">Google developers console</a> gidip,
+projenizin üzerine tıklayıp açılan pencerede solda <em>Source Code > Browse</em> tıklayıp <strong>Create Repository</strong> kısmından
+bir repo oluşturuyoruz. Ardından terminale geçmeden önce <em>Source Code > Releases</em> kısmından <strong>Release Pipeline</strong> oluşturup,
+<code>Deploy</code> &lsquo;u seçip, her deploy işleminde mail ile bilgilendirme gönderilmesini sağlıyorsunuz.
+Ardından terminalinize geçebilirsiniz. Aslında daha önce github&#8217;a veya herhangi bir versiyonlama sistemi ile çalışmışsanız
+deploy işlemi size çok kolay gelecektir.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span><span class="nb">cd </span>blog-leylakapi
+</span><span class='line'><span class="nv">$ </span>gcloud auth login //ile browserınızdan girişinizi <span class="k">do</span>ğrulamanız gerekmekte
+</span><span class='line'><span class="nv">$ </span>gcloud init blog-leylakapi
+</span><span class='line'><span class="nv">$ </span>git init
+</span><span class='line'><span class="nv">$ </span>git add .
+</span><span class='line'><span class="nv">$ </span>git commit -m <span class="s2">&quot;commit-message&quot;</span>
+</span><span class='line'><span class="nv">$ </span>git remote add google https://source.developers.google.com/p/blog-leylakapi/
+</span><span class='line'><span class="nv">$ </span>git push google master
+</span><span class='line'>Counting objects: 17, <span class="k">done</span>.
+</span><span class='line'>Delta compression using up to 4 threads.
+</span><span class='line'>Compressing objects: 100% <span class="o">(</span>11/11<span class="o">)</span>, <span class="k">done</span>.
+</span><span class='line'>Writing objects: 100% <span class="o">(</span>17/17<span class="o">)</span>, 4.51 KiB | 0 bytes/s, <span class="k">done</span>.
+</span><span class='line'>Total 17 <span class="o">(</span>delta 0<span class="o">)</span>, reused 0 <span class="o">(</span>delta 0<span class="o">)</span>
+</span><span class='line'>remote: Storing objects: 100% <span class="o">(</span>17/17<span class="o">)</span>, <span class="k">done</span>.
+</span><span class='line'>remote: Processing commits: 100% <span class="o">(</span>1/1<span class="o">)</span>, <span class="k">done</span>.
+</span><span class='line'>remote: Triggering release <span class="o">(</span><span class="k">if </span>applicable<span class="o">)</span>...
+</span><span class='line'>remote: View results at: https://console.developers.google.com/project/837610927376/clouddev/pipelines/6254814975492096_P27doksWWBM_80fc5cc6cde1a4b611407437b489cb5d1a1e7f2c
+</span><span class='line'>remote: Running...
+</span><span class='line'>remote: Created deployment: blog-leylakapi.pipelines.blog-leylakapi-303bb8035070999231.deployment_6254814975492096_1421188115759
+</span><span class='line'>remote: Uploaded 2 files.
+</span><span class='line'>remote: Deployment completed.
+</span><span class='line'>To https://source.developers.google.com/p/blog-leylakapi/
+</span><span class='line'> * <span class="o">[</span>new branch<span class="o">]</span>      master -&gt; master
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Yukarıdaki kodları sırasıyla terminalinizde çalıştırdığınızda sorunsuz bir şekilde deploy etmiş olacaksınız.
+Şimdi yapmanız gereken tek şey, Kodların upload olup olmadığını kontrol etmek, onun içinde,
+<em>Source Code > Browse</em> sayfasını <strong>Google Developers Console</strong> içinde sayfayı yenilemek olacaktır.
+Ayrıca deploy edilip edilmediğinide sistemde görmek için <em>Source Code > Releases</em> sayfasına gitmeniz gerekecektir.</p>
+
+<p>Geriye sadece adresinizi <strong>your_id.appspot.com</strong> şeklinde kontrol etmek kalıyor.
+<strong><a href="http://blog-leylakapi.appspot.com/">http://blog-leylakapi.appspot.com/</a></strong></p>
+
+<p>Daha fazla bilgi için:</p>
+
+<p><a href="http://www.sitepoint.com/google-app-engine-php-getting-started/">google-app-engine-php-getting-started/</a></p>
+
+<p><a href="https://cloud.google.com/appengine/docs/php/">appengine-php-doc</a></p>
+
+<p>sayfalarını ziyaret edebilirsiniz. Umarım yararlı olmuştur.</p>
+
+
+        <hr class="divider-short"/>
+
+        
+        <section>
+          <h1>Comments</h1>
+          <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+        </section>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+<hr class="divider-short"/>
+
+<div class="archive-link">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        
+          <a class="pull-left" href="/blog/2014/12/16/rails-fix-n-plus-1-query/" title="Previous Post: Rails fix N+1 query">&laquo; Previous: Rails fix N+1 query</a>
+        
+
+        
+          <a class="pull-right" href="/blog/2015/09/07/trick-on-rails/" title="Next Post: Tricks on Rails">Next: Tricks on Rails &raquo;</a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="her-row">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-1">
+  <a href="/"><h4>Home</h4></a>
+</div>
+
+<div class="col-md-2">
+  <div class="social-icon-list">
+    
+    <a href="https://twitter.com/leylakapi"><img src="/images/glyphicons_social_31_twitter.png"/></a>
+    
+
+    
+    <a href="https://github.com/leylakapi"><img src="/images/glyphicons_social_21_github.png"/></a>
+    
+
+    
+    <a href="https://linkedin.com/in/leylakapi"><img src="/images/glyphicons_social_17_linked_in.png"/></a>
+    
+
+    
+    <a href="mailto:leylakapi@gmail.com"><img src="/images/glyphicons_social_39_e-mail.png"/></a>
+    
+  </div>
+</div>
+
+<div class="pull-right">
+  <h4>Created by <a href="http://www.leylakapi.com/">Leyla Kapi</a></h4>
+</div>
+
+
+    </div>
+  </div>
+</footer>
+
+    
+      
+
+<script type="text/javascript">
+      var disqus_shortname = 'leylasblog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://leylaKapi.github.io/blog/2015/01/13/google-app-engine-php/';
+        var disqus_url = 'http://leylaKapi.github.io/blog/2015/01/13/google-app-engine-php/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//go.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+    
+  </body>
+</html>
+
+

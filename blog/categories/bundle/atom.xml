@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: bundle | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/bundle/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2016-08-09T14:00:32+03:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[Leyla KAPI]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Rails attributes: 'attr_accessible']]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/04/26/rails-gem/"/>
+    <updated>2014-04-26T14:44:39+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/04/26/rails-gem</id>
+    <content type="html"><![CDATA[<p>If you get <em>attr_accesible</em>&rsquo;s bug, like</p>
+
+<p><code>
+Undefined method 'attr_accessible'
+</code></p>
+
+<!-- more -->
+
+
+<p>You can forget write gem about this attributes, open your <em>Gemfile</em> in project</p>
+
+<p><code>ruby
+gem 'protected-attributes'
+</code></p>
+
+<p>Save and open terminal run,</p>
+
+<pre><code>bundle
+</code></pre>
+
+<p>that&rsquo;s fix your bug.</p>
+
+<ul>
+<li>If you want more information , you can visit <a href="https://github.com/rails/protected_attributes">ProtectedAttributesGem</a> .</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

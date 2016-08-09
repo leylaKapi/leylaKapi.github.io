@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: HTML | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/html/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2016-08-09T14:00:32+03:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[Leyla KAPI]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[How to show nav-bar according to scroll]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/03/06/how-to-show-nav-bar-according-to-scroll/"/>
+    <updated>2014-03-06T19:30:31+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/03/06/how-to-show-nav-bar-according-to-scroll</id>
+    <content type="html"><![CDATA[<h3>Change CSS class after scrolling &hellip;px down</h3>
+
+<p>I want to change menu or nav-bar according to scroll, How I can do this ?</p>
+
+<p>In this article, I can try to explain with an example.</p>
+
+<!-- more -->
+
+
+<p>Please, write these code block on your project or created a new project and try to these .
+Yep!, Let&rsquo;s learn step by step :)</p>
+
+<p>Firstly, Created HTML file in your project and write below code block,</p>
+
+<pre><code>index.html
+
+&lt;div id = 'navigation'&gt; Home &lt;/div&gt;
+    &lt;h1&gt; Welcome to Change scroll according to ...px &lt;/h1&gt;
+    &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+     irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+     id est laborum &lt;/p&gt;
+</code></pre>
+
+<p>then wrote this code block in your HTML file. Let&rsquo;s create CSS file in your project for style of your project.</p>
+
+<pre><code>style.css
+
+#navigation {
+        width : 100px;
+        height : 100px;
+        background-color:blue;
+        position: fixed;
+        display: none;
+}
+</code></pre>
+
+<p>this last step but the most important step for scrolling to navigation. Create javascript file for your animation of your project</p>
+
+<pre><code>application.js
+
+$(document).scroll(function() {
+        $('#navigation').toggle($(this).scrollTop() &gt; 1000);
+});
+</code></pre>
+
+<p>Wrote in your project these block and try to run project and What are you seeing in your project ?</p>
+
+<p>That&rsquo;s easy!</p>
+]]></content>
+  </entry>
+  
+</feed>

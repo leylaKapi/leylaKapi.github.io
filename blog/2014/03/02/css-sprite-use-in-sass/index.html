@@ -1,0 +1,247 @@
+
+
+<html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>CSS - Sprite Use in SASS - Leyla's Blog</title>
+  <!--<meta name="author" content="Leyla KAPI">-->
+
+  
+  <meta name="description" content="CSS - Sprite Use in SASS written Mar 2nd, 2014 in ,Sprite,, CSS, SASS, en What is the CSS sprite? Why do we need to this ? CSS Sprite means that &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://leylaKapi.github.io/blog/2014/03/02/css-sprite-use-in-sass">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Leyla's Blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-49378525-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+  <body class="home-template nav-closed">
+    <a href="/" class="home-icon">
+      <img src="/images/home.png"/>
+    </a>
+
+    <article role="article" class="full-single-article">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h1>CSS - Sprite Use in SASS</h1>
+        <div class="meta">
+          written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-03-02T16:12:43+02:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+          
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/sprite/'>,Sprite,</a>, <a class='category' href='/blog/categories/css/'>CSS</a>, <a class='category' href='/blog/categories/sass/'>SASS</a>, <a class='category' href='/blog/categories/en/'>en</a>
+  
+</span>
+
+
+        </div>
+        <h3>What is the CSS sprite? Why do we need to this ?</h3>
+
+<p>CSS Sprite means that combine all images in a single image file. The aim is that,
+when we upload several image file for use in css or sass file, you should upload to each.</p>
+
+<!-- more -->
+
+
+<p><strong>If I give an example, you understand easily: </strong></p>
+
+<p>We have <strong>10 or more images</strong> and we should use in CSS folder, but this is difficult
+ and mixed not only for 10 picture but also 100, 10000 pictures.
+you will each image upload 10 times or more for use.
+Can you imagine it ?</p>
+
+<p>It&rsquo;s very difficult and mixed !</p>
+
+<p>Instead of this we use CSS Sprite method and fixed this mixed. If you have 10 images,
+you should combine  these images in a single page
+and pull in this page. Thus, CSS Sprite provide to fast loading  when opened quickly your images of website.</p>
+
+<p>I think your understand CSS Sprite, How use it ?</p>
+
+<ul>
+<li><p>Firstly, you create a single page for using images and combine all pictures in single page.</p></li>
+<li><p>And now we use CSS or SASS code for pull each picture in single page.</p></li>
+</ul>
+
+
+<p>For example, you have a icons&#8217; pictures page and we pull each icon on icons&#8217; picture page, we
+should use CSS or SASS sprite</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='sass'><span class='line'><span class="nc">.icon</span>
+</span><span class='line'>    <span class="na">background</span><span class="o">:</span> <span class="sx">url(&quot;../images/icon-sprite.png&quot;)</span> <span class="n">no</span> <span class="no">repeat</span>
+</span><span class='line'>    <span class="na">display</span><span class="o">:</span> <span class="no">inline</span><span class="o">-</span><span class="no">block</span>
+</span><span class='line'><span class="nc">.icon1</span>
+</span><span class='line'>    <span class="k">@extend</span> <span class="nc">.icon</span>
+</span><span class='line'>    <span class="na">background-position</span><span class="o">:</span> <span class="mi">0</span><span class="kt">px</span> <span class="mi">0</span><span class="kt">px</span>
+</span><span class='line'><span class="nc">.icon2</span>
+</span><span class='line'>    <span class="k">@extend</span> <span class="nc">.icon</span>
+</span><span class='line'>    <span class="na">background-position</span><span class="o">:</span> <span class="mi">20</span><span class="kt">px</span> <span class="mi">34</span><span class="kt">px</span>
+</span><span class='line'>    <span class="nc">...</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>means that above code :</p>
+
+<p>We upload single page on <em>icon</em> class and we want to use anything icon in single page which position has these.
+but before use <em>extend</em> for use <em>icon</em> class in <em>icon1</em> class. And I want to use another icon, I prepare position of it.
+and use in</p>
+
+<pre><code>    background-position
+</code></pre>
+
+<p>Thanks to CSS Sprite, when opened images in your site, it opened quickly.</p>
+
+<p>That&rsquo;s it !</p>
+
+
+        <hr class="divider-short"/>
+
+        
+        <section>
+          <h1>Comments</h1>
+          <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+        </section>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+<hr class="divider-short"/>
+
+<div class="archive-link">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        
+          <a class="pull-left" href="/blog/2014/03/01/brief-info-about-hash/" title="Previous Post: Brief info about Hash">&laquo; Previous: Brief info about Hash</a>
+        
+
+        
+          <a class="pull-right" href="/blog/2014/03/06/how-to-show-nav-bar-according-to-scroll/" title="Next Post: How to show nav-bar according to scroll">Next: How to show nav-bar according to scroll &raquo;</a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="her-row">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-1">
+  <a href="/"><h4>Home</h4></a>
+</div>
+
+<div class="col-md-2">
+  <div class="social-icon-list">
+    
+    <a href="https://twitter.com/leylakapi"><img src="/images/glyphicons_social_31_twitter.png"/></a>
+    
+
+    
+    <a href="https://github.com/leylakapi"><img src="/images/glyphicons_social_21_github.png"/></a>
+    
+
+    
+    <a href="https://linkedin.com/in/leylakapi"><img src="/images/glyphicons_social_17_linked_in.png"/></a>
+    
+
+    
+    <a href="mailto:leylakapi@gmail.com"><img src="/images/glyphicons_social_39_e-mail.png"/></a>
+    
+  </div>
+</div>
+
+<div class="pull-right">
+  <h4>Created by <a href="http://www.leylakapi.com/">Leyla Kapi</a></h4>
+</div>
+
+
+    </div>
+  </div>
+</footer>
+
+    
+      
+
+<script type="text/javascript">
+      var disqus_shortname = 'leylasblog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://leylaKapi.github.io/blog/2014/03/02/css-sprite-use-in-sass/';
+        var disqus_url = 'http://leylaKapi.github.io/blog/2014/03/02/css-sprite-use-in-sass/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//go.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+    
+  </body>
+</html>
+
+

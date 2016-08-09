@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: locales | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/locales/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2016-08-09T14:00:32+03:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[Leyla KAPI]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[How to add multi-lingual support to your web-page in middleman]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/10/27/how-to-add-multi-lingual-support-to-your-web-page-in-middleman/"/>
+    <updated>2014-10-27T00:00:00+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/10/27/how-to-add-multi-lingual-support-to-your-web-page-in-middleman</id>
+    <content type="html"><![CDATA[<h3>Multi-Lingual Support</h3>
+
+<p>Firstly you should create middleman project , if doesn&rsquo;t exist it. Then in your project,
+open <code>config.rb</code>  file add below code,</p>
+
+<p><code>ruby
+activate :i18n
+</code></p>
+
+<p>when you add above code, you can active to <code>:i18n</code>. <code>i18n</code> extension provides a way to localize your site.
+After that you should add path of your locale directories in your project roots <code>~/MyProject/locales</code> directory and code
+should be seems like below</p>
+
+<p><code>ruby
+activate :i18n, :path =&gt; "/:locale/"
+</code></p>
+
+<!-- more -->
+
+
+<p>But before above command you should create new directory in your root of your project. Means of above code, created
+locale directory which including languages <code>yaml</code> files.</p>
+
+<p>Then you should add root of your project according to your page language. If you want to seems to your page in english
+languages, you should add below code according to yml file in <code>~/MyProject/locales/en.yml</code>,
+if it is exist, you can write below code in <code>config.rb</code>,</p>
+
+<p><code>ruby
+activate :i18n, :path =&gt; "/:locale/", :mount_at_root =&gt; :en
+</code></p>
+
+<p>Now your page always seems in english language, but if write in address bar like <code>/es/index.html</code>, you can see in
+spanish languages, if there is exist in locales directory <code>es.yml</code> file.</p>
+
+<p>According to above,  you want to change language of your page according to your place, for example, if your page was opened in Italy,
+automatically shows your page in italian language, you can write instead of above,</p>
+
+<p><code>ruby
+activate :i18n, :path =&gt; "/:locale/", :mount_at_root =&gt; false
+</code></p>
+
+<p>You can be carefully according to above, <code>false</code> and <code>:en</code>, because these codes provide to seems your page in root which language.</p>
+
+<p>If you created <code>locale</code> directory in root of your project, you can add which languages you want, to seem your page view,
+for example I want to seems my page in russian language, because of this I should create in locale directories <code>ru.yml</code> file.
+or want see in english language, can be <code>en.yml</code>. In <code>en.yml</code> you start to add your sentence like</p>
+
+<h2>```yaml</h2>
+
+<p>en:
+  hello: Hello
+```</p>
+
+<p>and</p>
+
+<h2>```yaml</h2>
+
+<p>ru:
+   hello: привет
+```</p>
+
+<p>When create your yaml file like above, I want to page seems in russian and english because I created two yaml file
+one of the <code>en.yml</code> another of <code>ru.yml</code> .</p>
+
+<p>Then you should go to source directory in project than create <code>~/MyProject/source/localizable/</code> folder in source directory,
+after you should copy your <code>index.html.erb</code> or if your use <code>haml</code>, copy your <code>index.html.haml</code> to inside <code>~/MyProject/source/localizable/</code>
+folder. You should change sentences or words in your project according to yml file. While you are doing this you
+can be <code>t</code> parameter for can be shortly instead of <code>i18n</code>. According to above yml files, if I change words or sentence
+in <code>index.html.haml</code> , can be like</p>
+
+<p><code>haml
+= t('hello')
+</code></p>
+
+<p>After when running your project, middleman thanks to <code>i18n</code> perceive automatically. if in address bar
+write <code>/ru/index.html</code>, <code>i18n</code> according to <code>ru.yml</code> changed your words and sentences or if you write <code>en/index.html</code>,
+changed according to <code>en.yml</code> file.</p>
+
+<p>For more information you look at <a href="http://middlemanapp.com/advanced/localization/">home page</a></p>
+
+<p>That&rsquo;s all.</p>
+
+<p>I hope helped to you.</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: jdk | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/jdk/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2016-08-09T14:00:32+03:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[Leyla KAPI]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Install open-jdk or oracle on Ubuntu]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/08/03/install-open-jdk-or-oracle-on-ubuntu/"/>
+    <updated>2014-08-03T23:25:29+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/08/03/install-open-jdk-or-oracle-on-ubuntu</id>
+    <content type="html"><![CDATA[<h3>Note about installation of java on Ubuntu computer</h3>
+
+<p><code>bash
+$ sudo apt-get install openjdk-7-jdk
+</code></p>
+
+<!-- more -->
+
+
+<p>OR</p>
+
+<p><code>bash
+$ sudo add-apt-repository ppa:webupd8team/java
+$ sudo apt-get update
+$ sudo apt-get install oracle-java7-installer
+$ sudo apt-get update
+$ java -version
+</code></p>
+
+<p>That&rsquo;s all</p>
+]]></content>
+  </entry>
+  
+</feed>

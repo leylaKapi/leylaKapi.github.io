@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: model | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/model/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2016-08-09T14:00:32+03:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[Leyla KAPI]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Tricks on Rails]]></title>
+    <link href="http://leylaKapi.github.io/blog/2015/09/07/trick-on-rails/"/>
+    <updated>2015-09-07T14:37:16+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2015/09/07/trick-on-rails</id>
+    <content type="html"><![CDATA[<ul>
+<li><h3><code>rake db:migrate</code> for an existing model</h3></li>
+</ul>
+
+
+<p>Firstly I created new rails app, after that created several models, or you make some changes on your model manually(wrong way), while you are running <code>rake db:migrate</code> getting error for an existing model in your app. For fix that issue
+you can write,</p>
+
+<p><code>bash
+rake db:schema:load
+</code></p>
+
+<p>or</p>
+
+<p><code>bash
+rake db:drop
+rake db:create
+rake db:migrate
+rake db:schema:dump
+rake db:text:prepare
+</code></p>
+
+<!-- more -->
+
+
+<ul>
+<li><h3><code>background-image</code> use in haml</h3></li>
+</ul>
+
+
+<p><code>haml
+%li{style: "background-image: url(#{image_path "image.png"})"}
+</code></p>
+
+<ul>
+<li><strong>In rails, if you give <code>/</code> to path, this means that look to <code>public</code> directory.</strong></li>
+<li><p><strong><code>bundle exec rake db:drop db:create db:migrate</code></strong></p></li>
+<li><h3>Rename table more easier with Migration!</h3></li>
+</ul>
+
+
+<p>```ruby
+class RenameOldTableToNewTable &lt; ActiveRecord::Migration</p>
+
+<pre><code>rename_table :old_table_name, :new_table_name
+</code></pre>
+
+<p>end
+```</p>
+
+<ul>
+<li><h3>Radio button on with <code>simple_form</code></h3></li>
+</ul>
+
+
+<p>```haml
+= simple_form_for @new do |new|</p>
+
+<pre><code>=  new.error_notification
+.form-inputs
+    = f.input :title
+    - ['Url', 'file'].each do |content|
+        %label
+            = new.radio_button(:file, content)
+        = content.humanize
+</code></pre>
+
+<p>```</p>
+
+<ul>
+<li><h3>Getting data from admin panel to home</h3></li>
+</ul>
+
+
+<p> Getting all data or some data which is added in admin panel to show in home .</p>
+
+<p>```ruby
+class WelcomeController &lt; ApplicationController
+  def index</p>
+
+<pre><code>@news = New.all.order(id: :desc) // you can give limit like
+@news = New.all.order(id: :desc).limit(10) // taking limited data
+</code></pre>
+
+<p>  end
+end
+```</p>
+
+<p>```haml
+&ndash; @news.each do |new|</p>
+
+<pre><code>%p
+    = link_to '{new.title}', '{new.url}'
+</code></pre>
+
+<p>```</p>
+
+<ul>
+<li><h3>Add <a href="https://mandrillapp.com/">mandrill</a> to your rails app</h3></li>
+</ul>
+
+
+<p>For contact form in your app,</p>
+
+<p>```yml
+&mdash;config/settings.yml, config/settings/development.yml, config/settings/production.yml, config/settings/staging.yml &mdash;
+smtp:
+  mandrill:</p>
+
+<pre><code>address: 'smtp.mandrillapp.com'
+port: 123
+enable_starttls_auto: true
+user_name: 'your_mail',
+password: 'your_api_password'
+authentication: 'plain'
+</code></pre>
+
+<p>```</p>
+
+<p>```ruby
+&mdash;config/environments/development.rb and config/environments/production.rb &mdash;
+  config.action_mailer.smtp_settings = {</p>
+
+<pre><code>  address: 'smtp.mandrillapp.com',
+  port: 123,
+  enable_starttls_auto: true,
+  user_name: 'your_mail',
+  password: 'your_api_password',
+</code></pre>
+
+<p>  }
+```</p>
+
+<ul>
+<li><h3>Deploy to server with capistrano shortly</h3></li>
+</ul>
+
+
+<p>for <a href="https://gist.githubusercontent.com/ismailakbudak/6e42120bc86b20b7dc15/raw/b66d79746a6429a029b70ce7fd052fb122f426d2/server-base.sh">server-base.sh</a></p>
+
+<p><code>bash
+ssh username@ip_adress
+wget url/server-base.sh
+ls-al
+chmod +x server-base.sh
+</code></p>
+
+<p>if give you permission denied please use <code>sudo su</code></p>
+
+<p><code>bash
+sudo su
+./server-base.sh
+</code></p>
+
+<p>Same way for <a href="https://gist.githubusercontent.com/ismailakbudak/e2cbcd17c54967b9b387/raw/44ab2cae6e2ebb1c55766bac9dc9a45443695bd0/deploy-user.sh">deploy-user.sh</a> and after that open new tab in term</p>
+
+<p><code>bash
+ssh deploy@ip_adress
+wget url/deploy-user-env.sh
+ls-al
+chmod +x deploy-user-env.sh
+./deploy-user-env.sh
+</code>
+For <a href="https://gist.githubusercontent.com/ismailakbudak/9fb946df9f6ec469c7db/raw/8f7a1411e034a85f8b6d25f55416375351787c1f/deploy-user-ruby-environment.sh">deploy-user-env.sh</a>
+if give you language exception open /etc/environment</p>
+
+<p><code>bash
+LC_ALL=en_US.UTF-8
+LANG=en_US.UTF-8
+</code></p>
+
+<p>After that use <a href="https://github.com/lab2023/recipes_matic">recipes_matic gem</a> for install capistrano and all derivatives .
+Then make all customizations.</p>
+
+<p>That &rsquo;s all, I hope solve your issues.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Rails fix N+1 query]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/12/16/rails-fix-n-plus-1-query/"/>
+    <updated>2014-12-16T00:00:00+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/12/16/rails-fix-n-plus-1-query</id>
+    <content type="html"><![CDATA[<h3>How to fix N+1 query in Rails ?</h3>
+
+<p>I try to explain fix <code>N+1</code> on example. Let&rsquo;s start, firstly, in your rails application, you created association between <code>user</code> and <code>user_profile</code>
+models like below :</p>
+
+<p><code>ruby
+class User &lt; ActiveRecord::Base
+   has_one :profile, class_name: 'UserProfile'
+end
+</code>
+and</p>
+
+<p><code>ruby
+class UserProfile &lt; ActiveRecord::Base
+  belongs_to :user
+end
+</code></p>
+
+<!-- more -->
+
+
+<p>When you created association between <code>user</code> and <code>user_profile</code> like above (you can derive it), then you are getting like below error while you refresh to app page or
+edit something&hellip; The error is that :</p>
+
+<p><code>ruby
+The page at 0.0.0.0:3000 says:
+user:-----
+N+1 Query detected
+User =&gt; [:profile]
+Add to your finder::include =&gt; [:profile]
+N+1 Query method call stack
+</code></p>
+
+<p>Actually rails says to you for fix above bug(it says use <code>include</code> to <code>profile</code>&hellip;), for fix bug open <code>users_controller.rb</code> then
+add :</p>
+
+<p><code>ruby
+User.includes(:profile)
+</code></p>
+
+<p>instead of</p>
+
+<p><code>ruby
+User
+</code>
+like below ;</p>
+
+<p>```ruby
+class UsersController &lt; ApplicationController</p>
+
+<pre><code>def index
+    @search = User.includes(:profile).search(params[:q])
+    @users = @search.result(:distinct =&gt; true).paginate(:page =&gt; params[:page])
+end
+</code></pre>
+
+<p>end
+```</p>
+
+<p>That&rsquo;s it.</p>
+
+<p>I hope helped to you .</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Add simple search form to rails projects]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/07/16/add-search-form-to-rails-projects/"/>
+    <updated>2014-07-16T19:47:15+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/07/16/add-search-form-to-rails-projects</id>
+    <content type="html"><![CDATA[<h3>How can you add simple search form to rails project ?</h3>
+
+<p>You want to add search form, but you don&rsquo;t no.  <em>HOW?</em></p>
+
+<p>Let&rsquo;s start, firstly you should use <a href="https://github.com/activerecord-hackery/ransack">ransack</a> and
+<a href="https://github.com/mislav/will_paginate">will_paginate</a> gems in your <code>Gemfile</code> then you should write in
+terminal <code>bundle</code> .</p>
+
+<p>Then open controller which you want to add search bar, like ;</p>
+
+<!-- more -->
+
+
+<p><code>projects_controller</code></p>
+
+<p>```ruby
+def index</p>
+
+<pre><code>@search = Project.search(params[:q])
+@project = @search.result(distinct: true).paginate(:page =&gt; params[:page])
+respond_with @project
+</code></pre>
+
+<p>end
+```</p>
+
+<p>When you added controller, you should add below code which relation to index file ;</p>
+
+<p><code>projects/index.html.haml</code></p>
+
+<p>```haml
+= search_form_for @search do |f|</p>
+
+<pre><code>= f.label :name_cont
+= f.search_field :name_cont
+= f.submit
+</code></pre>
+
+<p>```</p>
+
+<p>That&rsquo;s all .</p>
+
+<p>I hope helped to you .</p>
+]]></content>
+  </entry>
+  
+</feed>

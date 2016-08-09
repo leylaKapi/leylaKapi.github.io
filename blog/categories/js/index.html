@@ -1,0 +1,348 @@
+
+
+<html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Category: Js - Leyla's Blog</title>
+  <!--<meta name="author" content="Leyla KAPI">-->
+
+  
+  <meta name="description" content="Category: js">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://leylaKapi.github.ioblog/categories/js">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Leyla's Blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-49378525-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+  <body class="home-template nav-closed">
+    <a href="/" class="home-icon">
+      <img src="/images/home.png"/>
+    </a>
+
+    <div class="all-posts">
+  <div class="container">
+    <div class="row">
+      <div class="list-title col-md-offset-3 col-md-6">
+        <h4>Posts in js</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-list">
+    <div class="container">
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2015/10/24/bootstrap-active-class-solution-for-navbar-in-rails/">Bootstrap Active Class Solution for Navbar in Rails</a></h2>
+  
+  <p>
+    <p>Sometimes while you are adding bootstrap to your rails app, you can getting some problem on javascript side. In this article I try to explain how we can fix <code>active</code> class to navbar . For fixing, you can write in helper <code>active_class</code> method like below</p>
+
+<p>```ruby
+module ApplicationHelper
+  def active_class(link_path)</p>
+
+<pre><code>current_page?(link_path) ? 'active' : ""
+</code></pre>
+
+<p>  end
+end
+```</p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2015-10-24T17:32:38+03:00" pubdate data-updated="true">Oct 24<span>th</span>, 2015</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/active/'>active</a>, <a class='category' href='/blog/categories/active-class/'>active_class</a>, <a class='category' href='/blog/categories/application/'>application</a>, <a class='category' href='/blog/categories/bootstrap/'>bootstrap</a>, <a class='category' href='/blog/categories/bug/'>bug</a>, <a class='category' href='/blog/categories/fix/'>fix</a>, <a class='category' href='/blog/categories/haml/'>haml</a>, <a class='category' href='/blog/categories/helper/'>helper</a>, <a class='category' href='/blog/categories/js/'>js</a>, <a class='category' href='/blog/categories/li/'>li</a>, <a class='category' href='/blog/categories/nav/'>nav</a>, <a class='category' href='/blog/categories/navbar/'>navbar</a>, <a class='category' href='/blog/categories/problem/'>problem</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ror/'>ror</a>, <a class='category' href='/blog/categories/route/'>route</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>, <a class='category' href='/blog/categories/sass/'>sass</a>, <a class='category' href='/blog/categories/solutions/'>solutions</a>, <a class='category' href='/blog/categories/tip/'>tip</a>, <a class='category' href='/blog/categories/tricks/'>tricks</a>, <a class='category' href='/blog/categories/ul/'>ul</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2015/10/24/bootstrap-active-class-solution-for-navbar-in-rails/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/10/02/dipnote-add-page-number-with-javascript/">Trick: Add Page Number With Javascript ?</a></h2>
+  
+  <p>
+    <h3>How can you show page number in js ?</h3>
+
+<p>If you create middleman or rails project and you want to add pagination in your pages with js.
+You can make easily with below codes</p>
+
+<p>```js
+  var numberOfPages = 14;
+  function addPage(page, book) {</p>
+
+<pre><code>if (!book.turn('hasPage', page)) {
+  setTimeout(function(){
+    element.html('&lt;div class="data"&gt;Data for page '+page+'&lt;/div&gt;');
+  }, 14);
+}
+</code></pre>
+
+<p>  }</p>
+
+<pre><code>$('#number-pages').html(numberOfPages);
+</code></pre>
+
+<p>```
+in haml page can be like</p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-10-02T21:32:05+03:00" pubdate data-updated="true">Oct 2<span>nd</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/frontend/'>frontend</a>, <a class='category' href='/blog/categories/haml/'>haml</a>, <a class='category' href='/blog/categories/js/'>js</a>, <a class='category' href='/blog/categories/number/'>number</a>, <a class='category' href='/blog/categories/pages/'>pages</a>, <a class='category' href='/blog/categories/pagination/'>pagination</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/10/02/dipnote-add-page-number-with-javascript/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/09/17/how-to-create-scroll-page-for-rails-project/">How to Create Scroll-page for Rails Project</a></h2>
+  
+  <p>
+    <h2>Create scroll page with sass and javascript</h2>
+
+<p>While I was creating <a href="https://github.com/leylaKapi/scroll-page">demo</a> for scroll page,
+firstly I created middleman project according to <code>haml</code> and <code>sass</code>, but if you want to embed in your for example rails project,
+you can embed in it. In this post, I try to explain creating scroll page according to middleman page.</p>
+
+<p><img src="../images/capture_image-home.png" alt="home-page" /></p>
+
+<p>Let&rsquo;s look the codes for scroll page</p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-09-17T17:05:01+03:00" pubdate data-updated="true">Sep 17<span>th</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/haml/'>haml</a>, <a class='category' href='/blog/categories/js/'>js</a>, <a class='category' href='/blog/categories/pages/'>pages</a>, <a class='category' href='/blog/categories/parallax/'>parallax</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ror/'>ror</a>, <a class='category' href='/blog/categories/sass/'>sass</a>, <a class='category' href='/blog/categories/scroll/'>scroll</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/09/17/how-to-create-scroll-page-for-rails-project/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/09/10/create-icon-set-for-your-rails-project/">Create Icon Set for Your Rails Project</a></h2>
+  
+  <p>
+    <h3>How created your icon-set for your rails project ?</h3>
+
+<ul>
+<li>Firstly, you should go to <a href="https://icomoon.io/">icomoon.io</a> website.</li>
+<li>You need to create new app on right-up corner of webpage</li>
+<li>Now upload your font-icons after press <code>import icons</code> buttons,</li>
+<li>Be careful, because your fonts format must be <code>svg</code> format,</li>
+<li>When upload your icons, you should rename your icons,</li>
+<li>Now select which rename icons, and go to download your icons,</li>
+<li>When you download icomoon which provide to you with <code>css</code> and <code>js</code> files for font.</li>
+<li>When you are opening which download file, you can see this file and copy <code>font</code> directory and
+paste in your assets for rails projects.</li>
+<li>Go to css file in which download icomoons files, copy <code>css</code> file and paste in your style file
+(If you are using sass or less, you should convert to sass or less).
+Another way, you can create new file in stylesheet folder like</li>
+</ul>
+
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-09-10T17:23:26+03:00" pubdate data-updated="true">Sep 10<span>th</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/css/'>css</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/font/'>font</a>, <a class='category' href='/blog/categories/ico-moon/'>ico-moon</a>, <a class='category' href='/blog/categories/icon-set/'>icon-set</a>, <a class='category' href='/blog/categories/js/'>js</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/09/10/create-icon-set-for-your-rails-project/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="her-row">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-1">
+  <a href="/"><h4>Home</h4></a>
+</div>
+
+<div class="col-md-2">
+  <div class="social-icon-list">
+    
+    <a href="https://twitter.com/leylakapi"><img src="/images/glyphicons_social_31_twitter.png"/></a>
+    
+
+    
+    <a href="https://github.com/leylakapi"><img src="/images/glyphicons_social_21_github.png"/></a>
+    
+
+    
+    <a href="https://linkedin.com/in/leylakapi"><img src="/images/glyphicons_social_17_linked_in.png"/></a>
+    
+
+    
+    <a href="mailto:leylakapi@gmail.com"><img src="/images/glyphicons_social_39_e-mail.png"/></a>
+    
+  </div>
+</div>
+
+<div class="pull-right">
+  <h4>Created by <a href="http://www.leylakapi.com/">Leyla Kapi</a></h4>
+</div>
+
+
+    </div>
+  </div>
+</footer>
+
+    
+  </body>
+</html>
+
+

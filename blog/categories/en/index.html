@@ -1,0 +1,3216 @@
+
+
+<html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Category: En - Leyla's Blog</title>
+  <!--<meta name="author" content="Leyla KAPI">-->
+
+  
+  <meta name="description" content="Category: en">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://leylaKapi.github.ioblog/categories/en">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Leyla's Blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-49378525-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+  <body class="home-template nav-closed">
+    <a href="/" class="home-icon">
+      <img src="/images/home.png"/>
+    </a>
+
+    <div class="all-posts">
+  <div class="container">
+    <div class="row">
+      <div class="list-title col-md-offset-3 col-md-6">
+        <h4>Posts in en</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-list">
+    <div class="container">
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/11/08/how-to-use-getextra-and-putextra-in-android-for-string-data/">How to Use getExtra and putExtra in Android for String Data</a></h2>
+  
+  <p>
+    <h3>Use getExtra and putExtra</h3>
+
+<p>You want to get some information like name, surname, email when user login on Android, and show on
+second activity these information , we can use getExtra and putExtra . There are a lot of method for getting information
+from first to second activity, I try to explain getting with getExtra and putExtra on getting user name and surname to
+show second activity, let &rsquo;s start,</p>
+
+<ul>
+<li><p>Firstly I created two label(TextView) for definition to name and surname and EditText for enter name and surname to users
+on <code>activity_main.xml</code>,</p></li>
+<li><p>Then we created new class under <code>src</code> folder and under the package name <code>SecondActivity.java</code>, and under the
+<code>/res/layout/</code> folder created <code>secondactivity.xml</code> .</p></li>
+<li><p>For definite and connect between main and second activity open <code>AndroidManifest.xml</code> and create new <code>activity</code> for
+second .</p></li>
+</ul>
+
+
+<p>```xml
+&lt;activity</p>
+
+<pre><code>android:name=".SecondActivity"
+android:label="Second Activity"
+&gt;
+&lt;intent-filter &gt;
+    &lt;action android:name="com.example.package_path.SecondActivity"/&gt;
+    &lt;category android:name="android.intent.category.DEFAULT" /&gt;       
+&lt;/intent-filter&gt;  
+</code></pre>
+
+<p></activity>
+```</p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-11-08T14:21:19+02:00" pubdate data-updated="true">Nov 8<span>th</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/android/'>android</a>, <a class='category' href='/blog/categories/application/'>application</a>, <a class='category' href='/blog/categories/data/'>data</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/get/'>get</a>, <a class='category' href='/blog/categories/getextra/'>getExtra</a>, <a class='category' href='/blog/categories/mobile/'>mobile</a>, <a class='category' href='/blog/categories/put/'>put</a>, <a class='category' href='/blog/categories/putextra/'>putExtra</a>, <a class='category' href='/blog/categories/set/'>set</a>, <a class='category' href='/blog/categories/string/'>string</a>, <a class='category' href='/blog/categories/user/'>user</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/11/08/how-to-use-getextra-and-putextra-in-android-for-string-data/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/11/07/note-go-back-to-previous-activity-on-android/">Note: Go Back to Previous Activity on Android</a></h2>
+  
+  <p>
+    <h3>Method for go previous activity</h3>
+
+<p>If you make connection between first and second activity, this means, you can go to from first activity to second activity
+but you can not return to previous page, for return to first page, we can use very common method, <code>onBackPressed()</code>.</p>
+
+<p>Where you want to use button for return from second to first, open your <code>secondactivity.xml</code></p>
+
+<p>```xml
+&lt;Button</p>
+
+<pre><code>android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:onClick="ReturnHome"
+android:text="Return Previous Page" /&gt;
+</code></pre>
+
+<p>```</p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-11-07T17:33:09+02:00" pubdate data-updated="true">Nov 7<span>th</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/activity/'>activity</a>, <a class='category' href='/blog/categories/android/'>android</a>, <a class='category' href='/blog/categories/connection/'>connection</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/intent/'>intent</a>, <a class='category' href='/blog/categories/method/'>method</a>, <a class='category' href='/blog/categories/mobile/'>mobile</a>, <a class='category' href='/blog/categories/pages/'>pages</a>, <a class='category' href='/blog/categories/start-learning/'>start-learning</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/11/07/note-go-back-to-previous-activity-on-android/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/11/07/ubuntu-13-dot-10-missing-date-and-time-in-the-menu-bar/">Ubuntu 13.10 : Missing Date and Time in the Menu Bar</a></h2>
+  
+  <p>
+    <h3>Fix date/time in menu bar</h3>
+
+<p>If you are update or upgrade your pc, you can getting error about menu bar for date &ndash; time missing .
+For fixing this bug, you should write below commands step by step ,</p>
+
+<ul>
+<li>Re-install <code>indicator-datetime</code> run ,</li>
+</ul>
+
+
+<p><code>bash
+$ sudo apt-get install indicator-datetime
+</code></p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-11-07T17:15:38+02:00" pubdate data-updated="true">Nov 7<span>th</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/bug/'>bug</a>, <a class='category' href='/blog/categories/date/'>date</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/linux/'>linux</a>, <a class='category' href='/blog/categories/menu/'>menu</a>, <a class='category' href='/blog/categories/pc/'>pc</a>, <a class='category' href='/blog/categories/time/'>time</a>, <a class='category' href='/blog/categories/ubuntu/'>ubuntu</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/11/07/ubuntu-13-dot-10-missing-date-and-time-in-the-menu-bar/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/11/02/note-how-to-install-stick-notes-to-ubuntu/">Note: How to Install Sticker-notes to Ubuntu Desktop?</a></h2>
+  
+  <p>
+    <p>I want to sticker notes for my pc, when I search about it, I found <code>sticky notes</code> for <code>Ubuntu 13.10</code> .
+This notes provide to reminder of something like a agenda, when you wrote some notes inside,
+you see always the notes. If you want to add sticker notes you can use below command.</p>
+
+<p><code>bash
+$ sudo add-apt-repository ppa:umang/indicator-stickynotes
+</code></p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-11-02T21:36:43+02:00" pubdate data-updated="true">Nov 2<span>nd</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/notes/'>notes</a>, <a class='category' href='/blog/categories/pc/'>pc</a>, <a class='category' href='/blog/categories/stick/'>stick</a>, <a class='category' href='/blog/categories/sticker/'>sticker</a>, <a class='category' href='/blog/categories/ubuntu/'>ubuntu</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/11/02/note-how-to-install-stick-notes-to-ubuntu/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/10/27/how-to-add-multi-lingual-support-to-your-web-page-in-middleman/">How to Add Multi-lingual Support to Your Web-page in Middleman</a></h2>
+  
+  <p>
+    <h3>Multi-Lingual Support</h3>
+
+<p>Firstly you should create middleman project , if doesn&rsquo;t exist it. Then in your project,
+open <code>config.rb</code>  file add below code,</p>
+
+<p><code>ruby
+activate :i18n
+</code></p>
+
+<p>when you add above code, you can active to <code>:i18n</code>. <code>i18n</code> extension provides a way to localize your site.
+After that you should add path of your locale directories in your project roots <code>~/MyProject/locales</code> directory and code
+should be seems like below</p>
+
+<p><code>ruby
+activate :i18n, :path =&gt; "/:locale/"
+</code></p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-10-27T00:00:00+02:00" pubdate data-updated="true">Oct 27<span>th</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/i18n/'>i18n</a>, <a class='category' href='/blog/categories/languages/'>languages</a>, <a class='category' href='/blog/categories/locales/'>locales</a>, <a class='category' href='/blog/categories/localization/'>localization</a>, <a class='category' href='/blog/categories/middleman/'>middleman</a>, <a class='category' href='/blog/categories/page/'>page</a>, <a class='category' href='/blog/categories/yml/'>yml</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/10/27/how-to-add-multi-lingual-support-to-your-web-page-in-middleman/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/10/22/note-fix-ruby-on-rails-qt-installation/">Note: Fix Ruby on Rails Qt Installation</a></h2>
+  
+  <p>
+    <p>In your rails project when you run <code>bundle</code> command, if you getting below error,</p>
+
+<p><code>bash
+/ruby extconf.rb qmake:couldn't find a QT installation of '' Command 'qmake_spec linux-gtt' failed
+</code></p>
+
+<p>on Ubuntu, you can fix with below command to this error.</p>
+
+<p><code>bash
+$ sudo apt-get install qt4-dev-tools libqt4-dev libqt4-core libqt4-gui
+</code></p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-10-22T23:16:22+03:00" pubdate data-updated="true">Oct 22<span>nd</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/built/'>built</a>, <a class='category' href='/blog/categories/capybara-webkit/'>capybara-webkit</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/error/'>error</a>, <a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/install/'>install</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/10/22/note-fix-ruby-on-rails-qt-installation/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/10/18/note-how-to-fix-android-parse-sdk-failed/">Note:How to Fix Android Parse Sdk Failed?</a></h2>
+  
+  <p>
+    <p>If you are coding android on eclipse and when you are open your eclipse getting like</p>
+
+<p><code>xml
+parseSdkContent failed
+Could not initialize class android.graphics.Typeface
+</code>
+For the fix above error, you should open your <code>home</code> directory, then search the <code>android</code> file with</p>
+
+<p><code>bash
+$ cd .android
+</code></p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-10-18T00:00:00+03:00" pubdate data-updated="true">Oct 18<span>th</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/android/'>android</a>, <a class='category' href='/blog/categories/bug/'>bug</a>, <a class='category' href='/blog/categories/eclipse/'>eclipse</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/error/'>error</a>, <a class='category' href='/blog/categories/fix/'>fix</a>, <a class='category' href='/blog/categories/initialize/'>initialize</a>, <a class='category' href='/blog/categories/parse/'>parse</a>, <a class='category' href='/blog/categories/run/'>run</a>, <a class='category' href='/blog/categories/sdk/'>sdk</a>, <a class='category' href='/blog/categories/typer-face/'>typer-face</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/10/18/note-how-to-fix-android-parse-sdk-failed/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/10/12/what-is-the-vagrant/">What's the Vagrant ?</a></h2>
+  
+  <p>
+    <h3>How to Set Up Vagrant on Ubuntu Desktop?</h3>
+
+<p><code>Vagrant</code> is a application which improved your application in virtual machine, this means that,
+you can create your project environment on virtual machine. Thanks to vagrant, you cloned local environment on virtual machine.
+So, when you sent to your project to <code>server</code>, you can&rsquo;t see any bug or error on your server.
+On the other hand vagrant is useful, while you are working in a team.</p>
+
+<p>For the install and use vagrant, you should follow below steps respectively.</p>
+
+<p>Let&rsquo;s look, how to set up and use <code>Vagrant in Ubuntu desktop</code>,</p>
+
+<ul>
+<li>Install Vagrant</li>
+<li>Create Vagrant Folders</li>
+<li>Install Precise32 Box</li>
+<li>Set up new Virtual Machine</li>
+<li>Install Virtual Machine configuration</li>
+</ul>
+
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-10-12T14:58:37+03:00" pubdate data-updated="true">Oct 12<span>th</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/script/'>script</a>, <a class='category' href='/blog/categories/shell/'>shell</a>, <a class='category' href='/blog/categories/ssh/'>ssh</a>, <a class='category' href='/blog/categories/vagrant/'>vagrant</a>, <a class='category' href='/blog/categories/virtual-box/'>virtual-box</a>, <a class='category' href='/blog/categories/virtual-machine/'>virtual-machine</a>, <a class='category' href='/blog/categories/vm/'>vm</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/10/12/what-is-the-vagrant/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/10/02/dipnote-add-page-number-with-javascript/">Trick: Add Page Number With Javascript ?</a></h2>
+  
+  <p>
+    <h3>How can you show page number in js ?</h3>
+
+<p>If you create middleman or rails project and you want to add pagination in your pages with js.
+You can make easily with below codes</p>
+
+<p>```js
+  var numberOfPages = 14;
+  function addPage(page, book) {</p>
+
+<pre><code>if (!book.turn('hasPage', page)) {
+  setTimeout(function(){
+    element.html('&lt;div class="data"&gt;Data for page '+page+'&lt;/div&gt;');
+  }, 14);
+}
+</code></pre>
+
+<p>  }</p>
+
+<pre><code>$('#number-pages').html(numberOfPages);
+</code></pre>
+
+<p>```
+in haml page can be like</p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-10-02T21:32:05+03:00" pubdate data-updated="true">Oct 2<span>nd</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/frontend/'>frontend</a>, <a class='category' href='/blog/categories/haml/'>haml</a>, <a class='category' href='/blog/categories/js/'>js</a>, <a class='category' href='/blog/categories/number/'>number</a>, <a class='category' href='/blog/categories/pages/'>pages</a>, <a class='category' href='/blog/categories/pagination/'>pagination</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/10/02/dipnote-add-page-number-with-javascript/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/09/17/how-to-create-scroll-page-for-rails-project/">How to Create Scroll-page for Rails Project</a></h2>
+  
+  <p>
+    <h2>Create scroll page with sass and javascript</h2>
+
+<p>While I was creating <a href="https://github.com/leylaKapi/scroll-page">demo</a> for scroll page,
+firstly I created middleman project according to <code>haml</code> and <code>sass</code>, but if you want to embed in your for example rails project,
+you can embed in it. In this post, I try to explain creating scroll page according to middleman page.</p>
+
+<p><img src="../images/capture_image-home.png" alt="home-page" /></p>
+
+<p>Let&rsquo;s look the codes for scroll page</p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-09-17T17:05:01+03:00" pubdate data-updated="true">Sep 17<span>th</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/haml/'>haml</a>, <a class='category' href='/blog/categories/js/'>js</a>, <a class='category' href='/blog/categories/pages/'>pages</a>, <a class='category' href='/blog/categories/parallax/'>parallax</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ror/'>ror</a>, <a class='category' href='/blog/categories/sass/'>sass</a>, <a class='category' href='/blog/categories/scroll/'>scroll</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/09/17/how-to-create-scroll-page-for-rails-project/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/09/10/create-icon-set-for-your-rails-project/">Create Icon Set for Your Rails Project</a></h2>
+  
+  <p>
+    <h3>How created your icon-set for your rails project ?</h3>
+
+<ul>
+<li>Firstly, you should go to <a href="https://icomoon.io/">icomoon.io</a> website.</li>
+<li>You need to create new app on right-up corner of webpage</li>
+<li>Now upload your font-icons after press <code>import icons</code> buttons,</li>
+<li>Be careful, because your fonts format must be <code>svg</code> format,</li>
+<li>When upload your icons, you should rename your icons,</li>
+<li>Now select which rename icons, and go to download your icons,</li>
+<li>When you download icomoon which provide to you with <code>css</code> and <code>js</code> files for font.</li>
+<li>When you are opening which download file, you can see this file and copy <code>font</code> directory and
+paste in your assets for rails projects.</li>
+<li>Go to css file in which download icomoons files, copy <code>css</code> file and paste in your style file
+(If you are using sass or less, you should convert to sass or less).
+Another way, you can create new file in stylesheet folder like</li>
+</ul>
+
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-09-10T17:23:26+03:00" pubdate data-updated="true">Sep 10<span>th</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/css/'>css</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/font/'>font</a>, <a class='category' href='/blog/categories/ico-moon/'>ico-moon</a>, <a class='category' href='/blog/categories/icon-set/'>icon-set</a>, <a class='category' href='/blog/categories/js/'>js</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/09/10/create-icon-set-for-your-rails-project/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/09/01/how-to-extract-images-from-pdf-file-on-ubuntu/">How to Extract Images From Pdf File on Ubuntu Desktop ?</a></h2>
+  
+  <p>
+    <h3>Pdfimages in Ubuntu</h3>
+
+<p>If you have some pdf files which include images and want to extract all images like a image file,
+you can make it easily. Firstly, you should install <code>poppler-utils</code> in your machine, with</p>
+
+<p><code>bash
+$ sudo apt-get install poppler-utils
+</code></p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-09-01T00:00:00+03:00" pubdate data-updated="true">Sep 1<span>st</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/files/'>files</a>, <a class='category' href='/blog/categories/images/'>images</a>, <a class='category' href='/blog/categories/pdf/'>pdf</a>, <a class='category' href='/blog/categories/pdfimages/'>pdfimages</a>, <a class='category' href='/blog/categories/ubuntu/'>ubuntu</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/09/01/how-to-extract-images-from-pdf-file-on-ubuntu/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/08/21/fix-paperclip-gem-bug/">Fix Paperclip Gem Bug</a></h2>
+  
+  <p>
+    <h3>How can I fix <code>paperclip</code> error ?</h3>
+
+<p>When you use <code>paperclip</code> gem, if you are getting like this bug</p>
+
+<p><code>ruby
+Photo could not run the identify command. Please install ImageMagick.
+</code></p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-08-21T13:49:45+03:00" pubdate data-updated="true">Aug 21<span>st</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/bug/'>bug</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/image/'>image</a>, <a class='category' href='/blog/categories/paperclip/'>paperclip</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>, <a class='category' href='/blog/categories/upload/'>upload</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/08/21/fix-paperclip-gem-bug/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/08/16/change-github-config-editor/">Change Github Config Editor</a></h2>
+  
+  <p>
+    <h3>How to change github global core editor ?</h3>
+
+<p>Open your terminal, then which editor is easy for you (vim, emacs, nano) ?</p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-08-16T22:28:27+03:00" pubdate data-updated="true">Aug 16<span>th</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/editor/'>editor</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/github/'>gitHub</a>, <a class='category' href='/blog/categories/nano/'>nano</a>, <a class='category' href='/blog/categories/vi/'>vi</a>, <a class='category' href='/blog/categories/vim/'>vim</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/08/16/change-github-config-editor/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/08/09/upload-picture-to-rails-app/">Upload Picture to Rails App</a></h2>
+  
+  <p>
+    <h3>How to upload picture in rails app ?</h3>
+
+<p>If you want to upload picture in your rails app, you should make</p>
+
+<ul>
+<li>Open your <code>Gemfile</code> in rails app then add</li>
+</ul>
+
+
+<p><code>ruby
+gem 'paperclip', :git =&gt; "git://github.com/thoughtbot/paperclip.git"
+</code></p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-08-09T13:03:08+03:00" pubdate data-updated="true">Aug 9<span>th</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/paperclip/'>paperclip</a>, <a class='category' href='/blog/categories/picture/'>picture</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/upload/'>upload</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/08/09/upload-picture-to-rails-app/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/08/08/fix-rake-db-populate/">Fix Rake Db:populate</a></h2>
+  
+  <p>
+    <h3><code>Rake aborted! Don't know how to build task 'populate'</code></h3>
+
+<p><code>bash
+$ rake db:populate
+</code>
+or</p>
+
+<p><code>bash
+$ bundle exec rake db:populate
+</code></p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-08-08T10:33:06+03:00" pubdate data-updated="true">Aug 8<span>th</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/create/'>create</a>, <a class='category' href='/blog/categories/database/'>database</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/migration/'>migration</a>, <a class='category' href='/blog/categories/populate/'>populate</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/rake/'>rake</a>, <a class='category' href='/blog/categories/reset/'>reset</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>, <a class='category' href='/blog/categories/sqlite/'>sqlite</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/08/08/fix-rake-db-populate/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/08/06/fix-invalid-authentication-token-error-in-rails/">Fix Invalid Authentication Token Error in Rails</a></h2>
+  
+  <p>
+    <h3>How to fix <code>ActionController: InvalidAuthentication Token error</code> ?</h3>
+
+<p>If you use <code>devise</code> gem and when you enter login page in your rails project, you get
+<code>Invalid Token</code> error, you thinking on <code>controller</code> .</p>
+
+<p>Try to fix this bug ;</p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-08-06T23:49:35+03:00" pubdate data-updated="true">Aug 6<span>th</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/ajax/'>ajax</a>, <a class='category' href='/blog/categories/authentication/'>authentication</a>, <a class='category' href='/blog/categories/controller/'>controller</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/08/06/fix-invalid-authentication-token-error-in-rails/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/08/03/install-open-jdk-or-oracle-on-ubuntu/">Install Open-jdk or Oracle on Ubuntu</a></h2>
+  
+  <p>
+    <h3>Note about installation of java on Ubuntu computer</h3>
+
+<p><code>bash
+$ sudo apt-get install openjdk-7-jdk
+</code></p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-08-03T23:25:29+03:00" pubdate data-updated="true">Aug 3<span>rd</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/install/'>install</a>, <a class='category' href='/blog/categories/java/'>java</a>, <a class='category' href='/blog/categories/jdk/'>jdk</a>, <a class='category' href='/blog/categories/linux/'>linux</a>, <a class='category' href='/blog/categories/openjdk/'>openjdk</a>, <a class='category' href='/blog/categories/oracle/'>oracle</a>, <a class='category' href='/blog/categories/ubuntu/'>ubuntu</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/08/03/install-open-jdk-or-oracle-on-ubuntu/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/08/01/integration-git-flow-on-rubymine/">Integration Git-flow on Rubymine</a></h2>
+  
+  <p>
+    <h3>How to integration git-flow on Rubymine ?</h3>
+
+<ul>
+<li>Firstly you should start to rubymine ide on your computer with <code>./rubymine.sh</code> then,</li>
+</ul>
+
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-08-01T23:02:42+03:00" pubdate data-updated="true">Aug 1<span>st</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/git-flow/'>git-flow</a>, <a class='category' href='/blog/categories/github/'>gitHub</a>, <a class='category' href='/blog/categories/note/'>note</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>, <a class='category' href='/blog/categories/rubymine/'>rubymine</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/08/01/integration-git-flow-on-rubymine/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/07/27/fix-after-destroy-user-model-try-add-user-model/">Fix After Destroy User Model Try Add User Model</a></h2>
+  
+  <p>
+    <p>After you made <code>rails destroy Users</code> and you want to create again <code>User</code> model, When you create, if you' re getting like this error,</p>
+
+<p>```bash</p>
+
+<pre><code>$ leylakapicmd@leylakapicmd:~/workspace/project-library$ rails g model User provider uid name oauth_token
+ /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/inflector/methods.rb:238:in const_get: uninitialized constant User (NameError)
+$ leylakapicmd@leylakapicmd:~/workspace/project-library$ rails g model User
+/home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/inflector/methods.rb:238:inconst_get': uninitialized constant User (NameError)
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/inflector/methods.rb:238:inblock in constantize'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/inflector/methods.rb:236:ineach'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/inflector/methods.rb:236:ininject'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/inflector/methods.rb:236:inconstantize'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise.rb:297:inget'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise/mapping.rb:77:into'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise/mapping.rb:72:inmodules'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise/mapping.rb:89:inroutes'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise/mapping.rb:156:indefault_used_route'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise/mapping.rb:66:ininitialize'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise.rb:331:innew'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise.rb:331:inadd_mapping'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise/rails/routes.rb:221:inblock in devise_for'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise/rails/routes.rb:220:ineach'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/devise-3.2.4/lib/devise/rails/routes.rb:220:indevise_for'
+from /home/leylakapicmd/workspace/project-library/config/routes.rb:3:inblock in &lt;top (required)&gt;'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/routing/route_set.rb:335:ininstance_exec'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/routing/route_set.rb:335:ineval_block'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/routing/route_set.rb:313:indraw'
+from /home/leylakapicmd/workspace/project-library/config/routes.rb:1:in&lt;top (required)&gt;'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/application/routes_reloader.rb:40:inblock in load_paths'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/application/routes_reloader.rb:40:ineach'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/application/routes_reloader.rb:40:inload_paths'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/application/routes_reloader.rb:16:inreload!'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/application/routes_reloader.rb:26:inblock in updater'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/file_update_checker.rb:75:incall'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/activesupport-4.1.1/lib/active_support/file_update_checker.rb:75:inexecute'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/application/routes_reloader.rb:27:inupdater'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/application/routes_reloader.rb:7:inexecute_if_updated'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/application/finisher.rb:71:inblock in &lt;module:Finisher&gt;'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/initializable.rb:30:ininstance_exec'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/initializable.rb:30:inrun'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/initializable.rb:55:inblock in run_initializers'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/2.0.0/tsort.rb:150:inblock in tsort_each'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/2.0.0/tsort.rb:183:inblock (2 levels) in each_strongly_connected_component'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/2.0.0/tsort.rb:219:ineach_strongly_connected_component_from'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/2.0.0/tsort.rb:182:inblock in each_strongly_connected_component'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/2.0.0/tsort.rb:180:ineach'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/2.0.0/tsort.rb:180:ineach_strongly_connected_component'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/2.0.0/tsort.rb:148:intsort_each'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/initializable.rb:54:inrun_initializers'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/application.rb:288:ininitialize!'
+from /home/leylakapicmd/workspace/project-library/config/environment.rb:5:in&lt;top (required)&gt;'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/application.rb:264:inrequire_environment!'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/commands/commands_tasks.rb:147:inrequire_application_and_environment!'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/commands/commands_tasks.rb:133:ingenerate_or_destroy'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/commands/commands_tasks.rb:51:ingenerate'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/commands/commands_tasks.rb:40:inrun_command!'
+from /home/leylakapicmd/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/railties-4.1.1/lib/rails/commands.rb:17:in&lt;top (required)&gt;'
+from bin/rails:4:inrequire'
+from bin/rails:4:in&lt;main&gt;'
+</code></pre>
+
+<p>```</p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-07-27T14:34:26+03:00" pubdate data-updated="true">Jul 27<span>th</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/user/'>User</a>, <a class='category' href='/blog/categories/destroy/'>destroy</a>, <a class='category' href='/blog/categories/devise/'>devise</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/g/'>g</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/07/27/fix-after-destroy-user-model-try-add-user-model/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/07/25/rails-fix-undefined-method/">Rails Fix Undefined Local Variable or Method</a></h2>
+  
+  <p>
+    <h3>How to fix rails undefined local variable or method &lsquo;confirmed_at&rsquo; ?</h3>
+
+<p>If you getting like,</p>
+
+<p><img src="../images/rails_undefined_error.png" alt="rails undefined" /></p>
+
+<p> and you thinking <strong>how can I fix ?</strong></p>
+
+<ul>
+<li>Firstly, you need to create migration</li>
+</ul>
+
+
+<p><code>bash
+rails g migration add_confirmable
+</code></p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-07-25T15:52:35+03:00" pubdate data-updated="true">Jul 25<span>th</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/bug/'>bug</a>, <a class='category' href='/blog/categories/confirmed-at/'>confirmed_at</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/fix/'>fix</a>, <a class='category' href='/blog/categories/generate/'>generate</a>, <a class='category' href='/blog/categories/local/'>local</a>, <a class='category' href='/blog/categories/method/'>method</a>, <a class='category' href='/blog/categories/migration/'>migration</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/variable/'>variable</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/07/25/rails-fix-undefined-method/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/07/24/rails-devise-gem-generator-error/">Rails Devise Gem Generator Error</a></h2>
+  
+  <p>
+    <h3>How to fix rails devise gem generate bug?</h3>
+
+<p>You use <code>devise</code> gem for add admin page or user page to your project. When you generate to your devise gem,
+you' re getting error to your project,  like ;</p>
+
+<p><code>bash
+$ rails g devise:install
+Could not find generator devise:install
+</code></p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-07-24T15:36:48+03:00" pubdate data-updated="true">Jul 24<span>th</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/gemfile/'>Gemfile</a>, <a class='category' href='/blog/categories/bug/'>bug</a>, <a class='category' href='/blog/categories/devise/'>devise</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/error/'>error</a>, <a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/generate/'>generate</a>, <a class='category' href='/blog/categories/install/'>install</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/07/24/rails-devise-gem-generator-error/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/07/22/rails-activeadmin-gem-bug/">Rails Active_admin Gem Bug</a></h2>
+  
+  <p>
+    <h3>Fix to admin_active gem bug</h3>
+
+<p>You add <code>adminactive</code> gem to your Gemfile, then when you&rsquo;re running to <code>bundle</code> on your terminal,  you' re getting like,</p>
+
+<p>```bash
+$ bundle
+Fetching gem metadata from <a href="https://rubygems.org/..........">https://rubygems.org/..........</a>
+Fetching additional metadata from <a href="https://rubygems.org/..">https://rubygems.org/..</a>
+Resolving dependencies&hellip;
+Bundler could not find compatible versions for gem &ldquo;rails&rdquo;:
+  In Gemfile:</p>
+
+<pre><code>activeadmin (~&gt; 0.6.3) ruby depends on
+  rails (&lt; 4, &gt;= 3.0.0) ruby
+rails (4.1.4
+</code></pre>
+
+<p>```</p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-07-22T15:55:03+03:00" pubdate data-updated="true">Jul 22<span>nd</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/gemfile/'>Gemfile</a>, <a class='category' href='/blog/categories/active-admin/'>active_admin</a>, <a class='category' href='/blog/categories/bug/'>bug</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/07/22/rails-activeadmin-gem-bug/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/07/17/error-compiling-sass-assets/">Error Compiling Sass Assets</a></h2>
+  
+  <p>
+    <h3>Middleman sass compiling error</h3>
+
+<p>While you were made web template with <code>haml</code> and <code>sass</code>, if you use middleman and bootstrap for your web template and your project give you like,</p>
+
+<p><code>sass
+Error compiling CSS asset
+NoMethodError: undefined method `font_path` for nil:NilClass
+</code>
+error.</p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-07-17T16:27:24+03:00" pubdate data-updated="true">Jul 17<span>th</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/assets/'>assets</a>, <a class='category' href='/blog/categories/bootstrap/'>bootstrap</a>, <a class='category' href='/blog/categories/compiling/'>compiling</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/middleman/'>middleman</a>, <a class='category' href='/blog/categories/sass/'>sass</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/07/17/error-compiling-sass-assets/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/07/16/add-search-form-to-rails-projects/">Add Simple Search Form to Rails Projects</a></h2>
+  
+  <p>
+    <h3>How can you add simple search form to rails project ?</h3>
+
+<p>You want to add search form, but you don&rsquo;t no.  <em>HOW?</em></p>
+
+<p>Let&rsquo;s start, firstly you should use <a href="https://github.com/activerecord-hackery/ransack">ransack</a> and
+<a href="https://github.com/mislav/will_paginate">will_paginate</a> gems in your <code>Gemfile</code> then you should write in
+terminal <code>bundle</code> .</p>
+
+<p>Then open controller which you want to add search bar, like ;</p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-07-16T19:47:15+03:00" pubdate data-updated="true">Jul 16<span>th</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/controller/'>controller</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/form/'>form</a>, <a class='category' href='/blog/categories/model/'>model</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>, <a class='category' href='/blog/categories/search/'>search</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/07/16/add-search-form-to-rails-projects/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/07/13/when-you-start-to-project/">Useful Gems</a></h2>
+  
+  <p>
+    <h3>When you start to project, which gems are useful ?</h3>
+
+<p>When you start a rails project, you can use these gems which useful for project.</p>
+
+<p>Gems are like,</p>
+
+<ul>
+<li><a href="https://rubygems.org/gems/blankable">blankable</a></li>
+<li><a href="https://rubygems.org/gems/simple_form">simple_form</a></li>
+<li><a href="https://rubygems.org/gems/model_to_locale">model_to_locale</a></li>
+<li><a href="https://rubygems.org/gems/responders">responders</a></li>
+<li><a href="https://rubygems.org/gems/will_paginate">will_paginate</a></li>
+<li><a href="https://rubygems.org/gems/will_paginate-bootstrap">will_paginate_bootstrap</a></li>
+<li><a href="https://rubygems.org/gems/better_errors">better_errors</a></li>
+</ul>
+
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-07-13T13:58:15+03:00" pubdate data-updated="true">Jul 13<span>th</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/github/'>gitHub</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ror/'>ror</a>, <a class='category' href='/blog/categories/rubygems/'>rubygems</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/07/13/when-you-start-to-project/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/07/10/how-to-make-a-release/">How to Make a Release ?</a></h2>
+  
+  <p>
+    <p>Make a release</p>
+
+<p>When you start to make a release, I think if you look at your commit it can be better</p>
+
+<p><code>bash
+git log
+</code>
+then if you make some wrong commit, you can delete wrong commit with</p>
+
+<p><code>bash
+git rebase -i HEAD~2
+</code>
+command.</p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-07-10T19:01:26+03:00" pubdate data-updated="true">Jul 10<span>th</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/github/'>gitHub</a>, <a class='category' href='/blog/categories/release/'>release</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/07/10/how-to-make-a-release/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/07/08/remove-log-and-idea-files-on-your-rails-project/">Remove Log and Idea Files on Your Rails Project</a></h2>
+  
+  <p>
+    <h3>How to remove log and idea files on your project ?</h3>
+
+<p>Remove idea files</p>
+
+<p><code>bash
+git rm -r --cached .idea
+</code>
+While you were remove, terminal gives error about it, you can try to below command :</p>
+
+<p><code>bash
+git rm -rf --cached .idea
+</code>
+Remove log files</p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-07-08T01:53:53+03:00" pubdate data-updated="true">Jul 8<span>th</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/github/'>gitHub</a>, <a class='category' href='/blog/categories/gitignore/'>gitignore</a>, <a class='category' href='/blog/categories/idea/'>idea</a>, <a class='category' href='/blog/categories/log/'>log</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/07/08/remove-log-and-idea-files-on-your-rails-project/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/07/06/git-stash/">Git Stash</a></h2>
+  
+  <p>
+    <h3>Command of Git Stash</h3>
+
+<p>Thanks to <code>git stash</code>, provide to stash the changes in a dirty working directory away.</p>
+
+<p><code>bash
+git stash
+</code></p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-07-06T19:12:29+03:00" pubdate data-updated="true">Jul 6<span>th</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/vcs/'>VCS</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/git-flow/'>git-flow</a>, <a class='category' href='/blog/categories/github/'>gitHub</a>, <a class='category' href='/blog/categories/stash/'>stash</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/07/06/git-stash/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/07/03/html5-canvas-javascript/">HTML5 Canvas Javascript</a></h2>
+  
+  <p>
+    <h3>Which libraries should I use in javascript for game development ?</h3>
+
+<p>When I looking for javascript library, I found some library is used <code>HTML5 Canvas Javascript</code> library
+for game development.</p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-07-03T16:10:34+03:00" pubdate data-updated="true">Jul 3<span>rd</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/canvas/'>canvas</a>, <a class='category' href='/blog/categories/development/'>development</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/frameworks/'>frameworks</a>, <a class='category' href='/blog/categories/game/'>game</a>, <a class='category' href='/blog/categories/html5/'>html5</a>, <a class='category' href='/blog/categories/javascript/'>javascript</a>, <a class='category' href='/blog/categories/libraries/'>libraries</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/07/03/html5-canvas-javascript/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/07/02/bounce-effect-with-css3/">Bounce Effect With CSS3</a></h2>
+  
+  <p>
+    <h3>How to give effect to arrow like bounce with CSS3 ?</h3>
+
+<p>You want to use arrow in your web-page with animation like bounce ball. <code>HOW ?</code></p>
+
+<p>Firstly, you should use this <code>haml</code> in your code, where you want to use <code>section</code>
+in your page,</p>
+
+<p>```haml
+%p.scroll-down
+   .bounce</p>
+
+<pre><code> %a{href: '#section2'}
+    %i.fa.fa-angle-double-down.fa-5x
+</code></pre>
+
+<p>```</p>
+
+<p>In your <code>sass</code> file, you should use</p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-07-02T00:56:56+03:00" pubdate data-updated="true">Jul 2<span>nd</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/animation/'>animation</a>, <a class='category' href='/blog/categories/bounce/'>bounce</a>, <a class='category' href='/blog/categories/css3/'>css3</a>, <a class='category' href='/blog/categories/effect/'>effect</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/font-awesome/'>font-awesome</a>, <a class='category' href='/blog/categories/haml/'>haml</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/07/02/bounce-effect-with-css3/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/06/21/note-about-write-data-on-haml/">Note About Write 'Data' on Haml ?</a></h2>
+  
+  <p>
+    <p>Write <code>data</code> attributes on HAML ?</p>
+
+<p>if you write on haml and use <code>data</code> attribute,</p>
+
+<p><code>haml
+%a{"data-slide" =&gt; "prev", href: "#carousel-example-generic", role: "button"}
+</code></p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-06-21T17:13:02+03:00" pubdate data-updated="true">Jun 21<span>st</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/attribute/'>attribute</a>, <a class='category' href='/blog/categories/data/'>data</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/haml/'>haml</a>, <a class='category' href='/blog/categories/target/'>target</a>, <a class='category' href='/blog/categories/toggle/'>toggle</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/06/21/note-about-write-data-on-haml/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/06/17/how-to-deploy-your-project-to-heroku/">How to Deploy Your Project to Heroku ?</a></h2>
+  
+  <p>
+    <h3>Deploy to Heroku</h3>
+
+<p><strong>You have a rails application, and finished your application want to deploy with <code>Heroku</code>,  HOW ?</strong></p>
+
+<p>You should open your rails application, and in your application find <code>Gemfile</code>. Open Gemfile write this command</p>
+
+<p><code>ruby
+gem 'heroku'
+</code>
+in your terminal</p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-06-17T16:10:38+03:00" pubdate data-updated="true">Jun 17<span>th</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/deploy/'>deploy</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/heroku/'>heroku</a>, <a class='category' href='/blog/categories/project/'>project</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/06/17/how-to-deploy-your-project-to-heroku/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/05/20/how-can-you-solve-yaml-exception-reading-bug-in-octopress/">How Can You Solve YAML Exception Reading Bug in Octopress ?</a></h2>
+  
+  <p>
+    <h3>Solve the YAML exception reading invalid byte sequence in US-ASCII</h3>
+
+<p>When you write</p>
+
+<p><code>bash
+bundle exec rake generate
+</code></p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-05-20T17:19:18+03:00" pubdate data-updated="true">May 20<span>th</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/us-ascii/'>US-ASCII</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/exception/'>exception</a>, <a class='category' href='/blog/categories/generate/'>generate</a>, <a class='category' href='/blog/categories/invalid/'>invalid</a>, <a class='category' href='/blog/categories/rake/'>rake</a>, <a class='category' href='/blog/categories/yaml/'>yaml</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/05/20/how-can-you-solve-yaml-exception-reading-bug-in-octopress/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/05/04/validation-methods/">Validation Methods</a></h2>
+  
+  <p>
+    <h3>Ruby on Rails Validation methods</h3>
+
+<ul>
+<li><strong>validates_presence_of</strong></li>
+</ul>
+
+
+<p>Attribute mustn&rsquo;t be blank(nil,false,[],{})</p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-05-04T20:39:52+03:00" pubdate data-updated="true">May 4<span>th</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/ror/'>RoR</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>, <a class='category' href='/blog/categories/validates/'>validates</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/05/04/validation-methods/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/04/26/rails-gem/">Rails Attributes: 'Attr_accessible'</a></h2>
+  
+  <p>
+    <p>If you get <em>attr_accesible</em>&rsquo;s bug, like</p>
+
+<p><code>
+Undefined method 'attr_accessible'
+</code></p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-04-26T14:44:39+03:00" pubdate data-updated="true">Apr 26<span>th</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/attr-accessible/'>attr_accessible</a>, <a class='category' href='/blog/categories/bundle/'>bundle</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/04/26/rails-gem/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/04/25/scaffolding-in-rails/">Scaffolding in Rails</a></h2>
+  
+  <p>
+    <p>In this post, I try to explain scaffolding in rails shortly.
+Firstly, Let&rsquo;s create rails project</p>
+
+<p><code>bash
+rails new blogging
+cd blogging
+</code></p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-04-25T00:21:58+03:00" pubdate data-updated="true">Apr 25<span>th</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/rake/'>rake</a>, <a class='category' href='/blog/categories/scaffold/'>scaffold</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/04/25/scaffolding-in-rails/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/04/24/ruby-on-rails-mvc/">Ruby on Rails MVC</a></h2>
+  
+  <p>
+    <h3>MVC in Ruby on Rails</h3>
+
+<p>MVC &ndash; model, view, controller</p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-04-24T00:25:52+03:00" pubdate data-updated="true">Apr 24<span>th</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/mvc/'>mvc</a>, <a class='category' href='/blog/categories/rails/'>rails,</a>, <a class='category' href='/blog/categories/ruby/'>ruby,</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/04/24/ruby-on-rails-mvc/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/04/23/setup-rubymine/">Setup Rubymine</a></h2>
+  
+  <p>
+    <h3>How I can set up RubyMine for my Ubuntu Desktop ?</h3>
+
+<ul>
+<li>Firstly, You can install rubymine on <a href="http://www.jetbrains.com/ruby/download/">RubyMine</a></li>
+</ul>
+
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-04-23T23:59:28+03:00" pubdate data-updated="true">Apr 23<span>rd</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/ruby/'>ruby,</a>, <a class='category' href='/blog/categories/rubymine/'>rubymine,</a>, <a class='category' href='/blog/categories/set-up/'>set_up,</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/04/23/setup-rubymine/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/04/20/how-is-the-internet-working-and-what-is-the-protocols/">How Is the Internet Working and What Is the Protocols</a></h2>
+  
+  <p>
+    <h3>How is the internet working ?</h3>
+
+<p>Internet like in real life, There are two sides for internet communication. While one of this is making request, another of this
+have to respond to this request. This loop is named</p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-04-20T02:00:37+03:00" pubdate data-updated="true">Apr 20<span>th</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/http/'>HTTP</a>, <a class='category' href='/blog/categories/https/'>HTTPS</a>, <a class='category' href='/blog/categories/ssl/'>SSL</a>, <a class='category' href='/blog/categories/tcp/'>TCP</a>, <a class='category' href='/blog/categories/tls/'>TLS</a>, <a class='category' href='/blog/categories/udp/'>UDP</a>, <a class='category' href='/blog/categories/url/'>URL</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/internet/'>internet</a>, <a class='category' href='/blog/categories/protocols/'>protocols</a>, <a class='category' href='/blog/categories/working/'>working</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/04/20/how-is-the-internet-working-and-what-is-the-protocols/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/04/19/recreate-octopress-blog-for-another-computer/">Recreate Octopress Blog for Another Computer</a></h2>
+  
+  <p>
+    <h3>How I recreate octopress blog another computer ?</h3>
+
+<p>I formatted my computer and then for my octopress blog <em>What can I do ?</em> <strong>reinstall</strong> or <strong>WHAT?</strong></p>
+
+<p>In this post I try to explain, if you have a new computer (after format, buy new computer&hellip;etc)but you have octopress blog
+how to entegrated each other?</p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-04-19T22:13:18+03:00" pubdate data-updated="true">Apr 19<span>th</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/computer/'>computer</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/octopress/'>octopress</a>, <a class='category' href='/blog/categories/recreate/'>recreate</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/04/19/recreate-octopress-blog-for-another-computer/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/04/19/ruby-programming-languages/">Ruby Programming Languages</a></h2>
+  
+  <p>
+    <h1>AB2014 &ndash; Ruby101 for beginners</h1>
+
+<ul>
+<li><a href="https://ruby-lang.org">Ruby-lang</a></li>
+<li><a href="https://nitrous.io">Nitrous</a></li>
+</ul>
+
+
+<p><em>These notes restored in Academic Information Education Mersin from Notes of <strong>Mr. Sıtkı Bagdat</strong> .</em></p>
+
+<h2>Ruby is a programming languages</h2>
+
+<ul>
+<li>Ruby, readable high level a programming languages.</li>
+<li>Started to developt at 1993 and published at 1995.</li>
+</ul>
+
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-04-19T10:52:45+03:00" pubdate data-updated="true">Apr 19<span>th</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/beginner/'>beginner</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/programming-languages/'>programming-languages</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/04/19/ruby-programming-languages/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/03/26/how-do-google-analytics-add-to-octopress/">How Do Google-analytics Add to Octopress?</a></h2>
+  
+  <p>
+    <h3>Google &ndash; analytics for Octopress</h3>
+
+<p>Firstly, if you don&rsquo;t have a google-analytics account, you should create it. Then when you create account, google-analytics provide to <strong>tracking ID</strong> for your octopress blog. This tracking ID like</p>
+
+<pre><code>AB-12345678-9
+</code></pre>
+
+<p>and then you should get this id, opened <em>_config.yml</em> in your octopress blog project,</p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-03-26T03:31:32+02:00" pubdate data-updated="true">Mar 26<span>th</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/google/'>google</a>, <a class='category' href='/blog/categories/google-analytics/'>google-analytics</a>, <a class='category' href='/blog/categories/octopress/'>octopress</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/03/26/how-do-google-analytics-add-to-octopress/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/03/22/how-create-tree-list-menu-with-haml/">How Create Tree - List Menu With HAML</a></h2>
+  
+  <p>
+    <h3>How to created tree &ndash; list menu with haml, sass, coffeescript ?</h3>
+
+<p>Firstly, we create middleman project and create</p>
+
+<pre><code>index.html.haml
+style.css.sass
+application.coffee
+</code></pre>
+
+<p>then we open <code>index.html.haml</code> file and we write your code like this,</p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-03-22T18:57:27+02:00" pubdate data-updated="true">Mar 22<span>nd</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/coffeescript/'>coffeescript</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/haml/'>haml</a>, <a class='category' href='/blog/categories/middleman/'>middleman</a>, <a class='category' href='/blog/categories/sass/'>sass</a>, <a class='category' href='/blog/categories/tree-list/'>tree-list</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/03/22/how-create-tree-list-menu-with-haml/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/03/22/how-to-change-dns-settings-on-ubuntu-desktop/">How to Change DNS Settings on Ubuntu Desktop?</a></h2>
+  
+  <p>
+    <h3>How to change DNS settings (ip address) or How to set up Google public DNS for Ubuntu Desktop?</h3>
+
+<p>Firstly, we should look at Google Public DNS.</p>
+
+<h5>What is the Google Public DNS?</h5>
+
+<p>Google DNS created by Prem Ramaswami at 2009 . Google Public DNS provide to free DNS settings.
+Without DNS, it wil be difficult to know IP address of websites which visit daily.</p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-03-22T15:17:32+02:00" pubdate data-updated="true">Mar 22<span>nd</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/dns/'>DNS,</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/ip/'>ip</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/03/22/how-to-change-dns-settings-on-ubuntu-desktop/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/03/15/blog-middleman/">Middleman Blog</a></h2>
+  
+  <p>
+    <h3>How to create middleman blog for middleman project?</h3>
+
+<ul>
+<li>Middleman supported blogging in your project or your blog.</li>
+</ul>
+
+
+<p>If you create a blog, I think you should with middleman blogging. I hear, you say &lsquo; WHY ? &rsquo;</p>
+
+<p>WHY?</p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-03-15T17:05:21+02:00" pubdate data-updated="true">Mar 15<span>th</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/blogging/'>blogging</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/middleman/'>middleman,</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/03/15/blog-middleman/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/03/06/how-to-show-nav-bar-according-to-scroll/">How to Show Nav-bar According to Scroll</a></h2>
+  
+  <p>
+    <h3>Change CSS class after scrolling &hellip;px down</h3>
+
+<p>I want to change menu or nav-bar according to scroll, How I can do this ?</p>
+
+<p>In this article, I can try to explain with an example.</p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-03-06T19:30:31+02:00" pubdate data-updated="true">Mar 6<span>th</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/css/'>CSS,</a>, <a class='category' href='/blog/categories/html/'>HTML</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/javascript/'>javascript,</a>, <a class='category' href='/blog/categories/jquery/'>jquery,</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/03/06/how-to-show-nav-bar-according-to-scroll/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/03/02/css-sprite-use-in-sass/">CSS - Sprite Use in SASS</a></h2>
+  
+  <p>
+    <h3>What is the CSS sprite? Why do we need to this ?</h3>
+
+<p>CSS Sprite means that combine all images in a single image file. The aim is that,
+when we upload several image file for use in css or sass file, you should upload to each.</p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-03-02T16:12:43+02:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/sprite/'>,Sprite,</a>, <a class='category' href='/blog/categories/css/'>CSS</a>, <a class='category' href='/blog/categories/sass/'>SASS</a>, <a class='category' href='/blog/categories/en/'>en</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/03/02/css-sprite-use-in-sass/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/03/01/brief-info-about-hash/">Brief Info About Hash</a></h2>
+  
+  <p>
+    <h3>What is the hash in ruby ?</h3>
+
+<p>Hash, hash, hash ?</p>
+
+<ul>
+<li>Hashes are one of the biggest property which separated another language in ruby.</li>
+<li>Hash was known <strong>associative array</strong> in another programming language.</li>
+<li>In hash, elements keep <strong>&lsquo;key => value&rsquo;</strong> format in ruby . Like</li>
+</ul>
+
+
+<p>``` ruby</p>
+
+<pre><code>hash_example = { 'name' =&gt; 'John', 'surname' =&gt; 'doe' }
+</code></pre>
+
+<p>```</p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-03-01T18:52:57+02:00" pubdate data-updated="true">Mar 1<span>st</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/hash/'>Hash</a>, <a class='category' href='/blog/categories/ruby/'>Ruby,</a>, <a class='category' href='/blog/categories/en/'>en</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/03/01/brief-info-about-hash/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/02/28/what-is-the-ruby-on-rails/">What Is the Ruby on Rails?</a></h2>
+  
+  <p>
+    <h2>What is the Ruby On Rails and How install?</h2>
+
+<p><strong>Ruby</strong></p>
+
+<ul>
+<li>Object oriented programming language</li>
+<li>Created in 1995 by Matz</li>
+<li>Used for many purpose, not only web app.</li>
+</ul>
+
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-02-28T18:25:39+02:00" pubdate data-updated="true">Feb 28<span>th</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ruby/'>ruby,</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/02/28/what-is-the-ruby-on-rails/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/02/27/middleman-create-haml-file/">Middleman Create Haml File</a></h2>
+  
+  <p>
+    <h3>How to create .haml file in middleman?</h3>
+
+<p>Firstly, you should go <a href="" title="http://middlemanapp.com/">middleman</a> and you need to <strong>install middleman</strong></p>
+
+<p><code>bash
+   gem install middleman
+</code></p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-02-27T13:49:10+02:00" pubdate data-updated="true">Feb 27<span>th</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/haml/'>Haml</a>, <a class='category' href='/blog/categories/middleman/'>Middleman,</a>, <a class='category' href='/blog/categories/en/'>en</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/02/27/middleman-create-haml-file/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/02/26/markdown-article-some-style/">Markdown Article Some Style</a></h2>
+  
+  <p>
+    <h2>Write article with markdown</h2>
+
+<ul>
+<li>When you start to write article with markdown, we can recognize to writing regularly and reading easily.</li>
+</ul>
+
+
+<p>Firstly</p>
+
+<h4>How to write header in markdown?</h4>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-02-26T17:59:49+02:00" pubdate data-updated="true">Feb 26<span>th</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/markdown/'>Markdown</a>, <a class='category' href='/blog/categories/en/'>en</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/02/26/markdown-article-some-style/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/02/26/how-to-add-aboout-page-in-octopress/">How to Add 'About' Page in Octopress</a></h2>
+  
+  <p>
+    <h3>How to add &lsquo;About&rsquo; page in Octopress?</h3>
+
+<p>I needs 2 step for create <code>About</code> page on navigation bar.</p>
+
+<ul>
+<li>Firstly create &lsquo;about page&rsquo;</li>
+</ul>
+
+
+<p>``` bash</p>
+
+<pre><code>rake new_page\["About"\]
+</code></pre>
+
+<p>```</p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-02-26T14:25:12+02:00" pubdate data-updated="true">Feb 26<span>th</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/octopress/'>Octopress</a>, <a class='category' href='/blog/categories/en/'>en</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/02/26/how-to-add-aboout-page-in-octopress/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/02/26/commands-of-github-for-setup/">Commands of Github for Setup</a></h2>
+  
+  <p>
+    <h3>What I can setup github and create repo?</h3>
+
+<ul>
+<li>Firstly we create github account from <a href="https://github.com/">github</a></li>
+<li>We create a new repo from &lsquo;+&rsquo; symbol.</li>
+<li>We named this repo and creating.</li>
+<li>After, We seems to this url</li>
+</ul>
+
+
+<p>``` bash</p>
+
+<pre><code>HTTP: https://github.com/username/repo_name.git
+SSH: git@github.com:username/repo_name.git
+</code></pre>
+
+<p>```</p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-02-26T12:31:12+02:00" pubdate data-updated="true">Feb 26<span>th</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/github/'>github</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/02/26/commands-of-github-for-setup/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/02/26/after-new-post/">After Create Octopress Blog Fixed Error</a></h2>
+  
+  <p>
+    <h3>When I setup Octopress Repository, error of</h3>
+
+<p>``` bash</p>
+
+<pre><code>rake deploy
+</code></pre>
+
+<p>```</p>
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-02-26T11:30:57+02:00" pubdate data-updated="true">Feb 26<span>th</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/octopress/'>Octopress</a>, <a class='category' href='/blog/categories/en/'>en</a>
+  
+</span>
+
+
+  </span>
+
+  
+    <a class="full-article-link pull-right" rel="full-article" href="/blog/2014/02/26/after-new-post/">Read more</a>
+  
+</article>
+
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <article>
+  <h2><a href="/blog/2014/02/26/meaning-of-abbreviations/">Meaning of Abbreviations</a></h2>
+  
+  <p>
+    <h2>What is the meaning of abbreviation for HTML, CSS, &hellip;?</h2>
+
+<ul>
+<li>HTML : Hyper text markup language</li>
+<li>CSS : Cascading Stylesheet</li>
+<li>Haml : HTML Abstraction markup language</li>
+<li>SASS: Syntactically Awesome Stylesheets</li>
+</ul>
+
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-02-26T10:04:36+02:00" pubdate data-updated="true">Feb 26<span>th</span>, 2014</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/abbreviation/'>abbreviation</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/meaning/'>meaning</a>
+  
+</span>
+
+
+  </span>
+
+  
+</article>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="her-row">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-1">
+  <a href="/"><h4>Home</h4></a>
+</div>
+
+<div class="col-md-2">
+  <div class="social-icon-list">
+    
+    <a href="https://twitter.com/leylakapi"><img src="/images/glyphicons_social_31_twitter.png"/></a>
+    
+
+    
+    <a href="https://github.com/leylakapi"><img src="/images/glyphicons_social_21_github.png"/></a>
+    
+
+    
+    <a href="https://linkedin.com/in/leylakapi"><img src="/images/glyphicons_social_17_linked_in.png"/></a>
+    
+
+    
+    <a href="mailto:leylakapi@gmail.com"><img src="/images/glyphicons_social_39_e-mail.png"/></a>
+    
+  </div>
+</div>
+
+<div class="pull-right">
+  <h4>Created by <a href="http://www.leylakapi.com/">Leyla Kapi</a></h4>
+</div>
+
+
+    </div>
+  </div>
+</footer>
+
+    
+  </body>
+</html>
+
+

@@ -1,0 +1,278 @@
+
+
+<html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>How Is the Internet Working and What Is the Protocols - Leyla's Blog</title>
+  <!--<meta name="author" content="Leyla KAPI">-->
+
+  
+  <meta name="description" content="How Is the Internet Working and What Is the Protocols written Apr 20th, 2014 in HTTP, HTTPS, SSL, TCP, TLS, UDP, URL, en, internet, protocols, &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://leylaKapi.github.io/blog/2014/04/20/how-is-the-internet-working-and-what-is-the-protocols">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Leyla's Blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-49378525-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+  <body class="home-template nav-closed">
+    <a href="/" class="home-icon">
+      <img src="/images/home.png"/>
+    </a>
+
+    <article role="article" class="full-single-article">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h1>How Is the Internet Working and What Is the Protocols</h1>
+        <div class="meta">
+          written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-04-20T02:00:37+03:00" pubdate data-updated="true">Apr 20<span>th</span>, 2014</time>
+          
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/http/'>HTTP</a>, <a class='category' href='/blog/categories/https/'>HTTPS</a>, <a class='category' href='/blog/categories/ssl/'>SSL</a>, <a class='category' href='/blog/categories/tcp/'>TCP</a>, <a class='category' href='/blog/categories/tls/'>TLS</a>, <a class='category' href='/blog/categories/udp/'>UDP</a>, <a class='category' href='/blog/categories/url/'>URL</a>, <a class='category' href='/blog/categories/en/'>en</a>, <a class='category' href='/blog/categories/internet/'>internet</a>, <a class='category' href='/blog/categories/protocols/'>protocols</a>, <a class='category' href='/blog/categories/working/'>working</a>
+  
+</span>
+
+
+        </div>
+        <h3>How is the internet working ?</h3>
+
+<p>Internet like in real life, There are two sides for internet communication. While one of this is making request, another of this
+have to respond to this request. This loop is named</p>
+
+<!-- more -->
+
+
+<pre><code>request - respond
+</code></pre>
+
+<p>or</p>
+
+<pre><code>client-server
+</code></pre>
+
+<p>Web relation client &ndash; server</p>
+
+<p><strong>client</strong> => <strong>server</strong></p>
+
+<pre><code>     request
+</code></pre>
+
+<p><strong>client</strong> &lt;= <strong>server</strong></p>
+
+<pre><code>     respond
+</code></pre>
+
+<p>Now, I try to explain when it occur this relation, Which process do occur?</p>
+
+<ul>
+<li><p>This process can be with protocols, protocols What?</p>
+
+<ul>
+<li>Protocols, like rules, this means that ; there are rules for connection two computer(client-server) each other to
+internet.This rules are named protocols.</li>
+</ul>
+</li>
+<li><p>There are many type of Protocols like HTTP(Hyper Text Transfer Protocols), TCP(Transmission Control Protocols),
+UDP(User Dtagram Protocol), SSL(Secure Socket Layer), TLS(Transport Layer Security),FTP(File Transfer Protocols) &hellip;etc.</p>
+
+<p>I try to explain several of the above protocols.</p></li>
+<li><p>HTTP (Hyper Text Transfer Protocol)</p></li>
+</ul>
+
+
+<p>HTTP is which distribute in a source, which access to everyone for apply to hyper information system like text, graphics, video ..etc
+In brief HTTP is a set of rules.
+Also The means of name that, When we transferring text using this protocols.</p>
+
+<p>In World using the default port number, showing like this <em>:80</em> . When we write url, automatically added to ending of URL,but it
+is hidden.</p>
+
+<ul>
+<li>TCP (Transmission Control Protocol)</li>
+</ul>
+
+
+<p>TCP provide to security of data exchange. The clients create a contact with each other, in this contact provide to data exchange
+and data transmitted in the correct order. Then TCP controlled to data whether it has reached by sending a message.
+ It is very slow, because controlled data step by step.</p>
+
+<ul>
+<li>UDP (User Datagram Protocol)</li>
+</ul>
+
+
+<p>UDP is fast transmission data according to TCP but unsafe data . The aim is fast. If we compare with TCP. TCP and UDP similar
+but TCP is very slow. If sending <em>.rar</em> or <em>.zip</em> files, should use TCP because data is important. if you send to video,
+should use UDP because fast is important.</p>
+
+<ul>
+<li>SSL (Secure Socket Layer)</li>
+</ul>
+
+
+<p>SSl development for provide secuirty and privacy of transmission data on network. In SSL, before sending to information
+encrypted, only decrypted by computer which receiver. This provide privacy data exchange.</p>
+
+<pre><code>https  # 's' means that security .
+</code></pre>
+
+<ul>
+<li>TLS (Transport Layer Security)</li>
+</ul>
+
+
+<p>TLS similar to SSL. Differences to SSL is that, process of connection occur simple and without encryption, when data transmission can be done,
+security certificate engaged and then can be security.</p>
+
+<ul>
+<li><p>URL (Uniform Resources Locator)</p>
+
+<p> access_method//:server_name[:port]/site</p></li>
+</ul>
+
+
+<p>I hope this article help you for understanding internet works</p>
+
+
+        <hr class="divider-short"/>
+
+        
+        <section>
+          <h1>Comments</h1>
+          <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+        </section>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+<hr class="divider-short"/>
+
+<div class="archive-link">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        
+          <a class="pull-left" href="/blog/2014/04/19/recreate-octopress-blog-for-another-computer/" title="Previous Post: Recreate octopress blog for another computer">&laquo; Previous: Recreate octopress blog for another computer</a>
+        
+
+        
+          <a class="pull-right" href="/blog/2014/04/23/setup-rubymine/" title="Next Post: Setup Rubymine">Next: Setup Rubymine &raquo;</a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="her-row">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-1">
+  <a href="/"><h4>Home</h4></a>
+</div>
+
+<div class="col-md-2">
+  <div class="social-icon-list">
+    
+    <a href="https://twitter.com/leylakapi"><img src="/images/glyphicons_social_31_twitter.png"/></a>
+    
+
+    
+    <a href="https://github.com/leylakapi"><img src="/images/glyphicons_social_21_github.png"/></a>
+    
+
+    
+    <a href="https://linkedin.com/in/leylakapi"><img src="/images/glyphicons_social_17_linked_in.png"/></a>
+    
+
+    
+    <a href="mailto:leylakapi@gmail.com"><img src="/images/glyphicons_social_39_e-mail.png"/></a>
+    
+  </div>
+</div>
+
+<div class="pull-right">
+  <h4>Created by <a href="http://www.leylakapi.com/">Leyla Kapi</a></h4>
+</div>
+
+
+    </div>
+  </div>
+</footer>
+
+    
+      
+
+<script type="text/javascript">
+      var disqus_shortname = 'leylasblog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://leylaKapi.github.io/blog/2014/04/20/how-is-the-internet-working-and-what-is-the-protocols/';
+        var disqus_url = 'http://leylaKapi.github.io/blog/2014/04/20/how-is-the-internet-working-and-what-is-the-protocols/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//go.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+    
+  </body>
+</html>
+
+
