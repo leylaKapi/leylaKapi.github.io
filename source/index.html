@@ -2,17 +2,37 @@
 layout: default
 ---
 
-{% assign index = true %}
-{% for post in paginator.posts %}
-{% assign content = post.content %}
-    <article class="post">{% include article.html %}</article>
-{% endfor %}
-<nav id="pagenavi">
-    {% if paginator.previous_page %}
-        <a href="{{paginator.previous_page}}" class="prev">Prev</a>
-    {% endif %}
-    {% if paginator.next_page %}
-        <a href="{{paginator.next_page}}" class="next">Next</a>
-    {% endif %}
-    <div class="center"><a href="{{ root_url }}/blog/archives">Blog Archives</a></div>
-</nav>
+<div class="home-page">
+  <div class="hero">
+    {% include custom/hero.html %}
+  </div>
+
+  <div class="home-field">
+    <div class="home-landing her-row">
+      <div class="container">
+        <div class="row">
+          {% include custom/home_landing_row.html %}
+        </div>
+      </div>
+    </div>
+
+    <div class="article-list">
+      <div class="container">
+        {% for post in paginator.posts %}
+          {% assign content = post.content %}
+          <div class="row">
+            <div class="col-md-offset-3 col-md-6">
+              {% include article_listing.html %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <hr class="divider-short"/>
+
+    <div class="archive-link">
+      <h3><a href="/posts/">All Posts</a></h3>
+    </div>
+  </div>
+</div>

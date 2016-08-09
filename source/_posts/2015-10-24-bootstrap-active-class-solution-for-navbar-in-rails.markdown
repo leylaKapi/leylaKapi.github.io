@@ -17,7 +17,7 @@ module ApplicationHelper
 end
 ```
 
-<!-- more -->
+<!--more-->
 
 In your views from bootstrap classes should be like,
 

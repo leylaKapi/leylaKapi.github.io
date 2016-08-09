@@ -13,7 +13,7 @@ categories: Octopress en
     rake deploy
 ```
 
-<!-- more -->
+<!--more-->
 
 I setup the Octopress, and I create,
 
