@@ -4,7 +4,7 @@
   <title><![CDATA[Category: error | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/error/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2016-08-09T14:00:32+03:00</updated>
+  <updated>2016-08-11T10:31:53+03:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla KAPI]]></name>
@@ -12,6 +12,35 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Bundle error middleman El-capitan]]></title>
+    <link href="http://leylaKapi.github.io/blog/2016/08/10/bundle-error-middleman-elcapitan/"/>
+    <updated>2016-08-10T00:00:00+03:00</updated>
+    <id>http://leylaKapi.github.io/blog/2016/08/10/bundle-error-middleman-elcapitan</id>
+    <content type="html"><![CDATA[<p>If your computer has OSX 10.11 El Capitan, and try to create middleman project then  write <code>bundle</code> to install gems. But you can get</p>
+
+<p><code>bash
+Installing eventmachine 1.0.7 with native extensions
+Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
+In file included from binder.cpp:20:
+./project.h:116:10 fatal error: 'openssl/ssl.h' file not found
+include &lt;openssl/ssl.h&gt;
+1 error generated
+</code></p>
+
+<p>like above error. You have to solve problem with <code>openssl</code> .
+For fix it ;</p>
+
+<p><code>bash
+brew link openssl --force
+</code></p>
+
+<p>then you can run <code>bundle</code> now. For detail about this problem please look at <a href="https://github.com/eventmachine/eventmachine/issues/643">this link</a></p>
+
+<p>I hope helped to you .</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Tricks on Rails]]></title>

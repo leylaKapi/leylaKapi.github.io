@@ -14,7 +14,7 @@
   <!--<meta name="author" content="Leyla KAPI">-->
 
   
-  <meta name="description" content="All Posts Bootstrap Active Class Solution for Navbar in Rails Sometimes while you are adding bootstrap to your rails app, you can getting some &hellip;">
+  <meta name="description" content="All Posts Bundle Error Middleman El-capitan If your computer has OSX 10.11 El Capitan, and try to create middleman project then write bundle to &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -63,6 +63,80 @@
 
   <div class="article-list">
     <div class="container">
+      
+      
+      <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+          <article>
+  <h2><a href="/blog/2016/08/10/bundle-error-middleman-elcapitan/">Bundle Error Middleman El-capitan</a></h2>
+  
+  <p>
+    <p>If your computer has OSX 10.11 El Capitan, and try to create middleman project then  write <code>bundle</code> to install gems. But you can get</p>
+
+
+<p><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>Installing eventmachine 1.0.7 with native extensions
+</span><span class='line'>Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
+</span><span class='line'>In file included from binder.cpp:20:
+</span><span class='line'>./project.h:116:10 fatal error: <span class="s1">&#39;openssl/ssl.h&#39;</span> file not found
+</span><span class='line'>include &lt;openssl/ssl.h&gt;
+</span><span class='line'>1 error generated
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p>like above error. You have to solve problem with <code>openssl</code> .
+For fix it ;</p>
+
+
+<p><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>brew link openssl &mdash;force
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p>then you can run <code>bundle</code> now. For detail about this problem please look at <a href="https://github.com/eventmachine/eventmachine/issues/643">this link</a></p>
+
+
+
+
+<p>I hope helped to you .</p>
+
+
+  </p>
+  <span class="meta">
+    written 
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2016-08-10T00:00:00+03:00" pubdate data-updated="true">Aug 10<span>th</span>, 2016</time>
+    
+
+in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/bundle/'>bundle</a>, <a class='category' href='/blog/categories/elcapitan/'>elcapitan</a>, <a class='category' href='/blog/categories/error/'>error</a>, <a class='category' href='/blog/categories/gem/'>gem</a>, <a class='category' href='/blog/categories/middleman/'>middleman</a>, <a class='category' href='/blog/categories/openssl/'>openssl</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>
+  
+</span>
+
+
+  </span>
+
+  
+</article>
+
+        </div>
+      </div>
       
       
       <div class="row">
