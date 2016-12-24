@@ -16,12 +16,17 @@ single: true
 
         <hr class="divider-short"/>
 
+        <div id="adsense_thread">{% include asides/advertise.html %}</div>
+
         {% if site.disqus_short_name and page.comments == true %}
         <section>
           <h1>Comments</h1>
           <div id="disqus_thread" aria-live="polite">{% include post/disqus_thread.html %}</div>
         </section>
         {% endif %}
+
+        <div id="thread">{% include asides/advertise.html %}</div>
+
       </div>
     </div>
   </div>
