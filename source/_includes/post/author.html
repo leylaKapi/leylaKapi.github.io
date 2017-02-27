@@ -5,4 +5,61 @@
 {% else %}
   {% assign author = site.author %}
 {% endif %}
-{% if author %}<span class="byline author vcard">Posted by <span class="fn">{{ author }}</span></span>{% endif %}
+{% if author %}
+
+<figure class="author-image">
+    <span class="img" href="/about" style="background-image: url(/images/avatar.jpg)"><span class="hidden">Picture</span></span>
+</figure>
+
+<section class="author">
+    <h4><span class="byline author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="fn" itemprop="name">{{ author }}</span></span></h4>
+
+    <div class="author-meta">
+        <span class="author-link icon-link"><i class="fa fa-link" aria-hidden="true"></i> <a href="{{site.url}}">{{site.url}}</a></span>
+    </div>
+</section>
+
+<hr>
+
+<section class="share">
+    {% unless page.sharing == false %}
+    <h4>Share this post</h4>
+    {% assign url = page.url|remove:'index.html' %}
+    <a class="fa fa-twitter" href="https://twitter.com/intent/tweet?url={{site.url}}{{url}};" 
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+        <span class="hidden">Twitter</span>
+    </a>
+    <a class="fa fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{site.url}}{{url}}" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+        <span class="hidden">Facebook</span>
+    </a>
+    <a class="fa fa-google-plus" href="https://plus.google.com/share?url={{site.url}}{{url}}" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+        <span class="hidden">Google+</span>
+    </a>
+    {% endunless %}
+</section>
+
+{% endif %}
+
+
+<!--
+<footer class="post-footer">
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=Instant%20Movie%20Streamer%20v3%20Release&amp;url=http://iyask.me/instant-movie-streamer-v3-release/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://iyask.me/instant-movie-streamer-v3-release/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http://iyask.me/instant-movie-streamer-v3-release/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+
+        </footer>
+
+
+-->

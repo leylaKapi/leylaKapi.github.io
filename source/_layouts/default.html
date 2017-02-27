@@ -1,28 +1,37 @@
-{% capture root_url %}{{ site.root | strip_slash }}{% endcapture %}
-{% capture root_url %}{{ site.root | strip_slash }}{% endcapture %}
-<html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
-{% include head.html %}
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <script>
-      (adsbygoogle = window.adsbygoogle || []).push({
-          google_ad_client: "ca-pub-5308581030972488",
-          enable_page_level_ads: true
-      });
-  </script>
-  <body class="home-template nav-closed">
-    <a href="/" class="home-icon">
-      <img src="/images/home.png"/>
-    </a>
-
-    {{ content | expand_urls: root_url }}
-    {% include footer.html %}
-    {% if site.disqus_short_name and page.comments == true %}
-      {% include disqus.html %}
-    {% endif %}
+{% capture root_url %}{{ site.root | strip_slash }}{% endcapture %}{% include head.html %}
+  <body {% if page.body_id %} id="{{ page.body_id }}" {% endif %} {% if page.sidebar == false %} class="no-sidebar" {% endif %} {% if page.sidebar == 'collapse' or site.sidebar == 'collapse' %} class="collapse-sidebar sidebar-footer" {% endif %}>
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    <div id="wrap">
+      {% if page.location == 'index' %}
+      <div id="banner-image">
+        <div class="layer">
+          <div id="banner-text">
+            <h1 class="page-title">{{ site.title }}</h1>
+            <p class="page-desc">
+              {{ site.subtitle }}<br>
+            </p>
+            <br>
+            <br>
+            <div class="page-links center">
+              <ul class="index-nav">
+                  {% include navigation_links.html %}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% else %}
+        <header role="banner">
+          {% include navigation.html %}
+        </header>
+      {% endif %}
+      <div id="main" role="main" class="container">
+        <div id="content">
+          {{ content | expand_urls: root_url }}
+        </div>
+      </div>
+    </div>
+    <footer role="contentinfo">{% include footer.html %}</footer>
+    {% include after_footer.html %}
   </body>
 </html>
-
-

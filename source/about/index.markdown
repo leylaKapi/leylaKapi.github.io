@@ -1,15 +1,15 @@
 ---
 layout: page
-title: "About"
-date: 2014-02-26 10:25
+title: "about"
+date: 2017-02-27 10:06
 comments: true
 sharing: true
 footer: true
 ---
 Hi ,
 
-I' m leyla . I' m computer engineering student at [Pamukkale University](http://www.pau.edu.tr) and [Polytechnic of Medimurje University](http://www.mev.hr/). 
-Also I'm web developer at [lab2023](http://www.lab2023.com/). This blog like a diary which I finding issue, or solve problem on my apps . In shortly, this blog make easier to remember all works and errors on my apps.
+I' m leyla . I' m computer engineer. I'm computer engineering master student at Pamukkale University. I graduated from  [Pamukkale University](http://www.pau.edu.tr) and [Polytechnic of Medimurje University](http://www.mev.hr/).
+Also I worked as a web developer at [lab2023](http://www.lab2023.com/). This blog like a diary which I finding issue, or solve problem on my apps . In shortly, this blog make easier to remember all works and errors on my apps.
 I works on;
 
 - [Ruby](https://www.ruby-lang.org/en/),

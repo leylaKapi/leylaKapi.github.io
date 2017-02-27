@@ -1,0 +1,91 @@
+.post-footer {
+	position: relative;
+    margin: 6rem 0 0 0;
+    padding: 3rem 0 0 0;
+    border-top: #EBF2F6 1px solid;
+}
+
+.author-image {
+	box-sizing: border-box;
+    display: block;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    margin-left: -40px;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    overflow: hidden;
+    padding: 6px;
+    background: #fff;
+    z-index: 2;
+    box-shadow: #E7EEF2 0 0 0 1px;
+}
+
+.author-image .img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 100%;
+ }
+
+ .author .author-meta, .author .author-meta a {
+    color: #9EABB3 !important;
+ }
+
+.post-footer .author {
+    //margin-right: 180px;
+}
+
+.post-footer h4 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.post-footer .share {
+    position: absolute;
+    top: 4rem;
+    right: 0;
+    width: 140px;
+}
+
+@media only screen and (max-width: 500px) {
+    .post-footer .share {
+        position: static;
+        text-align: center;
+        width: auto;
+    }
+
+    .post-footer .author {
+        text-align: center;
+    }
+
+
+}
+
+.post-footer .share a {
+    font-size: 1.8rem;
+    display: inline-block;
+    margin: 1rem 1.6rem 1.6rem 0;
+    color: #BBC7CC;
+    text-decoration: none;
+}
+
+.fa {
+	transition: all 0.5s ease 0s;
+}
+
+.fa-twitter:hover {
+	color: #55acee !important;
+}
+
+.fa-facebook:hover {
+	color: #3b5998 !important;
+}
+
+.fa-google-plus:hover {
+	color: red !important;
+}
