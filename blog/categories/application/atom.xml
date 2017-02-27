@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: application | Leyla's Blog]]></title>
+  <title><![CDATA[Category: Application | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/application/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2016-12-24T19:52:07+02:00</updated>
+  <updated>2017-02-27T13:20:35+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla KAPI]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Bootstrap active class solution for navbar in rails]]></title>
+    <title type="html"><![CDATA[Bootstrap Active Class Solution for Navbar in Rails]]></title>
     <link href="http://leylaKapi.github.io/blog/2015/10/24/bootstrap-active-class-solution-for-navbar-in-rails/"/>
     <updated>2015-10-24T17:32:38+03:00</updated>
     <id>http://leylaKapi.github.io/blog/2015/10/24/bootstrap-active-class-solution-for-navbar-in-rails</id>
@@ -69,7 +69,7 @@ end
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[How to use getExtra and putExtra in Android for string data]]></title>
+    <title type="html"><![CDATA[How to Use getExtra and putExtra in Android for String Data]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/11/08/how-to-use-getextra-and-putextra-in-android-for-string-data/"/>
     <updated>2014-11-08T14:21:19+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/11/08/how-to-use-getextra-and-putextra-in-android-for-string-data</id>

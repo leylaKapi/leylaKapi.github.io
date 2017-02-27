@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: method | Leyla's Blog]]></title>
+  <title><![CDATA[Category: Method | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/method/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2016-12-24T19:52:07+02:00</updated>
+  <updated>2017-02-27T13:20:35+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla KAPI]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Note: Go back to previous activity on Android]]></title>
+    <title type="html"><![CDATA[Note: Go Back to Previous Activity on Android]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/11/07/note-go-back-to-previous-activity-on-android/"/>
     <updated>2014-11-07T17:33:09+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/11/07/note-go-back-to-previous-activity-on-android</id>
@@ -60,7 +60,7 @@ public void ReturnHome(View view){</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Rails fix undefined local variable or method]]></title>
+    <title type="html"><![CDATA[Rails Fix Undefined Local Variable or Method]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/07/25/rails-fix-undefined-method/"/>
     <updated>2014-07-25T15:52:35+03:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/07/25/rails-fix-undefined-method</id>

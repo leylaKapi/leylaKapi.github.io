@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: sass | Leyla's Blog]]></title>
+  <title><![CDATA[Category: Sass | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/sass/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2016-12-24T19:52:07+02:00</updated>
+  <updated>2017-02-27T13:20:35+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla KAPI]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Bootstrap active class solution for navbar in rails]]></title>
+    <title type="html"><![CDATA[Bootstrap Active Class Solution for Navbar in Rails]]></title>
     <link href="http://leylaKapi.github.io/blog/2015/10/24/bootstrap-active-class-solution-for-navbar-in-rails/"/>
     <updated>2015-10-24T17:32:38+03:00</updated>
     <id>http://leylaKapi.github.io/blog/2015/10/24/bootstrap-active-class-solution-for-navbar-in-rails</id>
@@ -69,7 +69,7 @@ end
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[How to create scroll-page for rails project]]></title>
+    <title type="html"><![CDATA[How to Create Scroll-page for Rails Project]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/09/17/how-to-create-scroll-page-for-rails-project/"/>
     <updated>2014-09-17T17:05:01+03:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/09/17/how-to-create-scroll-page-for-rails-project</id>
@@ -601,7 +601,7 @@ for <a href="https://github.com/peachananr/onepage-scroll">detail</a>.</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Error compiling sass assets]]></title>
+    <title type="html"><![CDATA[Error Compiling Sass Assets]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/07/17/error-compiling-sass-assets/"/>
     <updated>2014-07-17T16:27:24+03:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/07/17/error-compiling-sass-assets</id>
@@ -642,7 +642,7 @@ bundle update middleman-sprockets
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[How create tree - list menu with HAML]]></title>
+    <title type="html"><![CDATA[How Create Tree - List Menu With HAML]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/03/22/how-create-tree-list-menu-with-haml/"/>
     <updated>2014-03-22T18:57:27+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/03/22/how-create-tree-list-menu-with-haml</id>

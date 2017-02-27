@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: deploy | Leyla's Blog]]></title>
+  <title><![CDATA[Category: Deploy | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/deploy/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2016-12-24T19:52:07+02:00</updated>
+  <updated>2017-02-27T13:20:35+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla KAPI]]></name>
@@ -343,7 +343,7 @@ Ayrıca deploy edilip edilmediğinide sistemde görmek için <em>Source Code > R
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[How to deploy your project to Heroku ?]]></title>
+    <title type="html"><![CDATA[How to Deploy Your Project to Heroku ?]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/06/17/how-to-deploy-your-project-to-heroku/"/>
     <updated>2014-06-17T16:10:38+03:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/06/17/how-to-deploy-your-project-to-heroku</id>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: sticker | Leyla's Blog]]></title>
+  <title><![CDATA[Category: Sticker | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/sticker/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2016-12-24T19:52:07+02:00</updated>
+  <updated>2017-02-27T13:20:35+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla KAPI]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Note: How to install sticker-notes to Ubuntu Desktop?]]></title>
+    <title type="html"><![CDATA[Note: How to Install Sticker-notes to Ubuntu Desktop?]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/11/02/note-how-to-install-stick-notes-to-ubuntu/"/>
     <updated>2014-11-02T21:36:43+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/11/02/note-how-to-install-stick-notes-to-ubuntu</id>

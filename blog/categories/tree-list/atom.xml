@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: tree-list | Leyla's Blog]]></title>
+  <title><![CDATA[Category: Tree-list | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/tree-list/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2016-12-24T19:52:07+02:00</updated>
+  <updated>2017-02-27T13:20:35+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla KAPI]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[How create tree - list menu with HAML]]></title>
+    <title type="html"><![CDATA[How Create Tree - List Menu With HAML]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/03/22/how-create-tree-list-menu-with-haml/"/>
     <updated>2014-03-22T18:57:27+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/03/22/how-create-tree-list-menu-with-haml</id>

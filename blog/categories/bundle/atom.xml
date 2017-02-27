@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: bundle | Leyla's Blog]]></title>
+  <title><![CDATA[Category: Bundle | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/bundle/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2016-12-24T19:52:07+02:00</updated>
+  <updated>2017-02-27T13:20:35+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla KAPI]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Bundle error middleman El-capitan]]></title>
+    <title type="html"><![CDATA[Bundle Error Middleman El-capitan]]></title>
     <link href="http://leylaKapi.github.io/blog/2016/08/10/bundle-error-middleman-elcapitan/"/>
     <updated>2016-08-10T00:00:00+03:00</updated>
     <id>http://leylaKapi.github.io/blog/2016/08/10/bundle-error-middleman-elcapitan</id>
@@ -43,7 +43,7 @@ brew link openssl --force
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Rails attributes: 'attr_accessible']]></title>
+    <title type="html"><![CDATA[Rails Attributes: 'Attr_accessible']]></title>
     <link href="http://leylaKapi.github.io/blog/2014/04/26/rails-gem/"/>
     <updated>2014-04-26T14:44:39+03:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/04/26/rails-gem</id>

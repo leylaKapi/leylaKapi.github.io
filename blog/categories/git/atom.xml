@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: git | Leyla's Blog]]></title>
+  <title><![CDATA[Category: Git | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/git/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2016-12-24T19:52:07+02:00</updated>
+  <updated>2017-02-27T13:20:35+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla KAPI]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Change github config editor]]></title>
+    <title type="html"><![CDATA[Change Github Config Editor]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/08/16/change-github-config-editor/"/>
     <updated>2014-08-16T22:28:27+03:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/08/16/change-github-config-editor</id>
@@ -37,7 +37,7 @@ git config --global core.editor "nano"
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Integration git-flow on Rubymine]]></title>
+    <title type="html"><![CDATA[Integration Git-flow on Rubymine]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/08/01/integration-git-flow-on-rubymine/"/>
     <updated>2014-08-01T23:02:42+03:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/08/01/integration-git-flow-on-rubymine</id>
@@ -64,7 +64,7 @@ then <em>restart rubymine</em> .</li>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[How to make a release ?]]></title>
+    <title type="html"><![CDATA[How to Make a Release ?]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/07/10/how-to-make-a-release/"/>
     <updated>2014-07-10T19:01:26+03:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/07/10/how-to-make-a-release</id>
@@ -149,7 +149,7 @@ I hope help to you.</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Remove log and idea files on your Rails Project]]></title>
+    <title type="html"><![CDATA[Remove Log and Idea Files on Your Rails Project]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/07/08/remove-log-and-idea-files-on-your-rails-project/"/>
     <updated>2014-07-08T01:53:53+03:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/07/08/remove-log-and-idea-files-on-your-rails-project</id>

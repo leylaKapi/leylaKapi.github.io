@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: exception | Leyla's Blog]]></title>
+  <title><![CDATA[Category: Exception | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/exception/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2016-12-24T19:52:07+02:00</updated>
+  <updated>2017-02-27T13:20:35+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla KAPI]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[How can you solve YAML exception reading bug in octopress ?]]></title>
+    <title type="html"><![CDATA[How Can You Solve YAML Exception Reading Bug in Octopress ?]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/05/20/how-can-you-solve-yaml-exception-reading-bug-in-octopress/"/>
     <updated>2014-05-20T17:19:18+03:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/05/20/how-can-you-solve-yaml-exception-reading-bug-in-octopress</id>

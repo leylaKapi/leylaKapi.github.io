@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: gitignore | Leyla's Blog]]></title>
+  <title><![CDATA[Category: Gitignore | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/gitignore/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2016-12-24T19:52:07+02:00</updated>
+  <updated>2017-02-27T13:20:35+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla KAPI]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Remove log and idea files on your Rails Project]]></title>
+    <title type="html"><![CDATA[Remove Log and Idea Files on Your Rails Project]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/07/08/remove-log-and-idea-files-on-your-rails-project/"/>
     <updated>2014-07-08T01:53:53+03:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/07/08/remove-log-and-idea-files-on-your-rails-project</id>

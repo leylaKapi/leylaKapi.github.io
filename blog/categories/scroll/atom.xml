@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: scroll | Leyla's Blog]]></title>
+  <title><![CDATA[Category: Scroll | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/scroll/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2016-12-24T19:52:07+02:00</updated>
+  <updated>2017-02-27T13:20:35+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla KAPI]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[How to create scroll-page for rails project]]></title>
+    <title type="html"><![CDATA[How to Create Scroll-page for Rails Project]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/09/17/how-to-create-scroll-page-for-rails-project/"/>
     <updated>2014-09-17T17:05:01+03:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/09/17/how-to-create-scroll-page-for-rails-project</id>

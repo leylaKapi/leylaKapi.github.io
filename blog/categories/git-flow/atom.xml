@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: git-flow | Leyla's Blog]]></title>
+  <title><![CDATA[Category: Git-flow | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/git-flow/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2016-12-24T19:52:07+02:00</updated>
+  <updated>2017-02-27T13:20:35+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla KAPI]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Integration git-flow on Rubymine]]></title>
+    <title type="html"><![CDATA[Integration Git-flow on Rubymine]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/08/01/integration-git-flow-on-rubymine/"/>
     <updated>2014-08-01T23:02:42+03:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/08/01/integration-git-flow-on-rubymine</id>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: working | Leyla's Blog]]></title>
+  <title><![CDATA[Category: Working | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/working/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2016-12-24T19:52:07+02:00</updated>
+  <updated>2017-02-27T13:20:35+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla KAPI]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[How is the internet working and what is the protocols]]></title>
+    <title type="html"><![CDATA[How Is the Internet Working and What Is the Protocols]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/04/20/how-is-the-internet-working-and-what-is-the-protocols/"/>
     <updated>2014-04-20T02:00:37+03:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/04/20/how-is-the-internet-working-and-what-is-the-protocols</id>

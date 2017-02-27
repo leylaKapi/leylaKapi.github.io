@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: devise | Leyla's Blog]]></title>
+  <title><![CDATA[Category: Devise | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/devise/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2016-12-24T19:52:07+02:00</updated>
+  <updated>2017-02-27T13:20:35+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla KAPI]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Fix after destroy user model try add user model]]></title>
+    <title type="html"><![CDATA[Fix After Destroy User Model Try Add User Model]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/07/27/fix-after-destroy-user-model-try-add-user-model/"/>
     <updated>2014-07-27T14:34:26+03:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/07/27/fix-after-destroy-user-model-try-add-user-model</id>
@@ -102,7 +102,7 @@ rake db:migrate
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Rails devise gem generator error]]></title>
+    <title type="html"><![CDATA[Rails Devise Gem Generator Error]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/07/24/rails-devise-gem-generator-error/"/>
     <updated>2014-07-24T15:36:48+03:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/07/24/rails-devise-gem-generator-error</id>

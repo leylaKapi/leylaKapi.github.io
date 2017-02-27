@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: ruby | Leyla's Blog]]></title>
+  <title><![CDATA[Category: Ruby | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2016-12-24T19:52:07+02:00</updated>
+  <updated>2017-02-27T13:20:35+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla KAPI]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Bundle error middleman El-capitan]]></title>
+    <title type="html"><![CDATA[Bundle Error Middleman El-capitan]]></title>
     <link href="http://leylaKapi.github.io/blog/2016/08/10/bundle-error-middleman-elcapitan/"/>
     <updated>2016-08-10T00:00:00+03:00</updated>
     <id>http://leylaKapi.github.io/blog/2016/08/10/bundle-error-middleman-elcapitan</id>
@@ -43,7 +43,7 @@ brew link openssl --force
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Bootstrap active class solution for navbar in rails]]></title>
+    <title type="html"><![CDATA[Bootstrap Active Class Solution for Navbar in Rails]]></title>
     <link href="http://leylaKapi.github.io/blog/2015/10/24/bootstrap-active-class-solution-for-navbar-in-rails/"/>
     <updated>2015-10-24T17:32:38+03:00</updated>
     <id>http://leylaKapi.github.io/blog/2015/10/24/bootstrap-active-class-solution-for-navbar-in-rails</id>
@@ -98,7 +98,7 @@ end
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Rails fix N+1 query]]></title>
+    <title type="html"><![CDATA[Rails Fix N+1 Query]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/12/16/rails-fix-n-plus-1-query/"/>
     <updated>2014-12-16T00:00:00+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/12/16/rails-fix-n-plus-1-query</id>
@@ -168,7 +168,7 @@ end
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Note: Fix Ruby on Rails Qt installation]]></title>
+    <title type="html"><![CDATA[Note: Fix Ruby on Rails Qt Installation]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/10/22/note-fix-ruby-on-rails-qt-installation/"/>
     <updated>2014-10-22T23:16:22+03:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/10/22/note-fix-ruby-on-rails-qt-installation</id>
@@ -202,7 +202,7 @@ $ gem install capybara-webkit
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Fix paperclip gem bug]]></title>
+    <title type="html"><![CDATA[Fix Paperclip Gem Bug]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/08/21/fix-paperclip-gem-bug/"/>
     <updated>2014-08-21T13:49:45+03:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/08/21/fix-paperclip-gem-bug</id>

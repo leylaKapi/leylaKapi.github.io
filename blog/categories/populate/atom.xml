@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: populate | Leyla's Blog]]></title>
+  <title><![CDATA[Category: Populate | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/populate/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2016-12-24T19:52:07+02:00</updated>
+  <updated>2017-02-27T13:20:35+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla KAPI]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Fix rake db:populate]]></title>
+    <title type="html"><![CDATA[Fix Rake Db:populate]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/08/08/fix-rake-db-populate/"/>
     <updated>2014-08-08T10:33:06+03:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/08/08/fix-rake-db-populate</id>

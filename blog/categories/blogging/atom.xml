@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: blogging | Leyla's Blog]]></title>
+  <title><![CDATA[Category: Blogging | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/blogging/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2016-12-24T19:52:07+02:00</updated>
+  <updated>2017-02-27T13:20:35+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla KAPI]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Middleman blog]]></title>
+    <title type="html"><![CDATA[Middleman Blog]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/03/15/blog-middleman/"/>
     <updated>2014-03-15T17:05:21+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/03/15/blog-middleman</id>

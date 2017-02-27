@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: haml | Leyla's Blog]]></title>
+  <title><![CDATA[Category: Haml | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/haml/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2016-12-24T19:52:07+02:00</updated>
+  <updated>2017-02-27T13:20:35+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla KAPI]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Bootstrap active class solution for navbar in rails]]></title>
+    <title type="html"><![CDATA[Bootstrap Active Class Solution for Navbar in Rails]]></title>
     <link href="http://leylaKapi.github.io/blog/2015/10/24/bootstrap-active-class-solution-for-navbar-in-rails/"/>
     <updated>2015-10-24T17:32:38+03:00</updated>
     <id>http://leylaKapi.github.io/blog/2015/10/24/bootstrap-active-class-solution-for-navbar-in-rails</id>
@@ -69,7 +69,7 @@ end
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Trick: Add page number with javascript ?]]></title>
+    <title type="html"><![CDATA[Trick: Add Page Number With Javascript ?]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/10/02/dipnote-add-page-number-with-javascript/"/>
     <updated>2014-10-02T21:32:05+03:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/10/02/dipnote-add-page-number-with-javascript</id>
@@ -118,7 +118,7 @@ I hope helped to you.</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[How to create scroll-page for rails project]]></title>
+    <title type="html"><![CDATA[How to Create Scroll-page for Rails Project]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/09/17/how-to-create-scroll-page-for-rails-project/"/>
     <updated>2014-09-17T17:05:01+03:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/09/17/how-to-create-scroll-page-for-rails-project</id>
@@ -650,7 +650,7 @@ for <a href="https://github.com/peachananr/onepage-scroll">detail</a>.</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Bounce effect with CSS3]]></title>
+    <title type="html"><![CDATA[Bounce Effect With CSS3]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/07/02/bounce-effect-with-css3/"/>
     <updated>2014-07-02T00:56:56+03:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/07/02/bounce-effect-with-css3</id>
@@ -723,7 +723,7 @@ margin: 0 auto
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Note about write 'data' on  haml ?]]></title>
+    <title type="html"><![CDATA[Note About Write 'Data' on Haml ?]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/06/21/note-about-write-data-on-haml/"/>
     <updated>2014-06-21T17:13:02+03:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/06/21/note-about-write-data-on-haml</id>

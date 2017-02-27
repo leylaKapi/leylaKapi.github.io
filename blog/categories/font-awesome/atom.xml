@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: font-awesome | Leyla's Blog]]></title>
+  <title><![CDATA[Category: Font-awesome | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/font-awesome/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2016-12-24T19:52:07+02:00</updated>
+  <updated>2017-02-27T13:20:35+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla KAPI]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Bounce effect with CSS3]]></title>
+    <title type="html"><![CDATA[Bounce Effect With CSS3]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/07/02/bounce-effect-with-css3/"/>
     <updated>2014-07-02T00:56:56+03:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/07/02/bounce-effect-with-css3</id>

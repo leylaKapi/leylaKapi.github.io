@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: oracle | Leyla's Blog]]></title>
+  <title><![CDATA[Category: Oracle | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/oracle/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2016-12-24T19:52:07+02:00</updated>
+  <updated>2017-02-27T13:20:35+02:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla KAPI]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Install open-jdk or oracle on Ubuntu]]></title>
+    <title type="html"><![CDATA[Install Open-jdk or Oracle on Ubuntu]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/08/03/install-open-jdk-or-oracle-on-ubuntu/"/>
     <updated>2014-08-03T23:25:29+03:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/08/03/install-open-jdk-or-oracle-on-ubuntu</id>
