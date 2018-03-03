@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Ror | Leyla's Blog]]></title>
+  <title><![CDATA[Category: RoR | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/ror/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2017-02-27T13:25:52+02:00</updated>
+  <updated>2018-03-03T21:44:00+01:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla KAPI]]></name>
@@ -14,651 +14,128 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Bootstrap Active Class Solution for Navbar in Rails]]></title>
-    <link href="http://leylaKapi.github.io/blog/2015/10/24/bootstrap-active-class-solution-for-navbar-in-rails/"/>
-    <updated>2015-10-24T17:32:38+03:00</updated>
-    <id>http://leylaKapi.github.io/blog/2015/10/24/bootstrap-active-class-solution-for-navbar-in-rails</id>
-    <content type="html"><![CDATA[<p>Sometimes while you are adding bootstrap to your rails app, you can getting some problem on javascript side. In this article I try to explain how we can fix <code>active</code> class to navbar . For fixing, you can write in helper <code>active_class</code> method like below</p>
+    <title type="html"><![CDATA[Validation Methods]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/05/04/validation-methods/"/>
+    <updated>2014-05-04T19:39:52+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/05/04/validation-methods</id>
+    <content type="html"><![CDATA[<h3>Ruby on Rails Validation methods</h3>
 
-<p>```ruby
-module ApplicationHelper
-  def active_class(link_path)</p>
-
-<pre><code>current_page?(link_path) ? 'active' : ""
-</code></pre>
-
-<p>  end
-end
-```</p>
-
-<!--more-->
+<ul>
+<li><strong>validates_presence_of</strong></li>
+</ul>
 
 
-<p>In your views from bootstrap classes should be like,</p>
+<p>Attribute mustn&rsquo;t be blank(nil,false,[],{})</p>
 
-<p>```html
-%ul.nav.navbar-nav
-  %li{class: active_class(about_path)}</p>
+<!-- more -->
 
-<pre><code>= link_to 'About', about_path
-</code></pre>
 
-<p>  %li{class: active_class(works_path)}</p>
-
-<pre><code>= link_to 'Our Works', works_path
-</code></pre>
-
-<p>  %li{class: active_class(contact_path)}</p>
-
-<pre><code>= link_to 'Contact', contact_path
-</code></pre>
-
-<p>```</p>
-
-<p>In addition, you can update according to your style to below command, but in this part it s important to use  <code>!important</code> method for overwrite on <code>active</code> class .</p>
-
-<p><code>css
-.navbar-default .navbar-nav &gt; .active &gt; a, .navbar-default .navbar-nav &gt; .active &gt; a:hover, .navbar-default .navbar-nav &gt; .active &gt; a:active
-  color: red !important
+<p><code>ruby
+validates_presence_of :field_name
 </code></p>
 
-<p>That&rsquo;s all. I hope helped to you.</p>
-
-<p>For more information: <a href="http://goo.gl/twDl3t">http://goo.gl/twDl3t</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How to Create Scroll-page for Rails Project]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/09/17/how-to-create-scroll-page-for-rails-project/"/>
-    <updated>2014-09-17T17:05:01+03:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/09/17/how-to-create-scroll-page-for-rails-project</id>
-    <content type="html"><![CDATA[<h2>Create scroll page with sass and javascript</h2>
-
-<p>While I was creating <a href="https://github.com/leylaKapi/scroll-page">demo</a> for scroll page,
-firstly I created middleman project according to <code>haml</code> and <code>sass</code>, but if you want to embed in your for example rails project,
-you can embed in it. In this post, I try to explain creating scroll page according to middleman page.</p>
-
-<p><img src="../images/capture_image-home.png" alt="home-page" /></p>
-
-<p>Let&rsquo;s look the codes for scroll page</p>
-
-<!-- more -->
-
-
 <ul>
-<li>Open js file in your project, and copy it</li>
+<li><strong>validates_length_of</strong></li>
 </ul>
 
 
-<p>```javascript
-!function($){
-  var defaults = {</p>
+<p>Attribute must meet length requirements :is, :minimum, :maximum, :within, :in, :too_short, :too_long</p>
 
-<pre><code>sectionContainer: "section",
-easing: "ease",
-animationTime: 1000,
-pagination: true,
-updateURL: false,
-keyboard: true,
-beforeMove: null,
-afterMove: null,
-loop: true,
-responsiveFallback: false,
-direction : 'vertical'
-};
-$.fn.swipeEvents = function() {
-  return this.each(function() {
-    var startX,
-        startY,
-        $this = $(this);
-    $this.bind('touchstart', touchstart);
-    function touchstart(event) {
-      var touches = event.originalEvent.touches;
-      if (touches &amp;&amp; touches.length) {
-        startX = touches[0].pageX;
-        startY = touches[0].pageY;
-        $this.bind('touchmove', touchmove);
-      }
-    }
-    function touchmove(event) {
-      var touches = event.originalEvent.touches;
-      if (touches &amp;&amp; touches.length) {
-        var deltaX = startX - touches[0].pageX;
-        var deltaY = startY - touches[0].pageY;
-        if (deltaX &gt;= 50) {
-          $this.trigger("swipeLeft");
-        }
-        if (deltaX &lt;= -50) {
-          $this.trigger("swipeRight");
-        }
-        if (deltaY &gt;= 50) {
-          $this.trigger("swipeUp");
-        }
-        if (deltaY &lt;= -50) {
-          $this.trigger("swipeDown");
-        }
-        if (Math.abs(deltaX) &gt;= 50 || Math.abs(deltaY) &gt;= 50) {
-          $this.unbind('touchmove', touchmove);
-        }
-      }
-    }
-  });
-};
-</code></pre>
-
-<p>  $.fn.onepage_scroll = function(options){</p>
-
-<pre><code>var settings = $.extend({}, defaults, options),
-    el = $(this),
-    sections = $(settings.sectionContainer)
-    total = sections.length,
-    status = "off",
-    topPos = 0,
-    leftPos = 0,
-    lastAnimation = 0,
-    quietPeriod = 500,
-    paginationList = "";
-$.fn.transformPage = function(settings, pos, index) {
-  if (typeof settings.beforeMove == 'function') settings.beforeMove(index);
-    if($('html').hasClass('ie8')){
-    if (settings.direction == 'horizontal') {
-      var toppos = (el.width()/100)*pos;
-      $(this).animate({left: toppos+'px'},settings.animationTime);
-    } else {
-      var toppos = (el.height()/100)*pos;
-      $(this).animate({top: toppos+'px'},settings.animationTime);
-    }
-    } else{
-      $(this).css({
-        "-webkit-transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
-     "-webkit-transition": "all " + settings.animationTime + "ms " + settings.easing,
-     "-moz-transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
-     "-moz-transition": "all " + settings.animationTime + "ms " + settings.easing,
-     "-ms-transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
-     "-ms-transition": "all " + settings.animationTime + "ms " + settings.easing,
-     "transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
-     "transition": "all " + settings.animationTime + "ms " + settings.easing
-      });
-    }
-  $(this).one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
-    if (typeof settings.afterMove == 'function') settings.afterMove(index);
-  });
-}
-$.fn.moveDown = function() {
-  var el = $(this)
-  index = $(settings.sectionContainer +".active").data("index");
-  current = $(settings.sectionContainer + "[data-index='" + index + "']");
-  next = $(settings.sectionContainer + "[data-index='" + (index + 1) + "']");
-  if(next.length &lt; 1) {
-    if (settings.loop == true) {
-      pos = 0;
-      next = $(settings.sectionContainer + "[data-index='1']");
-    } else {
-      return
-    }
-  }else {
-    pos = (index * 100) * -1;
-  }
-  if (typeof settings.beforeMove == 'function') settings.beforeMove( next.data("index"));
-  current.removeClass("active")
-  next.addClass("active");
-  if(settings.pagination == true) {
-    $(".onepage-pagination li a" + "[data-index='" + index + "']").removeClass("active");
-    $(".onepage-pagination li a" + "[data-index='" + next.data("index") + "']").addClass("active");
-  }
-  $("body")[0].className = $("body")[0].className.replace(/\bviewing-page-\d.*?\b/g, '');
-  $("body").addClass("viewing-page-"+next.data("index"))
-  if (history.replaceState &amp;&amp; settings.updateURL == true) {
-    var href = window.location.href.substr(0,window.location.href.indexOf('#')) + "#" + (index + 1);
-    history.pushState( {}, document.title, href );
-  }
-  el.transformPage(settings, pos, next.data("index"));
-}
-$.fn.moveUp = function() {
-  var el = $(this)
-  index = $(settings.sectionContainer +".active").data("index");
-  current = $(settings.sectionContainer + "[data-index='" + index + "']");
-  next = $(settings.sectionContainer + "[data-index='" + (index - 1) + "']");
-  if(next.length &lt; 1) {
-    if (settings.loop == true) {
-      pos = ((total - 1) * 100) * -1;
-      next = $(settings.sectionContainer + "[data-index='"+total+"']");
-    }
-    else {
-      return
-    }
-  }else {
-    pos = ((next.data("index") - 1) * 100) * -1;
-  }
-  if (typeof settings.beforeMove == 'function') settings.beforeMove(next.data("index"));
-  current.removeClass("active")
-  next.addClass("active")
-  if(settings.pagination == true) {
-    $(".onepage-pagination li a" + "[data-index='" + index + "']").removeClass("active");
-    $(".onepage-pagination li a" + "[data-index='" + next.data("index") + "']").addClass("active");
-  }
-  $("body")[0].className = $("body")[0].className.replace(/\bviewing-page-\d.*?\b/g, '');
-  $("body").addClass("viewing-page-"+next.data("index"))
-  if (history.replaceState &amp;&amp; settings.updateURL == true) {
-    var href = window.location.href.substr(0,window.location.href.indexOf('#')) + "#" + (index - 1);
-    history.pushState( {}, document.title, href );
-  }
-  el.transformPage(settings, pos, next.data("index"));
-}
-$.fn.moveTo = function(page_index) {
-  current = $(settings.sectionContainer + ".active")
-  next = $(settings.sectionContainer + "[data-index='" + (page_index) + "']");
-  if(next.length &gt; 0) {
-    if (typeof settings.beforeMove == 'function') settings.beforeMove(next.data("index"));
-    current.removeClass("active")
-    next.addClass("active")
-    $(".onepage-pagination li a" + ".active").removeClass("active");
-    $(".onepage-pagination li a" + "[data-index='" + (page_index) + "']").addClass("active");
-    $("body")[0].className = $("body")[0].className.replace(/\bviewing-page-\d.*?\b/g, '');
-    $("body").addClass("viewing-page-"+next.data("index"))
-    pos = ((page_index - 1) * 100) * -1;
-    if (history.replaceState &amp;&amp; settings.updateURL == true) {
-        var href = window.location.href.substr(0,window.location.href.indexOf('#')) + "#" + (page_index - 1);
-        history.pushState( {}, document.title, href );
-    }
-    el.transformPage(settings, pos, page_index);
-  }
-}
-function responsive() {
-  var valForTest = false;
-  var typeOfRF = typeof settings.responsiveFallback
-  if(typeOfRF == "number"){
-    valForTest = $(window).width() &lt; settings.responsiveFallback;
-  }
-  if(typeOfRF == "boolean"){
-    valForTest = settings.responsiveFallback;
-  }
-  if(typeOfRF == "function"){
-    valFunction = settings.responsiveFallback();
-    valForTest = valFunction;
-    typeOFv = typeof valForTest;
-    if(typeOFv == "number"){
-        valForTest = $(window).width() &lt; valFunction;
-    }
-  }
-  if (valForTest) {
-    $("body").addClass("disabled-onepage-scroll");
-    $(document).unbind('mousewheel DOMMouseScroll MozMousePixelScroll');
-    el.swipeEvents().unbind("swipeDown swipeUp");
-  } else {
-    if($("body").hasClass("disabled-onepage-scroll")) {
-      $("body").removeClass("disabled-onepage-scroll");
-      $("html, body, .wrapper").animate({ scrollTop: 0 }, "fast");
-    }
-    el.swipeEvents().bind("swipeDown",  function(event){
-      if (!$("body").hasClass("disabled-onepage-scroll")) event.preventDefault();
-      el.moveUp();
-    }).bind("swipeUp", function(event){
-      if (!$("body").hasClass("disabled-onepage-scroll")) event.preventDefault();
-      el.moveDown();
-    });
-    $(document).bind('mousewheel DOMMouseScroll MozMousePixelScroll', function(event) {
-      event.preventDefault();
-      var delta = event.originalEvent.wheelDelta || -event.originalEvent.detail;
-      init_scroll(event, delta);
-    });
-  }
-}
-function init_scroll(event, delta) {
-    deltaOfInterest = delta;
-    var timeNow = new Date().getTime();
-    if(timeNow - lastAnimation &lt; quietPeriod + settings.animationTime) {
-        event.preventDefault();
-        return;
-    }
-    if (deltaOfInterest &lt; 0) {
-      el.moveDown()
-    } else {
-      el.moveUp()
-    }
-    lastAnimation = timeNow;
-}
-el.addClass("onepage-wrapper").css("position","relative");
-$.each( sections, function(i) {
-  $(this).css({
-    position: "absolute",
-    top: topPos + "%"
-  }).addClass("section").attr("data-index", i+1);
-  $(this).css({
-    position: "absolute",
-    left: ( settings.direction == 'horizontal' )
-      ? leftPos + "%"
-      : 0,
-    top: ( settings.direction == 'vertical' || settings.direction != 'horizontal' )
-      ? topPos + "%"
-      : 0
-  });
-  if (settings.direction == 'horizontal')
-    leftPos = leftPos + 100;
-  else
-    topPos = topPos + 100;
-  if(settings.pagination == true) {
-    paginationList += "&lt;li&gt;&lt;a data-index='"+(i+1)+"' href='#" + (i+1) + "'&gt;&lt;/a&gt;&lt;/li&gt;"
-  }
-});
-el.swipeEvents().bind("swipeDown",  function(event){
-  if (!$("body").hasClass("disabled-onepage-scroll")) event.preventDefault();
-  el.moveUp();
-}).bind("swipeUp", function(event){
-  if (!$("body").hasClass("disabled-onepage-scroll")) event.preventDefault();
-  el.moveDown();
-});
-if (settings.pagination == true) {
-  if ($('ul.onepage-pagination').length &lt; 1) $("&lt;ul class='onepage-pagination'&gt;&lt;/ul&gt;").prependTo("body");
-  if( settings.direction == 'horizontal' ) {
-    posLeft = (el.find(".onepage-pagination").width() / 2) * -1;
-    el.find(".onepage-pagination").css("margin-left", posLeft);
-  } else {
-    posTop = (el.find(".onepage-pagination").height() / 2) * -1;
-    el.find(".onepage-pagination").css("margin-top", posTop);
-  }
-  $('ul.onepage-pagination').html(paginationList);
-}
-if(window.location.hash != "" &amp;&amp; window.location.hash != "#1") {
-  init_index =  window.location.hash.replace("#", "")
-  if (parseInt(init_index) &lt;= total &amp;&amp; parseInt(init_index) &gt; 0) {
-    $(settings.sectionContainer + "[data-index='" + init_index + "']").addClass("active")
-    $("body").addClass("viewing-page-"+ init_index)
-    if(settings.pagination == true) $(".onepage-pagination li a" + "[data-index='" + init_index + "']").addClass("active");
-    next = $(settings.sectionContainer + "[data-index='" + (init_index) + "']");
-    if(next) {
-      next.addClass("active")
-      if(settings.pagination == true) $(".onepage-pagination li a" + "[data-index='" + (init_index) + "']").addClass("active");
-      $("body")[0].className = $("body")[0].className.replace(/\bviewing-page-\d.*?\b/g, '');
-      $("body").addClass("viewing-page-"+next.data("index"))
-      if (history.replaceState &amp;&amp; settings.updateURL == true) {
-        var href = window.location.href.substr(0,window.location.href.indexOf('#')) + "#" + (init_index);
-        history.pushState( {}, document.title, href );
-      }
-    }
-    pos = ((init_index - 1) * 100) * -1;
-    el.transformPage(settings, pos, init_index);
-  } else {
-    $(settings.sectionContainer + "[data-index='1']").addClass("active")
-    $("body").addClass("viewing-page-1")
-    if(settings.pagination == true) $(".onepage-pagination li a" + "[data-index='1']").addClass("active");
-  }
-}else{
-  $(settings.sectionContainer + "[data-index='1']").addClass("active")
-  $("body").addClass("viewing-page-1")
-  if(settings.pagination == true) $(".onepage-pagination li a" + "[data-index='1']").addClass("active");
-}
-if(settings.pagination == true)  {
-  $(".onepage-pagination li a").click(function (){
-    var page_index = $(this).data("index");
-    el.moveTo(page_index);
-  });
-}
-$(document).bind('mousewheel DOMMouseScroll MozMousePixelScroll', function(event) {
-  event.preventDefault();
-  var delta = event.originalEvent.wheelDelta || -event.originalEvent.detail;
-  if(!$("body").hasClass("disabled-onepage-scroll")) init_scroll(event, delta);
-});
-if(settings.responsiveFallback != false) {
-  $(window).resize(function() {
-    responsive();
-  });
-  responsive();
-}
-if(settings.keyboard == true) {
-  $(document).keydown(function(e) {
-    var tag = e.target.tagName.toLowerCase();
-    if (!$("body").hasClass("disabled-onepage-scroll")) {
-      switch(e.which) {
-        case 38:
-          if (tag != 'input' &amp;&amp; tag != 'textarea') el.moveUp()
-        break;
-        case 40:
-          if (tag != 'input' &amp;&amp; tag != 'textarea') el.moveDown()
-        break;
-        case 32: 
-          if (tag != 'input' &amp;&amp; tag != 'textarea') el.moveDown()
-        break;
-        case 33: 
-          if (tag != 'input' &amp;&amp; tag != 'textarea') el.moveUp()
-        break;
-        case 34: 
-          if (tag != 'input' &amp;&amp; tag != 'textarea') el.moveDown()
-        break;
-        case 36: 
-          el.moveTo(1);
-        break;
-        case 35: 
-          el.moveTo(total);
-        break;
-        default: return;
-      }
-    }
-  });
-}
-return false;
-</code></pre>
-
-<p>  }
-}(window.jQuery);
-```</p>
-
-<p><img src="../images/capture_image-2.png" alt="second-page" /></p>
+<p><code>ruby
+validates_length_of :field_name, :minimum =&gt; 100
+</code></p>
 
 <ul>
-<li>Then open <code>sass</code> file and copy below code for your project</li>
+<li><strong>validates_numericality_of</strong></li>
 </ul>
 
 
-<p>```sass
-  html</p>
+<p>Attribute must be integer or floating number :less_than, :greater_than, :equal_to, :odd, :even, :greater_than_or_equal_to</p>
 
-<pre><code>height: 100%
-</code></pre>
+<p><code>ruby
+validates_numericality_of :field_name, :greater_than_or_equal_to =&gt; 5
+</code></p>
 
-<p>  body</p>
+<ul>
+<li><strong>validates_inclusion_of</strong></li>
+</ul>
 
-<pre><code>padding: 0
-position: relative
-margin: 0
-height: 100%
-</code></pre>
 
-<p>  .wrapper</p>
+<p>Attribute must be in a list of choises. (array or range) :in</p>
 
-<pre><code>height: 100% !important
-margin: 0 auto
-</code></pre>
+<ul>
+<li><strong>validates_exclusion_of</strong></li>
+</ul>
 
-<p>  .main section</p>
 
-<pre><code>&amp;.page1
-  background: rgb(78, 225, 197)
-&amp;.page2
-  background: #d9c337
-&amp;.page3
-  background: #e3242e
-&amp;.page4
-  background: #f2f4e8
-</code></pre>
+<p>Attribute mustn&rsquo;t be in a list of choises. (array or range) :in</p>
 
-<p>  body.disabled-onepage-scroll</p>
+<ul>
+<li><strong>validates_format_of</strong></li>
+</ul>
 
-<pre><code>.onepage-wrapper section
-  min-height: 100%
-  height: auto
-</code></pre>
 
-<p>  body, html</p>
+<p>Attribute must match a regular expression. :with</p>
 
-<pre><code>margin: 0
-overflow: hidden
--webkit-transition: opacity 400ms
--moz-transition: opacity 400ms
-transition: opacity 400ms
-</code></pre>
+<ul>
+<li><strong>validates_uniqueness_of</strong></li>
+</ul>
 
-<p>  .onepage-wrapper</p>
 
-<pre><code>width: 100%
-height: 100%
-display: block
-position: relative
-padding: 0
--webkit-transform-style: preserve-3d
-.section
-  width: 100%
-  height: 100%
-</code></pre>
+<p>Attribute mustn&rsquo;t exist in the database :case_sensitive, :scope</p>
 
-<p>  .onepage-pagination</p>
+<ul>
+<li><strong>validates_acceptance_of</strong></li>
+</ul>
 
-<pre><code>position: absolute
-right: 10px
-top: 50%
-z-index: 5
-list-style: none
-margin: 0
-padding: 0
-li
-  padding: 0
-  text-align: center
-  a
-    padding: 10px
-    width: 4px
-    height: 4px
-    display: block
-    &amp;:before
-      content: ''
-      position: absolute
-      width: 4px
-      height: 4px
-      background: rgba(0, 0, 0, 0.85)
-      border-radius: 10px
-      -webkit-border-radius: 10px
-      -moz-border-radius: 10px
-    &amp;.active:before
-      width: 10px
-      height: 10px
-      background: none
-      border: 1px solid black
-      margin-top: -4px
-      left: 8px
+
+<p>Attribute must be accepted :accept(expected value, 1)</p>
+
+<ul>
+<li><strong>validates_confirmation_of</strong></li>
+</ul>
+
+
+<p>Attribute must be confirmed by entering it twice creates a virtual blank attribute for confirmation.</p>
+
+<ul>
+<li><strong>validates_associated</strong></li>
+</ul>
+
+
+<p>Associated object or objects must all be valid.</p>
+
+<p>``` ruby
+:allow_nil => true</p>
+
+<h1>Skip valid if attribute is nil</h1>
+
+<p>:allow_blank => true</p>
+
+<h1>Skip valid if attribute is blank</h1>
+
+<p>```</p>
+
+<p>Example of Validations</p>
+
+<p><code>ruby
+validates_presence_of :user_name
+validates_length_of :user_name, :maximum =&gt; 50
+validates_uniqueness_of :user_name
+</code></p>
+
+<p>When we use like above, We diverge to DRY, instead of above</p>
+
+<p>``` ruby
+validates :user_name, :presence => true</p>
+
+<pre><code>                 :length =&gt; {:maximum =&gt; 50}
+                 :uniqueness =&gt; true
 </code></pre>
 
 <p>```</p>
 
-<p><img src="../images/capture_image-3.png" alt="third-page" /></p>
-
-<p>For try your scroll page add in <code>haml</code> page</p>
-
-<p>```haml
-.wrapper
-  .main</p>
-
-<pre><code>%section.page1
-  .page_container
-    ...
-%section.page2
-  .page_container
-    ...
-%section.page3
-  .page_container
-    ...
-%section.page4
-  .page_container
-    ...
-</code></pre>
-
-<p>```</p>
-
-<p>Lastly open your <code>layout</code> and add codes</p>
-
-<p>```haml
-:javascript</p>
-
-<pre><code>$(document).ready(function(){
-  $(".main").onepage_scroll({
-    sectionContainer: "section",
-    responsiveFallback: 600,
-    loop: true
-  });
-  });
-</code></pre>
-
-<p>```</p>
-
-<p><img src="../images/capture_image-4.png" alt="fourth-page" /></p>
-
-<p>Look at code of <a href="https://github.com/leylaKapi/scroll-page">demo</a> and
-for <a href="https://github.com/peachananr/onepage-scroll">detail</a>.</p>
-
-<p>That' s all.</p>
-
-<p>I hope helped to you :)</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Useful Gems]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/07/13/when-you-start-to-project/"/>
-    <updated>2014-07-13T13:58:15+03:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/07/13/when-you-start-to-project</id>
-    <content type="html"><![CDATA[<h3>When you start to project, which gems are useful ?</h3>
-
-<p>When you start a rails project, you can use these gems which useful for project.</p>
-
-<p>Gems are like,</p>
-
-<ul>
-<li><a href="https://rubygems.org/gems/blankable">blankable</a></li>
-<li><a href="https://rubygems.org/gems/simple_form">simple_form</a></li>
-<li><a href="https://rubygems.org/gems/model_to_locale">model_to_locale</a></li>
-<li><a href="https://rubygems.org/gems/responders">responders</a></li>
-<li><a href="https://rubygems.org/gems/will_paginate">will_paginate</a></li>
-<li><a href="https://rubygems.org/gems/will_paginate-bootstrap">will_paginate_bootstrap</a></li>
-<li><a href="https://rubygems.org/gems/better_errors">better_errors</a></li>
-</ul>
-
-
-<!-- more -->
-
-
-<p>1- <strong>blankable gem</strong></p>
-
-<p><code>blankable</code> provide to add blank slates to index view &hellip;
-You can look on <a href="https://github.com/lab2023/blankable">gitHub</a></p>
-
-<p>2- <strong>simple_form</strong></p>
-
-<p><code>simple_form</code> provide to make easy rails forms, aims is that to be as flexible as possible
-while helping you with powerful components to create your form &hellip; You can look on <a href="https://github.com/plataformatec/simple_form">gitHub</a></p>
-
-<p>3- <strong>model_to_locale</strong></p>
-
-<p><code>model_to_locale</code> provide to create locale file for model attributes &hellip;
-You can look on <a href="https://github.com/lab2023/model_to_locale">gitHub</a></p>
-
-<p>4- <strong>responders</strong></p>
-
-<p><code>responders</code> provide to dry up your Rails 3.2+ app &hellip;
-You can look on <a href="https://github.com/plataformatec/responders">gitHub</a></p>
-
-<p>5- <strong>will_paginate</strong></p>
-
-<p><code>will_paginate</code> provide to pagination library that integrate with RoR, Sinatra &hellip;
-You can look on <a href="https://github.com/mislav/will_paginate">gitHub</a></p>
-
-<p>6- <strong>will_paginate_bootstrap</strong></p>
-
-<p><code>will_paginate_bootstrap</code> provide to integrate in <code>will_paginate</code> to <code>bootstrap</code> &hellip;
-You can look on <a href="https://github.com/bootstrap-ruby/will_paginate-bootstrap">gitHub</a></p>
-
-<p>7- <strong>better_errors</strong></p>
-
-<p><code>better_errors</code> provide to replace standard error page to much better and useful error page
-You can look on <a href="https://github.com/charliesome/better_errorss">gitHub</a></p>
+<p>That&rsquo;s all.</p>
 ]]></content>
   </entry>
   

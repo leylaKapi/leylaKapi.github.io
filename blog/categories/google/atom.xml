@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Google | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/google/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2017-02-27T13:25:52+02:00</updated>
+  <updated>2018-03-03T21:44:00+01:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla KAPI]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Google App Engine - PHP]]></title>
     <link href="http://leylaKapi.github.io/blog/2015/01/13/google-app-engine-php/"/>
-    <updated>2015-01-13T23:14:20+02:00</updated>
+    <updated>2015-01-13T22:14:20+01:00</updated>
     <id>http://leylaKapi.github.io/blog/2015/01/13/google-app-engine-php</id>
     <content type="html"><![CDATA[<h3>App engine ve PHP</h3>
 
@@ -162,7 +162,7 @@ Ayrıca deploy edilip edilmediğinide sistemde görmek için <em>Source Code > R
   <entry>
     <title type="html"><![CDATA[How Do Google-analytics Add to Octopress?]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/03/26/how-do-google-analytics-add-to-octopress/"/>
-    <updated>2014-03-26T03:31:32+02:00</updated>
+    <updated>2014-03-26T02:31:32+01:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/03/26/how-do-google-analytics-add-to-octopress</id>
     <content type="html"><![CDATA[<h3>Google &ndash; analytics for Octopress</h3>
 

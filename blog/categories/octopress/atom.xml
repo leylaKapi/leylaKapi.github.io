@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Octopress | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2017-02-27T13:25:52+02:00</updated>
+  <updated>2018-03-03T21:44:00+01:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla KAPI]]></name>
@@ -14,94 +14,86 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Recreate Octopress Blog for Another Computer]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/04/19/recreate-octopress-blog-for-another-computer/"/>
-    <updated>2014-04-19T22:13:18+03:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/04/19/recreate-octopress-blog-for-another-computer</id>
-    <content type="html"><![CDATA[<h3>How I recreate octopress blog another computer ?</h3>
+    <title type="html"><![CDATA[How to Add 'About' Page in Octopress]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/02/26/how-to-add-aboout-page-in-octopress/"/>
+    <updated>2014-02-26T13:25:12+01:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/02/26/how-to-add-aboout-page-in-octopress</id>
+    <content type="html"><![CDATA[<h3>How to add &lsquo;About&rsquo; page in Octopress?</h3>
 
-<p>I formatted my computer and then for my octopress blog <em>What can I do ?</em> <strong>reinstall</strong> or <strong>WHAT?</strong></p>
+<p>I needs 2 step for create <code>About</code> page on navigation bar.</p>
 
-<p>In this post I try to explain, if you have a new computer (after format, buy new computer&hellip;etc)but you have octopress blog
-how to entegrated each other?</p>
+<ul>
+<li>Firstly create &lsquo;about page&rsquo;</li>
+</ul>
+
+
+<p>``` bash</p>
+
+<pre><code>rake new_page\["About"\]
+</code></pre>
+
+<p>```</p>
 
 <!-- more -->
 
 
-<p>Before starting explain it in this article, I try to explain set up octopress, if you forget this, you can find it easily in another
-blog post or you can look at <a href="http://octopress.org/docs/setup/">Octopress Setup guide</a> .</p>
+<p>Created new page for about and we linked to <code>About</code>, How?</p>
 
-<p>Now recreate a local repo for octopress</p>
+<ul>
+<li>We open</li>
+</ul>
 
-<p>-Clone your blog to the new machine</p>
 
 <p>``` bash</p>
 
-<pre><code>git clone -b source git@github.com:username/username.github.io.git octopress
+<pre><code>/source/_includes/custom/navigation.html
 </code></pre>
 
 <p>```</p>
 
-<p>Then clone the master branch to the _deploy</p>
+<p> write the 3rd line below:</p>
+
+<p>``` html
+   <ul class="main-navigation"></p>
+
+<pre><code> &lt;li&gt;&lt;a href="/"&gt;Blog&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="/blog/archives"&gt;Archives&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="/about"&gt;About&lt;/a&gt;&lt;/li&gt;
+</code></pre>
+
+<p>   </ul>
+```
+then we use git command for sent on github</p>
 
 <p>``` bash</p>
 
-<pre><code>cd octopress
-git clone git@github.com:username/username.github.io.git _deploy
+<pre><code>git add .
+git commit -m "Your Commit"
+git push origin source
 </code></pre>
 
-<p>```</p>
-
-<p>then run <em>rake</em></p>
-
-<p>``` bash</p>
-
-<pre><code>gem install bundler
-rbenv rehash
-bundle install
-rake setup_github_pages
-</code></pre>
-
-<p>```</p>
-
-<p>Then we ask to you repo url like</p>
-
-<p>``` bash</p>
-
-<pre><code>Enter the read/write url for your repository
-(For example, 'git@github.com:your_username/your_username.github.io.git)
-           or 'https://github.com/your_username/your_username.github.io')
-Repository url:
-</code></pre>
-
-<p>```</p>
-
-<p>Write your like this <em>Repository url: git@github.com:username/username.github.io.git</em></p>
-
-<p>Then you should write these command :</p>
+<p>```
+And, for see on personal blog we need to deploy your code</p>
 
 <p>``` bash</p>
 
 <pre><code>rake generate
-git add .
-git commit -m "Write comment here"
-git push origin source
+rake preview   #see on localhost:4000
 rake deploy
 </code></pre>
 
-<p>```
-then you can write</p>
+<p>```</p>
 
-<p>``` bash</p>
-
-<pre><code>cd octopress
-git pull origin source #get another computer changing
-cd ./_deploy
-git pull origin master
-</code></pre>
-
-<p>```
-then you can write</p>
+<p>That&rsquo;s it!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[After Create Octopress Blog Fixed Error]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/02/26/after-new-post/"/>
+    <updated>2014-02-26T10:30:57+01:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/02/26/after-new-post</id>
+    <content type="html"><![CDATA[<h3>When I setup Octopress Repository, error of</h3>
 
 <p>``` bash</p>
 
@@ -110,35 +102,97 @@ then you can write</p>
 
 <p>```</p>
 
-<p>That&rsquo;s all :)
-I hope this article help you.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How Do Google-analytics Add to Octopress?]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/03/26/how-do-google-analytics-add-to-octopress/"/>
-    <updated>2014-03-26T03:31:32+02:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/03/26/how-do-google-analytics-add-to-octopress</id>
-    <content type="html"><![CDATA[<h3>Google &ndash; analytics for Octopress</h3>
+<!--more-->
 
-<p>Firstly, if you don&rsquo;t have a google-analytics account, you should create it. Then when you create account, google-analytics provide to <strong>tracking ID</strong> for your octopress blog. This tracking ID like</p>
 
-<pre><code>AB-12345678-9
+<p>I setup the Octopress, and I create,</p>
+
+<p>``` bash</p>
+
+<pre><code>rake new_post\["Hello World"\]
 </code></pre>
 
-<p>and then you should get this id, opened <em>_config.yml</em> in your octopress blog project,</p>
+<p>```</p>
 
-<!-- more -->
+<p>then push github on</p>
 
+<p>``` bash</p>
 
-<pre><code>#_config.yml
-
-#Google Analytics
-google_analytics_tracking_id: AB-12345678-9
+<pre><code>source
 </code></pre>
 
-<p>That&rsquo;s all.</p>
+<p>```</p>
+
+<p>branch, and when I</p>
+
+<p>``` bash</p>
+
+<pre><code>rake deploy
+</code></pre>
+
+<p>```</p>
+
+<p> Terminal show this code :</p>
+
+<p>``` bash</p>
+
+<pre><code>To https://github.com/username/username.github.io.git
+! [rejected]        master -&gt; master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/username/username.github.io.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Merge the remote changes (e.g. 'git pull')
+hint: before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+</code></pre>
+
+<p>```</p>
+
+<pre><code> Github Pages deploy complete
+</code></pre>
+
+<h3>What I can fix it ?</h3>
+
+<p> Firstly</p>
+
+<p>``` bash</p>
+
+<pre><code>git clone https://github.com/username/username.github.io.git
+git checkout source
+</code></pre>
+
+<p>```</p>
+
+<p> I cloning to username.github.io into master, and checkout source</p>
+
+<p> Secondly we need to setup &lsquo;deploy&rsquo; directories</p>
+
+<p>``` bash</p>
+
+<pre><code>mkdir _deploy
+cd _deploy
+git init
+git remote add -t master -f origin https://github.com/username/username.github.io.git
+</code></pre>
+
+<p>```</p>
+
+<p>Now, we can use</p>
+
+<p>``` bash</p>
+
+<pre><code>rake deploy
+</code></pre>
+
+<p>```</p>
+
+<p>or</p>
+
+<p>``` bash</p>
+
+<pre><code>rake gen_deploy
+</code></pre>
+
+<p>```</p>
 ]]></content>
   </entry>
   

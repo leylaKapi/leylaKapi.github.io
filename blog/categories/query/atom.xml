@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Query | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/query/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2017-02-27T13:25:52+02:00</updated>
+  <updated>2018-03-03T21:44:00+01:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla KAPI]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Rails Fix N+1 Query]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/12/16/rails-fix-n-plus-1-query/"/>
-    <updated>2014-12-16T00:00:00+02:00</updated>
+    <updated>2014-12-16T00:00:00+01:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/12/16/rails-fix-n-plus-1-query</id>
     <content type="html"><![CDATA[<h3>How to fix N+1 query in Rails ?</h3>
 

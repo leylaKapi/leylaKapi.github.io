@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Git | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/git/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2017-02-27T13:25:52+02:00</updated>
+  <updated>2018-03-03T21:44:00+01:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla KAPI]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Change Github Config Editor]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/08/16/change-github-config-editor/"/>
-    <updated>2014-08-16T22:28:27+03:00</updated>
+    <updated>2014-08-16T21:28:27+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/08/16/change-github-config-editor</id>
     <content type="html"><![CDATA[<h3>How to change github global core editor ?</h3>
 
@@ -39,7 +39,7 @@ git config --global core.editor "nano"
   <entry>
     <title type="html"><![CDATA[Integration Git-flow on Rubymine]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/08/01/integration-git-flow-on-rubymine/"/>
-    <updated>2014-08-01T23:02:42+03:00</updated>
+    <updated>2014-08-01T22:02:42+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/08/01/integration-git-flow-on-rubymine</id>
     <content type="html"><![CDATA[<h3>How to integration git-flow on Rubymine ?</h3>
 
@@ -66,7 +66,7 @@ then <em>restart rubymine</em> .</li>
   <entry>
     <title type="html"><![CDATA[How to Make a Release ?]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/07/10/how-to-make-a-release/"/>
-    <updated>2014-07-10T19:01:26+03:00</updated>
+    <updated>2014-07-10T18:01:26+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/07/10/how-to-make-a-release</id>
     <content type="html"><![CDATA[<p>Make a release</p>
 
@@ -151,7 +151,7 @@ I hope help to you.</p>
   <entry>
     <title type="html"><![CDATA[Remove Log and Idea Files on Your Rails Project]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/07/08/remove-log-and-idea-files-on-your-rails-project/"/>
-    <updated>2014-07-08T01:53:53+03:00</updated>
+    <updated>2014-07-08T00:53:53+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/07/08/remove-log-and-idea-files-on-your-rails-project</id>
     <content type="html"><![CDATA[<h3>How to remove log and idea files on your project ?</h3>
 
@@ -187,7 +187,7 @@ echo '*log' &gt; .gitignore
   <entry>
     <title type="html"><![CDATA[Git Stash]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/07/06/git-stash/"/>
-    <updated>2014-07-06T19:12:29+03:00</updated>
+    <updated>2014-07-06T18:12:29+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/07/06/git-stash</id>
     <content type="html"><![CDATA[<h3>Command of Git Stash</h3>
 

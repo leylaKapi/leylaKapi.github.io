@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Project | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/project/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2017-02-27T13:25:52+02:00</updated>
+  <updated>2018-03-03T21:44:00+01:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla KAPI]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[How to Deploy Your Project to Heroku ?]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/06/17/how-to-deploy-your-project-to-heroku/"/>
-    <updated>2014-06-17T16:10:38+03:00</updated>
+    <updated>2014-06-17T15:10:38+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/06/17/how-to-deploy-your-project-to-heroku</id>
     <content type="html"><![CDATA[<h3>Deploy to Heroku</h3>
 

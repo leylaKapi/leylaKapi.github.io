@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Scaffold | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/scaffold/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2017-02-27T13:25:52+02:00</updated>
+  <updated>2018-03-03T21:44:00+01:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla KAPI]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Scaffolding in Rails]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/04/25/scaffolding-in-rails/"/>
-    <updated>2014-04-25T00:21:58+03:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/04/25/scaffolding-in-rails</id>
+    <link href="http://leylaKapi.github.io/blog/2014/04/24/scaffolding-in-rails/"/>
+    <updated>2014-04-24T23:21:58+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/04/24/scaffolding-in-rails</id>
     <content type="html"><![CDATA[<p>In this post, I try to explain scaffolding in rails shortly.
 Firstly, Let&rsquo;s create rails project</p>
 

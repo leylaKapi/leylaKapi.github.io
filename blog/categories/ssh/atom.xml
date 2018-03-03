@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ssh | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/ssh/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2017-02-27T13:25:52+02:00</updated>
+  <updated>2018-03-03T21:44:00+01:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla KAPI]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Tricks on Rails]]></title>
     <link href="http://leylaKapi.github.io/blog/2015/09/07/trick-on-rails/"/>
-    <updated>2015-09-07T14:37:16+03:00</updated>
+    <updated>2015-09-07T13:37:16+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2015/09/07/trick-on-rails</id>
     <content type="html"><![CDATA[<ul>
 <li><h3><code>rake db:migrate</code> for an existing model</h3></li>
@@ -199,7 +199,7 @@ Then make all customizations.</p>
   <entry>
     <title type="html"><![CDATA[What's the Vagrant ?]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/10/12/what-is-the-vagrant/"/>
-    <updated>2014-10-12T14:58:37+03:00</updated>
+    <updated>2014-10-12T13:58:37+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/10/12/what-is-the-vagrant</id>
     <content type="html"><![CDATA[<h3>How to Set Up Vagrant on Ubuntu Desktop?</h3>
 

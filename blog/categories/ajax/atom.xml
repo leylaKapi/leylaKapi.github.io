@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ajax | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/ajax/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2017-02-27T13:25:52+02:00</updated>
+  <updated>2018-03-03T21:44:00+01:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla KAPI]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Fix Invalid Authentication Token Error in Rails]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/08/06/fix-invalid-authentication-token-error-in-rails/"/>
-    <updated>2014-08-06T23:49:35+03:00</updated>
+    <updated>2014-08-06T22:49:35+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/08/06/fix-invalid-authentication-token-error-in-rails</id>
     <content type="html"><![CDATA[<h3>How to fix <code>ActionController: InvalidAuthentication Token error</code> ?</h3>
 

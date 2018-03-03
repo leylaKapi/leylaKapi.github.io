@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Deploy | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/deploy/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2017-02-27T13:25:52+02:00</updated>
+  <updated>2018-03-03T21:44:00+01:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla KAPI]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Tricks on Rails]]></title>
     <link href="http://leylaKapi.github.io/blog/2015/09/07/trick-on-rails/"/>
-    <updated>2015-09-07T14:37:16+03:00</updated>
+    <updated>2015-09-07T13:37:16+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2015/09/07/trick-on-rails</id>
     <content type="html"><![CDATA[<ul>
 <li><h3><code>rake db:migrate</code> for an existing model</h3></li>
@@ -199,7 +199,7 @@ Then make all customizations.</p>
   <entry>
     <title type="html"><![CDATA[Google App Engine - PHP]]></title>
     <link href="http://leylaKapi.github.io/blog/2015/01/13/google-app-engine-php/"/>
-    <updated>2015-01-13T23:14:20+02:00</updated>
+    <updated>2015-01-13T22:14:20+01:00</updated>
     <id>http://leylaKapi.github.io/blog/2015/01/13/google-app-engine-php</id>
     <content type="html"><![CDATA[<h3>App engine ve PHP</h3>
 
@@ -345,7 +345,7 @@ Ayrıca deploy edilip edilmediğinide sistemde görmek için <em>Source Code > R
   <entry>
     <title type="html"><![CDATA[How to Deploy Your Project to Heroku ?]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/06/17/how-to-deploy-your-project-to-heroku/"/>
-    <updated>2014-06-17T16:10:38+03:00</updated>
+    <updated>2014-06-17T15:10:38+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/06/17/how-to-deploy-your-project-to-heroku</id>
     <content type="html"><![CDATA[<h3>Deploy to Heroku</h3>
 

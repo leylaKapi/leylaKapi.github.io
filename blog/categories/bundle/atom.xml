@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Bundle | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/bundle/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2017-02-27T13:25:52+02:00</updated>
+  <updated>2018-03-03T21:44:00+01:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla KAPI]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Bundle Error Middleman El-capitan]]></title>
     <link href="http://leylaKapi.github.io/blog/2016/08/10/bundle-error-middleman-elcapitan/"/>
-    <updated>2016-08-10T00:00:00+03:00</updated>
+    <updated>2016-08-10T00:00:00+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2016/08/10/bundle-error-middleman-elcapitan</id>
     <content type="html"><![CDATA[<p>If your computer has OSX 10.11 El Capitan, and try to create middleman project then  write <code>bundle</code> to install gems. But you can get</p>
 
@@ -45,7 +45,7 @@ brew link openssl --force
   <entry>
     <title type="html"><![CDATA[Rails Attributes: 'Attr_accessible']]></title>
     <link href="http://leylaKapi.github.io/blog/2014/04/26/rails-gem/"/>
-    <updated>2014-04-26T14:44:39+03:00</updated>
+    <updated>2014-04-26T13:44:39+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/04/26/rails-gem</id>
     <content type="html"><![CDATA[<p>If you get <em>attr_accesible</em>&rsquo;s bug, like</p>
 

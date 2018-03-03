@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Js | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/js/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2017-02-27T13:25:52+02:00</updated>
+  <updated>2018-03-03T21:44:00+01:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla KAPI]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Bootstrap Active Class Solution for Navbar in Rails]]></title>
     <link href="http://leylaKapi.github.io/blog/2015/10/24/bootstrap-active-class-solution-for-navbar-in-rails/"/>
-    <updated>2015-10-24T17:32:38+03:00</updated>
+    <updated>2015-10-24T16:32:38+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2015/10/24/bootstrap-active-class-solution-for-navbar-in-rails</id>
     <content type="html"><![CDATA[<p>Sometimes while you are adding bootstrap to your rails app, you can getting some problem on javascript side. In this article I try to explain how we can fix <code>active</code> class to navbar . For fixing, you can write in helper <code>active_class</code> method like below</p>
 
@@ -71,7 +71,7 @@ end
   <entry>
     <title type="html"><![CDATA[Trick: Add Page Number With Javascript ?]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/10/02/dipnote-add-page-number-with-javascript/"/>
-    <updated>2014-10-02T21:32:05+03:00</updated>
+    <updated>2014-10-02T20:32:05+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/10/02/dipnote-add-page-number-with-javascript</id>
     <content type="html"><![CDATA[<h3>How can you show page number in js ?</h3>
 
@@ -120,7 +120,7 @@ I hope helped to you.</p>
   <entry>
     <title type="html"><![CDATA[How to Create Scroll-page for Rails Project]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/09/17/how-to-create-scroll-page-for-rails-project/"/>
-    <updated>2014-09-17T17:05:01+03:00</updated>
+    <updated>2014-09-17T16:05:01+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/09/17/how-to-create-scroll-page-for-rails-project</id>
     <content type="html"><![CDATA[<h2>Create scroll page with sass and javascript</h2>
 
@@ -652,7 +652,7 @@ for <a href="https://github.com/peachananr/onepage-scroll">detail</a>.</p>
   <entry>
     <title type="html"><![CDATA[Create Icon Set for Your Rails Project]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/09/10/create-icon-set-for-your-rails-project/"/>
-    <updated>2014-09-10T17:23:26+03:00</updated>
+    <updated>2014-09-10T16:23:26+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/09/10/create-icon-set-for-your-rails-project</id>
     <content type="html"><![CDATA[<h3>How created your icon-set for your rails project ?</h3>
 

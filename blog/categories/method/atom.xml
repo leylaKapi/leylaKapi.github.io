@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Method | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/method/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2017-02-27T13:25:52+02:00</updated>
+  <updated>2018-03-03T21:44:00+01:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla KAPI]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Note: Go Back to Previous Activity on Android]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/11/07/note-go-back-to-previous-activity-on-android/"/>
-    <updated>2014-11-07T17:33:09+02:00</updated>
+    <updated>2014-11-07T16:33:09+01:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/11/07/note-go-back-to-previous-activity-on-android</id>
     <content type="html"><![CDATA[<h3>Method for go previous activity</h3>
 
@@ -62,7 +62,7 @@ public void ReturnHome(View view){</p>
   <entry>
     <title type="html"><![CDATA[Rails Fix Undefined Local Variable or Method]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/07/25/rails-fix-undefined-method/"/>
-    <updated>2014-07-25T15:52:35+03:00</updated>
+    <updated>2014-07-25T14:52:35+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/07/25/rails-fix-undefined-method</id>
     <content type="html"><![CDATA[<h3>How to fix rails undefined local variable or method &lsquo;confirmed_at&rsquo; ?</h3>
 
