@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Haml | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/haml/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2020-01-09T23:05:26+01:00</updated>
+  <updated>2020-01-09T23:19:29+01:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
     <name><![CDATA[Leyla KAPI]]></name>
@@ -14,165 +14,753 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Middleman Create Haml File]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/02/27/middleman-create-haml-file/"/>
-    <updated>2014-02-27T12:49:10+01:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/02/27/middleman-create-haml-file</id>
-    <content type="html"><![CDATA[<h3>How to create .haml file in middleman?</h3>
+    <title type="html"><![CDATA[Bootstrap Active Class Solution for Navbar in Rails]]></title>
+    <link href="http://leylaKapi.github.io/blog/2015/10/24/bootstrap-active-class-solution-for-navbar-in-rails/"/>
+    <updated>2015-10-24T16:32:38+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2015/10/24/bootstrap-active-class-solution-for-navbar-in-rails</id>
+    <content type="html"><![CDATA[<p>Sometimes while you are adding bootstrap to your rails app, you can getting some problem on javascript side. In this article I try to explain how we can fix <code>active</code> class to navbar . For fixing, you can write in helper <code>active_class</code> method like below</p>
 
-<p>Firstly, you should go <a href="" title="http://middlemanapp.com/">middleman</a> and you need to <strong>install middleman</strong></p>
+<p>```ruby
+module ApplicationHelper
+  def active_class(link_path)</p>
 
-<p><code>bash
-   gem install middleman
+<pre><code>current_page?(link_path) ? 'active' : ""
+</code></pre>
+
+<p>  end
+end
+```</p>
+
+<!--more-->
+
+
+<p>In your views from bootstrap classes should be like,</p>
+
+<p>```html
+%ul.nav.navbar-nav
+  %li{class: active_class(about_path)}</p>
+
+<pre><code>= link_to 'About', about_path
+</code></pre>
+
+<p>  %li{class: active_class(works_path)}</p>
+
+<pre><code>= link_to 'Our Works', works_path
+</code></pre>
+
+<p>  %li{class: active_class(contact_path)}</p>
+
+<pre><code>= link_to 'Contact', contact_path
+</code></pre>
+
+<p>```</p>
+
+<p>In addition, you can update according to your style to below command, but in this part it s important to use  <code>!important</code> method for overwrite on <code>active</code> class .</p>
+
+<p><code>css
+.navbar-default .navbar-nav &gt; .active &gt; a, .navbar-default .navbar-nav &gt; .active &gt; a:hover, .navbar-default .navbar-nav &gt; .active &gt; a:active
+  color: red !important
+</code></p>
+
+<p>That&rsquo;s all. I hope helped to you.</p>
+
+<p>For more information: <a href="http://goo.gl/twDl3t">http://goo.gl/twDl3t</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Trick: Add Page Number With Javascript ?]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/10/02/dipnote-add-page-number-with-javascript/"/>
+    <updated>2014-10-02T20:32:05+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/10/02/dipnote-add-page-number-with-javascript</id>
+    <content type="html"><![CDATA[<h3>How can you show page number in js ?</h3>
+
+<p>If you create middleman or rails project and you want to add pagination in your pages with js.
+You can make easily with below codes</p>
+
+<p>```js
+  var numberOfPages = 14;
+  function addPage(page, book) {</p>
+
+<pre><code>if (!book.turn('hasPage', page)) {
+  setTimeout(function(){
+    element.html('&lt;div class="data"&gt;Data for page '+page+'&lt;/div&gt;');
+  }, 14);
+}
+</code></pre>
+
+<p>  }</p>
+
+<pre><code>$('#number-pages').html(numberOfPages);
+</code></pre>
+
+<p>```
+in haml page can be like</p>
+
+<!-- more -->
+
+
+<p>```haml</p>
+
+<h1>controls</h1>
+
+<p>  %label{:for => &ldquo;page-number&rdquo;} Page:
+  %input#page-number{:size => &ldquo;3&rdquo;, :type => &ldquo;text&rdquo;}/
+  of
+  %span#number-pages
+```</p>
+
+<p>now you can try easily this <code>js</code> trick.</p>
+
+<p>That&rsquo;s all .
+I hope helped to you.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to Create Scroll-page for Rails Project]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/09/17/how-to-create-scroll-page-for-rails-project/"/>
+    <updated>2014-09-17T16:05:01+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/09/17/how-to-create-scroll-page-for-rails-project</id>
+    <content type="html"><![CDATA[<h2>Create scroll page with sass and javascript</h2>
+
+<p>While I was creating <a href="https://github.com/leylaKapi/scroll-page">demo</a> for scroll page,
+firstly I created middleman project according to <code>haml</code> and <code>sass</code>, but if you want to embed in your for example rails project,
+you can embed in it. In this post, I try to explain creating scroll page according to middleman page.</p>
+
+<p><img src="../images/capture_image-home.png" alt="home-page" /></p>
+
+<p>Let&rsquo;s look the codes for scroll page</p>
+
+<!-- more -->
+
+
+<ul>
+<li>Open js file in your project, and copy it</li>
+</ul>
+
+
+<p>```javascript
+!function($){
+  var defaults = {</p>
+
+<pre><code>sectionContainer: "section",
+easing: "ease",
+animationTime: 1000,
+pagination: true,
+updateURL: false,
+keyboard: true,
+beforeMove: null,
+afterMove: null,
+loop: true,
+responsiveFallback: false,
+direction : 'vertical'
+};
+$.fn.swipeEvents = function() {
+  return this.each(function() {
+    var startX,
+        startY,
+        $this = $(this);
+    $this.bind('touchstart', touchstart);
+    function touchstart(event) {
+      var touches = event.originalEvent.touches;
+      if (touches &amp;&amp; touches.length) {
+        startX = touches[0].pageX;
+        startY = touches[0].pageY;
+        $this.bind('touchmove', touchmove);
+      }
+    }
+    function touchmove(event) {
+      var touches = event.originalEvent.touches;
+      if (touches &amp;&amp; touches.length) {
+        var deltaX = startX - touches[0].pageX;
+        var deltaY = startY - touches[0].pageY;
+        if (deltaX &gt;= 50) {
+          $this.trigger("swipeLeft");
+        }
+        if (deltaX &lt;= -50) {
+          $this.trigger("swipeRight");
+        }
+        if (deltaY &gt;= 50) {
+          $this.trigger("swipeUp");
+        }
+        if (deltaY &lt;= -50) {
+          $this.trigger("swipeDown");
+        }
+        if (Math.abs(deltaX) &gt;= 50 || Math.abs(deltaY) &gt;= 50) {
+          $this.unbind('touchmove', touchmove);
+        }
+      }
+    }
+  });
+};
+</code></pre>
+
+<p>  $.fn.onepage_scroll = function(options){</p>
+
+<pre><code>var settings = $.extend({}, defaults, options),
+    el = $(this),
+    sections = $(settings.sectionContainer)
+    total = sections.length,
+    status = "off",
+    topPos = 0,
+    leftPos = 0,
+    lastAnimation = 0,
+    quietPeriod = 500,
+    paginationList = "";
+$.fn.transformPage = function(settings, pos, index) {
+  if (typeof settings.beforeMove == 'function') settings.beforeMove(index);
+    if($('html').hasClass('ie8')){
+    if (settings.direction == 'horizontal') {
+      var toppos = (el.width()/100)*pos;
+      $(this).animate({left: toppos+'px'},settings.animationTime);
+    } else {
+      var toppos = (el.height()/100)*pos;
+      $(this).animate({top: toppos+'px'},settings.animationTime);
+    }
+    } else{
+      $(this).css({
+        "-webkit-transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
+     "-webkit-transition": "all " + settings.animationTime + "ms " + settings.easing,
+     "-moz-transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
+     "-moz-transition": "all " + settings.animationTime + "ms " + settings.easing,
+     "-ms-transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
+     "-ms-transition": "all " + settings.animationTime + "ms " + settings.easing,
+     "transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
+     "transition": "all " + settings.animationTime + "ms " + settings.easing
+      });
+    }
+  $(this).one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
+    if (typeof settings.afterMove == 'function') settings.afterMove(index);
+  });
+}
+$.fn.moveDown = function() {
+  var el = $(this)
+  index = $(settings.sectionContainer +".active").data("index");
+  current = $(settings.sectionContainer + "[data-index='" + index + "']");
+  next = $(settings.sectionContainer + "[data-index='" + (index + 1) + "']");
+  if(next.length &lt; 1) {
+    if (settings.loop == true) {
+      pos = 0;
+      next = $(settings.sectionContainer + "[data-index='1']");
+    } else {
+      return
+    }
+  }else {
+    pos = (index * 100) * -1;
+  }
+  if (typeof settings.beforeMove == 'function') settings.beforeMove( next.data("index"));
+  current.removeClass("active")
+  next.addClass("active");
+  if(settings.pagination == true) {
+    $(".onepage-pagination li a" + "[data-index='" + index + "']").removeClass("active");
+    $(".onepage-pagination li a" + "[data-index='" + next.data("index") + "']").addClass("active");
+  }
+  $("body")[0].className = $("body")[0].className.replace(/\bviewing-page-\d.*?\b/g, '');
+  $("body").addClass("viewing-page-"+next.data("index"))
+  if (history.replaceState &amp;&amp; settings.updateURL == true) {
+    var href = window.location.href.substr(0,window.location.href.indexOf('#')) + "#" + (index + 1);
+    history.pushState( {}, document.title, href );
+  }
+  el.transformPage(settings, pos, next.data("index"));
+}
+$.fn.moveUp = function() {
+  var el = $(this)
+  index = $(settings.sectionContainer +".active").data("index");
+  current = $(settings.sectionContainer + "[data-index='" + index + "']");
+  next = $(settings.sectionContainer + "[data-index='" + (index - 1) + "']");
+  if(next.length &lt; 1) {
+    if (settings.loop == true) {
+      pos = ((total - 1) * 100) * -1;
+      next = $(settings.sectionContainer + "[data-index='"+total+"']");
+    }
+    else {
+      return
+    }
+  }else {
+    pos = ((next.data("index") - 1) * 100) * -1;
+  }
+  if (typeof settings.beforeMove == 'function') settings.beforeMove(next.data("index"));
+  current.removeClass("active")
+  next.addClass("active")
+  if(settings.pagination == true) {
+    $(".onepage-pagination li a" + "[data-index='" + index + "']").removeClass("active");
+    $(".onepage-pagination li a" + "[data-index='" + next.data("index") + "']").addClass("active");
+  }
+  $("body")[0].className = $("body")[0].className.replace(/\bviewing-page-\d.*?\b/g, '');
+  $("body").addClass("viewing-page-"+next.data("index"))
+  if (history.replaceState &amp;&amp; settings.updateURL == true) {
+    var href = window.location.href.substr(0,window.location.href.indexOf('#')) + "#" + (index - 1);
+    history.pushState( {}, document.title, href );
+  }
+  el.transformPage(settings, pos, next.data("index"));
+}
+$.fn.moveTo = function(page_index) {
+  current = $(settings.sectionContainer + ".active")
+  next = $(settings.sectionContainer + "[data-index='" + (page_index) + "']");
+  if(next.length &gt; 0) {
+    if (typeof settings.beforeMove == 'function') settings.beforeMove(next.data("index"));
+    current.removeClass("active")
+    next.addClass("active")
+    $(".onepage-pagination li a" + ".active").removeClass("active");
+    $(".onepage-pagination li a" + "[data-index='" + (page_index) + "']").addClass("active");
+    $("body")[0].className = $("body")[0].className.replace(/\bviewing-page-\d.*?\b/g, '');
+    $("body").addClass("viewing-page-"+next.data("index"))
+    pos = ((page_index - 1) * 100) * -1;
+    if (history.replaceState &amp;&amp; settings.updateURL == true) {
+        var href = window.location.href.substr(0,window.location.href.indexOf('#')) + "#" + (page_index - 1);
+        history.pushState( {}, document.title, href );
+    }
+    el.transformPage(settings, pos, page_index);
+  }
+}
+function responsive() {
+  var valForTest = false;
+  var typeOfRF = typeof settings.responsiveFallback
+  if(typeOfRF == "number"){
+    valForTest = $(window).width() &lt; settings.responsiveFallback;
+  }
+  if(typeOfRF == "boolean"){
+    valForTest = settings.responsiveFallback;
+  }
+  if(typeOfRF == "function"){
+    valFunction = settings.responsiveFallback();
+    valForTest = valFunction;
+    typeOFv = typeof valForTest;
+    if(typeOFv == "number"){
+        valForTest = $(window).width() &lt; valFunction;
+    }
+  }
+  if (valForTest) {
+    $("body").addClass("disabled-onepage-scroll");
+    $(document).unbind('mousewheel DOMMouseScroll MozMousePixelScroll');
+    el.swipeEvents().unbind("swipeDown swipeUp");
+  } else {
+    if($("body").hasClass("disabled-onepage-scroll")) {
+      $("body").removeClass("disabled-onepage-scroll");
+      $("html, body, .wrapper").animate({ scrollTop: 0 }, "fast");
+    }
+    el.swipeEvents().bind("swipeDown",  function(event){
+      if (!$("body").hasClass("disabled-onepage-scroll")) event.preventDefault();
+      el.moveUp();
+    }).bind("swipeUp", function(event){
+      if (!$("body").hasClass("disabled-onepage-scroll")) event.preventDefault();
+      el.moveDown();
+    });
+    $(document).bind('mousewheel DOMMouseScroll MozMousePixelScroll', function(event) {
+      event.preventDefault();
+      var delta = event.originalEvent.wheelDelta || -event.originalEvent.detail;
+      init_scroll(event, delta);
+    });
+  }
+}
+function init_scroll(event, delta) {
+    deltaOfInterest = delta;
+    var timeNow = new Date().getTime();
+    if(timeNow - lastAnimation &lt; quietPeriod + settings.animationTime) {
+        event.preventDefault();
+        return;
+    }
+    if (deltaOfInterest &lt; 0) {
+      el.moveDown()
+    } else {
+      el.moveUp()
+    }
+    lastAnimation = timeNow;
+}
+el.addClass("onepage-wrapper").css("position","relative");
+$.each( sections, function(i) {
+  $(this).css({
+    position: "absolute",
+    top: topPos + "%"
+  }).addClass("section").attr("data-index", i+1);
+  $(this).css({
+    position: "absolute",
+    left: ( settings.direction == 'horizontal' )
+      ? leftPos + "%"
+      : 0,
+    top: ( settings.direction == 'vertical' || settings.direction != 'horizontal' )
+      ? topPos + "%"
+      : 0
+  });
+  if (settings.direction == 'horizontal')
+    leftPos = leftPos + 100;
+  else
+    topPos = topPos + 100;
+  if(settings.pagination == true) {
+    paginationList += "&lt;li&gt;&lt;a data-index='"+(i+1)+"' href='#" + (i+1) + "'&gt;&lt;/a&gt;&lt;/li&gt;"
+  }
+});
+el.swipeEvents().bind("swipeDown",  function(event){
+  if (!$("body").hasClass("disabled-onepage-scroll")) event.preventDefault();
+  el.moveUp();
+}).bind("swipeUp", function(event){
+  if (!$("body").hasClass("disabled-onepage-scroll")) event.preventDefault();
+  el.moveDown();
+});
+if (settings.pagination == true) {
+  if ($('ul.onepage-pagination').length &lt; 1) $("&lt;ul class='onepage-pagination'&gt;&lt;/ul&gt;").prependTo("body");
+  if( settings.direction == 'horizontal' ) {
+    posLeft = (el.find(".onepage-pagination").width() / 2) * -1;
+    el.find(".onepage-pagination").css("margin-left", posLeft);
+  } else {
+    posTop = (el.find(".onepage-pagination").height() / 2) * -1;
+    el.find(".onepage-pagination").css("margin-top", posTop);
+  }
+  $('ul.onepage-pagination').html(paginationList);
+}
+if(window.location.hash != "" &amp;&amp; window.location.hash != "#1") {
+  init_index =  window.location.hash.replace("#", "")
+  if (parseInt(init_index) &lt;= total &amp;&amp; parseInt(init_index) &gt; 0) {
+    $(settings.sectionContainer + "[data-index='" + init_index + "']").addClass("active")
+    $("body").addClass("viewing-page-"+ init_index)
+    if(settings.pagination == true) $(".onepage-pagination li a" + "[data-index='" + init_index + "']").addClass("active");
+    next = $(settings.sectionContainer + "[data-index='" + (init_index) + "']");
+    if(next) {
+      next.addClass("active")
+      if(settings.pagination == true) $(".onepage-pagination li a" + "[data-index='" + (init_index) + "']").addClass("active");
+      $("body")[0].className = $("body")[0].className.replace(/\bviewing-page-\d.*?\b/g, '');
+      $("body").addClass("viewing-page-"+next.data("index"))
+      if (history.replaceState &amp;&amp; settings.updateURL == true) {
+        var href = window.location.href.substr(0,window.location.href.indexOf('#')) + "#" + (init_index);
+        history.pushState( {}, document.title, href );
+      }
+    }
+    pos = ((init_index - 1) * 100) * -1;
+    el.transformPage(settings, pos, init_index);
+  } else {
+    $(settings.sectionContainer + "[data-index='1']").addClass("active")
+    $("body").addClass("viewing-page-1")
+    if(settings.pagination == true) $(".onepage-pagination li a" + "[data-index='1']").addClass("active");
+  }
+}else{
+  $(settings.sectionContainer + "[data-index='1']").addClass("active")
+  $("body").addClass("viewing-page-1")
+  if(settings.pagination == true) $(".onepage-pagination li a" + "[data-index='1']").addClass("active");
+}
+if(settings.pagination == true)  {
+  $(".onepage-pagination li a").click(function (){
+    var page_index = $(this).data("index");
+    el.moveTo(page_index);
+  });
+}
+$(document).bind('mousewheel DOMMouseScroll MozMousePixelScroll', function(event) {
+  event.preventDefault();
+  var delta = event.originalEvent.wheelDelta || -event.originalEvent.detail;
+  if(!$("body").hasClass("disabled-onepage-scroll")) init_scroll(event, delta);
+});
+if(settings.responsiveFallback != false) {
+  $(window).resize(function() {
+    responsive();
+  });
+  responsive();
+}
+if(settings.keyboard == true) {
+  $(document).keydown(function(e) {
+    var tag = e.target.tagName.toLowerCase();
+    if (!$("body").hasClass("disabled-onepage-scroll")) {
+      switch(e.which) {
+        case 38:
+          if (tag != 'input' &amp;&amp; tag != 'textarea') el.moveUp()
+        break;
+        case 40:
+          if (tag != 'input' &amp;&amp; tag != 'textarea') el.moveDown()
+        break;
+        case 32: 
+          if (tag != 'input' &amp;&amp; tag != 'textarea') el.moveDown()
+        break;
+        case 33: 
+          if (tag != 'input' &amp;&amp; tag != 'textarea') el.moveUp()
+        break;
+        case 34: 
+          if (tag != 'input' &amp;&amp; tag != 'textarea') el.moveDown()
+        break;
+        case 36: 
+          el.moveTo(1);
+        break;
+        case 35: 
+          el.moveTo(total);
+        break;
+        default: return;
+      }
+    }
+  });
+}
+return false;
+</code></pre>
+
+<p>  }
+}(window.jQuery);
+```</p>
+
+<p><img src="../images/capture_image-2.png" alt="second-page" /></p>
+
+<ul>
+<li>Then open <code>sass</code> file and copy below code for your project</li>
+</ul>
+
+
+<p>```sass
+  html</p>
+
+<pre><code>height: 100%
+</code></pre>
+
+<p>  body</p>
+
+<pre><code>padding: 0
+position: relative
+margin: 0
+height: 100%
+</code></pre>
+
+<p>  .wrapper</p>
+
+<pre><code>height: 100% !important
+margin: 0 auto
+</code></pre>
+
+<p>  .main section</p>
+
+<pre><code>&amp;.page1
+  background: rgb(78, 225, 197)
+&amp;.page2
+  background: #d9c337
+&amp;.page3
+  background: #e3242e
+&amp;.page4
+  background: #f2f4e8
+</code></pre>
+
+<p>  body.disabled-onepage-scroll</p>
+
+<pre><code>.onepage-wrapper section
+  min-height: 100%
+  height: auto
+</code></pre>
+
+<p>  body, html</p>
+
+<pre><code>margin: 0
+overflow: hidden
+-webkit-transition: opacity 400ms
+-moz-transition: opacity 400ms
+transition: opacity 400ms
+</code></pre>
+
+<p>  .onepage-wrapper</p>
+
+<pre><code>width: 100%
+height: 100%
+display: block
+position: relative
+padding: 0
+-webkit-transform-style: preserve-3d
+.section
+  width: 100%
+  height: 100%
+</code></pre>
+
+<p>  .onepage-pagination</p>
+
+<pre><code>position: absolute
+right: 10px
+top: 50%
+z-index: 5
+list-style: none
+margin: 0
+padding: 0
+li
+  padding: 0
+  text-align: center
+  a
+    padding: 10px
+    width: 4px
+    height: 4px
+    display: block
+    &amp;:before
+      content: ''
+      position: absolute
+      width: 4px
+      height: 4px
+      background: rgba(0, 0, 0, 0.85)
+      border-radius: 10px
+      -webkit-border-radius: 10px
+      -moz-border-radius: 10px
+    &amp;.active:before
+      width: 10px
+      height: 10px
+      background: none
+      border: 1px solid black
+      margin-top: -4px
+      left: 8px
+</code></pre>
+
+<p>```</p>
+
+<p><img src="../images/capture_image-3.png" alt="third-page" /></p>
+
+<p>For try your scroll page add in <code>haml</code> page</p>
+
+<p>```haml
+.wrapper
+  .main</p>
+
+<pre><code>%section.page1
+  .page_container
+    ...
+%section.page2
+  .page_container
+    ...
+%section.page3
+  .page_container
+    ...
+%section.page4
+  .page_container
+    ...
+</code></pre>
+
+<p>```</p>
+
+<p>Lastly open your <code>layout</code> and add codes</p>
+
+<p>```haml
+:javascript</p>
+
+<pre><code>$(document).ready(function(){
+  $(".main").onepage_scroll({
+    sectionContainer: "section",
+    responsiveFallback: 600,
+    loop: true
+  });
+  });
+</code></pre>
+
+<p>```</p>
+
+<p><img src="../images/capture_image-4.png" alt="fourth-page" /></p>
+
+<p>Look at code of <a href="https://github.com/leylaKapi/scroll-page">demo</a> and
+for <a href="https://github.com/peachananr/onepage-scroll">detail</a>.</p>
+
+<p>That' s all.</p>
+
+<p>I hope helped to you :)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Bounce Effect With CSS3]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/07/01/bounce-effect-with-css3/"/>
+    <updated>2014-07-01T23:56:56+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/07/01/bounce-effect-with-css3</id>
+    <content type="html"><![CDATA[<h3>How to give effect to arrow like bounce with CSS3 ?</h3>
+
+<p>You want to use arrow in your web-page with animation like bounce ball. <code>HOW ?</code></p>
+
+<p>Firstly, you should use this <code>haml</code> in your code, where you want to use <code>section</code>
+in your page,</p>
+
+<p>```haml
+%p.scroll-down
+   .bounce</p>
+
+<pre><code> %a{href: '#section2'}
+    %i.fa.fa-angle-double-down.fa-5x
+</code></pre>
+
+<p>```</p>
+
+<p>In your <code>sass</code> file, you should use</p>
+
+<!-- more -->
+
+
+<p>```sass
+.scroll-down</p>
+
+<pre><code>text-align: center
+position: absolute
+z-index: 2
+margin: 0 auto
+</code></pre>
+
+<p>.bounce
+  position: fixed
+  left: 50%
+  margin-top: -25px
+  margin-left: -25px
+  height: 50px
+  width: 50px
+  -webkit-animation: bounce 1s infinite
+@-webkit-keyframes bounce
+  0%</p>
+
+<pre><code>bottom: 5px
+</code></pre>
+
+<p>  25%, 75%</p>
+
+<pre><code>bottom: 15px
+</code></pre>
+
+<p>  50%</p>
+
+<pre><code>bottom: 20px
+</code></pre>
+
+<p>  100%</p>
+
+<pre><code>bottom: 0
+</code></pre>
+
+<p>```</p>
+
+<p>That&rsquo;s all!</p>
+
+<p>I hope helped to you.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Note About Write 'Data' on Haml ?]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/06/21/note-about-write-data-on-haml/"/>
+    <updated>2014-06-21T16:13:02+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/06/21/note-about-write-data-on-haml</id>
+    <content type="html"><![CDATA[<p>Write <code>data</code> attributes on HAML ?</p>
+
+<p>if you write on haml and use <code>data</code> attribute,</p>
+
+<p><code>haml
+%a{"data-slide" =&gt; "prev", href: "#carousel-example-generic", role: "button"}
 </code></p>
 
 <!-- more -->
 
 
-<p>Fine, you are installed middleman, now we start to create project in middleman</p>
-
-<p><code>bash
-   middleman init project_name
-</code></p>
-
-<p>Then this command give you directory as shown below :</p>
-
-<p>``` bash
- project_name/</p>
-
-<pre><code>Gemfile
-Gemfile.lock
-config.rb
-source
-    .gitignore
-    images
-        background.png
-        middleman.png
-    javascript
-        all.js
-    stylesheets
-        all.css
-        normalize.css
-    layouts
-        layout.erb
-    index.html.erb
-</code></pre>
-
-<p>```</p>
-
-<p>If you can see this directories, you should open project with your IDE.</p>
-
-<p><strong>Now, We create .haml file but how ?</strong></p>
-
-<p>Go ahead and remove below files because these files don&rsquo;t use in project.</p>
-
-<pre><code>- /source/images/background.png
-- /source/images/middleman.png
-- /source/javascript/all.js
-- /source/stylesheets/all.css
-- /source/stylesheets/normalize.css
-- /source/layouts/layout.erb
-- /source/index.html.erb
-</code></pre>
-
-<p>Now, Projects was removed from unused files.</p>
-
-<h5>Add HAML</h5>
-
-<p>Middleman appear to read HTML by default . Therefore, you should go to</p>
-
-<p><code>bash
- /config.rb
-</code></p>
-
-<p>in file write:</p>
+<p>but you should style of write can be like below :</p>
 
 <p><code>haml
-set :haml, :format =&gt; :html5
+%a{:data =&gt; {:slide =&gt; 'prev'}, href: '#carousel-generic'}
 </code></p>
 
-<p>Now program convert to html5 from haml.</p>
-
-<ul>
-<li>Add a</li>
-</ul>
-
+<p>OR</p>
 
 <p><code>haml
- layout.haml
+%li{"data-target" =&gt; ".nav-collapse", "data-toggle" =&gt; "collapse"}
 </code></p>
 
-<p>file to the</p>
+<p>like below</p>
 
-<pre><code>      /source/layouts
-</code></pre>
+<p><code>haml
+%li{:data =&gt; {:toggle =&gt; 'collapse', :target =&gt; '.nav-collapse'}}
+</code></p>
 
-<p>directory. In this file we write</p>
+<p>If you want, you can look at <a href="http://stackoverflow.com/questions/10321632/haml-how-do-i-create-this-line-of-html">this page</a> for details .</p>
 
-<p>``` haml</p>
+<p>That&rsquo;s all</p>
 
-<pre><code>!!!
-%html{ :lang =&gt; "en"}
-    %head
-        %meta{:charset =&gt; "utf-8"}
-        %title= data.page.title
-        = stylesheet_link_tag "your_css_file.css"
-        = javascript_include_tag "your_javascript_file.js"
-    %body
-        = yield
-</code></pre>
-
-<p>```</p>
-
-<p>Now we must create</p>
-
-<p>``` haml</p>
-
-<pre><code>index.html.haml
-</code></pre>
-
-<p>```</p>
-
-<p>in</p>
-
-<pre><code>            `source/`
-</code></pre>
-
-<p>directory.</p>
-
-<p>``` haml</p>
-
-<pre><code>%h1 Welcome Middleman project
-</code></pre>
-
-<p>```</p>
-
-<p>write in</p>
-
-<pre><code>           `source/index.html.haml`
-</code></pre>
-
-<p>files.</p>
-
-<p>We are create middleman project and write codes, How we run this program?</p>
-
-<p>Wait! Dont worry, When writing to below command in terminal in order of this.</p>
-
-<pre><code># Go to project path
-
-     cd project_name
-     bundle install
-     bundle exec middleman server
-</code></pre>
-
-<p>then we are seen</p>
-
-<pre><code>         http://localhost:4567
-</code></pre>
-
-<p>like url. We should copy this url and paste on browser search bar.</p>
-
-<p>That&rsquo;s it! Try and see.</p>
+<p>I hope helped to you.</p>
 ]]></content>
   </entry>
   
