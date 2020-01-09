@@ -4,19 +4,19 @@
   <title><![CDATA[Category: Haml | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/haml/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2015-01-16T00:22:20+02:00</updated>
+  <updated>2020-01-09T22:53:47+01:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
-    <name><![CDATA[ Leyla Kapi ]]></name>
+    <name><![CDATA[Leyla KAPI]]></name>
     <email><![CDATA[leylakapi@gmail.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
-    <title type="html"><![CDATA[Middleman create haml file]]></title>
+    <title type="html"><![CDATA[Middleman Create Haml File]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/02/27/middleman-create-haml-file/"/>
-    <updated>2014-02-27T13:49:10+02:00</updated>
+    <updated>2014-02-27T12:49:10+01:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/02/27/middleman-create-haml-file</id>
     <content type="html"><![CDATA[<h3>How to create .haml file in middleman?</h3>
 

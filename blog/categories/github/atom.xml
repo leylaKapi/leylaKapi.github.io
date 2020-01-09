@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: github | Leyla's Blog]]></title>
+  <title><![CDATA[Category: Github | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/github/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2015-01-16T00:22:20+02:00</updated>
+  <updated>2020-01-09T22:53:47+01:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
-    <name><![CDATA[ Leyla Kapi ]]></name>
+    <name><![CDATA[Leyla KAPI]]></name>
     <email><![CDATA[leylakapi@gmail.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
-    <title type="html"><![CDATA[Commands of github for setup]]></title>
+    <title type="html"><![CDATA[Commands of Github for Setup]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/02/26/commands-of-github-for-setup/"/>
-    <updated>2014-02-26T12:31:12+02:00</updated>
+    <updated>2014-02-26T11:31:12+01:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/02/26/commands-of-github-for-setup</id>
     <content type="html"><![CDATA[<h3>What I can setup github and create repo?</h3>
 

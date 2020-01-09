@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: programming-languages | Leyla's Blog]]></title>
+  <title><![CDATA[Category: Programming-languages | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/programming-languages/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2015-01-16T00:22:20+02:00</updated>
+  <updated>2020-01-09T22:53:47+01:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
-    <name><![CDATA[ Leyla Kapi ]]></name>
+    <name><![CDATA[Leyla KAPI]]></name>
     <email><![CDATA[leylakapi@gmail.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
-    <title type="html"><![CDATA[Ruby programming languages]]></title>
+    <title type="html"><![CDATA[Ruby Programming Languages]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/04/19/ruby-programming-languages/"/>
-    <updated>2014-04-19T10:52:45+03:00</updated>
+    <updated>2014-04-19T09:52:45+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/04/19/ruby-programming-languages</id>
     <content type="html"><![CDATA[<h1>AB2014 &ndash; Ruby101 for beginners</h1>
 

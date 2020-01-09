@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: log | Leyla's Blog]]></title>
+  <title><![CDATA[Category: Log | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/log/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2015-01-16T00:22:20+02:00</updated>
+  <updated>2020-01-09T22:53:47+01:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
-    <name><![CDATA[ Leyla Kapi ]]></name>
+    <name><![CDATA[Leyla KAPI]]></name>
     <email><![CDATA[leylakapi@gmail.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
-    <title type="html"><![CDATA[Remove log and idea files on your Rails Project]]></title>
+    <title type="html"><![CDATA[Remove Log and Idea Files on Your Rails Project]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/07/08/remove-log-and-idea-files-on-your-rails-project/"/>
-    <updated>2014-07-08T01:53:53+03:00</updated>
+    <updated>2014-07-08T00:53:53+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/07/08/remove-log-and-idea-files-on-your-rails-project</id>
     <content type="html"><![CDATA[<h3>How to remove log and idea files on your project ?</h3>
 

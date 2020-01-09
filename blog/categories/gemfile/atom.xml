@@ -4,19 +4,19 @@
   <title><![CDATA[Category: Gemfile | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/gemfile/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2015-01-16T00:22:20+02:00</updated>
+  <updated>2020-01-09T22:53:47+01:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
-    <name><![CDATA[ Leyla Kapi ]]></name>
+    <name><![CDATA[Leyla KAPI]]></name>
     <email><![CDATA[leylakapi@gmail.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
-    <title type="html"><![CDATA[Rails devise gem generator error]]></title>
+    <title type="html"><![CDATA[Rails Devise Gem Generator Error]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/07/24/rails-devise-gem-generator-error/"/>
-    <updated>2014-07-24T15:36:48+03:00</updated>
+    <updated>2014-07-24T14:36:48+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/07/24/rails-devise-gem-generator-error</id>
     <content type="html"><![CDATA[<h3>How to fix rails devise gem generate bug?</h3>
 
@@ -50,9 +50,9 @@ Could not find generator devise:install
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Rails active_admin gem bug]]></title>
+    <title type="html"><![CDATA[Rails Active_admin Gem Bug]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/07/22/rails-activeadmin-gem-bug/"/>
-    <updated>2014-07-22T15:55:03+03:00</updated>
+    <updated>2014-07-22T14:55:03+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/07/22/rails-activeadmin-gem-bug</id>
     <content type="html"><![CDATA[<h3>Fix to admin_active gem bug</h3>
 

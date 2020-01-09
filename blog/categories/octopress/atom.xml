@@ -4,19 +4,19 @@
   <title><![CDATA[Category: Octopress | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2015-01-16T00:22:20+02:00</updated>
+  <updated>2020-01-09T22:53:47+01:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
-    <name><![CDATA[ Leyla Kapi ]]></name>
+    <name><![CDATA[Leyla KAPI]]></name>
     <email><![CDATA[leylakapi@gmail.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
-    <title type="html"><![CDATA[How to add 'About' page in octopress]]></title>
+    <title type="html"><![CDATA[How to Add 'About' Page in Octopress]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/02/26/how-to-add-aboout-page-in-octopress/"/>
-    <updated>2014-02-26T14:25:12+02:00</updated>
+    <updated>2014-02-26T13:25:12+01:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/02/26/how-to-add-aboout-page-in-octopress</id>
     <content type="html"><![CDATA[<h3>How to add &lsquo;About&rsquo; page in Octopress?</h3>
 
@@ -56,9 +56,9 @@
 <p>``` html
    <ul class="main-navigation"></p>
 
-<pre><code> &lt;li&gt;&lt;a href="/"&gt;Blog&lt;/a&gt;&lt;/li&gt;
- &lt;li&gt;&lt;a href="/blog/archives"&gt;Archives&lt;/a&gt;&lt;/li&gt;
- &lt;li&gt;&lt;a href="/about"&gt;About&lt;/a&gt;&lt;/li&gt;
+<pre><code> &lt;li&gt;&lt;a href="{{ root_url }}/"&gt;Blog&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="{{ root_url }}/blog/archives"&gt;Archives&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="{{ root_url}}/about"&gt;About&lt;/a&gt;&lt;/li&gt;
 </code></pre>
 
 <p>   </ul>
@@ -89,9 +89,9 @@ rake deploy
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[After create octopress blog fixed error]]></title>
+    <title type="html"><![CDATA[After Create Octopress Blog Fixed Error]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/02/26/after-new-post/"/>
-    <updated>2014-02-26T11:30:57+02:00</updated>
+    <updated>2014-02-26T10:30:57+01:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/02/26/after-new-post</id>
     <content type="html"><![CDATA[<h3>When I setup Octopress Repository, error of</h3>
 
@@ -102,7 +102,7 @@ rake deploy
 
 <p>```</p>
 
-<!-- more -->
+<!--more-->
 
 
 <p>I setup the Octopress, and I create,</p>

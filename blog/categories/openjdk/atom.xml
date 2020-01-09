@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: openjdk | Leyla's Blog]]></title>
+  <title><![CDATA[Category: Openjdk | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/openjdk/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2015-01-16T00:22:20+02:00</updated>
+  <updated>2020-01-09T22:53:47+01:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
-    <name><![CDATA[ Leyla Kapi ]]></name>
+    <name><![CDATA[Leyla KAPI]]></name>
     <email><![CDATA[leylakapi@gmail.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
-    <title type="html"><![CDATA[Install open-jdk or oracle on Ubuntu]]></title>
+    <title type="html"><![CDATA[Install Open-jdk or Oracle on Ubuntu]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/08/03/install-open-jdk-or-oracle-on-ubuntu/"/>
-    <updated>2014-08-03T23:25:29+03:00</updated>
+    <updated>2014-08-03T22:25:29+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/08/03/install-open-jdk-or-oracle-on-ubuntu</id>
     <content type="html"><![CDATA[<h3>Note about installation of java on Ubuntu computer</h3>
 

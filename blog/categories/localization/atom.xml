@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: localization | Leyla's Blog]]></title>
+  <title><![CDATA[Category: Localization | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/localization/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2015-01-16T00:22:20+02:00</updated>
+  <updated>2020-01-09T22:53:47+01:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
-    <name><![CDATA[ Leyla Kapi ]]></name>
+    <name><![CDATA[Leyla KAPI]]></name>
     <email><![CDATA[leylakapi@gmail.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
-    <title type="html"><![CDATA[How to add multi-lingual support to your web-page in middleman]]></title>
+    <title type="html"><![CDATA[How to Add Multi-lingual Support to Your Web-page in Middleman]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/10/27/how-to-add-multi-lingual-support-to-your-web-page-in-middleman/"/>
-    <updated>2014-10-27T00:00:00+02:00</updated>
+    <updated>2014-10-27T00:00:00+01:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/10/27/how-to-add-multi-lingual-support-to-your-web-page-in-middleman</id>
     <content type="html"><![CDATA[<h3>Multi-Lingual Support</h3>
 

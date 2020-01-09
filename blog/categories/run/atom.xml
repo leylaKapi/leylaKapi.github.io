@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: run | Leyla's Blog]]></title>
+  <title><![CDATA[Category: Run | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/run/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2015-01-16T00:22:20+02:00</updated>
+  <updated>2020-01-09T22:53:47+01:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
-    <name><![CDATA[ Leyla Kapi ]]></name>
+    <name><![CDATA[Leyla KAPI]]></name>
     <email><![CDATA[leylakapi@gmail.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
-    <title type="html"><![CDATA[Note:How to fix Android Parse Sdk failed?]]></title>
+    <title type="html"><![CDATA[Note:How to Fix Android Parse Sdk Failed?]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/10/18/note-how-to-fix-android-parse-sdk-failed/"/>
-    <updated>2014-10-18T00:00:00+03:00</updated>
+    <updated>2014-10-18T00:00:00+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/10/18/note-how-to-fix-android-parse-sdk-failed</id>
     <content type="html"><![CDATA[<p>If you are coding android on eclipse and when you are open your eclipse getting like</p>
 

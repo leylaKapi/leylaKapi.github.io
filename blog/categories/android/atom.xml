@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: android | Leyla's Blog]]></title>
+  <title><![CDATA[Category: Android | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/android/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2015-01-16T00:22:20+02:00</updated>
+  <updated>2020-01-09T22:53:47+01:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
-    <name><![CDATA[ Leyla Kapi ]]></name>
+    <name><![CDATA[Leyla KAPI]]></name>
     <email><![CDATA[leylakapi@gmail.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
-    <title type="html"><![CDATA[How to use getExtra and putExtra in Android for string data]]></title>
+    <title type="html"><![CDATA[How to Use getExtra and putExtra in Android for String Data]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/11/08/how-to-use-getextra-and-putextra-in-android-for-string-data/"/>
-    <updated>2014-11-08T14:21:19+02:00</updated>
+    <updated>2014-11-08T13:21:19+01:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/11/08/how-to-use-getextra-and-putextra-in-android-for-string-data</id>
     <content type="html"><![CDATA[<h3>Use getExtra and putExtra</h3>
 
@@ -156,9 +156,9 @@ on <code>Second Activity</code>.</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Note: Go back to previous activity on Android]]></title>
+    <title type="html"><![CDATA[Note: Go Back to Previous Activity on Android]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/11/07/note-go-back-to-previous-activity-on-android/"/>
-    <updated>2014-11-07T17:33:09+02:00</updated>
+    <updated>2014-11-07T16:33:09+01:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/11/07/note-go-back-to-previous-activity-on-android</id>
     <content type="html"><![CDATA[<h3>Method for go previous activity</h3>
 
@@ -202,9 +202,9 @@ public void ReturnHome(View view){</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Note:How to fix Android Parse Sdk failed?]]></title>
+    <title type="html"><![CDATA[Note:How to Fix Android Parse Sdk Failed?]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/10/18/note-how-to-fix-android-parse-sdk-failed/"/>
-    <updated>2014-10-18T00:00:00+03:00</updated>
+    <updated>2014-10-18T00:00:00+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/10/18/note-how-to-fix-android-parse-sdk-failed</id>
     <content type="html"><![CDATA[<p>If you are coding android on eclipse and when you are open your eclipse getting like</p>
 
