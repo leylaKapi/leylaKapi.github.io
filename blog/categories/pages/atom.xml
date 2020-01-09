@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: pages | Leyla's Blog]]></title>
+  <title><![CDATA[Category: Pages | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/pages/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2015-01-16T00:22:20+02:00</updated>
+  <updated>2020-01-09T22:43:13+01:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
-    <name><![CDATA[ Leyla Kapi ]]></name>
+    <name><![CDATA[Leyla KAPI]]></name>
     <email><![CDATA[leylakapi@gmail.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
-    <title type="html"><![CDATA[Note: Go back to previous activity on Android]]></title>
+    <title type="html"><![CDATA[Note: Go Back to Previous Activity on Android]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/11/07/note-go-back-to-previous-activity-on-android/"/>
-    <updated>2014-11-07T17:33:09+02:00</updated>
+    <updated>2014-11-07T16:33:09+01:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/11/07/note-go-back-to-previous-activity-on-android</id>
     <content type="html"><![CDATA[<h3>Method for go previous activity</h3>
 
@@ -60,9 +60,9 @@ public void ReturnHome(View view){</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Trick: Add page number with javascript ?]]></title>
+    <title type="html"><![CDATA[Trick: Add Page Number With Javascript ?]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/10/02/dipnote-add-page-number-with-javascript/"/>
-    <updated>2014-10-02T21:32:05+03:00</updated>
+    <updated>2014-10-02T20:32:05+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/10/02/dipnote-add-page-number-with-javascript</id>
     <content type="html"><![CDATA[<h3>How can you show page number in js ?</h3>
 
@@ -109,9 +109,9 @@ I hope helped to you.</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[How to create scroll-page for rails project]]></title>
+    <title type="html"><![CDATA[How to Create Scroll-page for Rails Project]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/09/17/how-to-create-scroll-page-for-rails-project/"/>
-    <updated>2014-09-17T17:05:01+03:00</updated>
+    <updated>2014-09-17T16:05:01+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/09/17/how-to-create-scroll-page-for-rails-project</id>
     <content type="html"><![CDATA[<h2>Create scroll page with sass and javascript</h2>
 

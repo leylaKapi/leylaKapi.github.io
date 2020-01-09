@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: reset | Leyla's Blog]]></title>
+  <title><![CDATA[Category: Reset | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/reset/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2015-01-16T00:22:20+02:00</updated>
+  <updated>2020-01-09T22:43:13+01:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
-    <name><![CDATA[ Leyla Kapi ]]></name>
+    <name><![CDATA[Leyla KAPI]]></name>
     <email><![CDATA[leylakapi@gmail.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
-    <title type="html"><![CDATA[Fix rake db:populate]]></title>
+    <title type="html"><![CDATA[Fix Rake Db:populate]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/08/08/fix-rake-db-populate/"/>
-    <updated>2014-08-08T10:33:06+03:00</updated>
+    <updated>2014-08-08T09:33:06+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/08/08/fix-rake-db-populate</id>
     <content type="html"><![CDATA[<h3><code>Rake aborted! Don't know how to build task 'populate'</code></h3>
 

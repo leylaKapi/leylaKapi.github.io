@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: meaning | Leyla's Blog]]></title>
+  <title><![CDATA[Category: Meaning | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/meaning/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2015-01-16T00:22:20+02:00</updated>
+  <updated>2020-01-09T22:43:13+01:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
-    <name><![CDATA[ Leyla Kapi ]]></name>
+    <name><![CDATA[Leyla KAPI]]></name>
     <email><![CDATA[leylakapi@gmail.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
-    <title type="html"><![CDATA[Meaning of abbreviations]]></title>
+    <title type="html"><![CDATA[Meaning of Abbreviations]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/02/26/meaning-of-abbreviations/"/>
-    <updated>2014-02-26T10:04:36+02:00</updated>
+    <updated>2014-02-26T09:04:36+01:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/02/26/meaning-of-abbreviations</id>
     <content type="html"><![CDATA[<h2>What is the meaning of abbreviation for HTML, CSS, &hellip;?</h2>
 

@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: ip | Leyla's Blog]]></title>
+  <title><![CDATA[Category: Ip | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/ip/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2015-01-16T00:22:20+02:00</updated>
+  <updated>2020-01-09T22:43:13+01:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
-    <name><![CDATA[ Leyla Kapi ]]></name>
+    <name><![CDATA[Leyla KAPI]]></name>
     <email><![CDATA[leylakapi@gmail.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
-    <title type="html"><![CDATA[How to change DNS settings on Ubuntu Desktop?]]></title>
+    <title type="html"><![CDATA[How to Change DNS Settings on Ubuntu Desktop?]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/03/22/how-to-change-dns-settings-on-ubuntu-desktop/"/>
-    <updated>2014-03-22T15:17:32+02:00</updated>
+    <updated>2014-03-22T14:17:32+01:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/03/22/how-to-change-dns-settings-on-ubuntu-desktop</id>
     <content type="html"><![CDATA[<h3>How to change DNS settings (ip address) or How to set up Google public DNS for Ubuntu Desktop?</h3>
 

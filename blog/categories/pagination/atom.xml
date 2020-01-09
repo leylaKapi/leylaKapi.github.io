@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: pagination | Leyla's Blog]]></title>
+  <title><![CDATA[Category: Pagination | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/pagination/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2015-01-16T00:22:20+02:00</updated>
+  <updated>2020-01-09T22:43:13+01:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
-    <name><![CDATA[ Leyla Kapi ]]></name>
+    <name><![CDATA[Leyla KAPI]]></name>
     <email><![CDATA[leylakapi@gmail.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
-    <title type="html"><![CDATA[Trick: Add page number with javascript ?]]></title>
+    <title type="html"><![CDATA[Trick: Add Page Number With Javascript ?]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/10/02/dipnote-add-page-number-with-javascript/"/>
-    <updated>2014-10-02T21:32:05+03:00</updated>
+    <updated>2014-10-02T20:32:05+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/10/02/dipnote-add-page-number-with-javascript</id>
     <content type="html"><![CDATA[<h3>How can you show page number in js ?</h3>
 

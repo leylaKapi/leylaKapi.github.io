@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: tool | Leyla's Blog]]></title>
+  <title><![CDATA[Category: Tool | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/tool/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2015-01-16T00:22:20+02:00</updated>
+  <updated>2020-01-09T22:43:13+01:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
-    <name><![CDATA[ Leyla Kapi ]]></name>
+    <name><![CDATA[Leyla KAPI]]></name>
     <email><![CDATA[leylakapi@gmail.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Google App Engine - PHP]]></title>
     <link href="http://leylaKapi.github.io/blog/2015/01/13/google-app-engine-php/"/>
-    <updated>2015-01-13T23:14:20+02:00</updated>
+    <updated>2015-01-13T22:14:20+01:00</updated>
     <id>http://leylaKapi.github.io/blog/2015/01/13/google-app-engine-php</id>
     <content type="html"><![CDATA[<h3>App engine ve PHP</h3>
 

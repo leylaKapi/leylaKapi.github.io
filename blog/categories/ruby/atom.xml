@@ -1,147 +1,236 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Ruby, | Leyla's Blog]]></title>
+  <title><![CDATA[Category: Ruby | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2015-01-16T00:22:20+02:00</updated>
+  <updated>2020-01-09T22:43:13+01:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
-    <name><![CDATA[ Leyla Kapi ]]></name>
+    <name><![CDATA[Leyla KAPI]]></name>
     <email><![CDATA[leylakapi@gmail.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
-    <title type="html"><![CDATA[Brief info about Hash]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/03/01/brief-info-about-hash/"/>
-    <updated>2014-03-01T18:52:57+02:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/03/01/brief-info-about-hash</id>
-    <content type="html"><![CDATA[<h3>What is the hash in ruby ?</h3>
+    <title type="html"><![CDATA[Bundle Error Middleman El-capitan]]></title>
+    <link href="http://leylaKapi.github.io/blog/2016/08/10/bundle-error-middleman-elcapitan/"/>
+    <updated>2016-08-10T00:00:00+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2016/08/10/bundle-error-middleman-elcapitan</id>
+    <content type="html"><![CDATA[<p>If your computer has OSX 10.11 El Capitan, and try to create middleman project then  write <code>bundle</code> to install gems. But you can get</p>
 
-<p>Hash, hash, hash ?</p>
+<p><code>bash
+Installing eventmachine 1.0.7 with native extensions
+Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
+In file included from binder.cpp:20:
+./project.h:116:10 fatal error: 'openssl/ssl.h' file not found
+include &lt;openssl/ssl.h&gt;
+1 error generated
+</code></p>
 
-<ul>
-<li>Hashes are one of the biggest property which separated another language in ruby.</li>
-<li>Hash was known <strong>associative array</strong> in another programming language.</li>
-<li>In hash, elements keep <strong>&lsquo;key => value&rsquo;</strong> format in ruby . Like</li>
-</ul>
+<p>like above error. You have to solve problem with <code>openssl</code> .
+For fix it ;</p>
+
+<p><code>bash
+brew link openssl --force
+</code></p>
+
+<p>then you can run <code>bundle</code> now. For detail about this problem please look at <a href="https://github.com/eventmachine/eventmachine/issues/643">this link</a></p>
+
+<p>I hope helped to you .</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Bootstrap Active Class Solution for Navbar in Rails]]></title>
+    <link href="http://leylaKapi.github.io/blog/2015/10/24/bootstrap-active-class-solution-for-navbar-in-rails/"/>
+    <updated>2015-10-24T16:32:38+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2015/10/24/bootstrap-active-class-solution-for-navbar-in-rails</id>
+    <content type="html"><![CDATA[<p>Sometimes while you are adding bootstrap to your rails app, you can getting some problem on javascript side. In this article I try to explain how we can fix <code>active</code> class to navbar . For fixing, you can write in helper <code>active_class</code> method like below</p>
+
+<p>```ruby
+module ApplicationHelper
+  def active_class(link_path)</p>
+
+<pre><code>current_page?(link_path) ? 'active' : ""
+</code></pre>
+
+<p>  end
+end
+```</p>
+
+<!--more-->
 
 
-<p>``` ruby</p>
+<p>In your views from bootstrap classes should be like,</p>
 
-<pre><code>hash_example = { 'name' =&gt; 'John', 'surname' =&gt; 'doe' }
+<p>```html
+%ul.nav.navbar-nav
+  %li{class: active_class(about_path)}</p>
+
+<pre><code>= link_to 'About', about_path
+</code></pre>
+
+<p>  %li{class: active_class(works_path)}</p>
+
+<pre><code>= link_to 'Our Works', works_path
+</code></pre>
+
+<p>  %li{class: active_class(contact_path)}</p>
+
+<pre><code>= link_to 'Contact', contact_path
 </code></pre>
 
 <p>```</p>
+
+<p>In addition, you can update according to your style to below command, but in this part it s important to use  <code>!important</code> method for overwrite on <code>active</code> class .</p>
+
+<p><code>css
+.navbar-default .navbar-nav &gt; .active &gt; a, .navbar-default .navbar-nav &gt; .active &gt; a:hover, .navbar-default .navbar-nav &gt; .active &gt; a:active
+  color: red !important
+</code></p>
+
+<p>That&rsquo;s all. I hope helped to you.</p>
+
+<p>For more information: <a href="http://goo.gl/twDl3t">http://goo.gl/twDl3t</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Rails Fix N+1 Query]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/12/16/rails-fix-n-plus-1-query/"/>
+    <updated>2014-12-16T00:00:00+01:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/12/16/rails-fix-n-plus-1-query</id>
+    <content type="html"><![CDATA[<h3>How to fix N+1 query in Rails ?</h3>
+
+<p>I try to explain fix <code>N+1</code> on example. Let&rsquo;s start, firstly, in your rails application, you created association between <code>user</code> and <code>user_profile</code>
+models like below :</p>
+
+<p><code>ruby
+class User &lt; ActiveRecord::Base
+   has_one :profile, class_name: 'UserProfile'
+end
+</code>
+and</p>
+
+<p><code>ruby
+class UserProfile &lt; ActiveRecord::Base
+  belongs_to :user
+end
+</code></p>
 
 <!-- more -->
 
 
-<ul>
-<li>Values of keys can be any type, but when you use <strong>&lsquo;eql?&rsquo;</strong> method, it can be only a key according to each other.</li>
-</ul>
-
-
-<p>``` ruby</p>
-
-<pre><code>    a = { 3 =&gt; 'three', 3.0 =&gt; 'threedotzero' }
-    a[3]        #three
-    a[3.0]      #threedotzero
-    3 == 3.0        #true
-    3.eql? 3.0      #false
-</code></pre>
-
-<p>```
-&ndash; Hashes usually write with symbols, like :</p>
+<p>When you created association between <code>user</code> and <code>user_profile</code> like above (you can derive it), then you are getting like below error while you refresh to app page or
+edit something&hellip; The error is that :</p>
 
 <p><code>ruby
- hash_with_symbol{ name: 'John', surname: 'Doe'}
+The page at 0.0.0.0:3000 says:
+user:-----
+N+1 Query detected
+User =&gt; [:profile]
+Add to your finder::include =&gt; [:profile]
+N+1 Query method call stack
 </code></p>
 
-<ul>
-<li>Hashes are similar to Array class, but Array uses integer as its index, hash allow to us any object type.</li>
-</ul>
+<p>Actually rails says to you for fix above bug(it says use <code>include</code> to <code>profile</code>&hellip;), for fix bug open <code>users_controller.rb</code> then
+add :</p>
 
+<p><code>ruby
+User.includes(:profile)
+</code></p>
 
-<p>``` ruby</p>
+<p>instead of</p>
 
-<pre><code>hash_differences_array{ 'age' =&gt; 15, 'year' =&gt; 2014 }
-array_differences_hash = [1, 2, 3]
-</code></pre>
+<p><code>ruby
+User
+</code>
+like below ;</p>
 
-<p>```</p>
+<p>```ruby
+class UsersController &lt; ApplicationController</p>
 
-<p>In my opinion, You have an information about hashes. Do you agree with me?!</p>
-
-<ul>
-<li>Continue to learn!, I have an information about hash, but if I want to access only keys or values , How does it access or separate these in hash ?</li>
-</ul>
-
-
-<p>For this question, solution: if you want to access to keys use</p>
-
-<pre><code>        keys
-</code></pre>
-
-<p>method, if you want to access to values use</p>
-
-<pre><code>        values
-</code></pre>
-
-<p>methods. Like:</p>
-
-<p>``` ruby</p>
-
-<pre><code>access_values_keys{ name: 'john', surname: 'Doe'}
-access_values_keys.keys         # [:name, :surname]
-access_values_keys.values       #['John', 'Doe']
-</code></pre>
-
-<p>```</p>
-
-<ul>
-<li>Generally, hashes are using in parameters of name,</li>
-</ul>
-
-
-<p>``` ruby</p>
-
-<pre><code>def parameters_name(name, age)
-    '#{name} : #{age}'
+<pre><code>def index
+    @search = User.includes(:profile).search(params[:q])
+    @users = @search.result(:distinct =&gt; true).paginate(:page =&gt; params[:page])
 end
-puts name 'John' , 18       # Ali : 18
 </code></pre>
 
-<p>```</p>
+<p>end
+```</p>
 
-<ul>
-<li>Hashes uses to <strong>ENUMERABLE</strong> module like arrays.</li>
-</ul>
+<p>That&rsquo;s it.</p>
+
+<p>I hope helped to you .</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Note: Fix Ruby on Rails Qt Installation]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/10/22/note-fix-ruby-on-rails-qt-installation/"/>
+    <updated>2014-10-22T22:16:22+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/10/22/note-fix-ruby-on-rails-qt-installation</id>
+    <content type="html"><![CDATA[<p>In your rails project when you run <code>bundle</code> command, if you getting below error,</p>
+
+<p><code>bash
+/ruby extconf.rb qmake:couldn't find a QT installation of '' Command 'qmake_spec linux-gtt' failed
+</code></p>
+
+<p>on Ubuntu, you can fix with below command to this error.</p>
+
+<p><code>bash
+$ sudo apt-get install qt4-dev-tools libqt4-dev libqt4-core libqt4-gui
+</code></p>
+
+<!-- more -->
 
 
-<p>``` ruby
-  {}.class.ancestors          #show the hash ancestors.</p>
+<p> Then you need to install <code>capybara-webkit</code> gem to your project with,</p>
 
-<pre><code>                                    #[Hash, Enumerable, Object, PP::ObjectMixin, Kernel, BasicObject]
-</code></pre>
+<p><code>bash
+$ gem install capybara-webkit
+</code></p>
 
-<p>```</p>
+<p>You can search this bug on <a href="http://stackoverflow.com/questions/11354656/error-error-error-installing-capybara-webkit">stackoverflow</a></p>
 
-<ul>
-<li>If you want to change from array to hash, you should use</li>
-</ul>
+<p>That&rsquo;s all.</p>
+
+<p>I hope your bug is fixed.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Fix Paperclip Gem Bug]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/08/21/fix-paperclip-gem-bug/"/>
+    <updated>2014-08-21T12:49:45+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/08/21/fix-paperclip-gem-bug</id>
+    <content type="html"><![CDATA[<h3>How can I fix <code>paperclip</code> error ?</h3>
+
+<p>When you use <code>paperclip</code> gem, if you are getting like this bug</p>
+
+<p><code>ruby
+Photo could not run the identify command. Please install ImageMagick.
+</code></p>
+
+<!-- more -->
 
 
-<p>``` ruby</p>
+<p>You can fix this bug with</p>
 
-<pre><code>.to_h
-</code></pre>
+<p><code>bash
+sudo apt-get autoremove
+</code>
+or you can make</p>
 
-<p>```</p>
+<p><code>bash
+sudo apt-get install imagemagick.
+</code></p>
 
-<p><strong>Lastly</strong> If you want to learn more, you can visit <a href="http://www.ruby-doc.org/core-2.0/Hash.html">ruby-doc</a> .</p>
+<p>I suggest the second command, because if youcan make <code>autoremove</code> you can get error again.</p>
+
+<p>That' s all.</p>
 ]]></content>
   </entry>
   

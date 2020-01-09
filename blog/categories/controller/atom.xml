@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: controller | Leyla's Blog]]></title>
+  <title><![CDATA[Category: Controller | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/controller/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2015-01-16T00:22:20+02:00</updated>
+  <updated>2020-01-09T22:43:13+01:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
-    <name><![CDATA[ Leyla Kapi ]]></name>
+    <name><![CDATA[Leyla KAPI]]></name>
     <email><![CDATA[leylakapi@gmail.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
-    <title type="html"><![CDATA[Rails fix N+1 query]]></title>
+    <title type="html"><![CDATA[Rails Fix N+1 Query]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/12/16/rails-fix-n-plus-1-query/"/>
-    <updated>2014-12-16T00:00:00+02:00</updated>
+    <updated>2014-12-16T00:00:00+01:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/12/16/rails-fix-n-plus-1-query</id>
     <content type="html"><![CDATA[<h3>How to fix N+1 query in Rails ?</h3>
 
@@ -84,9 +84,9 @@ end
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Fix Invalid Authentication Token error in rails]]></title>
+    <title type="html"><![CDATA[Fix Invalid Authentication Token Error in Rails]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/08/06/fix-invalid-authentication-token-error-in-rails/"/>
-    <updated>2014-08-06T23:49:35+03:00</updated>
+    <updated>2014-08-06T22:49:35+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/08/06/fix-invalid-authentication-token-error-in-rails</id>
     <content type="html"><![CDATA[<h3>How to fix <code>ActionController: InvalidAuthentication Token error</code> ?</h3>
 
@@ -127,9 +127,9 @@ skip_before_filter :verify_authenticity_token
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Add simple search form to rails projects]]></title>
+    <title type="html"><![CDATA[Add Simple Search Form to Rails Projects]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/07/16/add-search-form-to-rails-projects/"/>
-    <updated>2014-07-16T19:47:15+03:00</updated>
+    <updated>2014-07-16T18:47:15+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/07/16/add-search-form-to-rails-projects</id>
     <content type="html"><![CDATA[<h3>How can you add simple search form to rails project ?</h3>
 

@@ -1,22 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: gem | Leyla's Blog]]></title>
+  <title><![CDATA[Category: Gem | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/gem/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2015-01-16T00:22:20+02:00</updated>
+  <updated>2020-01-09T22:43:13+01:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
-    <name><![CDATA[ Leyla Kapi ]]></name>
+    <name><![CDATA[Leyla KAPI]]></name>
     <email><![CDATA[leylakapi@gmail.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
-    <title type="html"><![CDATA[Note: Fix Ruby on Rails Qt installation]]></title>
+    <title type="html"><![CDATA[Bundle Error Middleman El-capitan]]></title>
+    <link href="http://leylaKapi.github.io/blog/2016/08/10/bundle-error-middleman-elcapitan/"/>
+    <updated>2016-08-10T00:00:00+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2016/08/10/bundle-error-middleman-elcapitan</id>
+    <content type="html"><![CDATA[<p>If your computer has OSX 10.11 El Capitan, and try to create middleman project then  write <code>bundle</code> to install gems. But you can get</p>
+
+<p><code>bash
+Installing eventmachine 1.0.7 with native extensions
+Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
+In file included from binder.cpp:20:
+./project.h:116:10 fatal error: 'openssl/ssl.h' file not found
+include &lt;openssl/ssl.h&gt;
+1 error generated
+</code></p>
+
+<p>like above error. You have to solve problem with <code>openssl</code> .
+For fix it ;</p>
+
+<p><code>bash
+brew link openssl --force
+</code></p>
+
+<p>then you can run <code>bundle</code> now. For detail about this problem please look at <a href="https://github.com/eventmachine/eventmachine/issues/643">this link</a></p>
+
+<p>I hope helped to you .</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Note: Fix Ruby on Rails Qt Installation]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/10/22/note-fix-ruby-on-rails-qt-installation/"/>
-    <updated>2014-10-22T23:16:22+03:00</updated>
+    <updated>2014-10-22T22:16:22+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/10/22/note-fix-ruby-on-rails-qt-installation</id>
     <content type="html"><![CDATA[<p>In your rails project when you run <code>bundle</code> command, if you getting below error,</p>
 
@@ -48,9 +77,9 @@ $ gem install capybara-webkit
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Fix paperclip gem bug]]></title>
+    <title type="html"><![CDATA[Fix Paperclip Gem Bug]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/08/21/fix-paperclip-gem-bug/"/>
-    <updated>2014-08-21T13:49:45+03:00</updated>
+    <updated>2014-08-21T12:49:45+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/08/21/fix-paperclip-gem-bug</id>
     <content type="html"><![CDATA[<h3>How can I fix <code>paperclip</code> error ?</h3>
 
@@ -81,9 +110,9 @@ sudo apt-get install imagemagick.
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Upload picture to rails app]]></title>
+    <title type="html"><![CDATA[Upload Picture to Rails App]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/08/09/upload-picture-to-rails-app/"/>
-    <updated>2014-08-09T13:03:08+03:00</updated>
+    <updated>2014-08-09T12:03:08+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/08/09/upload-picture-to-rails-app</id>
     <content type="html"><![CDATA[<h3>How to upload picture in rails app ?</h3>
 
@@ -198,9 +227,9 @@ end
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Fix Invalid Authentication Token error in rails]]></title>
+    <title type="html"><![CDATA[Fix Invalid Authentication Token Error in Rails]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/08/06/fix-invalid-authentication-token-error-in-rails/"/>
-    <updated>2014-08-06T23:49:35+03:00</updated>
+    <updated>2014-08-06T22:49:35+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/08/06/fix-invalid-authentication-token-error-in-rails</id>
     <content type="html"><![CDATA[<h3>How to fix <code>ActionController: InvalidAuthentication Token error</code> ?</h3>
 
@@ -237,42 +266,6 @@ skip_before_filter :verify_authenticity_token
 <p>That&rsquo;s all.</p>
 
 <p>I hope helped to you .</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Rails devise gem generator error]]></title>
-    <link href="http://leylaKapi.github.io/blog/2014/07/24/rails-devise-gem-generator-error/"/>
-    <updated>2014-07-24T15:36:48+03:00</updated>
-    <id>http://leylaKapi.github.io/blog/2014/07/24/rails-devise-gem-generator-error</id>
-    <content type="html"><![CDATA[<h3>How to fix rails devise gem generate bug?</h3>
-
-<p>You use <code>devise</code> gem for add admin page or user page to your project. When you generate to your devise gem,
-you' re getting error to your project,  like ;</p>
-
-<p><code>bash
-$ rails g devise:install
-Could not find generator devise:install
-</code></p>
-
-<!-- more -->
-
-
-<p>If you get like ths error, you can fix for these order,</p>
-
-<ul>
-<li>Open your <code>Gemfile</code>, add <code>gem 'devise'</code> then,</li>
-<li>Open terminal, run  <code>bundle</code></li>
-<li>Open you computer search bar, Search on your computer to <code>Disk Utility</code></li>
-<li>Select you Disk For example: <code>Macintosh HD</code></li>
-<li>Then click on <code>Repair Disk Permissions</code></li>
-<li>Waiting approximately 15 minutes, then <strong>restart</strong> your computer.</li>
-</ul>
-
-
-<p>That' s all.</p>
-
-<p>I hope fixed your bug.</p>
 ]]></content>
   </entry>
   

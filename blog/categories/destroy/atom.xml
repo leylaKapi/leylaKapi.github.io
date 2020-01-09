@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: destroy | Leyla's Blog]]></title>
+  <title><![CDATA[Category: Destroy | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/destroy/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2015-01-16T00:22:20+02:00</updated>
+  <updated>2020-01-09T22:43:13+01:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
-    <name><![CDATA[ Leyla Kapi ]]></name>
+    <name><![CDATA[Leyla KAPI]]></name>
     <email><![CDATA[leylakapi@gmail.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
-    <title type="html"><![CDATA[Fix after destroy user model try add user model]]></title>
+    <title type="html"><![CDATA[Fix After Destroy User Model Try Add User Model]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/07/27/fix-after-destroy-user-model-try-add-user-model/"/>
-    <updated>2014-07-27T14:34:26+03:00</updated>
+    <updated>2014-07-27T13:34:26+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/07/27/fix-after-destroy-user-model-try-add-user-model</id>
     <content type="html"><![CDATA[<p>After you made <code>rails destroy Users</code> and you want to create again <code>User</code> model, When you create, if you' re getting like this error,</p>
 

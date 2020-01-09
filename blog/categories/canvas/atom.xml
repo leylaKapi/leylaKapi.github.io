@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: canvas | Leyla's Blog]]></title>
+  <title><![CDATA[Category: Canvas | Leyla's Blog]]></title>
   <link href="http://leylaKapi.github.io/blog/categories/canvas/atom.xml" rel="self"/>
   <link href="http://leylaKapi.github.io/"/>
-  <updated>2015-01-16T00:22:20+02:00</updated>
+  <updated>2020-01-09T22:43:13+01:00</updated>
   <id>http://leylaKapi.github.io/</id>
   <author>
-    <name><![CDATA[ Leyla Kapi ]]></name>
+    <name><![CDATA[Leyla KAPI]]></name>
     <email><![CDATA[leylakapi@gmail.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[HTML5 Canvas Javascript]]></title>
     <link href="http://leylaKapi.github.io/blog/2014/07/03/html5-canvas-javascript/"/>
-    <updated>2014-07-03T16:10:34+03:00</updated>
+    <updated>2014-07-03T15:10:34+02:00</updated>
     <id>http://leylaKapi.github.io/blog/2014/07/03/html5-canvas-javascript</id>
     <content type="html"><![CDATA[<h3>Which libraries should I use in javascript for game development ?</h3>
 
