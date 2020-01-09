@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Gem | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/gem/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2020-01-09T22:29:05+01:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[Leyla KAPI]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Bundle Error Middleman El-capitan]]></title>
+    <link href="http://leylaKapi.github.io/blog/2016/08/10/bundle-error-middleman-elcapitan/"/>
+    <updated>2016-08-10T00:00:00+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2016/08/10/bundle-error-middleman-elcapitan</id>
+    <content type="html"><![CDATA[<p>If your computer has OSX 10.11 El Capitan, and try to create middleman project then  write <code>bundle</code> to install gems. But you can get</p>
+
+<p><code>bash
+Installing eventmachine 1.0.7 with native extensions
+Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
+In file included from binder.cpp:20:
+./project.h:116:10 fatal error: 'openssl/ssl.h' file not found
+include &lt;openssl/ssl.h&gt;
+1 error generated
+</code></p>
+
+<p>like above error. You have to solve problem with <code>openssl</code> .
+For fix it ;</p>
+
+<p><code>bash
+brew link openssl --force
+</code></p>
+
+<p>then you can run <code>bundle</code> now. For detail about this problem please look at <a href="https://github.com/eventmachine/eventmachine/issues/643">this link</a></p>
+
+<p>I hope helped to you .</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Note: Fix Ruby on Rails Qt Installation]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/10/22/note-fix-ruby-on-rails-qt-installation/"/>
+    <updated>2014-10-22T22:16:22+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/10/22/note-fix-ruby-on-rails-qt-installation</id>
+    <content type="html"><![CDATA[<p>In your rails project when you run <code>bundle</code> command, if you getting below error,</p>
+
+<p><code>bash
+/ruby extconf.rb qmake:couldn't find a QT installation of '' Command 'qmake_spec linux-gtt' failed
+</code></p>
+
+<p>on Ubuntu, you can fix with below command to this error.</p>
+
+<p><code>bash
+$ sudo apt-get install qt4-dev-tools libqt4-dev libqt4-core libqt4-gui
+</code></p>
+
+<!-- more -->
+
+
+<p> Then you need to install <code>capybara-webkit</code> gem to your project with,</p>
+
+<p><code>bash
+$ gem install capybara-webkit
+</code></p>
+
+<p>You can search this bug on <a href="http://stackoverflow.com/questions/11354656/error-error-error-installing-capybara-webkit">stackoverflow</a></p>
+
+<p>That&rsquo;s all.</p>
+
+<p>I hope your bug is fixed.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Fix Paperclip Gem Bug]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/08/21/fix-paperclip-gem-bug/"/>
+    <updated>2014-08-21T12:49:45+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/08/21/fix-paperclip-gem-bug</id>
+    <content type="html"><![CDATA[<h3>How can I fix <code>paperclip</code> error ?</h3>
+
+<p>When you use <code>paperclip</code> gem, if you are getting like this bug</p>
+
+<p><code>ruby
+Photo could not run the identify command. Please install ImageMagick.
+</code></p>
+
+<!-- more -->
+
+
+<p>You can fix this bug with</p>
+
+<p><code>bash
+sudo apt-get autoremove
+</code>
+or you can make</p>
+
+<p><code>bash
+sudo apt-get install imagemagick.
+</code></p>
+
+<p>I suggest the second command, because if youcan make <code>autoremove</code> you can get error again.</p>
+
+<p>That' s all.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Upload Picture to Rails App]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/08/09/upload-picture-to-rails-app/"/>
+    <updated>2014-08-09T12:03:08+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/08/09/upload-picture-to-rails-app</id>
+    <content type="html"><![CDATA[<h3>How to upload picture in rails app ?</h3>
+
+<p>If you want to upload picture in your rails app, you should make</p>
+
+<ul>
+<li>Open your <code>Gemfile</code> in rails app then add</li>
+</ul>
+
+
+<p><code>ruby
+gem 'paperclip', :git =&gt; "git://github.com/thoughtbot/paperclip.git"
+</code></p>
+
+<!-- more -->
+
+
+<p>in terminal write <code>bundle</code> for install gem.</p>
+
+<ul>
+<li><p>Which models do you want to upload picture ? For example, you have <code>books</code> model, because of this,  I write all command according to <code>book</code> model.</p></li>
+<li><p>After install <code>paperclip</code> gem, open your <code>terminal</code> again then write</p></li>
+</ul>
+
+
+<p><code>bash
+ $ rails g paperclip Book photo
+</code>
+then</p>
+
+<p><code>bash
+$ bundle exec rake db:migrate
+</code></p>
+
+<ul>
+<li>Open <code>models/book.rb</code> add</li>
+</ul>
+
+
+<p>```ruby
+  include Paperclip::Glue
+  has_attached_file :photo, :styles => { :small => &ldquo;250x250>&rdquo; },</p>
+
+<pre><code>                :url  =&gt; "/assets/books/:id/:style/:basename.:extension",
+                :path =&gt; ":rails_root/public/assets/books/:id/:style/:basename.:extension"
+</code></pre>
+
+<p>  validates_attachment_presence :photo
+  validates_attachment_size :photo, :less_than => 10.megabytes
+  validates_attachment_content_type :photo, :content_type => [&lsquo;image/jpeg&rsquo;, &lsquo;image/png&rsquo;]
+```</p>
+
+<ul>
+<li>Open <code>books/show.html.haml</code> add</li>
+</ul>
+
+
+<p><code>haml
+= image_tag @book.photo.url(:small)
+</code></p>
+
+<ul>
+<li>Open <code>books/_form.html.haml</code> add</li>
+</ul>
+
+
+<p><code>haml
+= form_for @book, html: { multipart: true }  do |f|
+  = f.file_field :photo
+</code></p>
+
+<ul>
+<li>Open <code>controllers/books_controller.rb</code>, then check <code>create</code> method if you use</li>
+</ul>
+
+
+<p>```ruby
+ def create</p>
+
+<pre><code>@book = Book.new(book_params)
+</code></pre>
+
+<p> end
+```
+instead of above, you should write</p>
+
+<p>```ruby
+ def create</p>
+
+<pre><code>@book = Book.create(book_params)
+</code></pre>
+
+<p> end
+```</p>
+
+<p>Lastly, you should control to add <code>:photo</code> in your <code>book_params</code> method.</p>
+
+<p>```ruby
+private</p>
+
+<pre><code>def book_params
+  params.require(:book).permit(:category_id, :author_id, :isbn, :name, :photo)
+end
+</code></pre>
+
+<p>```</p>
+
+<p>If you want to learn with details, you can visit <a href="http://railscasts.com/episodes/134-paperclip?autoplay=true">this site</a></p>
+
+<p>That' s all.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Fix Invalid Authentication Token Error in Rails]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/08/06/fix-invalid-authentication-token-error-in-rails/"/>
+    <updated>2014-08-06T22:49:35+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/08/06/fix-invalid-authentication-token-error-in-rails</id>
+    <content type="html"><![CDATA[<h3>How to fix <code>ActionController: InvalidAuthentication Token error</code> ?</h3>
+
+<p>If you use <code>devise</code> gem and when you enter login page in your rails project, you get
+<code>Invalid Token</code> error, you thinking on <code>controller</code> .</p>
+
+<p>Try to fix this bug ;</p>
+
+<!-- more -->
+
+
+<ul>
+<li>Open <code>application_controller.rb</code> then remove this line,</li>
+</ul>
+
+
+<p><code>ruby
+protect_form_forgery, with: :exception
+</code></p>
+
+<p>on your controller.</p>
+
+<ul>
+<li>Then add</li>
+</ul>
+
+
+<p><code>ruby
+skip_before_filter :verify_authenticity_token
+</code></p>
+
+<p>But, this method not safe, so when you get like this bug, you can search and use <code>ajax</code> for the solve it.</p>
+
+<p>That&rsquo;s all.</p>
+
+<p>I hope helped to you .</p>
+]]></content>
+  </entry>
+  
+</feed>

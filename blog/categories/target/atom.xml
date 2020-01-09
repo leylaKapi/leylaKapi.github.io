@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Target | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/target/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2020-01-09T22:29:05+01:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[Leyla KAPI]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Note About Write 'Data' on Haml ?]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/06/21/note-about-write-data-on-haml/"/>
+    <updated>2014-06-21T16:13:02+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/06/21/note-about-write-data-on-haml</id>
+    <content type="html"><![CDATA[<p>Write <code>data</code> attributes on HAML ?</p>
+
+<p>if you write on haml and use <code>data</code> attribute,</p>
+
+<p><code>haml
+%a{"data-slide" =&gt; "prev", href: "#carousel-example-generic", role: "button"}
+</code></p>
+
+<!-- more -->
+
+
+<p>but you should style of write can be like below :</p>
+
+<p><code>haml
+%a{:data =&gt; {:slide =&gt; 'prev'}, href: '#carousel-generic'}
+</code></p>
+
+<p>OR</p>
+
+<p><code>haml
+%li{"data-target" =&gt; ".nav-collapse", "data-toggle" =&gt; "collapse"}
+</code></p>
+
+<p>like below</p>
+
+<p><code>haml
+%li{:data =&gt; {:toggle =&gt; 'collapse', :target =&gt; '.nav-collapse'}}
+</code></p>
+
+<p>If you want, you can look at <a href="http://stackoverflow.com/questions/10321632/haml-how-do-i-create-this-line-of-html">this page</a> for details .</p>
+
+<p>That&rsquo;s all</p>
+
+<p>I hope helped to you.</p>
+]]></content>
+  </entry>
+  
+</feed>

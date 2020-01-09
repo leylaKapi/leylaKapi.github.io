@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Vim | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/vim/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2020-01-09T22:29:05+01:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[Leyla KAPI]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Change Github Config Editor]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/08/16/change-github-config-editor/"/>
+    <updated>2014-08-16T21:28:27+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/08/16/change-github-config-editor</id>
+    <content type="html"><![CDATA[<h3>How to change github global core editor ?</h3>
+
+<p>Open your terminal, then which editor is easy for you (vim, emacs, nano) ?</p>
+
+<!-- more -->
+
+
+<p><code>bash
+git config --global core.editor "vim"  #or
+git config --global core.editor "vi"
+git config --global core.editor "emacs"  #or
+git config --global core.editor "nano"
+</code></p>
+
+<p>That' s all</p>
+]]></content>
+  </entry>
+  
+</feed>

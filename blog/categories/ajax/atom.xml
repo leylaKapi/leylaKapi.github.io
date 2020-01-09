@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Ajax | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/ajax/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2020-01-09T22:29:05+01:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[Leyla KAPI]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Fix Invalid Authentication Token Error in Rails]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/08/06/fix-invalid-authentication-token-error-in-rails/"/>
+    <updated>2014-08-06T22:49:35+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/08/06/fix-invalid-authentication-token-error-in-rails</id>
+    <content type="html"><![CDATA[<h3>How to fix <code>ActionController: InvalidAuthentication Token error</code> ?</h3>
+
+<p>If you use <code>devise</code> gem and when you enter login page in your rails project, you get
+<code>Invalid Token</code> error, you thinking on <code>controller</code> .</p>
+
+<p>Try to fix this bug ;</p>
+
+<!-- more -->
+
+
+<ul>
+<li>Open <code>application_controller.rb</code> then remove this line,</li>
+</ul>
+
+
+<p><code>ruby
+protect_form_forgery, with: :exception
+</code></p>
+
+<p>on your controller.</p>
+
+<ul>
+<li>Then add</li>
+</ul>
+
+
+<p><code>ruby
+skip_before_filter :verify_authenticity_token
+</code></p>
+
+<p>But, this method not safe, so when you get like this bug, you can search and use <code>ajax</code> for the solve it.</p>
+
+<p>That&rsquo;s all.</p>
+
+<p>I hope helped to you .</p>
+]]></content>
+  </entry>
+  
+</feed>

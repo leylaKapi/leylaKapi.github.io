@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Rails, | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/rails/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2020-01-09T22:29:05+01:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[Leyla KAPI]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Ruby on Rails MVC]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/04/23/ruby-on-rails-mvc/"/>
+    <updated>2014-04-23T23:25:52+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/04/23/ruby-on-rails-mvc</id>
+    <content type="html"><![CDATA[<h3>MVC in Ruby on Rails</h3>
+
+<p>MVC &ndash; model, view, controller</p>
+
+<!-- more -->
+
+
+<p>MVC provide to separated of coding and design in app. This property provide to easiness for programmer.</p>
+
+<ul>
+<li><p>M &ndash; Model => Objects, Object-oriented, data, database</p></li>
+<li><p>V &ndash; View => Presentations layer user section, HTML, CSS, javascript &hellip;</p></li>
+<li><p>C &ndash; Controller => Process of respond user action, walk change model on the view make decision.</p></li>
+</ul>
+
+
+<p>Basic web architecture</p>
+
+<pre><code>Browser &lt;=&gt; Pages &lt;=&gt; Databases
+</code></pre>
+
+<p>Another web architecture</p>
+
+<p><img src="./images/index.jpeg" title="MVC architecture" alt="mvc architecture" /></p>
+]]></content>
+  </entry>
+  
+</feed>

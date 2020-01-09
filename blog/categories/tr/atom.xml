@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Tr | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/tr/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2020-01-09T22:29:05+01:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[Leyla KAPI]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Google App Engine - PHP]]></title>
+    <link href="http://leylaKapi.github.io/blog/2015/01/13/google-app-engine-php/"/>
+    <updated>2015-01-13T22:14:20+01:00</updated>
+    <id>http://leylaKapi.github.io/blog/2015/01/13/google-app-engine-php</id>
+    <content type="html"><![CDATA[<h3>App engine ve PHP</h3>
+
+<p>Uzun zamandır ingilizce olarak yazdığım yazılara ufak bir ara verip, türkçe yazılar paylaşmaya çalışacağım.
+Tabi amaç dile yatırım yapmak, neyse lafı daha fazla uzatmadan biz konumuza dönelim. Bu yazımda, App engine ile PhpStorm
+üzerinde nasıl çalışır, nasıl proje oluşturulur ve nasıl deploy edilir işlemlerinden bahsetmeye çalışacağım.</p>
+
+<h4>Google App Engine</h4>
+
+<p>Öncelikle herhangi bir google hesabınızla <a href="https://appengine.google.com/">Google App engine</a> sisteme giriş yapmanız,
+hesabınız yoksada basit bir google hesabı oluşturmanız gerekmekte, siz hesabı oluşturduktan sonra google size ücretsiz
+25 repoluk bir sistem oluşturuyor. Giriş yaptığınız sistemden öncelikle bir proje oluşturuyorsunuz. Sistemde proje oluştururken
+dikkat etmeniz gereken nokta <strong>Application Identifier</strong> kısmı zira burda aslında sayfanızın url kısmını belirlemiş oluyorsunuz (proje_id.appspot.com).
+Tabi belirledikten sonra daha önce böyle bir adres kullanılmışmı diye kontrol etmeniz gerekmektedir, yoksa projeyi oluşturamıyorsunuz.</p>
+
+<p>Ardından localinizde PhpStorm'u çalıştırıp, <em>Create New Project</em> kısmından yeni bir proje oluşturup,</p>
+
+<p><code>
+Project name: blog-leylakapi
+Location: /Workspace/PhpstormProjects/blog-leylakapi
+Project type: App engine Project
+</code></p>
+
+<p>kısımlarını girdikten sonra, Phpstorm sizden</p>
+
+<p><code>
+Application ID: blog-leylakapi
+SDK directory: /home/leylakapi/google_appengine
+Python executable: /usr/bin/python
+</code></p>
+
+<!-- more -->
+
+
+<p>doldurmanızı isteyecektir. Projeyi oluşturduktan sonra, Phpstorm otomatik olarak, size <code>app.yaml</code> ve <code>main.php</code>
+diye 2 tane dosya oluşturacaktır. İçeriklerine bakacak olursak,</p>
+
+<p><code>yaml
+----- app.yaml
+application: blog-leylakapi
+version: 1
+runtime: php
+api_version: 1
+threadsafe: true
+handlers:
+- url: .*
+  script: main.php
+</code>
+ve</p>
+
+<p><code>php
+----- main.php
+&lt;?php
+echo 'Hello, world!';
+</code>
+Yaml ile ilgili <a href="https://cloud.google.com/appengine/docs/php/config/appconfig">daha fazla</a> bilgi için,</p>
+
+<p>Projemizi oluşturduktan sonra, her programcının yaptığı gibi, yada benim yaptığım gibi proje çalışıyormu diye bir
+test etmek, onun içinde</p>
+
+<p><strong>&lt;google_appengine folder path>/dev_appserver.py &lt;php_executable_path> &lt;project_path></strong></p>
+
+<p><code>bash
+$ cd
+$ google_appengine/dev_appserver.py --php_executable_path=/usr/bin/php-cgi /home/leylakapi/PhpstormProjects/blog-leylakapi
+</code>
+yukardaki komutu terminalden koşunca, size iki adres verecektir,</p>
+
+<p><a href="http://localhost:8080">http://localhost:8080</a> ve <a href="http://localhost:8000">http://localhost:8000</a> dir. <a href="http://localhost:8000">http://localhost:8000</a> sizi google app engine sistemine götürecek
+(<a href="http://localhost:8000/instances">http://localhost:8000/instances</a>), <a href="http://localhost:8080/">http://localhost:8080/</a> ise size projenizin çıktısını verecektir. Bizimki basit bir
+&ldquo;Hello World&rdquo; uygulaması olduğu için sistemde <strong>Hello World</strong> yazısını görmemiz gerekmekte. Eğer sistemde herhangi bir hata yoksa
+devam edelim ancak varsada bunun nedeni &ldquo;php_executable_path&rdquo; olacaktır. Düzeltmek için PhpStorm içinde
+<em>Run > Edit Configurations</em> içine girip <code>php-cgi</code> yolunu projenizi çalıştırırken yazdığınız <code>executable path</code> &lsquo;ini girmeniz gerekmektedir.</p>
+
+<p>Bu aşamada basit bir <code>GAE</code> projesi oluşturduk ve çalıştırdık, şimdi deploy etme zamanı,</p>
+
+<p><em>Phpstorm > Tools > Google App Engine For PHP > Upload App Engine PHP app..</em> gidip projemizi google'a upload ediyoruz,
+bu işlemi yaparken bizden eposta ve şifremizi doğruladıktan sonra, IDE içinde,</p>
+
+<p><code>bash
+/usr/bin/python /home/leylakapi/google_appengine/appcfg.py -e leylakapi@gmail.com --passin --no_cookies -R --runtime=php update .
+12:12 AM Application: blog-leylakapi; version: 1
+12:12 AM Host: appengine.google.com
+12:12 AM
+Starting update of app: blog-leylakapi, version: 1
+12:12 AM Getting current resource limits.
+Password for leylakapi@gmail.com: 12:12 AM Scanning files on local disk.
+Error 404: --- begin server output ---
+This application does not exist (app_id=u'blog-leylakapi').
+--- end server output ---
+Process finished with exit code 1
+</code>
+çıktısını alabilirsiniz. Ardından <a href="https://console.developers.google.com/project">Google developers console</a> gidip,
+projenizin üzerine tıklayıp açılan pencerede solda <em>Source Code > Browse</em> tıklayıp <strong>Create Repository</strong> kısmından
+bir repo oluşturuyoruz. Ardından terminale geçmeden önce <em>Source Code > Releases</em> kısmından <strong>Release Pipeline</strong> oluşturup,
+<code>Deploy</code> &lsquo;u seçip, her deploy işleminde mail ile bilgilendirme gönderilmesini sağlıyorsunuz.
+Ardından terminalinize geçebilirsiniz. Aslında daha önce github'a veya herhangi bir versiyonlama sistemi ile çalışmışsanız
+deploy işlemi size çok kolay gelecektir.</p>
+
+<p><code>bash
+$ cd blog-leylakapi
+$ gcloud auth login //ile browserınızdan girişinizi doğrulamanız gerekmekte
+$ gcloud init blog-leylakapi
+$ git init
+$ git add .
+$ git commit -m "commit-message"
+$ git remote add google https://source.developers.google.com/p/blog-leylakapi/
+$ git push google master
+Counting objects: 17, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (17/17), 4.51 KiB | 0 bytes/s, done.
+Total 17 (delta 0), reused 0 (delta 0)
+remote: Storing objects: 100% (17/17), done.
+remote: Processing commits: 100% (1/1), done.
+remote: Triggering release (if applicable)...
+remote: View results at: https://console.developers.google.com/project/837610927376/clouddev/pipelines/6254814975492096_P27doksWWBM_80fc5cc6cde1a4b611407437b489cb5d1a1e7f2c
+remote: Running...
+remote: Created deployment: blog-leylakapi.pipelines.blog-leylakapi-303bb8035070999231.deployment_6254814975492096_1421188115759
+remote: Uploaded 2 files.
+remote: Deployment completed.
+To https://source.developers.google.com/p/blog-leylakapi/
+ * [new branch]      master -&gt; master
+</code>
+Yukarıdaki kodları sırasıyla terminalinizde çalıştırdığınızda sorunsuz bir şekilde deploy etmiş olacaksınız.
+Şimdi yapmanız gereken tek şey, Kodların upload olup olmadığını kontrol etmek, onun içinde,
+<em>Source Code > Browse</em> sayfasını <strong>Google Developers Console</strong> içinde sayfayı yenilemek olacaktır.
+Ayrıca deploy edilip edilmediğinide sistemde görmek için <em>Source Code > Releases</em> sayfasına gitmeniz gerekecektir.</p>
+
+<p>Geriye sadece adresinizi <strong>your_id.appspot.com</strong> şeklinde kontrol etmek kalıyor.
+<strong><a href="http://blog-leylakapi.appspot.com/">http://blog-leylakapi.appspot.com/</a></strong></p>
+
+<p>Daha fazla bilgi için:</p>
+
+<p><a href="http://www.sitepoint.com/google-app-engine-php-getting-started/">google-app-engine-php-getting-started/</a></p>
+
+<p><a href="https://cloud.google.com/appengine/docs/php/">appengine-php-doc</a></p>
+
+<p>sayfalarını ziyaret edebilirsiniz. Umarım yararlı olmuştur.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Türkçe Makalelerim]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/11/06/turkce-blog-yazilari/"/>
+    <updated>2014-11-06T00:00:00+01:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/11/06/turkce-blog-yazilari</id>
+    <content type="html"><![CDATA[<p>Uzun zamandır düşündüğüm bloguma türkçe destek eklemekti. Bunun nedeni ise birçok yabancı konunun (yazılım anlamında) türkçe desteğinin olmamasıdır.
+Umarım faydalı olur.</p>
+
+<p>Teşekkür ederim.</p>
+]]></content>
+  </entry>
+  
+</feed>

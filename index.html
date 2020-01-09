@@ -1,1 +1,809 @@
-My Octopress Page is coming soon &hellip;
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Leyla's Blog</title>
+  <meta name="author" content="Leyla KAPI">
+
+   <meta name="description" content="I' m leyla . I' m computer engineer and web developer . This blog is like a diary, in which I wrote my experiences about software programming."> 
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://leylaKapi.github.io/">
+  <link href="/favicon.png" type="image/png" rel="icon">
+  <link href="/atom.xml" rel="alternate" title="Leyla's Blog" type="application/atom+xml">
+
+  <!-- http://opengraphprotocol.org/ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://leylaKapi.github.io/">
+  <meta property="og:title" content="Leyla's Blog">
+  <meta property="og:description" content="I' m leyla . I' m computer engineer and web developer . This blog is like a diary, in which I wrote my experiences about software programming.">
+
+  <script src="/javascripts/libs/jquery/jquery-2.1.3.min.js"></script>
+
+<link href="/assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="/assets/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  
+  <link href="/stylesheets/screen.css" media="screen, projection, print" rel="stylesheet" type="text/css">
+
+  
+   <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-49378525-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+
+</head>
+
+  <body   >
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    <div id="wrap">
+      
+      <div id="banner-image">
+        <div class="layer">
+          <div id="banner-text">
+            <h1 class="page-title">Leyla's Blog</h1>
+            <p class="page-desc">
+              a developer, speaker and organizer<br>
+            </p>
+            <br>
+            <br>
+            <div class="page-links center">
+              <ul class="index-nav">
+                  <li ><a href="/blog/archives">Archives</a></li>
+<li ><a href="/about/index.html">About</a></li>
+<li ><a href="https://github.com/leylaKapi?tab=repositories" target="_blank">Projects</a></li>
+<li ><a href="https://gist.github.com/leylaKapi" target="_blank">Keep Notes</a></li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="main" role="main" class="container">
+        <div id="content">
+          <div class="row">
+  <div class="page-content">
+    <div class="blog-index" itemscope itemtype="http://schema.org/Blog">
+    <meta itemprop="name" content="Leyla's Blog" />
+    <meta itemprop="description" content="I' m leyla . I' m computer engineer and web developer . This blog is like a diary, in which I wrote my experiences about software programming." />
+    <meta itemprop="url" content="http://leylaKapi.github.io" />
+      
+      
+      
+        <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+          
+  <header class="page-header">
+    
+      <p class="meta text-muted text-uppercase">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2016-08-10T00:00:00+02:00"  data-updated="true" itemprop="datePublished dateCreated">Wed 10 Aug 2016, 12:00 AM</time>
+        
+           | <a href="/blog/2016/08/10/bundle-error-middleman-elcapitan/#disqus_thread" itemprop="discussionUrl"
+             data-disqus-identifier="http://leylaKapi.github.io/blog/2016/08/10/bundle-error-middleman-elcapitan/">Comments</a>
+        
+      </p>
+    
+    
+      <h2 class="entry-title" itemprop="name headline"><a href="/blog/2016/08/10/bundle-error-middleman-elcapitan/" itemprop="url">Bundle Error Middleman El-capitan</a></h2>
+    
+  </header>
+
+
+  <div class="entry-content clearfix" itemprop="articleBody description"><p>If your computer has OSX 10.11 El Capitan, and try to create middleman project then  write <code>bundle</code> to install gems. But you can get</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>Installing eventmachine 1.0.7 with native extensions
+</span><span class='line'>Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
+</span><span class='line'>In file included from binder.cpp:20:
+</span><span class='line'>./project.h:116:10 fatal error: <span class="s1">&#39;openssl/ssl.h&#39;</span> file not found
+</span><span class='line'>include &lt;openssl/ssl.h&gt;
+</span><span class='line'>1 error generated
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>like above error. You have to solve problem with <code>openssl</code> .
+For fix it ;</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>brew link openssl --force
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>then you can run <code>bundle</code> now. For detail about this problem please look at <a href="https://github.com/eventmachine/eventmachine/issues/643">this link</a></p>
+
+<p>I hope helped to you .</p>
+</div>
+  
+  
+
+
+        </article>
+      
+      
+        <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+          
+  <header class="page-header">
+    
+      <p class="meta text-muted text-uppercase">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2015-10-24T16:32:38+02:00"  data-updated="true" itemprop="datePublished dateCreated">Sat 24 Oct 2015,  4:32 PM</time>
+        
+           | <a href="/blog/2015/10/24/bootstrap-active-class-solution-for-navbar-in-rails/#disqus_thread" itemprop="discussionUrl"
+             data-disqus-identifier="http://leylaKapi.github.io/blog/2015/10/24/bootstrap-active-class-solution-for-navbar-in-rails/">Comments</a>
+        
+      </p>
+    
+    
+      <h2 class="entry-title" itemprop="name headline"><a href="/blog/2015/10/24/bootstrap-active-class-solution-for-navbar-in-rails/" itemprop="url">Bootstrap Active Class Solution for Navbar in Rails</a></h2>
+    
+  </header>
+
+
+  <div class="entry-content clearfix" itemprop="articleBody description"><p>Sometimes while you are adding bootstrap to your rails app, you can getting some problem on javascript side. In this article I try to explain how we can fix <code>active</code> class to navbar . For fixing, you can write in helper <code>active_class</code> method like below</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">module</span> <span class="nn">ApplicationHelper</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">active_class</span><span class="p">(</span><span class="n">link_path</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">current_page?</span><span class="p">(</span><span class="n">link_path</span><span class="p">)</span> <span class="p">?</span> <span class="s1">&#39;active&#39;</span> <span class="p">:</span> <span class="s2">&quot;&quot;</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+</div>
+  
+  
+    <footer>
+      <a class="read-more btn btn-default" href="/blog/2015/10/24/bootstrap-active-class-solution-for-navbar-in-rails/">Read more</a>
+    </footer>
+  
+
+
+        </article>
+      
+      
+        <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+          
+  <header class="page-header">
+    
+      <p class="meta text-muted text-uppercase">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2015-09-07T13:37:16+02:00"  data-updated="true" itemprop="datePublished dateCreated">Mon  7 Sep 2015,  1:37 PM</time>
+        
+           | <a href="/blog/2015/09/07/trick-on-rails/#disqus_thread" itemprop="discussionUrl"
+             data-disqus-identifier="http://leylaKapi.github.io/blog/2015/09/07/trick-on-rails/">Comments</a>
+        
+      </p>
+    
+    
+      <h2 class="entry-title" itemprop="name headline"><a href="/blog/2015/09/07/trick-on-rails/" itemprop="url">Tricks on Rails</a></h2>
+    
+  </header>
+
+
+  <div class="entry-content clearfix" itemprop="articleBody description"><ul>
+<li><h3><code>rake db:migrate</code> for an existing model</h3></li>
+</ul>
+
+
+<p>Firstly I created new rails app, after that created several models, or you make some changes on your model manually(wrong way), while you are running <code>rake db:migrate</code> getting error for an existing model in your app. For fix that issue
+you can write,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake db:schema:load
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>or</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake db:drop
+</span><span class='line'>rake db:create
+</span><span class='line'>rake db:migrate
+</span><span class='line'>rake db:schema:dump
+</span><span class='line'>rake db:text:prepare
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+</div>
+  
+  
+    <footer>
+      <a class="read-more btn btn-default" href="/blog/2015/09/07/trick-on-rails/">Read more</a>
+    </footer>
+  
+
+
+        </article>
+      
+      
+        <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+          
+  <header class="page-header">
+    
+      <p class="meta text-muted text-uppercase">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2015-01-13T22:14:20+01:00"  data-updated="true" itemprop="datePublished dateCreated">Tue 13 Jan 2015, 10:14 PM</time>
+        
+           | <a href="/blog/2015/01/13/google-app-engine-php/#disqus_thread" itemprop="discussionUrl"
+             data-disqus-identifier="http://leylaKapi.github.io/blog/2015/01/13/google-app-engine-php/">Comments</a>
+        
+      </p>
+    
+    
+      <h2 class="entry-title" itemprop="name headline"><a href="/blog/2015/01/13/google-app-engine-php/" itemprop="url">Google App Engine - PHP</a></h2>
+    
+  </header>
+
+
+  <div class="entry-content clearfix" itemprop="articleBody description"><h3>App engine ve PHP</h3>
+
+<p>Uzun zamandır ingilizce olarak yazdığım yazılara ufak bir ara verip, türkçe yazılar paylaşmaya çalışacağım.
+Tabi amaç dile yatırım yapmak, neyse lafı daha fazla uzatmadan biz konumuza dönelim. Bu yazımda, App engine ile PhpStorm
+üzerinde nasıl çalışır, nasıl proje oluşturulur ve nasıl deploy edilir işlemlerinden bahsetmeye çalışacağım.</p>
+
+<h4>Google App Engine</h4>
+
+<p>Öncelikle herhangi bir google hesabınızla <a href="https://appengine.google.com/">Google App engine</a> sisteme giriş yapmanız,
+hesabınız yoksada basit bir google hesabı oluşturmanız gerekmekte, siz hesabı oluşturduktan sonra google size ücretsiz
+25 repoluk bir sistem oluşturuyor. Giriş yaptığınız sistemden öncelikle bir proje oluşturuyorsunuz. Sistemde proje oluştururken
+dikkat etmeniz gereken nokta <strong>Application Identifier</strong> kısmı zira burda aslında sayfanızın url kısmını belirlemiş oluyorsunuz (proje_id.appspot.com).
+Tabi belirledikten sonra daha önce böyle bir adres kullanılmışmı diye kontrol etmeniz gerekmektedir, yoksa projeyi oluşturamıyorsunuz.</p>
+
+<p>Ardından localinizde PhpStorm&#8217;u çalıştırıp, <em>Create New Project</em> kısmından yeni bir proje oluşturup,</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Project name: blog-leylakapi
+</span><span class='line'>Location: /Workspace/PhpstormProjects/blog-leylakapi
+</span><span class='line'>Project type: App engine Project</span></code></pre></td></tr></table></div></figure>
+
+
+<p>kısımlarını girdikten sonra, Phpstorm sizden</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Application ID: blog-leylakapi
+</span><span class='line'>SDK directory: /home/leylakapi/google_appengine
+</span><span class='line'>Python executable: /usr/bin/python</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+</div>
+  
+  
+    <footer>
+      <a class="read-more btn btn-default" href="/blog/2015/01/13/google-app-engine-php/">Read more</a>
+    </footer>
+  
+
+
+        </article>
+      
+      
+        <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+          
+  <header class="page-header">
+    
+      <p class="meta text-muted text-uppercase">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-12-16T00:00:00+01:00"  data-updated="true" itemprop="datePublished dateCreated">Tue 16 Dec 2014, 12:00 AM</time>
+        
+           | <a href="/blog/2014/12/16/rails-fix-n-plus-1-query/#disqus_thread" itemprop="discussionUrl"
+             data-disqus-identifier="http://leylaKapi.github.io/blog/2014/12/16/rails-fix-n-plus-1-query/">Comments</a>
+        
+      </p>
+    
+    
+      <h2 class="entry-title" itemprop="name headline"><a href="/blog/2014/12/16/rails-fix-n-plus-1-query/" itemprop="url">Rails Fix N+1 Query</a></h2>
+    
+  </header>
+
+
+  <div class="entry-content clearfix" itemprop="articleBody description"><h3>How to fix N+1 query in Rails ?</h3>
+
+<p>I try to explain fix <code>N+1</code> on example. Let&rsquo;s start, firstly, in your rails application, you created association between <code>user</code> and <code>user_profile</code>
+models like below :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="ss">ActiveRecord</span><span class="p">:</span><span class="ss">:Base</span>
+</span><span class='line'>   <span class="n">has_one</span> <span class="ss">:profile</span><span class="p">,</span> <span class="n">class_name</span><span class="p">:</span> <span class="s1">&#39;UserProfile&#39;</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>and</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">UserProfile</span> <span class="o">&lt;</span> <span class="ss">ActiveRecord</span><span class="p">:</span><span class="ss">:Base</span>
+</span><span class='line'>  <span class="n">belongs_to</span> <span class="ss">:user</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+</div>
+  
+  
+    <footer>
+      <a class="read-more btn btn-default" href="/blog/2014/12/16/rails-fix-n-plus-1-query/">Read more</a>
+    </footer>
+  
+
+
+        </article>
+      
+      
+        <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+          
+  <header class="page-header">
+    
+      <p class="meta text-muted text-uppercase">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-11-08T13:21:19+01:00"  data-updated="true" itemprop="datePublished dateCreated">Sat  8 Nov 2014,  1:21 PM</time>
+        
+           | <a href="/blog/2014/11/08/how-to-use-getextra-and-putextra-in-android-for-string-data/#disqus_thread" itemprop="discussionUrl"
+             data-disqus-identifier="http://leylaKapi.github.io/blog/2014/11/08/how-to-use-getextra-and-putextra-in-android-for-string-data/">Comments</a>
+        
+      </p>
+    
+    
+      <h2 class="entry-title" itemprop="name headline"><a href="/blog/2014/11/08/how-to-use-getextra-and-putextra-in-android-for-string-data/" itemprop="url">How to Use getExtra and putExtra in Android for String Data</a></h2>
+    
+  </header>
+
+
+  <div class="entry-content clearfix" itemprop="articleBody description"><h3>Use getExtra and putExtra</h3>
+
+<p>You want to get some information like name, surname, email when user login on Android, and show on
+second activity these information , we can use getExtra and putExtra . There are a lot of method for getting information
+from first to second activity, I try to explain getting with getExtra and putExtra on getting user name and surname to
+show second activity, let &rsquo;s start,</p>
+
+<ul>
+<li><p>Firstly I created two label(TextView) for definition to name and surname and EditText for enter name and surname to users
+on <code>activity_main.xml</code>,</p></li>
+<li><p>Then we created new class under <code>src</code> folder and under the package name <code>SecondActivity.java</code>, and under the
+<code>/res/layout/</code> folder created <code>secondactivity.xml</code> .</p></li>
+<li><p>For definite and connect between main and second activity open <code>AndroidManifest.xml</code> and create new <code>activity</code> for
+second .</p></li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;activity</span>
+</span><span class='line'>    <span class="na">android:name=</span><span class="s">&quot;.SecondActivity&quot;</span>
+</span><span class='line'>    <span class="na">android:label=</span><span class="s">&quot;Second Activity&quot;</span>
+</span><span class='line'>    <span class="nt">&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;intent-filter</span> <span class="nt">&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">&quot;com.example.package_path.SecondActivity&quot;</span><span class="nt">/&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.category.DEFAULT&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/intent-filter&gt;</span>
+</span><span class='line'><span class="nt">&lt;/activity&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+</div>
+  
+  
+    <footer>
+      <a class="read-more btn btn-default" href="/blog/2014/11/08/how-to-use-getextra-and-putextra-in-android-for-string-data/">Read more</a>
+    </footer>
+  
+
+
+        </article>
+      
+      
+        <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+          
+  <header class="page-header">
+    
+      <p class="meta text-muted text-uppercase">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-11-07T16:33:09+01:00"  data-updated="true" itemprop="datePublished dateCreated">Fri  7 Nov 2014,  4:33 PM</time>
+        
+           | <a href="/blog/2014/11/07/note-go-back-to-previous-activity-on-android/#disqus_thread" itemprop="discussionUrl"
+             data-disqus-identifier="http://leylaKapi.github.io/blog/2014/11/07/note-go-back-to-previous-activity-on-android/">Comments</a>
+        
+      </p>
+    
+    
+      <h2 class="entry-title" itemprop="name headline"><a href="/blog/2014/11/07/note-go-back-to-previous-activity-on-android/" itemprop="url">Note: Go Back to Previous Activity on Android</a></h2>
+    
+  </header>
+
+
+  <div class="entry-content clearfix" itemprop="articleBody description"><h3>Method for go previous activity</h3>
+
+<p>If you make connection between first and second activity, this means, you can go to from first activity to second activity
+but you can not return to previous page, for return to first page, we can use very common method, <code>onBackPressed()</code>.</p>
+
+<p>Where you want to use button for return from second to first, open your <code>secondactivity.xml</code></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;Button</span>
+</span><span class='line'>    <span class="na">android:layout_width=</span><span class="s">&quot;fill_parent&quot;</span>
+</span><span class='line'>    <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+</span><span class='line'>    <span class="na">android:onClick=</span><span class="s">&quot;ReturnHome&quot;</span>
+</span><span class='line'>    <span class="na">android:text=</span><span class="s">&quot;Return Previous Page&quot;</span> <span class="nt">/&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+</div>
+  
+  
+    <footer>
+      <a class="read-more btn btn-default" href="/blog/2014/11/07/note-go-back-to-previous-activity-on-android/">Read more</a>
+    </footer>
+  
+
+
+        </article>
+      
+      
+        <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+          
+  <header class="page-header">
+    
+      <p class="meta text-muted text-uppercase">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-11-07T16:15:38+01:00"  data-updated="true" itemprop="datePublished dateCreated">Fri  7 Nov 2014,  4:15 PM</time>
+        
+           | <a href="/blog/2014/11/07/ubuntu-13-dot-10-missing-date-and-time-in-the-menu-bar/#disqus_thread" itemprop="discussionUrl"
+             data-disqus-identifier="http://leylaKapi.github.io/blog/2014/11/07/ubuntu-13-dot-10-missing-date-and-time-in-the-menu-bar/">Comments</a>
+        
+      </p>
+    
+    
+      <h2 class="entry-title" itemprop="name headline"><a href="/blog/2014/11/07/ubuntu-13-dot-10-missing-date-and-time-in-the-menu-bar/" itemprop="url">Ubuntu 13.10 : Missing Date and Time in the Menu Bar</a></h2>
+    
+  </header>
+
+
+  <div class="entry-content clearfix" itemprop="articleBody description"><h3>Fix date/time in menu bar</h3>
+
+<p>If you are update or upgrade your pc, you can getting error about menu bar for date &ndash; time missing .
+For fixing this bug, you should write below commands step by step ,</p>
+
+<ul>
+<li>Re-install <code>indicator-datetime</code> run ,</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo apt-get install indicator-datetime
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+</div>
+  
+  
+    <footer>
+      <a class="read-more btn btn-default" href="/blog/2014/11/07/ubuntu-13-dot-10-missing-date-and-time-in-the-menu-bar/">Read more</a>
+    </footer>
+  
+
+
+        </article>
+      
+      
+        <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+          
+  <header class="page-header">
+    
+      <p class="meta text-muted text-uppercase">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-11-06T00:00:00+01:00"  data-updated="true" itemprop="datePublished dateCreated">Thu  6 Nov 2014, 12:00 AM</time>
+        
+           | <a href="/blog/2014/11/06/turkce-blog-yazilari/#disqus_thread" itemprop="discussionUrl"
+             data-disqus-identifier="http://leylaKapi.github.io/blog/2014/11/06/turkce-blog-yazilari/">Comments</a>
+        
+      </p>
+    
+    
+      <h2 class="entry-title" itemprop="name headline"><a href="/blog/2014/11/06/turkce-blog-yazilari/" itemprop="url">Türkçe Makalelerim</a></h2>
+    
+  </header>
+
+
+  <div class="entry-content clearfix" itemprop="articleBody description"><p>Uzun zamandır düşündüğüm bloguma türkçe destek eklemekti. Bunun nedeni ise birçok yabancı konunun (yazılım anlamında) türkçe desteğinin olmamasıdır.
+Umarım faydalı olur.</p>
+
+<p>Teşekkür ederim.</p>
+</div>
+  
+  
+
+
+        </article>
+      
+      
+        <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+          
+  <header class="page-header">
+    
+      <p class="meta text-muted text-uppercase">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2014-11-02T20:36:43+01:00"  data-updated="true" itemprop="datePublished dateCreated">Sun  2 Nov 2014,  8:36 PM</time>
+        
+           | <a href="/blog/2014/11/02/note-how-to-install-stick-notes-to-ubuntu/#disqus_thread" itemprop="discussionUrl"
+             data-disqus-identifier="http://leylaKapi.github.io/blog/2014/11/02/note-how-to-install-stick-notes-to-ubuntu/">Comments</a>
+        
+      </p>
+    
+    
+      <h2 class="entry-title" itemprop="name headline"><a href="/blog/2014/11/02/note-how-to-install-stick-notes-to-ubuntu/" itemprop="url">Note: How to Install Sticker-notes to Ubuntu Desktop?</a></h2>
+    
+  </header>
+
+
+  <div class="entry-content clearfix" itemprop="articleBody description"><p>I want to sticker notes for my pc, when I search about it, I found <code>sticky notes</code> for <code>Ubuntu 13.10</code> .
+This notes provide to reminder of something like a agenda, when you wrote some notes inside,
+you see always the notes. If you want to add sticker notes you can use below command.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo add-apt-repository ppa:umang/indicator-stickynotes
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+</div>
+  
+  
+    <footer>
+      <a class="read-more btn btn-default" href="/blog/2014/11/02/note-how-to-install-stick-notes-to-ubuntu/">Read more</a>
+    </footer>
+  
+
+
+        </article>
+      
+    </div>
+
+    <ul class="pager">
+      
+        <li class="previous"><a href="">&larr;&nbsp;Older</a></li>
+      
+      <li><a href="/blog/archives">Blog Archives</a></li>
+      
+        <li class="next disabled"><a href="#">Newer&nbsp;&rarr;</a></li>
+      
+    </ul>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    <footer role="contentinfo"><div class="container">
+    <p class="text-muted credits">
+  Copyright &copy; 2020 - Leyla KAPI<br>
+  <!--<small>-->
+      <!--<span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>,-->
+      <!--<span class="credit">customized with <a href="https://github.com/bhrigu123/abacus">abacus theme</a></span>.-->
+  <!--</small>-->
+</p>
+
+</div>
+</footer>
+    
+
+<script type="text/javascript">
+      var disqus_shortname = 'leylasblog';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+<script src="/assets/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/javascripts/modernizr.js"></script>
+
+
+  </body>
+</html>

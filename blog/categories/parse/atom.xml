@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Parse | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/parse/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2020-01-09T22:29:05+01:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[Leyla KAPI]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Note:How to Fix Android Parse Sdk Failed?]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/10/18/note-how-to-fix-android-parse-sdk-failed/"/>
+    <updated>2014-10-18T00:00:00+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/10/18/note-how-to-fix-android-parse-sdk-failed</id>
+    <content type="html"><![CDATA[<p>If you are coding android on eclipse and when you are open your eclipse getting like</p>
+
+<p><code>xml
+parseSdkContent failed
+Could not initialize class android.graphics.Typeface
+</code>
+For the fix above error, you should open your <code>home</code> directory, then search the <code>android</code> file with</p>
+
+<p><code>bash
+$ cd .android
+</code></p>
+
+<!-- more -->
+
+
+<p>If <code>.android</code> folder is exist in your home, you should remove this folder for fox the bug,</p>
+
+<p><code>bash
+$ rm -rf .android
+</code></p>
+
+<p>you should run above command for fix the bug. Then you can check it.</p>
+
+<p>That&rsquo;s all.</p>
+
+<p>I hope helped to you.</p>
+]]></content>
+  </entry>
+  
+</feed>

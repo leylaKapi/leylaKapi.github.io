@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Rake | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/rake/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2020-01-09T22:29:05+01:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[Leyla KAPI]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Fix Rake Db:populate]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/08/08/fix-rake-db-populate/"/>
+    <updated>2014-08-08T09:33:06+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/08/08/fix-rake-db-populate</id>
+    <content type="html"><![CDATA[<h3><code>Rake aborted! Don't know how to build task 'populate'</code></h3>
+
+<p><code>bash
+$ rake db:populate
+</code>
+or</p>
+
+<p><code>bash
+$ bundle exec rake db:populate
+</code></p>
+
+<!-- more -->
+
+
+<p>While you were writing above command, you get errors like <code>Don't know how to build task 'populate'</code>.</p>
+
+<p>Let&rsquo;s fix,</p>
+
+<p>Firstly, you should check</p>
+
+<p><code>ruby
+lib/tasks/sample_data.rb
+</code>
+&ndash; if this file exist, you should rename this file</p>
+
+<p><code>ruby
+sample_data.rake
+</code>
+then try to run tour rails project.</p>
+
+<ul>
+<li>if not exist, you should create new file in <code>lib/tasks</code> directory, <code>sample_data.rake</code>.</li>
+</ul>
+
+
+<p>That' s all.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How Can You Solve YAML Exception Reading Bug in Octopress ?]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/05/20/how-can-you-solve-yaml-exception-reading-bug-in-octopress/"/>
+    <updated>2014-05-20T16:19:18+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/05/20/how-can-you-solve-yaml-exception-reading-bug-in-octopress</id>
+    <content type="html"><![CDATA[<h3>Solve the YAML exception reading invalid byte sequence in US-ASCII</h3>
+
+<p>When you write</p>
+
+<p><code>bash
+bundle exec rake generate
+</code></p>
+
+<!-- more -->
+
+
+<p>you get</p>
+
+<p>``` bash
+YAML Exception reading 2014-04-28-your_file.markdown: invalid byte sequence in US-ASCII</p>
+
+<blockquote><blockquote><blockquote><p>Compass is watching for changes. Press Ctrl-C to Stop.
+127.0.0.1 &ndash; &ndash; [17/Jun/2014 17:08:35] &ldquo;GET / HTTP/1.1&rdquo; 200 93907 0.0215
+127.0.0.1 &ndash; &ndash; [17/Jun/2014 17:08:35] &ldquo;GET /stylesheets/screen.css HTTP/1.1&rdquo; 200 28107 0.0019
+127.0.0.1 &ndash; &ndash; [17/Jun/2014 17:08:35] &ldquo;GET /images/index.jpeg HTTP/1.1&rdquo; 200 7466 0.0020
+127.0.0.1 &ndash; &ndash; [17/Jun/2014 17:08:35] &ldquo;GET /javascripts/slash.js HTTP/1.1&rdquo; 200 1786 0.0010
+127.0.0.1 &ndash; &ndash; [17/Jun/2014 17:08:35] &ldquo;GET /javascripts/jquery.fancybox.pack.js HTTP/1.1&rdquo; 200 17638 0.0014
+127.0.0.1 &ndash; &ndash; [17/Jun/2014 17:08:35] &ldquo;GET /images/social/twitter.png?1398238298 HTTP/1.1&rdquo; 200 554 0.0009
+127.0.0.1 &ndash; &ndash; [17/Jun/2014 17:08:35] &ldquo;GET /images/social/github.png?1398238298 HTTP/1.1&rdquo; 200 581 0.0029
+127.0.0.1 &ndash; &ndash; [17/Jun/2014 17:08:35] &ldquo;GET /images/social/google.png?1398238298 HTTP/1.1&rdquo; 200 602 0.0034
+127.0.0.1 &ndash; &ndash; [17/Jun/2014 17:08:35] &ldquo;GET /font/fontawesome-webfont.woff HTTP/1.1&rdquo; 200 23416 0.0034
+127.0.0.1 &ndash; &ndash; [17/Jun/2014 17:08:35] &ldquo;GET /images/social/rss.png?1398238298 HTTP/1.1&rdquo; 200 619 0.0069
+127.0.0.1 &ndash; &ndash; [17/Jun/2014 17:08:36] &ldquo;GET /favicon.png HTTP/1.1&rdquo; 200 400 0.0009
+[2014-06-17 17:08:56] regeneration: 1 files changed
+YAML Exception reading 2014-04-28-your_file.markdown: invalid byte sequence in US-ASCII
+<code>``
+If you want to solve this</code>rake generate<code>bug, you can use instead of</code>bundle exec rake generate`,
+you should use</p></blockquote></blockquote></blockquote>
+
+<p><code>bash
+LANG=en_US.utf-8 bundle exec rake generate
+</code>
+this command, and you can write <code>rake preview</code> or <code>rake deploy</code></p>
+
+<p>Fixed the bug.</p>
+
+<p>I hope helped to you.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Scaffolding in Rails]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/04/24/scaffolding-in-rails/"/>
+    <updated>2014-04-24T23:21:58+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/04/24/scaffolding-in-rails</id>
+    <content type="html"><![CDATA[<p>In this post, I try to explain scaffolding in rails shortly.
+Firstly, Let&rsquo;s create rails project</p>
+
+<p><code>bash
+rails new blogging
+cd blogging
+</code></p>
+
+<!-- more -->
+
+
+<p>Now, we created rails project and enter inside of project.
+We need to create scaffold,</p>
+
+<p><code>bash
+rails generate scaffold Information first_name second_name date_time:date city:boolean
+</code>
+&ndash; We create Information model, in this model
+ &ndash; Type of first_name and second_name is string.
+ &ndash; Type of date_time is date, this provide to create date.
+ &ndash; Type of city is boolean, this provide to create checkbox.</p>
+
+<p>then we need to migrate for this reason,</p>
+
+<p><code>bash
+rake db:migrate
+</code></p>
+
+<p>Then, If you want change your home page(index.html), you should open in your app,</p>
+
+<pre><code>config/routes.rb
+</code></pre>
+
+<p>this path and write</p>
+
+<pre><code>root :to =&gt; 'information#index'
+</code></pre>
+
+<p>save and run</p>
+
+<p><code>bash
+rails s
+</code>
+opened <a href="http://0.0.0.0:3000/">http://localhost:3000/</a></p>
+
+<p>That&rsquo;s all.</p>
+]]></content>
+  </entry>
+  
+</feed>

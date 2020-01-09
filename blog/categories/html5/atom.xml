@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Html5 | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/html5/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2020-01-09T22:29:05+01:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[Leyla KAPI]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[HTML5 Canvas Javascript]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/07/03/html5-canvas-javascript/"/>
+    <updated>2014-07-03T15:10:34+02:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/07/03/html5-canvas-javascript</id>
+    <content type="html"><![CDATA[<h3>Which libraries should I use in javascript for game development ?</h3>
+
+<p>When I looking for javascript library, I found some library is used <code>HTML5 Canvas Javascript</code> library
+for game development.</p>
+
+<!-- more -->
+
+
+<p>This library provide to <code>build and animate</code> to game project. I found some Html5 canvas javascript libraries :</p>
+
+<ul>
+<li><a href="http://hyperandroid.github.io/CAAT/">Canvas Advanced Animation Toolkit</a></li>
+<li><a href="http://kineticjs.com/">Kinetic.js</a></li>
+<li><a href="http://fabricjs.com/">Fabric.js</a></li>
+<li><a href="http://craftyjs.com/">Crafty.js</a></li>
+<li><a href="http://www.createjs.com/">Create.js</a></li>
+<li><a href="http://www.createjs.com/#!/EaselJS">Easel.js</a></li>
+<li><a href="http://ocanvas.org/">oCanvas</a></li>
+<li><a href="http://paperjs.org/">Paper.js</a></li>
+<li><a href="http://processingjs.org/">Processing.js</a></li>
+<li><a href="http://threejs.org/">Three.js</a></li>
+<li><a href="http://jawsjs.com/">Jaws.js</a></li>
+<li><a href="http://impactjs.com/">Impact.js</a></li>
+<li><a href="http://www.limejs.com/">Lime.js</a></li>
+<li><a href="http://melonjs.org/">Melon.js</a></li>
+</ul>
+
+
+<p>If you want to researches with details, you can visit <a href="http://lab2023.com/html5_canvas_javascript_libraries.html">this page</a> .</p>
+
+<p>That&rsquo;s all .
+I hope helped to you .</p>
+]]></content>
+  </entry>
+  
+</feed>

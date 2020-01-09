@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Intent | Leyla's Blog]]></title>
+  <link href="http://leylaKapi.github.io/blog/categories/intent/atom.xml" rel="self"/>
+  <link href="http://leylaKapi.github.io/"/>
+  <updated>2020-01-09T22:29:05+01:00</updated>
+  <id>http://leylaKapi.github.io/</id>
+  <author>
+    <name><![CDATA[Leyla KAPI]]></name>
+    <email><![CDATA[leylakapi@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Note: Go Back to Previous Activity on Android]]></title>
+    <link href="http://leylaKapi.github.io/blog/2014/11/07/note-go-back-to-previous-activity-on-android/"/>
+    <updated>2014-11-07T16:33:09+01:00</updated>
+    <id>http://leylaKapi.github.io/blog/2014/11/07/note-go-back-to-previous-activity-on-android</id>
+    <content type="html"><![CDATA[<h3>Method for go previous activity</h3>
+
+<p>If you make connection between first and second activity, this means, you can go to from first activity to second activity
+but you can not return to previous page, for return to first page, we can use very common method, <code>onBackPressed()</code>.</p>
+
+<p>Where you want to use button for return from second to first, open your <code>secondactivity.xml</code></p>
+
+<p>```xml
+&lt;Button</p>
+
+<pre><code>android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:onClick="ReturnHome"
+android:text="Return Previous Page" /&gt;
+</code></pre>
+
+<p>```</p>
+
+<!-- more -->
+
+
+<p></p>
+
+<p>Then we getting, what is the <code>android:onClick</code> name, you can give the what you want name for <code>onClick</code> but can be
+careful for use in <code>java</code>, open <code>SecondActivity.java</code> write below code</p>
+
+<p>```java
+public void ReturnHome(View view){</p>
+
+<pre><code>super.onBackPressed();
+</code></pre>
+
+<p>}
+```</p>
+
+<p>That &rsquo;s all, now you can go back to previous activity.</p>
+
+<p>I hope helped to you.</p>
+]]></content>
+  </entry>
+  
+</feed>
